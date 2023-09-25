@@ -68,4 +68,44 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - test : test.md
+  - Database :
+    - "Business Object" : database/business-object.md
+    - "Entrepôt de données" : database/data-warehouse.md
+    - "JSON" : database/json.md
+    - "SQL" : database/sql.md
+    - "Talend" : database/talend.md
+  - Programmation :
+    - "Github" : programming/github.md
+    - "Java" : programming/java.md
+    - Web : 
+      - "CSS" : programming/web/css.md
+      - "HTML" : programming/web/html.md
+      - "Java Script" : programming/web/java-script.md
+      - "PHP" : programming/web/php.md
+    - Python :
+      - "Python" : python/python_py.md
+      - "Formater" : python/formater-données_py.md
+      - "Manipuler les données" : python/manipuler-donnees_py.md
+      - "Opération data" : python/operation-data_py.md
+      - Autre :
+        - "Tableau de bord" : python/tableau-de-bord_py.md
+        - "Les images" : python/traitement-image_py.md
+        - "Autres modules" : python/modules-supplementaires_py.md
+        - "Web scraping" : python/web-scraping_py.md
+      - Bioinformatique :  
+        - "MS" : python/spectrometrie_py.md
+        - "MS protéomique" : python/MS-proteomique_py.md
+        - "Séquencage" : python/sequencage_py.md
+      - "Machine learning" :
+        - "ACP" : python/ACP_py.md
+        - "Arbre de décision" : python/arbre-de-decision_py.md
+        - "CAH" : python/CAH_py.md
+        - "Couche convulsive" : python/couche-convulsive_py.md
+        - "RN Pytorch" : python/RN-pytorch_py.md
+        - "RN Tensorflow" : python/RN-tensor-flow_py.md
+        - "Régression logistique" : python/regression-logistique_py.md
+      - Statistique :
+        - "Graphiques" : python/graphiques_py.md
+        - "Lois Statistiques" : python/lois-statistiques_py.md
+        - "Tests" : python/tests_py.md
+
