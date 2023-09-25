@@ -1,6 +1,6 @@
-site_name: Mes notes
-repo_url: https://github.com/gdemare/notes/
-repo_name: gdemare/notes
+site_name: Informatique
+repo_url: https://github.com/gdemare/informatique/
+repo_name: gdemare/informatique
 edit_uri: edit/main/docs/
 
 # mkdocs.yml
