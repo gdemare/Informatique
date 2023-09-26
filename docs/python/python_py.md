@@ -201,7 +201,8 @@ Fonction 	| définition
 
 Library `re`. Une expression régulière est déclarée comme `r"expr"`.
 
-`re.search( a_rechercher, texte )` rechercher une expression regex ou un mot.
+* `re.search( a_rechercher, texte )` rechercher une expression regex ou un mot.
+* `re.sub(r'[^a-zA-Z]', '', s)` transformer une chaine de caractère.
 
 Variable de sortie :
 
@@ -213,16 +214,16 @@ Variable de sortie :
 Symbole 		| Définition (négation)
 ----------------|--------------
 `\s` (`\S`) 	| espace
-`\d` 			| chiffre
-`\` 			| caractère d'échappement
-`.` 			| jocker tous les caractères
-`*` 			| n'importe quel symbole plusieurs fois `[2-6]` séq de 2 à 6
-`[]` 			| ecrite l'expression à l'intérieur
-`^` 			| position du début
-`$` 			| en fin de chaîne
-`[0-9]{4}`		| Nbre de fois qu'apparait un chiffre
-`\w`			| équivalent à [a-zA-Z0-9_]
-`?`				| négation
+`\d` 		| chiffre
+`\` 		| caractère d'échappement
+`.` 		| jocker tous les caractères
+`*` 		| n'importe quel symbole plusieurs fois `[2-6]` séq de 2 à 6
+`[]` 		| ecrite l'expression à l'intérieur
+`^` 		| position du début
+`$` 		| en fin de chaîne
+`[0-9]{4}`	| Nbre de fois qu'apparait un chiffre
+`\w`		| équivalent à [a-zA-Z0-9]
+`?`		| négation
 
 Exemples :
 
