@@ -25,6 +25,7 @@ g = ggplot() + aes(x,y)
 ```
 
 Type de graphique :
+
 * `geom_boxplot()` boxplots.
 * `geom_point(<option>)` nuage de points. Option :
 	* `aes(colour = var)` colorier les points en fonction de var.
@@ -37,6 +38,7 @@ Type de graphique :
 | 21 | cercle entrouré |
 
 Libellés :
+
 * `geom_text_repel( aes(x,y), label = var )` ajouter des étiquettes de données (library ggrepel).
 * `geom_label_repel( aes(x,y), label = var )` ajouter des étiquettes de données avec fond (library ggrepel).
 * `geom_line(<option>)`
