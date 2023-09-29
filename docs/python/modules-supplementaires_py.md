@@ -1,6 +1,7 @@
 ## Télécharger des vidéos depuis Youtube
 
 Library `yt-dlp` (`youtube-dl`en python sinon c'est en power shell) avec `yt-dlp 'id_youtube'` télécharger dans la meilleur qualité.
+
 * `--merge-output-format mkv --remux mkv` convertir le fichier en mkv. Cela nécessite de télécharger ffmpeg et de déclarer la variable environnement /bin.
 * `yt-dlp --extract-audio --audio-format mp3 <video URL>` télécharger le son de la vidéo en mp3.
 
@@ -82,6 +83,7 @@ c = conn.cursor()
 Les variables à utiliser dans la requête doivent etre declarées par un `?`.
 S'il y en a plusieurs, il faut les organiser sous la forme d'une liste.
 
-_NB :_ Penser à convertir le résultat en liste.
+!!! note
+  Penser à convertir le résultat en liste.
 
 * `conn.commit()` écrire ou modifier la bdd en exécutant la requête.
