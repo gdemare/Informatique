@@ -166,7 +166,8 @@ Fonction		| Définition
 * `vecteur.append('texte')` ajouter une valeur à un vecteur.
 * `vecteur.pop()` supprimer le dernier élément d'un vecteur.
 * `(a,b) = (1,3)` donner un nom aux élements de la liste pour pouvoir les appeller comme des variables.
-* `liste1 + liste2` concaténer deux listes 
+* `liste1 + liste2` concaténer deux listes.
+* `liste1 * nb` dupliquer les éléments d'une liste.
 * `len(liste)` taille de la liste.
 * `liste = [ val1, val2]` déclarer une liste.
 * `liste[pos1][pos2]` afficher un élément.
