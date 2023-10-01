@@ -13,11 +13,12 @@ Préparer avant un Styleguide UI :
 
 ### Sélection un élément en fonction de sa position
 
-`element:position` appliquer des propriétés à un element particulier.
+* `element:position` appliquer des propriétés à un element particulier.
 Position : 
-* `first-child` premier.
-* `last-child` dernier.
-* `nth-child(numero)` n-ieme.
+
+    * `first-child` premier.
+    * `last-child` dernier.
+    * `nth-child(numero)` n-ieme.
 
 ### News papers style
 
@@ -36,7 +37,7 @@ Position :
 
 * `linear-gradient(direction, couleur1, couleur2)` degradé. (exemple :  `background-image: linear-gradient(to bottom right, red, yellow)` )
 Direction :
-  * `to right` gauche à droite.
+    * `to right` gauche à droite.
 
 ## Effets de transistion
 
@@ -53,26 +54,31 @@ Direction :
 
 ### Contenaire
 * `display: flex;` activer la propriéte flex.
-* `flex-direction: direction;` direction de l'alignement().
-Direction :
-  * `row`
-  * `column`
-  * `row-reverse`
-  * `column-reverse`
-* `flex-wrap: comportement;` comportement des élements lorsqu'il n'y plus de place.
-Comportement :
-  * `nowrap` pas de retour à la ligne (par défaut).
-  * `wrap` les éléments vont à la ligne lorsqu'il n'y a plus la place.
-  * `wrap-reverse` les éléments vont à la ligne lorsqu'il n'y a plus la place en sens inverse.
+* `flex-direction: direction;` direction de l'alignement(). Direction :
+
+    * `row`
+    * `column`
+    * `row-reverse`
+    * `column-reverse`
+
+* `flex-wrap: comportement;` comportement des élements lorsqu'il n'y plus de place. Comportement :
+    
+    * `nowrap` pas de retour à la ligne (par défaut).
+    * `wrap` les éléments vont à la ligne lorsqu'il n'y a plus la place.
+    * `wrap-reverse` les éléments vont à la ligne lorsqu'il n'y a plus la place en sens inverse.
+    * 
 * `justify-content: ;` alignement sur le premier axe.
-  * `flex-start`, `flex-end` lignés au début/fin.
-  * `center` centre.
-  * `space-between` espace entre les éléments sans espace aux extremités.
-  * `space-around` espace entre les éléments avec de l'espace aux extremités.
+    
+    * `flex-start`, `flex-end` lignés au début/fin.
+    * `center` centre.
+    * `space-between` espace entre les éléments sans espace aux extremités.
+    * `space-around` espace entre les éléments avec de l'espace aux extremités.
+
 * `align-items: alignement;` alignement sur le deuxième axe.
-  * `stretch` les éléments sont étirés sur tout l'axe (valeur par défaut)
-  * `flex-start`, `flex-end` alignés au début/fin.
-  * `center` alignés au centre.
+
+    * `stretch` les éléments sont étirés sur tout l'axe (valeur par défaut)
+    * `flex-start`, `flex-end` alignés au début/fin.
+    * `center` alignés au centre.
 
 ### Contenus
 
