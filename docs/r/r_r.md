@@ -95,7 +95,6 @@ for(i in 1:nrow(g)){
 
 `matrix(vecteur, nrow = , ncol =)` transformer en matrice.
 
-
 * `det(A)` déterminant.
 * `dim(A)` dimension.
 * `t(A)` transposer.
