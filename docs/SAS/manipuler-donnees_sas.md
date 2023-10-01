@@ -3,6 +3,7 @@
 `LIBNAME nomBiblio "chemin";` Créer une bibliothèque.
 
 `OPTION FMTSEARCH=(bibliotheque.format)` créer une bibliothèque format.
+
 * `nom:` joker sur SAS.
 * `var1-var8` selectioner les variables de var1 à var8.
 * `variable--varh` selectioner les variables situer entre variable et varh.
@@ -17,6 +18,7 @@ DATA=table <(option)>
 ```
 
 Listes des arguments :
+
 * `DROP = var` champs à supprimer.
 * `KEEP = var` colonne à garder.
 * `RENAME = ( col=NV NOM ... )` renommer une colonne.
@@ -72,6 +74,7 @@ INFILE fichier <option>;
 ```
 
 Options :
+
 * `MISSOVER` lire des enregistrements avec des données manquantes en fin d'enregistrement.
 * `DSD` deux séparateurs successifs implique une donnée manquante.
 * `DELIMITER = delimiteur` séparateur de champs.
@@ -100,21 +103,21 @@ END;
 
 Instruction possible
 
-| Instruction | Action |
-|---|---|
-| `OUTPUT` | conserver l'observation |
-| `DELETE` | supprimer l'observation |
+Instruction	| Action
+----------------|---
+`OUTPUT`	| conserver l'observation
+`DELETE`	| supprimer l'observation
 
 ### Comparateur
 
-| SAS | Définition |
-|---|---|
-| `val1 = val2` | égalité |
-| `var IN (val1, val2)` | dans la liste |
-| `val1 ¡¿ val2` | différent |
-| `val1 ¡= val2` ou `val1 ¿= val2` | supérieur, inférieur ou égal |
-| `IS NULL` | valeur nulle pour les chaînes de caractères |
-| `=.` | valeur nulle pour les numériques |
+SAS | Définition
+---|---
+`val1 = val2` | égalité |
+`var IN (val1, val2)`	| dans la liste |
+`val1 ¡¿ val2` 		| différent |
+`val1 ¡= val2` ou `val1 ¿= val2`| supérieur, inférieur ou égal |
+`IS NULL` | valeur nulle pour les chaînes de caractères |
+`=.` | valeur nulle pour les numériques |
 
 ## Opérateur logique
 
