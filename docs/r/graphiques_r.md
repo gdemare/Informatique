@@ -135,9 +135,7 @@ layout(title = 'Répartition des espèces évaluées',
 
 ### Donuts et cambenbert
 
-```
-add_pie(hole = 0.6)
-```
+`add_pie(hole = 0.6)`
 
 ### Séries temporelles
 
@@ -157,3 +155,8 @@ Library `corrplot`
 
 * `boxplot(var)` boxplot.
 * `barplot()` 
+
+Paramètres :
+
+* `main=titre` titre.
+* `sub=sous_titre` sous titre.

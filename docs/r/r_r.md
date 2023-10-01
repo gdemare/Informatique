@@ -29,9 +29,13 @@
 ### Créer un vecteur
 
 * `c(2, 4, 6)` déclarer un vecteur.
-* `2:6` séquence de 
+* `2:6` séquence de 2 à 6 inclus.
 * `seq(2, 3, by=0.5)`
 * `rep(1:2, times=3 ou each=3)` repéter la valeur alternée (1,2,1,2) ou à la suite (1,1,2,2).
+
+* `date[nligne][ncol]` sélectioner une cellule.
+* `data$colonne` sélectionner une colonne.
+
 
 ### Manipuler les vecteurs 
 
@@ -40,9 +44,9 @@
 * `table(x)` tableau d'effectifs.
 * `unique(x)` valeurs uniques.
 * `c(vec1, vec2)` concaténer deux vecteurs.
-* `paste(vec1, vec2, sep=" ")` fusionner deux chaines.
+* `paste(vec1, vec2, sep=" ")` fusionner (concater) deux chaines.
 * `length(vec)` taille du vecteur.
-* `sapply(aa, aa_charge_fct)` appliquer une fonction à tous les éléments d'un vecteur.
+* `sapply(aa, fonction)` appliquer une fonction à tous les éléments d'un vecteur.
 
 ## Fonction
 
@@ -71,6 +75,7 @@ Opérateur	| Définition
 ------------|-----
 `==`		| égale
 `%in%`		| appartient
+`!`     	|
 
 ## Boucles
 
@@ -78,6 +83,7 @@ Opérateur	| Définition
 
 ```
 for(i in 1:nrow(g)){
+	instruction
 }
 ```
 
@@ -85,13 +91,17 @@ for(i in 1:nrow(g)){
 
 
 
-## Les matrices 
+## Les matrices
+
+`matrix(vecteur, nrow = , ncol =)` transformer en matrice.
+
 
 * `det(A)` déterminant.
 * `dim(A)` dimension.
 * `t(A)` transposer.
 * `solve(A)` inverser une matrice.
 * `A %*% B` mutiplication de matrices.
+* `eigen(matrice)` valeurs propres (noyau).
 
 ### While - tant que c'est vrai
 
