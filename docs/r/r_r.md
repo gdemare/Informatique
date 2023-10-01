@@ -1,7 +1,7 @@
 ### Les packages
 
 * `install.packages("package")` installer un package.
-* `library(dplyr)` importer un package. 
+* `library(package)` importer un package. 
 
 ### Manipuler les fichiers
 
@@ -29,7 +29,7 @@
 ### Créer un vecteur
 
 * `c(2, 4, 6)` déclarer un vecteur.
-* `2:6`
+* `2:6` séquence de 
 * `seq(2, 3, by=0.5)`
 * `rep(1:2, times=3 ou each=3)` repéter la valeur alternée (1,2,1,2) ou à la suite (1,1,2,2).
 
@@ -38,12 +38,14 @@
 * `sort(x)` ordonner.
 * `rev(x)` renver l'ordre.
 * `table(x)` tableau d'effectifs.
-* `unique(x)` valeurs uniques
+* `unique(x)` valeurs uniques.
 * `c(vec1, vec2)` concaténer deux vecteurs.
 * `paste(vec1, vec2, sep=" ")` fusionner deux chaines.
 * `length(vec)` taille du vecteur.
+* `sapply(aa, aa_charge_fct)` appliquer une fonction à tous les éléments d'un vecteur.
 
 ## Fonction
+
 ```
 nomFonction <- function(x){
   instruction
@@ -65,6 +67,11 @@ if ( test_expression1) {
 * `assign(nom, valeur)` créer des variables avec une boucle.
 * `get(nom)` appeler une variable.
 
+Opérateur	| Définition
+------------|-----
+`==`		| égale
+`%in%`		| appartient
+
 ## Boucles
 
 ### For 
@@ -73,6 +80,10 @@ if ( test_expression1) {
 for(i in 1:nrow(g)){
 }
 ```
+
+### While
+
+
 
 ## Les matrices 
 
@@ -102,7 +113,7 @@ Minute 		| `%M`	| 15
 Seconde 	| `%S`	| 06
 
 * `time_length( interval(date1, date2), type )` calculer un âge.
-date + ajout calculer une date
+* `date + ajout` calculer une date
 * `years(nbre)` année.
 * `months(nbre)` mois.
 * `days(3)` jour.
@@ -113,9 +124,9 @@ date + ajout calculer une date
 ## Manipuler le texte
 
 * `nchar()` compter le nbre de caractères.
-* `str_sub(i, (text, start = debut, end = fin)` extraire une chaine charactère.
+* `str_sub(i, (text, start = debut, end = fin)` extraire une chaine de charactères.
 * `gsub(schèma, remplacement, variable) ` remplacer un schèma par une nouvelle chaine de caractères.
-* `str_count(text, motif)` compter le nombre d'occurence (`stringr`)
+* `str_count(text, motif)` compter le nombre d'occurences (`stringr`).
 * `gsub( pattern ="[.]", "_", "texte à change" )` remplacer un caractère.
 * `strsplit(variable, symbole)` séparer une variable en fonction d'un symbole.
 * `trim(texte)` supprimer les espaces (package `gdata`).
@@ -143,9 +154,9 @@ Bibliothèque `library(DBI)`
 
 ### Connecteur
 
-| Connecteur | Library | |
-|---|---|---|
-| MySQL | `RMySQL`| `MySQL()` |
+Connecteur	| Library	| Fonction
+------------|-----------|---
+MySQL 		| `RMySQL`	| `MySQL()`
 
 ### Créer une connexion.
 
@@ -154,6 +165,7 @@ dbConnect(MySQL(), paramètre)
 on.exit(dbDisconnect(con))
 ```
 Paramètres : 
+
 * `dbname = "smur"`
 * `host = "10.60.11.4"`
 * `port = 3306`

@@ -1,24 +1,28 @@
-## Une variable
+## ggplot 2
+
+### Une variable
 
 ```
 g = ggplot() + theme_minimal() + aes(x)
 ```
 
-* `geom_histogram(<option>, binwidth = 5)` histogramme.
-Option :
-  * `aes(fill = var)` ajouter une variable.
-  * `position = "fill"` empiler les éléments avec une hauteur normalisée.
+* `geom_histogram(<option>, binwidth = 5)` histogramme. Option :
+	
+	* `aes(fill = var)` ajouter une variable.
+	* `position = "fill"` empiler les éléments avec une hauteur normalisée.
   
-* `geom_bar(<option>)` diagramme en barre.
-Option :
-  * `position = "dodge"` positionner les éléments les uns à coté des autres `aes(...,fill = var)`.
-  * `aes(var), position = "fill"` empiler les éléments avec une hauteur normalisée.
-  * `aes(var), position = "stack"` empiler les éléments.
-  * `stat = 'identity'` pour afficher deux varibles.
-Présentation :
-* `coord_flip()` transformer en diagramme en barre horizontal.
+* `geom_bar(<option>)` diagramme en barre. Option :
 
-### Deux variables
+	* `position = "dodge"` positionner les éléments les uns à coté des autres `aes(...,fill = var)`.
+	* `aes(var), position = "fill"` empiler les éléments avec une hauteur normalisée.
+	* `aes(var), position = "stack"` empiler les éléments.
+	* `stat = 'identity'` pour afficher deux varibles.
+
+Présentation :
+	
+	* `coord_flip()` transformer en diagramme en barre horizontal.
+
+###  Deux variables
 
 ```
 g = ggplot() + aes(x,y)
@@ -28,14 +32,15 @@ Type de graphique :
 
 * `geom_boxplot()` boxplots.
 * `geom_point(<option>)` nuage de points. Option :
+
 	* `aes(colour = var)` colorier les points en fonction de var.
 	* `aes(size = var)` dimensionner les points en fonction de var.
 	* `shape = ` forme du point.
 
-| id | forme |
-|---|---| 
-| 15 | carré plein |
-| 21 | cercle entrouré |
+id  	| Forme
+--------|------------
+`15`	| carré plein
+`21`	| cercle entrouré
 
 Libellés :
 
@@ -86,7 +91,7 @@ Option :
 
 ## Graphique interactif
 
-* `ggplotly( graph )` rendre le graphique interactif (package plotly).
+* `ggplotly( graph )` rendre le graphique interactif (package `plotly`).
 
 ## Afficher une fonction
 
@@ -113,9 +118,10 @@ library : `RColorBrewer`
 * `scale_fill_brewer(palette)`
 
 ## Graphique avec plotly
-package : plotly
 
-%>% pour ajouter des options.
+package : `plotly``
+
+`%>%` pour ajouter des options.
 
 * `plot_ly(data, labels = ~categorie, values = ~valeur)`
 
@@ -137,4 +143,17 @@ add_pie(hole = 0.6)
 
 `library(dygraphs)` pour des graphiques temporels
 
+## Matrice colorée
 
+Library `corrplot`
+
+* `corplot(matrice)` matrice de corrélation.
+
+## Graphiques rapides
+
+* `plot(var1, <var2>)` graphique rapide. 
+
+	* `type = 'h'` h = histogramm
+
+* `boxplot(var)` boxplot.
+* `barplot()` 

@@ -5,8 +5,9 @@
 
 * `write.table(tableau, file = "clipboard", sep = "\t")` copier dans le presse papier.
 
-#### Excel 
-package `readxl`
+### Excel
+
+Package `readxl`
 
 * `read_excel(fichier, sheet = "Feuil1"/nb )` importer un fichier xlsx.
 * `excel_sheets(fichier)` lister les feuilles présentes dans un fichier excel.
@@ -14,9 +15,11 @@ package `readxl`
 ## Exporter un data
  
 * `write.csv(donnée, file = "fichier.csv" )` enregistrer au format csv.
- * `sep = separateur` séparateur.
- * * `row.names = T` nom des lignes.
- * `col.names = T` nom des colonnes.
+
+	* `sep = separateur` séparateur.
+	* `row.names = T` nom des lignes.
+	* `col.names = T` nom des colonnes.
+
 * `write.xlsl(as.dataframe(donnee), file = "fichier.xlsx", sheetName = "feuille")` enregistrer au format excel (package `xlsx`).
 
 ### Information dataframe et nom des lignes eet des colonnes
@@ -24,6 +27,7 @@ package `readxl`
 * `colnames(data)` nom des colonnes.
 * `rownames(data)` nom des colonnes.
 * `column_to_rownames(var = "Accession")` mettre une colonne en nom de lignes et supprime la colonne.
+* `rownames_to_column()` transformer l'index en colonne.
 * `nrow(data)` renvoie le nbre de lignes.
 * `ncol(data)` renvoie le nbre de colonnes.
 * `dim(data)` renvoie la taille du data.
@@ -46,15 +50,16 @@ Package : `dplyr`, `tidyr`. `résultat1 %>% résultat2` : rediriger le résultat
 
 ## Selectionner
 
-* `select( colonne1, colonne2 )` selecionner des colonnes (`-one of(col)` pour enlever une colonne).
+* `select( colonne1, colonne2 )` selecionner des colonnes (`-one of(col)` pour enlever une colonne). Soit avec les numéros, soit avec les noms.
+	* `contains('texte')` sélectionner des colonnes avec le texte dans le nom.
 * `distinct()` supprimer les doublons.
 * `arrange( var1, var2 )` pour mettre en décroisssant `desc(var)`.
 
-|Fonction | Définition |
-|---|---|
-| `starts_with(debut)` | les variables commançant par... |
-| `ends_with(fin)` | les variables finissant par... |
-| `contains(chaine)` | contenant la chaine. |
+Fonction 				| Définition
+------------------------|---
+`starts_with(debut)`	| les variables commançant par...
+`ends_with(fin)`		| les variables finissant par...
+`contains(chaine)`		| contenant la chaine.
 
 ## Réorganiser les données
 
@@ -76,70 +81,72 @@ OrchardSprays %>%
 * `mutate_each(iris, funs(fonction) )` Appliquer une fonction window à chaque variable.
 * `transmute( nom=formule )` Construitre une ou plusieurs variables en supprimant les originales.
 
-| Fonction Window | Description |
-|---|---|
-| `n` | Nombre de lignes |
-| `n_distinct` | nombre de lignes distincts |
-| `lead` | Copier avec des valeurs décalées à gauche. |
-| `lag` | Copier avec des valeurs décalées à droite. |
-| `dense_rank` | Ordonne sans sauts de rangs. |
-| `min_rank` | Ordonne avec sauts de rangs. |
-| `percent_rank` | Rangs de (min rank) entre [0, 1], |
-| `row_number` | Ordonne en affectant aux liens la première position. |
-| `ntile` | Divise en n groupes. |
-| `between` | Les valeurs sont-elles entre a et b? |
-| `cum_dist` | Distribution cumulée |
-| `cumall` | Cumul tant que vrai |
-| `cumany` | Cumul dès que vrai |
-| `cummean` | Moyenne glissante |
-| `cumsum` | Somme cumulée |
-| `cummax` | Maximum cumulé |
-| `cummin` | Minimum cumulé |
-| `cumprod` | Produit cumulé |
-| `pmax` | Maximum par élément |
-| `pmin` | Minimum par élément |
+Fonction		| Description
+----------------|-----------
+`n` 			| Nombre de lignes
+`n_distinct` 	| nombre de lignes distincts
+`lead`			| Copier avec des valeurs décalées à gauche.
+`lag` 			| Copier avec des valeurs décalées à droite.
+`dense_rank` 	| Ordonne sans sauts de rangs.
+`min_rank` 		| Ordonne avec sauts de rangs.
+`percent_rank`	| Rangs de (min rank) entre [0, 1]
+`row_number`	| Ordonne en affectant aux liens la première position.
+`ntile` 		| Divise en n groupes
+`between` 		| Les valeurs sont-elles entre a et b?
+`cum_dist` 		| Distribution cumulée
+`cumall` 		| Cumul tant que vrai
+`cumany` 		| Cumul dès que vrai
+`cummean` 		| Moyenne glissante
+`cumsum` 		| Somme cumulée
+`cummax` 		| Maximum cumulé
+`cummin` 		| Minimum cumulé
+`cumprod` 		| Produit cumulé
+`pmax` 			| Maximum par élément
+`pmin` 			| Minimum par élément
 
 ### Faire une opération sur toutes les variables
 
-| Fonction | Défintion |
-|---|---|
-| `rowSums()` | somme |
+Fonction 		| Défintion
+----------------|-------------
+`rowSums()`		| somme
 
 ## Grouper des données
 
+`data %>% group_by(columns) %>% summarise( indicateur)`
+
 * `group_by(var)` grouper les observations par la var (toujours suivi de `summarise`).
 * `ungroup(iris)` dégrouper le jeu de données.
-
-## Résumer des données
 
 * `summarise( nom = formule)` appliquer une fonction.
 * `summarise_each(funs(fonction))` appliquer une fonction à chaque variable.
 * `count( variable, wt = valeur)` Dénombre le nombre d'observations de chaque valeur d'une variable.
 
-| Fonction résumé | Défintion |
-|---|---|
-| `first` | Première valeur d'un vecteur |
-| `last` | Dernière valeur d'un vecteur |
-| `inth` | Nième valeur d'un vecteur |
-| `n` | Nb de valeurs |
-| `n_distinct` | Nb de valeurs distinctes |
-| `min` | minimum |
-| `max` | maximum |
-| `mean` | Moyenne |
-| `median` | Médiane |
-| `sd` | Ecart-type |
+Fonction 		| Défintion
+----------------|---
+`first` 		| Première valeur d'un vecteur
+`last` 			| Dernière valeur d'un vecteur
+`inth` 			| Nième valeur d'un vecteur
+`n` 			| Nb de valeurs
+`n_distinct`	| Nb de valeurs distinctes
+`min`			| minimum
+`max`			| maximum
+`mean` 			| Moyenne
+`median` 		| Médiane
+`sd` 			| Ecart-type
 
 ### Les jointures
 
-A %>% jointure(B, <by=c( "var1" = "var2")> )
+
+`A %>% jointure(B, <by=c( "var1" = "var2")> )`
+
 * `inner_join(data)` A et B
 * `left_join(data)` A (+ A et B)
 * `right_join(data)` B (+ A et B)
 * `semi_join(data)` A et pas B.
 * `anti_join(data)` B et pas A.
-* `full_join(data)` A ou B.
-Option :
- * `by = c("col1"="col2")` préciser la jointure.
+* `full_join(data)` A ou B. Option :
+
+	* `by = c("col1"="col2")` préciser la jointure.
 
 ## Fusions lignes et colonnes
 
@@ -154,12 +161,15 @@ Option :
 
 ## Discrétiser des variables
 
-* `discretize( var, categories = nbre groupe, label = )` discrétiser une variable (package : arules).
-  * `method = "frequency"` méthode.
-  * `categories = nbre` nombre de classes.
+* `discretize( var, categories = nbre groupe, label = )` discrétiser une variable (package : `arules`).
+
+	* `method = "frequency"` méthode.
+	* `categories = nbre` nombre de classes.
+
 * `cut2( var, breaks, minmax=T)` découpe en classe en fonction du verteur borne`(val1;[` (package Hmisc).
 * `smbinning(df=data, y="var", x = "var_quanti")` discrétiser de facon optimale les varibles du data pour un score. (packages : smbinning); y doit être de type integer.
-  * `$cuts` bornes.
+
+	* `$cuts` bornes.
  
 ## Autres fonctions
 

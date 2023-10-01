@@ -7,6 +7,15 @@ summary(resacp)
 resacp$sdev #ecart type pour chaque axe. Les valeurs propres sont calculées a partir de la variance. 
 ```
 
+## Représentation graphique
+
+`autoplot(res_acp, loadings = TRUE, loadings.colour = 'blue',loadings.label = TRUE, loadings.label.size = 3)` afficher les variables et les individus.
+
+
+----------------------------
+
+L'installation des packages n'a pas fonctionné Ubunut 10-2023
+
 ### Représenter l'ACP
 
 `fviz_eig(reacp)` afficher le diagramme en barre des valeurs propres.

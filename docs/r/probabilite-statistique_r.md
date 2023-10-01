@@ -1,3 +1,9 @@
+## Indicateurs statistiques 
+
+* `cor(vecteur1, vecteur2)` coefficient de corrélation.
+* `mean(vecteur)` moyenne.
+* `sd(vecteur)` écart-type.
+
 ## Loi de probabilité
 
 Library : `stats`
