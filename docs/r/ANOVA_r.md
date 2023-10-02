@@ -1,11 +1,10 @@
-## Construire le modèle
+## Anova à 1 facteurs
 
 ```
-anova = aov(var ~ group, fr)# analyse de variance
+anova = aov(var ~ group, data = donnees )# analysis of variance
+summary(anova)
 ```
 
-## Information sur le modèle
+### Comparaison deux à deux des groupes
 
-```
-summary(fit)
-```
+`TukeyHSD(anova)` comparaison des moyennes entre les groupes avec un test de Tukey.

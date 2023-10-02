@@ -18,7 +18,7 @@ Dans le Terminal :
 
 ### Extension
 
-`.pyw` fichier python exécutable.
+`.pyw` fichier python exécutable;
 
 ### Configurer Python sur Windows
 
@@ -438,12 +438,12 @@ Paramètre :
 * `texte.replace('ancien', 'nouveau')` remplacer un caractère.
 * `re.split(`\n`, texte )` séparer une chaîne de caractères en fonction d'un motif.
 
-Caractère 	| Définition
+Caractère 		| Définition
 ----------------|---------------
-`\'` 		| Apostrophe
-`\n` 		| Retour à la ligne
-`\\` 		| backlash (\)
-`\t`		| Tabulation
+`\'` 			| Apostrophe
+`\n` 			| Retour à la ligne
+`\\` 			| backlash (\)
+`\t`			| Tabulation
 
 #### Formatage des variables en f-string 
 

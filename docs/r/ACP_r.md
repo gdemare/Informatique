@@ -1,10 +1,11 @@
 ```
 resacp = prcomp(data, scale = TRUE) # scale centre et réduit
 ## résumé des axes
-summary(resacp)
+acpInfo = summary(resacp)
 
 ## valeurs propres
-resacp$sdev #ecart type pour chaque axe. Les valeurs propres sont calculées a partir de la variance. 
+acpInfo$sdev #ecart type pour chaque axe. Les valeurs propres sont calculées a partir de la variance.
+acpInfo$importance # % de variance cumulée
 ```
 
 ## Représentation graphique

@@ -35,7 +35,7 @@
 
 * `date[nligne][ncol]` sélectioner une cellule.
 * `data$colonne` sélectionner une colonne.
-
+* `table[ligne, colonne]` sélectionner une ligne ou une colonne ou une cellule (laisser vide si l'on veut garder tous les champs).
 
 ### Manipuler les vecteurs 
 
@@ -47,6 +47,7 @@
 * `paste(vec1, vec2, sep=" ")` fusionner (concater) deux chaines.
 * `length(vec)` taille du vecteur.
 * `sapply(aa, fonction)` appliquer une fonction à tous les éléments d'un vecteur.
+* `factor( liste, levels = c("niv1, "niv2"))` créer une liste ordonée.
 
 ## Fonction
 
@@ -183,3 +184,8 @@ Paramètres :
 
 * `requete = sqlInterpolate(connection, "SELECT * FROM acte WHERE acte_code = ?id", id = acteId)` créer et controler les variables utilisées dans la requete.
 * `dbGetQuery(connection, requete)` exécuter la requete.
+
+## R markdown 
+
+* `echo=FALSE` masquer la sortie.
+* `include = FALSE` masquer le code.

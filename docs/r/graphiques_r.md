@@ -6,9 +6,13 @@
 g = ggplot() + theme_minimal() + aes(x)
 ```
 
+Faire des groupes (dans aes) :
+
+* `fill = var`
+* `color = var`
+
 * `geom_histogram(<option>, binwidth = 5)` histogramme. Option :
-	
-	* `aes(fill = var)` ajouter une variable.
+
 	* `position = "fill"` empiler les éléments avec une hauteur normalisée.
   
 * `geom_bar(<option>)` diagramme en barre. Option :
@@ -17,10 +21,13 @@ g = ggplot() + theme_minimal() + aes(x)
 	* `aes(var), position = "fill"` empiler les éléments avec une hauteur normalisée.
 	* `aes(var), position = "stack"` empiler les éléments.
 	* `stat = 'identity'` pour afficher deux varibles.
+* `geom_density()` répartition, densité.
+
+
 
 Présentation :
 	
-	* `coord_flip()` transformer en diagramme en barre horizontal.
+* `coord_flip()` transformer en diagramme en barre horizontal.
 
 ###  Deux variables
 
@@ -30,7 +37,7 @@ g = ggplot() + aes(x,y)
 
 Type de graphique :
 
-* `geom_boxplot()` boxplots.
+* `geom_boxplot()` boxplots (x=name, y=value).
 * `geom_point(<option>)` nuage de points. Option :
 
 	* `aes(colour = var)` colorier les points en fonction de var.
@@ -145,7 +152,7 @@ layout(title = 'Répartition des espèces évaluées',
 
 Library `corrplot`
 
-* `corplot(matrice)` matrice de corrélation.
+* `corrplot(matrice, method="color")` matrice de corrélation.
 
 ## Graphiques rapides
 
