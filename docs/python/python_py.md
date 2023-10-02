@@ -156,15 +156,22 @@ Fonction		| Définition
 
 * `texte.split('séparateur')` transformer un caractère en liste en fonction d'un séparateur.
 * `format( nombre, '.2f' )` ou `f"{3.4562:.2f}"` format des chiffres le 2 correspond à 2 nbre après la virgule. Attention, converti en texte.
+* `dir(element)` lister toutes les méthodes associées à une variable.
 
 #### Vecteurs et listes
 
-`[] = vecteur` et `() = liste` (appelé tupple) Rmq : Les listes ne sont pas modifiables.
+`[] = vecteur` et `() = liste` (appelé tupple).
+
+!!! note
+	Les listes ne sont pas modifiables.
 
 * `var[nbre]` extraire une valeur.
 * `['valeur']*n` créer une liste à n élément
-* `vecteur.append('texte')` ajouter une valeur à un vecteur.
+* `liste.append('texte')` ajouter une valeur à un vecteur à la dernière position.
+* `liste.insert( position, valeur)` inserer une valeur à une position.
+* `del liste[numéro]` supprimer une valeur.
 * `vecteur.pop()` supprimer le dernier élément d'un vecteur.
+* `vecteur.remove('valeur')` supprime une valeur du vecteur.
 * `(a,b) = (1,3)` donner un nom aux élements de la liste pour pouvoir les appeller comme des variables.
 * `liste1 + liste2` concaténer deux listes.
 * `liste1 * nb` dupliquer les éléments d'une liste.
@@ -172,9 +179,19 @@ Fonction		| Définition
 * `liste = [ val1, val2]` déclarer une liste.
 * `liste[pos1][pos2]` afficher un élément.
 * `liste[4:]` sélectionner tous les éléments à partir du 4ème. Attention dans le cas de `4:7` prend l'élément 4, 5 et 6. 
-* `del liste[numéro]` supprimer une valeur.
 * `liste.sort(reverse=False)` trier un vecteur. Le résultat est automatiquement enregistré.
+* `sorted( liste, reverse = false)` trier une liste sans l'enregistrer.
+* `liste.reverse()` inverser une liste.
+* `liste.count('valeur')` compter la valeur d'un vecteur.
 * `set(liste)` renvoie les valeurs uniques pour une liste.
+
+!!! warning
+	`x = y` créer une référence ie si `y` est modifié alors `x` l'est aussi.
+	Pour copier
+	
+	* `x = y[:]`
+	* `x = list(y)`
+	* `copy.deepcopy(y)` copie avec la library `copy`.
 
 #### Les dictionnaires
 
@@ -191,12 +208,28 @@ Le dictionnaire est un objet particulier. L'accés aux valeurs fait par l'id.
 
 ### Texte
 
-Fonction 	| définition
+* `r"texte /n"` les caractères spéciaux ne sont pas interprétés.
+
+Fonction 	| Définition
 ----------------|-----------------
 `chr(nbre)`	| convertie un nombre en sa lettre correspondante
 `len(texte)`	| nombre de caractère de la chaine
 `.lower()`	| mettre un texte en minuscule
 `.upper()`	| mettre un texte en majuscule
+`.capitalize()`		| premier lettre de chaque mot en majuscule.
+
+```
+''' texte sur 
+	pluisieurs ligne
+'''
+```
+
+* `texte.find('a trouver')` renvoie la position de la première occurence (sinon -1).
+* `startwith("debut")` renvoie un booléen si la chaîne commence par début.
+* `texte.strip()` supprimer les espace en début et fin.
+* `liste.replace(ancien, nouveau)` remplacer une valeur.
+* `liste.join("sep")` joindre les éléments d'une liste.
+
 
 #### Expression régulière (regex)
 
@@ -312,6 +345,21 @@ def fonction (param1, param2=10):
 ```
 
 `=10` valeur par défaut de la variable.
+
+!!! warning
+	Les fonctions peuvent modifier des listes de type global. Il faut faire une copie avant de la donnée en argument à la fonction.
+
+#### Fonctions récursives
+
+Fonction qui s'appelle à elle-même.
+
+```
+def fct(nb):
+	if nb == 0 :
+		n == 0
+	else :
+		return nb + fct(nb)
+```
 
 ##### Fonctions mathématiques
 
@@ -460,7 +508,7 @@ Fonction 			| Définition
 `mkdir(nom)` 			| créer un dossier
 `rmdir(dossier)` 		| supprimer un dossier
 `name`				| renvoie le nom de l'os actuel
-`path.exists(chemin)` 		| existence d'un répertoire ou dossier
+`path.exists(chemin)` 		| existence d'un répertoire ou d'un fichier
 `path.basename(chemin/fichier)`	| renvoie le nom du fichier sans le chemin
 `path.isfile(fichier)` 		| vérifier l'existence d'un fichier
 
@@ -475,6 +523,12 @@ Fonction					| Définition
 Package `glob`
 
 * `glob('*.extension')` lister les fichiers.
+
+#### Sys
+
+* `sys.arv` liste des arguments donner au scipt Attention `sys.argv[0]` contient le nom du script.
+* `sys.exist("message")` ecrit un message et arrête du script.
+
 
 ### Enregistrer un fichier
 
@@ -553,7 +607,8 @@ ajouter des options :
 	* `id=identifiant` ajouter un identifiant.
 	* `klass=classe` ajouter une classe.
 
-NB : Possibilite d'inclure des boucles et des conditions à l'interieur du doc.asis
+!!! note
+	Possibilite d'inclure des boucles et des conditions à l'interieur du doc.asis
 
 ### Convertir un fichier Word en Pdf
 
