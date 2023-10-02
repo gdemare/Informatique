@@ -65,6 +65,7 @@ nav:
     - "SQL" : database/sql.md
     - "Talend" : database/talend.md
   - Programmation :
+    - "Bonnes pratiques" : programming/bonnes-pratiques.md
     - "Github" : programming/github.md
     - "Java" : programming/java.md
     - Web : 
