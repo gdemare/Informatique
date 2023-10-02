@@ -21,13 +21,13 @@ Faire des groupes (dans aes) :
 	* `aes(var), position = "fill"` empiler les éléments avec une hauteur normalisée.
 	* `aes(var), position = "stack"` empiler les éléments.
 	* `stat = 'identity'` pour afficher deux varibles.
+
 * `geom_density()` répartition, densité.
-
-
 
 Présentation :
 	
 * `coord_flip()` transformer en diagramme en barre horizontal.
+* `alpha=0.4` transparence du remplissage.
 
 ###  Deux variables
 
@@ -153,6 +153,8 @@ layout(title = 'Répartition des espèces évaluées',
 Library `corrplot`
 
 * `corrplot(matrice, method="color")` matrice de corrélation.
+
+--------------------------------
 
 ## Graphiques rapides
 

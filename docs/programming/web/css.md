@@ -1,6 +1,7 @@
 Préparer avant un Styleguide UI :
-  * Pattern Lab
-  * [Huge](https://hugeinc.github.io/styleguide)
+
+* Pattern Lab
+* [Huge](https://hugeinc.github.io/styleguide)
 
 ### Les variables en CSS
 
@@ -13,8 +14,7 @@ Préparer avant un Styleguide UI :
 
 ### Sélection un élément en fonction de sa position
 
-* `element:position` appliquer des propriétés à un element particulier.
-Position : 
+* `element:position` appliquer des propriétés à un element particulier. Position : 
 
     * `first-child` premier.
     * `last-child` dernier.
@@ -34,10 +34,9 @@ Position :
 
 * `background-color: couelur;` couleur.
 * `background-image: url('liens');` ajouter une image en arrière plan.
-
-* `linear-gradient(direction, couleur1, couleur2)` degradé. (exemple :  `background-image: linear-gradient(to bottom right, red, yellow)` )
-Direction :
-    * `to right` gauche à droite.
+* `linear-gradient(direction, couleur1, couleur2)` degradé. (exemple :  `background-image: linear-gradient(to bottom right, red, yellow)` ) Direction :
+    
+	* `to right` gauche à droite.
 
 ## Effets de transistion
 
@@ -53,6 +52,7 @@ Direction :
 ## Flexbox
 
 ### Contenaire
+
 * `display: flex;` activer la propriéte flex.
 * `flex-direction: direction;` direction de l'alignement(). Direction :
 
@@ -67,6 +67,7 @@ Direction :
     * `wrap` les éléments vont à la ligne lorsqu'il n'y a plus la place.
     * `wrap-reverse` les éléments vont à la ligne lorsqu'il n'y a plus la place en sens inverse.
     * 
+
 * `justify-content: ;` alignement sur le premier axe.
     
     * `flex-start`, `flex-end` lignés au début/fin.
@@ -76,9 +77,9 @@ Direction :
 
 * `align-items: alignement;` alignement sur le deuxième axe.
 
-    * `stretch` les éléments sont étirés sur tout l'axe (valeur par défaut)
-    * `flex-start`, `flex-end` alignés au début/fin.
-    * `center` alignés au centre.
+    * `stretch` les éléments sont étirés sur tout l'axe (valeur par défaut).
+    * `flex-start`, `flex-end` aligner au début/fin.
+    * `center` aligner au centre.
 
 ### Contenus
 
@@ -98,9 +99,9 @@ Direction :
 ```
 ### Changer le curseur
 
-`cursor: type;`
-Type :
-* `pointer` selection.
+* `cursor: type;` pointeur de la souris. Type :
+	
+	* `pointer` selection.
 
 ### Ajouter des espaces
 
@@ -111,12 +112,12 @@ Type :
 
 ### Propriete des tableaux
 
-`border-collapse: collapse/separate;` bord separes ou colles.
+* `border-collapse: collapse/separate;` bord separes ou colles.
 
 ## Barre de dépacement pour scroll
 
-`overflow-y: scroll;` ajouter une scroll barre verticale.
+* `overflow-y: scroll;` ajouter une scroll barre verticale.
 
 ## Police de caractères
 
-`text-transform: uppercase/capitalize` transofrme le type de lettre (tout en majuscule/seulement la première lettre).
+* `text-transform: uppercase/capitalize` transofrme le type de lettre (tout en majuscule/seulement la première lettre).
