@@ -32,11 +32,22 @@ Package `readxl`
 * `ncol(data)` renvoie le nbre de colonnes.
 * `dim(data)` renvoie la taille du data.
 
-## Manipuler les données
+## Manipuler les données avec dplyr
 
 Package : `dplyr`, `tidyr`. `résultat1 %>% résultat2` : rediriger le résultat
 
 * `pull(data, colonne)` transformer une sortie en vecteur.
+
+
+Les fonctions avec dplyr
+
+```
+max_by <- function(data, var, by) {
+  data %>%
+    group_by({{ by }}) %>%
+    summarise(maximum = max({{ var }}, na.rm = TRUE))
+}
+```
 
 ## Filtrer
 
@@ -135,7 +146,6 @@ Fonction 		| Défintion
 `sd` 			| Ecart-type
 
 ### Les jointures
-
 
 `A %>% jointure(B, <by=c( "var1" = "var2")> )`
 
