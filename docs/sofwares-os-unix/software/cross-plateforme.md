@@ -17,6 +17,8 @@ Convertir du markdown en word, html, pdf.
 
 grid_tables
 `-t markdown-multiline_tables-grid_tables` elimier des extensison dans les convertions.
+note !!! 
+  NE FONCTIONNE PAS A CAUSE DES EXPRESSIONS MATHEMATIQUE Pour Ubuntu, pour convertir en pdf, installer texlive-latex-base, texlive-fonts-extra,texlive-fonts-recommended, texlive-latex-extra.
 
 ## Nbconvert
 
@@ -27,7 +29,6 @@ Paramètres :
 * `--to html` en html.
 * `--no-input` masquer le code.
 * ` --template theme` avec un thème.
-
 
 ## Documentation en markdown
 
