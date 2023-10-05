@@ -255,3 +255,34 @@ Page 4 {data-navmenu="Menu B"}
 Library : `htmltools`
 
 * `includeMarkdown("fichier.md")` insérer un fichier markdown.
+
+## Golem : organiser son code
+
+library `golem`
+
+La philosophie de Golem est d'organiser le code de son application comme un module.
+
+ui.R
+
+```
+mod_bars_echarts_ui("bars_echarts_ui_1")
+```
+
+server.R
+
+```
+callModule(mod_bars_echarts_server, "bars_echarts_ui_1")
+```
+
+R/Mod_bars_echarts.R
+
+```
+mod_bars_echarts_ui <- function(id){
+    ns <- NS(id)
+    tagList( )
+}
+
+mod_bars_echarts_server <- function(input, output, session){
+    ns <- session$ns
+}
+```
