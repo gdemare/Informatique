@@ -52,8 +52,8 @@ tabItems(
   tabItem(tabName = onglet, contenuOnglet)
 )
 ```
-créer un onglet.
-Parametres :
+créer un onglet. Parametres :
+
 * `badgeLabel = nom, badgeColor = couleur` Ajouter un badge
 * `disable = TRUE` desactiver la barre.
 
@@ -77,9 +77,8 @@ tabBox(
   tabPanel(title = "titre", tableOutput("nomTable"))
 ) 
 ``` 
-boîte avec un tableau.
+boîte avec un tableau. Arguments :
 
-Arguments :
 * `title = titre`
 * `footer = pied de la page`
 * `width = largeur`
@@ -248,8 +247,8 @@ Page 4 {data-navmenu="Menu B"}
 
 ### Afficher tableau et valeur box
 
-`knitr::kable(data)` Afficher une table
-`valueBox(comments, icon = "fa-comments")` ajouter une valeur box.
+* `knitr::kable(data)` Afficher une table
+* `valueBox(comments, icon = "fa-comments")` ajouter une valeur box.
 
 ## Markdown
 
