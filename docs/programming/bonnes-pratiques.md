@@ -1,3 +1,8 @@
+Les bonnes pratiques de programmations doivent permettre d'obtenir un code fiable, évolutif et maintenable (pérennité). 
+
+!!! note
+    Un code est plus souvent lu que modifié.
+
 ## Nommage des variables
 
 Choisir un nom explicit :
