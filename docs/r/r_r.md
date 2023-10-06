@@ -57,6 +57,26 @@ nomFonction <- function(x){
 }
 ```
 
+### Try catch 
+
+Try catch permet d'éviter que le programme plante lorsqu'il y a une erreur.
+
+```
+foo <- function( x, y ){
+   tryCatch(
+     expr = {
+       return( x + y )
+     },
+     error = function(e){
+       print(
+         sprintf("An error occurred in foo at %s : %s",
+                 Sys.time(),
+                 e)
+         )
+     })
+}
+```
+
 ## Condition 
 
 ```
