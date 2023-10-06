@@ -66,7 +66,7 @@ nav:
     - "Talend" : database/talend.md
   - Programmation :
     - "Bonnes pratiques" : programming/bonnes-pratiques.md
-    - "Github" : programming/github.md
+    - "Git" : programming/git.md
     - "Java" : programming/java.md
     - Web : 
       - "CSS" : programming/web/css.md
@@ -160,6 +160,7 @@ nav:
     - Sofwares :
       - "Excel" : sofwares-os-unix/software/excel.md
       - "Fidji" : sofwares-os-unix/software/fidji.md
+      - "Github" : sofwares-os-unix/software/github.md
       - "Logiciels staitistiques" : sofwares-os-unix/software/logiciels-statistiques.md
       - "Microsoft Office" : sofwares-os-unix/software/microsoft-office.md
       - "Premier Pro" : sofwares-os-unix/software/premiere-pro.md
