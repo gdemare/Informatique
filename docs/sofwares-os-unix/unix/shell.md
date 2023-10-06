@@ -1,4 +1,5 @@
 Les types de shell les plus répandus :
+
 * sh : Bourne Shell. L'ancêtre de tous les shells.
 * bash : Bourne Again Shell. Une amélioration du Bourne Shell, disponible par défaut sous Linux et Mac OS X.
 * ksh : Korn Shell. Un shell puissant assez présent sur les Unix propriétaires, mais aussi disponible en version libre, compatible avec bash.
@@ -15,47 +16,48 @@ Les types de shell les plus répandus :
 * `chmod +x script` donner les droits d'éxcution.
 * `./script` exécuter un script.
 * `bash -x sccript` afficher les détails de l'exécution.
-5/ appeler un script depuis n'importe ou : déplacer le script dans un dossier "PATH". Pour afficher la liste de ces dossiers : `echo $PATH`
+
+Pour appeler un script depuis n'importe ou : déplacer le script dans un dossier "PATH". Pour afficher la liste de ces dossiers : `echo $PATH`
 
 ## Variable type texte
 	  
 ¡Attention le Bash est trés pointieux sur les accents, espaces,...etc.!
 	  
 * `variable='texte'` déclarer une variable de type texte.
-* `echo $variable` afficher ou appeler une variable, renvoie les paramètres qu'elle reçoit.
-Paramètres:	
- * `e` activer les retours à la ligne `\n`.
- * `n nombre` coupe le message au bout d'un nombre de lettres.
- * `t nombre` limiter le temps de la saisie (en seconde).
- * `s` ne pas afficher le texte saisi. 
+* `echo $variable` afficher ou appeler une variable, renvoie les paramètres qu'elle reçoit. Paramètres:
+  
+	* `e` activer les retours à la ligne `\n`.
+	* `n nombre` coupe le message au bout d'un nombre de lettres.
+	* `t nombre` limiter le temps de la saisie (en seconde).
+ 	*  `s` ne pas afficher le texte saisi. 
 
 Types de quotes:
 
-| Symbole | action |
-|---|---|
-| `''` | (apostrophes) affiche ce qui est contenu tel quel |
-| `""` | (guillemets) analyse et exécute le contenu reconnu|
-| `''` | (back quotes) demande à bash d'exécuter ce qui se trouve à l'intérieur |
+Symbole | Action
+---|---
+`''` | (apostrophes) affiche ce qui est contenu tel quel
+`""` | (guillemets) analyse et exécute le contenu reconnu
+`''` | (back quotes) demande à bash d'exécuter ce qui se trouve à l'intérieur
 
-* `read variable variable2` demander une saisie et la stock (NB : stock un mot par variable jusqu'a la dernière qui va garder le reste).
-Paramètres :	
+* `read variable variable2` demander une saisie et la stock (NB : stock un mot par variable jusqu'a la dernière qui va garder le reste). Paramètres :
+  
 	* `p texte variable` afficher un message pour l'utilisateur.
 	
 * `${#variable}` afficher la longueur d'une variable.
 	
 ## Variable type nombre
 
-¡Attention, bash ne gére pas les nombres, il faut donc utiliser la commande "let" pour les nombres entiers et "bc" pour les nombres décimaux!
-* `let "variable = valeur"` affecter à une variable un nombre.
+!!! warning 
+	bash ne gére pas les nombres, il faut donc utiliser la commande "let" pour les nombres entiers et "bc" pour les nombres décimaux! C'est `let "variable = valeur"` qui permet affecter à une variable un nombre.
 
-| Operateur | defintion |
-|---|---|
-| `+` | addition |
-| `-` | soustraction |
-| `*` | multiplication |
-| `/` | division |
-| `**` | puissance |
-| `%.`| modulo |
+Operateur | Défintion
+---|---
+`+` | addition
+`-` | soustraction
+`*` | multiplication
+`/` | division
+`**` | puissance
+`%.`| modulo
 
 ## Les variables d'environnement
 
@@ -68,15 +70,16 @@ Elles sont automatiquement créées
 ```
 ./script.sh param1 param2 param3 . 
 ```
+
 Elles se nomment:
 
-| Paramétre | valeur |
-|---|---|
-| $# | Nombre de paramètres |
-| $0 | Nom du script exécuté |
-| $1 | premier paramètre |
-| ... | ... paramètre |
-| $9 | 9ème paramètre |
+Paramétre | valeur
+---|---
+`$#` | Nombre de paramètres
+`$0` | Nom du script exécuté
+`$1` | premier paramètre
+... | ... paramètre
+`$9` | 9ème paramètre
 
 ## Les tableaux
 
@@ -89,47 +92,47 @@ Elles se nomment:
 
 ### sur les chaînes de caractères
 
-| Operateur | Définition |
-|---|---|
-| `$chaine1 = $chaine2` | identique |
-| `$chaine1 != $chaine2` | différent ? |
-| `-z $chaine` | chaine vide |
-| `-n $chaine` | chaine non vide |
+Opérateur | Définition
+---|---
+`$chaine1 = $chaine2` | identique
+`$chaine1 != $chaine2` | différent ?
+`-z $chaine` | chaine vide
+`-n $chaine` | chaine non vide
 
 ### sur les nombres
 
-| Opérateur | Définition |
-|---|---|
-| `$num1 -eq $num2` | = (equal) |
-| `$num1 -ne $num2` | = (no equal) |
-| `$num1 -lt $num2` | < (lower than) |
-| `$num1 -le $num2` | <= (lower or equal) |
-| `$num1 -gt $num2` | > (greater than) |
-| `$num1 -ge $num2` | >= (greater or equal) |
+Opérateur | Définition
+---|---
+`$num1 -eq $num2` | = (equal)
+`$num1 -ne $num2` | = (no equal)
+`$num1 -lt $num2` | < (lower than)
+`$num1 -le $num2` | <= (lower or equal)
+`$num1 -gt $num2` | > (greater than)
+`$num1 -ge $num2` | >= (greater or equal)
  
 ### Sur les fichier
 
 N'oubliez pas que sous Linux, tout est considéré comme un fichier, même un répertoire !
 
-| Opérateur | définition |
-|---|---|
-| `-e $nomfichier` | existance du fichier |
-| `-d $nomfichier` | être un répertoire.  |
-| `-f $nomfichier` | être un vrai fichier |
-| `-L $nomfichier` | être un lien symbolique (raccourci) |
-| `-r $nomfichier` | être lisible (r) |
-| `-w $nomfichier` | être modifiable (w) |
-| `-x $nomfichier` | être exécutable (x) |
-| `$fichier1 -nt $fichier2` | plus récent (newer than) |
-| `$fichier1 -ot $fichier2` | plus vieux  (older than) |
+Opérateur | définition |
+---|---|
+`-e $nomfichier` | existance du fichier
+`-d $nomfichier` | être un répertoire
+`-f $nomfichier` | être un vrai fichier
+`-L $nomfichier` | être un lien symbolique (raccourci)
+`-r $nomfichier` | être lisible (r)
+`-w $nomfichier` | être modifiable (w)
+`-x $nomfichier` | être exécutable (x)
+`$fichier1 -nt $fichier2` | plus récent (newer than)
+`$fichier1 -ot $fichier2` | plus vieux  (older than)
 
 ### Les opérateurs ensemblistes
 
-| Opérateur logique | définition |
-|---|---|
-| `&&` | ET | 
-| `||` | OU |
-| `[! test]` | négation |
+Opérateur logique | définition
+---|---
+`&&` | ET 
+`||` | OU
+`[! test]` | négation
 
 ### if : la condition la plus simple
 
