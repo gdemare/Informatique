@@ -5,7 +5,7 @@ Les bonnes pratiques de programmations doivent permettre d'obtenir un code fiabl
 
 ## Nommer les fichiers 
 
-* Pas d'espace mais `_`
+* Pas d'espace mais `_` (éviter `moyenneAge`)
 * Des noms explicts et court.
 
 !!! examples 
@@ -19,6 +19,19 @@ Les bonnes pratiques de programmations doivent permettre d'obtenir un code fiabl
 * Se limiter à 80 caractères par ligne.
 * Nommer des variables. Choisir un nom explicit :
 
-    * Pour les variables booléennes : `is_fraise`
+    * Pour les variables booléennes : 
+
+    Nom            | Type
+    ---|---
+    `is_fraise`    | booélen
+    `bo_valide_annee` | vecteur booléen
+    `chr_letters`  | texte
+    `int_currency` | 1:10
+    `dt_mtcars`    | dataframe
+    `tbl_mtcar`    | tribble
+
     * Pour les constantes utiliser des majuscule : `CSTE`
     * Pour les fonctions employer des verbes : `import_data_fct()`
+ 
+Théoriquement une fonction doit faire une seule chose. Cependant 
+
