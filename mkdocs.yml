@@ -157,14 +157,14 @@ nav:
       - "Ubuntu" : sofwares-os-unix/os/ubuntu.md
       - "Windows" : sofwares-os-unix/os/windows.md
       - "Cross plateform" : sofwares-os-unix/software/cross-plateforme.md
-    - Sofwares :
+    - Softwares :
       - "Excel" : sofwares-os-unix/software/excel.md
       - "Fidji" : sofwares-os-unix/software/fidji.md
       - "Github" : sofwares-os-unix/software/github.md
       - "Logiciels staitistiques" : sofwares-os-unix/software/logiciels-statistiques.md
       - "Microsoft Office" : sofwares-os-unix/software/microsoft-office.md
       - "Premier Pro" : sofwares-os-unix/software/premiere-pro.md
-      - "Visual Studio Code" : sofwares-os-unix/software/visual-studio-code.md
+      - "Visual Studio Code" : sofwares-os-unix/software/visual-code-studio.md
       - "Web apps" : sofwares-os-unix/software/webapp.md
     - Unix :
       - "Bash" : sofwares-os-unix/unix/bash.md
