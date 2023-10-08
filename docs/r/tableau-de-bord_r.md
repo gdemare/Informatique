@@ -76,7 +76,8 @@ tabBox(
   title = titre,
   tabPanel(title = "titre", tableOutput("nomTable"))
 ) 
-``` 
+```
+
 boîte avec un tableau. Arguments :
 
 * `title = titre`
@@ -144,8 +145,8 @@ Package `DT` Afficher un dataframe
 #### Variable réactive
 
 * `variable = reactive(valeur de la variable)` actualiser la rapport en fonction de la variable.
-* `variable()` utiliser une variable reactive.
-* `eventReactive(input$action, {variable})` réactive variable à la suite d'un evenement.
+* `variable()` utiliser une variable réactive.
+* `eventReactive(input$action, {variable})` réactive variable à la suite d'un é	vènement.
 
 #### Liste interactive utilisant une variable reactivie
 
@@ -155,6 +156,7 @@ ui :
 ```
 
 server :
+
 ```
   filterGenre = reactive(genre)
   output$interaction_slider = renderUI({
@@ -163,7 +165,9 @@ server :
 ```
 
 ### Selection sur un tableau
+
 library(DT)
+
 ```
 output$tableau <- DT::renderDataTable({ 
  instruction
@@ -173,7 +177,8 @@ input$tableau_rows_selected # indice des lignes selectionnées
 
 ## Déployer l'application
 
-`selection = valeur`
+`selection = valeur` 
+
     * `single` une seule ligne.
 
 requis la bibliothèque `rsconnect`
@@ -188,7 +193,7 @@ requis la bibliothèque `rsconnect`
 
 -------------------
 
-# Récupérer des données depuis une page Html vers R
+## Récupérer des données depuis une page Html vers R
 
 `session$clientData$url_protocol`
 
@@ -196,11 +201,12 @@ requis la bibliothèque `rsconnect`
 
 `ui = htmlTemplate(filename = "page.html", sortie1, entree1)`
 
-NB : ajouter `server <- function(input, output, session) {`
+!!! note
+	Ajouter `server <- function(input, output, session) {`
 
 `{{ sortie }}` dans le fichier HTML.
 
-# Flexdashboard (Rmarkdown)
+## Flexdashboard (Rmarkdown)
 
 `library(flexdashboard)`
 

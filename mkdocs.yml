@@ -106,6 +106,7 @@ nav:
     - Autre :
       - "Cartes" : r/carte_r.md
       - "Programme indépendant" : r/programme-independant_r.md
+      - "Rapport" : r/rapport_r.md
       - "Tableau de bord" : r/tableau-de-bord_r.md
     - "Data mining" :
       - "Classification généralités" : r/classification-info_r.md
