@@ -219,15 +219,19 @@ Le dictionnaire est un objet particulier. L'accés aux valeurs fait par l'id.
 * `.update(reference)` ajouter une nouvelle valeur.
 * `sorted(dico)` trier un dictionnaire par la clé.
 
-	* `dic.get` trier par valeur.
+	* `key=dic.get` trier par valeur.
 
 * `dict(liste)` convertir en dictionnaire.
-`for key in dico`
+* `for key in dico:` itérer un dictionnaire renvoie la clé (pour renvoyer la clé et la valeur, itérer sur `dico.items()`).
 
 ### Les tupples (les listes non modifiables)
 
 * `tupple(list)` convertir en tupple.
-`t = t + (2,)`ajouter un élément. 
+* `t = t + (2,)`ajouter un élément.
+
+compte un nombre de valeurs
+
+`dic.get(valeur, 0) + 1` ajoute la valeur si elle n'est pas présente et ajoute 0+1 sion ajoute +1.
 
 ### Set et frozenset
 
@@ -250,7 +254,7 @@ Python			| Définition
 
 ### Les collections
 
-Pas mal de trucs. Elles permettent de compter le nombre d'éléments via `collection.Counter(seq)`
+Pas mal de trucs. Elles permettent de compter le nombre d'éléments via `collections.Counter(seq)`
 
 ## Les types de variables
 
@@ -754,3 +758,16 @@ print(open_file)
 ou `.askopenfilename()`
 * `fichier = re.search(r'((?!(/|\\)).)*$' , open_file).group(0)` le fichier.
 * `dossier = open_file.replace(fichier, "")` le dossier.
+
+
+### Développer avec Jupyter notebook
+
+Recharger automatiquement un module à chaque exécution du code. Utile pour développer un module. Ne fonctionne qu'avec jupyternotebook?
+
+```
+%load_ext autoreload
+%autoreload 2
+```
+
+`%%time` renvoie le cout d'éxécution.
+`%%timeit` exécute une boucle pour mesurer en moyenne le temps d'exécution.
