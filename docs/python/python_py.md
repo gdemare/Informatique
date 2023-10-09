@@ -1,9 +1,11 @@
 ## Installation et configuration
 
-NB : les chemins s'écrivent avec le `/`.
+!!! note
+	Les chemins s'écrivent avec le `/`.
 
 Environement de développement : Jupyter
 Changer la couleur de l'environnement jupyter.
+
 ```
 pip install jupyterthemes
 pip install --upgrade jupyterthemes
@@ -58,6 +60,7 @@ NB : il est possible de stocker le nom des library à utiliser dans un fichier.
 * `pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}` maj en passant par le PowerShell.
 
 #### Cloner un dossier github : 
+
 ```
 git clone https://github.com/jkbr/httpie.git
 sudo python setup.py install
@@ -133,7 +136,7 @@ Les instuctions peuvent être séparées par `;` ou par un saut de ligne.
 * `"""commentaire"""` commentaire sur plusieurs lignes.
 * `début \ suite` d'écrire une instruction sur plusieurs lignes
 
-### Les variables 
+## Les variables 
 
 * `a = valeur` créer et affecter une valeur à une variable.
 * `a, b = val1, val2` affecter plusieurs variables en même temps.
@@ -143,7 +146,7 @@ Les instuctions peuvent être séparées par `;` ou par un saut de ligne.
 Liste des variables par défaut :
 * `%pwd` dossier par défaut.
 
-#### Format de données
+### Format de données
 
 * `type(variable)` renvoie le type de variable.
 
@@ -158,7 +161,9 @@ Fonction		| Définition
 * `format( nombre, '.2f' )` ou `f"{3.4562:.2f}"` format des chiffres le 2 correspond à 2 nbre après la virgule. Attention, converti en texte.
 * `dir(element)` lister toutes les méthodes associées à une variable.
 
-#### Vecteurs et listes
+## Les listes
+
+### Les listes modifiables
 
 `[] = vecteur` et `() = liste` (appelé tupple).
 
@@ -193,7 +198,7 @@ Fonction		| Définition
 	* `x = list(y)`
 	* `copy.deepcopy(y)` copie avec la library `copy`.
 
-#### Les dictionnaires
+### Les dictionnaires
 
 * `dict = { 'id' : [val1, val2, val3] }` Déclarer un dictionnaire.
 * `dict['id']` + `.seq` pour connaitre une information.
@@ -205,6 +210,42 @@ Le dictionnaire est un objet particulier. L'accés aux valeurs fait par l'id.
 * `.keys()` renvoie la liste des id.
 * `record_dict["sp"] = record_dict.pop("id")` modifier la clé d'une entrée.
 * `.update(reference)` ajouter une nouvelle valeur.
+* `sorted(dico)` trier un dictionnaire par la clé.
+
+	* `dic.get` trier par valeur.
+
+* `dict(liste)` convertir en dictionnaire.
+`for key in dico`
+
+### Les tupples (les listes non modifiables)
+
+* `tupple(list)` convertir en tupple.
+`t = t + (2,)`ajouter un élément. 
+
+### Set et frozenset
+
+Liste d'éléments uniques. Elles sont utiles pour éliminer les doublons. La différence entre les set et les frozenset est que ce dernier n'est pas modifiable.
+
+* `{}` déclarer un set.
+* `set()`convertir en set.
+* `.add(valeur)` ajouter une valeur.
+* `.discard()` supprimer une valeur.
+
+Opérations ensemblistes sur les sets
+
+Python			| Définition
+---|---
+`.union()`		| dans s1 et pas dans s2
+`.issubset`		| s1 est un sous ensemble de s2
+`.isdisjoint`	| est disjoint
+
+`{base : seq.count(base) for base in set(sequence):}` compter le nb de bases dans une séquence.
+
+### Les collections
+
+Pas mal de trucs. Elles permettent de compter le nombre d'éléments via `collection.Counter(seq)`
+
+## Les types de variables
 
 ### Texte
 
@@ -264,6 +305,7 @@ Exemples :
 * `"[^.?-]*"` tous les caractères avant `-`.
 
 ### Les dates
+
 Package : `datetime`
 
 Fonction 		| Définition
