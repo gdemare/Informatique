@@ -31,6 +31,32 @@ Les bonnes pratiques de programmations doivent permettre d'obtenir un code fiabl
     `tbl_mtcar`    | tribble
 
     * Pour les constantes utiliser des majuscule : `CSTE`
+ 
+  ### Python
+
+  ```
+  def multiplie_nombres(nombre1, nombre2):
+    """Multiplication de deux nombres entiers.
+
+    Cette fonction ne sert pas à grand chose.
+
+    Parameters
+    ----------
+    nombre1 : int
+        Le premier nombre entier.
+    nombre2 : int
+        Le second nombre entier.
+
+        Avec une description plus longue.
+        Sur plusieurs lignes.
+
+    Returns
+    -------
+    int
+        Le produit des deux nombres.
+    """
+    return nombre1 * nombre2
+  ```
     * Pour les fonctions employer des verbes : `import_data_fct()`
  
 Théoriquement une fonction doit faire une seule chose. Cependant 
