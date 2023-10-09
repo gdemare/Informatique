@@ -209,8 +209,10 @@ Non modifiable		| tupple	| frozenset
 
 * `dict = { 'id' : [val1, val2, val3] }` Déclarer un dictionnaire.
 * `dict['id']` + `.seq` pour connaitre une information.
+* `thisdict["color"] = "red"` ajouter une valeur dans le dictionnaire.
 
 Le dictionnaire est un objet particulier. L'accés aux valeurs fait par l'id.
+
 * `.get(id)` renvoie la colonne si l'id existe. 
 * `.values()` renvoie les valeurs sous forme de liste.
 * `.items()` renvoie (id, valeur).
