@@ -163,6 +163,13 @@ Fonction		| Définition
 
 ## Les listes
 
+Tableau récapitulatif des types de listes :
+
+					| Doublons	| Eléments uniques 
+--------------------|-----------|----------------
+Modifiable			| liste		| set
+Non modifiable		| tupple	| frozenset
+
 ### Les listes modifiables
 
 `[] = vecteur` et `() = liste` (appelé tupple).
@@ -229,7 +236,7 @@ Liste d'éléments uniques. Elles sont utiles pour éliminer les doublons. La di
 * `{}` déclarer un set.
 * `set()`convertir en set.
 * `.add(valeur)` ajouter une valeur.
-* `.discard()` supprimer une valeur.
+* `.discard(valeur)` supprimer une valeur.
 
 Opérations ensemblistes sur les sets
 
