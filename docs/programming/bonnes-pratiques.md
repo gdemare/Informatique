@@ -30,34 +30,41 @@ Les bonnes pratiques de programmations doivent permettre d'obtenir un code fiabl
     `dt_mtcars`    | dataframe
     `tbl_mtcar`    | tribble
 
-    * Pour les constantes utiliser des majuscule : `CSTE`
- 
-  ### Python
-
-  ```
-  def multiplie_nombres(nombre1, nombre2):
-    """Multiplication de deux nombres entiers.
-
-    Cette fonction ne sert pas à grand chose.
-
-    Parameters
-    ----------
-    nombre1 : int
-        Le premier nombre entier.
-    nombre2 : int
-        Le second nombre entier.
-
-        Avec une description plus longue.
-        Sur plusieurs lignes.
-
-    Returns
-    -------
-    int
-        Le produit des deux nombres.
-    """
-    return nombre1 * nombre2
-  ```
-    * Pour les fonctions employer des verbes : `import_data_fct()`
+* Pour les constantes utiliser des majuscule : `CSTE`
+* Pour les fonctions employer des verbes : `import_data_fct()`
  
 Théoriquement une fonction doit faire une seule chose. Cependant 
+
+### Python
+
+```
+def multiplie_nombres(nombre1, nombre2):
+"""Multiplication de deux nombres entiers.
+
+Cette fonction ne sert pas à grand chose.
+
+Parameters
+----------
+nombre1 : int
+    Le premier nombre entier.
+nombre2 : int
+    Le second nombre entier.
+
+    Avec une description plus longue.
+    Sur plusieurs lignes.
+
+Returns
+-------
+int
+    Le produit des deux nombres.
+"""
+return nombre1 * nombre2
+```
+
+Controler la qualité de son code soit en ligne `pep8online` soit avec des library comme 
+
+* `pycodestyle` pour le code.
+* `pydocstyle` pour la doctring (documentaiton).
+* `pylint` comprend le contexte du code et propose des éléments d'amélioration.
+
 
