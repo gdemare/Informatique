@@ -64,7 +64,7 @@ max_by <- function(data, var, by) {
 * `select( colonne1, colonne2 )` selecionner des colonnes (`-one of(col)` pour enlever une colonne). Soit avec les numéros, soit avec les noms.
 	* `contains('texte')` sélectionner des colonnes avec le texte dans le nom.
 * `distinct()` supprimer les doublons.
-* `arrange( var1, var2 )` pour mettre en décroisssant `desc(var)`.
+* `arrange( var1, var2 )` trier en ordre décroisssant `desc(var)`.
 
 Fonction 				| Définition
 ------------------------|---
