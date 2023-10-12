@@ -10,6 +10,11 @@
 Package `readxl`
 
 * `read_excel(fichier, sheet = "Feuil1"/nb )` importer un fichier xlsx.
+
+ 	* `sheet = 1` numéro de la feuille.
+  	* `skip = 1` ligne à ignorer.
+  	* `col_names` noms des colonnes.
+
 * `excel_sheets(fichier)` lister les feuilles présentes dans un fichier excel.
 
 ## Exporter un data
