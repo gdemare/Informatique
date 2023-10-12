@@ -2,14 +2,14 @@
 
 ## Manipuler la console et les fichiers
 
-|Touche | Action |
-|---|---|
-| Crtl + r | rechercher une commande tapée avec quelques lettres |
-| Crtl + l | effacer le contenu de la console |
-| Crtl + d | envoie le message EOF (End Of Files) |
-| Crtl + u | supprimer tout ce qui se situe à gauche du curseur |
-| Crtl + w | supprimer le premier mot à gauche du curseur |
-| Crtl + y | coller le texte supprimer avec les commandes précédentes |
+Touche | Action
+---|---
+Crtl + r | rechercher une commande tapée avec quelques lettres
+Crtl + l | effacer le contenu de la console
+Crtl + d | envoie le message EOF (End Of Files) 
+Crtl + u | supprimer tout ce qui se situe à gauche du curseur
+Crtl + w | supprimer le premier mot à gauche du curseur
+Crtl + y | coller le texte supprimer avec les commandes précédentes
 
 ## La structure des dossiers et fichiers
 
@@ -97,19 +97,23 @@ Paramètre :
 Paramètre :
 	`-remove-home` supprimer le dossier home de l'utilisateur.
 * `addgroup groupe` créer un groupe.
-* `usermod utilisateur` modifier un utilisateur.
-Paramètres :	
+* `usermod utilisateur` modifier un utilisateur. Paramètres :
+
 	* `l` renommer l'utilisateur (NB : le nom de son répertoire ne sera pas changé).
 	* `g` changer de groupe.
 	* `G groupe1, groupe2 utilisateur` appartenir à plusieurs groupes (peu importe les groupes auxquels il appartenait).
 	* `aG` même chose que -G mais concerve les groupes auxquels appartenaient l'uilisateur.
+
 * `delgroup groupe` supprimer un groupe.
-* `chown proprietaire fichier` changer le propriétaire d'un fichier.
-Paramètres :
-	`utilisateru:groupe` changer le groupe et le propriétaire et groupe d'un fichier.
-	`R` affecter récussivement les sous-dossiers.
+* `chown proprietaire fichier` changer le propriétaire d'un fichier. Paramètres :
+* 
+	* `utilisateru:groupe` changer le groupe et le propriétaire et groupe d'un fichier.
+	* `R` affecter récussivement les sous-dossiers.
+
+   
 * `chgrp groupe fichier` changer le groupe propriétaire d'un fichier.
 * `chmod droit fichier` modifier les droits d'accés [propriétaire][groupe][autres] .
+  
 	* Méthode absolue : attribuer les droits en 3 chiffres via l'addition.
 	* Méthode relative : attribuer les droits avec 9 lettres. 	
 
@@ -135,7 +139,8 @@ NB on peut utiliser `apt` sans get ou cache notamment sur les chromebooks.
 *  `apt show paquet | grep install` vérifier si le package est installé.
 *  `apt list --installed` lister les logicels installés.
 
-*  `dpkg` logicel de gestion des paquets debian (.deb).
+*  `dpkg` logicel de gestion des paquets debian (.deb). Paramètres :
+  
 	* `-l` lister les packages installer.
  	* `-i package` installer un package.
   	* `-r package` désinstaller un package.	 	
@@ -158,9 +163,11 @@ NB on peut utiliser `apt` sans get ou cache notamment sur les chromebooks.
 * `locate fichier` rechercher rapidement dans la base de données.
 * `updatebd` reconstruitre la base de données des fichiers du disque dur.
 * `find ou quoi action` recherche approfondie.
+  
 	* ou : c'est le nom du dossier dans lequel la commande va faire la recherche.
 	* quoi : c'est le fichier de recherche (date de création, nom, taille etc)
 	* Que faire avec :
+   
 Paramètres :	
 	* `name "fichier"` rechercher exactement le nom d'un fichier.	
 	* `size «+/-/ »«tailleavecunité»` recherche a partir de la taille du fichier. Les unités sont : K ; M ; G ;... 
@@ -173,15 +180,15 @@ Paramètres :
  
 ## Extraire, trier et filtrer des données
 
-* `grep texte fichier` affiche toute les lignes ou il y a «texte».
-Paramétres:	
+* `grep texte fichier` affiche toute les lignes ou il y a «texte». Paramétres:
+
 	* `i` ignore la casse (majuscules et minuscules).
 	* `n` connaître les numéros des lignes.
 	* `v` ignorer un mot.
 	* `r` rechercher dans tous les fichiers et sous dossiers.
 
-* `sort fichier` trier les lignes
-Paramétres :
+* `sort fichier` trier les lignes Paramétres :
+  
 	* `o` écrire le résultat dans un fichier.
 	* `r` trier en ordre inverse.
 	* `R` ordre aléatoire.
@@ -189,6 +196,7 @@ Paramétres :
 	
 * `wc fichier` "word count" compter le nombre de lignes, de mots,...( nombre de l-gnes; nombre de caractéres; nombre d'octet ).
 Paramétres:
+
 	* `l` compter le nombre de lignes.
 	* `w` compter le nombre de mots.
 	* `c` compter le nombre d'octets.
@@ -196,18 +204,22 @@ Paramétres:
 	
 * `uniq fichier <sortie>` détecter et supprimer les doublons. Attention ne fonctionne que sur un fichier trié.
 Paramétres:
+
 	* `c` compter le nombre d'occurences.
 	* `d` afficher uniquement les lignes en double.
-* `cut intervalle fichier` couper une partie d'un fichier. L'intervalle se note "5-18".
-Paramétres:	-
+   
+* `cut intervalle fichier` couper une partie d'un fichier. L'intervalle se note "5-18". Paramétres:
+  
 	* `c` couper selon le nombre de caractéres de chaques lignes.
 	* `d «délimiteur»` indique quel le délimiteur dans le fichier.
 	* `f «champs»` indique le numéro du ou des champs à garder.
-`awk`
-`sed fichier` éditeur de flux (Stream EDitor).
-Paramètre :	
+
+* `awk`
+* `sed fichier` éditeur de flux (Stream EDitor). Paramètre :
+* 
 	* `n '«nbre»p'` affiche la ligne «nbre»p du fichier.
-sed -n "$(6,$((nbre+delta))p" document.info 
+ 
+`sed -n "$(6,$((nbre+delta))p" document.info`
 				
 ## Les flux de redirection
 
@@ -215,10 +227,12 @@ sed -n "$(6,$((nbre+delta))p" document.info
 * `> /dev/null` rediririger le résultat dans le "trou noir" de Linux.
 * `>>` rediriger à la fin d'un fichier.
 * `2>, 2>>, 2>1&` rediriger les erreurs.
+  
     * `2>` rediriger  les erreurs dans un fichier (s'il existe déjà il sera écraser ). exemple: cut -d , -f 1 fichier_inexistant.csv > eleves.txt 2> erreur.log .
     * `2>>` redirgiger les erreurs à la fin d'un fichier( s'il n'existe pas, il sera créé).
     * `2>1&` redirgier les erreurs au même endroit et de la même façon que la sorite standard.
     PS: 2>>&1 ne fonctionne pas, il faut >> sur le fichier ou le veut ecrire. Exemple: cut -d , -f 1 fichier_inexistant.csv >> eleves.txt 2>&1 .
+
 * `<` lire depuis un fichier
 * `<<` lire depuis le clavier progressivement.
 * `|` chaîner les commandes, tout ce qui sort de la commande1 est immédiatement envoyé à la commande2.
@@ -231,10 +245,12 @@ sed -n "$(6,$((nbre+delta))p" document.info
 * `uptime` durée de fonctionnement de l'ordinateur.
 * `tload` afficher la charge de l'ordinateur ie l'indice de l'activité de l'ordinateur. Pour quitter le graphe, faire Crlt + C.
 PS : liste statique des processus.
+
 	* PID : c'est le numéro d'identification du processus.Chaque processus a un numéro unique qui permet de l'identifier. Ce numéro nous sera utile plus tard lorsque nous voudrons arrêter le processus.
 	* TTY : c'est le nom de la console depuis laquelle a été lancé le processus.
 	* TIME : la durée d'exécution du processus. Plus exactement, cela correspond à la durée pendant laquelle le processus a occupé le processeur depuis son lancement.
 	* CMD : le programme qui a généré ce processus. Si vous voyez plusieurs fois le même programme, c'est que celui-ci s'est dupliqué en plusieurs processus.
+   
 Paramétres:	-
 	* `ef` lister tous les processus.
 	* `ejh` afficher les processus en arbre.
@@ -268,24 +284,29 @@ Paramétres:
 * `atq` lister les «jobs» en attente.
 * `atrm chiffre` supprimer les «jobs» en attentes.
 * `;` enchaîner des commandes. Exemple: touch fichier.txt ; rm fichier.txt
-* `sleep chiffre` faire une pause, par défaut, la pause est en seconde. Pour utiliser les autres unités, il faut rajouter après de le chiffre:	
+* `sleep chiffre` faire une pause, par défaut, la pause est en seconde. Pour utiliser les autres unités, il faut rajouter après de le chiffre :
+  
 	* `-m` minutes.
 	* `-h` heures.
 	* `-d` jours.
+
 * `pause` attendre que l'utilisateur face la touche Entré.
 * `&&` enchaîner plusieurs commande uniquement si les instructions précédentes ce sont correctements exécutées. 
-* `crontab` exécuter une commande régulièrement (ps: mettre nano comme éditeur de texte par défaut: echo "export EDITOR=nano" >> ~/.bashrc).
-Paramétres:	
+* `crontab` exécuter une commande régulièrement (ps: mettre nano comme éditeur de texte par défaut: echo "export EDITOR=nano" >> ~/.bashrc). Paramétres :
+
 	* `-e` modifier la crontab.
 	* `-l` afficher la crontab.
 	* `-r` supprimer la crontab.
+   
 Utilisation générale (après crontab `e`). Shéma GÉNÉRAL : [minute(/60)] [heure(/24)] [jour du mois(/31)] [mois(/12)] [jour de la semaine(/6- dimanche=0)] «commande»
-Les différentes notations (exemples):
-  * `nombre` exécuté lorsque le chanp vaut le nombre.
-  * `*` exécuter tout le temps (toutes les valeurs bonnes).
-  * `nombre1,nombre2,nombre3` exécuter lorsque le champs prend la valeur nombre1, nomb...
-  * `nombre1-nombre2` exécuter pour les valeurs entre nombre1 à nombre2.
-  * `*/nombre` exécuté tous les multiples de nombre.
+Les différentes notations (exemples) :
+
+	* `nombre` exécuté lorsque le chanp vaut le nombre.
+	* `*` exécuter tout le temps (toutes les valeurs bonnes).
+	* `nombre1,nombre2,nombre3` exécuter lorsque le champs prend la valeur nombre1, nomb...
+	* `nombre1-nombre2` exécuter pour les valeurs entre nombre1 à nombre2.
+	* `*/nombre` exécuté tous les multiples de nombre.
+ 
 Exemples:	
 ```
 47 * * * * commande : toutes les heures à 47 minutes exactement.			
@@ -339,10 +360,11 @@ Pour plus de renseignements, voir «puTTY».
 
 ## Transférer des fichiers
 
-* `wget «HTTP ou FTP»` téléchargement de fichiers.
-Paramétres:	
+* `wget «HTTP ou FTP»` téléchargement de fichiers. Paramétres :
+  
 	* `-c` reprendre un téléchargment arrêté.
 	* `--background` lancer un téléchargement en tâche de fond.
+   
 * Crtl+c : arrêter le téléchargement en cours.
 * `wget-log` indique l'avancement du téléchargement lancer en arrère plan.
 * `scp fichier-origine copie-destination` copier des fichiers sur le réseau.
