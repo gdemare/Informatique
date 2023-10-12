@@ -105,6 +105,7 @@ nav:
     - "Manipuler les données" : r/manipuler-donnees_r.md
     - Autre :
       - "Cartes" : r/carte_r.md
+      - "Développer en R" : r/developper_r.md
       - "Programme indépendant" : r/programme-independant_r.md
       - "Rapport" : r/rapport_r.md
       - "Tableau de bord" : r/tableau-de-bord_r.md
