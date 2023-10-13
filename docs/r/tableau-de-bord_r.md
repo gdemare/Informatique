@@ -175,11 +175,11 @@ output$tableau <- DT::renderDataTable({
 input$tableau_rows_selected # indice des lignes selectionnées
 ```
 
-## Déployer l'application
+## Déployer l'application sur le site Shinyapps
 
 `selection = valeur` 
 
-    * `single` une seule ligne.
+	* `single` une seule ligne.
 
 requis la bibliothèque `rsconnect`
 
@@ -191,13 +191,11 @@ requis la bibliothèque `rsconnect`
 * `runApp()` tester l'application.
 * `deployApp()` déployer l'application.
 
--------------------
+### Récupérer des données depuis une page Html vers R
 
-## Récupérer des données depuis une page Html vers R
+* `session$clientData$url_protocol`
 
-`session$clientData$url_protocol`
-
-# Inserer des sorties R dans une page HTML
+## Inserer des sorties R dans une page HTML
 
 `ui = htmlTemplate(filename = "page.html", sortie1, entree1)`
 
@@ -206,7 +204,15 @@ requis la bibliothèque `rsconnect`
 
 `{{ sortie }}` dans le fichier HTML.
 
-## Flexdashboard (Rmarkdown)
+### Markdown
+
+Library : `htmltools`
+
+* `includeMarkdown("fichier.md")` insérer un fichier markdown.
+
+-------------------
+
+## Flexdashboard : site web dynamique à partir d'un fichie Rmarkdown
 
 `library(flexdashboard)`
 
@@ -256,13 +262,8 @@ Page 4 {data-navmenu="Menu B"}
 * `knitr::kable(data)` Afficher une table
 * `valueBox(comments, icon = "fa-comments")` ajouter une valeur box.
 
-## Markdown
 
-Library : `htmltools`
-
-* `includeMarkdown("fichier.md")` insérer un fichier markdown.
-
-## Golem : organiser son code
+## Golem et testthat : organiser son code
 
 library `golem`
 
