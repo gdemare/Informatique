@@ -14,9 +14,7 @@ jt -t chesterish
 
 ### Lancer visual code avec python
 
-Dans le Terminal : 
-1. `conda activate ppoulain-python`
-2. `code .`
+
 
 ### Extension
 
@@ -36,11 +34,19 @@ Répéter l'opération pour le sous dossier library/bin et scripts
 
 `python` démarrer une session python.
 
-### Les environnements en Python
+### Conda : Les environnements en Python
 
 Permet d'installer plusieurs versions différentes sur la meme machine.
 
+* `conda create python_env` créer un environnement conda.
+* `conda activate python_env` activer l'environnement.
+* `conda deactivate` quitter l'environnement.
 * `conda update` mettre a jour tous les packages.
+
+Dans pour choisir le noyau d'un envrionnement Visual Code ctrl+shift+P, sélectionner, `Pyhon : select Interpreter`. Sinon, dans le Terminal :
+
+1. `conda activate ppoulain-python`
+2. `code .`
 
 #### Installer un module
 
