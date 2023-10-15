@@ -13,6 +13,8 @@ Pour un terminal avec les commandes colorées.
 
 ### Paramétrer R markdown
 
-1. Ctrl + Shif + p : ouvrir le panneau des paramètres
-2. Dans `Files:Associations`, ajouter `*.Rmd` `rmd`
 
+0. Installer knitr, rmarkdown.
+1. Dans les paramètres utilisateurs (Crtl + Shift + p) :
+2. Rechercher `user settings (JSON)`
+3. Ajouter/remplacer dans la section `"files.associations":`  `"*.Rmd": "rmd",` et `"*.rmd": "rmd"`
