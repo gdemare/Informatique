@@ -30,6 +30,8 @@ Disponible sur le Window Store :
 * Visual Studio Code, environnement de programmation.
 * Vlc, lecteur media.
 * [Fluent search](https://www.fluentsearch.net/), log
+* Simplenote
+* Discord
 
 Logiciels Windows :
 
