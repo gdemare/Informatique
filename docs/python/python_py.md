@@ -228,6 +228,7 @@ Le dictionnaire est un objet particulier. L'accés aux valeurs fait par l'id.
 * `sorted(dico)` trier un dictionnaire par la clé.
 
 	* `key=dic.get` trier par valeur.
+ 	* Exemple pour trier un dictionnaire par valeur : `{ word : seq_nb_words[word] for word in sorted(seq_nb_words, key=seq_nb_words.get, reverse = True)} ` 	
 
 * `dict(liste)` convertir en dictionnaire.
 * `for key in dico:` itérer un dictionnaire renvoie la clé (pour renvoyer la clé et la valeur, itérer sur `dico.items()`).
