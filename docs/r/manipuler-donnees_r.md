@@ -33,6 +33,7 @@ Package `readxl`
 * `rownames(data)` nom des colonnes.
 * `column_to_rownames(var = "Accession")` mettre une colonne en nom de lignes et supprime la colonne.
 * `rownames_to_column()` transformer l'index en colonne.
+* `rowid_to_column()` transformer le numéro des lignes en colonne.
 * `nrow(data)` renvoie le nbre de lignes.
 * `ncol(data)` renvoie le nbre de colonnes.
 * `dim(data)` renvoie la taille du data.
