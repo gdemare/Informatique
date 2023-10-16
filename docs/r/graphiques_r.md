@@ -22,6 +22,9 @@ Faire des groupes (dans aes) :
 	* `aes(var), position = "stack"` empiler les éléments.
 	* `stat = 'identity'` pour afficher deux varibles.
 
+!!! note 
+	`x = reorder(id_chaine, nb_couple), y = nb_couple` permet de trier les résultats.
+
 * `geom_density()` répartition, densité.
 
 Présentation :
@@ -53,10 +56,12 @@ Libellés :
 
 * `geom_text_repel( aes(x,y), label = var )` ajouter des étiquettes de données (library ggrepel).
 * `geom_label_repel( aes(x,y), label = var )` ajouter des étiquettes de données avec fond (library ggrepel).
-* `geom_line(<option>)`
-  * `aes(group = var)` une courbe pour chaque modalité de var.
-  * `stat='count'` avec une seul variable.
-  * `geom_col()` diagramme en barre avec la valeur des y. Pour classer les labels, il faut `reorder(label, valeur)` dans le `aes()`.
+* `geom_line(<option>)` courbe. Paramètres : 
+
+ 	* `aes(group = var)` une courbe pour chaque modalité de var.
+	* `stat='count'` avec une seul variable.
+	* `geom_col()` diagramme en barre avec la valeur des y. Pour classer les labels, il faut `reorder(label, valeur)` dans le `aes()`.
+
 * `geom_area()` coubre pleine.
 
 ## Autre 
