@@ -29,6 +29,7 @@ Obtenir le code html d'une page web. Dans le cas où l'url ne se termine par pas
 |`'baliseHtml', {'class' : 'classe'}` | balise avec la classe |  |
 
 Plusieurs éléments :
+
 * `[ element1, element2 ]` ou 
 * `{ element1, elelemt 2 }` unique
 
