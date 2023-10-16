@@ -444,7 +444,7 @@ declarer = classe() # invoquer la classe.
 
 Symbole		| Opération
 ----------------|-----------------------
-`+` 		| addition
+`+` 		| addition (`var += 1`)
 `-` 		| soustraction
 `*` 		| multiplication
 `//` 		| division entière → a // b est le quotient de l'entier a par l'entier b
