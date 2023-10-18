@@ -40,6 +40,7 @@ Logiciels Windows :
 * [Calibre](https://calibre-ebook.com/download), gérer sa bibliothèque numérique.
 * [Cryptomator](https://cryptomator.org/downloads/), pour chiffrer ses données numériques sur les cloud.
 * [Deemix](https://deemix.app/gui) - [Reddit Deemix](https://www.reddit.com/r/deemix/), télécharger des musiques depuis deezer.
+* [Deluge](https://deluge-torrent.org/), gestionnaire de torrents.
 * [Dropbox](https://www.dropbox.com/)
 * [Fluent reader](https://github.com/yang991178/fluent-reader/releases), aggrégateur de flux rss.
 * [FreeFileSync](https://freefilesync.org/download.php), synchroniser des répertoires et des fichiers.
