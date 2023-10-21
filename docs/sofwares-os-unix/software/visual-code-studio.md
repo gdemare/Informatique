@@ -18,3 +18,5 @@ Pour un terminal avec les commandes colorées.
 1. Dans les paramètres utilisateurs (Crtl + Shift + p) :
 2. Rechercher `user settings (JSON)`
 3. Ajouter/remplacer dans la section `"files.associations":`  `"*.Rmd": "rmd",` et `"*.rmd": "rmd"`
+
+Changer l'interpréteur de ctrl+shift+P, `Pyhon : select Interpreter` 
