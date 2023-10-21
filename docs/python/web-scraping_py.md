@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 page = requests.get("https://www.")
 soup = BeautifulSoup(page, 'html.parser')
 ```
+
 Obtenir le code html d'une page web. Dans le cas où l'url ne se termine par pas .html ajouter `page.text`.
 
 ## Filtrer les elements
@@ -22,11 +23,11 @@ Obtenir le code html d'une page web. Dans le cas où l'url ne se termine par pas
 
 ### Condition possible
 
-| Code | Elément | Exemple |
-|---|---|---|
-| `id='id'` ou `class_='classe'` | id ou classe |  |
-| `'baliseHtml'` | balise Html | `'section'` |
-|`'baliseHtml', {'class' : 'classe'}` | balise avec la classe |  |
+Code 									| Elément 					| Exemple
+----------------------------------------|---------------------------|----------------
+`id='id'` ou `class_='classe'`			| id ou classe				| 
+`'baliseHtml'` 							| balise Html				| `'section'`
+`'baliseHtml', {'class' : 'classe'}`	| balise avec la classe		| 
 
 Plusieurs éléments :
 
