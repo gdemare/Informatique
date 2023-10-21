@@ -1,8 +1,9 @@
 ## Ajouter un raccourci au menu démarrer 
 
 Copier le raccourci dans le dossier :
-  * `C:\Users\Guigui\AppData\Roaming\Microsoft\Windows\Start Menu\Programs`
-  * `C:\ProgramData\Microsoft\Windows\Start Menu\Programs`
+
+* `C:\Users\Guigui\AppData\Roaming\Microsoft\Windows\Start Menu\Programs`
+* `C:\ProgramData\Microsoft\Windows\Start Menu\Programs`
 
 ## Utiles
 
@@ -26,12 +27,14 @@ Copier le raccourci dans le dossier :
 Disponible sur le Window Store :
 
 * Brave, navigateur internet basé sur Chrome avec un bloqueur de pub intégré.
-* Firefox.
+* Discord
+* [Fluent search](https://www.fluentsearch.net/), log
+* Firefox
+* Simplenote
 * Visual Studio Code, environnement de programmation.
 * Vlc, lecteur media.
-* [Fluent search](https://www.fluentsearch.net/), log
-* Simplenote
-* Discord
+
+
 
 Logiciels Windows :
 
