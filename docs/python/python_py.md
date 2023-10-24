@@ -604,7 +604,7 @@ fichier.close()
 ## Alternative
 
 ```
-with open(dossier + '/data.js', 'w', encoding='UTF8) as file:
+with open("fichier.md", 'w', encoding='UTF8') as file:
 	file.write(i)
 ```
 `\n` est le séparateur entre les lignes. Attention il n'y à pas de saut à la ligne par défaut.
