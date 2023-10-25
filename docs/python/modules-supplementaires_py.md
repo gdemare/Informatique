@@ -1,9 +1,21 @@
-## Télécharger des vidéos depuis Youtube
+## Télécharger
+
+### Des vidéos ou de l'audio de Youtube
 
 Library `yt-dlp` (`youtube-dl`en python sinon c'est en power shell) avec `yt-dlp 'id_youtube'` télécharger dans la meilleur qualité.
 
 * `--merge-output-format mkv --remux mkv` convertir le fichier en mkv. Cela nécessite de télécharger ffmpeg et de déclarer la variable environnement /bin.
 * `yt-dlp --extract-audio --audio-format mp3 <video URL>` télécharger le son de la vidéo en mp3.
+
+### Spotdl
+
+Installation : `pip install spotdl`
+
+[Spotify downloader](https://github.com/spotDL/spotify-downloader) pour télécharger depuis spotify.
+
+Requis : `sudo apt install ffmpeg`
+
+`spotdl download [song] ou [playlistUrl]` télécharger une chanson ou plusieurs.
 
 ## Selenium
 
@@ -52,15 +64,6 @@ Library `subprocess`
 * `call([sys.executable, 'C:\\temp\\hello2.py'], shell=True)` importer un script python.
 * `['java', '-jar', 'temp.jar' param1, param2]` exécuter un script java.
 
-### Spotdl
-
-Installation : `pip install spotdl`
-
-[Spotify downloader](https://github.com/spotDL/spotify-downloader) pour télécharger depuis spotify.
-
-Requis : `sudo apt install ffmpeg`
-
-`spotdl download [song] ou [playlistUrl]` télécharger une chanson ou plusieurs.
 
 ## Sqlite 3
 
@@ -84,6 +87,6 @@ Les variables à utiliser dans la requête doivent etre declarées par un `?`.
 S'il y en a plusieurs, il faut les organiser sous la forme d'une liste.
 
 !!! note
-  Penser à convertir le résultat en liste.
+	Penser à convertir le résultat en liste.
 
 * `conn.commit()` écrire ou modifier la bdd en exécutant la requête.
