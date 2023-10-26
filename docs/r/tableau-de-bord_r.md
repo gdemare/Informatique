@@ -3,7 +3,7 @@
 library(shiny)
 library(shinydashboard)
 
-ui = dashboardPage(...)
+ui = fluidPage(...)
 
 server = function(input, output) {
     contenu
@@ -14,7 +14,7 @@ shinyApp(ui = ui, server = server) #executer l'application
 ### Interface utilisateur
 
 ```
-dashboardPage(
+fluidPage(
   contenu
 )
 ```
