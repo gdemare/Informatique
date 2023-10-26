@@ -29,6 +29,7 @@ dashboardPage(
 #### Menu
 
 `dashboardSidebar(width = largeur, title = titre)`
+
 Ajouter un onglet :
 
 ```
@@ -78,7 +79,7 @@ tabBox(
 ) 
 ```
 
-boîte avec un tableau. Arguments :
+Boîte avec un tableau. Arguments :
 
 * `title = titre`
 * `footer = pied de la page`
@@ -148,7 +149,7 @@ Package `DT` Afficher un dataframe
 * `variable()` utiliser une variable réactive.
 * `eventReactive(input$action, {variable})` réactive variable à la suite d'un é	vènement.
 
-#### Liste interactive utilisant une variable reactivie
+#### Liste interactive utilisant une variable réactive
 
 ```
 ui :
@@ -166,7 +167,7 @@ server :
 
 ### Selection sur un tableau
 
-library(DT)
+`library(DT)`
 
 ```
 output$tableau <- DT::renderDataTable({ 
@@ -179,7 +180,7 @@ input$tableau_rows_selected # indice des lignes selectionnées
 
 `selection = valeur` 
 
-	* `single` une seule ligne.
+* `single` une seule ligne.
 
 requis la bibliothèque `rsconnect`
 
