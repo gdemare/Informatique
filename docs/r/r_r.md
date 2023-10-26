@@ -38,6 +38,18 @@
 * `data$colonne` sélectionner une colonne.
 * `table[ligne, colonne]` sélectionner une ligne ou une colonne ou une cellule (laisser vide si l'on veut garder tous les champs).
 
+
+## Les matrices
+
+`matrix(vecteur, nrow = , ncol =)` transformer en matrice.
+
+* `det(A)` déterminant.
+* `dim(A)` dimension.
+* `t(A)` transposer.
+* `solve(A)` inverser une matrice.
+* `A %*% B` mutiplication de matrices.
+* `eigen(matrice)` valeurs propres (noyau).
+
 ### Manipuler les vecteurs 
 
 * `sort(x)` ordonner.
@@ -110,19 +122,6 @@ for(i in 1:nrow(g)){
 ```
 
 ### While
-
-
-
-## Les matrices
-
-`matrix(vecteur, nrow = , ncol =)` transformer en matrice.
-
-* `det(A)` déterminant.
-* `dim(A)` dimension.
-* `t(A)` transposer.
-* `solve(A)` inverser une matrice.
-* `A %*% B` mutiplication de matrices.
-* `eigen(matrice)` valeurs propres (noyau).
 
 ### While - tant que c'est vrai
 
