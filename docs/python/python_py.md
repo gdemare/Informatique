@@ -547,6 +547,7 @@ Package `from skimage import io`
 
 ### Bibilothèque `pillow`
 Coordonné et position des pixels (x, y) correspont à (largeur, hauteur).
+
 * `Image.open('fichier.jpg')` ouvrir une image.
 * `var_img.height` récupérer la hauteur.
 * `var_img.width` récupérer la largeur.
