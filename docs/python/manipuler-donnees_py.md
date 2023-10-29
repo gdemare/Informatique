@@ -1,8 +1,10 @@
-`data.fonction_()` l'unerscore indique que le résultat remplace les données de départ.
+`data.fonction_()` l'underscore indique que le résultat remplace les données de départ.
 
-| dataframe | Matrice | Tensor ou jeu de données pour les modèles |
-|---|---|---|
-| Pandas | Numpy | Pytorch ou Tensor |
+Trois types principaux de strucutres de données : 
+
+* Les dataframes avec Pandas as pd
+* Les matrices et les vecteurs avec Numpy as np
+* Les tenseurs (jeux de données pour les modèles)  Pytorch ou Tensor
 
 `map( fonction, list )` appliquer une fonction aux élements d'un vecteur. Renvoie un objet de type map qu'il faut généralement le convertir en liste.
 Exemple : `map( ma_fonction, liste )` la fonction est sans parenthèse.
@@ -12,11 +14,11 @@ Exemple : `map( ma_fonction, liste )` la fonction est sans parenthèse.
 * `type(objet)` renvoie le type d'objet. Pour l'utiliser dans des conditions, on utilise généralement  `is type` . 
 * `veteur.astype(type)` changer le type d'un vecteur ou d'un tableau (type : `int`, `str`).
 
-| Fonction  | Définition |
-|---|---|
-| `str()` | convertie en caractère |
-| `list()` | convertie en liste |
-| `variable.decode()` | de bytes à normale (byte est signalé par un b avant la valeur.) |
+Fonction  			| Définition
+--------------------|---
+`str()` 			| convertie en caractère
+`list()` 			| convertie en liste
+`variable.decode()` | de bytes à normale (byte est signalé par un b avant la valeur.)
 
 ### Standariser les données 
 
@@ -59,7 +61,8 @@ export = data.iloc[ index,: ]
 * `for i in data.index:` parcourir un dataframe grâce au index.
 * `for index, row in df.iterrows():` parcourir un dataframe en récupérant directement les valeurs.
 
-_RMQ_ `:` permet de sélectionner tous ce qui se trouve avant ou après (ex : `2:` est équivalent à 2 et après).
+!!! note 
+	`:` permet de sélectionner tous ce qui se trouve avant ou après (ex : `2:` est équivalent à 2 et après).
 
 ### Opération sur les données
 
@@ -69,27 +72,30 @@ Fonctions :
 	*  `duplicates ='drop'` supprime les intervalles redondants. 	
 * `.fillna(0)` remplacer les valeurs manquantes.
 * `.drop_duplicates(keep='last')` supprimer les doublons.
-* `.rename(columns=/index={"ancien" : "nouveau"})` renommer une colonne (ou `.columns.values = [col1, col2]`).
-Paramètres :
+* `.rename(columns=/index={"ancien" : "nouveau"})` renommer une colonne (ou `.columns.values = [col1, col2]`). Paramètres :
+
 	* `inplace=True` pour remplacer les données.
 	* `.set_index('colonne', inplace=True)` mettre une colonne comme index.
 
 Autres fonctions :
 * `.apply(fonction, axis=1)` appliquer une fonction sur les données. Rmq pour ajouter la colonne il faut passer par `tableau["colonne"] = `.
-Exemple de fonction apply :
-```
-def present_fct(row):
-    if row>7:
-        value = 1
-    else :
-        value =0
-    return value
-```
+
+
+!!! example
+	Fonction apply :
+	```
+	def present_fct(row):
+		if row>7:
+			value = 1
+		else :
+			value =0
+		return value
+	```
 
 #### Les intervalles 
 
 `interval(left, right )`
-intervalle.right/.left récupérer la valeur.
+`intervalle.right/.left` récupérer la valeur.
 
 ### Ajouter des individus
 
@@ -100,6 +106,7 @@ intervalle.right/.left récupérer la valeur.
 * `pd.read_csv(fichier, sep="\t")` lire un fichier csv.
 * `pd.read_excel(fichier, sheet_name=1/feuille)` lire un fichier excel.
 * `pd.ExcelFile( excel )` sinon pour importer un fichier et récupérer des informations.
+	
 	* `.sheet_names` renvoie le nom des feuilles d'un fichier Excel. 
 
 ### Exporter 
@@ -125,9 +132,11 @@ writer = pd.ExcelWriter(fichier, engine = 'xlsxwriter')
 * `pivot(data, columns='country', values='quantity', index='fruit')` faire un tableau crois sans fonction d'aggrégation. Il faut s'assurer que la transformation ne permet d'obtenir d'une ligne par index. Paramètres :
 	* ` margins = True, margins_name='Total'`ajouter une ligne totale.
 * `pivot_table(data, columns='country', values='quantity', index='fruit', aggfunc='sum')` faire un tableau croisé avec fonction d'aggrégation.
-Argument `aggfunc` : 
-  * `sum` somme de l'indicateur values.
-  * `count` nombre de lignes.
+Argument `aggfunc` :
+
+	* `sum` somme de l'indicateur values.
+	* `count` nombre de lignes.
+
 * `tableau_croise.reset_index()` Transformer un tableau croisé en tableau.
 * `melt(data, id_vars='fruit', value_vars=colonnes)` transformer plusieurs variables en une seule.
 
@@ -145,15 +154,15 @@ Pour appliquer des fonctions, il faut utiliser la library numpy.
 
 `.groupby(["colonne"])` grouper par.
 
-| Fonction | Définition |
-|---|---|
-| `.mean()` | moyenne |
-| `.median()` | médiane |
-| `.std()` | écart type |
-| `.size()` | nombre de lignes |
-| `.count()` | nombre de lignes |
-| `.value_counts()` | tableau effecitf par modalité `normalize=True` renvoie les % |
-| `nunique()` | nbre de valeurs unques |
+Fonction 			| Définition
+--------------------|---
+`.mean()` 			| moyenne
+`.median()`			| médiane
+`.std()`			| écart type
+`.size()`			| nombre de lignes
+`.count()`			| nombre de lignes
+`.value_counts()`	| tableau effecitf par modalité `normalize=True` renvoie les %
+`nunique()` | nbre de valeurs uniques
 
 #### Fonction pandas
 
@@ -163,11 +172,12 @@ Pour appliquer des fonctions, il faut utiliser la library numpy.
 
 ### Jointure 
 
-* `pd.merge(gauche, droite, how = type_jointure, on = clé)` joindre deux tables.
-Paramètres : 
+* `pd.merge(gauche, droite, how = type_jointure, on = clé)` joindre deux tables. Paramètres :
+
 	* `how = inner/left/right/outer/cross`  outer	est union (ou) et inner est intersection (et).
 	* `left_on/right_on=colonne` id de la jonction.
 	* `left_index/right_index = True/False` si la clée l'index. 
+
 * `pd.concat([jointure, nvdf])` concaténer deux tableaux avec la même structure. Attention les dataframes sont à déclarer sans "".
 
 ### Filtrer
@@ -178,8 +188,10 @@ Paramètres :
 * `.unique()` liste des valeurs pour une colonne.
 * `value_counts()` permet de renvoyer le nombre de lignes uniques.
 * `colonne.str.contains("mot")` contient le mot. Paramètres :
-	* `na=none` ? valeur a renvoyer lorsque la recherche n'a pas été trouvé ?(False).
+
+	* `na=none` ? valeur a renvoyer lorsque la recherche n'a pas été trouvée ?(False).
  	* `case=False` Prendre en compte la caste.	 
+
 * `data[ data["colonne"] == True ]` filtrer les données en fonction d'une condition. S'il y a plusieurs conditions, il faut les mettre entre parenthèses.
 * `data[ data['colonne'].isin( ['KO_EF_01', 'KO_EF_02', 'KO_EF_03']) ]` in pour les conditions dans un tableau.
 * `data.nsmallest(30, 'p value')` top des valeurs les plus faibles.
@@ -193,8 +205,8 @@ Vérifier les propriétés d'une colonne :
 
 ### Les dates
 
-* `pd.Timestamp('2017-01-01T12') convertir un texte en date.
-* `pd.to_datetime(data_new['date']) convertir une colonne en date.
+* `pd.Timestamp('2017-01-01T12')` convertir un texte en date.
+* `pd.to_datetime(data_new['date'])` convertir une colonne en date.
 
 Récupérer les inforamtions sur une date : `datetemps.<>`
 
@@ -216,28 +228,90 @@ Library `import matplotlib.pyplot as plt`
 * `data.corr()` matrice de corrélation.
 * `data.cov()` matrice de covariance.
 
+-----------------------------
+
 ## Numpy (matrice et vecteur)
 
-* `.shape` dimension (ligne, colonne,...)
-* `np.asarray(matrice)` créer un array.
-* `np.empty([lignes,colonnes])` créer un array vide de taille suviantes.
+
+### Créer une matrice
+
+!!! warning 
+	Attention il faut passer par `copy.deepcopy(tableau)` pour copier une valeur.
+
+* `np.array(liste, )` créer un array.
+* `np.asarray(matrice)` convertie un array.
+* `np.arrange(1,10, pas)` créer une matrice avec une liste incrémentée.
+* `np.empty([lignes,colonnes])` créer un array vide d'une certaine taille.
 * `np.transpose(matrice)` transposer.
-* `np.maxtrix(vec1, vec2)` matrice ligne1=vec1, ligne 2=vec2. 
+* `np.maxtrix(vec1, vec2)` matrice ligne 1=vecteur 1, ligne 2=vecteur 2. 
+* `np.full((n,p), valeur)` créer une matrice de n, p dimension avec la valeur.
 * `np.zeros(shape=(5,5))` matrice de zéro.
 * `np.ones()` matrice de 1.
 * `np.diag(vecteur ou matrice, position )` deux fonctions :
+
 	* diagonaliser un vecteur en matrice la position indique la colonne où commencer la diagonalisation.
 	* renvoie la diagonale.
-* `np.reshape( donnee, (dimension) )`
- * `order='C'` préciser la facon de réordonnées les éléments. `'F'` 
+
+* `np.reshape( donnee, (dimension) )` modifier les dimensions d'une matrice. Paramètres : 
+
+	* `order='C'` préciser la facon de réordonnées les éléments. `'F'` 
+
+* `np.resize()` modifie la dimension sans renvoyer d'erreurs si elles ne sont pas compatibles.
 * `np.unique()` renvoie les valeurs uniques.
 * `np.sign(nbre)` renvoie le signe.
+* `np.loadtxt(fichier)` charger une matrice depuis un fichier (exemple `1	70	230`).
+* `np.loadtxt("array.dat", tableau)` enregister un array dans un fichier.
+
+Attributs associés à un array :
+
+* `.shape` dimension (ligne, colonne,...)
+* `.T` transposée.
+* `.ndim` nombre de dimensions. 
+* `.size` nombre d'éléments total.
+
+#### matrice de booléen et remplacement de valeurs
+
+* `tableau[condition]` renvoie une matrice booléenne (opérateur `|`, `&`,...)
+* `tableau[condition] = nv_valeur` modifie la valeur uniquement lorsque c'est vrai.
+
+### Sélectionner une valeur ou une plage
+
+Deux méthodes pour sélectionner un élément ou une plage :
+
+* `table[i,j]`
+* `table[i][j]`
+
+* `for i in array:` parcourir ligne par ligne un tableau (rmq, il peut être utile de transposer pour passer par colonne).
 
 ### Opération sur les valeurs
 
 * `multiply(tableau, nbre, out=nouv_tableau)` multiplier les valeurs d'un tableau.
 * `matmul(mat1, mat2)`produit matriciel.
+* `np.dot(mat1, mat2)` produi matriciel.
 * `add(5)` ajouter 5 à toutes les valeurs.
+* `mat1 * mat2` produit des éléments à la même position.
+
+Paramètres :
+
+* `axis= 0/1` effectuer l'opération sur chaque ligne, colonne. 
+
+* `std()` écart type.
+* `mean()` moyenne.
+* `max()` maximum.
+
+### Matrice carré
+
+Dans le sous module `linalg`
+
+* `inv()` inverser une matrice.
+* `det()` déterminant
+
+* `eig()` valeurs propres et vecteurs propres :
+
+	* `.` vecteurs.
+	* `[1][0]` valeurs propres.
+
+* `diag()` diagonsaliser la matrice.
 
 ### Insérer
 
@@ -246,14 +320,16 @@ Library `import matplotlib.pyplot as plt`
 
 ### Statistique
 
-`np.corrcoef( x, y)` coefficient de corrélation de Pearson.
+* `np.corrcoef( x, y)` coefficient de corrélation de Pearson.
 
 ### Fonctions mathématiques 
 
-| Fonction | Définition |
-|---|---|
-| `np.log(x, base)` | logarithme |
-| ` ` | exponentielle |
+Fonction 			| Définition
+--------------------|---
+`np.log(x, base)`	| logarithme
+` ` 				| exponentielle
+
+-------------------------------
 
 ## Les tenseurs
 
@@ -294,8 +370,8 @@ class donnee(torch.utils.data.Dataset):
 Library `torch.utils.data.`
 
 * `train, test = random_split(dataset, [20000, 5000])` créer un jeu de test et d'apprentissage à partir d'un tenseur.
-* `torch.utils.data.DataLoader(dataset = donnee())` transformer un data en tensor.
-Paramètres de DataLoader :
+* `torch.utils.data.DataLoader(dataset = donnee())` transformer un data en tensor. Paramètres de DataLoader :
+
 	* `batch_size=nbre` taille des lots.
 	* `shuffle=True` répartir aléatoirement les individus.
 
@@ -313,10 +389,10 @@ Library : `torch`
 Paramètre :
 * `dtype=type` préciser le type de variable.
 
-| Type | Définition  |
-|---|---| 
-| `torch.float` | décimaux |
-| `torch.int32` | entiers | 
+Type 			| Définition
+----------------|--- 	
+`torch.float`	| décimaux
+`torch.int32`	| entiers 
 
 * `tenseur.dtype` affiche le type de data de chaque champs du tenseur.
 
@@ -332,6 +408,6 @@ plt.axis('off')
 plt.show()
 ```
 
-* `imshow(numpy)`
-Paramètre : 
-`cmap='gray'` en valeur de gris
+* `imshow(numpy)` Paramètre : 
+	
+	* `cmap='gray'` en valeur de gris
