@@ -7,7 +7,7 @@ from Bio import pairwise2
 ## Déclaer des séquences 
 
 * `SeqIO.parse('alignement.fasta', "fasta")` alignement du fichier fasta.
-* `SeqIO.Seq("sequence")` déclarer une séquence.
+* `Bio.Seq.Seq("sequence")` déclarer une séquence.
 * `SeqIO.write(align(ali), output, "fasta")` exporter l'alignement dans un fichier fasta.
 * `sequence.complement()` renvoie la séquence complémentaire.
 * `sequence.reverse_complement()` renvoie la séquence complémentaire inverse.
