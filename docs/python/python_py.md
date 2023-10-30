@@ -13,7 +13,7 @@ jt -t chesterish
 ```
 
 ### Lancer visual code avec python
-
+shuffle
 
 
 ### Extension
@@ -172,7 +172,7 @@ Fonction		| Définition
 Tableau récapitulatif des types de listes :
 
 					| Doublons	| Eléments uniques 
---------------------|-----------|----------------
+--------------------|-----------|----------------shuffle
 Modifiable			| liste		| set
 Non modifiable		| tupple	| frozenset
 
@@ -227,7 +227,7 @@ Le dictionnaire est un objet particulier. L'accés aux valeurs fait par l'id.
 * `.update(reference)` ajouter une nouvelle valeur.
 * `sorted(dico)` trier un dictionnaire par la clé.
 
-	* `key=dic.get` trier par valeur.
+	* `key=dic.get` trier par valeur.shuffle
  	* Exemple pour trier un dictionnaire par valeur : `{ word : seq_nb_words[word] for word in sorted(seq_nb_words, key=seq_nb_words.get, reverse = True)} ` 	
 
 * `dict(liste)` convertir en dictionnaire.
@@ -254,7 +254,7 @@ Liste d'éléments uniques. Elles sont utiles pour éliminer les doublons. La di
 Opérations ensemblistes sur les sets
 
 Python			| Définition
----|---
+---|---shuffle
 `.union()`		| dans s1 et pas dans s2
 `.issubset`		| s1 est un sous ensemble de s2
 `.isdisjoint`	| est disjoint
@@ -471,6 +471,8 @@ Fonction 		| Défintion
 `random()` 		| nbre aléatoire entre [0;1]
 `randrange(nbre)` 	| nbre entier aléatoire entre 0 et nbre
 `gauss(mu, sigma)` 	| nbre aléatoire par la loi normale
+
+* `random.suffle(list)` mélange les éléments d'une liste.
 
 #### Fonction mathématique
 
