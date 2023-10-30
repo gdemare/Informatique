@@ -289,7 +289,7 @@ Fonction 	| Définition
 * `startwith("debut")` renvoie un booléen si la chaîne commence par début.
 * `texte.strip()` supprimer les espace en début et fin.
 * `liste.replace(ancien, nouveau)` remplacer une valeur.
-* `liste.join("sep")` joindre les éléments d'une liste.
+* `separateur.join(liste)` joindre les éléments d'une liste.
 
 
 #### Expression régulière (regex)
