@@ -6,8 +6,8 @@ Trois types principaux de strucutres de données :
 * Les matrices et les vecteurs avec Numpy as np
 * Les tenseurs (jeux de données pour les modèles)  Pytorch ou Tensor
 
-`map( fonction, list )` appliquer une fonction aux élements d'un vecteur. Renvoie un objet de type map qu'il faut généralement le convertir en liste.
-Exemple : `map( ma_fonction, liste )` la fonction est sans parenthèse.
+`map( fonction, list)` appliquer une fonction aux élements d'un vecteur. Renvoie un objet de type map qu'il faut généralement le convertir en liste.
+Exemple : `map( ma_fonction, liste)` la fonction est sans parenthèse.
 
 ### Les types de variables
 
@@ -46,8 +46,10 @@ export = data.iloc[ index,: ]
 ### Déclarer un tableau Pandas
 
 * `pd.DataFrame({ "col1" : valeurs, 'col2' : valeurs})` créer un data frame. Vide lorsqu'il n'y a pas d'arguments. Paramètres :
+  
 	* `index= nom_lignes` 
 	* `column= nom_colonnes`
+
 * `dataframe.astype({'Survived': 'float'})` déclarer (à vérif) ou changer le type de variable d'un data frame.
 * `data = pd.DataFrame(columns = ['chemin', 'fichier', 'extension'] )` créer un dataframe vide.
 * `data_copy = data.copy()` copier un dataframe dans une autre variable. Attention sinon cela créer des dataframes liés.
@@ -67,9 +69,12 @@ export = data.iloc[ index,: ]
 ### Opération sur les données
 
 Fonctions :
+
 * `pd.cut( vecteur, bins=range(0, 150, 10) )` discrétiser une variable en fonction d'intervalles.
 * `pd.qcut(variable, nb_groupe)` discrétiser une variable en créant des groupes d'effectifs uniformes.
+
 	*  `duplicates ='drop'` supprime les intervalles redondants. 	
+
 * `.fillna(0)` remplacer les valeurs manquantes.
 * `.drop_duplicates(keep='last')` supprimer les doublons.
 * `.rename(columns=/index={"ancien" : "nouveau"})` renommer une colonne (ou `.columns.values = [col1, col2]`). Paramètres :
@@ -94,8 +99,9 @@ Autres fonctions :
 
 #### Les intervalles 
 
-`interval(left, right )`
-`intervalle.right/.left` récupérer la valeur.
+* `interval(left, right)` déclarer un intervalle.
+
+	* `intervalle.right/.left` récupérer la valeur.
 
 ### Ajouter des individus
 
@@ -128,11 +134,14 @@ writer = pd.ExcelWriter(fichier, engine = 'xlsxwriter')
 ### Tableau croisé et modification de variables
 
 * `pd.crosstab( ligne, colonne)` faire un tableau croisé avec deux variables avec la possibilité de calculer la proportion.
+
 	* `normalize='all'/'index'/'columns'` calcul les fréquences.
+
 * `pivot(data, columns='country', values='quantity', index='fruit')` faire un tableau crois sans fonction d'aggrégation. Il faut s'assurer que la transformation ne permet d'obtenir d'une ligne par index. Paramètres :
+
 	* ` margins = True, margins_name='Total'`ajouter une ligne totale.
-* `pivot_table(data, columns='country', values='quantity', index='fruit', aggfunc='sum')` faire un tableau croisé avec fonction d'aggrégation.
-Argument `aggfunc` :
+
+* `pivot_table(data, columns='country', values='quantity', index='fruit', aggfunc='sum')` faire un tableau croisé avec fonction d'aggrégation. Argument `aggfunc` :
 
 	* `sum` somme de l'indicateur values.
 	* `count` nombre de lignes.
@@ -145,14 +154,13 @@ Argument `aggfunc` :
 ### Ajouter une variable
 
 * `data["nouvelle"] = valeur` ajouter directement.
-* `tableau.assign( nomCol = valeur )` 
-Pour appliquer des fonctions, il faut utiliser la library numpy.
+* `tableau.assign( nomCol = valeur )` ajouter une nouvelle colonne. Pour appliquer des fonctions, il faut utiliser la library numpy.
 * `df.insert(position, 'col_name', [value1, value2, value3, ...])` insérer une colonne à une position. Enregistre automatiquement la colonne de faire =.
 * `colonne = pop("columne")` sauvegarde la colonne dans une variable et la supprime du dataframe.
 
 ### Grouper les données
 
-`.groupby(["colonne"])` grouper par.
+* `.groupby(["colonne"])` grouper par.
 
 Fonction 			| Définition
 --------------------|---
