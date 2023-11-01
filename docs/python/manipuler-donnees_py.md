@@ -35,6 +35,7 @@ Package `import pandas as pd`
 * `donnee.columns` nom des colones (`data.columns.values` pour ne récupérer que les valeurs et pour renommer les colonnes) .
 * `donnee.head()` renvoie les premières lignes du pandaframe.
 * `donnee.describe()` tableau récapitulatif des données (moyenne, médiane, écart type,...). Les valeurs manquantes ne sont pas prises en compte.
+* `donnee.info(memory_usage="deep")` affiche une description poussée du dataframe. 
 * `stack(niveau)` modifier les niveaux de données.
 
 créer un jeu de données aléatoire.
@@ -45,14 +46,18 @@ export = data.iloc[ index,: ]
 
 ### Déclarer un tableau Pandas
 
-* `pd.DataFrame({ "col1" : valeurs, 'col2' : valeurs})` créer un data frame. Vide lorsqu'il n'y a pas d'arguments. Paramètres :
+* `pd.DataFrame({ "col1" : valeurs, 'col2' : valeurs})` créer un data frame à partir d'un dictionnaire. Vide lorsqu'il n'y a pas d'arguments. Paramètres :
   
 	* `index= nom_lignes` 
 	* `column= nom_colonnes`
 
+* `pd.DataFrame(columns=, index=, tableau_valeurs)` créer un dataframe.
+
 * `dataframe.astype({'Survived': 'float'})` déclarer (à vérif) ou changer le type de variable d'un data frame.
 * `data = pd.DataFrame(columns = ['chemin', 'fichier', 'extension'] )` créer un dataframe vide.
 * `data_copy = data.copy()` copier un dataframe dans une autre variable. Attention sinon cela créer des dataframes liés.
+* `pd.to_datetime("colonne")` convertie une colonne en date.
+* `pd.Series(vecteur, index=)` créer une série (jeu de données avec une colonne).
 
 ### Sélectionner et extraire des données
 
@@ -75,6 +80,7 @@ Fonctions :
 
 	*  `duplicates ='drop'` supprime les intervalles redondants. 	
 
+* `data[condition] = valeur` remplacer les valeurs vraies pour la condition. 
 * `.fillna(0)` remplacer les valeurs manquantes.
 * `.drop_duplicates(keep='last')` supprimer les doublons.
 * `.rename(columns=/index={"ancien" : "nouveau"})` renommer une colonne (ou `.columns.values = [col1, col2]`). Paramètres :
@@ -84,7 +90,6 @@ Fonctions :
 
 Autres fonctions :
 * `.apply(fonction, axis=1)` appliquer une fonction sur les données. Rmq pour ajouter la colonne il faut passer par `tableau["colonne"] = `.
-
 
 !!! example
 	Fonction apply :
@@ -115,16 +120,22 @@ Autres fonctions :
 	
 	* `.sheet_names` renvoie le nom des feuilles d'un fichier Excel. 
 
+Paramètres :
+
+* `index_col="colonne"` colonne de l'index.
+
 ### Exporter 
 
 * `tableau.to_csv('fichier.csv', sep='separateur')` exporter un data en csv.
 * `tableau.to_excel('fichier.xlsx', sheet_name="feuill")` exporter un data en excel.
 
 Paramètres :
+
 * `index=False` les index.
 * `header=True` nom des colonnes.
 
 Pour exporter dans plusieurs feuilles, il faut installer  `pip install xlsxwriter`.
+
 ```
 writer = pd.ExcelWriter(fichier, engine = 'xlsxwriter')
 	input.to_excel(writer, sheet_name="feuille1", index=False, header=True)
@@ -141,14 +152,13 @@ writer = pd.ExcelWriter(fichier, engine = 'xlsxwriter')
 
 	* ` margins = True, margins_name='Total'`ajouter une ligne totale.
 
-* `pivot_table(data, columns='country', values='quantity', index='fruit', aggfunc='sum')` faire un tableau croisé avec fonction d'aggrégation. Argument `aggfunc` :
+* `pivot_table(data, columns='country', values='quantity', index='fruit', aggfunc='sum')` faire un tableau croisé avec fonction d'aggrégation (possibilité d'appliquer plusieurs fonctions avec `["max", "min"]`). Argument `aggfunc` :
 
 	* `sum` somme de l'indicateur values.
 	* `count` nombre de lignes.
 
 * `tableau_croise.reset_index()` Transformer un tableau croisé en tableau.
 * `melt(data, id_vars='fruit', value_vars=colonnes)` transformer plusieurs variables en une seule.
-
 * `columns.get_level_values(level)` récupérer les valeurs de l'index dans le cas de plusieurs sous catégories.
 
 ### Ajouter une variable
@@ -161,6 +171,7 @@ writer = pd.ExcelWriter(fichier, engine = 'xlsxwriter')
 ### Grouper les données
 
 * `.groupby(["colonne"])` grouper par.
+* `resample("A")` grouper par année.
 
 Fonction 			| Définition
 --------------------|---
@@ -186,7 +197,10 @@ Fonction 			| Définition
 	* `left_on/right_on=colonne` id de la jonction.
 	* `left_index/right_index = True/False` si la clée l'index. 
 
-* `pd.concat([jointure, nvdf])` concaténer deux tableaux avec la même structure. Attention les dataframes sont à déclarer sans "".
+* `pd.concat([jointure, nvdf])` concaténer deux tableaux par colonne ou par indice. Attention les dataframes sont à déclarer sans "". Paramètres :
+
+* `axis=1` fusionner par ligne (même index).
+* `join="type"` type de jointure.
 
 ### Filtrer
 
@@ -239,7 +253,6 @@ Library `import matplotlib.pyplot as plt`
 -----------------------------
 
 ## Numpy (matrice et vecteur)
-
 
 ### Créer une matrice
 
@@ -303,16 +316,18 @@ Paramètres :
 
 * `axis= 0/1` effectuer l'opération sur chaque ligne, colonne. 
 
-* `std()` écart type.
-* `mean()` moyenne.
-* `max()` maximum.
+Python	| Fonction
+--------|----------
+`std()` | écart type.
+`mean()`| moyenne.
+`max()` | maximum.
 
 ### Matrice carré
 
 Dans le sous module `linalg`
 
 * `inv()` inverser une matrice.
-* `det()` déterminant
+* `det()` déterminant.
 
 * `eig()` valeurs propres et vecteurs propres :
 
@@ -324,7 +339,7 @@ Dans le sous module `linalg`
 ### Insérer
 
 * `np.append(data, vecteur)` ajouter un dernière colonne. 
-* `np.insert( data, position, vecteur)`  ajouter une colonne à une position particulière.
+* `np.insert( data, position, vecteur)` ajouter une colonne à une position particulière.
 
 ### Statistique
 
@@ -335,7 +350,7 @@ Dans le sous module `linalg`
 Fonction 			| Définition
 --------------------|---
 `np.log(x, base)`	| logarithme
-` ` 				| exponentielle
+`np.exp()` 			| exponentielle
 
 -------------------------------
 
@@ -351,8 +366,8 @@ Les tenseurs sont des tableaux mutlidimentionnels avec des opérations particuli
 
 L'apprentissage sur les tenseurs peut être accélérer en utilisant la puissance des cartes graphiques.
 
-`cuda.is_available()` Vérifier si le GPU peut être utilisé pour les calculs. Dans le cas de oui il faut
-`tensor.to('cuda')`
+`cuda.is_available()` Vérifier si le GPU peut être utilisé pour les calculs. Dans le cas où c'est le cas, il faut
+`tensor.to('cuda')`.
 
 ### Déclarer un tenseur à partir de données 
 

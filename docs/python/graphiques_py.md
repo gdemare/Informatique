@@ -20,25 +20,33 @@ Utiliser le style de seaborn : `sns.set()`
 * `plot(abscisse, ordonnée, type_point)` Le type de points est obligatoire.
 Paramètre : faire une chaîne de caractères 
 * L1 couleur `'r'` rouge `'y'` jaune `'b'` bleu
-* L2 type de points 
+* L2 type de points :
+
 	* `o` gros points
 	* `.` petit points 
 	* `^` triangle
 	* `s` carré
 	* `+` croix
+
 * L3 type de lignes :
+
 	* `-` ligne.
 	* `--` pointillé.
-Exemple : `ro--` points rouges reliés par des traits en pointillé.
 
-#### Nuage de points
+!!! example
+	`ro--` points rouges reliés par des traits en pointillé.
 
-`scatter(x,y)` nuage de points.
+### Les types de graphiques
+
+* `plt.scatter(x,y)` nuage de points.
+* `plt.bar(libelle, valeur, width=, align='edge')` Diagramme en barre et histogramme. Les libellés doivent être au format texte.
+* `plt.pie(valeur, labels=, radius=)` camembert.
 
 ### Paramètres des axes
 
 * `pl.show()` afficher le graphique.
 * `pl.axis([xmin, xmax, ymin, ymax])` changer l'affichage des axes. 
+
 	* `"off"` ne pas afficher d'axe. 	
 
 * `pl.grid(True)` afficher une grille.
@@ -53,22 +61,16 @@ Exemple : `ro--` points rouges reliés par des traits en pointillé.
 * `pl.title(titre)` ajouter un titre.
 * `pl.text(x, y, texte)` placer du texte n'importe ou dans la fenêtre.
 * `pl.legend(loc='upper right')` position de la légende (légende à l'extérieur du graphique `pl.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)`).
+
 	* `title="titre"` titre de la box.
+
 * `pl.grid()` afficher une grille.
 
-
 Masquer un axe :
+
 ```ax = pl.gca()
 ax.get_yaxis().set_visible(False)
 ```
-
-### Camembert 
-
-`pyplot.pie(valeur, labels=, radius=)`
-
-### Diagramme en barre et histogramme
-
-`pyplot.bar(libelle, valeur, width=, align='edge')` les libellés doivent être au format texte.
 
 ### Ajouter plusieurs graphiques à une seule image
 
@@ -86,24 +88,36 @@ ax.get_yaxis().set_visible(False)
 Library `import seaborn as sns`
 
 Paramètres :
+
 * `data=data` jeu de données.
 * `hue = 'prot_diff'` mettre une couleur pour chaque groupe.
 * `color = ` couleur
  
 Graphiques :
+
 * `heatmap(protfreq, annot=True)` matrice de température. Paramètres :
+
 	* `annot_kws={"fontsize":8}` taille des annotations.
 	* `fmt='.0f'` changer le format des nombres (0 indique le nbre de décimals).
+
 * `clustermap()`
 * `histplot(vecteur)` afficher la distribution d'un vecteur quantitatif.
+
 	* ` multiple="stack"`empiler les valeurs avec `hue="var"`.
+
 * `ecdfplot(data, x='var')` cumule le nombre d'effectifs.
+
    *  `complementary=True` inverser le cumule.
+
 * `barplot()` diagramme en barre.
+
 	* `orient=v/h` horizontal, vertical. 	
+
 * `boxplot(x=valeur, y=groupe)` boxplot.
 * `scatterplot(comm, x='CTR-PTROTAC', y='P3')` nuage de points.
+
 	* `s=1` taille des points. 
+
 * `lineplot(x=, y=)` lignes.	
 
 ### Superposer deux graphiques
@@ -139,8 +153,8 @@ for container in graph1.containers:
 
 ### Transformer des axes
 
-`graph.set_xscale()` changer le type d'axes (type : `log`, `symlog`, ...).
-`graph.get_xticklabels()` récupérer la valeur des axes.
+* `graph.set_xscale()` changer le type d'axes (type : `log`, `symlog`, ...).
+* `graph.get_xticklabels()` récupérer la valeur des axes.
 
 ### Modifier la présentation graphique
 
@@ -164,8 +178,8 @@ rcParams.update({'figure.autolayout': True})
 
 `from matplotlib_venn import venn2, venn3`
 
-* `venn2(subsets = (10, 5, 2), set_labels = ('Group A', 'Group B'))`
-* `venn3(subsets = (10, 8, 22, 6,9,4,2))`
+* `venn2(subsets = (10, 5, 2), set_labels = ('Group A', 'Group B'))` diagramme de Venne avec deux groupes.
+* `venn3(subsets = (10, 8, 22, 6,9,4,2))` diagramme de Venne avec trois groupes.
 
 ## Avec pandas
 
@@ -178,12 +192,14 @@ Type de graphique :
 * `line()` lignes.
 * `pie()` camembert.
 * `bar()` diagramme en barre.
-* `barh()` diagramme en barre horizontal : `.sort_values()` pour classer les données. 
-	* Paramètres :
+* `barh()` diagramme en barre horizontal : `.sort_values()` pour classer les données. Paramètres :
+
 		* `stacked=True` empilé.
+
 * `scatter()` nuage de points.
 * `hist()` histogramme.
 
 Paramètres : 
-*  `legend=False` enlever la légende
-*  `ax=` déterminer la position du graphique avec les fenetres subdivisées.
+
+* `legend=False` enlever la légende
+* `ax=` déterminer la position du graphique avec les fenetres subdivisées.

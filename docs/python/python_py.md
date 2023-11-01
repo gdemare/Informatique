@@ -13,20 +13,22 @@ jt -t chesterish
 ```
 
 ### Lancer visual code avec python
-shuffle
 
+`code .`
 
 ### Extension
 
-`.pyw` fichier python exécutable;
+`.pyw` fichier python exécutable.
 
 ### Configurer Python sur Windows
 
 * Copier le chemin de la licence et des programmes python.
 * `Panneau de configuration\Système et sécurité\Système > Paramètre système avancé > Variable d'environnement`
 * Ajouter une variable système 
+
 	* nom : `PYTHON_HOME`
 	* valeur : `chemin copié`
+
 * Modifier la variable `Path`
 * Ajouter `%PYTHON_HOME%` 
 
@@ -36,7 +38,7 @@ Répéter l'opération pour le sous dossier library/bin et scripts
 
 ### Conda : Les environnements en Python
 
-Permet d'installer plusieurs versions différentes sur la meme machine.
+Permet d'installer plusieurs versions différentes sur la même machine.
 
 * `conda create python_env` créer un environnement conda.
 * `conda activate python_env` activer l'environnement.
@@ -72,10 +74,13 @@ git clone https://github.com/jkbr/httpie.git
 sudo python setup.py install
 ```
 
-### Créer un module et l'impoter
+## Créer un module et l'impoter
+
+* attribut ou propriété associé à un élément. Elles sont accessibles par `objet.propriété`.
+* méthode est finalement un objet de type fonction. `objet.fonction()`.
 
 ```
-	 	____ 'module1.py' 		
+	 	 ____ 'module1.py' 		
 dossier_|
 		|____ 'module2.py'
 ```
@@ -85,7 +90,7 @@ Pour importer les fichiers class dans python :
 ```
 sys.path.append('chemin/dossier')
 from fichier import class
-``` 
+```
 
 ### Environnement en python
 
