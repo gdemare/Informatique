@@ -259,7 +259,7 @@ Liste d'éléments uniques. Elles sont utiles pour éliminer les doublons. La di
 Opérations ensemblistes sur les sets
 
 Python			| Définition
----|---shuffle
+---|---
 `.union()`		| dans s1 et pas dans s2
 `.issubset`		| s1 est un sous ensemble de s2
 `.isdisjoint`	| est disjoint
