@@ -179,4 +179,5 @@ Paramètres :
 * `sub=sous_titre` sous titre.
 * `col=` couleur.
 
-* `abline(v=vertical, h=horizontal, a=, b=)`
+* `abline(v=vertical, h=horizontal, a=, b=)` ajouter une droite.
+* `points(coordonée, pch=16)` ajouter un point (pch=16 rond plein).
