@@ -99,7 +99,13 @@ lift + geom_line( aes(x= lift$perpop, y=lift$cumden), colour = "blue")
 ## Descente de gradient
 
 La descente de gradient permet de trouver le minimum d'une fonction 
-* `optim(par = c(-5,5), fn = fonction, method="BFGS")` minimiser une fonction. Sortie :
 
-  * `$par` paramètres utilisés.
+* `optim(par = c(-5,5), fn = fonction, method="BFGS")` minimiser une fonction. Méthode:
+
+	* `BFGS`
+ 	* 
+
+Sortie :
+
+  * `$par` valeurs qui donnent le minimum.
   * `$value` valeurs obtenues.
