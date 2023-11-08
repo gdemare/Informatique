@@ -58,6 +58,9 @@
 * `unique(x)` valeurs uniques.
 * `c(vec1, vec2)` concaténer deux vecteurs.
 * `paste(vec1, vec2, sep=" ")` fusionner (concater) deux chaines.
+
+	* `collapse="separateur` concaténer les éléments de deux listes.
+
 * `length(vec)` taille du vecteur.
 * `sapply(aa, fonction)` appliquer une fonction à tous les éléments d'un vecteur.
 * `factor( liste, levels = c("niv1, "niv2"))` créer une liste ordonée.
@@ -124,6 +127,12 @@ for(i in 1:nrow(g)){
 ### While
 
 ### While - tant que c'est vrai
+
+```
+while(condition){
+	instructions
+}
+```
 
 ## Manipuler les dates
 
