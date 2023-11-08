@@ -237,7 +237,7 @@ Le dictionnaire est un objet particulier. L'accés aux valeurs fait par l'id.
 
 * `dict(liste)` convertir en dictionnaire.
 * `for key in dico:` itérer un dictionnaire renvoie la clé (pour renvoyer la clé et la valeur, itérer sur `dico.items()`).
-
+[i for i in l if i != val]
 ### Les tupples (les listes non modifiables)
 
 * `tupple(list)` convertir en tupple.
@@ -380,6 +380,7 @@ for i in séquence:
 ```
 
 * `output_list = [print(a, b) for a, b in list( comparaison.columns )]` appliquer une fonction à une liste en une ligne.
+* `[i for i in l if i != val]` avec un if.
 
 Séquence peut etre :
 
