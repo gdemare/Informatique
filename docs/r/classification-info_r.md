@@ -20,6 +20,7 @@ barplot(as.numeric(vcramer[,2]),col=gray(0:nrow(vcramer)/nrow(vcramer)),
 abline(h=0.1, lty=2)
 abline(h=0.2, lty=2)
 ```
+
 * > 0.2 :
 * > 0.1 :
 
@@ -94,3 +95,11 @@ lift = ggplot() + theme_minimal() + stat_function( fun = fonc1, data= data.frame
   stat_function(fun = fonc) + xlab("% population") + ylab("% cible")
 lift + geom_line( aes(x= lift$perpop, y=lift$cumden), colour = "blue")
 ```
+
+## Descente de gradient
+
+La descente de gradient permet de trouver le minimum d'une fonction 
+* `optim(par = c(-5,5), fn = fonction, method="BFGS")` minimiser une fonction. Sortie :
+
+  * `$par` paramètres utilisés.
+  * `$value` valeurs obtenues.
