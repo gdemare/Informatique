@@ -181,3 +181,22 @@ Paramètres :
 
 * `abline(v=vertical, h=horizontal, a=, b=)` ajouter une droite.
 * `points(coordonée, pch=16)` ajouter un point (pch=16 rond plein).
+
+
+
+## Tracer une fonction 
+
+### Afficher une fonction en 2D
+
+* `curve(fonction, from = -5, to = 10)`  afficher une fonction en 2D.
+
+### Afficher une fonction en 3D
+
+```
+z = outer(x, y, fonction)
+graphique
+```
+
+* `contour(x, y, z, nlev=10)` courbes de niveau.
+* `persp(x_abs, x_abs, z, shade=0.8, axes=T, ticktype="detailed")` fonction en 3D.
+  
