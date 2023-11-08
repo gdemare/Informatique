@@ -176,10 +176,10 @@ Fonction		| Définition
 
 Tableau récapitulatif des types de listes :
 
-					| Doublons	| Eléments uniques 
---------------------|-----------|----------------shuffle
-Modifiable			| liste		| set
-Non modifiable		| tupple	| frozenset
+Type de listes		| Eléments uniques 	| Doublons
+--------------------|-------------------|----------------
+Modifiable			| liste				| set
+Non modifiable		| tupple			| frozenset
 
 ### Les listes modifiables
 
@@ -599,7 +599,6 @@ Package `glob`
 * `sys.arv` liste des arguments donner au scipt Attention `sys.argv[0]` contient le nom du script.
 * `sys.exist("message")` ecrit un message et arrête du script.
 
-
 ### Enregistrer un fichier
 
 ```
@@ -705,13 +704,19 @@ Library : `from docx import Document`
 
 * `.add_heading('Titre 1', level=1)`
 * `.add_paragraph('blabla...')`
+* 
 	* `style='List Bullet` liste en puce.
 	* `style='List Number'` liste numérotée.
+
 * `.add_picture('monty-truth.png')` ajouter une image.
-	`width=Inches(1.25)` taille de l'image
+
+	* `width=Inches(1.25)` taille de l'image
+
 * `.add_page_break()` saut de page.
 * `paragraphe.add_run(text) = True`
+  
     * `.italic`, `.bold` italique, gras.
+      
 * `.save('word.docx')` enregistrer le document.
 
 #### Ajouter un tableau
