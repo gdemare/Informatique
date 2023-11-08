@@ -165,7 +165,10 @@ Library `corrplot`
 
 * `plot(var1, <var2>)` graphique rapide. 
 
-	* `type = 'h'` h = histogramm
+	* `type = 'h'`
+ 
+ 		* h = histogramme.
+   		* l = courbe.
 
 * `boxplot(var)` boxplot.
 * `barplot()` 
@@ -174,3 +177,6 @@ Paramètres :
 
 * `main=titre` titre.
 * `sub=sous_titre` sous titre.
+* `col=` couleur.
+
+* `abline(v=vertical, h=horizontal, a=, b=)`
