@@ -791,5 +791,5 @@ Recharger automatiquement un module à chaque exécution du code. Utile pour dé
 %autoreload 2
 ```
 
-`%%time` renvoie le cout d'éxécution.
-`%%timeit` exécute une boucle pour mesurer en moyenne le temps d'exécution.
+* `%%time` renvoie le cout d'éxécution.
+* `%%timeit` exécute une boucle pour mesurer en moyenne le temps d'exécution.
