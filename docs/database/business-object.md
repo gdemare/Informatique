@@ -13,6 +13,7 @@ Univers ---> Fournisseur ---> Mise en forme
 ## BO rapport
 
  Les objets BO :
+ 
 * `dimensions` axes d'analyse.
 * `indicateurs` mesures.
 * `informations` information complémentaire ou il n'est pas pertinent de faire des calculs ou des regroupements.
