@@ -172,6 +172,10 @@ Seconde 	| `%S`	| 06
 * `str_to_title(texte)` mettre les premiers caractères en majuscule (package `stringr`).
 * `toupper(texte)` mettre les caractères en majuscule.
 
+### Stringr
+
+* `strsplit(texte)` supprime les espaces a la fin et au début et les espaces doubles.
+
 ### Expressions régulières
 
 Library `stringr`
