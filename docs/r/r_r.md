@@ -19,6 +19,7 @@
 
 * `print("Hello")` afficher un message.
 * `cat("Hello\n")` afficher un message, permet d'utiliser `\n` pour les retours à la ligne. Attention pas de retour automatique.
+* `dput(variable)` afficher la variable à déclarer en code R.
 
 ## Environnement et variables
 
