@@ -32,13 +32,13 @@ pred = predict( object = modele, newdata = test, <type => )
 
 Option type en fonction du type de modèle
 
-| Méthode | <Type> |
-|---|---|
-| Abre de décision | `\` |
-| Régression logistique | `type="response"` |
-| Forêt aléatoire | `type= "prob")[,2]` |
-| boosting | type ='prob' )[,2] |
-| classificateur naive baysien| `)$posterior[,2]` |
+Méthode                       | Type
+------------------------------|---
+Arbre de décision             | `\`
+Régression logistique         | `type="response"`
+Forêt aléatoire               | `type= "prob")[,2]`
+Boosting                      | `type ='prob' )[,2]`
+Classificateur naïve baysien  | `)$posterior[,2]`
  
 ## Comparer la performance de modèles
 
@@ -100,12 +100,11 @@ lift + geom_line( aes(x= lift$perpop, y=lift$cumden), colour = "blue")
 
 La descente de gradient permet de trouver le minimum d'une fonction 
 
-* `optim(par = c(-5,5), fn = fonction, method="BFGS")` minimiser une fonction. Méthode:
+* `optim(par = c(-5,5), fn = fonction, method="BFGS")` minimiser une fonction. 
 
-	* `BFGS`
- 	* 
+	* Méthode: `c("Nelder-Mead", "BFGS", "CG", "L-BFGS-B", "SANN", "Brent")`
 
 Sortie :
 
-  * `$par` valeurs qui donnent le minimum.
-  * `$value` valeurs obtenues.
+  * `$par` valeurs trouvées des paramètres qui minimise la fonction.
+  * `$value` valeurs minimums.
