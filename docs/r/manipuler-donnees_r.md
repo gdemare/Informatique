@@ -97,9 +97,10 @@ OrchardSprays %>%
 
 ## Construire de nouvelles variables
 
-* `mutate(nom = formule )` Appliquer une fonction et ajouter une colonne.
-* `mutate_each(iris, funs(fonction) )` Appliquer une fonction window à chaque variable.
-* `transmute( nom=formule )` Construitre une ou plusieurs variables en supprimant les originales.
+* `mutate(nom = formule )` appliquer une fonction et ajouter une colonne.
+* `mutate_each(iris, funs(fonction) )` appliquer une fonction window à chaque variable.
+* `transmute(nom = formule)` construitre une ou plusieurs variables en supprimant les colonnes.
+* `add_column(valeur)
 
 Fonction		| Description
 ----------------|-----------
