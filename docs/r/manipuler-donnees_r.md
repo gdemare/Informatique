@@ -8,19 +8,13 @@
 * `read_sas(fichier)` lire des tables SAS (package `haven`).
 * `read.csv()` lire une table CSV.
 
-* `write.table(tableau, file = "clipboard", sep = "\t")` copier dans le presse papier.
 
-### Excel
+## Excel 
 
-Package `readxl`
+library(openxlsx)
 
-* `read_excel(fichier, sheet = "Feuil1"/nb )` importer un fichier xlsx.
-
- 	* `sheet = 1` numéro de la feuille.
-  	* `skip = 1` ligne à ignorer.
-  	* `col_names` noms des colonnes.
-
-* `excel_sheets(fichier)` lister les feuilles présentes dans un fichier excel.
+* `read.xlsx(fichier, colNames = TRUE, sheet = )` lire un fichier excel.
+* `write.xlsx(x, fichier)` ecrire un fichier excel.
 
 ## Exporter un data
  
@@ -30,7 +24,7 @@ Package `readxl`
 	* `row.names = T` nom des lignes.
 	* `col.names = T` nom des colonnes.
 
-* `write.xlsx2(dt, file = "fichier.xlsx", sheetName = "feuille")` enregistrer au format excel (package `xlsx`).
+* `write.table(tableau, file = "clipboard", sep = "\t")` copier dans le presse papier.
 
 ### Information dataframe et nom des lignes eet des colonnes
 
