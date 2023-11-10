@@ -3,18 +3,47 @@
 * `data.frame(col1 = vect1, col2 = vect2)` créer un dataframe.
 * `data.frame(col1 = type, col2 = type)` créer un dataframe vide.
 
+### Libellés des colonnes
+
+library(Hmisc)
+library(labelled)
+
+* `var_label(dt)` renvoie les labels (ou attribuer un label). Prend comme valeur une `list( nom_col = "label")`.
+* `remove_var_label(dt)` supprimer les labels.
+
 ## Importer les données
 
 * `read_sas(fichier)` lire des tables SAS (package `haven`).
 * `read.csv()` lire une table CSV.
-
 
 ## Excel 
 
 library(openxlsx)
 
 * `read.xlsx(fichier, colNames = TRUE, sheet = )` lire un fichier excel.
-* `write.xlsx(x, fichier)` ecrire un fichier excel.
+* `readWorkbook(bbq, sheet = "Supplies")` lire un fichier excel.
+* `wb <- createWorkbook()` créer un classeur.
+* `saveWorkbook(wb, "file.xlsx")` enregistrer un classeur. Paramètres :
+
+	* `overwrite = TRUE` écraser la version existente.
+
+* `addWorksheet(wb = wb, sheetName = "feuill")` ajouter une feuille.
+* `writeData(wb = wb, sheet = "feuill", x = df, )` écrire un dataframe. Paramètres :
+
+	* `headerStyle = headerStyle` style des entetes (voir style)
+	* `borders = "n"`
+
+#### Style 
+
+`createStyle()`
+
+* `fontColour = "#006100"` couleur de la police.
+* `bgFill = "#C6EFCE"` fond.
+* `textDecoration = "Bold"` gras.
+
+#### Formater le classeur
+
+* `setColWidths(wb = wb, sheet = "feuil", cols = 1:4, widths = "auto")` largeur des colonnes.
 
 ## Exporter un data
  
@@ -66,14 +95,16 @@ max_by <- function(data, var, by) {
 * `sample_n(nligne, replace = TRUE)` sélectionne aléatoirement n observations.
 * `slice(10:15)` sélectionne les lignes selon leur position.
 * `top_n(nlignes, variable)` sélectionne et ordonne les n premières observations (ou groupes si les données sont groupées) ( `desc()` = decroissant ).
-* `is.na(data)` renvoie les lignes avec des valeurs manquantes (`myDataframe[is.na(myDataframe)] = 0` pour les remplacer).
+* `is.na(data)` renvoie les lignes avec des valeurs manquantes (`myDataframe[is.na(dt)] = 0` pour les remplacer).
 
 ## Selectionner
 
-* `select( colonne1, colonne2 )` selecionner des colonnes (`-one of(col)` pour enlever une colonne). Soit avec les numéros, soit avec les noms.
+* `select(colonne1, colonne2 )` selecionner des colonnes (`-one of(col)` pour enlever une colonne). Soit avec les numéros, soit avec les noms.
+  
 	* `contains('texte')` sélectionner des colonnes avec le texte dans le nom.
+
 * `distinct()` supprimer les doublons (renvoi les valeurs uniques pour une variable).
-* `arrange( var1, var2 )` trier en ordre décroisssant `desc(var)`.
+* `arrange(var1, var2)` trier en ordre décroisssant `desc(var)`.
 
 Fonction 				| Définition
 ------------------------|---
@@ -85,7 +116,7 @@ Fonction 				| Définition
 
 Package `tidyr`
 
-* `pivot_longer( cols, names_to = "name", values_to = "value")` transformer plusieurs colonnes en une seule variable.
+* `pivot_longer(cols, names_to = "name", values_to = "value")` transformer plusieurs colonnes en une seule variable.
 * `pivot_wider(names_from = "name", values_from = "value")` transformer plusieurs variables en une seule colonne.
 
 ```
@@ -98,9 +129,8 @@ OrchardSprays %>%
 ## Construire de nouvelles variables
 
 * `mutate(nom = formule )` appliquer une fonction et ajouter une colonne.
-* `mutate_each(iris, funs(fonction) )` appliquer une fonction window à chaque variable.
+* `mutate_each(funs(fonction) )` appliquer une fonction window à chaque variable.
 * `transmute(nom = formule)` construitre une ou plusieurs variables en supprimant les colonnes.
-* `add_column(valeur)
 
 Fonction		| Description
 ----------------|-----------
@@ -135,8 +165,12 @@ Fonction 		| Défintion
 
 `data %>% group_by(columns) %>% summarise( indicateur)`
 
+Grouper les données :
+
 * `group_by(var)` grouper les observations par la var (toujours suivi de `summarise`).
 * `ungroup(iris)` dégrouper le jeu de données.
+
+Calculer des indicateurs par groupe :
 
 * `summarise(nom = formule)` appliquer une fonction.
 * `summarise_each(funs(fonction))` appliquer une fonction à chaque variable.
@@ -170,10 +204,9 @@ Fonction 		| Défintion
 
 ## Fusions lignes et colonnes
 
-* `bind_rows(ligne)` Ajouter à y comme nouvelles lignes
-* `bind_cols(nom = valeur)` Ajoutez à y comme nouvelles colonnes.
-* `dt[nrow(dt) + 1,] = vecteur`
-* `rbind(df1, df2)`
+* `bind_cols(nom = valeur)` ajoutez à y comme nouvelles colonnes.
+* `bind_rows(df2)` fusionner deux dataframes au niveau des lignes (ajout au niveau des colonnes avec un nom identique).
+* `dt[nrow(dt) + 1,] = vecteur` ajouter une ligne sous forme de vecteur.
 
 ## Opérateurs ensemblistes
 
