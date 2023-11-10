@@ -66,10 +66,10 @@ max_by <- function(data, var, by) {
 
 ## Filtrer
 
-* `filter( condition )` filtrer.
-* `slice( numligne )` garder les lignes.
-* `sample_frac(iris,0.5,replace = TRUE)` sélectionne aléatoirement une fraction d'observations.
-* `sample_n( nligne,replace = TRUE)` sélectionne aléatoirement n observations.
+* `filter(condition)` filtrer.
+* `slice(numligne)` garder les lignes.
+* `sample_frac(dt, 0.5, replace = TRUE)` sélectionne aléatoirement une fraction d'observations.
+* `sample_n(nligne, replace = TRUE)` sélectionne aléatoirement n observations.
 * `slice(10:15)` sélectionne les lignes selon leur position.
 * `top_n(nlignes, variable)` sélectionne et ordonne les n premières observations (ou groupes si les données sont groupées) ( `desc()` = decroissant ).
 * `is.na(data)` renvoie les lignes avec des valeurs manquantes (`myDataframe[is.na(myDataframe)] = 0` pour les remplacer).
@@ -109,32 +109,32 @@ OrchardSprays %>%
 
 Fonction		| Description
 ----------------|-----------
-`n` 			| Nombre de lignes
-`n_distinct` 	| nombre de lignes distincts
+`n` 			| Nombre de lignes.
+`n_distinct` 	| nombre de lignes distinctes.
 `lead`			| Copier avec des valeurs décalées à gauche.
 `lag` 			| Copier avec des valeurs décalées à droite.
-`dense_rank` 	| Ordonne sans sauts de rangs.
-`min_rank` 		| Ordonne avec sauts de rangs.
-`percent_rank`	| Rangs de (min rank) entre [0, 1]
+`dense_rank` 	| Ordonner sans sauts de rangs.
+`min_rank` 		| Ordonner avec sauts de rangs.
+`percent_rank`	| Rangs de (min rank) entre [0, 1].
 `row_number`	| Ordonne en affectant aux liens la première position.
-`ntile` 		| Divise en n groupes
-`between` 		| Les valeurs sont-elles entre a et b?
+`ntile` 		| Divise en n groupes.
+`between` 		| Les valeurs sont-elles entre a et b.
 `cum_dist` 		| Distribution cumulée
-`cumall` 		| Cumul tant que vrai
-`cumany` 		| Cumul dès que vrai
-`cummean` 		| Moyenne glissante
-`cumsum` 		| Somme cumulée
-`cummax` 		| Maximum cumulé
-`cummin` 		| Minimum cumulé
-`cumprod` 		| Produit cumulé
-`pmax` 			| Maximum par élément
-`pmin` 			| Minimum par élément
+`cumall` 		| Cumul tant que vrai.
+`cumany` 		| Cumul dès que vrai.
+`cummean` 		| Moyenne glissante.
+`cumsum` 		| Somme cumulée.
+`cummax` 		| Maximum cumulé.
+`cummin` 		| Minimum cumulé.
+`cumprod` 		| Produit cumulé.
+`pmax` 			| Maximum par élément.
+`pmin` 			| Minimum par élément.
 
 ### Faire une opération sur toutes les variables
 
 Fonction 		| Défintion
 ----------------|-------------
-`rowSums()`		| somme
+`rowSums()`		| Somme
 
 ## Grouper des données
 
@@ -143,9 +143,9 @@ Fonction 		| Défintion
 * `group_by(var)` grouper les observations par la var (toujours suivi de `summarise`).
 * `ungroup(iris)` dégrouper le jeu de données.
 
-* `summarise( nom = formule)` appliquer une fonction.
+* `summarise(nom = formule)` appliquer une fonction.
 * `summarise_each(funs(fonction))` appliquer une fonction à chaque variable.
-* `count( variable, wt = valeur)` Dénombre le nombre d'observations de chaque valeur d'une variable.
+* `count(variable, wt = valeur)` Dénombre le nombre d'observations de chaque valeur d'une variable.
 
 Fonction 		| Défintion
 ----------------|---
@@ -182,9 +182,9 @@ Fonction 		| Défintion
 
 ## Opérateurs ensemblistes
 
-* `intersect(y,z)` Observations appartenant à y et z
-* `setdiff(y,z)` Observations appartenant à y et pas à z
-* `union(y, z)` Observations appartenant à y et zou l'un des 2
+* `intersect(y, z)` observations appartenant à y et z.
+* `setdiff(y, z)` observations appartenant à y et pas à z.
+* `union(y, z)` observations appartenant à y et z ou l'un des 2.
 
 ## Discrétiser des variables
 
@@ -193,7 +193,7 @@ Fonction 		| Défintion
 	* `method = "frequency"` méthode.
 	* `categories = nbre` nombre de classes.
 
-* `cut2( var, breaks, minmax=T)` découpe en classe en fonction du verteur borne`(val1;[` (package Hmisc).
+* `cut2( var, breaks, minmax=T)` découper en classe en fonction du verteur borne`(val1;[` (package Hmisc).
 * `smbinning(df=data, y="var", x = "var_quanti")` discrétiser de facon optimale les varibles du data pour un score. (packages : smbinning); y doit être de type integer.
 
 	* `$cuts` bornes.
@@ -201,8 +201,8 @@ Fonction 		| Défintion
 ## Autres fonctions
 
 * `model.matrix( var1)` dichotomiser un data (tableau disjonctif).
-* `na.exclude( data )` supprimer les lignes avec au mois une valeur manquante.
+* `na.exclude( data )` supprimer les lignes avec au moins une valeur manquante.
 * `case_when(condition1 ~ val1, condition2 ~ val2,...)` fonction équivalente au CASE WHEN en sql.
 * `scale(fromage,center=T,scale=T)` centrer et réduire les données.
 * `Sys.sleep(seconde)` attendre un nombre de seconde avant la suite de l'exécution.
-* `grepl( symbole, variable)` test si le symbole est contenu dans la variable.
+* `grepl( symbole, variable)` tester si le symbole est contenu dans la variable.
