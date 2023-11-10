@@ -102,9 +102,18 @@ La descente de gradient permet de trouver le minimum d'une fonction
 
 * `optim(par = c(-5,5), fn = fonction, method="BFGS")` minimiser une fonction. 
 
-	* Méthode: `c("Nelder-Mead", "BFGS", "CG", "L-BFGS-B", "SANN", "Brent")`
+R				| Méthode
+----------------|----------
+`Nelder-Mead`	|
+`BFGS`			| Broyden–Fletcher–Goldfarb–Shanno algorithm
+`CG`			| 
+`L-BFGS-B`		| 
+`SANN`			|
+`Brent`			|
 
 Sortie :
 
   * `$par` valeurs trouvées des paramètres qui minimise la fonction.
   * `$value` valeurs minimums.
+  * `$convergence` renvoie si l'algorithme a réussi à converger (`0` oui, `1` non le maximum d'itération a été atteint).
+  * `$counts` renvoie le nombre d'appel à la fonction et à la dérivé.

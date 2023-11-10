@@ -1,3 +1,8 @@
+## Créer un dataframe
+
+* `data.frame(col1 = vect1, col2 = vect2)` créer un dataframe.
+* `data.frame(col1 = type, col2 = type)` créer un dataframe vide.
+
 ## Importer les données
 
 * `read_sas(fichier)` lire des tables SAS (package `haven`).
@@ -168,6 +173,8 @@ Fonction 		| Défintion
 
 * `bind_rows(ligne)` Ajouter à y comme nouvelles lignes
 * `bind_cols(nom = valeur)` Ajoutez à y comme nouvelles colonnes.
+* `dt[nrow(dt) + 1,] = vecteur`
+* `rbind(df1, df2)`
 
 ## Opérateurs ensemblistes
 
