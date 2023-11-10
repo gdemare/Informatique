@@ -43,6 +43,10 @@ Package `readxl`
 * `ncol(data)` renvoie le nbre de colonnes.
 * `dim(data)` renvoie la taille du data.
 
+## Décrire un jeu de données
+
+* `str(dt)` décrire un jeu de données.
+
 ## Manipuler les données avec dplyr
 
 Package : `dplyr`, `tidyr`. `résultat1 %>% résultat2` : rediriger le résultat
