@@ -5,10 +5,14 @@
 
 ### Manipuler les fichiers
 
-* `dirname(sys.frame(1)$ofile)` dossier du script actuel.
+* `basename("C:/some_dir/a.ext")` renvoyer le nom du fichier.
+* `dirname("C:/some_dir/a.ext")` renvoyer le dossier.
+* `list.file()` lister les fichiers et les répertoires.
+* `setdiff(list.files(), list.dirs(recursive = FALSE, full.names = FALSE))` lister uniquement les fichiers.
 * `setwd(dossier)` changer le dossier de travail.
 * `getwd()` chemin du dossier de tavail.
 * `source(fichier)` exécuter un script.
+
 
 ### Les meilleurs packages R
 
@@ -39,6 +43,16 @@
 * `data$colonne` sélectionner une colonne.
 * `table[ligne, colonne]` sélectionner une ligne ou une colonne ou une cellule (laisser vide pour garder tous les champs).
 
+### Créer une liste
+
+```
+list(
+  Petal.Width = "width of the petal",
+  Petal.Length = "length of the petal",
+  Sepal.Width = NULL,
+  Sepal.Length = NULL
+)
+```
 
 ## Les matrices
 
