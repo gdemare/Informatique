@@ -18,12 +18,12 @@
 ## Fonctions de base
 
 * `print("Hello")` afficher un message.
-* `cat("Hello\n")` afficher un message, permet d'utiliser `\n` pour les retours à la ligne. Attention pas de retour automatique.
+* `cat("Hello\n")` afficher un message sans retour à ligne. Pour faire c'est dernier, il faut utiliser `\n`.
 * `dput(variable)` afficher la variable à déclarer en code R.
 
 ## Environnement et variables
 
-* `rm (list=ls ())` supprimer les variables de l'environnement.
+* `rm (list = ls())` supprimer les variables de l'environnement.
 * `typeof(var)` renvoie le type de variable.
 
 ## Les vecteurs
@@ -32,12 +32,12 @@
 
 * `c(2, 4, 6)` déclarer un vecteur.
 * `2:6` séquence de 2 à 6 inclus.
-* `seq(2, 3, by=0.5)`
-* `rep(1:2, times=3 ou each=3)` repéter la valeur alternée (1,2,1,2) ou à la suite (1,1,2,2).
+* `seq(2, 3, by = 0.5)`
+* `rep(1:2, times = 3 ou each = 3)` repéter la valeur alternée (1,2,1,2) ou à la suite (1,1,2,2).
 
 * `date[nligne][ncol]` sélectioner une cellule.
 * `data$colonne` sélectionner une colonne.
-* `table[ligne, colonne]` sélectionner une ligne ou une colonne ou une cellule (laisser vide si l'on veut garder tous les champs).
+* `table[ligne, colonne]` sélectionner une ligne ou une colonne ou une cellule (laisser vide pour garder tous les champs).
 
 
 ## Les matrices
@@ -58,13 +58,13 @@
 * `table(x)` tableau d'effectifs.
 * `unique(x)` valeurs uniques.
 * `c(vec1, vec2)` concaténer deux vecteurs.
-* `paste(vec1, vec2, sep=" ")` fusionner (concater) deux chaines.
+* `paste(vec1, vec2, sep = " ")` fusionner (concater) deux chaines.
 
 	* `collapse="separateur` concaténer les éléments de deux listes.
 
 * `length(vec)` taille du vecteur.
 * `sapply(aa, fonction)` appliquer une fonction à tous les éléments d'un vecteur.
-* `factor( liste, levels = c("niv1, "niv2"))` créer une liste ordonée.
+* `factor(liste, levels = c("niv1, "niv2"))` créer une liste ordonée.
 
 ## Fonction
 
@@ -138,9 +138,10 @@ while(condition){
 ## Manipuler les dates
 
 Package : lubridate.
-
-* `as.Date( '2017-10-12', format= )` convertir en date.
 * `as_datetime()` convertir en date time.
+
+
+* `as.Date('2017-10-12', format = )` convertir en date.
 
 Définition	| R 	| Exemple
 ------------|-------|-------------
@@ -152,22 +153,22 @@ Heure 		| `%H`	| 12
 Minute 		| `%M`	| 15
 Seconde 	| `%S`	| 06
 
-* `time_length( interval(date1, date2), type )` calculer un âge.
+* `time_length(interval(date1, date2), type)` calculer un âge.
 * `date + ajout` calculer une date
 * `years(nbre)` année.
 * `months(nbre)` mois.
 * `days(3)` jour.
 * `weekdays(nbre)` jour de la semaine.
 * `hours(heure)` heure.
-* `format( datetime, format = '')` format d'affichage d'une date et de l'heure.
+* `format(datetime, format = '')` format d'affichage d'une date et de l'heure.
 
 ## Manipuler le texte
 
 * `nchar()` compter le nbre de caractères.
 * `str_sub(i, (text, start = debut, end = fin)` extraire une chaine de charactères.
-* `gsub(schèma, remplacement, variable) ` remplacer un schèma par une nouvelle chaine de caractères.
+* `gsub(schéma, remplacement, variable) ` remplacer un schéma par une nouvelle chaîne de caractères.
 * `str_count(text, motif)` compter le nombre d'occurences (`stringr`).
-* `gsub( pattern ="[.]", "_", "texte à change" )` remplacer un caractère.
+* `gsub( pattern = "[.]", "_", "texte à change" )` remplacer un caractère.
 * `strsplit(variable, symbole)` séparer une variable en fonction d'un symbole.
 * `trim(texte)` supprimer les espaces (package `gdata`).
 * `str_to_title(texte)` mettre les premiers caractères en majuscule (package `stringr`).
@@ -183,7 +184,7 @@ Library `stringr`
 
 * `str_view_all(vecteur, exp_re)` rechercher une expression régulière.
 * `str_extract(texte, exp_re)` extraire un texte.
-* `str_locate(texte, exp_re)` postion de début et de fin de l'expression.
+* `str_locate(texte, exp_re)` récupérer la postion de début et de fin.
 
 Symbole	| Définition
 --------|-----------------
@@ -221,5 +222,5 @@ Paramètres :
 
 ## R markdown 
 
-* `echo=FALSE` masquer la sortie.
+* `echo = FALSE` masquer la sortie.
 * `include = FALSE` masquer le code.
