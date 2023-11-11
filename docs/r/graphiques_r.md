@@ -1,5 +1,7 @@
 ## ggplot 2
 
+`aes()` dans la fonction geom ou à l'extérieur.
+
 ### Une variable
 
 ```
