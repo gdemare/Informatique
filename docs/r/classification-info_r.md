@@ -105,10 +105,10 @@ La descente de gradient permet de trouver le minimum d'une fonction
 R				| Méthode
 ----------------|----------
 `Nelder-Mead`	|
-`BFGS`			| Broyden–Fletcher–Goldfarb–Shanno algorithm
-`CG`			| 
-`L-BFGS-B`		| 
-`SANN`			|
+`CG`			| Gradient conjugué.
+`BFGS`			| Méthode de Newton. 
+`L-BFGS-B`		| BFGS avec des contraintes sur les valeurs à trouver.
+`SANN`			| Recuit simulé.
 `Brent`			|
 
 Sortie :
