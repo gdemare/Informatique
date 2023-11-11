@@ -32,7 +32,7 @@ Faire des groupes (dans aes) :
 Présentation :
 	
 * `coord_flip()` transformer en diagramme en barre horizontal.
-* `alpha=0.4` transparence du remplissage.
+* `alpha = 0.4` transparence du remplissage.
 
 ###  Deux variables
 
@@ -56,21 +56,23 @@ id  	| Forme
 
 Libellés :
 
-* `geom_text_repel( aes(x,y), label = var )` ajouter des étiquettes de données (library ggrepel).
-* `geom_label_repel( aes(x,y), label = var )` ajouter des étiquettes de données avec fond (library ggrepel).
+* `geom_text_repel(aes(x,y), label = var )` ajouter des étiquettes de données (library ggrepel).
+* `geom_label_repel(aes(x,y), label = var )` ajouter des étiquettes de données avec fond (library ggrepel).
 * `geom_line(<option>)` courbe. Paramètres : 
 
  	* `aes(group = var)` une courbe pour chaque modalité de var.
-	* `stat='count'` avec une seul variable.
+	* `stat = 'count'` avec une seul variable.
 	* `geom_col()` diagramme en barre avec la valeur des y. Pour classer les labels, il faut `reorder(label, valeur)` dans le `aes()`.
 
 * `geom_area()` coubre pleine.
 
 ## Autre 
 
-* `geom_polygon( aes(x=long, y=lat, group = group)` tracer des polygones identifié par un groupe (notamment pour les cartes).
-Option : 
+* `geom_polygon(aes(x = long, y = lat, group = group)` tracer des polygones identifié par un groupe (notamment pour les cartes).
+Option :
+
 	* `fill = var` remplir les zones
+
 * `geom_hline( yintercept = valeur )` ligne hotizontale
 * `geom_vline( xintercept = valeur )` ligne veticale.
 
@@ -86,7 +88,7 @@ Option :
 * `ylab("titre")` titre de l’ordonnée.
 * `xlim(min, max)` taille de l'abscisse.
 * `ylim(min, max)` taille de l'ordonnée.
-* `coord_equal(ratio=1)` garder un ratio abscisse/ordonnées.
+* `coord_equal(ratio = 1)` garder un ratio abscisse/ordonnées.
 * `labs(color = titre, fille = titre )` changer le titre de la légende.
 
 ## Créer des graphiques en fonction d’une variable
@@ -105,7 +107,7 @@ Option :
 
 ## Graphique interactif
 
-* `ggplotly( graph )` rendre le graphique interactif (package `plotly`).
+* `ggplotly(graph)` rendre le graphique interactif (package `plotly`).
 
 ## Afficher une fonction
 
@@ -128,7 +130,7 @@ library : `RColorBrewer`
 
 * `display.brewer.all()` afficher les palettes disponibles.
 
-* `graph + scale_color_brewer(palette="Dark2")`
+* `graph + scale_color_brewer(palette = "Dark2")`
 * `scale_fill_brewer(palette)`
 
 ## Graphique avec plotly
@@ -159,7 +161,7 @@ layout(title = 'Répartition des espèces évaluées',
 
 Library `corrplot`
 
-* `corrplot(matrice, method="color")` matrice de corrélation.
+* `corrplot(matrice, method = "color")` matrice de corrélation.
 
 --------------------------------
 
@@ -177,14 +179,12 @@ Library `corrplot`
 
 Paramètres :
 
-* `main=titre` titre.
-* `sub=sous_titre` sous titre.
-* `col=` couleur.
+* `main = titre` titre.
+* `sub = sous_titre` sous titre.
+* `col =` couleur.
 
-* `abline(v=vertical, h=horizontal, a=, b=)` ajouter une droite.
-* `points(coordonée, pch=16)` ajouter un point (pch=16 rond plein).
-
-
+* `abline(v = vertical, h=horizontal, a =, b =)` ajouter une droite.
+* `points(coordonée, pch = 16)` ajouter un point (pch=16 rond plein).
 
 ## Tracer une fonction 
 
@@ -199,6 +199,5 @@ z = outer(x, y, fonction)
 graphique
 ```
 
-* `contour(x, y, z, nlev=10)` courbes de niveau.
-* `persp(x_abs, x_abs, z, shade=0.8, axes=T, ticktype="detailed")` fonction en 3D.
-  
+* `contour(x, y, z, nlev = 10)` courbes de niveau.
+* `persp(x_abs, x_abs, z, shade = 0.8, axes = T, ticktype = "detailed")` fonction en 3D.
