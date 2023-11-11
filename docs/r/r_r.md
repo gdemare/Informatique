@@ -238,3 +238,7 @@ Paramètres :
 
 * `echo = FALSE` masquer la sortie.
 * `include = FALSE` masquer le code.
+
+## Aléatoire
+
+* `runif(nb, min, max)` générer un plusieurs nombres aléatoires entre deux bornes.
