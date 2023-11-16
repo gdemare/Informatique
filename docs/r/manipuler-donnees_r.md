@@ -191,7 +191,7 @@ Fonction 		| Défintion
 
 ### Les jointures
 
-`A %>% jointure(B, <by=c( "var1" = "var2")> )`
+`A %>% jointure(B, <by=c("var1" = "var2")> )`
 
 * `inner_join(data)` A et B
 * `left_join(data)` A (+ A et B)
