@@ -104,6 +104,9 @@ max_by <- function(data, var, by) {
 	* `contains('texte')` sélectionner des colonnes avec le texte dans le nom.
 
 * `distinct()` supprimer les doublons (renvoi les valeurs uniques pour une variable).
+
+	* `.keep_all = TRUE` garder tous les champs.
+
 * `arrange(var1, var2)` trier en ordre décroisssant `desc(var)`.
 
 Fonction 				| Définition
