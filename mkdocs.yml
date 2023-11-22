@@ -115,6 +115,7 @@ nav:
       - "ANOVA" : r/ANOVA_r.md
       - "Arbre de décision" : r/arbre-de-decision_r.md
       - "CAH" : r/CAH_r.md
+      - "Centres mobiles" : r/centres-mobiles.md
       - "Classification baysien" : r/classificateur-baysien_r.md
       - "Forêt aléatoire" : r/foret-aleatoire_r.md
       - "Prédire et évluer un modèle" : r/predire-evaluer_r.md

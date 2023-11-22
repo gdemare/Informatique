@@ -160,6 +160,7 @@ writer = pd.ExcelWriter(fichier, engine = 'xlsxwriter')
 * `tableau_croise.reset_index()` Transformer un tableau croisé en tableau.
 * `melt(data, id_vars='fruit', value_vars=colonnes)` transformer plusieurs variables en une seule.
 * `columns.get_level_values(level)` récupérer les valeurs de l'index dans le cas de plusieurs sous catégories.
+* `agg(['mean', 'min']))` calculer des indicateurs pour plusieurs colonnes ou lignes.
 
 ### Ajouter une variable
 
@@ -204,7 +205,7 @@ Fonction 			| Définition
 
 ### Filtrer
 
-* `.drop(colonnes,axis = 1 )` supprimer une colonne.
+* `.drop(colonnes,axis = 1)` supprimer une colonne.
 * `.sort_values(colonne, ascending=T)` classer les données.
 * `.reset_index()` changer l'ordre naturel des lignes.
 * `.unique()` liste des valeurs pour une colonne.
@@ -214,11 +215,14 @@ Fonction 			| Définition
 	* `na=none` ? valeur a renvoyer lorsque la recherche n'a pas été trouvée ?(False).
  	* `case=False` Prendre en compte la caste.	 
 
-* `data[ data["colonne"] == True ]` filtrer les données en fonction d'une condition. S'il y a plusieurs conditions, il faut les mettre entre parenthèses.
+* `data[data["colonne"] == True]` filtrer les données en fonction d'une condition. S'il y a plusieurs conditions, il faut les mettre entre parenthèses.
 * `data[ data['colonne'].isin( ['KO_EF_01', 'KO_EF_02', 'KO_EF_03']) ]` in pour les conditions dans un tableau.
 * `data.nsmallest(30, 'p value')` top des valeurs les plus faibles.
 * `data.nlargest(30, 'p value')` top des valeurs les plus élevées.
 * `vecteur.notnull() / .notna()` valeur non nulle 'nan' et  none.
+* `filter(valeur, axis=1)` filtrer par l'index ou le nom des colonnes.
+
+	* `regex='e$'` filter en fonction d'une expression régulière.
    
 Vérifier les propriétés d'une colonne :
 

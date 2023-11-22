@@ -171,10 +171,20 @@ Library `corrplot`
 
 	* `type = 'h'`
  
+<<<<<<< Updated upstream
  		* h = histogramme.
    		* l = courbe.
 	* `log = "y"` utiliser une échelle logarithmique.
  	* `labels = etiquette` etiquette. 	
+=======
+ 		* `h` histogramme.
+   		* `l` courbe.
+		* `p` points
+		* `b` points et lignes.
+		* `c` points vides et lignes.
+		* `o` for overplotted points and lines
+		* `s` escalier.
+>>>>>>> Stashed changes
 
 * `boxplot(var)` boxplot.
 * `barplot()` 
@@ -184,6 +194,7 @@ Paramètres :
 * `main = titre` titre.
 * `sub = sous_titre` sous titre.
 * `col =` couleur.
+
 
 * `abline(v = vertical, h=horizontal, a =, b =)` ajouter une droite.
 * `points(coordonée, pch = 16)` ajouter un point (pch=16 rond plein).
@@ -202,4 +213,4 @@ graphique
 ```
 
 * `contour(x, y, z, nlev = 10)` courbes de niveau.
-* `persp(x_abs, x_abs, z, shade = 0.8, axes = T, ticktype = "detailed")` fonction en 3D.
+* `persp(x, y, z, shade = 0.8, axes = T, ticktype = "detailed")` fonction en 3D.

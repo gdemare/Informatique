@@ -8,17 +8,18 @@
 library(Hmisc)
 library(labelled)
 
-* `var_label(dt)` renvoie les labels (ou attribuer un label). Prend comme valeur une `list( nom_col = "label")`.
+* `var_label(dt)` renvoie les labels (ou attribuer un label). Prend comme valeur une `list(nom_col = "label")`.
 * `remove_var_label(dt)` supprimer les labels.
 
 ## Importer les données
 
 * `read_sas(fichier)` lire des tables SAS (package `haven`).
-* `read.csv()` lire une table CSV.
+* `read.csv(ficher, sep = separateur)` lire une table CSV.
+* `read.table(fichier)` importer un fichier avec des espaces comme séparateur.
 
 ## Excel 
 
-library(openxlsx)
+Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openxlsx)` qui est la bibliothèque la plus complète.
 
 * `read.xlsx(fichier, colNames = TRUE, sheet = )` lire un fichier excel.
 * `readWorkbook(bbq, sheet = "Supplies")` lire un fichier excel.
@@ -99,7 +100,7 @@ max_by <- function(data, var, by) {
 
 ## Selectionner
 
-* `select(colonne1, colonne2 )` selecionner des colonnes (`-one of(col)` pour enlever une colonne). Soit avec les numéros, soit avec les noms.
+* `select(colonne1, colonne2)` selecionner des colonnes (`-one of(col)` pour enlever une colonne). Soit avec les numéros, soit avec les noms.
   
 	* `contains('texte')` sélectionner des colonnes avec le texte dans le nom.
 
@@ -131,8 +132,8 @@ OrchardSprays %>%
 
 ## Construire de nouvelles variables
 
-* `mutate(nom = formule )` appliquer une fonction et ajouter une colonne.
-* `mutate_each(funs(fonction) )` appliquer une fonction window à chaque variable.
+* `mutate(nom = formule)` appliquer une fonction et ajouter une colonne.
+* `mutate_each(funs(fonction))` appliquer une fonction window à chaque variable.
 * `transmute(nom = formule)` construitre une ou plusieurs variables en supprimant les colonnes.
 
 Fonction		| Description
@@ -194,7 +195,7 @@ Fonction 		| Défintion
 
 ### Les jointures
 
-`A %>% jointure(B, <by=c("var1" = "var2")> )`
+`A %>% jointure(B, <by = c("var1" = "var2")> )`
 
 * `inner_join(data)` A et B
 * `left_join(data)` A (+ A et B)
@@ -203,7 +204,7 @@ Fonction 		| Défintion
 * `anti_join(data)` B et pas A.
 * `full_join(data)` A ou B. Option :
 
-	* `by = c("col1"="col2")` préciser la jointure.
+	* `by = c("col1" = "col2")` préciser la jointure.
 
 ## Fusions lignes et colonnes
 
@@ -219,21 +220,21 @@ Fonction 		| Défintion
 
 ## Discrétiser des variables
 
-* `discretize( var, categories = nbre groupe, label = )` discrétiser une variable (package : `arules`).
+* `discretize(var, categories = nbre groupe, label = )` discrétiser une variable (package : `arules`).
 
 	* `method = "frequency"` méthode.
 	* `categories = nbre` nombre de classes.
 
-* `cut2( var, breaks, minmax=T)` découper en classe en fonction du verteur borne`(val1;[` (package Hmisc).
-* `smbinning(df=data, y="var", x = "var_quanti")` discrétiser de facon optimale les varibles du data pour un score. (packages : smbinning); y doit être de type integer.
+* `cut2(var, breaks, minmax=T)` découper en classe en fonction du verteur borne`(val1;[` (package Hmisc).
+* `smbinning(df = data, y = "var", x = "var_quanti")` discrétiser de facon optimale les varibles du data pour un score. (packages : smbinning); y doit être de type integer.
 
 	* `$cuts` bornes.
  
 ## Autres fonctions
 
-* `model.matrix( var1)` dichotomiser un data (tableau disjonctif).
-* `na.exclude( data )` supprimer les lignes avec au moins une valeur manquante.
+* `model.matrix(var1)` dichotomiser un data (tableau disjonctif).
+* `na.exclude(data)` supprimer les lignes avec au moins une valeur manquante.
 * `case_when(condition1 ~ val1, condition2 ~ val2,...)` fonction équivalente au CASE WHEN en sql.
-* `scale(fromage,center=T,scale=T)` centrer et réduire les données.
+* `scale(fromage, center = T, scale = T)` centrer et réduire les données.
 * `Sys.sleep(seconde)` attendre un nombre de seconde avant la suite de l'exécution.
 * `grepl( symbole, variable)` tester si le symbole est contenu dans la variable.

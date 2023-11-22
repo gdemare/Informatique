@@ -1,13 +1,7 @@
-## Calculer la matrice des distances.
+La classification ascendante hiéarchique se fait en deux étapes :
 
-```
-distance = dist(data, method = "euclidean")
-```
-Tableau des options des distances :
-
-| Distance | R |
-|---|---|
-| eculidienne | `euclidean` |
+1. Calcul de la matrice des distances.
+2. Application de l'algorithme de classification.
 
 ## CAH
 
@@ -17,14 +11,15 @@ cah = hclust(distance, method="ward.D2")
 
 Tableau des méthodes :
 
-| Méthode | R |
-|---|---|
-| Ward | `ward.D2` |
+Méthode     | R
+------------|---
+Ward        | `ward.D2`
+
+`$height` valeur du criètre d'agglomération.
 
 ## Afficher le dendrogramme
 
-```
-fviz_dend(cah, k=3)
-```
-Options :
-* `k = nbre` nombre de classes.
+* `plot(cah)`
+* `fviz_dend(cah)` afficher avec Options :
+
+    * `k = nbre` nombre de classes à conserver.

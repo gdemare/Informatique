@@ -794,3 +794,13 @@ Recharger automatiquement un module à chaque exécution du code. Utile pour dé
 
 * `%%time` renvoie le cout d'éxécution.
 * `%%timeit` exécute une boucle pour mesurer en moyenne le temps d'exécution.
+
+* `jupyter nbconvert --to html my-notebook.ipynb` exporter un jupyter en html. Nécessite `nbconvert` à installer via Pip. Paramètres :
+
+	* `--no-input` masquer le code. 
+
+### récupérer un fichier depuis internet
+
+import urllib
+
+`urllib.request.urlretrieve(url, variable)` récupérer un fichier depuis une url.

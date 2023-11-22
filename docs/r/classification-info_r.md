@@ -21,8 +21,8 @@ abline(h=0.1, lty=2)
 abline(h=0.2, lty=2)
 ```
 
-* > 0.2 :
-* > 0.1 :
+* $\gt 0.2$ :
+* $\gt 0.1$ :
 
 ### Réaliser des prédictions
 
@@ -100,7 +100,17 @@ lift + geom_line( aes(x= lift$perpop, y=lift$cumden), colour = "blue")
 
 La descente de gradient permet de trouver le minimum d'une fonction 
 
-* `optim(par = c(-5,5), fn = fonction, method="BFGS")` minimiser une fonction. 
+```
+fct_cout <- function(x_obs, y_obs, params){
+  a <- params[1]
+  b <- params[2]
+  return(sum( (fct_mod_lineaire(params, x_obs) - y_obs)**2 ))
+}
+
+optim(par = c(a = 3, b = 12), fn = fct_cout, method = "CG", x = x, y = yobs)
+```
+
+* `optim(par = c(-5,5), fn = fonction, method = "BFGS")` minimiser une fonction. 
 
 R				| Méthode
 ----------------|----------
@@ -113,7 +123,7 @@ R				| Méthode
 
 Sortie :
 
-  * `$par` valeurs trouvées des paramètres qui minimise la fonction.
-  * `$value` valeurs minimums.
-  * `$convergence` renvoie si l'algorithme a réussi à converger (`0` oui, `1` non le maximum d'itération a été atteint).
-  * `$counts` renvoie le nombre d'appel à la fonction et à la dérivé.
+* `$par` valeurs trouvées des paramètres qui minimise la fonction.
+* `$value` valeurs minimums.
+* `$convergence` renvoie si l'algorithme a réussi à converger (`0` oui, `1` non le maximum d'itération a été atteint).
+* `$counts` renvoie le nombre d'appel à la fonction et à la dérivé.

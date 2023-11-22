@@ -4,7 +4,8 @@
 pred = predict(object = model, newdata = test )
 ```
 Type :
-  * `response` retourner la probabilité d'appartenance à la classe.
+	
+* `response` retourner la probabilité d'appartenance à la classe.
 
 ## Évaluer le modèle 
 
@@ -20,7 +21,6 @@ eval = appren %>% bind_cols(pred.class[,2], pred.proba[,2])
 confusion = table(eval$cible, eval$pred.class)
 confusion.proba = prop.table( table(eval$cible, eval$pred.class) )
 ```
-
 
 ### Courbe de Receiving Operator Characteristic (ROC)
 
@@ -39,6 +39,7 @@ auc = performance(pred,"auc")@y.values[[1]]; auc
 ### Courbe de Lift
 
 Package : BCA
+
 ```
 lift.chart( c("CCS.glm", "CCS.rpart"), data=CCSVal, targLevel="1", 
             trueResp=0.01,
@@ -47,5 +48,6 @@ lift.chart( c("CCS.glm", "CCS.rpart"), data=CCSVal, targLevel="1",
 ```
 
 Type : 
-  * `cumulative`
-  * `incremental` 
+
+* `cumulative`
+* `incremental` 

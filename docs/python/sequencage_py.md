@@ -8,20 +8,35 @@ from Bio import pairwise2
 
 * `SeqIO.parse('alignement.fasta', "fasta")` alignement du fichier fasta.
 * `Bio.Seq.Seq("sequence")` déclarer une séquence.
-* `SeqIO.write(align(ali), output, "fasta")` exporter l'alignement dans un fichier fasta.
+* `SeqIO.write(align(ali), "fichier.fasta", "fasta")` exporter la séquence dans un fichier fasta.
+* `enumerate(seq)` renvoie la position et la base.
+
+Propriétés des séquences :
+
+* `annotations["organism"]` accéder attribut d'une séquence accessible `sequence.ATTRIBUT`.
 * `sequence.complement()` renvoie la séquence complémentaire.
 * `sequence.reverse_complement()` renvoie la séquence complémentaire inverse.
-* `.translate()` passer d'une séquence nucléotide à la séquence d'acides aminés.
+* `sequence.transcribe()` transcrire de l'ADN en ARN.
+* `sequence.translate()` passer d'une séquence nucléotide à la séquence d'acides aminés.
 
 ## Alignement des séquences
 
 Bibliothèque `Pairwise` permet d'aligner des séquences deux à deux.
 
 * `AlignIO.read(output_file, "fasta")` importer des fastas d'alignement.
-* `pairwise2.align` aligner des séquences. Les éléments sont accessibles en classe (ex : `.id`). L'alignement utilise comme algo :
- * `.globalms(seq1, seq2, 2, -1, -5, -2)` algo globalms.
- * `.globalxx(seq1, seq2)` algo ?
 * `AlignIO.write(alignment, "fichier.fasta", "fasta")` exporter l'alignement en fasta.
+* `pairwise2.align` aligner des séquences. Les éléments sont accessibles en classe (ex : `.id`). L'alignement utilise comme algo :
+
+    * `.globalms(seq1, seq2, 2, -1, -5, -2)` algo globalms.
+    * `.globalxx(seq1, seq2)` algo ?
+
+### BLAST
+
+`from Bio.Blast import NCBIWWW`
+`from Bio.Blast import NCBIXML`
+
+* `NCBIWWW.qblast("blastp", "nr", query_sequence)` nr pour non-redondante
+* `NCBIXML.parse(result_handle)` parcourir et analyser un fichier.
 
 ### Visualiser les séquences
 
