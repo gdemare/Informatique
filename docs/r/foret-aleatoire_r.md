@@ -7,18 +7,20 @@ library(randomForest)
 ```
 rf = randomForest(cible ~ ., data=train)
 ```
-NB : la variable à prédir doit être un facteur `as.factor()`
+!!! note
+	La variable à prédir doit être un facteur `as.factor()`
 
-Option : 
- * `na.action = na.roughfix/na.omit` remplace les valeurs manquantes par la médiane /.
- * `ytest=var_explique , xtest=vars_explicatives` prédire les valeurs.
- * `nodesize=5` nombre de noeuds minimum.
- * `importance=T` évaluer l'importance des variables.
- * `proximity=TRUE`
- * `ntree=500` nombre d'arbres à construire. 
- * `mtry=3` nombre de variables candidates.
- * `replace=T`
- * `keep.forest=T` garder la forêt en mémoire.
+Option :
+
+ * `na.action = na.roughfix/na.omit` remplace les valeurs manquantes par la médiane.
+ * `ytest =v ar_explique , xtest = vars_explicatives` prédire les valeurs.
+ * `nodesize = 5` nombre de noeuds minimum.
+ * `importance = T` évaluer l'importance des variables.
+ * `proximity = TRUE`
+ * `ntree = 500` nombre d'arbres à construire. 
+ * `mtry = 3` nombre de variables candidates.
+ * `replace = T`
+ * `keep.forest = T` garder la forêt en mémoire.
 
 ## Taux d'erreur
 
