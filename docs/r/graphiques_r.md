@@ -173,6 +173,8 @@ Library `corrplot`
  
  		* h = histogramme.
    		* l = courbe.
+	* `log = "y"` utiliser une échelle logarithmique.
+ 	* `labels = etiquette` etiquette. 	
 
 * `boxplot(var)` boxplot.
 * `barplot()` 
