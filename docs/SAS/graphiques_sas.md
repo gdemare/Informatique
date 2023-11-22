@@ -9,6 +9,7 @@ RUN;
 ### Graphiques
 
 Type :
+
 * `VBAR` diagramme en barres/histogramme verticales
 * `HBAR` diagramme en barres/histogramme horizontales.
 * `PIE` secteur circulaire.
@@ -56,6 +57,7 @@ Paramètre :
 * `VBOX` 
 
 Option :
+
 * `HREF/VREF=valeur` tracer une barre horizontale/verticale.
 * `OVERLAY` superposer plusieurs graphiques.
 
@@ -66,13 +68,16 @@ PROC SGPLOT <option>;
 	<type> X=ordonné Y=abssice </ option2> ;
 RUN;
 ```
-Paramètre : 
+Paramètre :
+
 * `TITLE "titre";` titrer.
 
 Options :
+
 * `UNIFORM` 
 
 Type : 
+
 * `BAND X=var UPPER=var LOWER=var` deux courbes avec l'entre deux remplis.
 * `SCATTER X=var Y=var` nuage de points.
 * `SERIES X=var Y=var` courbes.
@@ -129,6 +134,7 @@ TITLE "text";
 AXISnom <option>;
 ```
 
-Option : 
+Option :
+
 * `LABEL=('')` ajouter le titre des ordonnés.
 * `ORDER=(val to val by pas)` définir les dimensions d'un axe.
