@@ -17,6 +17,8 @@ Requis : `sudo apt install ffmpeg`
 
 `spotdl download [song] ou [playlistUrl]` télécharger une chanson ou plusieurs.
 
+Il suffit ensuite d'utiliser la commande dans le prompt Conda.
+
 ## Selenium
 
 Library `selenium`
