@@ -5,8 +5,7 @@
 
 ### Libellés des colonnes
 
-library(Hmisc)
-library(labelled)
+Packages `Hmisc`, `labelled`
 
 * `var_label(dt)` renvoie les labels (ou attribuer un label). Prend comme valeur une `list(nom_col = "label")`.
 * `remove_var_label(dt)` supprimer les labels.
@@ -66,6 +65,7 @@ Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openx
 * `nrow(data)` renvoie le nbre de lignes.
 * `ncol(data)` renvoie le nbre de colonnes.
 * `dim(data)` renvoie la taille du data.
+* `glimpse(dataset)` description du jeu de données.
 
 ## Décrire un jeu de données
 
@@ -97,12 +97,17 @@ max_by <- function(data, var, by) {
 * `slice(10:15)` sélectionne les lignes selon leur position.
 * `top_n(nlignes, variable)` sélectionne et ordonne les n premières observations (ou groupes si les données sont groupées) ( `desc()` = decroissant ).
 * `is.na(data)` renvoie les lignes avec des valeurs manquantes (`myDataframe[is.na(dt)] = 0` pour les remplacer).
+* `complete.cases(donnees)` renvoie les lignes avec des valeurs manquantes.
 
 ## Selectionner
 
 * `select(colonne1, colonne2)` selecionner des colonnes (`-one of(col)` pour enlever une colonne). Soit avec les numéros, soit avec les noms.
   
 	* `contains('texte')` sélectionner des colonnes avec le texte dans le nom.
+	
+* `select_if(is.numeric)` selectionner en fonction d'une condition.
+
+	* `matches(expr_regu)` sélectionner en fonction d'une expression régulière
 
 * `distinct()` supprimer les doublons (renvoi les valeurs uniques pour une variable).
 
@@ -133,7 +138,6 @@ OrchardSprays %>%
 ## Construire de nouvelles variables
 
 * `mutate(nom = formule)` appliquer une fonction et ajouter une colonne.
-* `mutate_each(funs(fonction))` appliquer une fonction window à chaque variable.
 * `transmute(nom = formule)` construitre une ou plusieurs variables en supprimant les colonnes.
 
 Fonction		| Description
@@ -159,11 +163,14 @@ Fonction		| Description
 `pmax` 			| Maximum par élément.
 `pmin` 			| Minimum par élément.
 
-### Faire une opération sur toutes les variables
+### Faire une opération sur toutes les variables ou les lignes
 
 Fonction 		| Défintion
 ----------------|-------------
 `rowSums()`		| Somme
+`colMeans()`	| Moyenne (`colMeans(is.na(donnees))` utile pour connaitre le pourcentage de valeurs manquantes).
+
+* `apply(dt, axis = 1/2, fonction)` appliquer une opération à toutes les colonnes ou les lignes.
 
 ## Grouper des données
 

@@ -13,7 +13,6 @@
 * `getwd()` chemin du dossier de tavail.
 * `source(fichier)` exécuter un script.
 
-
 ### Les meilleurs packages R
 
 * `rmarkdown` R markdown.
@@ -22,7 +21,7 @@
 ## Fonctions de base
 
 * `print("Hello")` afficher un message.
-* `cat("Hello\n")` afficher un message sans retour à ligne. Pour faire c'est dernier, il faut utiliser `\n`.
+* `cat("Hello\n")` afficher un message sans retour à ligne. Pour un retour à la ligne `\n` et pour remplacer le texte précédent `\r`.
 * `dput(variable)` afficher la variable à déclarer en code R.
 
 ## Environnement et variables
@@ -32,8 +31,6 @@
 
 ## Les vecteurs
 
-### Créer un vecteur
-
 * `c(2, 4, 6)` déclarer un vecteur.
 * `2:6` séquence de 2 à 6 inclus.
 * `seq(2, 3, by = 0.5)`
@@ -42,28 +39,6 @@
 * `date[nligne][ncol]` sélectioner une cellule.
 * `data$colonne` sélectionner une colonne.
 * `table[ligne, colonne]` sélectionner une ligne ou une colonne ou une cellule (laisser vide pour garder tous les champs).
-
-### Créer une liste
-
-```
-list(
-  Petal.Width = "width of the petal",
-  Petal.Length = "length of the petal",
-  Sepal.Width = NULL,
-  Sepal.Length = NULL
-)
-```
-
-## Les matrices
-
-`matrix(vecteur, nrow = , ncol =)` transformer en matrice.
-
-* `det(A)` déterminant.
-* `dim(A)` dimension.
-* `t(A)` transposer.
-* `solve(A)` inverser une matrice.
-* `A %*% B` mutiplication de matrices.
-* `eigen(matrice)` valeurs propres (noyau).
 
 ### Manipuler les vecteurs 
 
@@ -79,6 +54,31 @@ list(
 * `length(vec)` taille du vecteur.
 * `sapply(aa, fonction)` appliquer une fonction à tous les éléments d'un vecteur.
 * `factor(liste, levels = c("niv1, "niv2"))` créer une liste ordonée.
+* `setdiff(vec1, vec2)` element du vecteur 1 non présent dans vec2.
+* `intersect(vec1, vec2)` intersection de deux vecteurs.
+
+### Les liste
+
+```
+list(
+  nom1 = c(1,2),
+  nom2 = "texte"
+)
+```
+
+predict(model, dt_x, verbose = 0)
+
+## Les matrices
+
+`matrix(vecteur, nrow = , ncol =)` transformer en matrice.
+
+* `det(A)` déterminant.
+* `dim(A)` dimension.
+* `t(A)` transposer.
+* `solve(A)` inverser une matrice.
+* `A %*% B` mutiplication de matrices.
+* `eigen(matrice)` valeurs propres (noyau).
+
 
 ## Fonction
 
