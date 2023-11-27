@@ -171,12 +171,6 @@ Library `corrplot`
 
 	* `type = 'h'`
  
-<<<<<<< Updated upstream
- 		* h = histogramme.
-   		* l = courbe.
-	* `log = "y"` utiliser une échelle logarithmique.
- 	* `labels = etiquette` etiquette. 	
-=======
  		* `h` histogramme.
    		* `l` courbe.
 		* `p` points
@@ -184,7 +178,9 @@ Library `corrplot`
 		* `c` points vides et lignes.
 		* `o` for overplotted points and lines
 		* `s` escalier.
->>>>>>> Stashed changes
+    	
+	* `log = "y"` utiliser une échelle logarithmique.
+ 	* `labels = etiquette` etiquette.
 
 * `boxplot(var)` boxplot.
 * `barplot()` 
@@ -195,6 +191,7 @@ Paramètres :
 * `sub = sous_titre` sous titre.
 * `col =` couleur.
 
+### Ajouter des éléments 
 
 * `abline(v = vertical, h=horizontal, a =, b =)` ajouter une droite.
 * `points(coordonée, pch = 16)` ajouter un point (pch=16 rond plein).
