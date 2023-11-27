@@ -120,6 +120,8 @@ if ( test_expression1) {
 }
 ```
 
+`if(condition) do (instruction)` ou `if(condition) instruction`.
+
 * `assign(nom, valeur)` créer des variables avec une boucle.
 * `get(nom)` appeler une variable.
 
@@ -127,7 +129,7 @@ Opérateur	| Définition
 ------------|-----
 `==`		| égale
 `%in%`		| appartient
-`!`     	|
+`!`     	| négation
 
 ## Boucles
 
@@ -190,7 +192,7 @@ Seconde 	| `%S`	| 06
 
 ### Stringr
 
-* `strsplit(texte)` supprime les espaces a la fin et au début et les espaces doubles.
+* `strsplit(texte)` supprimer les espaces à la fin et au début et les espaces doubles.
 
 ### Expressions régulières
 
