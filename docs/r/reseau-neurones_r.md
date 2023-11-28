@@ -40,11 +40,12 @@ model %>% compile(
 ```
 history  <- model %>% fit(
   dt_x_train, dt_y_train,
-  batch_size = 16, epochs = 200, verbose = 0,
-  validation_split = 0.2
+  batch_size = 16, epochs = 200, verbose = 0
 )
 plot(history)
 ```
+
+Ajouter un jeu de données de validation `validation_data = list(dt_x_train, dt_y_train)` ou `validation_split = 0.2`.
 
 #### Evaluer et prédire
 
