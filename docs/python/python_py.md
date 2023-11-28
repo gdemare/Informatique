@@ -41,6 +41,7 @@ Répéter l'opération pour le sous dossier library/bin et scripts
 Permet d'installer plusieurs versions différentes sur la même machine.
 
 * `conda create python_env` créer un environnement conda.
+	* `python=3.9` préciser la version de pytho. 	
 * `conda activate python_env` activer l'environnement.
 * `conda deactivate` quitter l'environnement.
 * `conda update` mettre a jour tous les packages.
