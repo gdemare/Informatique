@@ -19,7 +19,7 @@ Faire des groupes (dans aes) :
   
 * `geom_bar(<option>)` diagramme en barre. Option :
 
-	* `position = "dodge"` positionner les éléments les uns à coté des autres `aes(...,fill = var)`.
+	* `position = "dodge"` positionner les éléments les uns à coté des autres `aes(..., fill = var)`.
 	* `aes(var), position = "fill"` empiler les éléments avec une hauteur normalisée.
 	* `aes(var), position = "stack"` empiler les éléments.
 	* `stat = 'identity'` pour afficher deux varibles.
@@ -56,8 +56,8 @@ id  	| Forme
 
 Libellés :
 
-* `geom_text_repel(aes(x,y), label = var )` ajouter des étiquettes de données (library ggrepel).
-* `geom_label_repel(aes(x,y), label = var )` ajouter des étiquettes de données avec fond (library ggrepel).
+* `geom_text_repel(aes(x,y), label = var)` ajouter des étiquettes de données (library ggrepel).
+* `geom_label_repel(aes(x,y), label = var)` ajouter des étiquettes de données avec fond (library ggrepel).
 * `geom_line(<option>)` courbe. Paramètres : 
 
  	* `aes(group = var)` une courbe pour chaque modalité de var.
@@ -68,13 +68,12 @@ Libellés :
 
 ## Autre 
 
-* `geom_polygon(aes(x = long, y = lat, group = group)` tracer des polygones identifié par un groupe (notamment pour les cartes).
-Option :
+* `geom_polygon(aes(x = long, y = lat, group = group)` tracer des polygones identifié par un groupe (notamment pour les cartes). Option :
 
 	* `fill = var` remplir les zones
 
-* `geom_hline( yintercept = valeur )` ligne hotizontale
-* `geom_vline( xintercept = valeur )` ligne veticale.
+* `geom_hline(yintercept = valeur)` ligne hotizontale
+* `geom_vline(xintercept = valeur)` ligne veticale.
 
 ## Thémes 
 
@@ -89,17 +88,13 @@ Option :
 * `xlim(min, max)` taille de l'abscisse.
 * `ylim(min, max)` taille de l'ordonnée.
 * `coord_equal(ratio = 1)` garder un ratio abscisse/ordonnées.
-* `labs(color = titre, fille = titre )` changer le titre de la légende.
+* `labs(color = titre, fille = titre)` changer le titre de la légende.
 
 ## Créer des graphiques en fonction d’une variable
 
 * `facet_grid(.~variable)` sur une ligne.
 * `facet_grid(variable~.)` sur une colonne
 * `facet_wrap( ~variable)` en ligne et en colonne.
-
-## ordonner la variable a afficher
-
-`reorder(variable, )`
 
 ## Exporter le graphique
 
@@ -155,7 +150,7 @@ layout(title = 'Répartition des espèces évaluées',
 
 ### Séries temporelles
 
-`library(dygraphs)` pour des graphiques temporels
+`library(dygraphs)` pour des graphiques temporels.
 
 ## Matrice colorée
 
