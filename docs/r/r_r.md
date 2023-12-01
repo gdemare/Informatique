@@ -1,3 +1,16 @@
+suppressWarnings(code) supprimer un warning.
+suppressMessages()
+
+
+cat("\rÉtape", num_script, "/", for_nb_scripts, '-', script) barre de chargement pour les boucles for.
+
+
+json_data <- toJSON(REACDATA$t)
+writeLines(json_data, "REACDATA_t.json")
+REACTABLE <- fromJSON("REACDATA_t.json")
+
+----------------------------------
+
 ### Les packages
 
 * `install.packages("package")` installer un package.
