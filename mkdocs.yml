@@ -118,7 +118,7 @@ nav:
       - "Centres mobiles" : r/centres-mobiles.md
       - "Classification baysien" : r/classificateur-baysien_r.md
       - "Forêt aléatoire" : r/foret-aleatoire_r.md
-      - "Prédire et évluer un modèle" : r/predire-evaluer_r.md
+      - "Prédire et évaluer un modèle" : r/predire-evaluer_r.md
       - "Régression logistique" : r/regression-logistique_r.md
       - "Réseau de neurones" : r/reseau-neurones_r.md
       - "Série temporelle" : r/serie-temporelle-simple_r.md
@@ -131,6 +131,7 @@ nav:
       - "ACM" : r/ACM_r.md
       - "ACP" : r/ACP_r.md
       - "AFC" : r/AFC_r.md
+      - "Positionnement multidimensionnel" : r/positionnement-multidimensionnel.md
   - SAS :
     - "Manipuler les données" : SAS/manipuler-donnees_sas.md
     - "Formater les données" : SAS/formater-donnees_sas.md
