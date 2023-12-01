@@ -257,3 +257,9 @@ Paramètres :
 ## Aléatoire
 
 * `runif(nb, min, max)` générer un plusieurs nombres aléatoires entre deux bornes.
+
+
+* `dist(matrice, method  = "euclidean")` calculer la matrice des distances.
+
+  * `manhattan`
+  * `maximum`
