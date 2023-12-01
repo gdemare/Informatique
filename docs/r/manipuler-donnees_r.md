@@ -140,6 +140,9 @@ OrchardSprays %>%
 * `mutate(nom = formule)` appliquer une fonction et ajouter une colonne.
 * `transmute(nom = formule)` construitre une ou plusieurs variables en supprimant les colonnes.
 
+!!! note
+	Pour modifier uniquement certaines lignes, il est possible d'utiliser  `ifelse(condition, valeur_vrai, valeur_vaux)` 
+
 Fonction		| Description
 ----------------|-----------
 `n` 			| Nombre de lignes.
