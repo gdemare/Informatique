@@ -6,7 +6,7 @@ La classification ascendante hiéarchique se fait en deux étapes :
 ## CAH
 
 ```
-cah = hclust(distance, method="ward.D2")
+cah = hclust(mat_distance, method = "complete")
 ```
 
 Tableau des méthodes :
@@ -14,7 +14,9 @@ Tableau des méthodes :
 Méthode     | R
 ------------|---
 Ward        | `ward.D2`
-
+            | `centroid` 
+            | `average` 
+            
 `$height` valeur du criètre d'agglomération.
 
 ## Afficher le dendrogramme
