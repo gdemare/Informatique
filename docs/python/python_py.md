@@ -44,6 +44,7 @@ Permet d'installer plusieurs versions différentes sur la même machine.
 
 	* `python=3.9` préciser la version de pytho.
 
+* `conda env list` lister les environnements.
 * `conda activate python_env` activer l'environnement.
 * `conda deactivate` quitter l'environnement.
 * `conda update` mettre a jour tous les packages.
