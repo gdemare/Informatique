@@ -1,15 +1,17 @@
 Importer les bibliothèques
+
 ```
 from Bio import SeqIO
 from Bio import pairwise2
 ```
 
-## Déclaer des séquences 
+## Déclarer des séquences 
 
 * `SeqIO.parse('alignement.fasta', "fasta")` alignement du fichier fasta.
 * `Bio.Seq.Seq("sequence")` déclarer une séquence.
 * `SeqIO.write(align(ali), "fichier.fasta", "fasta")` exporter la séquence dans un fichier fasta.
 * `enumerate(seq)` renvoie la position et la base.
+* `MutableSeq(genomeLambda.seq)` rendre une séquence modifiable (`from Bio.Seq import MutableSeq`).
 
 Propriétés des séquences :
 
