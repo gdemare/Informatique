@@ -44,7 +44,9 @@ Libary `pymsaviz`
 
 * `mv = MsaViz( fichier, wrap_length=60, show_count=True)`
 Paramètre :
-* `show_consensus=True` créer un consensus.
+
+	* `show_consensus=True` créer un consensus.
+
 * `mv.savefig("api_example01.png")` sauvegarder et afficher l'image dans un fichier.
 
 Ajouter des fichiers :
