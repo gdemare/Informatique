@@ -74,6 +74,7 @@ Libellés :
 
 * `geom_hline(yintercept = valeur)` ligne hotizontale
 * `geom_vline(xintercept = valeur)` ligne veticale.
+* `geom_abline(intercept = 0, slope = 1)` droites et fonctions linéaires.
 
 ## Thémes 
 
