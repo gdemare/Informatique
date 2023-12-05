@@ -49,8 +49,8 @@ Paramètre :
 
 Ajouter des fichiers :
 
-* `mv.add_markers([30, (40, 50), 55], color="green", marker="+")` ajouter des repères.
-* `mv.add_text_annotation((23, 39), "Libellé", text_color="red", range_color="red")` ajouter un région.
+* `mv.add_markers([30, (40, 50), 55], color = "green", marker = "+")` ajouter des repères.
+* `mv.add_text_annotation((23, 39), "Libellé", text_color = "red", range_color = "red")` ajouter un région.
 
 #### PubMed
 
