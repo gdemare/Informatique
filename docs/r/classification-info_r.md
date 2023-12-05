@@ -101,7 +101,8 @@ fonc1 = function(x){
     ifelse(x<classe, (x/classe)*100, 100)
   }
 fonc = function(x){x}
-lift = ggplot() + theme_minimal() + stat_function( fun = fonc1, data= data.frame(x = c(0, 100))) +
+lift = ggplot() + 
+	stat_function(fun = fonc1, data = data.frame(x = c(0, 100))) +
   stat_function(fun = fonc) + xlab("% population") + ylab("% cible")
 lift + geom_line( aes(x= lift$perpop, y=lift$cumden), colour = "blue")
 ```
