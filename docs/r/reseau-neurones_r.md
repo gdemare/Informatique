@@ -20,11 +20,11 @@ model <- keras_model_sequential() %>%
 
 Les types de couches :
 
-* `layer_dense(units = 10, shape(nb_var), activation = 'linear')`couche normale.
+* `layer_dense(units = 10, shape(nb_var), activation = 'linear')` couche normale.
     
 Type: 
 
-    * `activation = sigmoid/relu/linear`  fonction d'activation.
+    * `activation = sigmoid/relu/linear` fonction d'activation.
 
 #### Fonction perte
 
@@ -57,11 +57,11 @@ Ajouter un jeu de données de validation `validation_data = list(dt_x_train, dt_
 `library(nnet)`
 
 ```
-nnet(data= , cible~variables, size=nb_couche, maxit=nb)
+nnet(data = , cible~variables, size = nb_couche, maxit = nb)
 ```
 Paramètres :
-* `size=nb` nombre de couches cachées.
-* `maxit=nb` nombre d'itérations maximum.
+* `size = nb` nombre de couches cachées.
+* `maxit = nb` nombre d'itérations maximum.
 
 Option :
 
@@ -77,7 +77,9 @@ Valeur :
 
 ## Prédiction 
 
-`predict(modele, newdata=test, type=)`
-`type=` :
-* `class` renvoie la probabilité d'appartenance pour chaque classe
-* `raw` renvoie la modalité la plus probable.
+`predict(modele, newdata = test, type = )` paramètres 
+pour :
+    * `type=` 
+
+		* `class` renvoie la probabilité d'appartenance pour chaque classe
+		* `raw` renvoie la modalité la plus probable.
