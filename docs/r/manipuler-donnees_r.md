@@ -177,7 +177,7 @@ Fonction 		| Défintion
 
 ## Grouper des données
 
-`data %>% group_by(columns) %>% summarise( indicateur)`
+`data %>% group_by(columns) %>% summarise(indicateur)`
 
 Grouper les données :
 
@@ -187,7 +187,7 @@ Grouper les données :
 Calculer des indicateurs par groupe :
 
 * `summarise(nom = formule)` appliquer une fonction.
-* `summarise_each(funs(fonction))` appliquer une fonction à chaque variable.
+* `summarise_all(fonction)` appliquer une fonction à chaque variable.
 * `count(variable, wt = valeur)` Dénombre le nombre d'observations de chaque valeur d'une variable.
 
 Fonction 		| Défintion

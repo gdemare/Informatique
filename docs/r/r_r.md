@@ -1,22 +1,14 @@
-suppressWarnings(code) supprimer un warning.
-suppressMessages()
-
-
-cat("\rÉtape", num_script, "/", for_nb_scripts, '-', script) barre de chargement pour les boucles for.
-
-
-json_data <- toJSON(REACDATA$t)
-writeLines(json_data, "REACDATA_t.json")
-REACTABLE <- fromJSON("REACDATA_t.json")
-
-----------------------------------
-
-### Les packages
+## Les packages
 
 * `install.packages("package")` installer un package.
 * `library(package)` importer un package. 
 
-### Manipuler les fichiers
+### Les meilleurs packages R
+
+* `rmarkdown` R markdown.
+* `tidyverse` intègre les packages les plus populaires pour la science de la donnée.
+
+## Manipuler les fichiers
 
 * `basename("C:/some_dir/a.ext")` renvoyer le nom du fichier.
 * `dirname("C:/some_dir/a.ext")` renvoyer le dossier.
@@ -26,16 +18,19 @@ REACTABLE <- fromJSON("REACDATA_t.json")
 * `getwd()` chemin du dossier de tavail.
 * `source(fichier)` exécuter un script.
 
-### Les meilleurs packages R
+### Json 
 
-* `rmarkdown` R markdown.
-* `tidyverse` intégre les packages les plus populaires pour la science de la donnée.
+* `toJSON(liste)` convertir une liste en Json.
+* `writeLines(json_data, "REACDATA_t.json")` créer un fichier en Json (attention, il faut le convertir avant).
+* `fromJSON("REACDATA_t.json")` importer un Json.
 
 ## Fonctions de base
 
 * `print("Hello")` afficher un message.
 * `cat("Hello\n")` afficher un message sans retour à ligne. Pour un retour à la ligne `\n` et pour remplacer le texte précédent `\r`.
 * `dput(variable)` afficher la variable à déclarer en code R.
+* `suppressWarnings(code)` supprimer les warnings.
+* `suppressMessages(code)` supprimer les messages.
 
 ## Environnement et variables
 
@@ -146,6 +141,9 @@ Opérateur	| Définition
 
 ## Boucles
 
+!!! note
+	cat permet de faire suivre le % d'une boucle `cat("\rÉtape", num_script, "/", for_nb_scripts, '-', script)
+
 ### For 
 
 ```
@@ -164,12 +162,10 @@ while(condition){
 }
 ```
 
-## Manipuler les dates
+## Les dates
 
 Package : lubridate.
 * `as_datetime()` convertir en date time.
-
-
 * `as.Date('2017-10-12', format = )` convertir en date.
 
 Définition	| R 	| Exemple
@@ -191,7 +187,7 @@ Seconde 	| `%S`	| 06
 * `hours(heure)` heure.
 * `format(datetime, format = '')` format d'affichage d'une date et de l'heure.
 
-## Manipuler le texte
+## Le texte
 
 * `nchar()` compter le nbre de caractères.
 * `str_sub(i, (text, start = debut, end = fin)` extraire une chaine de charactères.
