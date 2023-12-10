@@ -1,15 +1,22 @@
-* [Bioconda](https://bioconda.github.io/conda-package_index.html)
-* [pyOpenMS](https://pyopenms.readthedocs.io/en/latest/index.html)
+## Protéomique
 
-[Expasy](https://www.expasy.org/) bdd Swiss Bioinformatics Ressource Portal :
-	* [UniProt](https://www.uniprot.org/)
+`alphapept` Il est conseillé de l'installer dans un environnement Conda.
 
-* [Peptide SAR](https://github.com/Merck/PepSeA)
+### io - importer et exporter les fichiers
 
-## Library Bio
+`io` est basé sur la library `alphapept.pyrawfilereader`.
+  
+* `load_thermo_raw(fichier.raw,  )`
+* `raw_conversion()` convertir en hdf.
 
-### Alignement de séquences
+### fasta - les peptides 
 
-Le module `AlignIO` de la library `Bio`.
-`SeqIO.parse(open(input_file),'fasta')` importer un fichier fasta.
-` ` convertir un fasta en dictionnaire.
+* `read_fasta_file(fichier.fasta)` lire un fichier fasta. `list( )` possibilité de le convertir en liste pour plus de lisibilité. Stocker dans un dictinnaire.
+* `get_frag_dict()`
+* `generate_database()`
+* `generate_spectra()` génère le spectre associé.
+* `generate_fasta_list(chemin)` exporter en fichier fasta.
+* `generate_peptides()`
+
+
+* `add_to_pept_dict([dic1,dic2])` fusionner des dictionnaires.

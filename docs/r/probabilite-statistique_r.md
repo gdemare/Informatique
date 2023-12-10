@@ -12,9 +12,9 @@ Library : `stats`
 
 ### Loi normale
 
-* `rnorm(nb, mean = 0, sd = 1)` générer nb nombres aléatoires suivant une loi normale.
-* `dnom( vecteur, moyenne, ecart type)`  renvoie la densité de probabilité.
-* `pnorm( quantile, moyenne, ecart type)` renvoie la probabilité inférieure à la valeur (fonction de répartition).
+* `rnorm(nb, mean = 0, sd = 1)` générer plusieurs nombres aléatoires suivant une loi normale.
+* `dnom(vecteur, moyenne, ecart type)`  renvoie la densité de probabilité.
+* `pnorm(quantile, moyenne, ecart type)` renvoie la probabilité inférieure à la valeur (fonction de répartition).
 
 ### Loi de Student
 
@@ -23,3 +23,10 @@ Library : `stats`
 ### Khi-2
 
 * `pchisq(quantile, degrés de liberté)` renvoie la probabilité inférieure à la valeur (fonction de répartition).
+
+## Les tests
+
+* `shapiro.test(x)` Shapiro-Wilk pour la normalité.
+* `bartlett.test()` test de Bartlett.
+* `chisq.test(table(x,y))` test d'association du Khi2.
+* `ks.test(x, y)` test de Kolmogorov-Smirnov.

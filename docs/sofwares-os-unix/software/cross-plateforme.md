@@ -13,22 +13,23 @@ Exporter ses emails dans un fichier :
 
 Convertir du markdown en word, html, pdf.
 
-`pandoc fichier -o sortie.docx`
+`pandoc fichier -o sortie.docx` Paramètres :
 
-grid_tables
-`-t markdown-multiline_tables-grid_tables` elimier des extensison dans les convertions.
+* `-t markdown-multiline_tables-grid_tables` eliminer des extensison dans les convertions.
+
 note !!! 
-  NE FONCTIONNE PAS A CAUSE DES EXPRESSIONS MATHEMATIQUE Pour Ubuntu, pour convertir en pdf, installer texlive-latex-base, texlive-fonts-extra,texlive-fonts-recommended, texlive-latex-extra.
+	NE FONCTIONNE PAS A CAUSE DES EXPRESSIONS MATHEMATIQUE Pour Ubuntu, pour convertir en pdf, installer texlive-latex-base, texlive-fonts-extra,texlive-fonts-recommended, texlive-latex-extra.
 
 ## Nbconvert
 
 Expoter un fichier ipynl en hmtl ou en pdf :
 `jupyter nbconvert --to pdf --no-input fichier.ipynb`
 
-Paramètres :  
+Paramètres :
+
 * `--to html` en html.
 * `--no-input` masquer le code.
-* ` --template theme` avec un thème.
+* `--template theme` avec un thème.
 
 ## Documentation en markdown
 
@@ -115,7 +116,7 @@ jobs:
 
 ### Le contenu 
 
-Les fichiers de documentations sont à mettre dans le dossier `docs`.
+Les fichiers de documentation sont à mettre dans le dossier `docs`.
 
 ### Markdown langage
 
@@ -129,14 +130,19 @@ Attentin, il faut que la tabulation mesure 4 espaces.
 
 Type `note`, `info`, `quote`, `example`, `bug`, `danger`, `failure`, `warning`, `question`, `success`, `tip`, `info`, `abstract`, `note`.
 
+### Les listes
+
 1. element1
 2. element2
 
-_texte_ italique
-__texte__ gras
+* _texte_ italique
+* __texte__ gras
 
-Tableau
+[ ] élément 1
+[X] élément 2
 
-colonne1 | colonne2
----|---
-val1 | val2
+### Tableau
+
+colonne1	| colonne2
+------------|-----
+val1 		| val2

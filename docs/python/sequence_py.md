@@ -7,7 +7,7 @@ from Bio import pairwise2
 
 ## Déclarer des séquences 
 
-* `SeqIO.parse('alignement.fasta', "fasta")` alignement du fichier fasta.
+* `SeqIO.parse('alignement.fasta', "fasta")` alignement du fichier fasta (renvoie un itérateur, à utiliser dans une boucle).
 * `Bio.Seq.Seq("sequence")` déclarer une séquence.
 * `SeqIO.write(align(ali), "fichier.fasta", "fasta")` exporter la séquence dans un fichier fasta.
 * `enumerate(seq)` renvoie la position et la base.
@@ -20,6 +20,7 @@ Propriétés des séquences :
 * `sequence.reverse_complement()` renvoie la séquence complémentaire inverse.
 * `sequence.transcribe()` transcrire de l'ADN en ARN.
 * `sequence.translate()` passer d'une séquence nucléotide à la séquence d'acides aminés.
+* `sequence.count("oligo")` compter le nombre d'occurences.
 
 ## Alignement des séquences
 

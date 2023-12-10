@@ -126,10 +126,12 @@ Fonction 				| Définition
 Package `tidyr`
 
 * `pivot_longer(cols, names_to = "name", values_to = "value")` transformer plusieurs colonnes en une seule variable.
-* `pivot_wider(names_from = "name", values_from = "value")` transformer plusieurs variables en une seule colonne.
+* `pivot_wider(names_from = "name", values_from = "value")` transformer les modalités en colonnes.
+
+	* `values_fill = val` remplacer les valeurs manquantes.
 
 ```
-# La variable treatment (avec les modalités A, B, C ...) est transformée en colonne (A, B, C D). La valeur est la somme des decrease. Chaque ligne correspond à une valeur de rowpos.
+# La variable treatment (avec les modalités A, B, C ...) est transformée en colonne (A, B, C, D). La valeur est la somme des decrease. Chaque ligne correspond à une valeur de rowpos.
 OrchardSprays %>% 
   select(rowpos, treatment, decrease) %>%
   pivot_wider(names_from = treatment, values_from = decrease)

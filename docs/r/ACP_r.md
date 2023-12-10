@@ -1,16 +1,21 @@
 ```
-resacp = prcomp(data, scale = TRUE) # scale centre et réduit
+acp_res = prcomp(data, scale = TRUE) # scale centre et réduit
 ## résumé des axes
-acpInfo = summary(resacp)
+acp_info = summary(acp_res)
 
 ## valeurs propres
-acpInfo$sdev #ecart type pour chaque axe. Les valeurs propres sont calculées a partir de la variance.
-acpInfo$importance # % de variance cumulée
+acp_info$sdev # écart type pour chaque axe. Les valeurs propres sont calculées a partir de la variance.
 ```
+
+`acp_info$importance` avec :
+
+* linge 1, écart type.
+* ligne 2 % de variance par axe.
+* ligne 3, % de variance cumulée.
 
 ## Représentation graphique
 
-`autoplot(res_acp, loadings = TRUE, loadings.colour = 'blue',loadings.label = TRUE, loadings.label.size = 3)` afficher les variables et les individus.
+`autoplot(acp_res, loadings = TRUE, loadings.colour = 'blue',loadings.label = TRUE, loadings.label.size = 3)` afficher les variables et les individus.
 
 
 ----------------------------
@@ -22,6 +27,7 @@ L'installation des packages n'a pas fonctionné Ubunut 10-2023
 `fviz_eig(reacp)` afficher le diagramme en barre des valeurs propres.
 
 Filtrer les données et choisir les axes à représenter :
+
 * `axes = c(1,2)` choix des axes.
 * `select.ind = list(cos2 = 0.6)/select.var` selectionnner les individus/variables représentés.
 

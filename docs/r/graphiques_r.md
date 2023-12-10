@@ -27,7 +27,7 @@ Faire des groupes (dans aes) :
 !!! note 
 	`x = reorder(id_chaine, nb_couple), y = nb_couple` permet de trier les résultats.
 
-* `geom_density()` répartition, densité.
+* `geom_density()` répartition, densité, distribution.
 
 Présentation :
 	

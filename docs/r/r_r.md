@@ -87,7 +87,6 @@ predict(model, dt_x, verbose = 0)
 * `A %*% B` mutiplication de matrices.
 * `eigen(matrice)` valeurs propres (noyau).
 
-
 ## Fonction
 
 ```

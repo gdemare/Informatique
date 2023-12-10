@@ -84,9 +84,8 @@ nav:
       - "Autres modules" : python/modules-supplementaires_py.md
       - "Web scraping" : python/web-scraping_py.md
     - Bioinformatique :  
-      - "MS" : python/spectrometrie_py.md
-      - "MS protéomique" : python/MS-proteomique_py.md
-      - "Séquencage" : python/sequencage_py.md
+      - "Spectrométrie MS" : python/spectrometrie_py.md
+      - "Séquence" : python/sequencage_py.md
     - "Data mining" :
       - "ACP" : python/ACP_py.md
       - "Arbre de décision" : python/arbre-de-decision_py.md
@@ -126,7 +125,6 @@ nav:
     - Statistique :
       - "Graphiques" : r/graphiques_r.md
       - "Probabilité et statistique" : r/probabilite-statistique_r.md
-      - "Tests" : r/tests_r.md
     - "Réduction de dimensions" :
       - "ACM" : r/ACM_r.md
       - "ACP" : r/ACP_r.md
@@ -165,7 +163,7 @@ nav:
       - "Excel" : sofwares-os-unix/software/excel.md
       - "Fidji" : sofwares-os-unix/software/fidji.md
       - "Github" : sofwares-os-unix/software/github.md
-      - "Logiciels staitistiques" : sofwares-os-unix/software/logiciels-statistiques.md
+      - "Logiciels statistiques" : sofwares-os-unix/software/logiciels-statistiques.md
       - "Microsoft Office" : sofwares-os-unix/software/microsoft-office.md
       - "Premier Pro" : sofwares-os-unix/software/premiere-pro.md
       - "Visual Studio Code" : sofwares-os-unix/software/visual-code-studio.md
@@ -177,3 +175,4 @@ nav:
       - "PowerShell" : sofwares-os-unix/unix/powershell.md
       - "Shell" : sofwares-os-unix/unix/shell.md
       - "Vim" : sofwares-os-unix/unix/vim.md
+    - "Bio informatique" : sofwares-os-unix/bioinformatique.md

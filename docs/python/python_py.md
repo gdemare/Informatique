@@ -80,8 +80,8 @@ sudo python setup.py install
 
 ## Créer un module et l'impoter
 
-* attribut ou propriété associé à un élément. Elles sont accessibles par `objet.propriété`.
-* méthode est finalement un objet de type fonction. `objet.fonction()`.
+* attribut ou propriété associé à un élément. Elles sont accessibles par `objet.propriété` et elles peuvent être lister avec `dir()`.
+* méthode est un objet de type fonction. `objet.fonction()`.
 
 ```
 	 	 ____ 'module1.py' 		
@@ -102,7 +102,7 @@ from fichier import class
 * `source python_env/bin/activate` activer l'environnement.
 * `deactivate` désactiver l'environnement.
 
-code > . : ajouter l'environement à Visual Code.
+`code > .` ajouter l'environement à Visual Code.
 
 ### Convertir un python en application
 
@@ -112,7 +112,8 @@ Library `pyinstaller`
 
 Paramètres :
 
-*`--noconsole` --w
+* `--noconsole`
+* `--w`
 * `--onefile`
 
 ## Instructions de bases
@@ -129,8 +130,6 @@ Opérateur 	| Définition
 `a*b` 		| multiplication
 `np.dot(a,b)`	| produit matriciel (NxM et MxO)|
 `a.T` 		| transposition
-
-* `np.random.randn(n)` générer n nombres aléatoire.
 
 ### Importer des fonctions
 
@@ -172,7 +171,6 @@ Fonction		| Définition
 `float()` 		| convertir en float 
 `str()` 		| convertir en texte
 
-* `texte.split('séparateur')` transformer un caractère en liste en fonction d'un séparateur.
 * `format( nombre, '.2f' )` ou `f"{3.4562:.2f}"` format des chiffres le 2 correspond à 2 nbre après la virgule. Attention, converti en texte.
 * `dir(element)` lister toutes les méthodes associées à une variable.
 
@@ -194,23 +192,29 @@ Non modifiable		| tupple			| frozenset
 
 * `var[nbre]` extraire une valeur.
 * `['valeur']*n` créer une liste à n élément
-* `liste.append('texte')` ajouter une valeur à un vecteur à la dernière position.
-* `liste.insert( position, valeur)` inserer une valeur à une position.
 * `del liste[numéro]` supprimer une valeur.
-* `vecteur.pop()` supprimer le dernier élément d'un vecteur.
-* `vecteur.remove('valeur')` supprime une valeur du vecteur.
 * `(a,b) = (1,3)` donner un nom aux élements de la liste pour pouvoir les appeller comme des variables.
 * `liste1 + liste2` concaténer deux listes.
 * `liste1 * nb` dupliquer les éléments d'une liste.
-* `len(liste)` taille de la liste.
 * `liste = [ val1, val2]` déclarer une liste.
 * `liste[pos1][pos2]` afficher un élément.
 * `liste[4:]` sélectionner tous les éléments à partir du 4ème. Attention dans le cas de `4:7` prend l'élément 4, 5 et 6. 
+
+
+* `sorted(liste, reverse=false)` trier une liste sans l'enregistrer.
+* `set(liste)` renvoie les valeurs uniques pour une liste.
+* `len(liste)` taille de la liste.
+
+
+* `liste.append('texte')` ajouter une valeur à un vecteur à la dernière position.
+* `liste.insert(position, valeur)` inserer une valeur à une position.
+* `liste.pop()` supprimer le dernier élément d'un vecteur.
+* `liste.remove('valeur')` supprime une valeur du vecteur.
+* `liste.replace(ancien, nouveau)` remplacer une valeur.
+* `separateur.join(liste)` joindre les éléments d'une liste
 * `liste.sort(reverse=False)` trier un vecteur. Le résultat est automatiquement enregistré.
-* `sorted( liste, reverse = false)` trier une liste sans l'enregistrer.
 * `liste.reverse()` inverser une liste.
 * `liste.count('valeur')` compter la valeur d'un vecteur.
-* `set(liste)` renvoie les valeurs uniques pour une liste.
 
 !!! warning
 	`x = y` créer une référence ie si `y` est modifié alors `x` l'est aussi.
@@ -296,10 +300,7 @@ Fonction 	| Définition
 
 * `texte.find('a trouver')` renvoie la position de la première occurence (sinon -1).
 * `startwith("debut")` renvoie un booléen si la chaîne commence par début.
-* `texte.strip()` supprimer les espace en début et fin.
-* `liste.replace(ancien, nouveau)` remplacer une valeur.
-* `separateur.join(liste)` joindre les éléments d'une liste.
-
+* `texte.strip()` supprimer les espace en début et fin..
 
 #### Expression régulière (regex)
 
@@ -469,48 +470,53 @@ Symbole		| Opération
 * `max(vecteur)` maximum.
 * `min(vecteur)` minimum.
 * `abs(valeur)` valeur absolue.
-* `.count('a compter')` compter le nombre de valeurs  
+* `count('a compter')` compter le nombre de valeurs  
 
 #### Nombre aléatoire
 
 library : `random`
 
-Fonction 		| Défintion
-------------------------|-------------------
+Générer une seule valeur
+
+Fonction 			| Défintion
+--------------------|-------------------
 `randint(nb1,nb2)`	| nbre entier au hasard entre nb1 et nb2
-`random()` 		| nbre aléatoire entre [0;1]
+`random()` 			| nbre aléatoire entre [0;1]
 `randrange(nbre)` 	| nbre entier aléatoire entre 0 et nbre
 `gauss(mu, sigma)` 	| nbre aléatoire par la loi normale
 
-* `random.suffle(list)` mélange les éléments d'une liste.
+* `random.suffle(list)` mélanger les éléments d'une liste.
+* `random.choices(liste, weights=liste_poids, k=nbre_element)` générer une liste avec des éléments particuliers et des poids.
+* `np.random.randn(n)` générer n nombres aléatoires.
 
 #### Fonction mathématique
 
 Bibliothèque `math`
 
 Fonction 		| Définition
-------------------------|----------------
+----------------|----------------
 `sin()`			| sinus
 `cos()`			| cosinus
 `tan()`			| tangente
-`factorial()`		| factoriel
+`factorial()`	| factoriel
 `exp()`			| exponentielle
 `log()`			| logarithme
 
 ## Le texte
 
-* `print( message1, message2)`afficher un message.
+* `print( message1, message2)` afficher un message.
 Paramètre :
+
 	* `sep = séparateur` ajouter un séparateur. 
 	* `end = text_fin` bloquer le retour à la ligne.
 	* `f'texte {variable} texte {var2}'` f rend interprétable la chaine de caractère (remplacement des variables).
-* `print( f"texte {variable}" )` afficher un message en interprétant une variable.
+
+* `print(f"texte {variable}")` afficher un message en interprétant une variable.
 * `texte[1:4]` extraire des caracètres d'une chaîne.
-* `texte1 + texte2` concaténer du texte
-* `'séparateur'.join([text1,text2])` concaténer du texte.
+* `texte1 + texte2` concaténer du texte.
 * `texte.strip()` supprimer les espaces au début et à la fin.
 * `texte.replace('ancien', 'nouveau')` remplacer un caractère.
-* `re.split(`\n`, texte )` séparer une chaîne de caractères en fonction d'un motif.
+* `re.split('\n', texte )` transformer une chaine de caractères en liste.
 
 Caractère 		| Définition
 ----------------|---------------
@@ -563,10 +569,10 @@ Coordonné et position des pixels (x, y) correspont à (largeur, hauteur).
 * `Image.open('fichier.jpg')` ouvrir une image.
 * `var_img.height` récupérer la hauteur.
 * `var_img.width` récupérer la largeur.
-* `var_img.getpixel( (x,y) )` récuperer la valeur des coordonnées rgb du pixel.
-* `var_img.putpixel( (x,y), (r,g,b))` changer la couleur d'un pixel.
+* `var_img.getpixel((x,y))` récuperer la valeur des coordonnées rgb du pixel.
+* `var_img.putpixel((x,y), (r,g,b))` changer la couleur d'un pixel.
 * `afficher_image(image)` afficher l'image.
-* `Image.new(mode = 'RGB', size = (x,y))` créer une nouvelle image.
+* `Image.new(mode='RGB', size=(x,y))` créer une nouvelle image.
 
 ## Les fichiers
 
@@ -626,9 +632,11 @@ with open("fichier.md", 'w', encoding='UTF8') as file:
 * `open('fichier.txt', 'w', encoding = 'utf-8')` ouvrir un fichier. _Rmq :_ `open` permet de créer un fichier.
 L'encoding est généralement ISO-Latin-1 ou utf-8.
 Paramètre :
+
 	* `w` (write) pour écrire.
 	* `a` ajouter à la fin d'un fichier.
 	* `r` (read) lire.
+
 * `fichier.write('text')` ajouter des lignes au fichier (on créer le fichier avec open).
 * `fichier.close()` fermer le fichier.
 
@@ -678,6 +686,7 @@ index = doc.getvalue()
 * `with tag('baliseHTML'):` balise qui se ferme.
 * `oc.stag('baliseHTML')` balise sans fermeture.
 ajouter des options :
+
 	* `id=identifiant` ajouter un identifiant.
 	* `klass=classe` ajouter une classe.
 
@@ -759,6 +768,7 @@ Bibliothèque à importer `from tkinter import ttk`
 2. Afficher l'élément `bouton.pack()`
 
 Liste des éléments :
+
 * `ttk.Button(root, text='Unice', command=fonction)` bouton.
 * `ttk.Label(root, text="texte")` ajouter du texte.
 * `ttk.Entry(root)` zone de saisie.
@@ -785,7 +795,6 @@ print(open_file)
 ou `.askopenfilename()`
 * `fichier = re.search(r'((?!(/|\\)).)*$' , open_file).group(0)` le fichier.
 * `dossier = open_file.replace(fichier, "")` le dossier.
-
 
 ### Développer avec Jupyter notebook
 
