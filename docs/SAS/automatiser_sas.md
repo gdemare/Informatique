@@ -13,10 +13,13 @@ Stocker plusieurs variables :
 Résultat :
 
 * `INTO :variable <option>` mettre les résultat dans une macro dans une PROC SQL).
+
   * `SEPARATED 'symbole'` stocker plusieurs valeurs.
+
 * `CALL SYMPUT` mettre les résultat dans une macro pour les étapes DATA.
 
 ## Les macro-programmes
+
 ```
 %MACRO nomMacro (param1, param2);
 corps ;
@@ -35,7 +38,6 @@ val2 )
 <%ELSE %IF condition2 %THEN %DO ; instruction2 ; %END ;>
 <%ELSE %DO ; instruction ; %END ;>
 ```
-
 
 ```
 %DO i=1 %TO 5;

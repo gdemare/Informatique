@@ -4,9 +4,12 @@ PROC LOGISTIC <option>;
 RUN;
 ```
 ## Paramètre
+
 * `BY variable;` séparer les analyses en fonction d’une variable.
 * `CLASS variables qualitative / <option>;` déclarer les variables qualitatives.
-  * `MISSING` les valeurs manquantes sont traitées comme une modalité.
+
+	* `MISSING` les valeurs manquantes sont traitées comme une modalité.
+
 * `WEIGHT variable;` pondérer les observations.
 
 ## Option MODELE

@@ -8,6 +8,7 @@ library(e1017)
 svmlin = svm(Species ~ ., data=iris, kernel="linear", probability=TRUE, cost=1)
 summary(svmlin)
 ```
+
 * `kernel = type` type du noyau ( `linear`, `polynomial`).
 * `cost = 1`
 * `degree = 2` nombre de degrés.

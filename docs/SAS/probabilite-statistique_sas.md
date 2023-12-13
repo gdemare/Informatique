@@ -10,6 +10,7 @@ RUN;
 ```
 
 Option :
+
 * `MISSING` créer une modalité "valeur manquante".
 * `var='libellé'` changer le libellé dans le tableau.
 * `FORMAT variable format.` formater une variable.
@@ -42,7 +43,8 @@ RUN;
 ```
 
 Options :
-`MAXDEC=n` nombre de décimale
+
+* `MAXDEC=n` nombre de décimale
 
 ## Tableau récapitulatif
 
@@ -60,6 +62,7 @@ RUN;
 ```
 
 Options:
+
 * `NOCUM` supprimer les fréquences cumulatives.
 * `MISSING` afficher le nbre de valeurs manquantes.
 * `CHISQ` test du khi 2.
@@ -72,6 +75,7 @@ PROC UNIVARIATE;
   <HISTOGRAM>;
 RUN;
 ```
+
 * `HISTOGRAM` afficher l'histogramme.
 
 ## Corrélation
@@ -81,6 +85,7 @@ PROC CORR <PEARSON/SPEARMAN> ;
   VAR var1 var2 var;
 RUN;
 ```
+
 Option :
 
 * `NOPROB` masquer la p-value.
@@ -94,5 +99,6 @@ RUN;
 ```
 
 Option :
+
 * `NOOBS LABEL` afficher le label des individus à la place du numéro d'observation (`NOOBS`).
 * `OUTOBS=nbre` nombre d’individus en sortie.

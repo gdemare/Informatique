@@ -11,7 +11,8 @@ RUN;
 * `VALUE`tranformer le format.
 * `INVALUE` transformer l'information.
 
-Option : 
+Option :
+
 * `LIBRARY=bibliotheque` stocker le format dans une bibliothèque.
 
 * `$ variable` d'origine est en caractère.
@@ -50,6 +51,7 @@ Option :
 
 
 `x` délimiteur entre les informations. Liste des valeurs possibles :
+
 * `d` tiret du 6 (2017-03-31).
 * `s` slash (2017/03/31).
 

@@ -12,9 +12,11 @@ La selection du nombre de classe se fait avec la `PROC TREE`
 
 * `CCC` afficher le Critére de Classification Cubique.
 * `OUTTREE=table` exporter les résultats.
-* `METHOD=méthode` 
+* `METHOD=méthode`
+
   * `AVERAGE`
   * `WARD` méthode Ward.
+
 * `PRINT=nbre` nombre de classe à afficher.
 
  Semi-partial R-squared : mesure la perte d'inertie intraclasse.

@@ -178,6 +178,7 @@ SET table1 table2;
 
 `GOPTIONS `
 Options : 
+
 * `HTEXT=4pct` taille de la police.
 * `FTEXT="police";` type de police.
 
@@ -194,6 +195,7 @@ PROC SQL <option>;
 ```
 
 Option :
+
 * `OUTOBS=nbre` nombre d'observation en sortie.
 * `FORMAT=format` formater une colonne.
 
@@ -206,6 +208,7 @@ RUN;
 ```
 
 Options :
+
 * `NODUPKEY` supprime les doublons du BY.
 
 ## Décrire le contenu d'une table
@@ -217,7 +220,8 @@ RUN ;
 ```
 
 Option :
-`BY variable;` appliquer la description pour chaque modalité d'une variable.
+
+* `BY variable;` appliquer la description pour chaque modalité d'une variable.
 
 ## Transposer
 
@@ -236,12 +240,9 @@ RUN;
 
 Réalise une transposer simple sans paramètre : ligne <-> colonne
 
-Option : 
-`_NAME_ = nom`
+Option :
 
-
-Paramètre :
-* ` `
+* `_NAME_ = nom`
 
 ## Normaliser 
 
@@ -251,7 +252,7 @@ PROC STANDARD ;
 RUN;
 ```
 
-Otpion :
+Option :
 
 * `MEAN=moyenne` centrer les données.
 * `STD=ecart-type` réduire les données.
@@ -285,6 +286,7 @@ RUN;
 ```
 
 Action :
+
 * `DELETE` supprimer des tables (KILL supprime toutes les tables).
 * `NODETAILS` ne pas afficher de sortie.
 * `CHANGE` renommer des tables.
@@ -310,6 +312,7 @@ ODS TRACE ON ;
 	procédure;
 ODS TRACE OFF;
 ```
+
 Lister les objets crées par la procédure.
 
 ### En PDF
@@ -329,7 +332,9 @@ ODS EXCEL <OPTIONS(option)>;
 	graph2;
 ODS EXCEL CLOSE;
 ```
+
 Option :
+
 * `SHEET NAME="feuille1"` nommer la feuille de l'export.
 * `START AT="nligne,ncol"` choisir la position de la premier cellule du tableau.
 * `EMBEDDED TITLES="yes"` exporter les titres.
@@ -373,7 +378,8 @@ ODS GRAPHICS OFF;
 ```
 ODS SELECT/EXQLUDE nomTable=libelleObjet ;
 ```
-garder/retirer des objets de la PROC mettre avant l'ODS.
+
+Garder/retirer des objets de la PROC mettre avant l'ODS.
 
 ## Envoyer par email
 
@@ -386,8 +392,10 @@ DATA _NULL_;
 RUN;
 ```
 Option :
+
 * `CC = email` mettre en copie.
 * `ATTACH =("fichier" CONTENT TYPE="application/excel")` joindre un fichier.
 
 ## Données SAS
-`SASHELP.VSTABLE` vue de l'ensemble des tables et leur bibliothèque
+
+* `SASHELP.VSTABLE` vue de l'ensemble des tables et leur bibliothèque.

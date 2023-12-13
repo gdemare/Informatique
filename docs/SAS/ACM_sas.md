@@ -11,7 +11,8 @@ RUN;
 * `NVARS=nbre` nombre de variables avant le tableau de Burt.
 * `ODS GRAPHICS ON/OFF;`
 
-Option : 
+Option :
+
 * `MCA` ACM ur tableau de Burt.
 * `DIMENS=nbre` nombre d'axes à conserver.
 *  `NVARS=nbre`

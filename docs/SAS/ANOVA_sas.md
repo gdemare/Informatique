@@ -9,14 +9,16 @@ PROC ANOVA;
 var1 | var2 interactions entre les variables.
 
 Paramètres :
- * `MEANS variable_qualitative_explciative </ option>;` 
+
+* `MEANS variable_qualitative_explciative </ option>;` 
  
 Options :
-  * `LSD` test de Fisher, comparaison des moyennes de chaque groupe.
-  * `CLDIFF` intervalle de confiance.
-  * `TUCKEY` test de Tuckey, comparaison des moyennes de chaque groupe.
-  * `DUNCAN` Waller-Duncan -ratio test
-  * `WALLER` means of the Strain levels with Duncan’s multiple range test
+
+* `LSD` test de Fisher, comparaison des moyennes de chaque groupe.
+* `CLDIFF` intervalle de confiance.
+* `TUCKEY` test de Tuckey, comparaison des moyennes de chaque groupe.
+* `DUNCAN` Waller-Duncan -ratio test
+* `WALLER` means of the Strain levels with Duncan’s multiple range test
   
 * `TEST H=var1 E=var2*var1`
 

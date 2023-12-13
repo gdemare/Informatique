@@ -53,6 +53,7 @@ Paramètre :
 * `BY variable` un graphique par modalité de la variable.
 
 ### Type :
+
 * `PLOT` nuage de points
 * `VBOX` 
 
