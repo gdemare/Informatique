@@ -56,12 +56,16 @@ Ajouter un jeu de données de validation `validation_data = list(dt_x_train, dt_
 
 `library(nnet)`
 
-```
-nnet(data = , cible~variables, size = nb_couche, maxit = nb)
-```
+Deux façons de déclarer un réseau de neurones : 
+
+* `nnet(data = , cible~variables, size = nb_couche, maxit = nb)` avec une variable cible.
+* `nnet(matrice_x, matrice_y, size = nb_couche)` cette méthode permet de fournir une matrice a obtenir en résultat.
+
 Paramètres :
+
 * `size = nb` nombre de couches cachées.
 * `maxit = nb` nombre d'itérations maximum.
+* `trace = F` masquer l'affichage.
 
 Option :
 

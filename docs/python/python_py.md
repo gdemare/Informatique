@@ -40,9 +40,9 @@ Répéter l'opération pour le sous dossier library/bin et scripts
 
 Permet d'installer plusieurs versions différentes sur la même machine.
 
-* `conda create python_env` créer un environnement conda.
+* `conda create -n python_env` créer un environnement conda.
 
-	* `python=3.9` préciser la version de pytho.
+	* `python=3.9` préciser la version de python.
 
 * `conda env list` lister les environnements.
 * `conda activate python_env` activer l'environnement.
@@ -59,11 +59,12 @@ Dans pour choisir le noyau d'un envrionnement Visual Code ctrl+shift+P, sélecti
 * `pip install package` installer une bibliothèque. Paramètre
 	* `-r package1, package2` installer plusieurs librarys en une seule fois. Pour créer l'installation d'un programme python, il est possible de créer un fichier `requirements.txt` qui contient la liste des library. Il suffit d'exécuter `pip install -r requirements.txt` pour installer tous les modules.
 
-NB : il est possible de stocker le nom des library à utiliser dans un fichier.
+!!! note
+	Il est possible de stocker le nom des library à utiliser dans un fichier. Les library sont accessibles `c:\users\guigui\anaconda3\envs\python_env\lib\site-packages`
 
 ##### Générer un fichier requirements.txt
 
-* `pip freeze > requirements.txt`
+* `pip freeze > requirements.txt` 	
 * [old] package `pipreqs` avec `pipreqs /path/to/project` générer le fichier requirements.
 
 ##### MàJ des packages

@@ -78,7 +78,8 @@ predict(model, dt_x, verbose = 0)
 
 ## Les matrices
 
-`matrix(vecteur, nrow = , ncol =)` transformer en matrice.
+* `matrix(vecteur, nrow = , ncol =)` transformer en matrice.
+* `class.ind(vec)` créer une marice binaire à partir d'un vecteur avec les numéro des colonnes.
 
 * `det(A)` déterminant.
 * `dim(A)` dimension.
@@ -86,6 +87,7 @@ predict(model, dt_x, verbose = 0)
 * `solve(A)` inverser une matrice.
 * `A %*% B` mutiplication de matrices.
 * `eigen(matrice)` valeurs propres (noyau).
+
 
 ## Fonction
 

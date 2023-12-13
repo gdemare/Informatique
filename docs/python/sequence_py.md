@@ -57,6 +57,22 @@ Ajouter des fichiers :
 * `mv.add_markers([30, (40, 50), 55], color = "green", marker = "+")` ajouter des repères.
 * `mv.add_text_annotation((23, 39), "Libellé", text_color = "red", range_color = "red")` ajouter un région.
 
-#### PubMed
+## Motif
 
+`from Bio import motifs`
 
+* `motifs.create([seq(), seq(), seq()])` # créer un motif
+* `motifs.read(open(chemin + "data/YAP3_MA0416.1.pfm", "r"), "jaspar")`
+
+Attributs : 
+
+* `motifPHO2.counts` matrice de comptage
+* `motifPHO2.consensus` renvoie la séquence la plus probable.
+* `motifPHO2.degenerate_consensus` W pour A ou T et V pour A, C, ou G
+
+### Afficher le motif 
+
+library `seqlogo`
+
+1. `seqlogo.CompletePm(pfm=pd.DataFrame(motifPHO2.counts), alphabet_type = 'DNA')` calculer
+2. `seqlogo.seqlogo(pfm, format='png', size='medium')` créer la représentation graphique (`display(graph)` pour l'afficher).
