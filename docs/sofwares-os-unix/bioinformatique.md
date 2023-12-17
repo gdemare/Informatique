@@ -3,7 +3,7 @@
 
 [Expasy](https://www.expasy.org/) bdd Swiss Bioinformatics Ressource Portal :
 	
-	* [UniProt](https://www.uniprot.org/)
+* [UniProt](https://www.uniprot.org/)
 
 * [Peptide SAR](https://github.com/Merck/PepSeA)
 

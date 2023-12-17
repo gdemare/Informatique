@@ -22,8 +22,7 @@ note !!!
 
 ## Nbconvert
 
-Expoter un fichier ipynl en hmtl ou en pdf :
-`jupyter nbconvert --to pdf --no-input fichier.ipynb`
+Expoter un fichier ipynl en hmtl ou en pdf : `jupyter nbconvert --to pdf --no-input fichier.ipynb`
 
 Paramètres :
 
@@ -40,6 +39,7 @@ Installer les packages Python [mkdocs](https://www.mkdocs.org/) et [mkdocs mater
 `mkdocs new my-project` créer un projet.
 
 Le fichier de configuation est `mkdocs.yml` :
+
 ```
 site_name: Mes notes
 
@@ -71,7 +71,7 @@ nav:
     - FMRP : cahier-laboratoire/FMRP.md
 ```
 
-`mkdocs serve` exécuter le serveur.
+* `mkdocs serve` exécuter le serveur.
 
 ### Déployer sur github
 
