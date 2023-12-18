@@ -227,13 +227,16 @@ Non modifiable		| tupple			| frozenset
 
 ### Les dictionnaires
 
-* `dict = { 'id' : [val1, val2, val3] }` Déclarer un dictionnaire.
-* `dict['id']` + `.seq` pour connaitre une information.
-* `thisdict["color"] = "red"` ajouter une valeur dans le dictionnaire.
-
 Le dictionnaire est un objet particulier. L'accés aux valeurs fait par l'id.
 
-* `.get(id)` renvoie la colonne si l'id existe. 
+* `dict = {'id' : [val1, val2, val3]}` Déclarer un dictionnaire.
+* `dict['id']` ou `dict.id` pour connaitre une information.
+* `dict["ajout"] = "valeur"` ajouter une valeur dans le dictionnaire.
+
+!!! note
+	Pour ajouter un nouveau champs à un existant. Il faut s'assurer que la position ou l'on ajoute l'information soit un dictionnaire  `dict[clé]["nouveau"] = ajout`.
+
+* `.get(id)` renvoie la colonne si l'id existe sinon `None`.
 * `.values()` renvoie les valeurs sous forme de liste.
 * `.items()` renvoie (id, valeur).
 * `.keys()` renvoie la liste des id.
@@ -241,12 +244,14 @@ Le dictionnaire est un objet particulier. L'accés aux valeurs fait par l'id.
 * `.update(reference)` ajouter une nouvelle valeur.
 * `sorted(dico)` trier un dictionnaire par la clé.
 
-	* `key=dic.get` trier par valeur.shuffle
- 	* Exemple pour trier un dictionnaire par valeur : `{ word : seq_nb_words[word] for word in sorted(seq_nb_words, key=seq_nb_words.get, reverse = True)} ` 	
+	* `key=dic.get` trier par valeur.shuffle.
+	
+!!! example
+	Trier un dictionnaire par valeur : `{word : seq_nb_words[word] for word in sorted(seq_nb_words, key=seq_nb_words.get, reverse = True)}`. 	
 
 * `dict(liste)` convertir en dictionnaire.
 * `for key in dico:` itérer un dictionnaire renvoie la clé (pour renvoyer la clé et la valeur, itérer sur `dico.items()`).
-[i for i in l if i != val]
+
 ### Les tupples (les listes non modifiables)
 
 * `tupple(list)` convertir en tupple.
@@ -268,7 +273,7 @@ Liste d'éléments uniques. Elles sont utiles pour éliminer les doublons. La di
 Opérations ensemblistes sur les sets
 
 Python			| Définition
----|---
+----------------|---
 `.union()`		| dans s1 et pas dans s2
 `.issubset`		| s1 est un sous ensemble de s2
 `.isdisjoint`	| est disjoint
@@ -285,13 +290,13 @@ Pas mal de trucs. Elles permettent de compter le nombre d'éléments via `collec
 
 * `r"texte /n"` les caractères spéciaux ne sont pas interprétés.
 
-Fonction 	| Définition
+Fonction 		| Définition
 ----------------|-----------------
-`chr(nbre)`	| convertie un nombre en sa lettre correspondante
-`len(texte)`	| nombre de caractère de la chaine
-`.lower()`	| mettre un texte en minuscule
-`.upper()`	| mettre un texte en majuscule
-`.capitalize()`		| premier lettre de chaque mot en majuscule.
+`chr(nbre)`		| convertie un nombre en sa lettre correspondante.
+`len(texte)`	| nombre de caractère de la chaine.
+`.lower()`		| mettre un texte en minuscule.
+`.upper()`		| mettre un texte en majuscule.
+`.capitalize()`	| premier lettre de chaque mot en majuscule.
 
 ```
 ''' texte sur 
@@ -299,9 +304,9 @@ Fonction 	| Définition
 '''
 ```
 
-* `texte.find('a trouver')` renvoie la position de la première occurence (sinon -1).
-* `startwith("debut")` renvoie un booléen si la chaîne commence par début.
-* `texte.strip()` supprimer les espace en début et fin..
+* `texte.find("a trouver")` renvoie la position de la première occurence (sinon -1).
+* `startswith("debut")` renvoie un booléen si la chaîne commence par début.
+* `texte.strip()` supprimer les espace au début et à la fin.
 
 #### Expression régulière (regex)
 
@@ -313,23 +318,23 @@ Library `re`. Une expression régulière est déclarée comme `r"expr"`.
 Variable de sortie :
 
 * `.group(0)` pour accéder aux résultat de la recherche.
-* `.span()` la position.
+* `.span()` les positions.
 * `.start()` la première position.
-* `.end()` . 
+* `.end()` la dernière position. 
 
 Symbole 		| Définition (négation)
 ----------------|--------------
 `\s` (`\S`) 	| espace
-`\d` 		| chiffre
-`\` 		| caractère d'échappement
-`.` 		| jocker tous les caractères
-`*` 		| n'importe quel symbole plusieurs fois `[2-6]` séq de 2 à 6
-`[]` 		| ecrite l'expression à l'intérieur
-`^` 		| position du début
-`$` 		| en fin de chaîne
-`[0-9]{4}`	| Nbre de fois qu'apparait un chiffre
-`\w`		| équivalent à [a-zA-Z0-9]
-`?`		| négation
+`\d` 			| chiffre
+`\` 			| caractère d'échappement
+`.` 			| jocker tous les caractères
+`*` 			| n'importe quel symbole plusieurs fois `[2-6]` séq de 2 à 6
+`[]` 			| ecrite l'expression à l'intérieur
+`^` 			| position du début
+`$` 			| en fin de chaîne
+`[0-9]{4}`		| nbre de fois qu'apparait un chiffre
+`\w`			| équivalent à [a-zA-Z0-9]
+`?`				| négation
 
 Exemples :
 
@@ -339,8 +344,8 @@ Exemples :
 
 Package : `datetime`
 
-Fonction 		| Définition
-------------------------|----------------
+Fonction 			| Définition
+--------------------|----------------
 `date.today()`		| aujourd'hui
 `date.weekday()`	| numéro du jour de la semaine
 
@@ -360,17 +365,17 @@ else:
 
 #### Les opérateurs logiques (booléens)
 
-Symbole 			| Opération
---------------------------------|------------------------
+Symbole 				| Opération
+------------------------|------------------------
 `and` ou `&` 			| et
 `or` ou `|` 			| ou
-`not condition` ou `~` 		| négation
-`is None` 			| null
-`in` 				| vérifier la présence d'un caractère (appartient)
+`not condition` ou `~` 	| négation
+`is None` 				| null
+`in` 					| vérifier la présence d'un caractère (appartient)
 `.endswith("fin")` 		| se termine par
 `pd.isna()` ou `np.isnan()` 	| vérifier si c'est une valeur manquante
-`np.nan` 			| valeur manquante
-`np.invert(vecteur)` 		| transforme vrai en faux
+`np.nan` 				| valeur manquante
+`np.invert(vecteur)` 	| transforme vrai en faux
 
 Condition : `==`, `>=`, `>`, `!=`
 
@@ -455,7 +460,7 @@ declarer = classe() # invoquer la classe.
 ## Les opérateurs
 
 Symbole		| Opération
-----------------|-----------------------
+------------|-----------------------
 `+` 		| addition (`var += 1`)
 `-` 		| soustraction
 `*` 		| multiplication
@@ -463,31 +468,33 @@ Symbole		| Opération
 `/` 		| division avec des nombres flottants
 `a ** b`	| puisance
 `a % b`		| modulo (reste division euclidienne)
+`abs(valeur)` | valeur absolue.
 
 ### Fonctions mathématiques 
 
-* `range(nbre1, nbre2 <,pas> )` créer une liste de nombres (attention pour l'afficher il faut la convertir en liste `list()`). 
-* `round(numeric,nbre de decimal)` arrondir un nombre.
+* `range(nbre1, nbre2 <,pas> )` créer une liste de nombres (attention pour l'afficher il faut la convertir en liste `list()`).
+
+
+* `round(numeric, nb_decimal)` arrondir un nombre.
 * `max(vecteur)` maximum.
 * `min(vecteur)` minimum.
-* `abs(valeur)` valeur absolue.
-* `count('a compter')` compter le nombre de valeurs  
+* `count(vecteur)` compter le nombre de valeurs.
 
 #### Nombre aléatoire
 
-library : `random`
+Library : `random`
 
 Générer une seule valeur
 
 Fonction 			| Défintion
 --------------------|-------------------
-`randint(nb1,nb2)`	| nbre entier au hasard entre nb1 et nb2
-`random()` 			| nbre aléatoire entre [0;1]
-`randrange(nbre)` 	| nbre entier aléatoire entre 0 et nbre
-`gauss(mu, sigma)` 	| nbre aléatoire par la loi normale
+`randint(nb1,nb2)`	| nbre entier au hasard entre nb1 et nb2.
+`random()` 			| nbre aléatoire entre [0;1].
+`randrange(nbre)` 	| nbre entier aléatoire entre 0 et nbre.
+`gauss(mu, sigma)` 	| nbre aléatoire par la loi normale.
 
 * `random.suffle(list)` mélanger les éléments d'une liste.
-* `random.choices(liste, weights=liste_poids, k=nbre_element)` générer une liste avec des éléments particuliers et des poids.
+* `random.choices(list, weights=liste_poids, k=nbre_element)` générer une liste avec des éléments particuliers et des poids.
 * `np.random.randn(n)` générer n nombres aléatoires.
 
 #### Fonction mathématique
@@ -508,8 +515,8 @@ Fonction 		| Définition
 * `print( message1, message2)` afficher un message.
 Paramètre :
 
-	* `sep = séparateur` ajouter un séparateur. 
-	* `end = text_fin` bloquer le retour à la ligne.
+	* `sep=séparateur` ajouter un séparateur. 
+	* `end=text_fin` bloquer le retour à la ligne.
 	* `f'texte {variable} texte {var2}'` f rend interprétable la chaine de caractère (remplacement des variables).
 
 * `print(f"texte {variable}")` afficher un message en interprétant une variable.
@@ -550,7 +557,7 @@ Example 		| Position			| Résultat
 
 ## Autres fonctions utiles
 
-Fonction 	| Définition
+Fonction 		| Définition
 ----------------|----------------
 `texte.strip()`	| supprimer les espaces
 `len(texte)`	| nombre de caractères
@@ -581,26 +588,26 @@ Coordonné et position des pixels (x, y) correspont à (largeur, hauteur).
 
 Package `os` 
 
-Fonction 			| Définition
---------------------------------|-----------------
+Fonction 				| Définition
+------------------------|-----------------
 `remove(fichier)` 		| supprimer un fichier
-`getcwd()` 			| dossier actuel
+`getcwd()` 				| dossier actuel
 `chdir(dossier)` 		| changer le dossier par défaut
 `listdir()` 			| liste des dossiers et fichiers d'une répertoire
 `mkdir(nom)` 			| créer un dossier
 `rmdir(dossier)` 		| supprimer un dossier
-`name`				| renvoie le nom de l'os actuel
-`path.exists(chemin)` 		| existence d'un répertoire ou d'un fichier
+`name`					| renvoie le nom de l'os actuel
+`path.exists(chemin)` 	| existence d'un répertoire ou d'un fichier
 `path.basename(chemin/fichier)`	| renvoie le nom du fichier sans le chemin
-`path.isfile(fichier)` 		| vérifier l'existence d'un fichier
+`path.isfile(fichier)` 	| vérifier l'existence d'un fichier
 
 library : `shutil`
 
-Fonction					| Définition
+Fonction										| Définition
 ------------------------------------------------|----------------------
-`shutil.copy(fichier, dossier ou fichier)` 	| copier un fichier
+`shutil.copy(fichier, dossier ou fichier)` 		| copier un fichier
 `shutil.move( fichier, dossier_destination )`	| renommer un fichier
-`shutil.rename( ancien, nouveau)` 		| renommer un fichier 
+`shutil.rename( ancien, nouveau)` 				| renommer un fichier 
 
 Package `glob`
 
@@ -626,6 +633,7 @@ fichier.close()
 with open("fichier.md", 'w', encoding='UTF8') as file:
 	file.write(i)
 ```
+
 `\n` est le séparateur entre les lignes. Attention il n'y à pas de saut à la ligne par défaut.
 
 ### Importer un fichier 
@@ -815,6 +823,6 @@ Recharger automatiquement un module à chaque exécution du code. Utile pour dé
 
 ### récupérer un fichier depuis internet
 
-import urllib
+`import urllib`
 
 `urllib.request.urlretrieve(url, variable)` récupérer un fichier depuis une url.
