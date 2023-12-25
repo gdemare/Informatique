@@ -66,18 +66,19 @@ Paramètres :
 * `size = nb` nombre de couches cachées.
 * `maxit = nb` nombre d'itérations maximum.
 * `trace = F` masquer l'affichage.
+* `weights = poids` saisir les poids.
 
-Option :
+Sorites :
 
-* `weights = poids` 
-
-Valeur :
-
+* `$n` structure du réseau (nbre de neurones par couches).
+* `$nunits` nbre de neurones total. 
 * `$wts` poids des neurones.
-* `$value` value of fitting criterion plus weight decay term.
-* `$fitted.values` the fitted values for the training data.
-* `$residuals` résidus du jeu d'apprenissage.the residuals for the training data.
-* `$convergence` nombre d'itérations.
+* `$value` valeur du critère d'évalution en prenant en compte la pénalité sur les poids.
+* `$fitted.values` valeurs prédites obtenues sur le jeu d'apprentissage.
+* `$residuals` résidus (différence entre la valeur réel et celle prédite) du jeu d'apprentissage.
+* `$convergence` nombre d'itérations jusqu'a converger.
+
+* `plotnet(model)` visualiser la structure du réseau (`library(NeuralNetTools)`).
 
 ## Prédiction 
 

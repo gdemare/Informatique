@@ -20,7 +20,7 @@ Packages `Hmisc`, `labelled`
 
 Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openxlsx)` qui est la bibliothèque la plus complète.
 
-* `read.xlsx(fichier, colNames = TRUE, sheet = )` lire un fichier excel.
+* `read.xlsx(fichier, colNames = TRUE, sheet = feuille)` lire un fichier excel.
 * `readWorkbook(bbq, sheet = "Supplies")` lire un fichier excel.
 * `wb <- createWorkbook()` créer un classeur.
 * `saveWorkbook(wb, "file.xlsx")` enregistrer un classeur. Paramètres :
@@ -28,10 +28,10 @@ Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openx
 	* `overwrite = TRUE` écraser la version existente.
 
 * `addWorksheet(wb = wb, sheetName = "feuill")` ajouter une feuille.
-* `writeData(wb = wb, sheet = "feuill", x = df, )` écrire un dataframe. Paramètres :
+* `writeData(wb = wb, sheet = "feuill", x = df)` écrire un dataframe. Paramètres :
 
-	* `headerStyle = headerStyle` style des entetes (voir style)
-	* `borders = "n"`
+	* `headerStyle = headerStyle` style des entêtes (voir style).
+	* `borders = "n"`.
 
 #### Style 
 
@@ -59,7 +59,7 @@ Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openx
 
 * `colnames(data)` nom des colonnes.
 * `rownames(data)` nom des colonnes.
-* `column_to_rownames(var = "Accession")` mettre une colonne en nom de lignes et supprime la colonne.
+* `column_to_rownames(var = "Accession")` mettre une colonne en nom de lignes et supprimer la colonne.
 * `rownames_to_column()` transformer l'index en colonne.
 * `rowid_to_column()` transformer le numéro des lignes en colonne.
 * `nrow(data)` renvoie le nbre de lignes.
@@ -76,7 +76,6 @@ Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openx
 Package : `dplyr`, `tidyr`. `résultat1 %>% résultat2` : rediriger le résultat
 
 * `pull(data, colonne)` transformer une sortie en vecteur.
-
 
 Les fonctions avec dplyr
 
@@ -95,21 +94,26 @@ max_by <- function(data, var, by) {
 * `sample_frac(dt, 0.5, replace = TRUE)` sélectionne aléatoirement une fraction d'observations.
 * `sample_n(nligne, replace = TRUE)` sélectionne aléatoirement n observations.
 * `slice(10:15)` sélectionne les lignes selon leur position.
-* `top_n(nlignes, variable)` sélectionne et ordonne les n premières observations (ou groupes si les données sont groupées) ( `desc()` = decroissant ).
+* `top_n(nlignes, variable)` sélectionne et ordonne les n premières observations (ou groupes si les données sont groupées) (`desc()` = décroissant).
 * `is.na(data)` renvoie les lignes avec des valeurs manquantes (`myDataframe[is.na(dt)] = 0` pour les remplacer).
 * `complete.cases(donnees)` renvoie les lignes avec des valeurs manquantes.
 
 ## Selectionner
 
-* `select(colonne1, colonne2)` selecionner des colonnes (`-one of(col)` pour enlever une colonne). Soit avec les numéros, soit avec les noms.
+* `everything()` toutes les colonnes restantes.
+
+!!! example 
+	`select(col13, everything())` déplacer la colonne 13 à la position 1.
+
+* `select(colonne1, colonne2)` selecionner des colonnes (`-one_of(col)` pour enlever une colonne). Soit avec les numéros, soit avec les noms.
   
 	* `contains('texte')` sélectionner des colonnes avec le texte dans le nom.
 	
 * `select_if(is.numeric)` selectionner en fonction d'une condition.
 
-	* `matches(expr_regu)` sélectionner en fonction d'une expression régulière
+	* `matches(expr_regu)` sélectionner en fonction d'une expression régulière.
 
-* `distinct()` supprimer les doublons (renvoi les valeurs uniques pour une variable).
+* `distinct()` supprimer les doublons (renvoie les valeurs uniques pour une variable).
 
 	* `.keep_all = TRUE` garder tous les champs.
 
@@ -117,7 +121,7 @@ max_by <- function(data, var, by) {
 
 Fonction 				| Définition
 ------------------------|---
-`starts_with(debut)`	| les variables commançant par...
+`starts_with(debut)`	| les variables commençant par...
 `ends_with(fin)`		| les variables finissant par...
 `contains(chaine)`		| contenant la chaine.
 
@@ -143,7 +147,7 @@ OrchardSprays %>%
 * `transmute(nom = formule)` construitre une ou plusieurs variables en supprimant les colonnes.
 
 !!! note
-	Pour modifier uniquement certaines lignes, il est possible d'utiliser  `ifelse(condition, valeur_vrai, valeur_vaux)` 
+	Pour modifier uniquement certaines lignes, il est possible d'utiliser  `ifelse(condition, valeur_vrai, valeur_vaux)`.
 
 Fonction		| Description
 ----------------|-----------

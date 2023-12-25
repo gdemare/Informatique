@@ -5,7 +5,8 @@
 
 ### Thunderbird
 
-Exporter ses emails dans un fichier : 
+Exporter ses emails dans un fichier :
+
 * sélectionner le dossier (ou l'email)
 * outils > exporter
 
@@ -17,14 +18,12 @@ Convertir du markdown en word, html, pdf.
 
 * `-t markdown-multiline_tables-grid_tables` eliminer des extensison dans les convertions.
 
-note !!! 
+!!! warning 
 	NE FONCTIONNE PAS A CAUSE DES EXPRESSIONS MATHEMATIQUE Pour Ubuntu, pour convertir en pdf, installer texlive-latex-base, texlive-fonts-extra,texlive-fonts-recommended, texlive-latex-extra.
 
 ## Nbconvert
 
-Expoter un fichier ipynl en hmtl ou en pdf : `jupyter nbconvert --to pdf --no-input fichier.ipynb`
-
-Paramètres :
+`jupyter nbconvert --to pdf --no-input fichier.ipynb` expoter un fichier ipynl en hmtl ou en pdf. Paramètres :
 
 * `--to html` en html.
 * `--no-input` masquer le code.
@@ -123,7 +122,7 @@ Les fichiers de documentation sont à mettre dans le dossier `docs`.
 
 ### Les boites
 
-Attentin, il faut que la tabulation mesure 4 espaces.
+Attention, il faut que la tabulation mesure 4 espaces.
 
 * `!!!` pour une box afficher
 * `???` pour une box retrécie.

@@ -191,6 +191,7 @@ Seconde 	| `%S`	| 06
 ## Le texte
 
 * `nchar()` compter le nbre de caractères.
+* `str_length(vecteur)` nombre de lettres de chaque élément.
 * `str_sub(i, (text, start = debut, end = fin)` extraire une chaine de charactères.
 * `gsub(schéma, remplacement, variable) ` remplacer un schéma par une nouvelle chaîne de caractères.
 * `str_count(text, motif)` compter le nombre d'occurences (`stringr`).
