@@ -20,8 +20,8 @@ Packages `Hmisc`, `labelled`
 
 Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openxlsx)` qui est la bibliothèque la plus complète.
 
-* `read.xlsx(fichier, colNames = TRUE, sheet = feuille)` lire un fichier excel.
-* `readWorkbook(bbq, sheet = "Supplies")` lire un fichier excel.
+* `read.xlsx(fichier, colNames = TRUE, sheet = feuille)` lire un fichier excel (workbook = wb).
+* `readWorkbook(wb ou , sheet = "Supplies")` lire un fichier excel ou un wb.
 * `wb <- createWorkbook()` créer un classeur.
 * `saveWorkbook(wb, "file.xlsx")` enregistrer un classeur. Paramètres :
 
