@@ -2,8 +2,8 @@
 
 ## Manipuler la console et les fichiers
 
-Touche | Action
----|---
+Touche 	 | Action
+---------|---
 Crtl + r | rechercher une commande tapée avec quelques lettres
 Crtl + l | effacer le contenu de la console
 Crtl + d | envoie le message EOF (End Of Files) 
@@ -29,62 +29,62 @@ Crtl + y | coller le texte supprimer avec les commandes précédentes
   * `R` récursive.
 
 * `cd chemin` changer de dossier.
-* `du chemin` taille occupée par les dossiers.
-Paramètre 
+* `du chemin` taille occupée par les dossiers. Paramètres : 
+
   * `h` la taille pour les humains.
-	* `a` afficher la taille des dossiers et des fichiers.
-	* `s` avoir juste le grand total.
+  * `a` afficher la taille des dossiers et des fichiers.
+  * `s` avoir juste le grand total.
   
 ## Manipuler les fichiers
 
-* `cat fichier` afficher tout le fichier.
+* `cat fichier` afficher tout le fichier. Paramétres:
 
-Paramétres:	
 	* `n` afficher le numéro des lignes.
 	
 * `less fichier` afficher un fichier page par page.
 
-| Raccourci | Action |
-|---|---|
-| Espace | affiche la suite du fichier |
-| Entrée | affiche la ligne suivante |
-| d | affiche onze lignes suivante (moitié de l'écran) |
-| b | retounre en arrière d'un écran |
-| y | retourne en arrière d'une ligne |
-| u | retourne en arrière de onze lignes |
-| q | arrête la lecture de fichier |
+Raccourci	| Action
+------------|---
+Espace 		| affiche la suite du fichier.
+Entrée 		| affiche la ligne suivante.
+d 			| affiche onze lignes suivante (moitié de l'écran).
+b 			| retounre en arrière d'un écran.
+y 			| retourne en arrière d'une ligne.
+u 			| retourne en arrière de onze lignes.
+q 			| arrête la lecture de fichier.
 
 * `head fichier` afficher le début du fichier.
 Paramètres :	
 	* `n nbre` afficher le nombre de lignes.
 	
-* `tail fichier` afficher la fin du fichier.
-Paramètres :
+* `tail fichier` afficher la fin du fichier. Paramètres :
 
 	* `n nbre` afficher le nombre de lignes.
 	* `f` suivre la fin du fichier (utile pour les fichiers qui "bouge"» (PS : pour arrêter, taper "ctrl+c").
 	
 * `touch fichier <fichier2>` créer un fichier.
-* `mkdir dossier <dossier2>` créer un dossier.
-Paramètres :
+* `mkdir dossier <dossier2>` créer un dossier. Paramètres :
+
 	* `p` créer des dossiers intermédiaire.
 	
 * `cp fichier copie` copier un fichier ("CoPy").
-* `find -name *.md | xargs cp -t dossier/` copier les fichiers ave cune structures communes.
-Paramètres :	
-	`R` copier des dossiers.
+* `find -name *.md | xargs cp -t dossier/` copier les fichiers ave cune structures communes. Paramètres :
+
+	* `R` copier des dossiers.
 
 * `mv fichier copie` déplacer un fichier et/ou le renommer.
 * `rm fichier fichier2` supprimer des fichiers et des dossiers ("ReMove").
-Paramètres :	
+Paramètres :
+
 	* `i` demander confirmation.
 	* `f` forcer la suppression.
 	* `v` verbose.
 	* `r` supprimer un dossier et son contenu.
 	
-* `ln fichier1 fichier2` créer des liens entre les fichiers.
-Paramètre :	
-	`s` créer un lien symbolique (sans l'argument, Linux créer un lien physique).
+* `ln fichier1 fichier2` créer des liens entre les fichiers. Paramètre :	
+
+	* `s` créer un lien symbolique (sans l'argument, Linux créer un lien physique).
+
 * `rev 'text'` inverse l'ordre des lettres.
 
 ## Les utilisateurs et les droits
@@ -93,9 +93,10 @@ Paramètre :
 * `sudo su` devenir root indéfiniment.
 * `adduser utilisateur` ajouter un utilisateur.
 * `passwd utilisateur` changer le mot de passe.
-* `deluser utilisateur` supprimer un compte mais ne pas son répertoire personnel.
-Paramètre :
-	`-remove-home` supprimer le dossier home de l'utilisateur.
+* `deluser utilisateur` supprimer un compte mais ne pas son répertoire personnel. Paramètres :
+
+	* `-remove-home` supprimer le dossier home de l'utilisateur.
+
 * `addgroup groupe` créer un groupe.
 * `usermod utilisateur` modifier un utilisateur. Paramètres :
 
@@ -106,7 +107,7 @@ Paramètre :
 
 * `delgroup groupe` supprimer un groupe.
 * `chown proprietaire fichier` changer le propriétaire d'un fichier. Paramètres :
-* 
+
 	* `utilisateru:groupe` changer le groupe et le propriétaire et groupe d'un fichier.
 	* `R` affecter récussivement les sous-dossiers.
 
@@ -124,13 +125,16 @@ write 	| w 		| 2
 execute | x 		| 1
 
 Paramètres :
+
 * `R` affecter résursivement.
 
 * `su utilisateur` changer d'utilisateur.
 	
 ## Installer des programes avec apt-get
 
-NB on peut utiliser `apt` sans get ou cache notamment sur les chromebooks.
+!!! note
+	On peut utiliser `apt` sans get ou cache notamment sur les chromebooks.
+
 * `apt-get update` mettre à jour le cache des paquets.
 * `apt-cache search paquet` rechercher un parquet.
 * `apt-get install paquet` installer un paquet.
@@ -138,7 +142,6 @@ NB on peut utiliser `apt` sans get ou cache notamment sur les chromebooks.
 * `apt-get upgrade` mettre à jour tous les paquets.
 *  `apt show paquet | grep install` vérifier si le package est installé.
 *  `apt list --installed` lister les logicels installés.
-
 *  `dpkg` logicel de gestion des paquets debian (.deb). Paramètres :
   
 	* `-l` lister les packages installer.
@@ -168,9 +171,11 @@ NB on peut utiliser `apt` sans get ou cache notamment sur les chromebooks.
 	* quoi : c'est le fichier de recherche (date de création, nom, taille etc)
 	* Que faire avec :
    
-Paramètres :	
+Paramètres :
+
 	* `name "fichier"` rechercher exactement le nom d'un fichier.	
-	* `size «+/-/ »«tailleavecunité»` recherche a partir de la taille du fichier. Les unités sont : K ; M ; G ;... 
+	* `size «+/-/ »«tailleavecunité»` recherche a partir de la taille du fichier. Les unités sont : K ; M ; G ;...
+ 
 		* `atime «temps»` recherche à partir de la date de dernier accès.
 		* `type «d/f» «nom»` rechercher uniquement des répertoires ou des fichiers ( "d"=directories / "f"=files ).
 		* `print` afficher les résultats.
@@ -194,16 +199,14 @@ Paramètres :
 	* `R` ordre aléatoire.
 	* `n` trier les nombres en ordre croissant.
 	
-* `wc fichier` "word count" compter le nombre de lignes, de mots,...( nombre de l-gnes; nombre de caractéres; nombre d'octet ).
-Paramétres:
+* `wc fichier` "word count" compter le nombre de lignes, de mots,...( nombre de l-gnes; nombre de caractéres; nombre d'octet ). Paramétres:
 
 	* `l` compter le nombre de lignes.
 	* `w` compter le nombre de mots.
 	* `c` compter le nombre d'octets.
 	* `m` compter le nombre de caractères.
 	
-* `uniq fichier <sortie>` détecter et supprimer les doublons. Attention ne fonctionne que sur un fichier trié.
-Paramétres:
+* `uniq fichier <sortie>` détecter et supprimer les doublons. Attention ne fonctionne que sur un fichier trié. Paramétres:
 
 	* `c` compter le nombre d'occurences.
 	* `d` afficher uniquement les lignes en double.
@@ -216,10 +219,10 @@ Paramétres:
 
 * `awk`
 * `sed fichier` éditeur de flux (Stream EDitor). Paramètre :
-* 
+  
 	* `n '«nbre»p'` affiche la ligne «nbre»p du fichier.
  
-`sed -n "$(6,$((nbre+delta))p" document.info`
+* `sed -n "$(6,$((nbre+delta))p" document.info`
 				
 ## Les flux de redirection
 
@@ -251,17 +254,22 @@ PS : liste statique des processus.
 	* TIME : la durée d'exécution du processus. Plus exactement, cela correspond à la durée pendant laquelle le processus a occupé le processeur depuis son lancement.
 	* CMD : le programme qui a généré ce processus. Si vous voyez plusieurs fois le même programme, c'est que celui-ci s'est dupliqué en plusieurs processus.
    
-Paramétres:	-
+Paramétres:
+
 	* `ef` lister tous les processus.
 	* `ejh` afficher les processus en arbre.
 	* `u [nomutilisateur]` lister les porcessus lancé par un utilisateur.
+ 
 * `top` liste dynamique des processus.
+  
 	* `q` ferme top.
 	* `h` affiche l'aide.
+
 * `Crlt + C` arrêter un processus lancé en console.
-* `kill [PID]` tuer un processus.
-Paramétres:
-	`9`  tuer un processus sans lui laisser de temps!!!!!
+* `kill [PID]` tuer un processus. Paramétres:
+
+	* `9`  tuer un processus sans lui laisser de temps!!!!!
+
 * `killall processus` tuer les processus avec le même nom.
 * `halt` arrêter l'ordinateur.
 * `reboot` redémarrer l'oridnateur. (pour en savoir + voir commande shutdown).
@@ -307,17 +315,18 @@ Les différentes notations (exemples) :
 	* `nombre1-nombre2` exécuter pour les valeurs entre nombre1 à nombre2.
 	* `*/nombre` exécuté tous les multiples de nombre.
  
-Exemples:	
-```
-47 * * * * commande : toutes les heures à 47 minutes exactement.			
-0 0 * * 1 commande : tous les lundis à minuit.
-```
+!!! example
+	```
+	47 * * * * commande : toutes les heures à 47 minutes exactement.			
+	0 0 * * 1 commande : tous les lundis à minuit.
+	```
+ 
 Les erreurs n'apparaissent pas, pour y remédier, il faut les rediriger vers un nouveau fichier.
 
 ## Archiver et compresser
 	  
-* `tar` assembler des fichiers dans une archive.
-Paramétres:	
+* `tar` assembler des fichiers dans une archive. Paramétres :
+  
  	`cvf «nomarchive.tar» «fichiers»` créer une archive tar (`c` créer une archive .tar; `v` afficher le détail des opérations; `f` assembler l'archive dans un fichier).
 	* `tf «nomarchive.tar» «fichiers»` afficher le contenu de l'archive sans l'extraire. 
 	* `xvf «nomarchive.tar» «fichiers»` extraire les fichiers de l'archive (`x` pour eXtract).
@@ -377,17 +386,18 @@ Voir cours.
 * `whois` tout savoir sur un nom de domaine ( il faut installer le paquet).
 * `ifconfig` liste des interfaces réseau.
 * `ifconfig «nom de l'interface» «up/down»` activer (up) et désactiver (down) des interfaces.
-* `netstat` statistiques sur le réseau.
-Paramères :
+* `netstat` statistiques sur le réseau. Paramères :
+
 	* `i` statistiques des interfaces réseau.
 	* `uta` lister toutes les connexions ouvertes ou ( `u` :afficher les connexions UDP ; `t` : afficher ls connexions TCD ; `a` afficher toutes les connexions quel que soit leur état ).	
 	* `n` afficher le numéro des ports.
 	* `lt` lister les connexions en état d'écoute.
+
 * `iptables` consulter le iptables Rappel pour plus d'informations.
 
 ## Compiler un programme
 
-1/ Recette de : Compilation d'un programme.
+1. Recette de : Compilation d'un programme.
 Requis : avoir installer "build-essential"
 	
 	* (1) télécharger l'achive
@@ -395,7 +405,10 @@ Requis : avoir installer "build-essential"
 	* (3) exécuter le fichier «./configure», il vérifie si tous les dépendances sont remplies. En cas d'erreurs, il faut faire une recherche sur internet et installer les paquets manquants.
 	* (4) make install : compiler les fichiers. Le programme est maintenant installer.
 	* (5) make uninstall : désinstaller le programme, à exécuter dans le dossier ou la compilation à eu lieu.
-ATTENTION : il ne faut pas supprimer le dossier de "compilation".
+
+!!! warning
+	Il ne faut pas supprimer le dossier de "compilation".
+
 * `bash fichier.sh` exécuter un programme sh.
 
 
@@ -404,10 +417,11 @@ ATTENTION : il ne faut pas supprimer le dossier de "compilation".
 Paquet `imagemagick`
 
 * `display image` afficher une image.
-* `convert image <paramètre> nv_image` convertir une image.
-Paramètre :
+* `convert image <paramètre> nv_image` convertir une image. Paramètre :
+  
 	* `resize dimension` redimensionner un image. Pour forcer une redimension utiliser : «dimension»\! et «dimension» peut s'écrire en pourcentage. (`500x1050\!`).
 	* `quality nbre` compresser une image à tant de pourcentage.
+
 * `rotate degrè` touner une imgage de tant de degrés dans le sens des aiguilles d'une montre.
 * `import nom_capture` capturer l'écran.
 Paramètres :	
@@ -418,17 +432,18 @@ Paramètres :
 
 `eyeD3 fichier/dossier` gérer les tags lier à des fichiers audio de formats flac ou mp3 .
 Paramères :
-* `-to-v2.4` convertir le tag du fichier en IDE v2.4 .
-* `-remove-images` supprimer l'image du fichier.
-* `-add-image= image` ajouter une image au fichier
-* `a artiste` modifier/ajouter un artiste.
-* `A album` modifier/ajouter un album.
-* `t titre` modifier/ajouter un titre.
-* `n numéro` modifier/ajouter le numéro de la piste.
-* `N numéro` modifier/ajouter le n° total des pistes de l'album.
-* `Y année` modifier/ajouter l'année.
-* `p label` modifier/ajouter le label.
-* `-i image` ajouter un icône.
+
+	* `-to-v2.4` convertir le tag du fichier en IDE v2.4 .
+	* `-remove-images` supprimer l'image du fichier.
+	* `-add-image= image` ajouter une image au fichier
+	* `a artiste` modifier/ajouter un artiste.
+	* `A album` modifier/ajouter un album.
+	* `t titre` modifier/ajouter un titre.
+	* `n numéro` modifier/ajouter le numéro de la piste.
+	* `N numéro` modifier/ajouter le n° total des pistes de l'album.
+	* `Y année` modifier/ajouter l'année.
+	* `p label` modifier/ajouter le label.
+	* `-i image` ajouter un icône.
 		
 ## Commandes suplémentaires
 
@@ -455,7 +470,7 @@ sudo apt-get install android-tools-adb android-tools-fastboot
 
 ### Installer le Play Store
 
-requis : `wget lzip unizip squahfs-tools`
+Requis : `wget lzip unizip squahfs-tools`
 url github : `https://github.com/geeks-r-us/anbox-playstore-installer/`
 
 * `wget https://raw.githubusercontent.com/geeks-r-us/anbox-playstore-installer/master/install-playstore.sh`
