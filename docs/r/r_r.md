@@ -143,7 +143,7 @@ Opérateur	| Définition
 ## Boucles
 
 !!! note
-	cat permet de faire suivre le % d'une boucle `cat("\rÉtape", num_script, "/", for_nb_scripts, '-', script)
+	cat permet de faire suivre le % d'une boucle `cat("\rÉtape", num_script, "/", for_nb_scripts, '-', script)`.
 
 ### For 
 
@@ -166,6 +166,7 @@ while(condition){
 ## Les dates
 
 Package : lubridate.
+
 * `as_datetime()` convertir en date time.
 * `as.Date('2017-10-12', format = )` convertir en date.
 
