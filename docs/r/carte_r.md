@@ -76,7 +76,7 @@ Mode de carte `view` ou `plot` : `tmap_mode(mode)`
 * `tm_fill()` remplir la carte.
 * `tm_text("variable")` afficher du texte.
  * `ymod = absisse` décaler l'etiquette sur l'axe des abscisses.
- * `just="top/bottom/left/right"` position du texte. 
+ * `just = "top/bottom/left/right"` position du texte. 
 * `tm_dots()` afficher sous forme de points.
  * `size=taille` taille des points.
 
@@ -95,12 +95,12 @@ library `RColorBrewer`
 
 `brewer.pal(nbNiveau, palette )` créer une palettes 
 
-| code | couleur 1 | couleur 2 | couleur 3 |
-|---|---|---|---|
-| `YlOrRd` | jaune | orange | rouge |
-| `YlOrBr` | jaune | orange | marron |
-| `YlGnBu` | jaune | vert | bleu |
-| `RdYlGn` | rouge | jaune | vert |
+Code     | Couleur 1 | Couleur 2 | Couleur 3
+---------|-----------|-----------|---
+`YlOrRd` | jaune     | orange    | rouge
+`YlOrBr` | jaune     | orange    | marron
+`YlGnBu` | jaune     | vert      | bleu
+`RdYlGn` | rouge     | jaune     | vert
 
 ## Créer un fichier GeoJson
 
@@ -109,16 +109,16 @@ library `rgdal`
 ```
 SpatialPointsDataFrame(longitute lattitude,autres variables)
 ### export au format GeoJson
-writeOGR(data, 'fichier.geojson','nom couche', driver='GeoJSON')
+writeOGR(data, 'fichier.geojson','nom couche', driver = 'GeoJSON')
 ```
 
 ## Changer le repère de projection
 
 `spTransform(x = spatialPointsDataFrame, CRSobj = CRS )` changer de repère (package `sp`).
 
-| CRS | résultat |
-|---|---|
-| `"+init=epsg:4326"` | en degré |
+CRS                  | Résultat
+---------------------|---
+`"+init=epsg:4326"`  | en degré
 
 ## Transformer un SpatialPolygonsDataFrame en DataFrame pour ggplot2
 
@@ -136,38 +136,39 @@ polyToGgplot2 = function(SpatialPoly){
 
 Ajouter des labels
 
-`addLayersControl(group = groupe)` Ajouter une interface de choix de couche
-Option :
- * `Options = layersControlOptions(collapsed = FALSE)` afficher les couches.
-`addPolygons()` ajouter des polygones.
-Option : 
- * `highlight = highlightOptions()` action lors du passage de la souris.
- * `labelOptions =
+* `addLayersControl(group = groupe)` Ajouter une interface de choix de couches. Option :
+    
+    * `Options = layersControlOptions(collapsed = FALSE)` afficher les couches.
 
-* ` addLegend(position, colors = , labels = , group = "mammals")` ajouter une légende. Pensez à la fonction `levels()` pour `colors` et `labels`.
-Positions : 
-* `"bottomleft"`
+* `addPolygons()` ajouter des polygones. Option : 
+    
+    * `highlight = highlightOptions()` action lors du passage de la souris.
+    * `labelOptions =`.
 
-`addPolygons(fillColor = ~couleurs)`
- Option : 
-  * `weight = nb` largeure des bordures.
-  * `fillColor = couleurs` couleurs de remplissage.
-  * `color = couleur` couleur des bordures.
-  * `highlight = highlightOptions(options)` action en passant la souris.  
-  * `label = etiquette`
-   Paramètre : `labelOptions = labelOptions(options)`
-   Options :
-    * `style = list("font-weight" = "normal", padding = "3px 8px")`
-    * `textsize = "15px"` taille du texte.
-    * `direction = "auto"` direction du texte.
-  * `fillOpacity = 0.2` pensez mettre la valeur à 0.6 
-  Options :
-   * `weight = largeur`
-   * `bringToFront = TRUE`
+* ` addLegend(position, colors = , labels = , group = "mammals")` ajouter une légende. Pensez à la fonction `levels()` pour `colors` et `labels`. Positions :
+    
+    * `"bottomleft"`
+
+* `addPolygons(fillColor = ~couleurs)` Option : 
+
+    * `weight = nb` largeure des bordures.
+    * `fillColor = couleurs` couleurs de remplissage.
+    * `color = couleur` couleur des bordures.
+    * `highlight = highlightOptions(options)` action en passant la souris.  
+    * `label = etiquette`
+
+Paramètre : `labelOptions = labelOptions(options)` Options :
+
+* `style = list("font-weight" = "normal", padding = "3px 8px")`
+* `textsize = "15px"` taille du texte.
+* `direction = "auto"` direction du texte.
+* `fillOpacity = 0.2` pensez mettre la valeur à 0.6.
+* `weight = largeur`.
+* `bringToFront = TRUE`.
 
 ### Simplifier les polygons
 
 Package : `rmapshaper`
 
 * `ms_simplify(SpatialPolygonsDataFrame)` simplifier les polygones (les contours des zones géographiques).
- * `keep=compression` taux de compression, par défaut `0.05`.
+ * `keep = compression` taux de compression, par défaut `0.05`.
