@@ -32,7 +32,8 @@ Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openx
 * `writeData(wb = wb, sheet = "feuill", x = df)` écrire un dataframe. Paramètres :
 
 	* `headerStyle = headerStyle` style des entêtes (voir style).
-	* `borders = "n"`.
+	* `borders = "n"` .
+ 	* `startCol = nb` et `colNames = nb` début où commencer à remplir. 
 
 #### Style 
 
@@ -102,6 +103,8 @@ max_by <- function(data, var, by) {
 ## Selectionner
 
 * `everything()` toutes les colonnes restantes.
+* `all_of(vecteur)` sélectionner les colonnes avec le nom de la colonne dans le vecteur.
+* `any_of(vecteur)` sélectionner les colonnes dont le nom de la colonne n'est pas dans le vecteur.
 
 !!! example 
 	`select(col13, everything())` déplacer la colonne 13 à la position 1.
