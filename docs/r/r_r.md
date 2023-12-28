@@ -24,6 +24,13 @@
 * `writeLines(json_data, "REACDATA_t.json")` créer un fichier en Json (attention, il faut le convertir avant).
 * `fromJSON("REACDATA_t.json")` importer un Json.
 
+### Les images
+
+`library(jpeg)` et `library(png)`
+
+* `readJPEG(image.jpeg)` image JPEG.
+* `readPNG(image.png)` image PNG.
+
 ## Fonctions de base
 
 * `print("Hello")` afficher un message.
