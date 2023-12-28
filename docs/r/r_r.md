@@ -114,25 +114,10 @@ nomFonction <- function(x){
 }
 ```
 
-### Try catch 
+### Les erreurs
 
-Try catch permet d'éviter que le programme plante lorsqu'il y a une erreur.
-
-```
-foo <- function( x, y ){
-   tryCatch(
-     expr = {
-       return( x + y )
-     },
-     error = function(e){
-       print(
-         sprintf("An error occurred in foo at %s : %s",
-                 Sys.time(),
-                 e)
-         )
-     })
-}
-```
+* `try(log("ABC"), TRUE)` masque le message si une erreur se produit.
+* `tryCatch(log("ABC"), error = function(e) {print("error")})` afficher un message quand la fonction produit une erreur.
 
 ## Condition 
 
