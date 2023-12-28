@@ -18,14 +18,12 @@ Option :
 	* `DETAIL` afficher les régles de arriver à chaque noeud.
 	* `SUMMARY` afficher les règles pour obtenir chaque feuille.
 
-Paramètre : 
+Paramètre :
+
 * `OUTPUT OUT=data` exporter l'arbre de décision.
 * `ID identifiant` identifier des individus.
 * `RULES FILE='fichier.txt'` exporter les régles.
 * `PRUNE metrique / valeur;`
 
-	* `ENTROPY`
-	* `GINI` 
-	valeur :
-    	
-		* `N<=valeur` nombre de total de feuilles maximun.
+	* `ENTROPY` 
+	* `GINI` critère de Gini. Valeurs possibles `N<=valeur` nombre de total de feuilles maximun.
