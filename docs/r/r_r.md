@@ -44,13 +44,14 @@ Déclarer des variables :
 * `var <<- valeur` forcer l'association (utile pour modifier une variable dans la fonction).
 
 * `typeof(var)` renvoie le type de variable.
+* `exists("variable")` teste l'existence d'une variable.
 
 ## Les vecteurs
 
 * `c(2, 4, 6)` déclarer un vecteur.
 * `2:6` séquence de 2 à 6 inclus.
-* `seq(2, 3, by = 0.5)`
-* `rep(1:2, times = 3 ou each = 3)` repéter la valeur alternée (1,2,1,2) ou à la suite (1,1,2,2).
+* `seq(2, 3, by = 0.5)` créer une séquence de 2 à 3.
+* `rep(1:2, times = 3 ou each = 3)` repéter la valeur soit en alterné (1,2,1,2) ou à la suite (1,1,2,2).
 
 * `date[nligne][ncol]` sélectioner une cellule.
 * `data$colonne` sélectionner une colonne.
@@ -65,7 +66,7 @@ Déclarer des variables :
 * `c(vec1, vec2)` concaténer deux vecteurs.
 * `paste(vec1, vec2, sep = " ")` fusionner (concater) deux chaines.
 
-	* `collapse="separateur` concaténer les éléments de deux listes.
+	* `collapse = "separateur` concaténer les éléments de deux listes.
 
 * `length(vec)` taille du vecteur.
 * `sapply(aa, fonction)` appliquer une fonction à tous les éléments d'un vecteur.
@@ -82,8 +83,6 @@ list(
 )
 ```
 
-predict(model, dt_x, verbose = 0)
-
 ## Les matrices
 
 * `matrix(vecteur, nrow = , ncol =)` transformer en matrice.
@@ -95,6 +94,10 @@ predict(model, dt_x, verbose = 0)
 * `solve(A)` inverser une matrice.
 * `A %*% B` mutiplication de matrices.
 * `eigen(matrice)` valeurs propres (noyau).
+* `dist(matrice, method  = "euclidean")` calculer la matrice des distances.
+
+  * `manhattan`
+  * `maximum`
 
 ## Fonction
 
@@ -175,7 +178,7 @@ while(condition){
 Package : lubridate.
 
 * `as_datetime()` convertir en date time.
-* `as.Date('2017-10-12', format = )` convertir en date.
+* `as.Date('2017-10-12', format =)` convertir en date.
 
 Définition	| R 	| Exemple
 ------------|-------|-------------
@@ -202,6 +205,7 @@ Seconde 	| `%S`	| 06
 * `str_length(vecteur)` nombre de lettres de chaque élément.
 * `str_sub(i, (text, start = debut, end = fin)` extraire une chaine de charactères.
 * `gsub(schéma, remplacement, variable) ` remplacer un schéma par une nouvelle chaîne de caractères.
+* `grepl("exemple", texte)` renvoie un booléen si la sous chaine est présente.
 * `str_count(text, motif)` compter le nombre d'occurences (`stringr`).
 * `gsub( pattern = "[.]", "_", "texte à change" )` remplacer un caractère.
 * `strsplit(variable, symbole)` séparer une variable en fonction d'un symbole.
@@ -263,9 +267,3 @@ Paramètres :
 ## Aléatoire
 
 * `runif(nb, min, max)` générer un plusieurs nombres aléatoires entre deux bornes.
-
-
-* `dist(matrice, method  = "euclidean")` calculer la matrice des distances.
-
-  * `manhattan`
-  * `maximum`
