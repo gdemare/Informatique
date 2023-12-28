@@ -32,9 +32,17 @@
 * `suppressWarnings(code)` supprimer les warnings.
 * `suppressMessages(code)` supprimer les messages.
 
-## Environnement et variables
+## Environnement
 
 * `rm (list = ls())` supprimer les variables de l'environnement.
+
+## Variables
+
+Déclarer des variables :
+
+* `var <- valeur` ou `var = valeur` déclarer une variable ou modifier la valeur. 
+* `var <<- valeur` forcer l'association (utile pour modifier une variable dans la fonction).
+
 * `typeof(var)` renvoie le type de variable.
 
 ## Les vecteurs
@@ -87,7 +95,6 @@ predict(model, dt_x, verbose = 0)
 * `solve(A)` inverser une matrice.
 * `A %*% B` mutiplication de matrices.
 * `eigen(matrice)` valeurs propres (noyau).
-
 
 ## Fonction
 
