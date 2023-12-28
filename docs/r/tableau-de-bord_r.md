@@ -53,13 +53,23 @@ tabItems(
   tabItem(tabName = onglet, contenuOnglet)
 )
 ```
-créer un onglet. Parametres :
+Créer un onglet. Parametres :
 
 * `badgeLabel = nom, badgeColor = couleur` Ajouter un badge
 * `disable = TRUE` desactiver la barre.
 
 ##### Contenu des onglets
 
+###### Contenu non modifiable
+
+!!! note
+	Le contenu non modifiable est basé sur les balises hmtl.
+
+Code           		| Type
+--------------------|-----------------
+`p("texte simple)`  | Texte simple.
+`h1("titre 1")`     | Titre de hiéarchie 1.
+ 
 ###### Panneau de saisie
 
 `mainPanel()` principale
