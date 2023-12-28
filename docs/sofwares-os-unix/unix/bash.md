@@ -327,7 +327,7 @@ Les erreurs n'apparaissent pas, pour y remédier, il faut les rediriger vers un 
 	  
 * `tar` assembler des fichiers dans une archive. Paramétres :
   
- 	`cvf «nomarchive.tar» «fichiers»` créer une archive tar (`c` créer une archive .tar; `v` afficher le détail des opérations; `f` assembler l'archive dans un fichier).
+ 	* `cvf «nomarchive.tar» «fichiers»` créer une archive tar (`c` créer une archive .tar; `v` afficher le détail des opérations; `f` assembler l'archive dans un fichier).
 	* `tf «nomarchive.tar» «fichiers»` afficher le contenu de l'archive sans l'extraire. 
 	* `xvf «nomarchive.tar» «fichiers»` extraire les fichiers de l'archive (`x` pour eXtract).
 	* `zcvf` archiver et compresser en gzip (`z` compresser avec gzip).
@@ -339,32 +339,43 @@ Les erreurs n'apparaissent pas, pour y remédier, il faut les rediriger vers un 
 	
 * `gzip «nomarchive»` compresser une archive (la plus courante).
 Paramétres:	
-	* `-v` affiche les détails de l'opération.
-Commandes associées:	
+
+  	* `-v` affiche les détails de l'opération.
+   
+Commandes associées:
+
 	* `-zcat` lire un fichier compressé en gzip en entier.
 	* `-zmore` lire un fichier compressé en gzip ligne par ligne.
 	* `-zless` lire un fichier compressé en gzip page par page.
+
 * `bzip2 archive` compresser une archive (la plus puissante).
 Paramétres:
+
 	* `-v` affiche les détails de l'opération.
+
 * `unzip` décompresser un .zip (à  installer).
 * `zip archive.zip dossier` compresser une archive en .zip (à installer).
-Paramétres:	
+Paramétres:
+
 	* `-r` compresse le dossier ainsi que les fichiers contenus.
 	* `-v` afficher les détails de l'opération.
+
 * `unzip` décompresser des archives .zip.
 * `unrar archive` décompresser un .rar. (ps: rar est un format propriétaire du coup le logiciel est payant pour compresser).
 Paramétres :	
-	* `e` obligatoire pour décompresser.
+
+ 	* `e` obligatoire pour décompresser.
 	* `1` afficher le contenu.
 
 ## La connexion sécurisée à distance avec SSH
 
 Obligatoire : Installer le paquet «openssh-server».
+
 * `sudo /etc/init.d/ssh start` démarrer SSH.
 * `sudo /etc/init.d/ssh stop` arrêter SSH.
 * `ssh login@ip` remplacer «lon» et l'«ip» du client. Ps: pour simuler une connextion «ip»=localhost.
 * `logout` deconnexio. Ps : on peut aussi utilisé Ctrl+d.
+
 Pour plus de renseignements, voir «puTTY».
 
 ## Transférer des fichiers
@@ -377,8 +388,9 @@ Pour plus de renseignements, voir «puTTY».
 * Crtl+c : arrêter le téléchargement en cours.
 * `wget-log` indique l'avancement du téléchargement lancer en arrère plan.
 * `scp fichier-origine copie-destination` copier des fichiers sur le réseau.
-PS : chacun des élément peut s'écrire : login@ip:nom_fichier.
-Voir cours.
+
+!!! note
+	Chacun des élément peut s'écrire : login@ip:nom_fichier.
 
 ## Analyser le réseau et filtrer le trafic avec un pare-feu
 
@@ -397,22 +409,22 @@ Voir cours.
 
 ## Compiler un programme
 
-1. Recette de : Compilation d'un programme.
 Requis : avoir installer "build-essential"
 	
-	* (1) télécharger l'achive
-	* (2) décompresser
-	* (3) exécuter le fichier «./configure», il vérifie si tous les dépendances sont remplies. En cas d'erreurs, il faut faire une recherche sur internet et installer les paquets manquants.
-	* (4) make install : compiler les fichiers. Le programme est maintenant installer.
-	* (5) make uninstall : désinstaller le programme, à exécuter dans le dossier ou la compilation à eu lieu.
+1. Télécharger l'achive.
+2. Décompresser.
+3. Exécuter le fichier `./configure`, il vérifie si tous les dépendances sont remplies. En cas d'erreurs, il faut faire une recherche sur internet et installer les paquets manquants.
+4. `make install` compiler les fichiers. Le programme est maintenant installer.
+5. `make uninstall` désinstaller le programme, à exécuter dans le dossier ou la compilation à eu lieu.
 
 !!! warning
 	Il ne faut pas supprimer le dossier de "compilation".
 
 * `bash fichier.sh` exécuter un programme sh.
 
+## Autres programmes
 
-## ImageMagick ( manipuler des images)
+### ImageMagick ( manipuler des images)
 
 Paquet `imagemagick`
 
@@ -428,32 +440,32 @@ Paramètres :
 	* `window root` capturer tout l'écan.
 	* `pause seconde` attendre un nombre spécifié de seconde. 
  
-## eyeD3 ( tagger les fichiers mp3/flac)
+### eyeD3 ( tagger les fichiers mp3/flac)
 
 `eyeD3 fichier/dossier` gérer les tags lier à des fichiers audio de formats flac ou mp3 .
 Paramères :
 
-	* `-to-v2.4` convertir le tag du fichier en IDE v2.4 .
-	* `-remove-images` supprimer l'image du fichier.
-	* `-add-image= image` ajouter une image au fichier
-	* `a artiste` modifier/ajouter un artiste.
-	* `A album` modifier/ajouter un album.
-	* `t titre` modifier/ajouter un titre.
-	* `n numéro` modifier/ajouter le numéro de la piste.
-	* `N numéro` modifier/ajouter le n° total des pistes de l'album.
-	* `Y année` modifier/ajouter l'année.
-	* `p label` modifier/ajouter le label.
-	* `-i image` ajouter un icône.
+* `-to-v2.4` convertir le tag du fichier en IDE v2.4 .
+* `-remove-images` supprimer l'image du fichier.
+* `-add-image= image` ajouter une image au fichier
+* `a artiste` modifier/ajouter un artiste.
+* `A album` modifier/ajouter un album.
+* `t titre` modifier/ajouter un titre.
+* `n numéro` modifier/ajouter le numéro de la piste.
+* `N numéro` modifier/ajouter le n° total des pistes de l'album.
+* `Y année` modifier/ajouter l'année.
+* `p label` modifier/ajouter le label.
+* `-i image` ajouter un icône.
 		
-## Commandes suplémentaires
+### Commandes suplémentaires
 
 * `cal` affiche le calendrier.
 * `file commande` connaître le statut d'une commande ( interne/ externe).
 * `invoke-rc.d kdm restart` redémarrer l'interface graphique (kubuntu).
 
-# Android sur linux 
+## Android sur linux 
 
-## Installer Anbox
+### Installer Anbox
 
 ```
 sudo add-apt-get-repository ppa:morphis/andox-support
@@ -470,8 +482,7 @@ sudo apt-get install android-tools-adb android-tools-fastboot
 
 ### Installer le Play Store
 
-Requis : `wget lzip unizip squahfs-tools`
-url github : `https://github.com/geeks-r-us/anbox-playstore-installer/`
+Requis : `wget lzip unizip squahfs-tools`. L'url github : `https://github.com/geeks-r-us/anbox-playstore-installer/`
 
-* `wget https://raw.githubusercontent.com/geeks-r-us/anbox-playstore-installer/master/install-playstore.sh`
-* Autoriser les droits des settings > Apps > Google services
+* `wget https://raw.githubusercontent.com/geeks-r-us/anbox-playstore-installer/master/install-playstore.sh`.
+* Autoriser les droits des settings > Apps > Google services.
