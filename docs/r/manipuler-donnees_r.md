@@ -28,6 +28,7 @@ Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openx
 	* `overwrite = TRUE` écraser la version existente.
 
 * `addWorksheet(wb = wb, sheetName = "feuill")` ajouter une feuille.
+* `getSheetNames(wb ou fichier)` nom des feuilles.
 * `writeData(wb = wb, sheet = "feuill", x = df)` écrire un dataframe. Paramètres :
 
 	* `headerStyle = headerStyle` style des entêtes (voir style).
