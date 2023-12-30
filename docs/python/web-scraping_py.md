@@ -18,8 +18,8 @@ Obtenir le code html d'une page web. Dans le cas où l'url ne se termine par pas
 
 ## Filtrer les elements
 
-* `find( filtre )` trouver le premier élément. Le résultat est une variable.
-* `findAll( filtre)` ou `find_all()` trouver tous les éléments. Le résultat est une liste.
+* `find(filtre)` trouver le premier élément. Le résultat est une variable.
+* `findAll(filtre)` ou `find_all()` trouver tous les éléments. Le résultat est une liste.
 
 ### Condition possible
 
@@ -31,16 +31,13 @@ Code 									| Elément 					| Exemple
 
 Plusieurs éléments :
 
-* `[ element1, element2 ]` ou 
-* `{ element1, elelemt 2 }` unique
+* `[element1, element2]` ou 
+* `{element1, elelemt 2}` unique
 
-Exemple :
+!!! example
+    ```
+    sommaire.find('a', {'class' : 'teaser__link'}, href=True)
+    lien['href']
+    ```
 
-```
-sommaire.find('a', {'class' : 'teaser__link'}, href=True)
-lien['href']
-```
-
-## Récupérer le contenu de la balise
-
-`element.get_text()` Recupérer le contenu de la balise.
+* `element.get_text()` récupérer le contenu de la balise.

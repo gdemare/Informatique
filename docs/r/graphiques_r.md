@@ -10,8 +10,8 @@ g = ggplot() + theme_minimal() + aes(x)
 
 Faire des groupes (dans aes) :
 
-* `fill = var`
-* `color = var`
+* `fill = var` remplissage.
+* `color = var` contour. 
 
 * `geom_histogram(<option>, binwidth = 5)` histogramme. Option :
 
@@ -47,7 +47,7 @@ Type de graphique :
 
 	* `aes(colour = var)` colorier les points en fonction de var.
 	* `aes(size = var)` dimensionner les points en fonction de var.
-	* `shape = ` forme du point.
+	* `shape = ` forme des points.
 
 id  	| Forme
 --------|------------
@@ -68,18 +68,18 @@ Libellés :
 
 ## Autre 
 
-* `geom_polygon(aes(x = long, y = lat, group = group)` tracer des polygones identifié par un groupe (notamment pour les cartes). Option :
+* `geom_polygon(aes(x = long, y = lat, group = group))` tracer des polygones identifiés par un groupe (notamment pour les cartes). Option :
 
-	* `fill = var` remplir les zones
+	* `fill = var` remplir les zones.
 
-* `geom_hline(yintercept = valeur)` ligne hotizontale
+* `geom_hline(yintercept = valeur)` ligne hotizontale.
 * `geom_vline(xintercept = valeur)` ligne veticale.
 * `geom_abline(intercept = 0, slope = 1)` droites et fonctions linéaires.
 
 ## Thémes 
 
-* `theme_void()` théme sans axe et graduation.
-* `theme_minimal()` théme épuré.
+* `theme_void()` thème sans axe et graduation.
+* `theme_minimal()` thème épuré.
 
 ## Présentation
 
@@ -88,13 +88,14 @@ Libellés :
 * `ylab("titre")` titre de l’ordonnée.
 * `xlim(min, max)` taille de l'abscisse.
 * `ylim(min, max)` taille de l'ordonnée.
-* `coord_equal(ratio = 1)` garder un ratio abscisse/ordonnées.
-* `labs(color = titre, fille = titre)` changer le titre de la légende.
+* `coord_equal(ratio = 1)` garder un ratio abscisse/ordonnée.
+* `labs(color = titre, fille = titre)` changer le titre de la légende (color ou filled dépendent dû type de coloration).
+* `scale_color_discrete(labels = c("label 1", "label 2"))` modifier les valeurs des modalités de la légende (même chose avec `filled`).
 
 ## Créer des graphiques en fonction d’une variable
 
 * `facet_grid(.~variable)` sur une ligne.
-* `facet_grid(variable~.)` sur une colonne
+* `facet_grid(variable~.)` sur une colonne.
 * `facet_wrap( ~variable)` en ligne et en colonne.
 
 ## Exporter le graphique
@@ -117,8 +118,8 @@ p + stat_function(fun = fonc, args = list(a = 3)) + xlim(-5,5)
 
 ### Couleurs personnalisées
 
-* `scale_colour_manual(couleurs)` changer la couleur 
-* `scale_fill_manual(couleurs)` changer la couleur
+* `scale_colour_manual(couleurs)` changer la couleur.
+* `scale_fill_manual(couleurs)` changer la couleur.
 
 ### Palette prête 
 
@@ -179,7 +180,7 @@ Library `corrplot`
  	* `labels = etiquette` etiquette.
 
 * `boxplot(var)` boxplot.
-* `barplot()` 
+* `barplot()` diagramme en barre.
 
 Paramètres :
 

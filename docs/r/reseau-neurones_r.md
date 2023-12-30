@@ -63,10 +63,11 @@ Deux façons de déclarer un réseau de neurones :
 
 Paramètres :
 
-* `size = nb` nombre de couches cachées.
+* `size = nb` nombre de couches neurones dans la couche cachée.
 * `maxit = nb` nombre d'itérations maximum.
 * `trace = F` masquer l'affichage.
 * `weights = poids` saisir les poids.
+* `softmax = T` utiliser la fonction d'activation softmax.
 
 Sorites :
 
