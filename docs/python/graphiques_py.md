@@ -193,7 +193,9 @@ rcParams.update({'figure.autolayout': True})
 Les dataframe pandas intégrent directement des représentations graphiques.
 
 `data.plot(x=, y=)`
+
 Type de graphique :
+
 * `area()` 
 * `density()`
 * `line()` lignes.
@@ -201,7 +203,7 @@ Type de graphique :
 * `bar()` diagramme en barre.
 * `barh()` diagramme en barre horizontal (`.sort_values()`) pour classer les données. Paramètres :
 
-		* `stacked=True` empilé.
+	* `stacked=True` empilé.
 
 * `scatter()` nuage de points.
 * `hist()` histogramme.

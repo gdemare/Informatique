@@ -1,5 +1,3 @@
-# Tensorflow
-
 ### Couche
 
 ```
@@ -19,13 +17,16 @@ Les couches
 * `layers.MaxPool2D` pooling.
 * `layers.Dense( units, activation= fonction)` couche la plus simple.  une couche. units correspond aux nombres de sorties.
 Fonctions d'activation :
+
 	* `relu`
 	* `sigmoid` utile notamment pour renvoyer une probabilité pour les classificateurs binaires.
 	* `softmax` renvoie la valeur la plus élevée (notamment pour les classificateurs avec plus de deux classes).
+
 * `Conv2D(filters=64, kernel_size=3, activation="relu", padding='same')` couche convulsive.
 * `layers.Dropout` remplace aléatoirement des valeurs par des zéros dans la matrice.
 
-_Rmq :_ il est possible d'appler les fonctions d'activation par `tf.nn.fonction`.
+!!! note
+    Il est possible d'appler les fonctions d'activation par `tf.nn.fonction`.
 
 `model.summary()` récapitulatif des couches du modèle.
 `keras.utils.plot_model(model, show_shapes = True,expand_nested = True,dpi = 80)` graphique qui reprend la structure du modèle.
@@ -39,16 +40,19 @@ model.compile(
     metrics=['binary_accuracy']
 )
 ```
+
 Optimizer, le type de correction appliqué au modèle soit `'optimisateur'` ou, par exemple, `tf.keras.optimizers.Adam()`. Les algorythmes d'optimisation possibles sont :  `Adadelta`, `Adagrad`, `Adam`, `Adamax`, `Ftrl`, `Nadam`, `RMSprop`, `SGD`.
 On peut spécifier la valeur de la correction des poids grâce à `epsilon=0.01`.
 
-Loss, l'indicateur a prendre en compte améliorer le modèle : 
+Loss, l'indicateur a prendre en compte améliorer le modèle :
+
 * `sparse_categorical_crossentropy` plusieurs classes.
 * `categorical_crossentropy`
 * `binary_crossentropy` deux classes.
 * `mean_squared_error` minimise l'erreur au carré.
 
 Metrics :
+
 * `accuracy` AUC pour cela il faut un jeu de données de validation (fit avec `validation_data`).
 * `binary_accuracy`
 
@@ -81,15 +85,18 @@ Metrics :
 ### Lire les images 
 
 tf.io :
+
 * `read_file(image)`
 * `decode_jpeg(image, channels=1)`
 
 tf.image :
+
 `resize(image, size=[height, width ])` redimensionner l'image.
 
 `tf.squeeze(image).numpy()` 
 
 Reformater l'image pour la rendre compatible avec tensorFlow
+
 ```
 image = tf.image.convert_image_dtype(image, dtype=tf.float32)
 image = tf.expand_dims(image, axis=0)
@@ -109,16 +116,15 @@ relu_fn = tf.nn.relu
 image_detect = relu_fn(image_filter)
 ```
 
-# Les données en entré
+## Les données en entrée
 
-## Sans BatchDataSet  
+### Sans BatchDataSet  
 
 `np.array(, type=float)`
 
 Appliquer une tranformation au jeu de données
 
-
-## tf.data.Dataset
+### tf.data.Dataset
 
 Library : `keras.utils`
 
@@ -129,14 +135,20 @@ La méthode batch (lot) est le modèle de données le plus performant pour trait
 * `donnee = image_dataset_from_directory(dossier)` un dossier avec des images.
 
 * Les étiquettes de données :
+
     * `labels='inferred'`
     * `label_mode='binary'`
+
 * Création d'une 
+
     * `shuffle=True` par défaut les fichiers sont ajoutés aléatoirement.
     * `seed=1337` fixer la génération de l'aléatoire pour le mélange des données.
+
 Autres :    
+
 * `batch_size=32` nombre de fichier par lot. Par défaut 32. 
-* `shuffle` 
+* `shuffle`.
+
 _pas compris a quoi ca sert__
 * `validation_split=0.8`
 * `subset=training/validation` type de sous ensembles. Il faut créer un training et un validation.
@@ -148,7 +160,7 @@ _pas compris a quoi ca sert__
 
 `train, valid = tf.keras.utils.split_dataset( dataset, left_size=None, right_size=None, shuffle=False, seed=None )` séparer les données en deux jeux . !! fonction en cours de développement, il faut l'ajouter séparément!!.
 
-### Les images
+#### Les images
 
 * `color_mode='rgb/grayscale/rgba'`
 
@@ -163,7 +175,7 @@ train_generator = training_datagen.flow_from_directory(
 # validation
 ```
 
-## Importation d'un dossier d'images
+### Importation d'un dossier d'images
 
 * `image_size=[128, 128]` prétraitement qui re.
 * `interpolation='nearest'`
