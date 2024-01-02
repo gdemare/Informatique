@@ -3,9 +3,9 @@
 library(shiny)
 library(shinydashboard)
 
-ui = fluidPage(...)
+ui <- fluidPage(...)
 
-server = function(input, output) {
+server <- function(input, output) {
     contenu
   }
 shinyApp(ui = ui, server = server) #executer l'application
@@ -133,8 +133,8 @@ Option :
 ### Server
 
 ```
-server = function(input, output) {
-  output$nom = resultat
+server <- function(input, output) {
+  output$nom <- resultat
 }
 ```
 
@@ -163,14 +163,14 @@ Package `DT` Afficher un dataframe
 
 ```
 ui :
-  uiOutput$interaction
+  uiOutput("interaction_slider")
 ```
 
 server :
 
 ```
-  filterGenre = reactive(genre)
-  output$interaction_slider = renderUI({
+  filterGenre <- reactive(genre)
+  output$interaction_slider <- renderUI({
     selectInput("select", label = "Select box", 
                 choices = as.list(genre)$genre_label, selected = 1)
 ```
