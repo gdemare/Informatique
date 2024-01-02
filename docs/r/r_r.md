@@ -15,6 +15,7 @@
 * `dir.create(dossier)` créer un dossier.
 * `unlink(chemin_dossier, recursive = TRUE)` supprimer un dossier et ses fichiers.
 * `list.files()` lister les fichiers et les répertoires.
+* `file.exists(fichier)` tester l'existence d'un fichier.
 * `setdiff(list.files(), list.dirs(recursive = FALSE, full.names = FALSE))` lister uniquement les fichiers.
 * `setwd(dossier)` changer le dossier de travail.
 * `getwd()` chemin du dossier de tavail.
