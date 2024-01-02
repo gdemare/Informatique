@@ -12,6 +12,8 @@
 
 * `basename("C:/some_dir/a.ext")` renvoyer le nom du fichier.
 * `dirname("C:/some_dir/a.ext")` renvoyer le dossier.
+* `dir.create(dossier)` créer un dossier.
+* `unlink(chemin_dossier, recursive = TRUE)` supprimer un dossier et ses fichiers.
 * `list.file()` lister les fichiers et les répertoires.
 * `setdiff(list.files(), list.dirs(recursive = FALSE, full.names = FALSE))` lister uniquement les fichiers.
 * `setwd(dossier)` changer le dossier de travail.
