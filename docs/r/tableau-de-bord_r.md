@@ -145,7 +145,7 @@ code server                       | rendu                     | code ui
 `renderText({texte})`             | texte                     | `textOutput('variable')`
 `renderPlot({graphique})`         | graphique                 | `plotOutput('variable')`
 `renderTable({tableau})`          | tableau                   | `tableOutput('variable')`
-`renderDataTable({dataFrame})`    | donnees (package DT)      | `dataTableOutput('variable')`
+`renderDataTable({dataFrame})` ou `renderDT()`   | donnees (package DT)      | `dataTableOutput('variable')` ou `DTOutput()`
 `renderPlotly({graphique})`       | donnees                   | `plotlyOutput('variable')`
 `renderPrint(variable)`           | variable                  |
 
