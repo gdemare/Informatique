@@ -22,6 +22,11 @@
 * `getwd()` chemin du dossier de tavail.
 * `source(fichier)` exécuter un script.
 
+### RData
+
+`save(obj1, obj2, file = "mes_objets.RData")` sauvegarder en RData.
+`load(fichier.RData)` charger un RData.
+
 ### Json 
 
 `library(jsonlite)`
