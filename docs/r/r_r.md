@@ -22,6 +22,8 @@
 
 ### Json 
 
+`library(jsonlite)`
+
 * `toJSON(liste)` convertir une liste en Json.
 * `writeLines(json_data, "REACDATA_t.json")` créer un fichier en Json (attention, il faut le convertir avant).
 * `fromJSON("REACDATA_t.json")` importer un Json.
