@@ -9,15 +9,24 @@ acp_info$sdev # écart type pour chaque axe. Les valeurs propres sont calculées
 
 `acp_info$importance` avec :
 
-* linge 1, écart type.
-* ligne 2 % de variance par axe.
-* ligne 3, % de variance cumulée.
+Ligne    | Description
+---------|----
+1        | Ecart type.
+2        | % de variance par axe.
+3        | % de variance cumulée.
 
 ## Représentation graphique
 
 `library(ggfortify)`
 
-`autoplot(acp_res, loadings = TRUE, loadings.colour = 'blue',loadings.label = TRUE, loadings.label.size = 3)` afficher les variables et les individus.
+`autoplot(acp_res)` afficher les variables et les individus.
+
+* `label = T` afficher le nom des individus.
+* `dt_acp, colour = 'col_group'` afficher des groupes d'individus (il suffit d'ajouter le jeu de données avec l'acp avec toutes les variables).
+
+    * `frame = TRUE` ajouter des clusters (`frame.type = 'norm'` pour avoir des ellipses).
+    
+* `loadings = TRUE, loadings.colour = 'blue', loadings.label = TRUE, loadings.label.size = 3` afficher les variables.
 
 ----------------------------
 
