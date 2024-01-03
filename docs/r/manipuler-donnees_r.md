@@ -183,7 +183,7 @@ Fonction 		| Défintion
 `rowSums()`		| Somme
 `colMeans()`	| Moyenne (`colMeans(is.na(donnees))` utile pour connaitre le pourcentage de valeurs manquantes).
 
-* `apply(dt, axis = 1/2, fonction)` appliquer une opération à toutes les colonnes ou les lignes.
+* `sapply(dt, axis = 1/2, fonction)` appliquer une opération à toutes les colonnes ou les lignes.
 
 ## Grouper des données
 
