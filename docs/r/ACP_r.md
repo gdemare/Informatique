@@ -15,8 +15,9 @@ acp_info$sdev # écart type pour chaque axe. Les valeurs propres sont calculées
 
 ## Représentation graphique
 
-`autoplot(acp_res, loadings = TRUE, loadings.colour = 'blue',loadings.label = TRUE, loadings.label.size = 3)` afficher les variables et les individus.
+`library(ggfortify)`
 
+`autoplot(acp_res, loadings = TRUE, loadings.colour = 'blue',loadings.label = TRUE, loadings.label.size = 3)` afficher les variables et les individus.
 
 ----------------------------
 
