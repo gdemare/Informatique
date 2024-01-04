@@ -13,13 +13,13 @@ Installation : `pip install spotdl`
 
 [Spotify downloader](https://github.com/spotDL/spotify-downloader) pour télécharger depuis spotify.
 
-Requis : `sudo apt install ffmpeg`
+Nécessite : `sudo apt install ffmpeg`
 
 `spotdl download [song] ou [playlistUrl]` télécharger une chanson ou plusieurs.
 
 Il suffit ensuite d'utiliser la commande dans le prompt Conda.
 
-## Selenium
+## Navigation Web automatique
 
 Library `selenium`
 
@@ -43,21 +43,21 @@ driver = webdriver.Chrome(chrome_options=options, service=s) #ouvrir le navigate
 
 `from selenium.webdriver.common.by import By` 
 
-Référence 		| Définition
+Référence				| Définition
 ------------------------|----------------
-`CLASS_NAME` 		| Nom de la classe
-`CSS_SELECTOR` 		| Css selector
-`ID` 			| Identifiant de la balise
-`LINK_TEXT` 		| Texte
-`PARTIAL_LINK_TEXT`	| Morceau de texte
-`NAME`			| Nom de la balise
-`TAG_NAME` 		| Balise
-`XPATH` 		| Xpath
+`CLASS_NAME` 			| Nom de la classe
+`CSS_SELECTOR` 			| CSS selector
+`ID` 					| Identifiant de la balise
+`LINK_TEXT` 			| Texte
+`PARTIAL_LINK_TEXT`		| Morceau de texte
+`NAME`					| Nom de la balise
+`TAG_NAME` 				| Balise
+`XPATH` 				| Xpath
 
 Action sur l'élément sélectionner :
+
 * `.send_keys(valeur)` remplir les valeurs.
 * `.click` cliquer sur la sélection.
-
 
 ## Importer un script python
 
@@ -66,12 +66,13 @@ Library `subprocess`
 * `call([sys.executable, 'C:\\temp\\hello2.py'], shell=True)` importer un script python.
 * `['java', '-jar', 'temp.jar' param1, param2]` exécuter un script java.
 
+## Base de données
 
-## Sqlite 3
+### Sqlite 3
 
 Package `sqlite3`
 
-### Connexion à la database
+#### Connexion à la database
 
 ```
 conn = sqlite3.connect('base de donnees.db')
@@ -80,7 +81,7 @@ c = conn.cursor()
 
 `conn.close()` deconnection de la dbb.
 
-### Soumettre une requête
+#### Soumettre une requête
 
 * `c.execute('''requete''')`
 * `c.executemany('''requete''', liste)`

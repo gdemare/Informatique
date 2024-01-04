@@ -58,78 +58,104 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - Database :
-    - "Business Object" : database/business-object.md
-    - "Entrepôt de données" : database/data-warehouse.md
-    - "JSON" : database/json.md
-    - "SQL" : database/sql.md
-    - "Talend" : database/talend.md
+  - "Base de données" :
+    - "Fichier" :
+      - "JSON" : database/json.md
+    - "Langage" :
+      - "SQL" : database/sql.md
+    - "Logiciels" :
+      - "Business Object" : database/business-object.md
+      - "Talend" : database/talend.md
   - Programmation :
-    - "Bonnes pratiques" : programming/bonnes-pratiques.md
-    - "Git" : programming/git.md
+    - "Bonnes pratiques" :   
+      - "Bonnes pratiques" : programming/bonnes-pratiques.md
+      - "Github" : sofwares-os-unix/software/github.md
+      - "Git" : programming/git.md
+      - "Visual Studio Code" : sofwares-os-unix/software/visual-code-studio.md
     - "Java" : programming/java.md
-    - Web : 
+    - "Web" : 
       - "CSS" : programming/web/css.md
       - "HTML" : programming/web/html.md
       - "Java Script" : programming/web/java-script.md
       - "PHP" : programming/web/php.md
+    - Unix :
+      - "Bash" : sofwares-os-unix/unix/bash.md
+      - "Batch" : sofwares-os-unix/unix/batch.md
+      - "Folders in Linux" : sofwares-os-unix/unix/folders-linux.md
+      - "PowerShell" : sofwares-os-unix/unix/powershell.md
+      - "Shell" : sofwares-os-unix/unix/shell.md
+      - "Vim" : sofwares-os-unix/unix/vim.md
   - Python :
-    - "Python" : python/python_py.md
-    - "Formater" : python/formater-données_py.md
-    - "Manipuler les données" : python/manipuler-donnees_py.md
-    - "Opération data" : python/operation-data_py.md
-    - Autre :
-      - "Tableau de bord" : python/tableau-de-bord_py.md
-      - "Les images" : python/traitement-image_py.md
-      - "Autres modules" : python/modules-supplementaires_py.md
-      - "Web scraping" : python/web-scraping_py.md
-    - Bioinformatique :  
-      - "Spectrométrie MS" : python/spectrometrie_py.md
-      - "Séquence" : python/sequencage_py.md
-    - "Data mining" :
-      - "ACP" : python/ACP_py.md
-      - "Arbre de décision" : python/arbre-de-decision_py.md
-      - "CAH" : python/CAH_py.md
-      - "Couche convulsive" : python/couche-convulsive_py.md
-      - "RN Pytorch" : python/RN-pytorch_py.md
-      - "RN Tensorflow" : python/RN-tensor-flow_py.md
-      - "Régression logistique" : python/regression-logistique_py.md
-    - Statistique :
+    - "Bases" : 
+      - "Python" : python/python_py.md
+      - "Formats" : python/formater-données_py.md
+      - "Dataframe" : python/manipuler-donnees_py.md
+      - Divers :
+        - "Tableau de bord" : python/tableau-de-bord_py.md
+        - "Traitements des images" : python/traitement-image_py.md
+        - "Web scraping" : python/web-scraping_py.md
+        - "Autres modules" : python/modules-supplementaires_py.md
+      - Bioinformatique :
+        - "Séquence" : python/sequence_py.md
+        - "Spectrométrie de masse" : python/spectrometrie_py.md
+    - "Mathématique" :
+      - "Opération data" : python/operation-data_py.md
+      - "Statistique" :
+        - "Lois" : python/lois-statistiques_py.md
+        - "Tests" : python/tests_py.md
+    - "Description des données" :
       - "Graphiques" : python/graphiques_py.md
-      - "Lois Statistiques" : python/lois-statistiques_py.md
-      - "Tests" : python/tests_py.md
+      - "Clustering" : 
+        - "CAH" : python/CAH_py.md
+      - "Réduction de dimensions" :
+        - "ACP" : python/ACP_py.md
+    - "Modèles" :
+      - "Classification" :
+        - "Arbre de décision" : python/arbre-de-decision_py.md
+      - "Régression" : 
+        - "Régression logistique" : python/regression-logistique_py.md
+      - "Réseaux de neurones" :
+        - "Couche convulsive" : python/couche-convulsive_py.md
+        - "Pytorch" : python/RN-pytorch_py.md
+        - "Tensorflow" : python/RN-tensor-flow_py.md
   - R :
-    - "R" : r/r_r.md
-    - "Formater les données" : r/formater-donnees_r.md
-    - "Manipuler les données" : r/manipuler-donnees_r.md
-    - Autre :
-      - "Cartes" : r/carte_r.md
-      - "Développer en R" : r/developper_r.md
-      - "Programme indépendant" : r/programme-independant_r.md
-      - "Rapport" : r/rapport_r.md
-      - "Tableau de bord" : r/tableau-de-bord_r.md
-    - "Data mining" :
-      - "Classification généralités" : r/classification-info_r.md
-      - "Analyse discriminante" : r/analyse-discriminante_r.md
-      - "ANOVA" : r/ANOVA_r.md
-      - "Arbre de décision" : r/arbre-de-decision_r.md
-      - "CAH" : r/CAH_r.md
-      - "Centres mobiles" : r/centres-mobiles.md
-      - "Classification baysien" : r/classificateur-baysien_r.md
-      - "Forêt aléatoire" : r/foret-aleatoire_r.md
-      - "Prédire et évaluer un modèle" : r/predire-evaluer_r.md
-      - "Régression logistique" : r/regression-logistique_r.md
-      - "Réseau de neurones" : r/reseau-neurones_r.md
-      - "Série temporelle" : r/serie-temporelle-simple_r.md
-      - "SVM" : r/SVM_r.md
-    - Statistique :
-      - "Graphiques" : r/graphiques_r.md
+    - "Bases" :
+      - "R" : r/r_r.md
+      - "Formats" : r/formater-donnees_r.md
+      - "Dataframe" : r/manipuler-donnees_r.md
+      - "Divers" :
+        - "Carthographie" : r/carte_r.md
+        - "Développer en R" : r/developper_r.md
+        - "Programme indépendant" : r/programme-independant_r.md
+        - "Rapport" : r/rapport_r.md
+        - "Tableau de bord" : r/tableau-de-bord_r.md
+    - "Mathématique" :
       - "Probabilité et statistique" : r/probabilite-statistique_r.md
-    - "Réduction de dimensions" :
-      - "ACM" : r/ACM_r.md
-      - "ACP" : r/ACP_r.md
-      - "AFC" : r/AFC_r.md
-      - "Positionnement multidimensionnel" : r/positionnement-multidimensionnel.md
+    - "Descriptions" :
+      - "Graphiques" : r/graphiques_r.md
+      - "Clustering" :
+        - "CAH" : r/CAH_r.md
+        - "Centres mobiles" : r/centres-mobiles.md
+      - "Réduction de dimensions" :
+        - "ACM" : r/ACM_r.md
+        - "ACP" : r/ACP_r.md
+        - "AFC" : r/AFC_r.md
+        - "Positionnement multidimensionnel" : r/positionnement-multidimensionnel.md
+    - "Modèles" :
+      - "Prédire et évaluer un modèle" : r/predire-evaluer_r.md
+      - "Classification" :
+        - "Classification généralités" : r/classification-info_r.md
+        - "ANOVA" : r/ANOVA_r.md
+        - "Analyse discriminante" : r/analyse-discriminante_r.md
+        - "Arbre de décision" : r/arbre-de-decision_r.md
+        - "Classificateur baysien" : r/classificateur-baysien_r.md
+        - "Forêt aléatoire" : r/foret-aleatoire_r.md
+        - "SVM" : r/SVM_r.md
+      - "Régression" :
+        - "Régression logistique" : r/regression-logistique_r.md
+      - "Réseau de neurones" : r/reseau-neurones_r.md
+      - "Série temporelle" :
+        - "Série temporelle simple" : r/serie-temporelle-simple_r.md
   - SAS :
     - "Manipuler les données" : SAS/manipuler-donnees_sas.md
     - "Formater les données" : SAS/formater-donnees_sas.md
@@ -157,22 +183,15 @@ nav:
     - OS :
       - "Android" : sofwares-os-unix/os/android.md
       - "Ubuntu" : sofwares-os-unix/os/ubuntu.md
+    - "Windows" :
       - "Windows" : sofwares-os-unix/os/windows.md
-      - "Cross plateform" : sofwares-os-unix/software/cross-plateforme.md
-    - Softwares :
       - "Excel" : sofwares-os-unix/software/excel.md
-      - "Fidji" : sofwares-os-unix/software/fidji.md
-      - "Github" : sofwares-os-unix/software/github.md
-      - "Logiciels statistiques" : sofwares-os-unix/software/logiciels-statistiques.md
       - "Microsoft Office" : sofwares-os-unix/software/microsoft-office.md
+    - Softwares :
+      - "Cross plateform" : sofwares-os-unix/software/cross-plateforme.md
+      - "Fidji" : sofwares-os-unix/software/fidji.md
       - "Premier Pro" : sofwares-os-unix/software/premiere-pro.md
-      - "Visual Studio Code" : sofwares-os-unix/software/visual-code-studio.md
       - "Web apps" : sofwares-os-unix/software/webapp.md
-    - Unix :
-      - "Bash" : sofwares-os-unix/unix/bash.md
-      - "Batch" : sofwares-os-unix/unix/batch.md
-      - "Folders in Linux" : sofwares-os-unix/unix/folders-linux.md
-      - "PowerShell" : sofwares-os-unix/unix/powershell.md
-      - "Shell" : sofwares-os-unix/unix/shell.md
-      - "Vim" : sofwares-os-unix/unix/vim.md
-    - "Bio informatique" : sofwares-os-unix/bioinformatique.md
+    - "Listes" : 
+      - "Bio informatique" : sofwares-os-unix/bioinformatique.md
+      - "Statistiques" : sofwares-os-unix/software/logiciels-statistiques.md

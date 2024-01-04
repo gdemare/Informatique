@@ -33,7 +33,9 @@ Convertir du markdown en word, html, pdf.
 
 #### Installation 
 
-Installer les packages Python [mkdocs](https://www.mkdocs.org/) et [mkdocs material](https://squidfunk.github.io/mkdocs-material/), sur le dernier site il y a tout, de l'installation à la personnalisation.
+Installer les packages Python [mkdocs](https://www.mkdocs.org/) et [mkdocs material](https://squidfunk.github.io/mkdocs-material/), sur le dernier site il y a tout, de l'installation à la personnalisation. L'installation se fait via Python. 
+
+Il y a notamment en modules utiles : `mkdocstrings-python, mkdocs-glightbox, mkdocs-git-revision-date-localized-plugin`.
 
 `mkdocs new my-project` créer un projet.
 
@@ -112,13 +114,11 @@ jobs:
 
 4. Settings > Pages et mettre Branch :`gh-pages`
 
-
 ### Le contenu 
 
 Les fichiers de documentation sont à mettre dans le dossier `docs`.
 
 ### Markdown langage
-
 
 ### Les boites
 
@@ -137,8 +137,8 @@ Type `note`, `info`, `quote`, `example`, `bug`, `danger`, `failure`, `warning`, 
 * _texte_ italique
 * __texte__ gras
 
-[ ] élément 1
-[X] élément 2
+* [ ] élément 1
+* [X] élément 2
 
 ### Tableau
 
