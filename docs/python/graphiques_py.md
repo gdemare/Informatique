@@ -116,7 +116,7 @@ Graphiques :
 
 * `barplot()` diagramme en barre.
 
-	* `orient=v/h` horizontal, vertical. 	
+	* `orient=v/h` horizontal, vertical.
 
 * `boxplot(x=valeur, y=groupe)` boxplot.
 * `scatterplot(comm, x='CTR-PTROTAC', y='P3')` nuage de points.
@@ -146,8 +146,9 @@ g.map(sns.histplot, "% ACN", binwidth=2).set(yscale = 'log')
 #### Ajouter un élément au graphique
 
 * `fig.axvline(1.25)` ou `fig.axhline(1.25)` ajouter une ligne verticale ou horizontale.
-Paramètres : 
-* `linestyle=` type de lignes (`:` pointillé, `--` tiré ).
+Paramètres :
+	
+	* `linestyle=` type de lignes (`:` pointillé, `--` tiré ).
 
 ### Ajouter les étiquettes de valeurs sur le graphique 
 
@@ -211,4 +212,4 @@ Type de graphique :
 Paramètres : 
 
 * `legend=False` enlever la légende
-* `ax=` déterminer la position du graphique avec les fenetres subdivisées.
+* `ax= ` déterminer la position du graphique avec les fenetres subdivisées.
