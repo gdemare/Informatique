@@ -53,6 +53,7 @@ id  	| Forme
 --------|------------
 `15`	| carré plein
 `21`	| cercle entrouré
+`18`	| losange plein
 
 Libellés :
 
@@ -63,7 +64,9 @@ Libellés :
  	* `aes(group = var)` une courbe pour chaque modalité de var.
 	* `stat = 'count'` avec une seul variable.
 	* `geom_col()` diagramme en barre avec la valeur des y. Pour classer les labels, il faut `reorder(label, valeur)` dans le `aes()`.
-
+	* `lty = type` type de ligne (`dashed` pointillé; `dotdash` point pointillé, ).
+  	* `lwd = épaisseur` épaisseur.
+ 	
 * `geom_area()` coubre pleine.
 
 ## Autre 
