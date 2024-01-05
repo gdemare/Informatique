@@ -9,7 +9,7 @@ g = ggplot() + theme_minimal() + aes(x)
 ```
 
 !!! note
-	Il y a la possibilité de sélectionner une colonne avec son nom en caractère `aes_string(x = "col")`.
+	Il y a la possibilité de sélectionner une colonne avec son nom en caractère `aes_string(x = "col")` ou `!!sym("col1")`.
 
 Faire des groupes (dans aes) :
 
