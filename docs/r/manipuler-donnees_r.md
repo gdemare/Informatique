@@ -105,6 +105,7 @@ max_by <- function(data, var, by) {
 * `everything()` toutes les colonnes restantes.
 * `all_of(vecteur)` sélectionner les colonnes avec le nom de la colonne dans le vecteur.
 * `any_of(vecteur)` sélectionner les colonnes dont le nom de la colonne n'est pas dans le vecteur.
+* `accross()` .
 
 !!! example 
 	`select(col13, everything())` déplacer la colonne 13 à la position 1.
@@ -122,6 +123,7 @@ max_by <- function(data, var, by) {
 	* `.keep_all = TRUE` garder tous les champs.
 
 * `arrange(var1, var2)` trier en ordre décroisssant `desc(var)`.
+* `dt[["col1]]` sélectionner une colonne avec son nom en caractère en dehors de dplyr.
 
 Fonction 				| Définition
 ------------------------|---
@@ -147,11 +149,15 @@ OrchardSprays %>%
 
 ## Construire de nouvelles variables
 
-* `mutate(nom = formule)` appliquer une fonction et ajouter une colonne.
+* `mutate(nom = formule)` appliquer une fonction et ajouter une colonne (il est possible d'appliquer à toutes les variables avec `sapply` voir ci dessous et, de sélectionner une variable par son nom avec `!!sim("col1")`).
 * `transmute(nom = formule)` construitre une ou plusieurs variables en supprimant les colonnes.
 
 !!! note
 	Pour modifier uniquement certaines lignes, il est possible d'utiliser  `ifelse(condition, valeur_vrai, valeur_vaux)`.
+
+!!! note 
+	Pour appliquer une fonction a toutes les variables il faut utiliser `sapply`.
+ 
 
 Fonction		| Description
 ----------------|-----------
