@@ -1,4 +1,5 @@
 ## Shiny
+
 ```
 library(shiny)
 library(shinydashboard)
@@ -75,19 +76,16 @@ Code           		| Type
 `mainPanel()` principale
 `sidebarPanel()` saisie
 
-Code            | Type
-----------------|-----------------
-`box()`         | classique
-`infoBox()`     | texte statique
-`tabBox()`      | valeur
-`valueBox()`    | valeur dynamique
+Code            	| Type
+------------------------------------|-----------------
+`box()`         					| classique
+`infoBox()`     					| texte statique
+`tabBox()`      					| valeur
+`valueBox()`   						| valeur dynamique
+`modalDialog()`						| fenêtre pop up
+`HTML("## markdown")`               | afficher du texte makdown directement
+`renderMarkdown(fichier)`         	| afficher du texte markdown
 
-```
-tabBox(
-  title = titre,
-  tabPanel(title = "titre", tableOutput("nomTable"))
-) 
-```
 
 Boîte avec un tableau. Arguments :
 
@@ -96,13 +94,24 @@ Boîte avec un tableau. Arguments :
 * `width = largeur`
 * `color = couleur`
 
-Pour rendre une valeur dynamique avec valueBox
 
-```
-output$nom <- renderValueBox({  
-    valueBox(a completer)
-})
-```
+!!! example 
+	Table box
+	```
+	tabBox(
+	  title = titre,
+	  tabPanel(title = "titre", tableOutput("nomTable"))
+	) 
+	```
+
+!!! note
+	Pour rendre une valeur dynamique avec valueBox sur server.
+	```
+	output$nom <- renderValueBox({  
+	    valueBox(a completer)
+	})
+	```
+ 
 ###### zone de saisie
 
 * `type(inputId = id, ....)`
@@ -120,15 +129,17 @@ R                                                 | Type
 `paswordInput()`                                  | 
 `colourInput()` (package `colourpicker`)          |
 `radioButtons()`                                  |
-`selectInput()`                                   | liste à choix multiples
+`selectInput(choices = liste)`               	  | liste à choix multiples (liste de liste pour avoir des groupes)
 `sliderInput()`                                   | barre de défilement
 `textInput()`                                     |
 `textAreaInput()`                                 | zone de saisie de texte.
-`HTML("## markdown")`                             | afficher du texte makdown directement
-`renderMarkdown(fichier)`                         | afficher du texte markdown
 
 Option :
-    * `label = 'titre'` texte a afficher.
+
+* `inputId = id` id qui permet de récupérer la valeur.
+* `label = 'titre'` texte a afficher.
+
+####
 
 ### Server
 
