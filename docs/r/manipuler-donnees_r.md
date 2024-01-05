@@ -149,7 +149,7 @@ OrchardSprays %>%
 
 ## Construire de nouvelles variables
 
-* `mutate(nom = formule)` appliquer une fonction et ajouter une colonne (il est possible d'appliquer à toutes les variables avec `sapply` voir ci dessous et, de sélectionner une variable par son nom avec `!!sim("col1")`).
+* `mutate(nom = formule)` appliquer une fonction et ajouter une colonne (il est possible d'appliquer à toutes les variables avec `sapply` voir ci dessous et, de sélectionner une variable par son nom avec `!!sym("col1")`).
 * `transmute(nom = formule)` construitre une ou plusieurs variables en supprimant les colonnes.
 
 !!! note
@@ -263,4 +263,4 @@ Fonction 		| Défintion
 * `case_when(condition1 ~ val1, condition2 ~ val2,...)` fonction équivalente au CASE WHEN en sql.
 * `scale(fromage, center = T, scale = T)` centrer et réduire les données.
 * `Sys.sleep(seconde)` attendre un nombre de seconde avant la suite de l'exécution.
-* `grepl( symbole, variable)` tester si le symbole est contenu dans la variable.
+* `grepl(symbole, variable)` tester si le symbole est contenu dans la variable.
