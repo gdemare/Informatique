@@ -10,7 +10,7 @@
 
 * [Pexels](https://www.pexels.com/)
 
-## Outils
+## Bureautique
 
 * [PDF 24](https://tools.pdf24.org/fr/), outils en ligne pour PDF notamment Optical Character Recognition
 * [Prezzi](https://prezi.com/fr/), présentation dynamique.
@@ -32,3 +32,7 @@
 * [Exodus privacy](https://reports.exodus-privacy.eu.org/fr/), vérifier les trackers d'une application.
 * [Google takeout](takeout.google.com/settings/takeout), récupérer les données stockées sur Google.
 * [virus total](https://www.virustotal.com/), vérifier la présence de virus dans un fichier.
+
+## Recherche avancée
+
+* [Pimeyes](https://pimeyes.com/en), recherche à partir d'une photo.
