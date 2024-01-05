@@ -8,6 +8,9 @@
 g = ggplot() + theme_minimal() + aes(x)
 ```
 
+!!! note
+	Il y a la possibilité de sélectionner une colonne avec son nom en caractère `aes_string(x = "col")`.
+
 Faire des groupes (dans aes) :
 
 * `fill = var` remplissage.
