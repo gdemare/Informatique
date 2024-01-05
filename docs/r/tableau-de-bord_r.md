@@ -86,6 +86,8 @@ Code            					| Type
 `HTML("## markdown")`               | afficher du texte makdown directement
 `renderMarkdown(fichier)`         	| afficher du texte markdown
 
+* `showModal(modalDialog("Test"))`
+
 Boîte avec un tableau. Arguments :
 
 * `title = titre`
