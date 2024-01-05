@@ -76,16 +76,15 @@ Code           		| Type
 `mainPanel()` principale
 `sidebarPanel()` saisie
 
-Code            	| Type
+Code            					| Type
 ------------------------------------|-----------------
 `box()`         					| classique
 `infoBox()`     					| texte statique
 `tabBox()`      					| valeur
 `valueBox()`   						| valeur dynamique
-`modalDialog()`						| fenêtre pop up
+`modalDialog()`						| fenêtre pop up (ajouter un boutont `modalButton("Dismiss")`
 `HTML("## markdown")`               | afficher du texte makdown directement
 `renderMarkdown(fichier)`         	| afficher du texte markdown
-
 
 Boîte avec un tableau. Arguments :
 
@@ -139,8 +138,6 @@ Option :
 * `inputId = id` id qui permet de récupérer la valeur.
 * `label = 'titre'` texte a afficher.
 
-####
-
 ### Server
 
 ```
@@ -148,6 +145,9 @@ server <- function(input, output) {
   output$nom <- resultat
 }
 ```
+
+!!! note
+	Pensez à isoler une processus avec `isolate()` pour continuer à utliser l'application même lorsque des traitements sont en cours.
 
 Les sorties doivent être stockées dans la variable
 
