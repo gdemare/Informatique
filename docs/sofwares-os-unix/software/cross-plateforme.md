@@ -2,6 +2,7 @@
 
 * [Cryptomator](https://cryptomator.org/), logicel de cryptage spécialisé pour le cloud.
 * [Simplenote](https://simplenote.com/), logiciels de prises de notes en markdown.
+* [Mixx](https://mixxx.org/), logiciel de dj.
 
 ### Thunderbird
 
