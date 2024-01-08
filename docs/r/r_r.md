@@ -92,6 +92,7 @@ Déclarer des variables :
 * `setdiff(vec1, vec2)` element du vecteur 1 non présent dans vec2.
 * `intersect(vec1, vec2)` intersection de deux vecteurs.
 
+
 ### Les liste
 
 ```
@@ -116,6 +117,8 @@ list(
 
   * `manhattan`
   * `maximum`
+
+* `scale(matrice)` centrer et réduire une matrice par colonne.
 
 ## Fonction
 
