@@ -194,6 +194,8 @@ Paramètres :
 * `sub = sous_titre` sous titre.
 * `col =` couleur.
 
+*`heatmap(data)` heatmap.
+
 ### Ajouter des éléments 
 
 * `abline(v = vertical, h=horizontal, a =, b =)` ajouter une droite.
