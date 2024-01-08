@@ -21,7 +21,8 @@ Ward        | `ward.D2`
 
 ## Afficher le dendrogramme
 
-* `plot(cah)`
+* `plot(cah)` dendrogramme.
 * `fviz_dend(cah)` `library(factoextra)` Options :
 
     * `k = nbre` nombre de classes à conserver.
+    * `h = nbre` nombre d'individus par groupe.
