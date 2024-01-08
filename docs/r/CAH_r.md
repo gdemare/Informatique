@@ -26,3 +26,7 @@ Ward        | `ward.D2`
 
     * `k = nbre` nombre de classes à conserver.
     * `h = nbre` nombre d'individus par groupe.
+
+### Elaguer l'arbre
+
+`cutree(cah, k = 3)` élaguer l'arbre.
