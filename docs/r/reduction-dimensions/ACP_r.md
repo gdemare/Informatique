@@ -35,17 +35,43 @@ Ligne    | Description
 !!! note
     Fonctionne avec les deux méthodes.
 
-`acp_res <- PCA(pop, graph = F, scale.unit = T)`
+`acp_res <- PCA(pop, graph = F)`
 
 Paramètres :
 
 * `scale.unit = TRUE` centré et réduire.
+* `ncp = 5` nombre d'axes à garder.
+* `indsup =` ajouter des individus sur la représentation.s
 
 Retour :
 
 * `$eig` valeur propres
 * `$var` # variables
 * `$ind` # individus
+
+### Représentations graphiques
+
+`plot(acp_res, choix = "var")` afficher  le résultat `"var"` pour les variables ou `"ind"` pour les individus.
+
+### Regroupement sur les composantes principales
+
+`res_hcpc <- HCPC(acp_res, graph = FALSE)`
+
+Paramètres :
+
+* `nb.clust = 3` nombre de groupes à garder.
+
+Retour :
+
+`$data.clust` data orignal avec une colonne groupe supplémentaire.
+`$desc.var` variables qui décrivent les groupes.
+`$desc.ind` individus les plus représentatifs.
+`$desc.axes` axes qui décrivent le mieux chaque groupe.
+
+#### Graphiques 
+
+* `fviz_dend(res_hcpc)` afficher le dendrogramme.
+* `fviz_cluster(res_hcpc)` afficher les groupes sur les axes.
 
 ## Représentations graphiques
 
