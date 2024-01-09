@@ -161,11 +161,19 @@ nav:
     - "Manipuler les données" : SAS/manipuler-donnees_sas.md
     - "Formater les données" : SAS/formater-donnees_sas.md
     - "Automatiser SAS" : SAS/automatiser_sas.md
+    - "Centroides" : SAS/centroide_sas.md
     - Statistique :
       - "ANOVA" : SAS/statistique/ANOVA_sas.md
       - "Probabilité statistique" : SAS/statistique/probabilite-statistique_sas.md
-      - "Tests" : SAS/statistique/tests_sas.md
-    - "Centroides" : SAS/centroide_sas.md
+        - "Tests" : SAS/statistique/tests_sas.md
+      - "Modèles" :
+        - "Analyse discriminante" : SAS/models/analyse-discriminante_sas.md
+        - "ANOVA" : SAS/models/ANOVA_sas.md
+        - "Arbre de décision" : SAS/models/arbre-de-decision_sas.md
+        - "Espérance maximisation" : SAS/models/esperance-maximisation_sas.md
+        - "Régression logistique" : SAS/models/regression-logistique_sas.md
+      - "Régression" :
+        - "Régression linéaire" : SAS/models/regression-lineaire_sas.md
     - "Description" :
       - "Graphiques" : SAS/statistique/graphiques_sas.md
       - "Clustering" :
@@ -176,14 +184,6 @@ nav:
         - "ACM" : SAS/reduction-dimensions/ACM_sas.md
         - "ACP" : SAS/reduction-dimensions/ACP_sas.md
         - "AFC" : SAS/reduction-dimensions/AFC_sas.md
-    - "Modèles" :
-      - "Analyse discriminante" : SAS/models/analyse-discriminante_sas.md
-      - "ANOVA" : SAS/models/ANOVA_sas.md
-      - "Arbre de décision" : SAS/models/arbre-de-decision_sas.md
-      - "Espérance maximisation" : SAS/models/esperance-maximisation_sas.md
-      - "Régression logistique" : SAS/models/regression-logistique_sas.md
-    - "Régression" :
-      - "Régression linéaire" : SAS/models/regression-lineaire_sas.md
   - "Softwares OS et Unix" :  
     - OS :
       - "Android" : sofwares-os-unix/os/android.md
