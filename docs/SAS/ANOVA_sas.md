@@ -6,7 +6,7 @@ PROC ANOVA;
  RUN;
 ```
 
-var1 | var2 interactions entre les variables.
+`var1 | var2` interactions entre les variables.
 
 Paramètres :
 
@@ -19,11 +19,8 @@ Options :
 * `TUCKEY` test de Tuckey, comparaison des moyennes de chaque groupe.
 * `DUNCAN` Waller-Duncan -ratio test
 * `WALLER` means of the Strain levels with Duncan’s multiple range test
-  
 * `TEST H=var1 E=var2*var1`
 
 ## Interprétation
 
 * **Class Level Information** synthèse des variables explicatives et des observations.
-
-

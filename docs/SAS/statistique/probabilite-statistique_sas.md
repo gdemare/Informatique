@@ -17,21 +17,21 @@ Option :
 
 Principales statistiques disponibles dans la PROC TABULATE.
 
-| Fonction | Définition |
-|---|---|
-| `N` | effectif |
-| `<zone>PCTN` | fréquence d'obsevation total par ligne (ROW), par colonne(COL) |
-| `NMISS` | nombre de valeurs manquantes |
-| `<zone>PCTSUM`| 
-| `MEAN` | moyenne |
-| `SUM` | somme |
-| `MIN/MAX` | minimun et maximum |
-| `MEDIAN` | médiane |
-| `Qa` | quartiles a. |
-| `Px` | centile à x% (ex : P15 -¿ 15%) |
-| `VAR` | variance |
-| `STD` | écart type |
-| `LCLM/UCLM` | intervalle de confiance (borne inf et sup) |
+Fonction    | Définition
+------------|---
+`N`         | effectif
+`<zone>PCTN` | fréquence d'obsevation total par ligne (ROW), par colonne(COL)
+`NMISS`     | nombre de valeurs manquantes
+`<zone>PCTSUM` |
+`MEAN`      | moyenne
+`SUM`       | somme
+`MIN/MAX`   | minimun et maximum
+`MEDIAN`    | médiane
+`Qa`        | quartiles a.
+`Px`        | centile à x% (ex : P15 -¿ 15%)
+`VAR`       | variance
+`STD`       | écart type
+`LCLM/UCLM` | intervalle de confiance (borne inf et sup)
 
 ## Tableau indicateurs (moyenne, médiane, max, min, variance)
 

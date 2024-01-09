@@ -161,25 +161,29 @@ nav:
     - "Manipuler les données" : SAS/manipuler-donnees_sas.md
     - "Formater les données" : SAS/formater-donnees_sas.md
     - "Automatiser SAS" : SAS/automatiser_sas.md
-    - "Data mining" :
-      - "Analyse discriminante" : SAS/analyse-discriminante_sas.md
-      - "ANOVA" : SAS/ANOVA_sas.md
-      - "Arbre de décision" : SAS/arbre-de-decision_sas.md
-      - "CAH" : SAS/CAH_sas.md
-      - "Centres mobiles" : SAS/centres-mobiles_sas.md
-      - "Centroides" : SAS/centroide_sas.md
-      - "Cluestering des variables" : SAS/clustering-variables_sas.md
-      - "Espérance maximisation" : SAS/esperance-maximisation_sas.md
-      - "Régression linéaire" : SAS/regression-lineaire_sas.md
-      - "Régression logistique" : SAS/regression-logistique_sas.md
     - Statistique :
-      - "Graphiques" : SAS/graphiques_sas.md
-      - "Probabilité statistique" : SAS/probabilite-statistique_sas.md
-      - "Tests" : SAS/tests_sas.md
-    - "Réduction de dimensions" :
-      - "ACM" : SAS/ACM_sas.md
-      - "ACP" : SAS/ACP_sas.md
-      - "AFC" : SAS/AFC_sas.md
+      - "ANOVA" : SAS/statistique/ANOVA_sas.md
+      - "Probabilité statistique" : SAS/statistique/probabilite-statistique_sas.md
+      - "Tests" : SAS/statistique/tests_sas.md
+    - "Centroides" : SAS/centroide_sas.md
+    - "Description" :
+      - "Graphiques" : SAS/statistique/graphiques_sas.md
+      - "Clustering" :
+        - "CAH" : SAS/clustering/CAH_sas.md
+        - "Centres mobiles" : SAS/clustering/centres-mobiles_sas.md
+        - "Cluestering des variables" : SAS/clustering/clustering-variables_sas.md
+      - "Réduction de dimensions" :
+        - "ACM" : SAS/reduction-dimensions/ACM_sas.md
+        - "ACP" : SAS/reduction-dimensions/ACP_sas.md
+        - "AFC" : SAS/reduction-dimensions/AFC_sas.md
+    - "Modèles" :
+      - "Analyse discriminante" : SAS/models/analyse-discriminante_sas.md
+      - "ANOVA" : SAS/models/ANOVA_sas.md
+      - "Arbre de décision" : SAS/models/arbre-de-decision_sas.md
+      - "Espérance maximisation" : SAS/models/esperance-maximisation_sas.md
+      - "Régression logistique" : SAS/models/regression-logistique_sas.md
+    - "Régression" :
+      - "Régression linéaire" : SAS/models/regression-lineaire_sas.md
   - "Softwares OS et Unix" :  
     - OS :
       - "Android" : sofwares-os-unix/os/android.md
