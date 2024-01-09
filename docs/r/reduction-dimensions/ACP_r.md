@@ -4,6 +4,8 @@
 
 `acp_res <- prcomp(data)`
 
+Paramètres :
+
 * `scale = TRUE` centré réduit. 
 
 ### Résumé
@@ -25,10 +27,12 @@ Ligne    | Description
 
 * `autoplot(acp_res)` afficher les variables et les individus.
 
-    * `label = T` afficher le nom des individus.
-    * `dt_acp, colour = 'col_group'` afficher des groupes d'individus (il suffit d'ajouter le jeu de données avec l'acp avec toutes les variables).
-    * `frame = TRUE` ajouter des clusters (`frame.type = 'norm'` pour avoir des ellipses).
-    * `loadings = TRUE, loadings.colour = 'blue', loadings.label = TRUE, loadings.label.size = 3` afficher les variables.
+Paramètres :
+
+* `label = T` afficher le nom des individus.
+* `dt_acp, colour = 'col_group'` afficher des groupes d'individus (il suffit d'ajouter le jeu de données avec l'acp avec toutes les variables).
+* `frame = TRUE` ajouter des clusters (`frame.type = 'norm'` pour avoir des ellipses).
+* `loadings = TRUE, loadings.colour = 'blue', loadings.label = TRUE, loadings.label.size = 3` afficher les variables.
 
 ## Méthode 2 : ACP
 
@@ -67,10 +71,10 @@ Paramètres :
 
 Retour :
 
-`$data.clust` data orignal avec une colonne groupe supplémentaire.
-`$desc.var` variables qui décrivent les groupes.
-`$desc.ind` individus les plus représentatifs.
-`$desc.axes` axes qui décrivent le mieux chaque groupe.
+* `$data.clust` data orignal avec une colonne groupe supplémentaire.
+* `$desc.var` variables qui décrivent les groupes.
+* `$desc.ind` individus les plus représentatifs.
+* `$desc.axes` axes qui décrivent le mieux chaque groupe.
 
 #### Graphiques 
 
