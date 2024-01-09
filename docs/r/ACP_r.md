@@ -63,7 +63,7 @@ fviz_pca_biplot(res.pca, repel = TRUE, col.var = "#2E9FDF", col.ind = "#696969")
 
 #### Old
 
-Packages : FactoMineR
+`library(FactoMineR)` nécessite d'installer `chron`.
 
 ```
 res.acp = PCA(pop, graph = F)
