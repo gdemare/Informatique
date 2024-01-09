@@ -8,8 +8,15 @@
 * `rmarkdown` R markdown.
 * `tidyverse` intègre les packages les plus populaires pour la science de la donnée.
 
+	* `dplyr` et `tidyr` manipuler les données.
+	* `forecasts` convertir en date.
+	* `golemn` créer un package et sa documentation de façon automatisée.
+
+* `testthat` tester.
+
 ## Manipuler les fichiers
 
+* `r"(dossier1\dossier 2\)"` déclarer un chemin.
 * `basename("C:/some_dir/a.ext")` renvoyer le nom du fichier.
 * `dirname("C:/some_dir/a.ext")` renvoyer le dossier.
 * `dir.create(dossier)` créer un dossier.
