@@ -165,7 +165,7 @@ nav:
     - Statistique :
       - "ANOVA" : SAS/statistique/ANOVA_sas.md
       - "Probabilité statistique" : SAS/statistique/probabilite-statistique_sas.md
-        - "Tests" : SAS/statistique/tests_sas.md
+      - "Tests" : SAS/statistique/tests_sas.md
       - "Modèles" :
         - "Analyse discriminante" : SAS/models/analyse-discriminante_sas.md
         - "ANOVA" : SAS/models/ANOVA_sas.md
