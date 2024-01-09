@@ -172,7 +172,6 @@ nav:
         - "Arbre de décision" : SAS/models/arbre-de-decision_sas.md
         - "Espérance maximisation" : SAS/models/esperance-maximisation_sas.md
         - "Régression logistique" : SAS/models/regression-logistique_sas.md
-      - "Régression" :
         - "Régression linéaire" : SAS/models/regression-lineaire_sas.md
     - "Description" :
       - "Graphiques" : SAS/statistique/graphiques_sas.md
