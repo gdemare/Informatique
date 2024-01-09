@@ -1,16 +1,18 @@
-Packages :  FactoMineR, factoextra, arules.
+`library(FactoMineR)`
 
-```
-res.acm = MCA(pop.3, graph = F )
+`acm_res <- MCA(pop.3, graph = F)`
 
-res.acm$eig
-fviz_eig(res.acm) # histogramme des valeurs propres
+Retour : 
 
-res.acm$var
-res.acm$ind
+* `$eig` valeurs propres.
+* `$var` variables.
+* `$ind` individus.
 
-# + foncton résumé
+`facto_summarize(acm_res, element = "var", axes = 1:2)` résumé de l'AFC.
 
-fviz_mca(res.acm, repel = TRUE, c(1,2) )
-facto_summarize(res.acm, element = "var", axes = 1:2)
-```
+## Représentation graphique
+
+`library(factoextra)`
+
+* `fviz_eig(acm_res)` histogramme des valeurs propres
+* `fviz_mca(acm_res, repel = TRUE, c(1,2))`

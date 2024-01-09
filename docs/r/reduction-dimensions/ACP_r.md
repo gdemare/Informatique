@@ -1,10 +1,12 @@
 ## Méthode 1 : ACP
 
+### ACP
+
 `acp_res <- prcomp(data)`
 
 * `scale = TRUE` centré réduit. 
 
-### Info sur les axes
+### Résumé
 
 `summary(acp_res)`
 
@@ -29,6 +31,8 @@ Ligne    | Description
     * `loadings = TRUE, loadings.colour = 'blue', loadings.label = TRUE, loadings.label.size = 3` afficher les variables.
 
 ## Méthode 2 : ACP
+
+### ACP
 
 `library(FactoMineR)` nécessite d'installer `chron`.
 
