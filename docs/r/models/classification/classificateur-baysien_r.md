@@ -1,5 +1,1 @@
-## Construction du modèle
-
-```
-bayes <- naiveBayes(cible ~ ., data = data)
-```
+`bayes <- naiveBayes(cible ~ ., data = data)`

@@ -457,59 +457,6 @@ class classe:
 declarer = classe() # invoquer la classe.
 ```
 
-## Les opérateurs
-
-Symbole		| Opération
-------------|-----------------------
-`+` 		| addition (`var += 1`)
-`-` 		| soustraction
-`*` 		| multiplication
-`//` 		| division entière → a // b est le quotient de l'entier a par l'entier b
-`/` 		| division avec des nombres flottants
-`a ** b`	| puisance
-`a % b`		| modulo (reste division euclidienne)
-`abs(valeur)` | valeur absolue.
-
-### Fonctions mathématiques 
-
-* `range(nbre1, nbre2 <,pas> )` créer une liste de nombres (attention pour l'afficher il faut la convertir en liste `list()`).
-
-
-* `round(numeric, nb_decimal)` arrondir un nombre.
-* `max(vecteur)` maximum.
-* `min(vecteur)` minimum.
-* `count(vecteur)` compter le nombre de valeurs.
-
-#### Nombre aléatoire
-
-Library : `random`
-
-Générer une seule valeur
-
-Fonction 			| Défintion
---------------------|-------------------
-`randint(nb1,nb2)`	| nbre entier au hasard entre nb1 et nb2.
-`random()` 			| nbre aléatoire entre [0;1].
-`randrange(nbre)` 	| nbre entier aléatoire entre 0 et nbre.
-`gauss(mu, sigma)` 	| nbre aléatoire par la loi normale.
-
-* `random.suffle(list)` mélanger les éléments d'une liste.
-* `random.choices(list, weights=liste_poids, k=nbre_element)` générer une liste avec des éléments particuliers et des poids.
-* `np.random.randn(n)` générer n nombres aléatoires.
-
-#### Fonction mathématique
-
-Bibliothèque `math`
-
-Fonction 		| Définition
-----------------|----------------
-`sin()`			| sinus
-`cos()`			| cosinus
-`tan()`			| tangente
-`factorial()`	| factoriel
-`exp()`			| exponentielle
-`log()`			| logarithme
-
 ## Le texte
 
 * `print( message1, message2)` afficher un message.
@@ -785,7 +732,7 @@ Liste des éléments :
 * `.grid(row=, column=)` position de l'élément.
 
 Paramètres : 
-* `width = 30` largeur.
+* `width=30` largeur.
 
 ### Choisir un dossier par une fenêtre
 

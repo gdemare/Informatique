@@ -1,6 +1,4 @@
-```
-kmeans_result = kmeans(X, centers = 3)
-```
+`kmeans_res = kmeans(X, centers = 3)`
 
 Paramètres :
 
@@ -9,8 +7,8 @@ Paramètres :
 Sortie :
 
 * `$cluster` classe.
-* `$centers`	A matrix of cluster centres.
+* `$centers` A matrix of cluster centres.
 * `$withinss` The total sum of squares.
 * `$tot.withinss` Total within-cluster sum of squares, i.e. sum(withinss).
-* `betweenss` the between-cluster sum of squares, i.e. totss-tot.withinss.
+* `$betweenss` the between-cluster sum of squares, i.e. totss-tot.withinss.
 * `$size` The number of points in each cluster.

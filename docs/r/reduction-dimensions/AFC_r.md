@@ -1,27 +1,14 @@
-## AFC
+`afc_res = CA(table(var1,var2), graph = F)`
 
-```
-res.afc = CA( table(var1,var2), graph = F)
-```
+Retours : 
 
-## Interprétation
+* `res.afc$eig` valeurs propres.
+* `$row` profil lignes.
+* `$col` profil colonnes.
 
-### Valeurs propres
+## Représentations graphiques
 
-```
-res.afc$eig
-fviz_eig(res.afc) 
-```
+`library(factoextra)`
 
-### Profil ligne et colonne
-
-```
-res.afc$row
-res.afc$col
-```
-
-### Projection
-
-```
-fviz_ca(res.afc, repel = T)
-```
+* `fviz_eig(res.afc)` diagramme des valeurs propres.
+* `fviz_ca(res.afc, repel = T)` représentation de l'afc.

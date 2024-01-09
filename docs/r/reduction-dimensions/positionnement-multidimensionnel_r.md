@@ -1,7 +1,5 @@
-```
-cmdscale(dist(mat_data), k = 2)
-```
+`cmdscale(dist(mat_data), k = 2)`
 
-Avec :
+Paramètres :
 
 * `k = nb` nombre d'axes à garder.

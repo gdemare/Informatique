@@ -254,110 +254,6 @@ Library `import matplotlib.pyplot as plt`
 * `data.corr()` matrice de corrélation.
 * `data.cov()` matrice de covariance.
 
------------------------------
-
-## Numpy (matrice et vecteur)
-
-### Créer une matrice
-
-!!! warning 
-	Attention il faut passer par `copy.deepcopy(tableau)` pour copier une valeur.
-
-* `np.array(liste, )` créer un array.
-* `np.asarray(matrice)` convertie un array.
-* `np.arrange(1,10, pas)` créer une matrice avec une liste incrémentée.
-* `np.empty([lignes,colonnes])` créer un array vide d'une certaine taille.
-* `np.transpose(matrice)` transposer.
-* `np.maxtrix(vec1, vec2)` matrice ligne 1=vecteur 1, ligne 2=vecteur 2. 
-* `np.full((n,p), valeur)` créer une matrice de n, p dimension avec la valeur.
-* `np.zeros(shape=(5,5))` matrice de zéro.
-* `np.ones()` matrice de 1.
-* `np.diag(vecteur ou matrice, position )` deux fonctions :
-
-	* diagonaliser un vecteur en matrice la position indique la colonne où commencer la diagonalisation.
-	* renvoie la diagonale.
-
-* `np.reshape( donnee, (dimension) )` modifier les dimensions d'une matrice. Paramètres : 
-
-	* `order='C'` préciser la facon de réordonnées les éléments. `'F'` 
-
-* `np.resize()` modifie la dimension sans renvoyer d'erreurs si elles ne sont pas compatibles.
-* `np.unique()` renvoie les valeurs uniques.
-* `np.sign(nbre)` renvoie le signe.
-* `np.loadtxt(fichier)` charger une matrice depuis un fichier (exemple `1	70	230`).
-* `np.loadtxt("array.dat", tableau)` enregister un array dans un fichier.
-
-Attributs associés à un array :
-
-* `.shape` dimension (ligne, colonne,...)
-* `.T` transposée.
-* `.ndim` nombre de dimensions. 
-* `.size` nombre d'éléments total.
-
-#### matrice de booléen et remplacement de valeurs
-
-* `tableau[condition]` renvoie une matrice booléenne (opérateur `|`, `&`,...)
-* `tableau[condition] = nv_valeur` modifie la valeur uniquement lorsque c'est vrai.
-
-### Sélectionner une valeur ou une plage
-
-Deux méthodes pour sélectionner un élément ou une plage :
-
-* `table[i,j]`
-* `table[i][j]`
-
-* `for i in array:` parcourir ligne par ligne un tableau (rmq, il peut être utile de transposer pour passer par colonne).
-
-### Opération sur les valeurs
-
-* `multiply(tableau, nbre, out=nouv_tableau)` multiplier les valeurs d'un tableau.
-* `matmul(mat1, mat2)`produit matriciel.
-* `np.dot(mat1, mat2)` produi matriciel.
-* `add(5)` ajouter 5 à toutes les valeurs.
-* `mat1 * mat2` produit des éléments à la même position.
-
-Paramètres :
-
-* `axis= 0/1` effectuer l'opération sur chaque ligne, colonne. 
-
-Python	| Fonction
---------|----------
-`std()` | écart type.
-`mean()`| moyenne.
-`max()` | maximum.
-
-### Matrice carré
-
-Dans le sous module `linalg`
-
-* `inv()` inverser une matrice.
-* `det()` déterminant.
-
-* `eig()` valeurs propres et vecteurs propres :
-
-	* `.` vecteurs.
-	* `[1][0]` valeurs propres.
-
-* `diag()` diagonsaliser la matrice.
-
-### Insérer
-
-* `np.append(data, vecteur)` ajouter un dernière colonne. 
-* `np.insert( data, position, vecteur)` ajouter une colonne à une position particulière.
-
-### Statistique
-
-* `np.corrcoef( x, y)` coefficient de corrélation de Pearson.
-
-### Fonctions mathématiques 
-
-Fonction 			| Définition
---------------------|---
-`np.log(x, base)`	| logarithme
-`np.exp()` 			| exponentielle
-
--------------------------------
-
 ## Les tenseurs
 
 Library : `torch`
@@ -370,8 +266,7 @@ Les tenseurs sont des tableaux mutlidimentionnels avec des opérations particuli
 
 L'apprentissage sur les tenseurs peut être accélérer en utilisant la puissance des cartes graphiques.
 
-`cuda.is_available()` Vérifier si le GPU peut être utilisé pour les calculs. Dans le cas où c'est le cas, il faut
-`tensor.to('cuda')`.
+`cuda.is_available()` Vérifier si le GPU peut être utilisé pour les calculs. Dans le cas où c'est le cas, il faut `tensor.to('cuda')`.
 
 ### Déclarer un tenseur à partir de données 
 
@@ -409,9 +304,9 @@ Library : `torch`
 * `tensor(data)` convertie un numpy en tenseur.
 * `data.numpy()` convertie un tenseur en numpy.
 * `from_numpy()` convertie en tenseur.
-* `ones_like( tenseur )` créer un tenseur de meme dimension.
-* `rand_like( tenseur)` créer un tenseur de meme dimension avec des valeurs aléatoire.
-* `rand( dimension )` exemple dimension = (2,3,) `ones()` avec des 1 avec des `zeros()` avec des 0.
+* `ones_like(tenseur)` créer un tenseur de meme dimension.
+* `rand_like(tenseur)` créer un tenseur de meme dimension avec des valeurs aléatoire.
+* `rand(dimension)` exemple dimension = (2,3,) `ones()` avec des 1 avec des `zeros()` avec des 0.
 
 Paramètre :
 * `dtype=type` préciser le type de variable.

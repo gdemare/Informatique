@@ -1,6 +1,4 @@
-## Les cartes
- 
- Nécessite un compte [Google developper](https://console.developers.google.com).
+Nécessite un compte [Google developper](https://console.developers.google.com).
  
 ### Obtenir la position géographique d'une adresse (lattitude et longitude) en requêtant Google Map
  
@@ -75,12 +73,16 @@ Mode de carte `view` ou `plot` : `tmap_mode(mode)`
 * `tm_borders()` ajouter des frontières.
 * `tm_fill()` remplir la carte.
 * `tm_text("variable")` afficher du texte.
- * `ymod = absisse` décaler l'etiquette sur l'axe des abscisses.
- * `just = "top/bottom/left/right"` position du texte. 
+
+	* `ymod = absisse` décaler l'etiquette sur l'axe des abscisses.
+	* `just = "top/bottom/left/right"` position du texte. 
+
 * `tm_dots()` afficher sous forme de points.
- * `size=taille` taille des points.
+
+	* `size=taille` taille des points.
 
 Paramètre :
+
 * `alpha = 0.8` transparence.
 * `col = couleur/variable` changer la couleur.
 * `palette = "couleur"` changer la palette.
@@ -91,7 +93,7 @@ Paramètre :
 
 ### Personnaliser les couleurs
 
-library `RColorBrewer`
+`library(RColorBrewer)`
 
 `brewer.pal(nbNiveau, palette )` créer une palettes 
 
@@ -168,7 +170,7 @@ Paramètre : `labelOptions = labelOptions(options)` Options :
 
 ### Simplifier les polygons
 
-Package : `rmapshaper`
+`library(rmapshaper)`
 
 * `ms_simplify(SpatialPolygonsDataFrame)` simplifier les polygones (les contours des zones géographiques).
- * `keep = compression` taux de compression, par défaut `0.05`.
+* `keep = compression` taux de compression, par défaut `0.05`.

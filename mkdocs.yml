@@ -95,29 +95,29 @@ nav:
         - "Traitements des images" : python/traitement-image_py.md
         - "Web scraping" : python/web-scraping_py.md
         - "Autres modules" : python/modules-supplementaires_py.md
-      - Bioinformatique :
+      - "Bioinformatique" :
         - "Séquence" : python/sequence_py.md
         - "Spectrométrie de masse" : python/spectrometrie_py.md
     - "Mathématique" :
-      - "Opération data" : python/operation-data_py.md
+      - "Base" : "python/math/math_py.md"
       - "Statistique" :
-        - "Lois" : python/lois-statistiques_py.md
-        - "Tests" : python/tests_py.md
-    - "Description des données" :
-      - "Graphiques" : python/graphiques_py.md
+        - "Lois" : python/math/lois-statistiques_py.md
+        - "Tests" : python/math/tests_py.md
+    - "Description" :
+      - "Graphiques" : python/math/graphiques_py.md
       - "Clustering" : 
-        - "CAH" : python/CAH_py.md
+        - "CAH" : python/clustering/CAH_py.md
       - "Réduction de dimensions" :
-        - "ACP" : python/ACP_py.md
+        - "ACP" : python/reduction-dimensions/ACP_py.md
     - "Modèles" :
       - "Classification" :
-        - "Arbre de décision" : python/arbre-de-decision_py.md
+        - "Arbre de décision" : python/models/classification/arbre-decision_py.md
       - "Régression" : 
-        - "Régression logistique" : python/regression-logistique_py.md
+        - "Régression logistique" : python/models/regression/regression-logistique_py.md
       - "Réseaux de neurones" :
-        - "Couche convulsive" : python/couche-convulsive_py.md
-        - "Pytorch" : python/RN-pytorch_py.md
-        - "Tensorflow" : python/RN-tensor-flow_py.md
+        - "Couche convulsive" : python/models/neural-network/couche-convulsive_py.md
+        - "Pytorch" : python/models/neural-network/RN-pytorch_py.md
+        - "Tensorflow" : python/models/neural-network/RN-tensor-flow_py.md
   - R :
     - "Bases" :
       - "R" : r/r_r.md

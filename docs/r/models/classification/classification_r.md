@@ -1,12 +1,3 @@
-### Créer un jeu de données pour les modèles
-
-`library(rsample)`
-
-```
-split <- initial_split(dataset, 0.8)
-train_dataset <- training(split)
-test_dataset <- testing(split)
-```
 
 ### V-cramer
 
