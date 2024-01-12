@@ -28,6 +28,7 @@ Fonction  			| Définition
 * `preprocessing.Normalizer(norm='l1').fit_transform(data)` normaliser les données.
 
 ## Pandas (data frame)
+
 Package `import pandas as pd`
 
 * `donnee.dtypes` renvoie le type de données de chaque colonne.
@@ -113,6 +114,8 @@ Autres fonctions :
 * `data.loc[len(data)] = ["test1", "test2", 'test3']` ajouter une ligne de données.
 
 ### Importer 
+
+Il faut installer `openpyxl`.
 
 * `pd.read_csv(fichier, sep="\t")` lire un fichier csv.
 * `pd.read_excel(fichier, sheet_name=1/feuille)` lire un fichier excel.

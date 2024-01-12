@@ -70,3 +70,25 @@ Pour la numérotation, choisir :
 3. Créer une régle :
 
 	* Répondre en utilisant le modèle.
+
+## PowerPoint
+
+### Barre de progression 
+
+Afficher une barre de progression. 
+
+1. Créer une macro.
+2. Coller le code :
+	```
+	On Error Resume Next
+	With ActivePresentation
+	For X = 1 To .Slides.Count
+	.Slides(X).Shapes("PB").Delete
+	Set s = .Slides(X).Shapes.AddShape(msoShapeRectangle, _
+	0, .PageSetup.SlideHeight - 12, _
+	X * .PageSetup.SlideWidth / .Slides.Count, 12)
+	s.Fill.ForeColor.RGB = RGB(0, 0, 0)
+	s.Name = "PB"
+	Next X:
+	End With
+	```
