@@ -95,6 +95,7 @@ nav:
         - "Traitements des images" : python/traitement-image_py.md
         - "Web scraping" : python/web-scraping_py.md
         - "Autres modules" : python/modules-supplementaires_py.md
+      - "Ressources" : python/ressources_py.md
       - "Bioinformatique" :
         - "Séquence" : python/sequence_py.md
         - "Spectrométrie de masse" : python/spectrometrie_py.md
@@ -129,6 +130,7 @@ nav:
         - "Programme indépendant" : r/programme-independant_r.md
         - "Rapport" : r/rapport_r.md
         - "Tableau de bord" : r/tableau-de-bord_r.md
+      - "Ressources" : r/ressources_r.md
     - "Mathématique" :
       - "Probabilité et statistique" : r/probabilite-statistique_r.md
     - "Descriptions" :
