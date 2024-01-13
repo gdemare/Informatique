@@ -111,10 +111,9 @@ nav:
       - "Réduction de dimensions" :
         - "ACP" : python/reduction-dimensions/ACP_py.md
     - "Modèles" :
-      - "Classification" :
-        - "Arbre de décision" : python/models/classification/arbre-decision_py.md
-      - "Régression" : 
-        - "Régression logistique" : python/models/regression/regression-logistique_py.md
+      - "Modèles" : python/models/models_py.md
+      - "Arbre de décision" : python/models/arbre-decision_py.md
+      - "Régression" : python/models/regression_py.md
       - "Réseaux de neurones" :
         - "Couche convulsive" : python/models/neural-network/couche-convulsive_py.md
         - "Pytorch" : python/models/neural-network/RN-pytorch_py.md
