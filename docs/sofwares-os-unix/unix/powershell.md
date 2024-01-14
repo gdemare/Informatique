@@ -1,4 +1,5 @@
-Extension `fichier.ps1`
+Extension `fichier.ps1`.
+
 Actvier l'exécution de scripts PowerShell dans Windows (admin) : `set-executionpolicy unrestricted`
 
 ## Opérateur 
