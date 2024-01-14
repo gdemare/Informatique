@@ -37,12 +37,12 @@ If (condition1) {
 
 ### Les variables systèmes
 
-`$PSCommandPath` chemin du script en cours.
+* `$PSCommandPath` chemin du script en cours.
 
 ### Déclarer une variable
 
-`$variable=valeur` créer une variable.
-`$variable` appeler une variable.
+* `$variable=valeur` créer une variable.
+* `$variable` appeler une variable.
 
 ### Information sur les variables
 
@@ -55,21 +55,28 @@ If (condition1) {
 * `#commantaire`
 
 ### Les chaines de caractères
+
 * `texte.LastIndexOf("\")` position du dernier symbole.
 * `$test.Substring(position)` extrait les caractères de la chaine situés après la position.
 
 ## Fichiers et dossier 
 
-* `gci` liste des fichiers.
-Paramètre : 
-  - `-fi` lister uniquement les fichiers.
-  - `-r` lister en plus les fichiers des sous dossiers.
+* `Set-Location "chemin"` modifier le chemin par défaut.
+* `gci` liste des fichiers. Paramètre : 
+
+	* `-fi` lister uniquement les fichiers.
+	* `-r` lister en plus les fichiers des sous dossiers.
+
 * `Get-Item fichier` 
-* `select fichier` 
-Paramètre :
-   - ` -Property` récupérer les propriétés d'un fichier. Lorsqu'il y en a plusieurs, il faut les séparer par un `,` (`fullName`, ` LastWriteTime`).
+* `select fichier` Paramètre :
+	
+	* ` -Property` récupérer les propriétés d'un fichier. Lorsqu'il y en a plusieurs, il faut les séparer par un `,` (`fullName`, ` LastWriteTime`).
+
 * `ri chemin` supprimer des fichiers.
+
 	* `dossier -Recurse` supprime les fichiers et les dossiers.
 	* `-Force` suppimer de façon récursive.
-* `gci -r -fi *psm*.xlsx | ri -Force` trouver des fichiers et les supprimer de façon récursives.
+
+* `gci -r -fi *psm*.xlsx | ri -Force` trouver des fichiers et les supprimer de façon récursive.
  
+* `Invoke-Expression comande` exécuter une commande.
