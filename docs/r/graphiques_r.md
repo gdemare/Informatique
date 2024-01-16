@@ -144,6 +144,9 @@ package : `plotly``
 
 * `plot_ly(data, labels = ~categorie, values = ~valeur)`
 
+!!! note
+	Il est possible de transformer un graphique ggplot en plotly avec `ggplotly(graph)`;
+
 ### Supprimer la légende
 
 ```
