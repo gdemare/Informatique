@@ -14,8 +14,12 @@ Installer [Droid-ify](https://f-droid.org/en/packages/com.looker.droidify/) pour
 * Anysoftkeyboard, un bon clavier.
 * Auxio, un super lecteur audio.
 * Breezy, une bonne application pour la météo avec la possibilité de définir MétéoFrance comme fournisseur de données.
-* Lawnchair laucher, launcher android open source et moderne (+ icones avec LauwnIcons)
-* LibreTube ou NewPipe sponsor block, deux applications YouTube sans pub.
+* Launcher :
+
+    * Lawnchair laucher, launcher android open source et moderne (+ icones avec LauwnIcons). Le projet a été mis à l'arrêt.
+    * Kvaesitso, launcher vertical avec deux panneaux et avec une personnalisation assez poussée (le BEST).
+
+* LibreTube ou NewPipe, deux applications YouTube sans pub.
 * Read you, lecteur de flux RSS.
 
 ## Google TV

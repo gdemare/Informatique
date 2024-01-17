@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ## Préparer les données 
 
 `library(rsample)`
@@ -7,12 +8,18 @@ split <- initial_split(dataset, 0.8)
 dt_train <- training(split)
 dt_test <- testing(split)
 ```
+=======
+>>>>>>> Stashed changes
 
 ## Prédire
 
 `pred <- predict(object = model, newdata = test)` effectuer les prédictions. Paramètres :
 	
+<<<<<<< Updated upstream
 * `type =` renvoyer la probabilité :
+=======
+* `response` retourner la probabilité d'appartenance à la classe (pour la classification)
+>>>>>>> Stashed changes
 
 Méthode                       | Type
 ------------------------------|---
@@ -26,6 +33,7 @@ Classificateur naïve baysien  | `)$posterior[,2]`
 
 La descente de gradient permet de trouver le minimum d'une fonction 
 
+<<<<<<< Updated upstream
 ```
 fct_cout <- function(x_obs, y_obs, params){
   a <- params[1]
@@ -48,6 +56,21 @@ R				| Méthode
 `Brent`			|
 
 Sortie :
+=======
+### Regression 
+
+* `postResample(pred, reel)` renvoie le $R^2$.
+
+### Classification 
+
+#### Matrice de confusion
+
+* `prop.table(table(eval$cible, eval$pred.class))` matrice de confusion en fréquence (ou `confusionMatrix()` de `library(caret)`).
+* `roc.plot(classe , proba)` courbe Receiving Operator Characteristic (ROC) `library(verification)` (ou `roc()` de `library(pROC)`).
+* `auc = performance(pred,"auc")@y.values[[1]]` Area Under the Curve (AUC).
+
+#### Courbe de Lift
+>>>>>>> Stashed changes
 
 * `$par` valeurs trouvées des paramètres qui minimise la fonction.
 * `$value` valeurs minimums.

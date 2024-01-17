@@ -2,11 +2,23 @@
 
 `library(rpart)`, `library(rpart.plot)`.
 
+<<<<<<< Updated upstream
 `cart = rpart(data = data, Cible ~ ., control = rpart.control())` construire l'arbre.
+=======
+Construire l'arbre
+
+```
+cart = rpart( data = data, 
+              Cible~.,
+              parms = list(split = "gini"),
+              cp = 0)
+```
+>>>>>>> Stashed changes
 
 Option :
 
 * `methode = class/anova` variable à expliquer de type qualitative/quantitative.
+<<<<<<< Updated upstream
 * `parms = list(split = "gini")` critère à utiliser.
 * `control = rpart.control()` pour controler les paramètres de l'arbre. Paramètres :
 
@@ -19,6 +31,28 @@ Option :
 `summary(cart)` information sur l'arbre.
 
 Retourne :
+=======
+* `minsplit = nbre` nombre de branches minimum.
+* `minbucket = 1/3*minsplit` par défaut.
+* `control = rpart.control(minsplit = 5,cp = 0)` sans contrainte sur la qualité et avec au moins 5 obsevations par feuille.
+
+for stumps : `rpart.control(maxdepth = 1,cp = -1, minsplit = 0)`
+
+## Information sur l'arbre
+
+`summary(cart)` 
+
+l’erreur xerror calculée par validation croisée (R constitut 10 échantillons).
+* `xerror` erreur de la validation croisée.
+error erreur de la 
+
+## Qualité de l'arbre 
+
+```
+printcp(cart)
+plotcp(cart)
+```
+>>>>>>> Stashed changes
 
 Indicateur      | Définition
 ----------------|---
@@ -33,12 +67,19 @@ xstd            | écart type des erreurs
 
 ### Graphiques
 
+<<<<<<< Updated upstream
 `library(rpart.plot)`
+=======
+```
+prunedcart9f = prune(cart, cp = 0.0155441)
+```
+>>>>>>> Stashed changes
 
 * `rpart.plot(abre_complet)` afficher l'arbre (ou sinon `prp(abre_complet)`). Paramètres:
   
 	* `type = 0` retirer les informations sur les noeuds.
 
+<<<<<<< Updated upstream
 * Affiche :
   
  	1. La classe prédite.
@@ -66,3 +107,9 @@ xstd            | écart type des erreurs
 	* `mincriterion = 0.3` c1-p-valeur à partir de laquelle on souhaite cesser la croissance.
  
  `plot(arbre_ctree)` afficher l'arbre.
+=======
+```
+prp(cart, type = 2, extra = 1, split.box.col = "lightgray")
+rpart.plot(cart)
+```
+>>>>>>> Stashed changes

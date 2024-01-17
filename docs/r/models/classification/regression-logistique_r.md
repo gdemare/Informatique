@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:docs/r/models/classification/regression-logistique_r.md
 `logit_mod <- glm(Cible~1, data = train, family="binomial")` déclarer le modèle.
 
 `summary(selection)` information sur la regression
@@ -33,3 +34,9 @@ score_data %>%
   xlim(-10, 10) + 
   theme_minimal()
 ```
+=======
+`model <- glm(Cible~., data = train, family = binomial)` créer une régression logistique.
+
+`summary(model)` résumé détaillé du modèle.
+
+>>>>>>> Stashed changes:docs/r/models/regression/regression-logistique_r.md
