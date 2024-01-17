@@ -156,7 +156,7 @@ nav:
         - "Régression logistique" : r/models/classification/regression-logistique_r.md
         - "SVM" : r/models/classification/SVM_r.md
       - "Régression" :
-        - "Régression linéaire" : r/models/regression/regression-linéaire_r.md
+        - "Régression linéaire" : r/models/regression/regression-lineaire_r.md
       - "Réseau de neurones" : r/models/reseau-neurones_r.md
       - "Série temporelle" :
         - "Série temporelle simple" : r/models/time-series/serie-temporelle-simple_r.md
