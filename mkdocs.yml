@@ -153,9 +153,10 @@ nav:
         - "Arbre de décision" : r/models/classification/arbre-decision_r.md
         - "Classificateur baysien" : r/models/classification/classificateur-baysien_r.md
         - "Forêt aléatoire" : r/models/classification/foret-aleatoire_r.md
+        - "Régression logistique" : r/models/classification/regression-logistique_r.md
         - "SVM" : r/models/classification/SVM_r.md
       - "Régression" :
-        - "Régression logistique" : r/models/regression/regression-logistique_r.md
+        - "Régression linéaire" : r/models/regression/regression-linéaire.md
       - "Réseau de neurones" : r/models/reseau-neurones_r.md
       - "Série temporelle" :
         - "Série temporelle simple" : r/models/time-series/serie-temporelle-simple_r.md
