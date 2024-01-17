@@ -1,18 +1,13 @@
-* `logit_mod <- glm(Cible~1, data = train, family = binomial(link = "logit"))`
+`logit_mod <- glm(Cible~1, data = train, family="binomial")` déclarer le modèle.
 
-## Information sur la regression
-
-```
-selection
-summary(selection)
-```
+`summary(selection)` information sur la regression
 
 * `$formule` formule du modèle.
 
 ## Algorimthe de selection automatique des variables
 
 ```
-selection <- step(logit, direction="forward/backward/both")
+selection <- step(logit, direction = "forward/backward/both")
 ```
 
 ## Représentation de la régression
