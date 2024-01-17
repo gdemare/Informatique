@@ -51,40 +51,16 @@ y_vrai <- Y_test$drugg
 * `Recall(y_true = y_vrai,  y_pred = y_predit,  positive = 1)` rappel.
 * `Specificity(y_true = y_vrai, y_pred = y_predit, positive = 1)` spécificité
 * `F1_Score(y_true = y_vrai,  y_pred = y_predit, positive = 1)` F score.
-* `AUC(y_pred = y_proba, y_true = y_vrai)` 
-
-### Matrice de confusion
-
-* `prop.table(table(eval$cible, eval$pred.class))` matrice de confusion en fréquence.
+* `AUC(y_pred = y_proba, y_true = y_vrai)` AUC pour la courbe de ROC.
 
 ### Courbe de ROC (Receiver Operating Characteristic)
 
-* `roc.plot(classe, proba)` courbe Receiving Operator Characteristic (ROC)`library(verification)`.
-* `auc = performance(pred,"auc")@y.values[[1]]` Area Under the Curve (AUC).
+1. `rocdata <- data.frame(D = y_vrai, M = y_proba)` définir les valeurs de la courbe.
+2. `ggplot(rocdata, aes(m = M, d = D) + geom_roc()` afficher la courbe de ROC. Paramètres :
 
-```
-predtion = prediction(pred, test$cible, label.ordering=c(0,1))
-roc = performance(predtion, "tpr", "fpr")
-```
+	* `color = model` colorer en fonction du modéle.
 
-Affichage graphique 
-``` 
-library(ggplot2)
-
-fonc = function(x){x}
-roc = ggplot() + stat_function(fun = fonc, data = data.frame(x = c(0, 1))) +
-  xlab("sensibilité") + ylab("Taux de vrais positifs") + theme_minimal()
-
-roc +
-  geom_line( aes(x= roc.reg@x.values[[1]], y=roc.reg@y.values[[1]]), color="blue" )
-``` 
-
-#### Area Under the Curve (AUC)
-
-```
-library(ROCR)
-performance(predtion,"auc")@y.values[[1]]
-```
+------------------------------
 
 ### Courbe de Lift (courbe de gain)
 
