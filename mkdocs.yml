@@ -144,7 +144,7 @@ nav:
         - "AFC" : r/reduction-dimensions/AFC_r.md
         - "Positionnement multidimensionnel" : r/reduction-dimensions/positionnement-multidimensionnel_r.md
     - "Modèles" :
-      - "Préparation des données" : r/models/preparation-data_r.md
+      - "Préparation des données" : r/models/preparer-donnees_r.md
       - "Prédire et évaluer un modèle" : r/models/prediction_r.md
       - "Type classification" : r/models/classification_r.md
       - "Type régression" : r/models/regression_r.md

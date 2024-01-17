@@ -10,7 +10,7 @@ Retourne :
 
 * Std. Error (Std. Error) :  écart type de l'estimation du coefficient.
 * Test de significativité pour savoir si le coefficent est il égale à 0. 
-* R-squared ou $R^2$ coefficient de détermination soit la proportion de la variance expliquée par le modèle. Si il est élevé alors l'erreur explique peu la variance. La valeur ajustée correspond à une correction par l'effectif des observations.
+* R-squared ou $R^2$ coefficient de détermination.
 
 ## Vérifier la validité
 
