@@ -40,6 +40,7 @@ xstd            | écart type des erreurs
 	* `type = 0` retirer les informations sur les noeuds.
 
 * Affiche :
+  
  	1. La classe prédite.
   	2. La probabilité d'appartenir à la classe.
   	3. Le pourcentage d'observations dans la noeud. 
@@ -55,7 +56,7 @@ xstd            | écart type des erreurs
 
 `library(party)`
 
-`ctree(drugg~., dtf_train, control = ctree_control()`
+`ctree(y_reel~., dtf_train, control = ctree_control())`
 
 * `ctree_control()` paramètres de l'arbre.
 
