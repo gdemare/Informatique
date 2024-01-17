@@ -87,6 +87,7 @@ Déclarer des variables :
 * `sort(x)` ordonner.
 * `rev(x)` renver l'ordre.
 * `table(x)` tableau d'effectifs.
+* `add_margins(table)` ajouter des totaux au tableaux.
 * `unique(x)` valeurs uniques.
 * `c(vec1, vec2)` concaténer deux vecteurs.
 * `paste(vec1, vec2, sep = " ")` fusionner (concater) deux chaines.
