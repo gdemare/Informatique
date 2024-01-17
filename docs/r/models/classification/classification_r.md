@@ -1,5 +1,4 @@
-
-### V-cramer
+## V-cramer
 
 ```
 cramer  <- matrix(NA,ncol(credit2),3)
@@ -25,28 +24,40 @@ abline(h=0.2, lty=2)
 * $\gt 0.2$ :
 * $\gt 0.1$ :
 
-### Réaliser des prédictions
+## Performances
 
 ```
-pred = predict( object = modele, newdata = test, <type => )
+y_pred_class <- predict(abre_complet, dtf_test)y_proba <- pred_class[,2]
+y_predit <- as.integer(pred_class[,2]>0.5)
+y_vrai <- Y_test$drugg
 ```
 
-Option type en fonction du type de modèle
+### Indicateurs
 
-Méthode                       | Type
-------------------------------|---
-Arbre de décision             | `\`
-Régression logistique         | `type="response"`
-Forêt aléatoire               | `type= "prob")[,2]`
-Boosting                      | `type ='prob' )[,2]`
-Classificateur naïve baysien  | `)$posterior[,2]`
+`library(MLmetrics)`
+
+!!! warning 
+	Il faut spécifier la valeur qu'on considère comme étant positive.
  
-## Comparer la performance de modèles
+* `Accuracy(y_pred = y_predit, y_true = y_vrai, positive = 1)` précision.
+* `Precision(y_pred = y_predit, y_true = y_vrai, positive = 1)`.
+* `Sensitivity(y_true = y_vrai, y_pred = y_predit, positive = 1)`.
+* `Recall(y_true = y_vrai,  y_pred = y_predit,  positive = 1)` rappel.
+* `Specificity(y_true = y_vrai, y_pred = y_predit, positive = 1)` spécificité
+* `F1_Score(y_true = y_vrai,  y_pred = y_predit, positive = 1)` F score.
+* `AUC(y_pred = y_proba, y_true = y_vrai)` 
 
-### Courbe de (Receiver Operating Characteristic)
+### Matrice de confusion
+
+* `prop.table(table(eval$cible, eval$pred.class))` matrice de confusion en fréquence.
+
+### Courbe de ROC (Receiver Operating Characteristic)
+
+* `roc.plot(classe, proba)` courbe Receiving Operator Characteristic (ROC)`library(verification)`.
+* `auc = performance(pred,"auc")@y.values[[1]]` Area Under the Curve (AUC).
 
 ```
-predtion = prediction(pred, test$cible,label.ordering=c(0,1))
+predtion = prediction(pred, test$cible, label.ordering=c(0,1))
 roc = performance(predtion, "tpr", "fpr")
 ```
 
@@ -98,34 +109,18 @@ lift = ggplot() +
 lift + geom_line( aes(x= lift$perpop, y=lift$cumden), colour = "blue")
 ```
 
-## Descente de gradient
+### Courbe de Lift
 
-La descente de gradient permet de trouver le minimum d'une fonction 
+`library(BCA)`
 
 ```
-fct_cout <- function(x_obs, y_obs, params){
-  a <- params[1]
-  b <- params[2]
-  return(sum( (fct_mod_lineaire(params, x_obs) - y_obs)**2 ))
-}
-
-optim(par = c(a = 3, b = 12), fn = fct_cout, method = "CG", x = x, y = yobs)
+lift.chart( c("CCS.glm", "CCS.rpart"), data = CCSVal, targLevel = "1", 
+            trueResp = 0.01,
+            type = "cumulative",
+            sub = "Validation")
 ```
 
-* `optim(par = c(-5,5), fn = fonction, method = "BFGS")` minimiser une fonction. 
+* `type =` : 
 
-R				| Méthode
-----------------|----------
-`Nelder-Mead`	|
-`CG`			| Gradient conjugué.
-`BFGS`			| Méthode de Newton. 
-`L-BFGS-B`		| BFGS avec des contraintes sur les valeurs à trouver.
-`SANN`			| Recuit simulé.
-`Brent`			|
-
-Sortie :
-
-* `$par` valeurs trouvées des paramètres qui minimise la fonction.
-* `$value` valeurs minimums.
-* `$convergence` renvoie si l'algorithme a réussi à converger (`0` oui, `1` non le maximum d'itération a été atteint).
-* `$counts` renvoie le nombre d'appel à la fonction et à la dérivé.
+    * `cumulative`
+    * `incremental` 
