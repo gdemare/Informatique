@@ -10,7 +10,7 @@ Option :
 * `parms=list(split="gini")` critère à utiliser.
 * `control = rpart.control()` pour controler les paramètres de l'arbre. Paramètres :
 
-	* `minsplit = 5` nombre de noeuds minimum.
+	* `minsplit = 5` nombre minimum d'obseration dans chaque noeud.
 	* `minbucket = 1` l'effectif minimal dans chaque noeud terminal.
  	* `maxdepth = 30` hauteur (profondeur) maximale de l'arbre.
     * `cp = 0` paramètre de pénalisation pour la complexité.
