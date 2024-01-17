@@ -28,11 +28,17 @@ abline(h=0.2, lty=2)
 
 ```
 y_pred_class <- predict(abre_complet, dtf_test)y_proba <- pred_class[,2]
-y_predit <- as.integer(pred_class[,2]>0.5)
+y_predit <- as.factor(as.integer(pred_class[,2]>0.5))
 y_vrai <- Y_test$drugg
 ```
 
 ### Indicateurs
+
+`library(caret)`
+
+* `confusionMatrix(data = y_predit, reference = y_vrai)` matrice de confusion et les indicateurs associés.
+
+#### MLmetrics
 
 `library(MLmetrics)`
 
