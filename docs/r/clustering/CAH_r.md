@@ -26,6 +26,7 @@ Ward        | `ward.D2`
 
     * `k = nbre` nombre de classes à conserver.
     * `h = nbre` nombre d'individus par groupe.
+    * `horiz = T` mettre le graphique à l'horizontal.
 
 ### Elaguer l'arbre
 
