@@ -1,15 +1,15 @@
-## Types de régression
-
 `import sklearn.linear_model.(C=100)`
 
-* `LinearRegression()` regression linéaire.
-* `LogisticRegression()` regression logisitque.
+Les types de régressions :
+
+* `LinearRegression()` régression linéaire.
+* `LogisticRegression()` régression logistique.
 
 Paramètres : 
 
-*`C=100`
+* `C=100`
 
-## Retours
+Retourne :
 
 * `logreg.coef_[0]` coefficient (ou poids) pour chaque variable.
 * `logreg.intercept_` ordonnée à l'origine.
