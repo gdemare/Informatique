@@ -55,6 +55,8 @@ y_vrai <- Y_test$drugg
 
 ### Courbe de ROC (Receiver Operating Characteristic)
 
+`library(plotROC)`
+
 1. `rocdata <- data.frame(D = y_vrai, M = y_proba)` définir les valeurs de la courbe.
 2. `ggplot(rocdata, aes(m = M, d = D) + geom_roc()` afficher la courbe de ROC. Paramètres :
 
