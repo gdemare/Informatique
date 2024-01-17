@@ -18,7 +18,7 @@ cart = rpart( data = data,
 Option :
 
 * `methode = class/anova` variable à expliquer de type qualitative/quantitative.
-* `minsplit = nbre` nombre de branches minimum.
+* `minsplit = nbre` nombre de noeuds minimum.
 * `minbucket = 1/3*minsplit` par défaut.
 * `control = rpart.control(minsplit=5,cp=0)` sans contrainte sur la qualité et avec au moins 5 obsevations par feuille.
 
