@@ -13,8 +13,8 @@ Option :
 	* `minsplit = 5` nombre minimum d'obseration dans chaque noeud.
 	* `minbucket = 1` l'effectif minimal dans chaque noeud terminal.
  	* `maxdepth = 30` hauteur (profondeur) maximale de l'arbre.
-    * `cp = 0` paramètre de pénalisation pour la complexité.
-    * `mincriterion = 0.3)` 1-p-valeur à partir de laquelle on souhaite arrêter.
+	* `cp = 0` paramètre de pénalisation pour la complexité.
+	* `mincriterion = 0.3` 1-p-valeur à partir de laquelle on souhaite arrêter.
 
 `summary(cart)` information sur l'arbre.
 
@@ -29,7 +29,7 @@ rel error       | taux erreur de jeu d'apprentissage
 xerror          | taux erreur de la validation croisée (R constitut 10 échantillons)
 xstd            | écart type des erreurs 
 
-`prune(cart,cp = 0.0155441)` élaguer l'arbre.
+`prune(cart, cp = 0.0155441)` élaguer l'arbre.
 
 ### Graphiques
 
