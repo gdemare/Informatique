@@ -145,8 +145,9 @@ nav:
         - "Positionnement multidimensionnel" : r/reduction-dimensions/positionnement-multidimensionnel_r.md
     - "Modèles" :
       - "Prédire et évaluer un modèle" : r/models/prediction_r.md
+      - "Type classification" : r/classification_r.md
+      - "Type regression" : r/regression_r.md
       - "Classification" :
-        - "Classification" : r/models/classification/classification_r.md
         - "ANOVA" : r/models/classification/ANOVA_r.md
         - "Analyse discriminante" : r/models/classification/analyse-discriminante_r.md
         - "Arbre de décision" : r/models/classification/arbre-decision_r.md
