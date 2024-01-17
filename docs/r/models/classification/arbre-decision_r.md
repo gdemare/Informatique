@@ -1,46 +1,24 @@
-Package : rpart, rpart.plot, ipred.
+## Package rpart
 
-```
-library(rpart)
-library(rpart.plot)
-library(ipred)
-```
+`library(rpart)`, `library(rpart.plot)`.
 
-Construire l'arbre
-
-```
-cart = rpart( data = data, 
-              Cible ~ . ,
-              parms=list(split="gini"),
-              cp=0)
-```
+`cart = rpart(data = data, Cible ~ ., control = rpart.control())` construire l'arbre.
 
 Option :
 
 * `methode = class/anova` variable à expliquer de type qualitative/quantitative.
-* `minsplit = nbre` nombre de noeuds minimum.
-* `minbucket = 1/3*minsplit` par défaut.
-* `control = rpart.control(minsplit=5,cp=0)` sans contrainte sur la qualité et avec au moins 5 obsevations par feuille.
+* `parms=list(split="gini")` critère à utiliser.
+* `control = rpart.control()` pour controler les paramètres de l'arbre. Paramètres :
 
+	* `minsplit = 5` nombre de noeuds minimum.
+	* `minbucket = 1` l'effectif minimal dans chaque noeud terminal.
+ 	* `maxdepth = 30` hauteur (profondeur) maximale de l'arbre.
+    * `cp = 0` paramètre de pénalisation pour la complexité.
+    * `mincriterion = 0.3)` 1-p-valeur à partir de laquelle on souhaite arrêter.
 
-for stumps : rpart.control(maxdepth=1,cp=-1,minsplit=0)
+`summary(cart)` information sur l'arbre.
 
-## Information sur l'arbre
-
-```
-summary(cart)
-``` 
-
-l’erreur xerror calculée par validation croisée (R constitut 10 échantillions).
-* `xerror` erreur de la validation croisée.
-error erreur de la 
-
-## Qualité de l'arbre 
-
-```
-printcp(cart)
-plotcp(cart)
-```
+Retourne :
 
 Indicateur      | Définition
 ----------------|---
@@ -51,17 +29,31 @@ rel error       | taux erreur de jeu d'apprentissage
 xerror          | taux erreur de la validation croisée (R constitut 10 échantillons)
 xstd            | écart type des erreurs 
 
-feuille qui minimise l'erreur et le coefficent 
+`prune(cart,cp = 0.0155441)` élaguer l'arbre.
 
-## Élaguer l'arbre
+### Graphiques
 
-```
-prunedcart9f = prune(cart,cp=0.0155441)
-```
+`library(rpart.plot)`
 
-## Afficher l'arbre de décision
+* `rpart.plot(abre_complet)` afficher l'arbre (ou sinon `prp(abre_complet)`).
+* `visTree(abre_complet)` afficher l'arbre avec le nombre de données dans chaque noeud (`library(visNetwork)`).
 
-```
-prp(cart,type=2,extra=1,split.box.col="lightgray")
-rpart.plot(cart)
-```
+### Qualité
+
+* `printcp(cart)` afficher la complexité de l'arbre.
+* `plotcp(cart)` afficher l'erreur relative en foonction de la complexité.
+
+## Package party
+
+`library(party)`
+
+`ctree(drugg~., dtf_train, control = ctree_control()`
+
+* `ctree_control()` paramètres de l'arbre.
+
+	* `minsplit = 2` effectif minimal pour séparer un noeud.
+	* `minbucket = 1` effectif minimal dans chaque noeud terminal.
+	* `maxdepth = 30` hauteur (profondeur) maximale de l'arbre
+	* `mincriterion = 0.3` c1-p-valeur à partir de laquelle on souhaite cesser la croissance.
+ 
+ `plot(arbre_ctree)` afficher l'arbre.
