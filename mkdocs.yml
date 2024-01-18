@@ -12,7 +12,6 @@ theme:
     - content.action.view # bouton voir
     - content.tabs.link
     - content.code.copy
-    - content.tabs.link 
      - toc.integrate # réuni le plan et le sommaire
     #- header.autohide
     - navigation.tabs #onglet
@@ -22,6 +21,7 @@ theme:
     - navigation.path # affiche le chemin au début de la page.
     - navigation.top # bouton pour remonter en haut
     # - navigation.indexes # pour avoir une page d'index dans chaque partie
+    - content.code.copy # pour copier le code
   palette:
       scheme: slate
       primary: blue grey
@@ -42,15 +42,14 @@ plugins:
       type: date
 
 markdown_extensions:
-  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.arithmatex:
+  - pymdownx.superfences # les blocs note, warning,...
+  - pymdownx.arithmatex: # les formules mathématiques
       generic: true
-  - tables
+  - tables # les tableaux
   
 extra_javascript:
   - javascripts/mathjax.js
