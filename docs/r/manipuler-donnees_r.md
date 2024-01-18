@@ -33,7 +33,7 @@ Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openx
 
 	* `headerStyle = headerStyle` style des entêtes (voir style).
 	* `borders = "n"` .
- 	* `startCol = nb` et `colNames = nb` début où commencer à remplir. 
+	* `startCol = nb`  et `colNames = nb` début où commencer à remplir. 
 
 #### Style 
 
@@ -81,7 +81,7 @@ Package : `dplyr`, `tidyr`. `résultat1 %>% résultat2` : rediriger le résultat
 
 Les fonctions avec dplyr
 
-```
+``` r
 max_by <- function(data, var, by) {
   data %>%
     group_by({{ by }}) %>%
@@ -98,7 +98,8 @@ max_by <- function(data, var, by) {
 * `slice(10:15)` sélectionne les lignes selon leur position.
 * `top_n(nlignes, variable)` sélectionne et ordonne les n premières observations (ou groupes si les données sont groupées) (`desc()` = décroissant).
 * `is.na(data)` renvoie les lignes avec des valeurs manquantes (`myDataframe[is.na(dt)] = 0` pour les remplacer).
-* `complete.cases(donnees)` renvoie les lignes avec des valeurs manquantes.
+* `complete.cases(data)` renvoie les lignes avec des valeurs manquantes.
+* `case_when(condition1 ~ val1, condition2 ~ val2,...)` fonction équivalente au CASE WHEN en SQL.
 
 ## Selectionner
 
@@ -140,7 +141,7 @@ Package `tidyr`
 
 	* `values_fill = val` remplacer les valeurs manquantes.
 
-```
+``` r
 # La variable treatment (avec les modalités A, B, C ...) est transformée en colonne (A, B, C, D). La valeur est la somme des decrease. Chaque ligne correspond à une valeur de rowpos.
 OrchardSprays %>% 
   select(rowpos, treatment, decrease) %>%
@@ -187,7 +188,7 @@ Fonction		| Description
 Fonction 		| Défintion
 ----------------|-------------
 `rowSums()`		| Somme
-`colMeans()`	| Moyenne (`colMeans(is.na(donnees))` utile pour connaitre le pourcentage de valeurs manquantes).
+`colMeans()`	| Moyenne (`colMeans(is.na(data))` utile pour connaitre le pourcentage de valeurs manquantes).
 
 * `sapply(dt, axis = 1/2, fonction)` appliquer une opération à toutes les colonnes ou les lignes.
 
@@ -221,16 +222,18 @@ Fonction 		| Défintion
 
 ### Les jointures
 
-`A %>% jointure(B, <by = c("var1" = "var2")> )`
+`A %>% jointure(B)`
 
 * `inner_join(data)` A et B
 * `left_join(data)` A (+ A et B)
 * `right_join(data)` B (+ A et B)
 * `semi_join(data)` A et pas B.
 * `anti_join(data)` B et pas A.
-* `full_join(data)` A ou B. Option :
+* `full_join(data)` A ou B.
 
-	* `by = c("col1" = "col2")` préciser la jointure.
+Option :
+
+* `by = c("col1" = "col2")` préciser la jointure.
 
 ## Fusions lignes et colonnes
 
@@ -243,24 +246,3 @@ Fonction 		| Défintion
 * `intersect(y, z)` observations appartenant à y et z.
 * `setdiff(y, z)` observations appartenant à y et pas à z.
 * `union(y, z)` observations appartenant à y et z ou l'un des 2.
-
-## Discrétiser des variables
-
-* `discretize(var, categories = nbre groupe, label = )` discrétiser une variable (package : `arules`).
-
-	* `method = "frequency"` méthode.
-	* `categories = nbre` nombre de classes.
-
-* `cut2(var, breaks, minmax=T)` découper en classe en fonction du verteur borne`(val1;[` (package Hmisc).
-* `smbinning(df = data, y = "var", x = "var_quanti")` discrétiser de facon optimale les varibles du data pour un score. (packages : smbinning); y doit être de type integer.
-
-	* `$cuts` bornes.
- 
-## Autres fonctions
-
-* `model.matrix(var1)` dichotomiser un data (tableau disjonctif).
-* `na.exclude(data)` supprimer les lignes avec au moins une valeur manquante.
-* `case_when(condition1 ~ val1, condition2 ~ val2,...)` fonction équivalente au CASE WHEN en sql.
-* `scale(fromage, center = T, scale = T)` centrer et réduire les données.
-* `Sys.sleep(seconde)` attendre un nombre de seconde avant la suite de l'exécution.
-* `grepl(symbole, variable)` tester si le symbole est contenu dans la variable.

@@ -4,7 +4,7 @@
 
 ### Une variable
 
-```
+```r
 g = ggplot() + theme_minimal() + aes(x)
 ```
 
@@ -104,12 +104,9 @@ Libellés :
 * `facet_grid(variable~.)` sur une colonne.
 * `facet_wrap( ~variable)` en ligne et en colonne.
 
-## Exporter le graphique
+## Autres
 
 * `ggsave(plot=p, file="nom.extension")` exporter le graphique.
-
-## Graphique interactif
-
 * `ggplotly(graph)` rendre le graphique interactif (package `plotly`).
 
 ## Afficher une fonction
@@ -119,7 +116,6 @@ fonc = function(x, a){a * x**2}
 p <- ggplot(data = data.frame(x = 0), mapping = aes(x = x))
 p + stat_function(fun = fonc, args = list(a = 3)) + xlim(-5,5)
 ```
-
 ## Les couleurs à ajouté 
 
 ### Couleurs personnalisées
@@ -138,7 +134,7 @@ library : `RColorBrewer`
 
 ## Graphique avec plotly
 
-package : `plotly``
+Package : `plotly``
 
 `%>%` pour ajouter des options.
 
@@ -149,15 +145,13 @@ package : `plotly``
 
 ### Supprimer la légende
 
-```
+``` r
 layout(title = 'Répartition des espèces évaluées',
          xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 ```
 
-### Donuts et cambenbert
-
-`add_pie(hole = 0.6)`
+* `add_pie(hole = 0.6)` donuts et cambenbert
 
 ### Séries temporelles
 
@@ -197,7 +191,7 @@ Paramètres :
 * `sub = sous_titre` sous titre.
 * `col =` couleur.
 
-*`heatmap(data)` heatmap.
+* `heatmap(data)` heatmap.
 
 ### Ajouter des éléments 
 
@@ -212,7 +206,7 @@ Paramètres :
 
 ### Afficher une fonction en 3D
 
-```
+```r
 z = outer(x, y, fonction)
 graphique
 ```

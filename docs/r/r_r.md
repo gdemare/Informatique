@@ -56,6 +56,7 @@
 * `dput(variable)` afficher la variable à déclarer en code R.
 * `suppressWarnings(code)` supprimer les warnings.
 * `suppressMessages(code)` supprimer les messages.
+* `Sys.sleep(seconde)` attendre un nombre de seconde avant la suite de l'exécution.
 
 ## Environnement
 
@@ -100,8 +101,7 @@ Déclarer des variables :
 * `setdiff(vec1, vec2)` element du vecteur 1 non présent dans vec2.
 * `intersect(vec1, vec2)` intersection de deux vecteurs.
 
-
-### Les liste
+### Listes
 
 ```
 list(
@@ -110,7 +110,7 @@ list(
 )
 ```
 
-## Les matrices
+## Matrices
 
 * `matrix(vecteur, nrow = , ncol =)` transformer en matrice.
 * `class.ind(vec)` créer une marice binaire à partir d'un vecteur avec les numéro des colonnes.
@@ -157,6 +157,7 @@ if ( test_expression1) {
 
 * `assign(nom, valeur)` créer des variables avec une boucle.
 * `get(nom)` appeler une variable.
+* `grepl(symbole, variable)` tester si le symbole est contenu dans la variable.
 
 Opérateur	| Définition
 ------------|-----
@@ -171,7 +172,7 @@ Opérateur	| Définition
 
 ### For 
 
-```
+``` r
 for(i in 1:nrow(g)){
 	instruction
 }
@@ -181,7 +182,7 @@ for(i in 1:nrow(g)){
 
 ### While - tant que c'est vrai
 
-```
+``` r
 while(condition){
 	instructions
 }
@@ -258,10 +259,11 @@ MySQL 		| `RMySQL`	| `MySQL()`
 
 ### Créer une connexion.
 
-```
+```r 
 dbConnect(MySQL(), paramètre)
 on.exit(dbDisconnect(con))
 ```
+
 Paramètres : 
 
 * `dbname = "smur"`
