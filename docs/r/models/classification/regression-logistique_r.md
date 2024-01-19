@@ -1,7 +1,6 @@
-<<<<<<< Updated upstream:docs/r/models/classification/regression-logistique_r.md
 `model_log <- glm(y_reel~., data = dt_train, family="binomial")` déclarer le modèle.
 
-`summary(selection)` information sur la regression. Paramètres
+`summary(selection)` information sur la regression. Paramètres :
 
 * `$formule` formule du modèle.
 
