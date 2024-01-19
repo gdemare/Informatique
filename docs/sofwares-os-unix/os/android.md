@@ -4,7 +4,10 @@
 
 * Ankidroid, application de fiches mémoire open source (disponible également sur Windows,...) avec synchronisation entre les différents appareils.
 * K-9 Mail, gestionnaire d'email open source.
-* Musicolet, le meilleur lecteur de musique local, open source.
+    
+    * Musicolet, le meilleur lecteur de musique local, open source.
+    * Oto music gratuit et open source.
+      
 * Notic, application pour bloquer les notifications de certaines applications.
 
 ### F-droid
@@ -12,7 +15,7 @@
 Installer [Droid-ify](https://f-droid.org/en/packages/com.looker.droidify/) pour accéder à [F-droid](https://f-droid.org/).
 
 * Anysoftkeyboard, un bon clavier.
-* Auxio, un super lecteur audio.
+* Auxio (ne fonctionne plus), un super lecteur audio.
 * Breezy, une bonne application pour la météo avec la possibilité de définir MétéoFrance comme fournisseur de données.
 * Launcher :
 
