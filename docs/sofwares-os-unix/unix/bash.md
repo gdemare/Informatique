@@ -329,24 +329,25 @@ Les erreurs n'apparaissent pas, pour y remédier, il faut les rediriger vers un 
   
  	* `cvf «nomarchive.tar» «fichiers»` créer une archive tar (`c` créer une archive .tar; `v` afficher le détail des opérations; `f` assembler l'archive dans un fichier).
 	* `tf «nomarchive.tar» «fichiers»` afficher le contenu de l'archive sans l'extraire. 
-	* `xvf «nomarchive.tar» «fichiers»` extraire les fichiers de l'archive (`x` pour eXtract).
+	* `xvf nomarchive.tar` extraire les fichiers de l'archive (`x` pour eXtract).
 	* `zcvf` archiver et compresser en gzip (`z` compresser avec gzip).
 	* `zxvf` désarchiver et décompresser en gzip.
 	* `jcvf` archiver et compresser en bzip2.
 	* `jxvf` désarchiver et décompresser en bzip2.
 	* `ztf` afficher le contenu...
 	* `jtf`
+
+* `gunzip ficheir` décompresser un ficiher gz.
 	
-* `gzip «nomarchive»` compresser une archive (la plus courante).
-Paramétres:	
+* `gzip «nomarchive»` compresser une archive (la plus courante). Paramétres:	
 
   	* `-v` affiche les détails de l'opération.
    
 Commandes associées:
 
-	* `-zcat` lire un fichier compressé en gzip en entier.
-	* `-zmore` lire un fichier compressé en gzip ligne par ligne.
-	* `-zless` lire un fichier compressé en gzip page par page.
+* `-zcat` lire un fichier compressé en gzip en entier.
+* `-zmore` lire un fichier compressé en gzip ligne par ligne.
+* `-zless` lire un fichier compressé en gzip page par page.
 
 * `bzip2 archive` compresser une archive (la plus puissante).
 Paramétres:
@@ -366,6 +367,7 @@ Paramétres :
 
  	* `e` obligatoire pour décompresser.
 	* `1` afficher le contenu.
+
 
 ## La connexion sécurisée à distance avec SSH
 
