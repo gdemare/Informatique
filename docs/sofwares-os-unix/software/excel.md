@@ -17,9 +17,9 @@
 
 ## Opérateurs logiques
 
-* `ET(condition1;condition2)` Et
-* `OU(condition1;condition2)` Ou
-* `ESTVIDE(cellule)` teste si la cellule est vide.
+* `ET(condition1;condition2)` Et.
+* `OU(condition1;condition2)` Ou.
+* `ESTVIDE(cellule)` test si la cellule est vide.
 * `NON()` négation. 
 
 ## Les conditions
@@ -35,60 +35,59 @@
 * `JOUR(date)` extraire le jour.
 * `MOIS(date)` extraire le mois.
 * `ANNEE(date)` extraire l'année.
-* `JOURSEM(date;type)` numéroter les jours de la semaine.
+* `JOURSEM(date;type)` numéroter les jours de la semaine. Type :
 
-Type :
-  * `1` dimanche=1 samedi=7
-  * `2` lundi=1 dimanche=y
-  * `3` lundi=0 dimanche=1
-  * `NO.SEM(date; type)` numéroter les semaines. Type :
-  * `1` dimanche le premier jour de la semaine
-  * `2` lundi le premier jour de la semaine
+	* `1` dimanche=1 samedi=7
+	* `2` lundi=1 dimanche=y
+	* `3` lundi=0 dimanche=1
 
-* `NO.MOIS(date;type)`
-Type :
-  * `1` dimanche le premier jour de la semaine
-  * `2` lundi le premier jour de la semaine\
+* `NO.SEM(date; type)` numéroter les semaines. Type :
+ 
+	* `1` dimanche le premier jour de la semaine
+	* `2` lundi le premier jour de la semaine
+
+* `NO.MOIS(date;type)` numéro du mois. Type :
+  
+	*  `1` dimanche le premier jour de la semaine
+	* `2` lundi le premier jour de la semaine\
  
  * `TEXTE(date;code)` afficher le nom du mois ou du jour.
 
-| Code | Définition |
-|---|---|
-| `"jjj"` | jour |
-| `"mmm"` | mois |
+Code    | Définition
+--------|---
+`"jjj"` | jour
+`"mmm"` | mois
 
 * `DATEDIF(date1;date2;code)` age entre deux date (NB : date1=<date2).
 
-| Code | Definition|
-|---|---|
-| `"y"` | années |
-| `"m"` | mois |
-| `"d"` | jours |
-| `"ym"` | mois, une fois les années soustraite |
-| `"yd"` | jours, une fois les années soustraites |
-| `"md"` | jours, une fois les années et mois soustraits |
+Code   | Definition
+-------|---
+`"y"`  | années
+`"m"`  | mois
+`"d"`  | jours
+`"ym"` | mois, une fois les années soustraite
+`"yd"` | jours, une fois les années soustraites
+`"md"` | jours, une fois les années et mois soustraits
 
 ### Ajouter une nombre d'années, mois, jours
 
-```
-DATE(ANNEE(A2)+B2;MOIS(A2);JOUR(A2))
-```
+`DATE(ANNEE(A2)+B2;MOIS(A2);JOUR(A2))`
 
 ## Formater du texte
 
-| Fonction | Définition |
-|---|---|
-| `MINUSCULE(text)` | mettre le texte en minuscule |
-| `MAJUSCULE(test)` | mettre le texte en majuscule |
-| `NOMPROPRE(text)` | mettre une majuscule à la première lettre des mots |
-| `STEXT()` | |
-| `NBCAR(text)` | compter le nombre caractère |
+Fonction 			| Définition
+--------------------|---
+`MINUSCULE(text)` 	| mettre le texte en minuscule
+`MAJUSCULE(text)` 	| mettre le texte en majuscule
+`NOMPROPRE(text)` 	| mettre une majuscule à la première lettre des mots
+`STEXT()` 			|
+`NBCAR(text)` 		| compter le nombre de caractères
 
 ## Supprimer un tableau
 
-1. Onglet "Création tableau"
-2. Création
-3. Convertir en plage
+1. Onglet "Création tableau".
+2. Création.
+3. Convertir en plage.
 
 ## Les heures
 
@@ -98,37 +97,38 @@ Calculer un nombre d'heures. Il faut formater la case en `[h]:mm;@` sinon le tot
 
 ## Graphique 
 
-* Echelle logarithmique `Cliquer sur l'axe. > Option axe > Echelle logarithmique`
-* Barre d'erreurs `Barre d'erreurs > Histogramme > Personnaliser`
-
+* Echelle logarithmique `Cliquer sur l'axe. > Option axe > Echelle logarithmique`.
+* Barre d'erreurs `Barre d'erreurs > Histogramme > Personnaliser`.
 
 ### Histogramme variable continue
 
-Il faut calculer la taille des classes (abscisses).
+Il faut calculer la taille des classes (abscisses) :
+
 * Superposition 100%
 * Largeur de l'intervalle 0%
 
 ## Indicateurs statistiques
 
-| Formule | Définition |
-|---|---|
-| `MEDIANE()` | médiane |
-| `QUARTILE(;1 ou 3)` | quartile |
-| `VAR.P` | variance |
-| `VAR.S` | variance corrigé  |
-| `ECARTYPE.P` | écart type |
-| `ECARTYPE` | écart type corrigé | 
-| `NB()` | nombre de cellules non vides | 
+Formule 			| Définition
+--------------------|---
+`MEDIANE()` 		| médiane
+`QUARTILE(;1 ou 3)`	| quartile
+`VAR.P` 			| variance
+`VAR.S` 			| variance corrigée
+`ECARTYPE.P` 		| écart type
+`ECARTYPE` 			| écart type corrigé 
+`NB()` 				| nombre de cellules non vides
 
 ## Les tests statistiques
 
 `Anova` activer dans Compléments > Analysis ToolPak. Onglet Données
 `T.TEST(col1 ; col2 ; 1 ou 2 ; )` test de student.
-*	1 par paires
-*	2 sur deux échantillons de variance égale (homoscédastique)
-*	3 sur deux échantillons de variances différentes (hétéroscédastique)
 
-# Nbre aléatoires
+* `1` par paires.
+* `2` sur deux échantillons de variance égale (homoscédastique).
+* `3` sur deux échantillons de variances différentes (hétéroscédastique).
+
+## Nbre aléatoires
 
 `ALEA.ENTRE.BORNES(borne_inf, borne_sup)` génére un nombre aléatoire entre deux nombres.
 
