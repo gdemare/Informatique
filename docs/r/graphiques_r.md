@@ -94,6 +94,7 @@ Libellés :
 * `ylab("titre")` titre de l’ordonnée.
 * `xlim(min, max)` taille de l'abscisse.
 * `ylim(min, max)` taille de l'ordonnée.
+* ` scale_x_log10()` échelle logarithmique.
 * `coord_equal(ratio = 1)` garder un ratio abscisse/ordonnée.
 * `labs(color = titre, fille = titre)` changer le titre de la légende (color ou filled dépendent dû type de coloration).
 * `scale_color_discrete(labels = c("label 1", "label 2"))` modifier les valeurs des modalités de la légende (même chose avec `filled`).
