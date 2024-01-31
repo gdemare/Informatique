@@ -123,6 +123,7 @@ nav:
       - "Formats" : r/formater-donnees_r.md
       - "Dataframe" : r/manipuler-donnees_r.md
       - "Divers" :
+        - "BLAST" : r/bioinformatique/blast_r.md
         - "Carthographie" : r/carte_r.md
         - "Développer en R" : r/developper_r.md
         - "Programme indépendant" : r/programme-independant_r.md
