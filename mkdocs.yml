@@ -187,7 +187,9 @@ nav:
         - "ACM" : SAS/reduction-dimensions/ACM_sas.md
         - "ACP" : SAS/reduction-dimensions/ACP_sas.md
         - "AFC" : SAS/reduction-dimensions/AFC_sas.md
-  - "Softwares OS et Unix" :  
+  - "Softwares OS et Unix" :
+    - Bioinformatique :
+      - "Séquences" : bioinformatique/sequences.md
     - OS :
       - "Android" : sofwares-os-unix/os/android.md
       - "Ubuntu" : sofwares-os-unix/os/ubuntu.md
