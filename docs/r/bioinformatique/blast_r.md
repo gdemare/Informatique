@@ -11,6 +11,7 @@
 1. Générer la base pour le blast.
 2. Faire un prédict pour blaster les séquences.
 
+
 * `readDNAStringSet(fic_seq, format='fasta')` importer un fichier fasta.
 
 ### BLAST
