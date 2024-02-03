@@ -79,5 +79,5 @@ If (condition1) {
 	* `-Force` suppimer de façon récursive.
 
 * `gci -r -fi *psm*.xlsx | ri -Force` trouver des fichiers et les supprimer de façon récursive.
- 
 * `Invoke-Expression comande` exécuter une commande.
+* `Read-Host "message"` récupérer une entré utilisateur.
