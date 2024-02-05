@@ -2,6 +2,7 @@
 
 * `install.packages("package")` installer un package.
 * `library(package)` importer un package. 
+* `if(!require("tidyverse")) install.packages("tidyverse")` installer un package uniquement s'il n'est pas installé.
 
 ### Les meilleurs packages R
 
