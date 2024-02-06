@@ -90,6 +90,7 @@ nav:
       - "Formats" : python/formater-données_py.md
       - "Dataframe" : python/manipuler-donnees_py.md
       - Divers :
+        - "Carthographie" : python/carte_py.md
         - "Tableau de bord" : python/tableau-de-bord_py.md
         - "Traitements des images" : python/traitement-image_py.md
         - "Web scraping" : python/web-scraping_py.md
