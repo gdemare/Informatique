@@ -2,7 +2,6 @@
 
 ```
 library(shiny)
-library(shinydashboard)
 
 ui <- fluidPage(...)
 
@@ -22,6 +21,12 @@ fluidPage(
 
 * `title = titre` titrer l'application
 * `skin = couleur` theme utilisé.
+
+### Shiny dashboard
+
+`library(shinydashboard)`
+
+`dashboardPage(éléments)` créer une page shiny dashboard.
 
 #### Entête
 
