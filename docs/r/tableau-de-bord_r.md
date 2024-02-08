@@ -125,7 +125,7 @@ R                                                 | Type
 `checkboxGoupInput()`                             |
 `dateInput()`                                     |
 `dateRangeInput()`                                |
-`fileInput(nomFicher, text, multiple = FALSE)`    | importer un fichier
+`fileInput("inputId", "label", multiple = FALSE)`    | importer un fichier
 `numericInput()`                                  |
 `paswordInput()`                                  | 
 `colourInput()` (package `colourpicker`)          |
