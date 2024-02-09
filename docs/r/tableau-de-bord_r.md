@@ -175,7 +175,7 @@ Package `DT` Afficher un dataframe
 
 * `variable = reactive(valeur de la variable)` actualiser la rapport en fonction de la variable.
 * `variable()` utiliser une variable réactive.
-* `eventReactive(input$action, {variable})` réactive variable à la suite d'un é	vènement.
+* `eventReactive(input$action, {variable})` réactive variable à la suite d'un évènement.
 
 #### Liste interactive utilisant une variable réactive
 
@@ -210,7 +210,7 @@ input$tableau_rows_selected # indice des lignes selectionnées
 
 * `single` une seule ligne.
 
-requis la bibliothèque `rsconnect`
+Requis la bibliothèque `rsconnect`
 
 1. Découper le projet en deux fichiers : sever.R et ui.R.
 2. Générer un jeton depuis le site [shinyapps](https://www.shinyapps.io) : Token. 
