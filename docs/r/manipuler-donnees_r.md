@@ -5,7 +5,7 @@
 
 ### Libellés des colonnes
 
-Packages `Hmisc`, `labelled`
+Packages `labelled`
 
 * `var_label(dt)` renvoie les labels (ou attribuer un label). Prend comme valeur une `list(nom_col = "label")`.
 * `remove_var_label(dt)` supprimer les labels.
