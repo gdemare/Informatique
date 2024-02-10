@@ -1,9 +1,12 @@
 ## Shiny
 
-```
+``` R
 library(shiny)
+library(shinydashboard)
 
-ui <- fluidPage(...)
+ui <- fluidPage(
+  interface
+)
 
 server <- function(input, output) {
     contenu
@@ -11,58 +14,31 @@ server <- function(input, output) {
 shinyApp(ui = ui, server = server) #executer l'application
 ```
 
-### Interface utilisateur
+### UI
 
-```
-fluidPage(
-  contenu
-)
-```
+Paramètres :
 
 * `title = titre` titrer l'application
 * `skin = couleur` theme utilisé.
 
-### Shiny dashboard
 
-`library(shinydashboard)`
+* `dashboardHeader(title = "titre", titleWidth = largeur)` entête.
+* `dashboardSidebar(width = largeur, title = titre)` menu à gauche.
+* `dashboardBody()` corps de la page.
 
-`dashboardPage(éléments)` créer une page shiny dashboard.
+#### Les onglets
 
-#### Entête
+* `sidebarMenu(menuItem(text = "onglet", tabName = "onglet"))` ajouter dans le menu.
+* `tabItems(tabItems(tabName = onglet, contenuOnglet))` ajouter dans le corps.
+Parametres :
 
-`dashboardHeader(title = "titre", titleWidth = largeur)`
+	* `badgeLabel = nom, badgeColor = couleur` Ajouter un badge
+	* `disable = TRUE` desactiver la barre.
 
-#### Menu
 
-`dashboardSidebar(width = largeur, title = titre)`
+##### Agencement
 
-Ajouter un onglet :
-
-```
-sidebarMenu(
-        menuItem(text = "onglet", tabName = "onglet")
-      )
-```
-
-#### Corps de la page
-
-```
-dashboardBody(
-    fluidRow(contenu)
-)
-```
-
-`tabItems(contenu)` page
-
-```
-tabItems(
-  tabItem(tabName = onglet, contenuOnglet)
-)
-```
-Créer un onglet. Parametres :
-
-* `badgeLabel = nom, badgeColor = couleur` Ajouter un badge
-* `disable = TRUE` desactiver la barre.
+* `fluidRow(contenu)` 
 
 ##### Contenu des onglets
 
@@ -87,7 +63,7 @@ Code            					| Type
 `infoBox()`     					| texte statique
 `tabBox()`      					| valeur
 `valueBox()`   						| valeur dynamique
-`modalDialog()`						| fenêtre pop up (ajouter un boutont `modalButton("Dismiss")`
+`modalDialog()`						| fenêtre pop up (ajouter un bouton `modalButton("Dismiss")`)
 `HTML("## markdown")`               | afficher du texte makdown directement
 `renderMarkdown(fichier)`         	| afficher du texte markdown
 
@@ -130,7 +106,7 @@ R                                                 | Type
 `checkboxGoupInput()`                             |
 `dateInput()`                                     |
 `dateRangeInput()`                                |
-`fileInput("inputId", "label", multiple = FALSE)`    | importer un fichier
+`fileInput(nomFicher, text, multiple = FALSE)`    | importer un fichier
 `numericInput()`                                  |
 `paswordInput()`                                  | 
 `colourInput()` (package `colourpicker`)          |
@@ -147,7 +123,7 @@ Option :
 
 ### Server
 
-```
+``` R
 server <- function(input, output) {
   output$nom <- resultat
 }
@@ -173,75 +149,58 @@ Package `DT` Afficher un dataframe
 
 #### Variable réactive
 
-* `variable = reactive(valeur de la variable)` actualiser la rapport en fonction de la variable.
+* `variable = reactive(valeur)` actualiser la rapport en fonction de la variable.
 * `variable()` utiliser une variable réactive.
 * `eventReactive(input$action, {variable})` réactive variable à la suite d'un évènement.
 
 #### Liste interactive utilisant une variable réactive
 
-```
+``` R
 ui :
   uiOutput("interaction_slider")
 ```
 
 server :
 
-```
+``` R
   filterGenre <- reactive(genre)
   output$interaction_slider <- renderUI({
     selectInput("select", label = "Select box", 
                 choices = as.list(genre)$genre_label, selected = 1)
 ```
 
-### Selection sur un tableau
+### Dataframe
+
+#### DT
 
 `library(DT)`
 
-```
-output$tableau <- DT::renderDataTable({ 
- instruction
-})
-input$tableau_rows_selected # indice des lignes selectionnées
-```
+* `DT::renderDataTable({instruction})`
+* `input$tableau_rows_selected` indice des lignes selectionnées.
 
-## Déployer l'application sur le site Shinyapps
+#### Flextable
 
-`selection = valeur` 
+## Shinyapps
 
-* `single` une seule ligne.
-
-Requis la bibliothèque `rsconnect`
+`library(rsconnect)`
 
 1. Découper le projet en deux fichiers : sever.R et ui.R.
 2. Générer un jeton depuis le site [shinyapps](https://www.shinyapps.io) : Token. 
 
-### Tester et déployer l'application
-
-* `runApp()` tester l'application.
-* `deployApp()` déployer l'application.
-
-### Récupérer des données depuis une page Html vers R
+### Données sessions
 
 * `session$clientData$url_protocol`
 
-## Inserer des sorties R dans une page HTML
+## Inserer fichier 
 
-`ui = htmlTemplate(filename = "page.html", sortie1, entree1)`
-
-!!! note
-	Ajouter `server <- function(input, output, session) {`
-
-`{{ sortie }}` dans le fichier HTML.
-
-### Markdown
-
-Library : `htmltools`
-
-* `includeMarkdown("fichier.md")` insérer un fichier markdown.
+* `ui = htmlTemplate(filename = "page.html", sortie1, entree1)` insérer un html.
+* `includeMarkdown("fichier.md")` insérer un fichier markdown (`library(htmltools)`).
 
 -------------------
 
-## Flexdashboard : site web dynamique à partir d'un fichie Rmarkdown
+## Flexdashboard
+
+Flexdasboard permet de créer des tableaux de bord site web dynamique à partir d'un fichie Rmarkdown
 
 `library(flexdashboard)`
 
@@ -272,13 +231,13 @@ yeti      | bleu                 |
 
 ### Ajouter une box et des onglets
 
-```
+``` R
 Column {data-width=600}` préciser la largeur de la colonne.
 -------------------------------------
 ``` 
 séparateur de colonnes/lignes. Lorsque l'on spécifie une largeur il faut 
 
-```
+``` R
 Page 4 {data-navmenu="Menu B"}
 =====================================
 ```
@@ -291,34 +250,10 @@ Page 4 {data-navmenu="Menu B"}
 * `knitr::kable(data)` Afficher une table
 * `valueBox(comments, icon = "fa-comments")` ajouter une valeur box.
 
+## Golem
 
-## Golem et testthat : organiser son code
+`library(golem)`
 
-library `golem`
+La philosophie de Golem est de créer et organiser en appelant des fonctions :
 
-La philosophie de Golem est d'organiser le code de son application comme un module.
-
-ui.R
-
-```
-mod_bars_echarts_ui("bars_echarts_ui_1")
-```
-
-server.R
-
-```
-callModule(mod_bars_echarts_server, "bars_echarts_ui_1")
-```
-
-R/Mod_bars_echarts.R
-
-```
-mod_bars_echarts_ui <- function(id){
-    ns <- NS(id)
-    tagList( )
-}
-
-mod_bars_echarts_server <- function(input, output, session){
-    ns <- session$ns
-}
-```
+Méthodes alternatives pour appeler un module en lui fournissant un paramètre : `callModule(mod_bars_echarts_server, "bars_echarts_ui_1")`.
