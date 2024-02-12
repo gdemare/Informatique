@@ -78,11 +78,13 @@ Fonction 		| Définition
 
 	* `order='C'` préciser la facon de réordonnées les éléments. `'F'` 
 
-* `np.resize()` modifie la dimension sans renvoyer d'erreurs si elles ne sont pas compatibles.
+* `np.resize()` modifier la dimension sans renvoyer d'erreurs si elles ne sont pas compatibles.
 * `np.unique()` renvoie les valeurs uniques.
 * `np.sign(nbre)` renvoie le signe.
 * `np.loadtxt(fichier)` charger une matrice depuis un fichier (exemple `1	70	230`).
 * `np.loadtxt("array.dat", tableau)` enregister un array dans un fichier.
+* `np.concatenate((array1, array2), axis=1)` concaténer deux arrays.
+
 
 Attributs associés à un array :
 
