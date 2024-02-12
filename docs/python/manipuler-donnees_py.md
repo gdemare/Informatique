@@ -175,7 +175,8 @@ writer = pd.ExcelWriter(fichier, engine = 'xlsxwriter')
 ### Grouper les données
 
 * `.groupby(["colonne"])` grouper par.
-* `resample("A")` grouper par année.
+* `.resample("A")` grouper par année.
+* `.rolling(window=7)` définir une fenêtre qui se déplace (exemple, pour les moeynnes mobiles).
 
 Fonction 			| Définition
 --------------------|---
@@ -185,7 +186,7 @@ Fonction 			| Définition
 `.size()`			| nombre de lignes
 `.count()`			| nombre de lignes
 `.value_counts()`	| tableau effecitf par modalité `normalize=True` renvoie les %
-`nunique()` | nbre de valeurs uniques
+`nunique()` 		| nbre de valeurs uniques
 
 #### Fonction pandas
 
