@@ -191,7 +191,7 @@ Fonction 			| Définition
 
 Il est également possible d'utiliser les fonction sans grouper les données. Paramètres :
 
-* `axis=0/1` en fonction de la ligne/colonne.
+* `axis=0/1` en fonction de la colonne/ligne.
 
 #### Fonction pandas
 
