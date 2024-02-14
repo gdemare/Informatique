@@ -43,7 +43,7 @@ Dans pour choisir le noyau d'un envrionnement Visual Code ctrl+shift+P, sélecti
 
 #### Cloner un dossier github : 
 
-```
+``` bash
 git clone https://github.com/jkbr/httpie.git
 sudo python setup.py install
 ```
@@ -53,15 +53,11 @@ sudo python setup.py install
 * attribut ou propriété associé à un élément. Elles sont accessibles par `objet.propriété` et elles peuvent être lister avec `dir()`.
 * méthode est un objet de type fonction. `objet.fonction()`.
 
-```
-	 	 ____ 'module1.py' 		
-dossier_|
-		|____ 'module2.py'
-```
+Strucutre du dossier : `dossier/module1.py`,`dossier/module2.py` 
 
 Pour importer les fichiers class dans python :
 
-```
+``` python
 sys.path.append('chemin/dossier')
 from fichier import class
 ```
@@ -92,7 +88,7 @@ Paramètres :
 
 library : `NumPy`
 
-* `a = np.array([ [11,12,13], [21,22,23] ])` déclarer une matrice.
+* `a = np.array([[11,12,13], [21,22,23]])` déclarer une matrice.
 * `np.shape(a)` dimension d'une matrice .
 
 Opérateur 	| Définition
@@ -170,11 +166,9 @@ Non modifiable		| tupple			| frozenset
 * `liste[pos1][pos2]` afficher un élément.
 * `liste[4:]` sélectionner tous les éléments à partir du 4ème. Attention dans le cas de `4:7` prend l'élément 4, 5 et 6. 
 
-
 * `sorted(liste, reverse=false)` trier une liste sans l'enregistrer.
 * `set(liste)` renvoie les valeurs uniques pour une liste.
 * `len(liste)` taille de la liste.
-
 
 * `liste.append('texte')` ajouter une valeur à un vecteur à la dernière position.
 * `liste.insert(position, valeur)` inserer une valeur à une position.
@@ -401,7 +395,7 @@ def fonction (param1, param2=10):
 
 Fonction qui s'appelle à elle-même.
 
-```
+``` python
 def fct(nb):
 	if nb == 0 :
 		n == 0
@@ -409,16 +403,9 @@ def fct(nb):
 		return nb + fct(nb)
 ```
 
-##### Fonctions mathématiques
-
-```
-x = np.linspace(0, 135, 135)
-y = list(map( ma_fonction,x))
-```
-
 ### Déclarer une classe
 
-```
+``` python
 class classe:	
 	def __init__ (self):
 		self.var1
@@ -428,8 +415,7 @@ declarer = classe() # invoquer la classe.
 
 ## Le texte
 
-* `print( message1, message2)` afficher un message.
-Paramètre :
+* `print( message1, message2)` afficher un message. Paramètre :
 
 	* `sep=séparateur` ajouter un séparateur. 
 	* `end=text_fin` bloquer le retour à la ligne.
@@ -478,31 +464,13 @@ Fonction 		| Définition
 `texte.strip()`	| supprimer les espaces
 `len(texte)`	| nombre de caractères
 
-## Manipuler les images
-
-### Bibilothèque `skimage` (scikit-image)
-
-Package `from skimage import io`
-
-* `io.imread("chemin")` importer une image.
-* `io.imshow(monImage); io.show ` afficher l'image.
-
-### Bibilothèque `pillow`
-Coordonné et position des pixels (x, y) correspont à (largeur, hauteur).
-
-* `Image.open('fichier.jpg')` ouvrir une image.
-* `var_img.height` récupérer la hauteur.
-* `var_img.width` récupérer la largeur.
-* `var_img.getpixel((x,y))` récuperer la valeur des coordonnées rgb du pixel.
-* `var_img.putpixel((x,y), (r,g,b))` changer la couleur d'un pixel.
-* `afficher_image(image)` afficher l'image.
-* `Image.new(mode='RGB', size=(x,y))` créer une nouvelle image.
-
 ## Les fichiers
+
+`urllib.request.urlretrieve(url, variable)` récupérer un fichier depuis une url (`import urllib`).
 
 ### Manipuler les fichiers
 
-Package `os` 
+`import os` 
 
 Fonction 				| Définition
 ------------------------|-----------------
@@ -525,25 +493,23 @@ Fonction										| Définition
 `shutil.move( fichier, dossier_destination )`	| renommer un fichier
 `shutil.rename( ancien, nouveau)` 				| renommer un fichier 
 
-Package `glob`
-
-* `glob('*.extension')` lister les fichiers.
+* `glob('*.extension')` lister les fichiers (`import glob`).
 
 #### Sys
 
 * `sys.arv` liste des arguments donner au scipt Attention `sys.argv[0]` contient le nom du script.
-* `sys.exist("message")` ecrit un message et arrête du script.
+* `sys.exist("message")` écrire un message et arrêter du script.
 
 ### Enregistrer un fichier
 
-```
+``` python
 open('national geographic/index.html', 'w').close()
 fichier = open('journal Le Monde/index.html', "a")
 fichier.write(index)
 fichier.close()
 ```
 
-## Alternative
+### Alternative
 
 ```
 with open("fichier.md", 'w', encoding='UTF8') as file:
@@ -574,7 +540,7 @@ with open("zoo.txt", 'r') as filin:
 
 * `filin.read()` charge tout le contenu dans une variable texte.
 * `filin.readlines()` créer un élément de liste par ligne.
-* `filin.readline()` renvoie une ligne à chaque appel.
+* `filin.readline()` renvoyer une ligne à chaque appel.
 * `[ligne for ligne in filin]`  renvoie les lignes du fichier (méthode à privilégier).
 
 Avec `w` :
@@ -585,8 +551,9 @@ Propriétés fichier :
 
 * `.name` renvoie le nom du fichier.
 
-Lire et écrire un fichier simultanément : 
-```
+Lire et écrire un fichier simultanément :
+
+``` python
 with open("zoo.txt", 'r') as fichier1, open("vincenne.txt", 'w') as fichier2:
 	# type de fichiers
 	for i in fichier1.readlines():
@@ -597,7 +564,7 @@ with open("zoo.txt", 'r') as fichier1, open("vincenne.txt", 'w') as fichier2:
 
 `from yattag import Doc`
 
-```
+``` python
 doc, tag, text = Doc().tagtext()
 
 doc.asis('<!DOCTYPE html>')
@@ -609,8 +576,7 @@ index = doc.getvalue()
 ```
 
 * `with tag('baliseHTML'):` balise qui se ferme.
-* `oc.stag('baliseHTML')` balise sans fermeture.
-ajouter des options :
+* `oc.stag('baliseHTML')` balise sans fermeture. Paramètres :
 
 	* `id=identifiant` ajouter un identifiant.
 	* `klass=classe` ajouter une classe.
@@ -618,13 +584,27 @@ ajouter des options :
 !!! note
 	Possibilite d'inclure des boucles et des conditions à l'interieur du doc.asis
 
-### Convertir un fichier Word en Pdf
+### Les images
 
-package `docx2pdf`
+### Bibilothèque `skimage` (scikit-image)
 
-* `convert("fichier.docx", destination)` convertir docx en pdf.
+Package `from skimage import io`
 
-### Excel en python
+* `io.imread("chemin")` importer une image.
+* `io.imshow(monImage) ` afficher l'image.
+
+### Bibilothèque `pillow`
+Coordonné et position des pixels (x, y) correspont à (largeur, hauteur).
+
+* `Image.open('fichier.jpg')` ouvrir une image.
+* `var_img.height` récupérer la hauteur.
+* `var_img.width` récupérer la largeur.
+* `var_img.getpixel((x,y))` récuperer la valeur des coordonnées rgb du pixel.
+* `var_img.putpixel((x,y), (r,g,b))` changer la couleur d'un pixel.
+* `afficher_image(image)` afficher l'image.
+* `Image.new(mode='RGB', size=(x,y))` créer une nouvelle image.
+
+### Excel
 
 Library `import openpyxl`
 
@@ -633,7 +613,6 @@ Library `import openpyxl`
 * `mywb.get_sheet_names()` afficher les noms des feuilles.
 * `mywb.save('NewExcelFile.xlsx')` enregistrer le fichier.
 * `wb.create_sheet(index=0, title='1st Sheet')` créer une feuille.
-
 * `mysheet = mywb.get_sheet_by_name('feuill')` sélectionner une feuille.
 * `mysheet['F6'] = 'Writing new Value!'` écrire une valeur dans une feuille donnée.
 
@@ -657,10 +636,11 @@ Library : `from docx import Document`
     * `.italic`, `.bold` italique, gras.
       
 * `.save('word.docx')` enregistrer le document.
+* `convert("fichier.docx", destination)` convertir docx en pdf (library `docx2pdf`)
 
 #### Ajouter un tableau
 
-```
+``` python
 table = document.add_table(rows=1, cols=2)
 hdr_cells = table.rows[0].cells
 hdr_cells[0].text = 'quantité'
@@ -676,7 +656,9 @@ for qty in records.itertuples():
 
 ### Déclarer une fenêtre 
 
-```
+`import tkinter as tk`
+
+``` python
 root = tk.Tk()
 ## éléments de la fenêtre 
 root.mainloop()
@@ -687,7 +669,7 @@ root.mainloop()
 
 ### Element de la fenêtre
 
-Bibliothèque à importer `from tkinter import ttk`
+`from tkinter import ttk`
 
 1. Déclarer l'élément `bouton = ...`
 2. Afficher l'élément `bouton.pack()`
@@ -709,7 +691,7 @@ Library : `from tkinter import Tk, filedialog`
 
 Fonctionne hors interface tKinter
 
-```
+``` python
 root = Tk()
 root.withdraw()
 root.attributes('-topmost', True)
@@ -737,11 +719,7 @@ Recharger automatiquement un module à chaque exécution du code. Utile pour dé
 
 	* `--no-input` masquer le code. 
 
-### récupérer un fichier depuis internet
 
-`import urllib`
-
-`urllib.request.urlretrieve(url, variable)` récupérer un fichier depuis une url.
 
 ## Configurer Python
 
