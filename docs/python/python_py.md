@@ -1,44 +1,10 @@
-## Installation et configuration
+### Extension fichier Python
 
-!!! note
-	Les chemins s'écrivent avec le `/`.
+* `.pyw` fichier python exécutable.
 
-Environement de développement : Jupyter
-Changer la couleur de l'environnement jupyter.
+### Conda
 
-```
-pip install jupyterthemes
-pip install --upgrade jupyterthemes
-jt -t chesterish
-```
-
-### Lancer visual code avec python
-
-`code .`
-
-### Extension
-
-`.pyw` fichier python exécutable.
-
-### Configurer Python sur Windows
-
-* Copier le chemin de la licence et des programmes python.
-* `Panneau de configuration\Système et sécurité\Système > Paramètre système avancé > Variable d'environnement`
-* Ajouter une variable système 
-
-	* nom : `PYTHON_HOME`
-	* valeur : `chemin copié`
-
-* Modifier la variable `Path`
-* Ajouter `%PYTHON_HOME%` 
-
-Répéter l'opération pour le sous dossier library/bin et scripts
-
-`python` démarrer une session python.
-
-### Conda : Les environnements en Python
-
-Permet d'installer plusieurs versions différentes sur la même machine.
+Conda est un logiciel qui permet de gérer les environnements en Python. Cela permet par exmeple d'installer plusieurs versions différentes sur la même machine.
 
 * `conda create -n python_env` créer un environnement conda.
 
@@ -51,13 +17,16 @@ Permet d'installer plusieurs versions différentes sur la même machine.
 
 Dans pour choisir le noyau d'un envrionnement Visual Code ctrl+shift+P, sélectionner, `Pyhon : select Interpreter`. Sinon, dans le Terminal :
 
-1. `conda activate ppoulain-python`
-2. `code .`
+1. `conda activate ppoulain-python` activer l'environnement.
+2. `code .` lancer Visual Code.
 
 #### Installer un module
 
-* `pip install package` installer une bibliothèque. Paramètre
+* `pip install package` installer une bibliothèque. Paramètre :
+
 	* `-r package1, package2` installer plusieurs librarys en une seule fois. Pour créer l'installation d'un programme python, il est possible de créer un fichier `requirements.txt` qui contient la liste des library. Il suffit d'exécuter `pip install -r requirements.txt` pour installer tous les modules.
+
+ * `%pip install package` installer un package directement dans python.
 
 !!! note
 	Il est possible de stocker le nom des library à utiliser dans un fichier. Les library sont accessibles `c:\users\guigui\anaconda3\envs\python_env\lib\site-packages`
@@ -773,3 +742,35 @@ Recharger automatiquement un module à chaque exécution du code. Utile pour dé
 `import urllib`
 
 `urllib.request.urlretrieve(url, variable)` récupérer un fichier depuis une url.
+
+## Configurer Python
+
+### Déclarer une variable python dans Windows
+
+* Copier le chemin de la licence et des programmes python.
+* `Panneau de configuration\Système et sécurité\Système > Paramètre système avancé > Variable d'environnement`
+* Ajouter une variable système 
+
+	* nom : `PYTHON_HOME`
+	* valeur : `chemin copié`
+
+* Modifier la variable `Path`
+* Ajouter `%PYTHON_HOME%` 
+
+Répéter l'opération pour le sous dossier library/bin et scripts
+
+`python` démarrer une session python.
+
+### Jupyter notebook
+
+!!! note
+	Les chemins s'écrivent avec le `/`.
+
+Environement de développement : Jupyter
+Changer la couleur de l'environnement jupyter.
+
+```
+pip install jupyterthemes
+pip install --upgrade jupyterthemes
+jt -t chesterish
+```
