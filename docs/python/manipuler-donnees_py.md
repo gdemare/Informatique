@@ -55,7 +55,7 @@ export = data.iloc[ index,: ]
 * `pd.DataFrame(columns=, index=, tableau_valeurs)` créer un dataframe.
 
 * `dataframe.astype({'Survived': 'float'})` déclarer (à vérif) ou changer le type de variable d'un data frame.
-* `data = pd.DataFrame(columns = ['chemin', 'fichier', 'extension'] )` créer un dataframe vide.
+* `data = pd.DataFrame(columns=['chemin', 'fichier', 'extension'] )` créer un dataframe vide.
 * `data_copy = data.copy()` copier un dataframe dans une autre variable. Attention sinon cela créer des dataframes liés.
 * `pd.to_datetime("colonne")` convertie une colonne en date.
 * `pd.Series(vecteur, index=)` créer une série (jeu de données avec une colonne).
@@ -84,7 +84,7 @@ Fonctions :
 * `data[condition] = valeur` remplacer les valeurs vraies pour la condition. 
 * `.fillna(0)` remplacer les valeurs manquantes.
 * `.drop_duplicates(keep='last')` supprimer les doublons.
-* `.rename(columns=/index={"ancien" : "nouveau"})` renommer une colonne (ou `.columns.values = [col1, col2]`). Paramètres :
+* `.rename(columns=/index={"ancien" : "nouveau"})` renommer une colonne (ou `.columns.values=[col1, col2]`). Paramètres :
 
 	* `inplace=True` pour remplacer les données.
 	* `.set_index('colonne', inplace=True)` mettre une colonne comme index.
@@ -97,9 +97,9 @@ Autres fonctions :
 	```
 	def present_fct(row):
 		if row>7:
-			value = 1
+			value= 1
 		else :
-			value =0
+			value=0
 		return value
 	```
 
@@ -119,7 +119,7 @@ Il faut installer `openpyxl`.
 
 * `pd.read_csv(fichier, sep="\t")` lire un fichier csv.
 * `pd.read_excel(fichier, sheet_name=1/feuille)` lire un fichier excel.
-* `pd.ExcelFile( excel )` sinon pour importer un fichier et récupérer des informations.
+* `pd.ExcelFile(excel)` sinon pour importer un fichier et récupérer des informations.
 	
 	* `.sheet_names` renvoie le nom des feuilles d'un fichier Excel. 
 
@@ -180,13 +180,18 @@ writer = pd.ExcelWriter(fichier, engine = 'xlsxwriter')
 
 Fonction 			| Définition
 --------------------|---
+`.count()`			| nombre de ligne
+`.median()`			| médianes
 `.mean()` 			| moyenne
-`.median()`			| médiane
 `.std()`			| écart type
 `.size()`			| nombre de lignes
-`.count()`			| nombre de lignes
 `.value_counts()`	| tableau effecitf par modalité `normalize=True` renvoie les %
-`nunique()` 		| nbre de valeurs uniques
+`.nunique()` 		| nbre de valeurs uniques
+`.sum()` 		| somme
+
+Il est également possible d'utiliser les fonction sans grouper les données. Paramètres :
+
+* `axis=0/1` en fonction de la ligne/colonne.
 
 #### Fonction pandas
 
