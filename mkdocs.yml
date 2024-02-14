@@ -89,10 +89,12 @@ nav:
       - "Python" : python/python_py.md
       - "Formats" : python/formater-données_py.md
       - "Dataframe" : python/manipuler-donnees_py.md
+      - "Tenseur" : python/tenseur_py.md
       - Divers :
         - "Carthographie" : python/carte_py.md
         - "Tableau de bord" : python/tableau-de-bord_py.md
-        - "Traitements des images" : python/traitement-image_py.md
+        - "Traitement du signal" : python/traitement-signal_py.md
+        - "Traitement des images" : python/traitement-image_py.md
         - "Web scraping" : python/web-scraping_py.md
         - "Autres modules" : python/modules-supplementaires_py.md
       - "Ressources" : python/ressources_py.md
@@ -159,6 +161,7 @@ nav:
         - "SVM" : r/models/classification/SVM_r.md
       - "Régression" :
         - "Régression linéaire" : r/models/regression/regression-lineaire_r.md
+        - "Step" : r/models/regression/step.md
       - "Réseau de neurones" : r/models/reseau-neurones_r.md
       - "Série temporelle" :
         - "Série temporelle simple" : r/models/time-series/serie-temporelle-simple_r.md
@@ -173,7 +176,6 @@ nav:
       - "Tests" : SAS/statistique/tests_sas.md
       - "Modèles" :
         - "Analyse discriminante" : SAS/models/analyse-discriminante_sas.md
-        - "ANOVA" : SAS/models/ANOVA_sas.md
         - "Arbre de décision" : SAS/models/arbre-de-decision_sas.md
         - "Espérance maximisation" : SAS/models/esperance-maximisation_sas.md
         - "Régression logistique" : SAS/models/regression-logistique_sas.md
