@@ -1,10 +1,12 @@
+## Fenêtre et interface
+
 * `fig = plt.figure(figsize=(25,20))`  changer la taille du graphique.
 * `fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(15,5))` sous diviser un graphique en plusieurs cases ou superposer deux graphiques (sans nrows/ncols).
 
 !!! warning
-	Dans ce cas indiquer l'argument : `ax = axes[i]` lorsqu'il n'y a qu'une ligne.
+	Dans ce cas indiquer l'argument : `ax=axes[i]` lorsqu'il n'y a qu'une ligne.
 
-#### Subsdiviser la fenêtre graphiques
+#### Subdiviser la fenêtre graphiques
 
 Cela permet d'afficher plusieurs graphiques sur la même sortie (image).
 
@@ -14,14 +16,17 @@ graph_sans = pd.crosstab(data['ligne'], data['colonne'], normalize='index').plot
 graph_avec = pd.crosstab(data['ligne'], data['colonne'], normalize='index').plot.bar(stacked=True, ax=axes[1])
 ```
 
-## Graphique avec pyplot
+A la fin, on peut forcer l'affichage avec `plt.show()`
+
+## Pyplot graphiques 
 
 `from matplotlib import pyplot as plt`
-à la fin, on peut forcer l'affichage avec `plt.show()`
 
 Utiliser le style de seaborn : `sns.set()`
 
-* `plot(<abscisse>, ordonnée, type_point)` Le type de points est obligatoire. Paramètre : faire une chaîne de caractères
+* `plot(<x>, y, type_point)`
+
+Paramètre : faire une chaîne de caractères
 
 * L1 couleur `'r'` rouge `'y'` jaune `'b'` bleu
 * L2 type de points :
@@ -40,7 +45,7 @@ Utiliser le style de seaborn : `sns.set()`
 !!! example
 	`ro--` points rouges reliés par des traits en pointillé.
 
-### Les types de graphiques
+### Types de graphiques
 
 * `plt.scatter(x,y)` nuage de points.
 * `plt.bar(libelle, valeur, width=, align='edge')` Diagramme en barre et histogramme. Les libellés doivent être au format texte.
@@ -88,7 +93,7 @@ ax.get_yaxis().set_visible(False)
 * `plt.matshow(mat_cor)` matrice de corrélation.
 * `plt.fill_between(valeur_moyenne, valeur_dessus, valeur_dessous, color='b', alpha=0.2)` ajouter un intervalle d'erreur.
 
-## Seaborn
+## Seaborn graphique
 
 Library `import seaborn as sns`
 
@@ -129,18 +134,18 @@ Graphiques :
 
 Superposer deux graphiques :
 
-```
+``` python
 fig, ax1 = plt.subplots()
-sns.histplot(x=donnee['RT [min]'], ax = ax1)
+sns.histplot(x=donnee['RT [min]'], ax=ax1)
 ax2 = ax1.twinx()
-sns.lineplot(x=x, y=y, color = 'r', ax= ax2)
+sns.lineplot(x=x, y=y, color = 'r', ax=ax2)
 ```
 
 ### Faire plusieurs graphiques en fonction d'une condition
 
 ```
 g = sns.FacetGrid(donnee, col="condition")
-g.map(sns.histplot, "% ACN", binwidth=2).set(yscale = 'log')
+g.map(sns.histplot, "% ACN", binwidth=2).set(yscale='log')
 ```
 
 #### Ajouter un élément au graphique
@@ -152,7 +157,7 @@ Paramètres :
 
 ### Ajouter les étiquettes de valeurs sur le graphique 
 
-```
+``` python
 bars = sns.graph(...)
 for container in graph1.containers:
     bars.bar_label(container)
@@ -177,7 +182,7 @@ for container in graph1.containers:
 
 Si les libellés sont tronqués.
 
-```
+``` python
 from matplotlib import rcParams
 rcParams.update({'figure.autolayout': True})
 ```
@@ -186,10 +191,10 @@ rcParams.update({'figure.autolayout': True})
 
 `from matplotlib_venn import venn2, venn3`
 
-* `venn2(subsets = (10, 5, 2), set_labels = ('Group A', 'Group B'))` diagramme de Venne avec deux groupes.
-* `venn3(subsets = (10, 8, 22, 6,9,4,2))` diagramme de Venne avec trois groupes.
+* `venn2(subsets=(10,5,2), set_labels =('Group A', 'Group B'))` diagramme de Venne avec deux groupes.
+* `venn3(subsets=(10,8,22,6,9,4,2))` diagramme de Venne avec trois groupes.
 
-## Avec pandas
+##  Pandas graphiques
 
 Les dataframe pandas intégrent directement des représentations graphiques.
 
@@ -197,8 +202,8 @@ Les dataframe pandas intégrent directement des représentations graphiques.
 
 Type de graphique :
 
-* `area()` 
-* `density()`
+* `area()` aire.
+* `density()` fonction de densité.
 * `line()` lignes.
 * `pie()` camembert.
 * `bar()` diagramme en barre.
@@ -212,4 +217,4 @@ Type de graphique :
 Paramètres : 
 
 * `legend=False` enlever la légende
-* `ax= ` déterminer la position du graphique avec les fenetres subdivisées.
+* `ax=` déterminer la position du graphique avec les fenetres subdivisées.
