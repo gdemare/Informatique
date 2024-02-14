@@ -61,7 +61,10 @@ Fonction 		| Définition
 	Attention il faut passer par `copy.deepcopy(tableau)` pour copier une valeur.
 
 * `np.array(liste, )` créer un array.
-* `np.asarray(matrice)` convertie un array.
+* `np.flip(tab, axis=0)` renverser une matrice (axis=0 en haut-bas et axis=1 gauche-droite).
+* `dt.to_numpy()` convertir un dataframe en array.
+* `np.asarray(matrice)` convertir un dataframe en array.
+* `dt.to_records()` transformer un dataframe en array en gardant les index.
 * `np.arrange(1,10, pas)` créer une matrice avec une liste incrémentée.
 * `np.empty([lignes,colonnes])` créer un array vide d'une certaine taille.
 * `np.transpose(matrice)` transposer.
@@ -84,7 +87,7 @@ Fonction 		| Définition
 * `np.loadtxt(fichier)` charger une matrice depuis un fichier (exemple `1	70	230`).
 * `np.loadtxt("array.dat", tableau)` enregister un array dans un fichier.
 * `np.concatenate((array1, array2), axis=1)` concaténer deux arrays.
-
+* `tab.astype(np.float64)` modifier le type le format/type de données.
 
 Attributs associés à un array :
 
@@ -93,17 +96,14 @@ Attributs associés à un array :
 * `.ndim` nombre de dimensions. 
 * `.size` nombre d'éléments total.
 
-#### matrice de booléen et remplacement de valeurs
+#### Matrice de booléens et remplacer des valeurs
 
 * `tableau[condition]` renvoie une matrice booléenne (opérateur `|`, `&`,...)
 * `tableau[condition] = nv_valeur` modifie la valeur uniquement lorsque c'est vrai.
 
 ### Sélectionner une valeur ou une plage
 
-Deux méthodes pour sélectionner un élément ou une plage :
-
-* `table[i,j]`
-* `table[i][j]`
+Deux méthodes pour sélectionner un élément ou une plage `table[i,j]` ou `table[i][j]`.
 
 * `for i in array:` parcourir ligne par ligne un tableau (rmq, il peut être utile de transposer pour passer par colonne).
 
@@ -119,11 +119,12 @@ Paramètres :
 
 * `axis= 0/1` effectuer l'opération sur chaque ligne, colonne. 
 
-Python	| Fonction
---------|----------
-`std()` | écart type.
-`mean()`| moyenne.
-`max()` | maximum.
+Python		| Fonction
+------------|----------
+`std()` 	| écart type.
+`mean()`	| moyenne.
+`max()` 	| maximum.
+`argmax()` 	| indice de la valeur la plus élevée.
 
 ### Matrice carré
 
@@ -142,7 +143,7 @@ Dans le sous module `linalg`
 ### Insérer
 
 * `np.append(data, vecteur)` ajouter un dernière colonne. 
-* `np.insert( data, position, vecteur)` ajouter une colonne à une position particulière.
+* `np.insert( data, position, vecteur)` ajouter une colonne en spécifiant la position.
 
 ### Statistique
 
