@@ -262,3 +262,13 @@ Library `import matplotlib.pyplot as plt`
 
 * `preprocessing.StandardScaler().fit_transform(comparatif)` standariser les données _Attention la standarisation a lieu par colonne (transposer)_ .
 * `preprocessing.Normalizer(norm='l1').fit_transform(data)` normaliser les données.
+
+
+!!! note
+	Normaliser les données `from sklearn.preprocessing import StandardScaler`
+	
+	``` python
+	sc = StandardScaler() # créer la fonction de normalisation
+	sc.fit_transform(data) # centre et réduit avec les paramètres  
+	sc.transform(data) # centre et réduit avec les paramètres précédent
+	```
