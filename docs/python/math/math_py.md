@@ -13,8 +13,8 @@ Symbole		| Opération
 
 ### Fonctions mathématiques 
 
-* `range(nbre1, nbre2 <,pas> )` créer une liste de nombres (attention pour l'afficher il faut la convertir en liste `list()`).
-
+* `range(nbre1, nbre2 <,pas>)` créer une liste de nombres (attention pour l'afficher il faut la convertir en liste `list()`).
+* `np.linspace(val_min, val_max, nb)` renvoyer un tableau avec nb point de l'intervalle.
 * `round(numeric, nb_decimal)` arrondir un nombre.
 * `max(vecteur)` maximum.
 * `min(vecteur)` minimum.
@@ -146,7 +146,7 @@ Dans le sous module `linalg`
 
 ### Statistique
 
-* `np.corrcoef( x, y)` coefficient de corrélation de Pearson.
+* `np.corrcoef(x, y)` coefficient de corrélation de Pearson.
 
 ### Fonctions mathématiques 
 
@@ -154,13 +154,3 @@ Fonction 			| Définition
 --------------------|---
 `np.log(x, base)`	| logarithme
 `np.exp()` 			| exponentielle
-
-## Normaliser les données
-
-`from sklearn.preprocessing import StandardScaler`
-
-```
-sc = StandardScaler() # créer la fonction de normalisation
-sc.fit_transform(data) # centre et réduit avec les paramètres  
-sc.transform(data) # centre et réduit avec les paramètres précédent
-```
