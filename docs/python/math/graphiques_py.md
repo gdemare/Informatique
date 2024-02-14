@@ -21,7 +21,7 @@ graph_avec = pd.crosstab(data['ligne'], data['colonne'], normalize='index').plot
 
 Utiliser le style de seaborn : `sns.set()`
 
-* `plot(abscisse, ordonnée, type_point)` Le type de points est obligatoire. Paramètre : faire une chaîne de caractères
+* `plot(<abscisse>, ordonnée, type_point)` Le type de points est obligatoire. Paramètre : faire une chaîne de caractères
 
 * L1 couleur `'r'` rouge `'y'` jaune `'b'` bleu
 * L2 type de points :
