@@ -10,7 +10,7 @@
 
 Cela permet d'afficher plusieurs graphiques sur la même sortie (image).
 
-```
+``` python
 fig, axes = plt.subplots(nrows=2, ncols=1)
 graph_sans = pd.crosstab(data['ligne'], data['colonne'], normalize='index').plot.bar(stacked=True, ax=axes[0])
 graph_avec = pd.crosstab(data['ligne'], data['colonne'], normalize='index').plot.bar(stacked=True, ax=axes[1])
@@ -65,7 +65,7 @@ Paramètre : faire une chaîne de caractères
 
 Masquer un axe :
 
-```
+``` python
 ax = plt.gca()
 ax.get_yaxis().set_visible(False)
 ```
@@ -92,6 +92,18 @@ ax.get_yaxis().set_visible(False)
 * `plt.boxplot(vecteur)` boxplot.
 * `plt.matshow(mat_cor)` matrice de corrélation.
 * `plt.fill_between(valeur_moyenne, valeur_dessus, valeur_dessous, color='b', alpha=0.2)` ajouter un intervalle d'erreur.
+
+### Afficher une image
+
+* `imshow(numpy)` Paramètre : 
+	
+	* `cmap='gray'` en valeur de gris
+
+``` python
+plt.imshow(img)
+plt.axis('off')
+plt.show()
+```
 
 ## Seaborn graphique
 
