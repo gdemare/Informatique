@@ -97,11 +97,11 @@ ax.get_yaxis().set_visible(False)
 
 * `imshow(numpy)` Paramètre : 
 	
-	* `cmap='gray'` en valeur de gris
+	* `cmap='gray'` en valeur de gris.
 
 ``` python
 plt.imshow(img)
-plt.axis('off')
+plt.axis('off') # retirer les axes.
 plt.show()
 ```
 
@@ -155,15 +155,14 @@ sns.lineplot(x=x, y=y, color = 'r', ax=ax2)
 
 ### Faire plusieurs graphiques en fonction d'une condition
 
-```
+``` python
 g = sns.FacetGrid(donnee, col="condition")
 g.map(sns.histplot, "% ACN", binwidth=2).set(yscale='log')
 ```
 
 #### Ajouter un élément au graphique
 
-* `fig.axvline(1.25)` ou `fig.axhline(1.25)` ajouter une ligne verticale ou horizontale.
-Paramètres :
+* `fig.axvline(1.25)` ou `fig.axhline(1.25)` ajouter une ligne verticale ou horizontale. Paramètres :
 	
 	* `linestyle=` type de lignes (`:` pointillé, `--` tiré ).
 
