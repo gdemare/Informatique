@@ -15,7 +15,7 @@
 
 * `testthat` tester.
 
-## Manipuler les fichiers
+## Les fichiers
 
 * `r"(dossier1\dossier 2\)"` déclarer un chemin.
 * `basename("C:/some_dir/a.ext")` renvoyer le nom du fichier.
@@ -34,6 +34,36 @@
 
 `save(obj1, obj2, file = "mes_objets.RData")` sauvegarder en RData.
 `load(fichier.RData)` charger un RData.
+
+### Excel
+
+Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openxlsx)` qui est la bibliothèque la plus complète.
+
+* `readWorkbook(wb ou , sheet = "Supplies")` lire un fichier excel ou un wb.
+* `wb <- createWorkbook()` créer un classeur.
+* `saveWorkbook(wb, "file.xlsx")` enregistrer un classeur. Paramètres :
+
+	* `overwrite = TRUE` écraser la version existente.
+
+* `addWorksheet(wb = wb, sheetName = "feuill")` ajouter une feuille.
+* `getSheetNames(wb ou fichier)` nom des feuilles.
+* `writeData(wb = wb, sheet = "feuill", x = df)` écrire un dataframe. Paramètres :
+
+	* `headerStyle = headerStyle` style des entêtes (voir style).
+	* `borders = "n"` .
+	* `startCol = nb`  et `colNames = nb` début où commencer à remplir. 
+
+### Style 
+
+`createStyle()`
+
+* `fontColour = "#006100"` couleur de la police.
+* `bgFill = "#C6EFCE"` fond.
+* `textDecoration = "Bold"` gras.
+
+### Formater le classeur
+
+* `setColWidths(wb = wb, sheet = "feuil", cols = 1:4, widths = "auto")` largeur des colonnes.
 
 ### Json 
 
