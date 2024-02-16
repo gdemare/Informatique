@@ -10,44 +10,16 @@ Packages `labelled`
 * `var_label(dt)` renvoie les labels (ou attribuer un label). Prend comme valeur une `list(nom_col = "label")`.
 * `remove_var_label(dt)` supprimer les labels.
 
-## Importer les données
+## Importer et exporter
+
+### Importer
 
 * `read_sas(fichier)` lire des tables SAS (package `haven`).
 * `read.csv(ficher, sep = separateur)` lire une table CSV.
 * `read.table(fichier)` importer un fichier avec des espaces comme séparateur.
+* `read.xlsx(fichier, colNames = TRUE, sheet = nom/num)` lire un fichier excel (workbook = wb) `library(openxlsx)`.
 
-## Excel 
-
-Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openxlsx)` qui est la bibliothèque la plus complète.
-
-* `read.xlsx(fichier, colNames = TRUE, sheet = feuille)` lire un fichier excel (workbook = wb).
-* `readWorkbook(wb ou , sheet = "Supplies")` lire un fichier excel ou un wb.
-* `wb <- createWorkbook()` créer un classeur.
-* `saveWorkbook(wb, "file.xlsx")` enregistrer un classeur. Paramètres :
-
-	* `overwrite = TRUE` écraser la version existente.
-
-* `addWorksheet(wb = wb, sheetName = "feuill")` ajouter une feuille.
-* `getSheetNames(wb ou fichier)` nom des feuilles.
-* `writeData(wb = wb, sheet = "feuill", x = df)` écrire un dataframe. Paramètres :
-
-	* `headerStyle = headerStyle` style des entêtes (voir style).
-	* `borders = "n"` .
-	* `startCol = nb`  et `colNames = nb` début où commencer à remplir. 
-
-#### Style 
-
-`createStyle()`
-
-* `fontColour = "#006100"` couleur de la police.
-* `bgFill = "#C6EFCE"` fond.
-* `textDecoration = "Bold"` gras.
-
-#### Formater le classeur
-
-* `setColWidths(wb = wb, sheet = "feuil", cols = 1:4, widths = "auto")` largeur des colonnes.
-
-## Exporter un data
+### Exporter
  
 * `write.csv(donnée, file = "fichier.csv" )` enregistrer au format csv.
 
