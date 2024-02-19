@@ -1,7 +1,7 @@
 ### Utile pour les notebooks
 
  * `%pip install package` installer un package directement dans python.
- * `%matplotlib widget` afficher les graphiques dans le code (nécessite `ipympl`).
+ * `%matplotlib inline` afficher les graphiques dans le code (aussi  `widget` nécessite `ipympl`).
 
 ### Extension fichier Python
 
