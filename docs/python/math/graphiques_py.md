@@ -1,3 +1,23 @@
+## ggplot2
+
+`from plotnine as pln`
+
+``` python
+(
+    ggplot(economics)  # What data to use
+    + aes(x="date", y="pop")  # What variable to use
+    + geom_line()  # Geometric object to use for drawing
+)
+```
+
+* `geom_point()`
+* `geom_histogram()`
+* `geom_line()`
+* ``
+* ``
+* ``
+* ``
+
 ## Fenêtre et interface
 
 * `fig = plt.figure(figsize=(25,20))`  changer la taille du graphique.
