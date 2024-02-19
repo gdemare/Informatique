@@ -17,5 +17,5 @@
 ### Spicy
 
 * `scipy.fft.fft(signal)` transformer les données avec Fourrier.
-* `scipy.fft.fftfreq(n, d=freq)` déterminer les fréquences élémentaires des signaux périodiques  avec d d'acquisition des points.
-* `scipy.ifft(fourrier)` transformation inverse de Fourrier.
+* `scipy.fft.fftfreq(signal.size, d=tps)` déterminer les fréquences élémentaires des signaux périodiques en fonction du temps d'acquisition entre chaque point.
+* `scipy.fft.ifft(fourrier)` transformation inverse de Fourrier.
