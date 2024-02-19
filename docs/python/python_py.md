@@ -1,7 +1,7 @@
 ### Utile pour les notebooks
 
  * `%pip install package` installer un package directement dans python.
- * `%matplotlib inline` afficher les graphiques dans le code.
+ * `%matplotlib widget` afficher les graphiques dans le code (nécessite `ipympl`).
 
 ### Extension fichier Python
 
@@ -30,8 +30,6 @@ Dans pour choisir le noyau d'un envrionnement Visual Code ctrl+shift+P, sélecti
 * `pip install package` installer une bibliothèque. Paramètre :
 
 	* `-r package1, package2` installer plusieurs librarys en une seule fois. Pour créer l'installation d'un programme python, il est possible de créer un fichier `requirements.txt` qui contient la liste des library. Il suffit d'exécuter `pip install -r requirements.txt` pour installer tous les modules.
-
-
 
 !!! note
 	Il est possible de stocker le nom des library à utiliser dans un fichier. Les library sont accessibles `c:\users\guigui\anaconda3\envs\python_env\lib\site-packages`
