@@ -155,3 +155,4 @@ Fonction 			| Définition
 --------------------|---
 `np.log(x, base)`	| logarithme
 `np.exp()` 			| exponentielle
+`np.count_nonzero(array)`	| nbre de valeurs différentes de 0
