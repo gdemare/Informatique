@@ -621,6 +621,12 @@ Library `import openpyxl`
 * `mysheet = mywb.get_sheet_by_name('feuill')` sélectionner une feuille.
 * `mysheet['F6'] = 'Writing new Value!'` écrire une valeur dans une feuille donnée.
 
+### Fichier audio
+
+`from scipy.io import wavfile`
+
+* `samplerate, data = wavfile.read('data/machining_sound.wav')` importer un ficier audio.
+
 ### Créer un fichier Word
 
 Library : `from docx import Document`
