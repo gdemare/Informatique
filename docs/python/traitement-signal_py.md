@@ -6,7 +6,6 @@
 
 ## Fonction d'Allan
 
-
 ## Transformation de Fourrier
 
 ### Numpy
@@ -17,5 +16,19 @@
 ### Spicy
 
 * `scipy.fft.fft(signal)` transformer les données avec Fourrier.
+<<<<<<< Updated upstream
 * `scipy.fft.fftfreq(signal.size, d=tps)` déterminer les fréquences élémentaires des signaux périodiques en fonction du temps d'acquisition entre chaque point.
 * `scipy.fft.ifft(fourrier)` transformation inverse de Fourrier.
+=======
+* `scipy.fft.fftfreq(n, d=freq)` déterminer les fréquences élémentaires des signaux périodiques  avec d d'acquisition des points.
+* `scipy.fft.ifft(fourrier)` transformation inverse de Fourrier.
+
+## Traitement du signal
+
+`scipy.signal`
+
+* `find_peaks(data)` trouver les maximums. Pas mal de paramètres.
+* `peak_prominences(data, peaks)` renvoie la valeur des pics.
+* `butter()` créer un filtre haute et basse fréquence. 
+* `sosfiltfilt(sos, data)` appliquer le filtre.
+>>>>>>> Stashed changes

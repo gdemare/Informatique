@@ -50,7 +50,6 @@ Fonction 		| Définition
 `exp()`			| exponentielle
 `log()`			| logarithme
 
-
 -----------------------------
 
 ## Numpy (matrice et vecteur)
@@ -60,13 +59,13 @@ Fonction 		| Définition
 !!! warning 
 	Attention il faut passer par `copy.deepcopy(tableau)` pour copier une valeur.
 
-* `np.array(liste, )` créer un array.
+* `np.array(liste)` créer un array.
 * `np.flip(tab, axis=0)` renverser une matrice (axis=0 en haut-bas et axis=1 gauche-droite).
 * `dt.to_numpy()` convertir un dataframe en array.
 * `np.asarray(matrice)` convertir un dataframe en array.
 * `dt.to_records()` transformer un dataframe en array en gardant les index.
-* `np.arrange(1,10, pas)` créer une matrice avec une liste incrémentée.
-* `np.empty([lignes,colonnes])` créer un array vide d'une certaine taille.
+* `np.arange(1, 10, pas)` créer une matrice avec une liste incrémentée.
+* `np.empty([lignes,colonnes], <dtype=int>)` créer un array vide d'une certaine taille avec des valeurs aléatoires.
 * `np.transpose(matrice)` transposer.
 * `np.maxtrix(vec1, vec2)` matrice ligne 1=vecteur 1, ligne 2=vecteur 2. 
 * `np.full((n,p), valeur)` créer une matrice de n, p dimension avec la valeur.
@@ -82,12 +81,14 @@ Fonction 		| Définition
 	* `order='C'` préciser la facon de réordonnées les éléments. `'F'` 
 
 * `np.resize()` modifier la dimension sans renvoyer d'erreurs si elles ne sont pas compatibles.
+* `np.hstack()` transformer un array en vecteur.
 * `np.unique()` renvoie les valeurs uniques.
 * `np.sign(nbre)` renvoie le signe.
 * `np.loadtxt(fichier)` charger une matrice depuis un fichier (exemple `1	70	230`).
 * `np.loadtxt("array.dat", tableau)` enregister un array dans un fichier.
 * `np.concatenate((array1, array2), axis=1)` concaténer deux arrays.
 * `tab.astype(np.float64)` modifier le type le format/type de données.
+* `np.where(condition, <val_vrai>, <val_faux>)` renvoie l'index (par défaut) ou une valeur particulière.
 
 Attributs associés à un array :
 
@@ -142,7 +143,7 @@ Dans le sous module `linalg`
 
 ### Insérer
 
-* `np.append(data, vecteur)` ajouter un dernière colonne. 
+* `np.append(data, vecteur)` ajouter un élément à la dernière colonne. 
 * `np.insert( data, position, vecteur)` ajouter une colonne en spécifiant la position.
 
 ### Statistique

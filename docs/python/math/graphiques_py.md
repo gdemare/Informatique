@@ -44,7 +44,7 @@ A la fin, on peut forcer l'affichage avec `plt.show()`
 
 Utiliser le style de seaborn : `sns.set()`
 
-* `plot(<x>, y, type_point)`
+* `plot(<x>, y, type_point)` par défaut renvoie un graphique en ligne ou un nuage de points.
 
 Paramètre : faire une chaîne de caractères
 
@@ -68,8 +68,16 @@ Paramètre : faire une chaîne de caractères
 ### Types de graphiques
 
 * `plt.scatter(x,y)` nuage de points.
+	
+	* `marker='x'` type de points (croix).
+
 * `plt.bar(libelle, valeur, width=, align='edge')` Diagramme en barre et histogramme. Les libellés doivent être au format texte.
 * `plt.pie(valeur, labels=, radius=)` camembert.
+* `plt.axhline()` et `plt.axhline()` ligne horizontale et verticale.
+
+Paramètres globaux :
+
+* `color="red"` changer la couleur.
 
 ### Paramètres des axes
 
@@ -80,7 +88,8 @@ Paramètre : faire une chaîne de caractères
 
 * `plt.grid(True)` afficher une grille.
 * `plt.xticks(rotation=45)` changer la rotation des étiquettes de données.
-* `plt.yscale('log')` passer en échelle logarithmique. paramètre :
+* `plt.yscale('log')` passer en échelle logarithmique. Paramètre :
+
 	* `base=2` changer la base
 
 Masquer un axe :
@@ -142,7 +151,7 @@ Graphiques :
 	* `annot_kws={"fontsize":8}` taille des annotations.
 	* `fmt='.0f'` changer le format des nombres (0 indique le nbre de décimals).
 
-* `clustermap()`
+* `clustermap()` heatmap avec un classification.
 * `histplot(vecteur)` afficher la distribution d'un vecteur quantitatif.
 
 	* ` multiple="stack"`empiler les valeurs avec `hue="var"`.
