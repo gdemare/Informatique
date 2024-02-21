@@ -1,7 +1,8 @@
 ## Les meilleurs applications 
 
 * [Cryptomator](https://cryptomator.org/), logicel de cryptage spécialisé pour le cloud.
-* [Simplenote](https://simplenote.com/), logiciels de prises de notes en markdown.
+* [Simplenote](https://simplenote.com/), logiciels de prises de notes en markdown avec synhcronisation entre les plateformes (android, windows,...).
+* [Obsidian](https://obsidian.md/) ou [Logseq](https://logseq.com/) application de gestion de connaissances.
 * [Mixx](https://mixxx.org/), logiciel de dj.
 
 ### Thunderbird
