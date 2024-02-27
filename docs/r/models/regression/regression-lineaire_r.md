@@ -16,7 +16,7 @@ Retourne :
 
 `plot(model)` affiche quatre graphiques sur les résidus : 
 
-* "residuals vs fitted" vérifier l'homoscédasticité et de mettre en valeur la non linéarité de la relation, par exemple avec des formes en U ou en V.
-* "q-q residuals" vérifier si les résidus suivent une distribution normale.
-* "scale location" vérifier l'homoscédasticité.
-* "residuals vs leverage" identifier les observation ont une influence disproportionnée sur le modèle.
+* residuals vs fitted : vérifier l'homoscédasticité et de mettre en valeur la non linéarité de la relation, par exemple avec des formes en U ou en V.
+* q-q residuals : vérifier si les résidus suivent une distribution normale.
+* scale location : vérifier l'homoscédasticité.
+* residuals vs leverage : identifier les observation qui ont une influence disproportionnée sur le modèle.
