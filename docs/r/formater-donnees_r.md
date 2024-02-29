@@ -8,6 +8,9 @@ Fonction               | Type
 `as.Date(character())` | date 
 `as.vector()`          | en vecteur
 
+!!! note
+  `is.numeric(x)` pour savoir si la valeur est du bon type.
+
 Les variables des dataframe sont par defaut en Factor.
 
 * `pull(nom ou numero)` convertir une colonne en vecteur (package `dplyr`).
