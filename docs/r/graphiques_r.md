@@ -46,6 +46,15 @@ g = ggplot() + aes(x,y)
 Type de graphique :
 
 * `geom_boxplot()` boxplots (x=name, y=value).
+* `geom_line(<option>)` courbe. Paramètres : 
+
+ 	* `aes(group = var)` une courbe pour chaque modalité de var.
+	* `stat = 'count'` avec une seule variable.
+	* `geom_col()` diagramme en barre avec la valeur des y. Pour classer les labels, il faut `reorder(label, valeur)` dans le `aes()`.
+	* `lty = type` type de ligne (`dashed` pointillé; `dotdash` point pointillé, ).
+  	* `lwd = épaisseur` épaisseur.
+ 	
+* `geom_area()` coubre pleine.
 * `geom_point(<option>)` nuage de points. Option :
 
 	* `aes(colour = var)` colorier les points en fonction de var.
@@ -62,15 +71,7 @@ Libellés :
 
 * `geom_text_repel(aes(x,y), label = var)` ajouter des étiquettes de données (library ggrepel).
 * `geom_label_repel(aes(x,y), label = var)` ajouter des étiquettes de données avec fond (library ggrepel).
-* `geom_line(<option>)` courbe. Paramètres : 
 
- 	* `aes(group = var)` une courbe pour chaque modalité de var.
-	* `stat = 'count'` avec une seul variable.
-	* `geom_col()` diagramme en barre avec la valeur des y. Pour classer les labels, il faut `reorder(label, valeur)` dans le `aes()`.
-	* `lty = type` type de ligne (`dashed` pointillé; `dotdash` point pointillé, ).
-  	* `lwd = épaisseur` épaisseur.
- 	
-* `geom_area()` coubre pleine.
 
 ## Autre 
 
