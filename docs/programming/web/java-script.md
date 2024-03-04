@@ -139,7 +139,7 @@ Ajouter la librairie au code html [Google Api](https://developers.google.com/spe
 | `.hide()` | cacher un élément |
 | `.show()` | afficher un élément |
 | `.setAttribute("style", "code CSS")` |
-| `.classList.add("classe")` | ajouter la classe à l'element |
+| `.classList.add("classe")` | ajouter la classe à l'élément |
 | `.classList.remove("classe")` | supprimer la classe de l'element |
 | `.open("GET", file, true)` | charger la page.|
 | `.load(fichier)` | charger du code html.|
