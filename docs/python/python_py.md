@@ -589,23 +589,31 @@ index = doc.getvalue()
 
 ### Les images
 
-### Bibilothèque `skimage` (scikit-image)
+#### Skimage
 
 Package `from skimage import io`
 
 * `io.imread("chemin")` importer une image.
 * `io.imshow(monImage) ` afficher l'image.
 
-### Bibilothèque `pillow`
+#### pillow
+
+Package `from PIL import Image`
+
 Coordonné et position des pixels (x, y) correspont à (largeur, hauteur).
 
 * `Image.open('fichier.jpg')` ouvrir une image.
+* `Image.new(mode='RGB', size=(x,y))` créer une nouvelle image.
+
+* `monImage.save("reduction/image_red.jpg")` enregistrer une image.
+* `monImage.resize((largeur,hauteur))` redimensionner une image.
+
+Attribut d'une image :
+
 * `var_img.height` récupérer la hauteur.
 * `var_img.width` récupérer la largeur.
 * `var_img.getpixel((x,y))` récuperer la valeur des coordonnées rgb du pixel.
 * `var_img.putpixel((x,y), (r,g,b))` changer la couleur d'un pixel.
-* `afficher_image(image)` afficher l'image.
-* `Image.new(mode='RGB', size=(x,y))` créer une nouvelle image.
 
 ### Excel
 
