@@ -1,4 +1,5 @@
 Boite à astuces
+
 * Sublime Text snippet HTML/CSS/JS Prettify.
 * Pas sensible au espace.
 * L'indentater structurer le code pour le rendre plus lisible.
@@ -15,10 +16,10 @@ Boite à astuces
 <script>
 ```
 
- Paramètre :
+ Paramètres :
+ 
  * `src="fichier.js"` appeler un fichier.
  * `type=` préciser le langage pour html.
- 
  
 ## Les bases
 
@@ -26,6 +27,7 @@ Boite à astuces
 
 * `// commentaire` et `/ *commentraire*/` commenter le code.
 * isoler le code jS pour éviter d'être interpréter en html.
+
 ```
 <!--
 instruction 
@@ -79,7 +81,7 @@ ligne = colonne.
 | `>=` | supérieur ou égal à |
 | `<` | inférieur à | 
 | `<=` | inférieur ou égal à |
-| `||` | ou |
+| `||` | ou |text
 | `&&` | et |
 | `null` | nulle |
 
@@ -111,14 +113,14 @@ Continue tant que la condition est vraie.
 ```
 function fonction(parametre1, parametre2){
   instruction
-}
+}text
 ```
 
 ## Fonctions html
 
 ### Récupérer les propriétés d'un objet html
 
-| Fonction | défintion |
+| Fonction | défintion |text
 |---|---|
 | `.getElementsByTagName("type")` | obtenir l'id de l'element d'un certain type de balise Html |
 | `.getElementsByClassName("classe")` | obtenir l'id de l'element avec le nom valeur |
@@ -134,15 +136,15 @@ Ajouter la librairie au code html [Google Api](https://developers.google.com/spe
 
 | Fonction | defintion |
 |---|---|
-| `.hide()` | cacher un element |
-| `.show()` | afficher un element |
+| `.hide()` | cacher un élément |
+| `.show()` | afficher un élément |
 | `.setAttribute("style", "code CSS")` |
 | `.classList.add("classe")` | ajouter la classe à l'element |
 | `.classList.remove("classe")` | supprimer la classe de l'element |
 | `.open("GET", file, true)` | charger la page.|
 | `.load(fichier)` | charger du code html.|
 | `.innerHTML = "nouveau contenu"` | ajouter du contenu Html.|
-| `write('text')` | ecrire du texte non interprété.|
+| `write('text')` | écrire du texte non interprété.|
 | `.addClass += "classe"`  | ajouter une nouvelle classe |
 | `.append("ajout")` | Ajouter du contenu a la fin d'une div |
 | `.getPropertyValue('height')` | Récupérer la valeur de la propriété css |
@@ -259,4 +261,5 @@ data = [
 
 data.filter(data => fichiers['col1']==val02))
 ```
+
 Renvoie la ligne 2 : `{col1: val02, col2: val02}`.
