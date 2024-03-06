@@ -1,6 +1,6 @@
 Préparer avant un Styleguide UI :
 
-* Pattern Lab
+* Pattern Lab.
 * [Huge](https://hugeinc.github.io/styleguide)
 
 ### Les variables en CSS
@@ -13,6 +13,7 @@ Préparer avant un Styleguide UI :
 `var(--main-bg-color)` appeler la variable dans le code.
 
 ### Sélection un élément en fonction de sa position
+:hover` passer la souris sur un élément.
 
 * `element:position` appliquer des propriétés à un element particulier. Position : 
 
@@ -66,7 +67,6 @@ Préparer avant un Styleguide UI :
     * `nowrap` pas de retour à la ligne (par défaut).
     * `wrap` les éléments vont à la ligne lorsqu'il n'y a plus la place.
     * `wrap-reverse` les éléments vont à la ligne lorsqu'il n'y a plus la place en sens inverse.
-    * 
 
 * `justify-content: ;` alignement sur le premier axe.
     
@@ -110,7 +110,7 @@ Préparer avant un Styleguide UI :
 * `&emsp;` pour afficher une espace quadruple
 * `&nbsp;&nbsp;&nbsp;&nbsp;` pour afficher un caractère de tabulation
 
-### Propriete des tableaux
+### Propriéte des tableaux
 
 * `border-collapse: collapse/separate;` bord separes ou colles.
 
@@ -121,3 +121,5 @@ Préparer avant un Styleguide UI :
 ## Police de caractères
 
 * `text-transform: uppercase/capitalize` transofrme le type de lettre (tout en majuscule/seulement la première lettre).
+
+* `:hover` passer la souris sur un élément.
