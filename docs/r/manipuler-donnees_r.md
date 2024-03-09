@@ -78,7 +78,8 @@ max_by <- function(data, var, by) {
 * `everything()` toutes les colonnes restantes.
 * `all_of(vecteur)` sélectionner les colonnes avec le nom de la colonne dans le vecteur.
 * `any_of(vecteur)` sélectionner les colonnes dont le nom de la colonne n'est pas dans le vecteur.
-* `accross()` .
+* `accross()`.
+* `last_col()` sélectionner la dernière colonne.
 
 !!! example 
 	`select(col13, everything())` déplacer la colonne 13 à la position 1.
@@ -125,6 +126,11 @@ OrchardSprays %>%
 * `mutate(nom = formule)` appliquer une fonction et ajouter une colonne (il est possible d'appliquer à toutes les variables avec `sapply` voir ci dessous et, de sélectionner une variable par son nom avec `!!sym("col1")`).
 * `transmute(nom = formule)` construitre une ou plusieurs variables en supprimant les colonnes.
 
+Options :
+
+* `.before=Value` ou  `.after=` préciser où insérer la colonne.
+
+
 !!! note
 	Pour modifier uniquement certaines lignes, il est possible d'utiliser  `ifelse(condition, valeur_vrai, valeur_vaux)`.
 
@@ -154,6 +160,8 @@ Fonction		| Description
 `cumprod` 		| Produit cumulé.
 `pmax` 			| Maximum par élément.
 `pmin` 			| Minimum par élément.
+`last()` 		| Prend la dernière valeur.
+`first()` 		| Prend la première valeur.
 
 ### Faire une opération sur toutes les variables ou les lignes
 

@@ -120,7 +120,7 @@ function fonction(parametre1, parametre2){
 
 ### Récupérer les propriétés d'un objet html
 
-| Fonction | défintion |text
+| Fonction | défintion |
 |---|---|
 | `.getElementsByTagName("type")` | obtenir l'id de l'element d'un certain type de balise Html |
 | `.getElementsByClassName("classe")` | obtenir l'id de l'element avec le nom valeur |

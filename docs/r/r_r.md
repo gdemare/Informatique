@@ -29,6 +29,7 @@
 * `setwd(dossier)` changer le dossier de travail.
 * `getwd()` chemin du dossier de tavail.
 * `source(fichier)` exécuter un script.
+* `tools::file_ext(chemin_fichier)` renvoyer l'extension du fichier.
 
 ### RData
 
@@ -53,7 +54,7 @@ Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openx
 	* `borders = "n"` .
 	* `startCol = nb`  et `colNames = nb` début où commencer à remplir. 
 
-### Style 
+#### Style 
 
 `createStyle()`
 
@@ -61,7 +62,7 @@ Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openx
 * `bgFill = "#C6EFCE"` fond.
 * `textDecoration = "Bold"` gras.
 
-### Formater le classeur
+#### Formater le classeur
 
 * `setColWidths(wb = wb, sheet = "feuil", cols = 1:4, widths = "auto")` largeur des colonnes.
 
@@ -73,7 +74,7 @@ Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openx
 * `writeLines(json_data, "REACDATA_t.json")` créer un fichier en Json (attention, il faut le convertir avant).
 * `fromJSON("REACDATA_t.json")` importer un Json.
 
-### Les images
+### Images
 
 `library(jpeg)` et `library(png)`
 
@@ -100,10 +101,20 @@ Déclarer des variables :
 * `var <- valeur` ou `var = valeur` déclarer une variable ou modifier la valeur. 
 * `var <<- valeur` forcer l'association (utile pour modifier une variable dans la fonction).
 
-* `typeof(var)` renvoie le type de variable.
+* `typeof(var)` renvoyer le type de variable.
 * `exists("variable")` teste l'existence d'une variable.
+* `missing('variable')` vérifier si l'arguement existe.
 
-## Les vecteurs
+### Attribut
+
+!!! note
+    Les attributs sont les métadonnées associées à un objet.
+
+* `attr(iris, "perso") <- valeur` ajouter un attribut à objet.
+* `attributes(dt_conc)` renvoie les attribue d'un objet. 
+
+
+## Vecteurs
 
 * `c(2, 4, 6)` déclarer un vecteur.
 * `2:6` séquence de 2 à 6 inclus.
@@ -134,7 +145,7 @@ Déclarer des variables :
 
 ### Listes
 
-```
+``` r
 list(
   nom1 = c(1,2),
   nom2 = "texte"
@@ -161,7 +172,7 @@ list(
 
 ## Fonction
 
-```
+``` r
 nomFonction <- function(x){
   instruction
 }
@@ -174,10 +185,10 @@ nomFonction <- function(x){
 
 ## Condition 
 
-```
-if ( test_expression1) {
+```r
+if (test_expression1) {
   instruction
-} else if ( test_expression2) {
+} else if (test_expression2) {
   instruction
 } else {
   instruction

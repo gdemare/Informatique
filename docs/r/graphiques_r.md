@@ -39,7 +39,7 @@ Présentation :
 
 ###  Deux variables
 
-```
+``` R
 g = ggplot() + aes(x,y)
 ```
 
@@ -72,7 +72,6 @@ Libellés :
 * `geom_text_repel(aes(x,y), label = var)` ajouter des étiquettes de données (library ggrepel).
 * `geom_label_repel(aes(x,y), label = var)` ajouter des étiquettes de données avec fond (library ggrepel).
 
-
 ## Autre 
 
 * `geom_polygon(aes(x = long, y = lat, group = group))` tracer des polygones identifiés par un groupe (notamment pour les cartes). Option :
@@ -82,6 +81,16 @@ Libellés :
 * `geom_hline(yintercept = valeur)` ligne hotizontale.
 * `geom_vline(xintercept = valeur)` ligne veticale.
 * `geom_abline(intercept = 0, slope = 1)` droites et fonctions linéaires.
+
+## Formatage des axes
+
+* `scale_y_continuous(trans="log")` modifier le type d'axe (par exemple, logarithmique). Paramètres :
+
+    * `breaks=c(0,1,2,5)` préciser les valeurs des axes.
+
+Pour changer le type d'axes plus précisiément, il existe `library(scales)`.
+
+* `pseudo_log_trans()` log trans est équivalent à la fonction log mais qui en plus permet d'afficher 0.
 
 ## Thémes 
 
@@ -124,6 +133,7 @@ p + stat_function(fun = fonc, args = list(a = 3)) + xlim(-5,5)
 
 * `scale_colour_manual(couleurs)` changer la couleur.
 * `scale_fill_manual(couleurs)` changer la couleur.
+* `colorRampPalette(c("red", "green"))(n)` générer un vecteur de n couleurs entre deux couleurs.
 
 ### Palette prête 
 
