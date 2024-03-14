@@ -261,10 +261,10 @@ Seconde 	| `%S`	| 06
 * `nchar()` compter le nbre de caractères.
 * `str_length(vecteur)` nombre de lettres de chaque élément.
 * `str_sub(i, (text, start = debut, end = fin)` extraire une chaine de charactères.
-* `gsub(schéma, remplacement, variable) ` remplacer un schéma par une nouvelle chaîne de caractères.
+* `grepl(expression_reguliere, chaine_a_verifier)` renvoie vrai si l'expression est détectée.
+* `gsub(pattern = schéma, remplacement, variable_à_changer) ` remplacer un schéma ou un caractère par une nouvelle chaîne de caractères.
 * `grepl("exemple", texte)` renvoie un booléen si la sous chaine est présente.
 * `str_count(text, motif)` compter le nombre d'occurences (`stringr`).
-* `gsub( pattern = "[.]", "_", "texte à change" )` remplacer un caractère.
 * `strsplit(variable, symbole)` séparer une variable en fonction d'un symbole.
 * `trim(texte)` supprimer les espaces (package `gdata`).
 * `str_to_title(texte)` mettre les premiers caractères en majuscule (package `stringr`).
