@@ -23,6 +23,7 @@ Données minimum : concentration, dose, and time.
 * `valid_udunits()` lister les unités valides.
 * `valid_udunits_prefixes()` lister les ordres de grandeurs.
 * `set_units(1, umol/L)` ajouter une unité à des valeurs.
+* `mixed_units(df$valeurs, df$unite)` appliquer un vecteur units à un autre vecteur.
 
 `library(purrr)`
 
