@@ -33,8 +33,8 @@
 
 ### RData
 
-`save(obj1, obj2, file = "mes_objets.RData")` sauvegarder en RData.
-`load(fichier.RData)` charger un RData.
+* `save(obj1, obj2, file = "mes_objets.RData")` sauvegarder en RData.
+* `load(fichier.RData)` charger un RData.
 
 ### Excel
 
@@ -112,7 +112,6 @@ Déclarer des variables :
 
 * `attr(iris, "perso") <- valeur` ajouter un attribut à objet.
 * `attributes(dt_conc)` renvoie les attribue d'un objet. 
-
 
 ## Vecteurs
 
