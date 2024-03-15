@@ -48,11 +48,12 @@ Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openx
 
 * `addWorksheet(wb = wb, sheetName = "feuill")` ajouter une feuille.
 * `getSheetNames(wb ou fichier)` nom des feuilles.
+* `writeDataTable(wb = wb, sheet = "feuill", x = df,  tableName = "PK_recap")` déclarer un tableau.
 * `writeData(wb = wb, sheet = "feuill", x = df)` écrire un dataframe. Paramètres :
 
 	* `headerStyle = headerStyle` style des entêtes (voir style).
 	* `borders = "n"` .
-	* `startCol = nb`  et `colNames = nb` début où commencer à remplir. 
+	* `xy = c(1,1)` ou `startCol = nb`  et `colNames = nb` début où commencer à remplir.
 
 #### Style 
 
