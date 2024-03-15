@@ -122,7 +122,7 @@ Pour changer le type d'axes plus précisiément, il existe `library(scales)`.
 
 ## Afficher une fonction
 
-```
+``` r
 fonc = function(x, a){a * x**2}
 p <- ggplot(data = data.frame(x = 0), mapping = aes(x = x))
 p + stat_function(fun = fonc, args = list(a = 3)) + xlim(-5,5)
