@@ -22,8 +22,10 @@ Données minimum : concentration, dose, and time.
 
 * `valid_udunits()` lister les unités valides.
 * `valid_udunits_prefixes()` lister les ordres de grandeurs.
-* `set_units(1, umol/L)` ajouter une unité à des valeurs.
-* `mixed_units(df$valeurs, df$unite)` appliquer un vecteur units à un autre vecteur.
+* `units(val_1) <- "km/s"` ou `set_units(x, unit[1], mode = "standard")` attribuer une unité ET convertir dans une autre unité.
+* `deparse_unit(valeur)` récupérer l'unité.
+* `mixed_units(df$valeurs, df$unite)` créer une vecteur avec des unités différentes (Attention, elles s'affichent pas dans les sorties des dataframes).
+* `deparse_unit(valeur)` récupérer l'unité.
 
 `library(purrr)`
 
@@ -35,8 +37,6 @@ dt[,num_col] %>% map2_dfc(units, ~set_units(.x, .y, mode = "standard"))
  
 !!! note
     Si deux jeux de données avec des unités différentes, elles sont converties durant la fusion.
-
-
 
 ### Rempsyc
 
