@@ -88,6 +88,8 @@ Libellés :
 
     * `breaks=c(0,1,2,5)` préciser les valeurs des axes.
 
+* `scale_y_units(trans = type_axe)` paramètre des axes pour les variables avec une unité.
+
 Pour changer le type d'axes plus précisiément, il existe `library(scales)`.
 
 * `pseudo_log_trans()` log trans est équivalent à la fonction log mais qui en plus permet d'afficher 0.
