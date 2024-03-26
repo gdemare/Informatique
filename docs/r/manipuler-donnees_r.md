@@ -10,6 +10,7 @@ Packages `labelled`
 
 * `var_label(dt)` renvoie les labels (ou attribuer un label). Prend comme valeur une `list(nom_col = "label")`.
 * `remove_var_label(dt)` supprimer les labels.
+* `setNames(c('pos_row','pos_col'))` ajouter un nom de colonnes.
 
 ## Importer et exporter
 
@@ -30,7 +31,7 @@ Packages `labelled`
 
 * `write.table(tableau, file = "clipboard", sep = "\t")` copier dans le presse papier.
 
-### Information dataframe et nom des lignes eet des colonnes
+### Information dataframe et nom des lignes et des colonnes
 
 * `colnames(data)` nom des colonnes.
 * `rownames(data)` nom des colonnes.
@@ -78,6 +79,7 @@ max_by <- function(data, var, by) {
 
 * `everything()` toutes les colonnes restantes.
 * `all_of(vecteur)` sélectionner les colonnes avec le nom de la colonne dans le vecteur.
+* `one_of(vecteur)` pour sélectionner  les colonnes avec le nom de la colonne dans le vecteur. Fonctionne même si la colonne n'existe pas.
 * `any_of(vecteur)` sélectionner les colonnes dont le nom de la colonne n'est pas dans le vecteur.
 * `accross()`.
 * `last_col()` sélectionner la dernière colonne.
@@ -99,6 +101,7 @@ max_by <- function(data, var, by) {
 
 * `arrange(var1, var2)` trier en ordre décroisssant `desc(var)`.
 * `dt[["col1]]` sélectionner une colonne avec son nom en caractère en dehors de dplyr.
+* `relocate(col, .before = /after = )` changer l'ordre des colonnes.
 
 Fonction 				| Définition
 ------------------------|---
@@ -121,6 +124,8 @@ OrchardSprays %>%
   select(rowpos, treatment, decrease) %>%
   pivot_wider(names_from = treatment, values_from = decrease)
 ```
+
+* `rename(new_nom = old_nom)` renommer une colonne.
 
 ## Construire de nouvelles variables
 
@@ -163,6 +168,9 @@ Fonction		| Description
 `pmin` 			| Minimum par élément.
 `last()` 		| Prend la dernière valeur.
 `first()` 		| Prend la première valeur.
+
+!!! note
+	Pour les sommes cumulées, il faut utiliser `group_by` puis `mutate`.
 
 ### Faire une opération sur toutes les variables ou les lignes
 
