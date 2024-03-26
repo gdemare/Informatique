@@ -189,6 +189,7 @@ Apply permet d'appliquer une fonction à chaque élément.
 
 * `sapply(vecteur, fonction)` appliquer une fonction à tous les éléments d'un vecteur.
 * `apply(dt, axis=1/2, fonction)` appliquer une fonction à tous les éléments en ligne/colonne.
+* `tapply(tb_grp_kinetic, 1, function(x){colnames(x)})` appliquer une fonction colonne d'un dataframe.
 
 !!! note
 	La fonction peut être déclarée comme `function(x){x}`.
