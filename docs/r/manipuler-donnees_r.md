@@ -101,7 +101,7 @@ max_by <- function(data, var, by) {
 
 * `arrange(var1, var2)` trier en ordre décroisssant `desc(var)`.
 * `dt[["col1]]` sélectionner une colonne avec son nom en caractère en dehors de dplyr.
-* `relocate(col, .before = /after = )` changer l'ordre des colonnes.
+* `relocate(col, .before = /.after = )` changer la position d'une colonne.
 
 Fonction 				| Définition
 ------------------------|---
@@ -136,6 +136,8 @@ Options :
 
 * `.before=Value` ou  `.after=` préciser où insérer la colonne.
 
+!!! note 
+	Pour utiliser le nom d'une variable stockée dans une variable caractère `mutate(!!variable_text := ifelse(condition, !!sym(variable), NA))`.
 
 !!! note
 	Pour modifier uniquement certaines lignes, il est possible d'utiliser  `ifelse(condition, valeur_vrai, valeur_vaux)`.
