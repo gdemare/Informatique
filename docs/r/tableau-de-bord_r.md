@@ -246,6 +246,8 @@ eventReact
 
 #### Flextable
 
+* `flextable(dataframe)` afficher un tableau comme une image.
+
 ## Shinyapps
 
 `library(rsconnect)`
