@@ -25,7 +25,7 @@ Données minimum : concentration, dose, and time.
 * `units(val_1) <- "km/s"` ou `set_units(x, unit[1], mode = "standard")` attribuer une unité ET convertir dans une autre unité.
 * `deparse_unit(valeur)` récupérer l'unité.
 * `mixed_units(df$valeurs, df$unite)` créer une vecteur avec des unités différentes (Attention, elles s'affichent pas dans les sorties des dataframes).
-* `deparse_unit(valeur)` récupérer l'unité.
+* `drop_units(x)` supprimer l'unité.
 
 `library(purrr)`
 
