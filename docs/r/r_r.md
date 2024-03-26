@@ -53,15 +53,24 @@ Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openx
 
 	* `headerStyle = headerStyle` style des entêtes (voir style).
 	* `borders = "n"` .
-	* `xy = c(1,1)` ou `startCol = nb`  et `colNames = nb` début où commencer à remplir.
+	* `xy = c(colonne,ligne)` ou `startCol = nb`  et `colNames = nb` début où commencer à remplir.
+
+* Insérer un graphique :
+
+```r
+print(p1)
+insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
+```
 
 #### Style 
 
-`createStyle()`
+* `createStyle()` créer un style.
+	
+	* `fontColour = "#006100"` couleur de la police.
+	* `fg = "#C6EFCE"` couleur du fond.
+	* `textDecoration = "Bold"` gras.
 
-* `fontColour = "#006100"` couleur de la police.
-* `bgFill = "#C6EFCE"` fond.
-* `textDecoration = "Bold"` gras.
+* `addStyle(wb, sheet, style, rows, cols, gridExpand = FALSE, stack = FALSE)` ajouter un style à une cellule.
 
 #### Formater le classeur
 
@@ -117,9 +126,9 @@ Déclarer des variables :
 ## Vecteurs
 
 * `c(2, 4, 6)` déclarer un vecteur.
-* `2:6` séquence de 2 à 6 inclus.
+* `2:6` créer une séquence de 2 à 6 inclus.
 * `seq(2, 3, by = 0.5)` créer une séquence de 2 à 3.
-* `rep(1:2, times = 3 ou each = 3)` repéter la valeur soit en alterné (1,2,1,2) ou à la suite (1,1,2,2).
+* `rep(1:2, times = 3/each = 3)` repéter la valeur soit en alterné (1,2,1,2) ou à la suite (1,1,2,2).
 
 * `date[nligne][ncol]` sélectioner une cellule.
 * `data$colonne` sélectionner une colonne.
@@ -138,10 +147,10 @@ Déclarer des variables :
 	* `collapse = "separateur` concaténer les éléments de deux listes.
 
 * `length(vec)` taille du vecteur.
-* `sapply(aa, fonction)` appliquer une fonction à tous les éléments d'un vecteur.
 * `factor(liste, levels = c("niv1, "niv2"))` créer une liste ordonée.
 * `setdiff(vec1, vec2)` element du vecteur 1 non présent dans vec2.
 * `intersect(vec1, vec2)` intersection de deux vecteurs.
+* `ave(df$valeurs, df$col1, FUN = cumsum)` calculer une somme cumulée.
 
 ### Listes
 
@@ -151,6 +160,10 @@ list(
   nom2 = "texte"
 )
 ```
+
+* `x['data']` récupérer les valeurs et le libellé.
+* `x[['data']]` ou `x$data` recupérer uniquement les valeurs d'un élément de la liste.
+* `lengths(liste)` nombre d'éléments dans une liste.
 
 ## Matrices
 
@@ -163,12 +176,22 @@ list(
 * `solve(A)` inverser une matrice.
 * `A %*% B` mutiplication de matrices.
 * `eigen(matrice)` valeurs propres (noyau).
-* `dist(matrice, method  = "euclidean")` calculer la matrice des distances.
+* `dist(matrice, method  = "euclidean")` calculer la matrice des distances. Type de distance :
 
-  * `manhattan`
-  * `maximum`
+  * `manhattan`.
+  * `maximum`.
 
 * `scale(matrice)` centrer et réduire une matrice par colonne.
+
+### Apply
+
+Apply permet d'appliquer une fonction à chaque élément.
+
+* `sapply(vecteur, fonction)` appliquer une fonction à tous les éléments d'un vecteur.
+* `apply(dt, axis=1/2, fonction)` appliquer une fonction à tous les éléments en ligne/colonne.
+
+!!! note
+	La fonction peut être déclarée comme `function(x){x}`.
 
 ## Fonction
 
@@ -270,14 +293,11 @@ Seconde 	| `%S`	| 06
 * `str_to_title(texte)` mettre les premiers caractères en majuscule (package `stringr`).
 * `toupper(texte)` mettre les caractères en majuscule.
 
-### Stringr
-
-* `strsplit(texte)` supprimer les espaces à la fin et au début et les espaces doubles.
-
 ### Expressions régulières
 
 Library `stringr`
 
+* `strsplit(texte)` supprimer les espaces à la fin et au début et les espaces doubles.
 * `str_view_all(vecteur, exp_re)` rechercher une expression régulière.
 * `str_extract(texte, exp_re)` extraire un texte.
 * `str_locate(texte, exp_re)` récupérer la postion de début et de fin.
