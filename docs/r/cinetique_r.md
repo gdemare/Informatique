@@ -38,6 +38,9 @@ dt[,num_col] %>% map2_dfc(units, ~set_units(.x, .y, mode = "standard"))
 !!! note
     Si deux jeux de données avec des unités différentes, elles sont converties durant la fusion.
 
+!!! warning
+    Le `.` doit être transfomé en `*`.
+
 ### Rempsyc
 
 Package avec de nombreuses fonctions pour 
