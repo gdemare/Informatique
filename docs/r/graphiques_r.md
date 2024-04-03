@@ -82,6 +82,11 @@ Libellés :
 * `geom_vline(xintercept = valeur)` ligne veticale.
 * `geom_abline(intercept = 0, slope = 1)` droites et fonctions linéaires.
 
+Paramètres :
+
+* `color = "#F8766D"` couleur.
+* `linetype = "dashed"`type de ligne.
+
 ## Formatage des axes
 
 * `scale_y_continuous(trans="log")` modifier le type d'axe (par exemple, logarithmique). Paramètres :
