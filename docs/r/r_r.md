@@ -99,6 +99,7 @@ insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
 * `suppressWarnings(code)` supprimer les warnings.
 * `suppressMessages(code)` supprimer les messages.
 * `Sys.sleep(seconde)` attendre un nombre de seconde avant la suite de l'exécution.
+* `methods(class = "units")` lister les méthodes associées à un objet.
 
 ## Environnement
 
@@ -183,7 +184,18 @@ list(
 
 * `scale(matrice)` centrer et réduire une matrice par colonne.
 
-### Apply
+### Appliquer à tous les éléments
+
+#### Purr
+
+* `map_dfc()` renvoie un dataframe en colonne (dfr en ligne).
+* `map_chr(Value, fonction)` renvoie du texte.
+* `map_if(condition)` appliquer que si l'élément répond à une condition.
+* `map_at(position)` appliquer en fonction de la position.
+
+Existe : `map2_`, `map_` ...
+
+#### Apply
 
 Apply permet d'appliquer une fonction à chaque élément.
 
@@ -283,12 +295,10 @@ Seconde 	| `%S`	| 06
 ## Le texte
 
 * `nchar()` compter le nbre de caractères.
-* `str_length(vecteur)` nombre de lettres de chaque élément.
-* `str_sub(i, (text, start = debut, end = fin)` extraire une chaine de charactères.
+* `regexpr(reg, texte)` position du premier motif trouvé.
 * `grepl(expression_reguliere, chaine_a_verifier)` renvoie vrai si l'expression est détectée.
 * `gsub(pattern = schéma, remplacement, variable_à_changer) ` remplacer un schéma ou un caractère par une nouvelle chaîne de caractères.
 * `grepl("exemple", texte)` renvoie un booléen si la sous chaine est présente.
-* `str_count(text, motif)` compter le nombre d'occurences (`stringr`).
 * `strsplit(variable, symbole)` séparer une variable en fonction d'un symbole.
 * `trim(texte)` supprimer les espaces (package `gdata`).
 * `str_to_title(texte)` mettre les premiers caractères en majuscule (package `stringr`).
@@ -298,7 +308,11 @@ Seconde 	| `%S`	| 06
 
 Library `stringr`
 
-* `strsplit(texte)` supprimer les espaces à la fin et au début et les espaces doubles.
+* `str_replace(texte,  pattern, remplacement)` remplacer la première occurence.
+* `str_replace_all(texte,  pattern, remplacement)` remplacer toutes les occurences. 
+* `str_length(vecteur)` nombre de lettres de chaque élément.
+* `str_count(text, motif)` compter le nombre d'occurences (`stringr`).
+* `str_sub(i, (text, start = debut, end = fin)` extraire une chaine de charactères.
 * `str_view_all(vecteur, exp_re)` rechercher une expression régulière.
 * `str_extract(texte, exp_re)` extraire un texte.
 * `str_locate(texte, exp_re)` récupérer la postion de début et de fin.
