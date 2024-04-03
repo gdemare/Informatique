@@ -26,14 +26,8 @@ Données minimum : concentration, dose, and time.
 * `deparse_unit(valeur)` récupérer l'unité.
 * `mixed_units(df$valeurs, df$unite)` créer une vecteur avec des unités différentes (Attention, elles s'affichent pas dans les sorties des dataframes).
 * `drop_units(x)` supprimer l'unité.
-
-`library(purrr)`
-
-Ajouter une unité aux colonnes à partir d'un vecteur avec les unités.
-
-``` R
-dt[,num_col] %>% map2_dfc(units, ~set_units(.x, .y, mode = "standard"))
-```
+* `units_options(negative_power = TRUE)` modifier l'affichage des unités.
+* `attributes(dt$Value[[1]])` vérifier la valeur possède une unité.
  
 !!! note
     Si deux jeux de données avec des unités différentes, elles sont converties durant la fusion.
