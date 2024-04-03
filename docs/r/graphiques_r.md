@@ -93,7 +93,9 @@ Paramètres :
 
     * `breaks=c(0,1,2,5)` préciser les valeurs des axes.
 
-* `scale_y_units(trans = type_axe)` paramètre des axes pour les variables avec une unité.
+* `scale_y_units(trans = type_axe)` paramètre des axes pour les variables avec une unité. Paramètres :
+
+ 	* `unit = "m"` ajouter une unité à un axe.
 
 Pour changer le type d'axes plus précisiément, il existe `library(scales)`.
 
