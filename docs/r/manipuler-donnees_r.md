@@ -79,9 +79,8 @@ max_by <- function(data, var, by) {
 
 * `everything()` toutes les colonnes restantes.
 * `all_of(vecteur)` sélectionner les colonnes avec le nom de la colonne dans le vecteur.
-* `one_of(vecteur)` pour sélectionner  les colonnes avec le nom de la colonne dans le vecteur. Fonctionne même si la colonne n'existe pas.
+* `one_of(vecteur)` sélectionner  les colonnes avec le nom de la colonne dans le vecteur. Fonctionne même si la colonne n'existe pas.
 * `any_of(vecteur)` sélectionner les colonnes dont le nom de la colonne n'est pas dans le vecteur.
-* `accross()`.
 * `last_col()` sélectionner la dernière colonne.
 
 !!! example 
@@ -150,8 +149,8 @@ Fonction		| Description
 ----------------|-----------
 `n` 			| Nombre de lignes.
 `n_distinct` 	| nombre de lignes distinctes.
-`lead`			| Copier avec des valeurs décalées à gauche.
-`lag` 			| Copier avec des valeurs décalées à droite.
+`lead`			| Récupérer la valeur de la ligne d'avant.
+`lag(col, default = 0/1)` 			| Récupérer la valeur de la colonne/ligne d'avant .
 `dense_rank` 	| Ordonner sans sauts de rangs.
 `min_rank` 		| Ordonner avec sauts de rangs.
 `percent_rank`	| Rangs de (min rank) entre [0, 1].
@@ -210,6 +209,9 @@ Fonction 		| Défintion
 `mean` 			| Moyenne
 `median` 		| Médiane
 `sd` 			| Ecart-type
+
+!!! note
+	`group_by()` peut s'utiliser avec `mutate()` pour appliquer une fonction à chaque groupe, ``slice(n)` pour garder les n premirèes lignes de chaque groupe.
 
 ### Les jointures
 
