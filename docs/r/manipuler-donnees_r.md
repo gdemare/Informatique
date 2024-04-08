@@ -19,7 +19,9 @@ Packages `labelled`
 * `read_sas(fichier)` lire des tables SAS (package `haven`).
 * `read.csv(ficher, sep = separateur)` lire une table CSV.
 * `read.table(fichier)` importer un fichier avec des espaces comme séparateur.
-* `read.xlsx(fichier, colNames = TRUE, sheet = nom/num)` lire un fichier excel (workbook = wb) `library(openxlsx)`.
+* `read.xlsx(fichier, colNames = TRUE, sheet = nom/num)` lire un fichier excel (workbook = wb) `library(openxlsx)`. Paramètres :
+
+	* `startRow = 2` numéro de la ligne où commencer la lecture. 
 
 ### Exporter
  
