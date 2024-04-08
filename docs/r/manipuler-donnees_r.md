@@ -33,6 +33,8 @@ Packages `labelled`
 
 ### Information dataframe et nom des lignes et des colonnes
 
+`library(tibble)`
+
 * `colnames(data)` nom des colonnes.
 * `rownames(data)` nom des colonnes.
 * `column_to_rownames(var = "Accession")` mettre une colonne en nom de lignes et supprimer la colonne.
