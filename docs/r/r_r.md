@@ -18,6 +18,7 @@
 ## Les fichiers
 
 * `r"(dossier1\dossier 2\)"` déclarer un chemin.
+* `file <- tempfile(fileext = ".png")` créer un fichier tempoaire.
 * `basename("C:/some_dir/a.ext")` renvoyer le nom du fichier.
 * `dirname("C:/some_dir/a.ext")` renvoyer le dossier.
 * `dir.create(dossier)` créer un dossier.
