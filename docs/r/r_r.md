@@ -70,6 +70,7 @@ insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
 	* `fontColour = "#006100"` couleur de la police.
 	* `fg = "#C6EFCE"` couleur du fond.
 	* `textDecoration = "Bold"` gras.
+ 	* `halign/valign = "center"` position des éléments.
 
 * `addStyle(wb, sheet, style, rows, cols, gridExpand = FALSE, stack = FALSE)` ajouter un style à une cellule.
 
