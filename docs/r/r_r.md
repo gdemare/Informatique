@@ -151,6 +151,8 @@ Déclarer des variables :
 
 * `sort(x)` ordonner.
 * `rev(x)` renver l'ordre.
+* `order(x)` renvoie l'index de trie.
+* `rle(x)` liste avec le nombre d'occurences successives.
 * `table(x)` tableau d'effectifs.
 * `add_margins(table)` ajouter des totaux au tableaux.
 * `unique(x)` valeurs uniques.
@@ -204,8 +206,15 @@ list(
 * `map_chr(Value, fonction)` renvoie du texte.
 * `map_if(condition)` appliquer que si l'élément répond à une condition.
 * `map_at(position)` appliquer en fonction de la position.
+* `imap(liste, function(x, id)` renvoie la valeur et l'id de chaque élément.
 
 Existe : `map2_`, `map_` ...
+
+* `map(liste, function(x){x})` parcourir chaque propriété de la liste.
+* `pmap()` itérer un dataframe par ligne.
+
+!!! note
+	`map(dt, ~fct_print_unit_col(.x))` appliquer une fonction à chaque colonne.
 
 #### Apply
 
@@ -320,6 +329,7 @@ Seconde 	| `%S`	| 06
 
 Library `stringr`
 
+* `str_detect(string, pattern, negate = FALSE)` détermine si le schéma est trouvé.
 * `str_replace(texte,  pattern, remplacement)` remplacer la première occurence.
 * `str_replace_all(texte,  pattern, remplacement)` remplacer toutes les occurences. 
 * `str_length(vecteur)` nombre de lettres de chaque élément.
