@@ -4,6 +4,15 @@
 * `data.frame(col1 = type, col2 = type)` créer un dataframe vide.
 * `as.data.frame(lapply(donnees, type.convert))` réidentifier le type de variables d'un dataframe.
 
+Transformer une liste en dataframe :
+
+``` R
+data.frame(
+    niveau = rep(seq(length(liste)), lengths(liste)),
+    debut = matrix(unlist(liste))
+  ) 
+```
+
 ### Libellés des colonnes
 
 Packages `labelled`
