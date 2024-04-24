@@ -67,6 +67,9 @@ print(p1)
 insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
 ```
 
+!!! note
+	Avec Shiny, il faut créer le workbook dans la partie server : `wb <<- createWorkbook()`.
+
 #### Style 
 
 * `createStyle()` créer un style.
@@ -75,12 +78,15 @@ insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
 	* `fg = "#C6EFCE"` couleur du fond.
 	* `textDecoration = "Bold"` gras.
  	* `halign/valign = "center"` position des éléments.
+  	* `gridExpand = T` a ajouter pour les borders.
+  	* `stack = T` fusionner les propriétés des cellules.
 
 * `addStyle(wb, sheet, style, rows, cols, gridExpand = FALSE, stack = FALSE)` ajouter un style à une cellule.
 
 #### Formater le classeur
 
-* `setColWidths(wb = wb, sheet = "feuil", cols = 1:4, widths = "auto")` largeur des colonnes.
+* `mergeCells(wb, "feuill", cols = 1, rows = 2:9)` fusionner les cellules.
+* `setColWidths(wb = wb, sheet = "feuil", cols = 1:4, widths = "auto", ignoreMergedCells = T)` largeur des colonnes.
 
 ### Json 
 
