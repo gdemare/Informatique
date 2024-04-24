@@ -58,6 +58,18 @@ Les méthodes :
 * `textInput()` .
 * `textAreaInput()` zone de saisie de texte.
 
+#### Télécharger
+
+``` R
+output$downloadBPR <- downloadHandler(
+    filename = function(){nom_fichier},
+    content = function(file){file.copy(paste0(workDir, "BPR.xlsx"), file)
+      }
+  )
+```
+
+* `shinyjs::runjs("$('#download_summary')[0].click();") ` télécharger sans utiliser le bouton download.
+
 ### Interface 
 
 Il existe deux princiapaux packages pour l'interface sont :
