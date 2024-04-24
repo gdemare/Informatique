@@ -15,6 +15,10 @@
 
 * `testthat` tester.
 
+## Paramétrage
+
+* `options(digits=9)` changer le nombre de décimales affichées.
+
 ## Les fichiers
 
 * `r"(dossier1\dossier 2\)"` déclarer un chemin.
