@@ -206,7 +206,7 @@ list(
 * `map_chr(Value, fonction)` renvoie du texte.
 * `map_if(condition)` appliquer que si l'élément répond à une condition.
 * `map_at(position)` appliquer en fonction de la position.
-* `imap(liste, function(x, id)` renvoie la valeur et l'id de chaque élément.
+* `imap(liste, function(x, id)` renvoie la valeur et l'id (nom de colonnes) de chaque élément.
 
 Existe : `map2_`, `map_` ...
 
