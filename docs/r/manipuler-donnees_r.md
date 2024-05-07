@@ -156,32 +156,32 @@ Options :
 
 !!! note 
 	Pour appliquer une fonction a toutes les variables il faut utiliser `sapply`.
- 
 
 Fonction		| Description
 ----------------|-----------
-`n` 			| Nombre de lignes.
-`n_distinct` 	| nombre de lignes distinctes.
-`lead`			| Récupérer la valeur de la ligne d'avant.
-`lag(col, default = 0/1)` 			| Récupérer la valeur de la colonne/ligne d'avant .
-`dense_rank` 	| Ordonner sans sauts de rangs.
-`min_rank` 		| Ordonner avec sauts de rangs.
-`percent_rank`	| Rangs de (min rank) entre [0, 1].
-`row_number`	| Ordonne en affectant aux liens la première position.
-`ntile` 		| Divise en n groupes.
-`between` 		| Les valeurs sont-elles entre a et b.
-`cum_dist` 		| Distribution cumulée
-`cumall` 		| Cumul tant que vrai.
-`cumany` 		| Cumul dès que vrai.
-`cummean` 		| Moyenne glissante.
-`cumsum` 		| Somme cumulée.
-`cummax` 		| Maximum cumulé.
-`cummin` 		| Minimum cumulé.
-`cumprod` 		| Produit cumulé.
-`pmax` 			| Maximum par élément.
-`pmin` 			| Minimum par élément.
-`last()` 		| Prend la dernière valeur.
-`first()` 		| Prend la première valeur.
+`n()` 				| Nombre de lignes.
+`n_distinct()` 			| nombre de lignes distinctes.
+`lead()`			| Récupérer la valeur de la ligne d'avant.
+`lag(col, default = 0/1)` 	| Récupérer la valeur de la colonne/ligne d'avant .
+`dense_rank()` 			| Ordonner sans sauts de rangs.
+`min_rank()` 			| Ordonner avec sauts de rangs.
+`percent_rank()`		| Rangs de (min rank) entre [0, 1].
+`row_number()`			| Ordonner en affectant aux liens la première position.
+`ntile()`	 		| Diviser en n groupes.
+`between()`	 		| Les valeurs sont-elles entre a et b.
+`cum_dist()` 			| Distribution cumulée
+`cumall()`	 		| Cumul tant que vrai.
+`cumany()`	 		| Cumul dès que vrai.
+`cummean()`	 		| Moyenne glissante.
+`cumsum()` 			| Somme cumulée.
+`cummax()` 			| Maximum cumulé.
+`cummin()` 			| Minimum cumulé.
+`cumprod()`	 		| Produit cumulé.
+`pmax()` 			| Maximum par élément.
+`pmin()` 			| Minimum par élément.
+`last()` 			| Garder la dernière valeur.
+`first()` 			| Garder la première valeur.
+`inth(n)` 			| Garder la n-ième valeur.
 
 !!! note
 	Pour les sommes cumulées, il faut utiliser `group_by` puis `mutate`.
@@ -191,7 +191,7 @@ Fonction		| Description
 Fonction 		| Défintion
 ----------------|-------------
 `rowSums()`		| Somme
-`colMeans()`	| Moyenne (`colMeans(is.na(data))` utile pour connaitre le pourcentage de valeurs manquantes).
+`colMeans()`		| Moyenne (`colMeans(is.na(data))` utile pour connaitre le pourcentage de valeurs manquantes).
 
 * `sapply(dt, axis = 1/2, fonction)` appliquer une opération à toutes les colonnes ou les lignes.
 
@@ -208,17 +208,12 @@ Calculer des indicateurs par groupe :
 
 * `summarise(nom = formule)` appliquer une fonction.
 * `summarise_all(fonction)` appliquer une fonction à chaque variable.
-* `count(variable, wt = valeur)` Dénombre le nombre d'observations de chaque valeur d'une variable.
+* `count(variable, wt = valeur)` dénombrer le nombre d'observations de chaque valeur d'une variable.
 
 Fonction 		| Défintion
 ----------------|---
-`first` 		| Première valeur d'un vecteur
-`last` 			| Dernière valeur d'un vecteur
-`inth` 			| Nième valeur d'un vecteur
-`n` 			| Nb de valeurs
-`n_distinct`	| Nb de valeurs distinctes
-`min`			| minimum
-`max`			| maximum
+`min`			| Minimum
+`max`			| Maximum
 `mean` 			| Moyenne
 `median` 		| Médiane
 `sd` 			| Ecart-type
