@@ -66,6 +66,7 @@ Package : `dplyr`, `tidyr`. `résultat1 %>% résultat2` : rediriger le résultat
 
 * `pull(data, colonne)` transformer une sortie en vecteur.
 
+## Fonctions dplyr
 Les fonctions avec dplyr
 
 ``` r
@@ -75,6 +76,9 @@ max_by <- function(data, var, by) {
     summarise(maximum = max({{ var }}, na.rm = TRUE))
 }
 ```
+
+!!! note
+	Pour créer une fonction qui s'applique à un vecteur il peut être utile d'utiliser `map`.
 
 ## Filtrer
 
@@ -88,7 +92,7 @@ max_by <- function(data, var, by) {
 * `complete.cases(data)` renvoie les lignes avec des valeurs manquantes.
 * `case_when(condition1 ~ val1, condition2 ~ val2,..., .default = val)` fonction équivalente au CASE WHEN en SQL.
 
-## Selectionner
+## Sélectionner
 
 * `everything()` toutes les colonnes restantes.
 * `all_of(vecteur)` sélectionner les colonnes avec le nom de la colonne dans le vecteur.
@@ -203,6 +207,7 @@ Grouper les données :
 
 * `group_by(var)` grouper les observations par la var (toujours suivi de `summarise`).
 * `ungroup(iris)` dégrouper le jeu de données.
+* `group_split()` séparer le jeu de données en plusieurs.
 
 Calculer des indicateurs par groupe :
 
