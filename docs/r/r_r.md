@@ -313,7 +313,7 @@ Seconde 	| `%S`	| 06
 * `hours(heure)` heure.
 * `format(datetime, format = '')` format d'affichage d'une date et de l'heure.
 
-## Le texte
+## Texte
 
 * `nchar()` compter le nbre de caractères.
 * `regexpr(reg, texte)` position du premier motif trouvé.
@@ -322,7 +322,6 @@ Seconde 	| `%S`	| 06
 * `grepl("exemple", texte)` renvoie un booléen si la sous chaine est présente.
 * `strsplit(variable, symbole)` séparer une variable en fonction d'un symbole.
 * `trim(texte)` supprimer les espaces (package `gdata`).
-* `str_to_title(texte)` mettre les premiers caractères en majuscule (package `stringr`).
 * `toupper(texte)` mettre les caractères en majuscule.
 
 ### Expressions régulières
@@ -333,16 +332,25 @@ Library `stringr`
 * `str_replace(texte,  pattern, remplacement)` remplacer la première occurence.
 * `str_replace_all(texte,  pattern, remplacement)` remplacer toutes les occurences. 
 * `str_length(vecteur)` nombre de lettres de chaque élément.
-* `str_count(text, motif)` compter le nombre d'occurences (`stringr`).
-* `str_sub(i, (text, start = debut, end = fin)` extraire une chaine de charactères.
+* `str_count(text, motif)` compter le nombre d'occurences.
+* `str_to_title(texte)` mettre les premiers caractères en majuscule (package `stringr`).
+* `str_sub(i, (text, start = debut, end = fin)` extraire une chaine de caractères.
 * `str_view_all(vecteur, exp_re)` rechercher une expression régulière.
 * `str_extract(texte, exp_re)` extraire un texte.
 * `str_locate(texte, exp_re)` récupérer la postion de début et de fin.
+* `str_trim(string, side = c("both", "left", "right"))` supprimer les espaces au début et à la fin.
 
-Symbole	| Définition
---------|-----------------
-`*`		| une ou plusieurs fois
-`.` 	| jocker
+Symbole		| Définition
+------------|-----------------
+`*`			| une ou plusieurs fois
+`.` 		| jocker
+`ver[tr]s` 	| t ou r.
+`[A-Z]` 	| toutes les lettres majuscules.
+`[0-9]` 	| tous les chiffres.
+`^` 		| négation(exemple `[^0-9]` tous sauf les chiffres).
+`|` 		|ou 
+`?`			| le caractère précédent est facultatif.
+`[:alpha:]`	| toutes les lettres.
 
 ## Connecter R à une bdd
 
