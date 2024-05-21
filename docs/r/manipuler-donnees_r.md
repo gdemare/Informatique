@@ -13,13 +13,21 @@ data.frame(
   ) 
 ```
 
-### Libellés des colonnes
+### Renommer les colonnes
+
+* `setNames(c('pos_row','pos_col'))` ajouter un nom de colonnes.
+* `rename_at(colonne, ~paste(., "0"))` renommer uniquement les colonnes.
+* `rename_if(condition, ~paste(., "0"))` renommer uniquement si la condition est vraie.
+* `rename(!!!setNames(col_units$old_name, col_units$new_name))` renommer les colonnes à partir d'un dataframe.
+
+#### Libellés des colonnes
 
 Packages `labelled`
 
+* `var_label(dt) <- labels` ajouter un label aux colonnes.
 * `var_label(dt)` renvoie les labels (ou attribuer un label). Prend comme valeur une `list(nom_col = "label")`.
 * `remove_var_label(dt)` supprimer les labels.
-* `setNames(c('pos_row','pos_col'))` ajouter un nom de colonnes.
+* `colnames(df_labelled) <- var_label(df_labelled)` renommer les colonnes avec les labels.
 
 ## Importer et exporter
 
@@ -67,7 +75,6 @@ Package : `dplyr`, `tidyr`. `résultat1 %>% résultat2` : rediriger le résultat
 * `pull(data, colonne)` transformer une sortie en vecteur.
 
 ## Fonctions dplyr
-Les fonctions avec dplyr
 
 ``` r
 max_by <- function(data, var, by) {
@@ -76,6 +83,12 @@ max_by <- function(data, var, by) {
     summarise(maximum = max({{ var }}, na.rm = TRUE))
 }
 ```
+
+Sélecteur de colonnes :
+
+* `across(.cols, .fns, ..., .names = NULL, .unpack = FALSE)` sélectionner des colonnes avec vecteurs textes.
+* `if_any(.cols, .fns, ..., .names = NULL)`
+* `if_all(.cols, .fns, ..., .names = NULL)`
 
 !!! note
 	Pour créer une fonction qui s'applique à un vecteur il peut être utile d'utiliser `map`.
@@ -146,6 +159,8 @@ OrchardSprays %>%
 ## Construire de nouvelles variables
 
 * `mutate(nom = formule)` appliquer une fonction et ajouter une colonne (il est possible d'appliquer à toutes les variables avec `sapply` voir ci dessous et, de sélectionner une variable par son nom avec `!!sym("col1")`).
+* `mutate_all(~as.character(.x))` appliquer la fonction à toutes les colonnes.
+* `mutate_if(~fct_test(.x), function(x){drop_units(x)})` appliquer une fonction aux colonnes avec Vrai.
 * `transmute(nom = formule)` construitre une ou plusieurs variables en supprimant les colonnes.
 
 Options :
@@ -164,7 +179,7 @@ Options :
 Fonction		| Description
 ----------------|-----------
 `n()` 				| Nombre de lignes.
-`n_distinct()` 			| nombre de lignes distinctes.
+`n_distinct()` 			| Nombre de lignes distinctes.
 `lead()`			| Récupérer la valeur de la ligne d'avant.
 `lag(col, default = 0/1)` 	| Récupérer la valeur de la colonne/ligne d'avant .
 `dense_rank()` 			| Ordonner sans sauts de rangs.
@@ -207,7 +222,7 @@ Grouper les données :
 
 * `group_by(var)` grouper les observations par la var (toujours suivi de `summarise`).
 * `ungroup(iris)` dégrouper le jeu de données.
-* `group_split()` séparer le jeu de données en plusieurs.
+* `group_split()` séparer le jeu de données en plusieurs (précédé d'un `group_by`).
 
 Calculer des indicateurs par groupe :
 
