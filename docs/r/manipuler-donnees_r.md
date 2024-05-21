@@ -132,6 +132,9 @@ Sélecteur de colonnes :
 * `dt[["col1]]` sélectionner une colonne avec son nom en caractère en dehors de dplyr.
 * `relocate(col, .before = /.after = )` changer la position d'une colonne.
 
+!!! note
+	Pour trier une colonne, il faut `factor(x, levels = c("el1", "el2"))`.
+
 Fonction 				| Définition
 ------------------------|---
 `starts_with(debut)`	| les variables commençant par...
