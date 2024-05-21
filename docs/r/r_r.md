@@ -15,9 +15,10 @@
 
 * `testthat` tester.
 
-## Paramétrage
+## Paramétrage et utiles
 
 * `options(digits=9)` changer le nombre de décimales affichées.
+* `system.time({instruction})` temps d'exécution d'une instruction.
 
 ## Les fichiers
 
