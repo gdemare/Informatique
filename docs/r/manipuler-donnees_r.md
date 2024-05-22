@@ -13,6 +13,8 @@ data.frame(
   ) 
 ```
 
+* `transpose(df)` tranformer un dt en liste de lignes (`library(purrr)`).
+
 ### Renommer les colonnes
 
 * `setNames(c('pos_row','pos_col'))` ajouter un nom de colonnes.
