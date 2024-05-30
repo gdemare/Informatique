@@ -20,6 +20,10 @@ Données minimum : concentration, dose, and time.
 
 `library(units)`
 
+
+!!! warning
+    Quand il n'y a pas d'unité, mettre "".
+
 * `valid_udunits()` lister les unités valides.
 * `valid_udunits_prefixes()` lister les ordres de grandeurs.
 * `units(val_1) <- "km/s"` ou `set_units(x, unit[1], mode = "standard")` attribuer une unité ET convertir dans une autre unité.
