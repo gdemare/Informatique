@@ -344,7 +344,7 @@ Library `stringr`
 Symbole		| Définition
 ------------|-----------------
 `*`			| une ou plusieurs fois
-`.` 		| jocker
+`.` 		| joker
 `ver[tr]s` 	| t ou r.
 `[A-Z]` 	| toutes les lettres majuscules.
 `[0-9]` 	| tous les chiffres.
@@ -352,6 +352,9 @@ Symbole		| Définition
 `|` 		|ou 
 `?`			| le caractère précédent est facultatif.
 `[:alpha:]`	| toutes les lettres.
+
+!!! note
+	Le caractère d'échappement est `\\`.
 
 ## Connecter R à une bdd
 
