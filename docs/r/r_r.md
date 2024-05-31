@@ -352,7 +352,8 @@ Symbole		| Définition
 `|` 		|ou 
 `?`			| le caractère précédent est facultatif.
 `[:alpha:]`	| toutes les lettres.
-
+`()` 		| un symbole parmis la liste.
+`[]+`		| jusqu'a que ce soit faux.
 !!! note
 	Le caractère d'échappement est `\\`.
 
