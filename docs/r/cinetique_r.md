@@ -4,6 +4,9 @@
 
 https://billdenney.github.io/pknca/news/index.html
 
+!!! warning 
+    Ne fonctionne pas avec `units`.
+
 !!! note
     La bibliothèque a été pensée pour intégrer de nouveaux indicateurs qui n'auraient pas été pensé par les auteurs.
 
@@ -28,7 +31,6 @@ Résultats :
 ### Les unités
 
 `library(units)`
-
 
 !!! warning
     Quand il n'y a pas d'unité, mettre "".
