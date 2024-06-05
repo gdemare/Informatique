@@ -19,8 +19,12 @@ Données minimum : concentration, dose, and time.
    
     * `conc_obj <- PKNCAconc(dt, Conc~Time|Subject)` pour les fécès et l'urine.
     * `dose_obj <- PKNCAdose(dt, Dose~Time|Subject)` déclarer les doses (1 ligne pour chaque individu.
+!!! note
+    La formule `treatment+subject` possibilité d'utiliser plusieurs colonnes pour créer un id sujet et `/Group` pour déclarer des groupes.
 
-2. `PKNCAdata(conc_obj, dose_obj)` fusionner les tables doses et concentration.
+    * `superposition(conc_obj, tau=24, check.blq=FALSE)` pour les études de multidosage. 
+    
+2. `PKNCAdata(conc_obj, dose_obj)` fusionner les tables doses et concentration. Le résultat est un tableau avec tous les paramètres cinétiques pour chaque individu.
 
 3. `results_obj <- pk.nca(data_obj)` calculer les indicateurs.
 
