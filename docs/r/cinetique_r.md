@@ -28,6 +28,20 @@ Résultats :
 
 * `summary(results_obj)` résumer le résultat.
 
+Personnaliser les indicateurs :
+
+* `PKNCA.options()` configuration.
+* Ajouter des indicateurs :
+```R 
+PKNCA.set.summary(
+  name=nom,
+  description = "median and 5th to 95th percentile",
+  point=fct1,
+  spread=fct2,
+  rounding=list(signif=3)
+)
+```
+
 ### Les unités
 
 `library(units)`
