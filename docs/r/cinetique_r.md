@@ -12,9 +12,18 @@ Données minimum : concentration, dose, and time.
 * zeros (0) below the limit of quantification.
 * NA valeur manquante.
 
-* `PKNCAconc()` pour les fécès et l'urine.
-* `PKNCAdose()` pour les quantités administrées.
-* `PKNCAdata(dt.concentration, dt.dose)` fusionner les tables doses et concentration.
+1. Formater les données pour les calculs :
+   
+    * `conc_obj <- PKNCAconc(dt, Conc~Time|Subject)` pour les fécès et l'urine.
+    * `dose_obj <- PKNCAdose(dt, Dose~Time|Subject)` déclarer les doses (1 ligne pour chaque individu.
+
+2. `PKNCAdata(conc_obj, dose_obj)` fusionner les tables doses et concentration.
+
+3. `results_obj <- pk.nca(data_obj)` calculer les indicateurs.
+
+Résultats : 
+
+* `summary(results_obj)` résumer le résultat.
 
 ### Les unités
 
