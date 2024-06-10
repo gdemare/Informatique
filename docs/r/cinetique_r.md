@@ -14,15 +14,25 @@ Données minimum : concentration, dose, and time.
 
 * zeros (0) below the limit of quantification.
 * NA valeur manquante.
+* `superposition(conc_obj, tau=24, check.blq=FALSE)` pour les études de multidosage. 
 
 1. Formater les données pour les calculs :
    
-    * `conc_obj <- PKNCAconc(dt, Conc~Time|Subject)` pour les fécès et l'urine.
-    * `dose_obj <- PKNCAdose(dt, Dose~Time|Subject)` déclarer les doses (1 ligne pour chaque individu.
+    * `conc_obj <- PKNCAconc(dt, Conc~Time|Subject)` pour les fécès et l'urine. Pour les fèces et les urines `duration=` et `volume=` avec la colonne déclarer `"colonne"`.
+  
+       * `time.nominal =` afficher les réels de prélévements (n'est pas utilisé pour les calculs).
+       * `intervals = ` ?????
+         
+    * `dose_obj <- PKNCAdose(dt, Dose~Time|Subject)` déclarer les doses et leurs temps d'injection.
+        
+        * `route = ` précisier la route.
+            
+            * `"intravascular"` injection. Si l'injection est lente (infusion), il faut ajouter l'option `rate=` ou `duration=`.
+            * `"extravascular"` ingestion. 
+
 !!! note
     La formule `treatment+subject` possibilité d'utiliser plusieurs colonnes pour créer un id sujet et `/Group` pour déclarer des groupes.
 
-    * `superposition(conc_obj, tau=24, check.blq=FALSE)` pour les études de multidosage. 
     
 2. `PKNCAdata(conc_obj, dose_obj)` fusionner les tables doses et concentration. Le résultat est un tableau avec tous les paramètres cinétiques pour chaque individu.
 
@@ -36,6 +46,7 @@ Personnaliser les indicateurs :
 
 * `PKNCA.options()` configuration.
 * Ajouter des indicateurs :
+
 ```R 
 PKNCA.set.summary(
   name=nom,
