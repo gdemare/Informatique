@@ -21,7 +21,6 @@ Données minimum : concentration, dose, and time.
     * `conc_obj <- PKNCAconc(dt, Conc~Time|Subject)` pour les fécès et l'urine. Pour les fèces et les urines `duration=` et `volume=` avec la colonne déclarer `"colonne"`.
   
        * `time.nominal =` afficher les réels de prélévements (n'est pas utilisé pour les calculs).
-       * `intervals = ` ?????
        * `sparse = FALSE` échantillons claisemés.
          
     * `dose_obj <- PKNCAdose(dt, Dose~Time|Subject)` déclarer les doses et leurs temps d'injection.
@@ -36,8 +35,10 @@ Données minimum : concentration, dose, and time.
 
     
 2. `PKNCAdata(conc_obj, dose_obj)` fusionner les tables doses et concentration. Le résultat est un tableau avec tous les paramètres cinétiques pour chaque individu.
+   
+       * `intervals = ` ?????
 
-3. `results_obj <- pk.nca(data_obj)` calculer les indicateurs.
+4. `results_obj <- pk.nca(data_obj)` calculer les indicateurs.
 
 Résultats : 
 
