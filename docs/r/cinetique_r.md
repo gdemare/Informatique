@@ -22,6 +22,7 @@ Données minimum : concentration, dose, and time.
   
        * `time.nominal =` afficher les réels de prélévements (n'est pas utilisé pour les calculs).
        * `intervals = ` ?????
+       * `sparse = FALSE` échantillons claisemés.
          
     * `dose_obj <- PKNCAdose(dt, Dose~Time|Subject)` déclarer les doses et leurs temps d'injection.
         
