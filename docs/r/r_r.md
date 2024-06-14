@@ -199,6 +199,10 @@ list(
 
 * `scale(matrice)` centrer et réduire une matrice par colonne.
 
+## Mathématique
+
+* `signif(x, 2)` choirisr le nombre de chiffres significatifs.
+
 ### Appliquer à tous les éléments
 
 #### Purr
