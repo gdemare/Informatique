@@ -14,7 +14,8 @@ Données minimum : concentration, dose, and time.
 
 ### Préparer les données
 
-* `as_sparse_pk(conc, time, subject)` données clairsemées 
+* `as_sparse_pk(conc, time, subject)` données clairsemées.
+* `pknca_units_table(concu="ng/mL", doseu="mg/kg", time="hr")` déclarer une unité aux mesures et aux indicateurs.
 
 #### Valeurs manquantes et BLQ
 
@@ -54,18 +55,42 @@ Remplacer les valeurs :
     
 2. `PKNCAdata(conc_obj, dose_obj)` fusionner les tables doses et concentration. Le résultat est un tableau avec tous les paramètres cinétiques pour chaque individu.
    
-       * `intervals = ` ?????
+       * `intervals =` liste des indicateurs à ajouter.
+       * `units = d_units` avec d_units un objet (pknca_units_table).
 
 4. `results_obj <- pk.nca(data_obj)` calculer les indicateurs.
 
 Fonctions supplémentaires : 
 
 * `assert_PKNCAdata()` être un objet PKNCAdata.
-* `summary(results_obj)` résumer le résultat.
+* `pk_nca_result_to_df()` convertir le résultat en dataframe ?
+* `summary(results_obj)` résumer le résultat (`roundingSummarize()` ?).
+* `roundString(numeric, nb_chiffres)` renvoyer un nombre en texte avec un nombre d'arrondis.
+* `signifString(numeric, nb_chiffres)` renvoyer un nombre en texte avec un nombre de chiffres significatifs.
+* `setDuration(obj, valeur)` ajouter une duration.
+* `setRoute(obj, valeur)` ajouter une route.
+* `time_calc()` calculer le temps par rapport à un événement par exemple, un dosage.
+* `exclude(myconc, reason="Carryover", mask=c(TRUE, rep(FALSE, 6)))` exclure certains points.
 
-### Personnaliser les indicateurs
+###  Les parametres cinétiques
 
 * `PKNCA.options()` configuration.
+* `PKNCA.options.describe("min.span.ratio")` avoir une description du champ.
+* 
+    * `$adj.r.squared.factor` value
+    * `$max.missing` value
+    * `$auc.method = "lin up/log down"`
+    * `$conc.na` "drop"
+    * `$conc.blq` blq `$first` ou `$middle` ou `$last` valeur possible `"keep"` ou `"drop"`.
+    * `$first.tmax` TRUE
+    * `$allow.tmax.in.half.life` FALSE
+    * `$min.hl.points` 3
+    * `$min.span.ratio` 2
+    * `$max.aucinf.pext` 20
+    * `$min.hl.r.squared` 0.9
+    * `$tau.choices` NA
+    * `$single.dose.aucs`
+      
 * `add.interval.col()` ajouter un indicateur avec un intervalle.
 * `pk.calc.<indicateur>` utiliser une fonction de calcul d'un indicateur.
 
@@ -86,7 +111,6 @@ PKNCA.set.summary(
 )
 ```
 
-
 #### Modifier les méthodes de calculs
 
 modifier les fonctions de bases et ajouter une règle métier:
@@ -95,7 +119,6 @@ modifier les fonctions de bases et ajouter une règle métier:
 my_mean <- pk.business(FUN=mean)
 my_mean(c(1:3, NA))
 ```
-
 
 ### Les unités
 
