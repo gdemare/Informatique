@@ -58,18 +58,6 @@ Les méthodes :
 * `textInput()` .
 * `textAreaInput()` zone de saisie de texte.
 
-#### Télécharger
-
-``` R
-output$downloadBPR <- downloadHandler(
-    filename = function(){nom_fichier},
-    content = function(file){file.copy(paste0(workDir, "BPR.xlsx"), file)
-      }
-  )
-```
-
-* `shinyjs::runjs("$('#download_summary')[0].click();") ` télécharger sans utiliser le bouton download.
-
 ### Interface 
 
 Il existe deux princiapaux packages pour l'interface sont :
@@ -202,6 +190,22 @@ code server                       | rendu                     | code ui
 Package `DT` Afficher un dataframe 
 
 * `renderDataTable({dataFrame}, options = list(scrollX = TRUE))` si l'affichage depasse de l'écran.
+
+##### Bouton télécharger un fichier
+
+* `downloadButton(outputId = "download_kluster", label = "Kluster export")` bouton de téléchargement d'un fichier dans UI.
+
+Code du server :
+
+``` R
+output$downloadBPR <- downloadHandler(
+    filename = function(){nom_fichier},
+    content = function(file){file.copy(paste0(workDir, "BPR.xlsx"), file)
+      }
+  )
+```
+
+* `shinyjs::runjs("$('#download_summary')[0].click();") ` télécharger sans utiliser le bouton download.
 
 #### Variable réactive
 
