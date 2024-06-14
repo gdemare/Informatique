@@ -71,3 +71,14 @@ rapport entre la quantité d'une substance éliminée par unité de temps et la 
 * Mean Residence Time (MRT) temps moyen de résidence du médicament dans l'organisme. Il est souvent déterminé à partir de Michaelis-menten ou vss.
 
 ### Autres :
+
+
+Indicateurs         | IV bolus dose | Description
+--------------------|---------------|-----
+`start`             |               |
+`end`               |               |
+`auclast`           |               |
+`aucall`            |               |
+`c0`                | X             | Estimé la concentration à t0. plusieurs méthode c("c0", "logslope", "c1", "cmin", "set0")
+`ae`                |               | montant excrété (`sum(conc*volume)`)
+
