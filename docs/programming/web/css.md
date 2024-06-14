@@ -1,19 +1,24 @@
 Préparer avant un Styleguide UI :
 
 * Pattern Lab.
-* [Huge](https://hugeinc.github.io/styleguide)
+* [Huge](https://hugeinc.github.io/styleguide), outils qui permet de créer un guide du style.
+* [CSSPurge](https://purgecss.com/api-reference/), programme javescript qui permet de garder uniquement les propriétés CSS utilisées.
 
-### Les variables en CSS
+### Variables
 
-```
+Déclarer une variable :
+
+``` css
 :root {
   --nom-variable: valeur;
 }
 ```
-`var(--main-bg-color)` appeler la variable dans le code.
 
-### Sélection un élément en fonction de sa position
-:hover` passer la souris sur un élément.
+* `var(--main-bg-color)` appeler la variable dans le code.
+
+### Sélectionner un élément en fonction de sa position
+
+`:hover` passer la souris sur un élément.
 
 * `element:position` appliquer des propriétés à un element particulier. Position : 
 
@@ -35,7 +40,7 @@ Préparer avant un Styleguide UI :
 
 * `background-color: couelur;` couleur.
 * `background-image: url('liens');` ajouter une image en arrière plan.
-* `linear-gradient(direction, couleur1, couleur2)` degradé. (exemple :  `background-image: linear-gradient(to bottom right, red, yellow)` ) Direction :
+* `linear-gradient(direction, couleur1, couleur2)` degradé (exemple :  `background-image: linear-gradient(to bottom right, red, yellow)` ) Direction :
     
 	* `to right` gauche à droite.
 
@@ -52,7 +57,7 @@ Préparer avant un Styleguide UI :
 
 ## Flexbox
 
-### Contenaire
+### Conteneur
 
 * `display: flex;` activer la propriéte flex.
 * `flex-direction: direction;` direction de l'alignement(). Direction :
@@ -92,18 +97,18 @@ Préparer avant un Styleguide UI :
 
 ## Modifier les propriétes en fonction de la taille de l'ecran
 
-```
+``` css
 @media only screen and (max-device-width:480px) {
   nouvelles proprietes
 }
 ```
-### Changer le curseur
+### Curseur
 
 * `cursor: type;` pointeur de la souris. Type :
 	
 	* `pointer` selection.
 
-### Ajouter des espaces
+### Les espaces
 
 * `&nbsp;` un espace.
 * `&ensp;` pour afficher une espace double
@@ -122,4 +127,3 @@ Préparer avant un Styleguide UI :
 
 * `text-transform: uppercase/capitalize` transofrme le type de lettre (tout en majuscule/seulement la première lettre).
 
-* `:hover` passer la souris sur un élément.
