@@ -83,8 +83,18 @@ Il existe deux princiapaux packages pour l'interface sont :
 
 ##### Panneau de saisie
 
-* `mainPanel()` principale
-* `sidebarPanel()` saisie
+* `mainPanel()` principale.
+* `sidebarPanel()` saisie.
+
+Les boites :
+``` R
+box(title = "New",
+	fluidRow(
+	        column(width=4, objet),
+	        column(width=4, objet)
+		)
+)
+```
 
 #### Bootstrap
 
@@ -99,7 +109,7 @@ Il existe deux princiapaux packages pour l'interface sont :
 
 * `card_header("Datatable loaded")` entête
 * `card_body()` corps
-* `card_footer` pied de page.
+* `card_footer()` pied de page.
 
 ##### Les icones
 
@@ -132,6 +142,7 @@ Paramètres :
 
 Code            					| Type
 ------------------------------------|-----------------
+`br()`         					| saut de ligne
 `box()`         					| classique
 `infoBox()`     					| texte statique
 `tabBox()`      					| valeur
