@@ -125,6 +125,7 @@ nav:
       - "R" : r/r_r.md
       - "Formats" : r/formater-donnees_r.md
       - "Dataframe" : r/manipuler-donnees_r.md
+      - "PKNCA & units" : r/PKNCA_units_r.md
       - "Divers" :
         - "BLAST" : r/bioinformatique/blast_r.md
         - "Carthographie" : r/carte_r.md
