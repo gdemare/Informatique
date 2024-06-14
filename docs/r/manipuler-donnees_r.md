@@ -4,13 +4,32 @@
 * `data.frame(col1 = type, col2 = type)` créer un dataframe vide.
 * `as.data.frame(lapply(donnees, type.convert))` réidentifier le type de variables d'un dataframe.
 
-### Libellés des colonnes
+Transformer une liste en dataframe :
+
+``` R
+data.frame(
+    niveau = rep(seq(length(liste)), lengths(liste)),
+    debut = matrix(unlist(liste))
+  ) 
+```
+
+* `transpose(df)` tranformer un dt en liste de lignes (`library(purrr)`).
+
+### Renommer les colonnes
+
+* `setNames(c('pos_row','pos_col'))` ajouter un nom de colonnes.
+* `rename_at(colonne, ~paste(., "0"))` renommer uniquement les colonnes.
+* `rename_if(condition, ~paste(., "0"))` renommer uniquement si la condition est vraie.
+* `rename(!!!setNames(col_units$old_name, col_units$new_name))` renommer les colonnes à partir d'un dataframe.
+
+#### Libellés des colonnes
 
 Packages `labelled`
 
+* `var_label(dt) <- labels` ajouter un label aux colonnes.
 * `var_label(dt)` renvoie les labels (ou attribuer un label). Prend comme valeur une `list(nom_col = "label")`.
 * `remove_var_label(dt)` supprimer les labels.
-* `setNames(c('pos_row','pos_col'))` ajouter un nom de colonnes.
+* `colnames(df_labelled) <- var_label(df_labelled)` renommer les colonnes avec les labels.
 
 ## Importer et exporter
 
@@ -19,7 +38,9 @@ Packages `labelled`
 * `read_sas(fichier)` lire des tables SAS (package `haven`).
 * `read.csv(ficher, sep = separateur)` lire une table CSV.
 * `read.table(fichier)` importer un fichier avec des espaces comme séparateur.
-* `read.xlsx(fichier, colNames = TRUE, sheet = nom/num)` lire un fichier excel (workbook = wb) `library(openxlsx)`.
+* `read.xlsx(fichier, colNames = TRUE, sheet = nom/num)` lire un fichier excel (workbook = wb) `library(openxlsx)`. Paramètres :
+
+	* `startRow = 2` numéro de la ligne où commencer la lecture. 
 
 ### Exporter
  
@@ -32,6 +53,8 @@ Packages `labelled`
 * `write.table(tableau, file = "clipboard", sep = "\t")` copier dans le presse papier.
 
 ### Information dataframe et nom des lignes et des colonnes
+
+`library(tibble)`
 
 * `colnames(data)` nom des colonnes.
 * `rownames(data)` nom des colonnes.
@@ -53,7 +76,7 @@ Package : `dplyr`, `tidyr`. `résultat1 %>% résultat2` : rediriger le résultat
 
 * `pull(data, colonne)` transformer une sortie en vecteur.
 
-Les fonctions avec dplyr
+## Fonctions dplyr
 
 ``` r
 max_by <- function(data, var, by) {
@@ -62,6 +85,15 @@ max_by <- function(data, var, by) {
     summarise(maximum = max({{ var }}, na.rm = TRUE))
 }
 ```
+
+Sélecteur de colonnes :
+
+* `across(.cols, .fns, ..., .names = NULL, .unpack = FALSE)` sélectionner des colonnes avec vecteurs textes.
+* `if_any(.cols, .fns, ..., .names = NULL)`
+* `if_all(.cols, .fns, ..., .names = NULL)`
+
+!!! note
+	Pour créer une fonction qui s'applique à un vecteur il peut être utile d'utiliser `map`.
 
 ## Filtrer
 
@@ -73,15 +105,14 @@ max_by <- function(data, var, by) {
 * `top_n(nlignes, variable)` sélectionne et ordonne les n premières observations (ou groupes si les données sont groupées) (`desc()` = décroissant).
 * `is.na(data)` renvoie les lignes avec des valeurs manquantes (`myDataframe[is.na(dt)] = 0` pour les remplacer).
 * `complete.cases(data)` renvoie les lignes avec des valeurs manquantes.
-* `case_when(condition1 ~ val1, condition2 ~ val2,...)` fonction équivalente au CASE WHEN en SQL.
+* `case_when(condition1 ~ val1, condition2 ~ val2,..., .default = val)` fonction équivalente au CASE WHEN en SQL.
 
-## Selectionner
+## Sélectionner
 
 * `everything()` toutes les colonnes restantes.
 * `all_of(vecteur)` sélectionner les colonnes avec le nom de la colonne dans le vecteur.
-* `one_of(vecteur)` pour sélectionner  les colonnes avec le nom de la colonne dans le vecteur. Fonctionne même si la colonne n'existe pas.
+* `one_of(vecteur)` sélectionner  les colonnes avec le nom de la colonne dans le vecteur. Fonctionne même si la colonne n'existe pas.
 * `any_of(vecteur)` sélectionner les colonnes dont le nom de la colonne n'est pas dans le vecteur.
-* `accross()`.
 * `last_col()` sélectionner la dernière colonne.
 
 !!! example 
@@ -102,6 +133,9 @@ max_by <- function(data, var, by) {
 * `arrange(var1, var2)` trier en ordre décroisssant `desc(var)`.
 * `dt[["col1]]` sélectionner une colonne avec son nom en caractère en dehors de dplyr.
 * `relocate(col, .before = /.after = )` changer la position d'une colonne.
+
+!!! note
+	Pour trier une colonne, il faut `factor(x, levels = c("el1", "el2"))`.
 
 Fonction 				| Définition
 ------------------------|---
@@ -130,11 +164,13 @@ OrchardSprays %>%
 ## Construire de nouvelles variables
 
 * `mutate(nom = formule)` appliquer une fonction et ajouter une colonne (il est possible d'appliquer à toutes les variables avec `sapply` voir ci dessous et, de sélectionner une variable par son nom avec `!!sym("col1")`).
-* `transmute(nom = formule)` construitre une ou plusieurs variables en supprimant les colonnes.
+* `mutate_all(~as.character(.x))` appliquer la fonction à toutes les colonnes.
+* `mutate_if(~fct_test(.x), function(x){drop_units(x)})` appliquer une fonction aux colonnes avec Vrai.
 
 Options :
 
 * `.before=Value` ou  `.after=` préciser où insérer la colonne.
+* `.keep="none"` ne garder aucune colonne.
 
 !!! note 
 	Pour utiliser le nom d'une variable stockée dans une variable caractère `mutate(!!variable_text := ifelse(condition, !!sym(variable), NA))`.
@@ -144,32 +180,32 @@ Options :
 
 !!! note 
 	Pour appliquer une fonction a toutes les variables il faut utiliser `sapply`.
- 
 
 Fonction		| Description
 ----------------|-----------
-`n` 			| Nombre de lignes.
-`n_distinct` 	| nombre de lignes distinctes.
-`lead`			| Copier avec des valeurs décalées à gauche.
-`lag` 			| Copier avec des valeurs décalées à droite.
-`dense_rank` 	| Ordonner sans sauts de rangs.
-`min_rank` 		| Ordonner avec sauts de rangs.
-`percent_rank`	| Rangs de (min rank) entre [0, 1].
-`row_number`	| Ordonne en affectant aux liens la première position.
-`ntile` 		| Divise en n groupes.
-`between` 		| Les valeurs sont-elles entre a et b.
-`cum_dist` 		| Distribution cumulée
-`cumall` 		| Cumul tant que vrai.
-`cumany` 		| Cumul dès que vrai.
-`cummean` 		| Moyenne glissante.
-`cumsum` 		| Somme cumulée.
-`cummax` 		| Maximum cumulé.
-`cummin` 		| Minimum cumulé.
-`cumprod` 		| Produit cumulé.
-`pmax` 			| Maximum par élément.
-`pmin` 			| Minimum par élément.
-`last()` 		| Prend la dernière valeur.
-`first()` 		| Prend la première valeur.
+`n()` 				| Nombre de lignes.
+`n_distinct()` 			| Nombre de lignes distinctes.
+`lead()`			| Récupérer la valeur de la ligne d'avant.
+`lag(col, default = 0/1)` 	| Récupérer la valeur de la colonne/ligne d'avant .
+`dense_rank()` 			| Ordonner sans sauts de rangs.
+`min_rank()` 			| Ordonner avec sauts de rangs.
+`percent_rank()`		| Rangs de (min rank) entre [0, 1].
+`row_number()`			| Ordonner en affectant aux liens la première position.
+`ntile()`	 		| Diviser en n groupes.
+`between()`	 		| Les valeurs sont-elles entre a et b.
+`cum_dist()` 			| Distribution cumulée
+`cumall()`	 		| Cumul tant que vrai.
+`cumany()`	 		| Cumul dès que vrai.
+`cummean()`	 		| Moyenne glissante.
+`cumsum()` 			| Somme cumulée.
+`cummax()` 			| Maximum cumulé.
+`cummin()` 			| Minimum cumulé.
+`cumprod()`	 		| Produit cumulé.
+`pmax()` 			| Maximum par élément.
+`pmin()` 			| Minimum par élément.
+`last()` 			| Garder la dernière valeur.
+`first()` 			| Garder la première valeur.
+`inth(n)` 			| Garder la n-ième valeur.
 
 !!! note
 	Pour les sommes cumulées, il faut utiliser `group_by` puis `mutate`.
@@ -179,7 +215,7 @@ Fonction		| Description
 Fonction 		| Défintion
 ----------------|-------------
 `rowSums()`		| Somme
-`colMeans()`	| Moyenne (`colMeans(is.na(data))` utile pour connaitre le pourcentage de valeurs manquantes).
+`colMeans()`		| Moyenne (`colMeans(is.na(data))` utile pour connaitre le pourcentage de valeurs manquantes).
 
 * `sapply(dt, axis = 1/2, fonction)` appliquer une opération à toutes les colonnes ou les lignes.
 
@@ -191,25 +227,24 @@ Grouper les données :
 
 * `group_by(var)` grouper les observations par la var (toujours suivi de `summarise`).
 * `ungroup(iris)` dégrouper le jeu de données.
+* `group_split()` séparer le jeu de données en plusieurs (précédé d'un `group_by`).
 
 Calculer des indicateurs par groupe :
 
 * `summarise(nom = formule)` appliquer une fonction.
 * `summarise_all(fonction)` appliquer une fonction à chaque variable.
-* `count(variable, wt = valeur)` Dénombre le nombre d'observations de chaque valeur d'une variable.
+* `count(variable, wt = valeur)` dénombrer le nombre d'observations de chaque valeur d'une variable.
 
 Fonction 		| Défintion
 ----------------|---
-`first` 		| Première valeur d'un vecteur
-`last` 			| Dernière valeur d'un vecteur
-`inth` 			| Nième valeur d'un vecteur
-`n` 			| Nb de valeurs
-`n_distinct`	| Nb de valeurs distinctes
-`min`			| minimum
-`max`			| maximum
+`min`			| Minimum
+`max`			| Maximum
 `mean` 			| Moyenne
 `median` 		| Médiane
 `sd` 			| Ecart-type
+
+!!! note
+	`group_by()` peut s'utiliser avec `mutate()` pour appliquer une fonction à chaque groupe, ``slice(n)` pour garder les n premirèes lignes de chaque groupe.
 
 ### Les jointures
 

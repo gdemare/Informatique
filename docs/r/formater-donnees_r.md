@@ -9,7 +9,7 @@ Fonction               | Type
 `as.vector()`          | en vecteur
 
 !!! note
-  `is.numeric(x)` pour savoir si la valeur est du bon type.
+    `is.numeric(x)` pour savoir si la valeur est du bon type.
 
 Les variables des dataframe sont par defaut en Factor.
 

@@ -1,51 +1,84 @@
-## Calcul des paramètres pharmacocinétiques
+[Boomer](https://www.boomer.org/c/p1/Ch05/Ch0506.html) bon site en anglais avec l'explication pour chaque paramètre en PKNCA.
 
-`library(PKNCA)`
+Variable utilisé pour calculer les indicateurs :
 
-https://billdenney.github.io/pknca/news/index.html
+* concentration de la substance.
+* poids de l'individu.
+* temps.
+* la dose 
+* mode d'adminitration (IV Bolus=injection rapide en intra, Voie orale, 
 
 !!! note
-    La bibliothèque a été pensée pour intégrer de nouveaux indicateurs qui n'auraient pas été pensé par les auteurs.
+    "Nominal" correspond à théorique par opposition à mesurée.
 
-Données minimum : concentration, dose, and time.
+Les princiapux acronymes et leur signification :
 
-* zeros (0) below the limit of quantification.
-* NA valeur manquante.
+* Below Limite of Quantification (BLQ) sous la limite de quantification.
+* Lower Limit Of Quantification (LLOF) is the lowest amount of an analyte in a sample that can be quantitatively determined with suitable precision and accuracy
+* high value of variability (CV) en % : $\frac{sd(vec)}{mean(vec) \cdot 100}$.
 
-* `PKNCAconc()` pour les fécès et l'urine.
-* `PKNCAdose()` pour les quantités administrées.
-* `PKNCAdata(dt.concentration, dt.dose)` fusionner les tables doses et concentration.
+## Hypothèse
 
-### Les unités
+La pente correspond au taux de disparition du médicament.
+La concentration dans les tissus est proportionnelle à celle du sang.
+Vitesse de disparition constante car proportionnelle. Pour linéariser, on calcule la vitesse : il faut tracer la concentration en fonction de concentration par le temps.
+En principe on se ramène à une équation différentielle du premier ordre.
+linéaire en phase ascendante logarithmique en phase d'élimination.
+L'élimination est aussi proportionnelle.
 
-`library(units)`
-
-* `valid_udunits()` lister les unités valides.
-* `valid_udunits_prefixes()` lister les ordres de grandeurs.
-* `units(val_1) <- "km/s"` ou `set_units(x, unit[1], mode = "standard")` attribuer une unité ET convertir dans une autre unité.
-* `deparse_unit(valeur)` récupérer l'unité.
-* `mixed_units(df$valeurs, df$unite)` créer une vecteur avec des unités différentes (Attention, elles s'affichent pas dans les sorties des dataframes).
-* `drop_units(x)` supprimer l'unité.
-
-`library(purrr)`
-
-Ajouter une unité aux colonnes à partir d'un vecteur avec les unités.
-
-``` R
-dt[,num_col] %>% map2_dfc(units, ~set_units(.x, .y, mode = "standard"))
-```
- 
-!!! note
-    Si deux jeux de données avec des unités différentes, elles sont converties durant la fusion.
-
-!!! warning
-    Le `.` doit être transfomé en `*`.
-
-### Rempsyc
-
-Package avec de nombreuses fonctions pour 
+## Les indicateurs
 
 !!! note 
-    Il est normalement utiliser pour la Convenience functions for psychology.
+    On ajoute l'adjectif "effective" (par opposition à "terminal") pour parler des indicateurs calculer sur extrapolation vers un temps infini.
+    Les mesures de concentration sont prolongée à partir de la pente des deux dernières mesures.
 
-https://rempsyc.remi-theriault.com/
+### Principaux indicateurs
+
+* clairance : décrit la capacité de l'organisme à éliminer une substance médicamenteuse du système biologique.
+Cela correspond au volume d'un fluide de l'organisme (souvent plasma) purifié éliminé par unité de temps. C'est
+rapport entre la quantité d'une substance éliminée par unité de temps et la concentration dans un fluide de l'organisme. $CL = \frac{Dose}{AUC}$ clairance.
+
+!!! note 
+    Il existe principalement deux clairances : hépatique et reinale.
+    
+* AUC décrit l'exposition à un médicament durant toute la durée de mesure ($g \cdot h \cdot mL^{-1}$).
+
+    * $AUC_t$ ou $AUC_{last}$ AUC terminal entre $t_{0}$ et $t_{last}$.
+    * $AUC_{int}$ AUC effective sur un intervalle de temps donné.
+    * $AUC_{\inf}$ AUC extrapolé de $t_last$ à $t_{\infty}$
+    * RacD1 = AUC/AUCt (t last AUC finale). Si l'a $RacD1 \lt 20%$ alors $AUC_t$ n'est pas représentative.
+
+* $V_D$ Volume de Distribution ou Volume Steady State (Vss). Il permet de savoir si le médicament est distribué dans les tissus . Volume de fluide par masse de médicament $V_d = \frac{D}{C}$. Décri à l'état d'équilibre, la répartition d'un médicament dans l'organisme. Il est défini comme la période où la concentration du médicament dans le plasma sanguin et la concentration dans les tissus périphériques. Il permet notamment de déterminer la dose à administré pour arriver à la concentration thérapeutique. $Vss \cdot \frac {\ln 2}{CL}$ Vss = volume de médicament dans le corps/la concentration plasmitique
+ 
+    * Vd_beta Terminal volume of distribution (V=T½*Cl/ln2) defined as the volume in which the amount of drug would need to be uniformly distributed to produce the observed whole blood concentration
+
+* F biodisponibilité. Rapport AUC voie orale/AUC voie IV = % dans le sang.
+
+
+
+### Les indicateurs concentration
+
+* $C_0$ ou $C_p$ concentration initiale. Elle peut être déduit à partir de la courbe, par exemple, pour la voie ... : $C_0 = \frac{D}{V_{blood}}$.
+* $C_t$ concentration à un temps donné.
+* $C_{max$ concentration maximale observée.
+* $C_{last}$ dernière concentration observées au dessus de BLQ.
+  
+### Indicateur temporel
+
+* $t_{max}$ temps avec la concentration maximale.
+* $t_{1/2}$ temps de demi vie càd temps nécessaire pour éliminer la moitié du médicament.
+* $t_{last}$ temps de la mesure de $C_{last}$.
+* Mean Residence Time (MRT) temps moyen de résidence du médicament dans l'organisme. Il est souvent déterminé à partir de Michaelis-menten ou vss.
+
+### Autres :
+
+
+Indicateurs         | IV bolus dose | Description
+--------------------|---------------|-----
+`start`             |               |
+`end`               |               |
+`auclast`           |               |
+`aucall`            |               |
+`c0`                | X             | Estimé la concentration à t0. plusieurs méthode c("c0", "logslope", "c1", "cmin", "set0")
+`ae`                |               | montant excrété (`sum(conc*volume)`)
+

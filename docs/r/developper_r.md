@@ -61,4 +61,17 @@ Instruction avec le déployement.
 Permet de créer : 
 
 * un fichier New qui contient les nouveautés des versions.
-* des articles . Les articles sont écris en markdown et convertis automatiquement en html.
+* des articles. Les articles sont écris en markdown et convertis automatiquement en html.
+
+
+
+devtools_history.R
+
+1. `check` pour vérifier détermine s'il y a d'erreurs et dans warning dans le package.
+2. `Build Source Package`pour générer un tar.
+3. `Install` pour ajouter ou maj du package COMPILE dans son environnement.
+
+* `@param x description` liste des paramètres 
+* `@import magrittr` importer un package (une library par ligne).
+* `@importFrom package fonction` importer une fonction.
+* `@export` permet à la fonction d'être disponible en dehors du package.

@@ -15,9 +15,15 @@
 
 * `testthat` tester.
 
+## Paramétrage et utiles
+
+* `options(digits=9)` changer le nombre de décimales affichées.
+* `system.time({instruction})` temps d'exécution d'une instruction.
+
 ## Les fichiers
 
 * `r"(dossier1\dossier 2\)"` déclarer un chemin.
+* `file <- tempfile(fileext = ".png")` créer un fichier tempoaire.
 * `basename("C:/some_dir/a.ext")` renvoyer le nom du fichier.
 * `dirname("C:/some_dir/a.ext")` renvoyer le dossier.
 * `dir.create(dossier)` créer un dossier.
@@ -62,6 +68,9 @@ print(p1)
 insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
 ```
 
+!!! note
+	Avec Shiny, il faut créer le workbook dans la partie server : `wb <<- createWorkbook()`.
+
 #### Style 
 
 * `createStyle()` créer un style.
@@ -69,12 +78,16 @@ insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
 	* `fontColour = "#006100"` couleur de la police.
 	* `fg = "#C6EFCE"` couleur du fond.
 	* `textDecoration = "Bold"` gras.
+ 	* `halign/valign = "center"` position des éléments.
+  	* `gridExpand = T` a ajouter pour les borders.
+  	* `stack = T` fusionner les propriétés des cellules.
 
 * `addStyle(wb, sheet, style, rows, cols, gridExpand = FALSE, stack = FALSE)` ajouter un style à une cellule.
 
 #### Formater le classeur
 
-* `setColWidths(wb = wb, sheet = "feuil", cols = 1:4, widths = "auto")` largeur des colonnes.
+* `mergeCells(wb, "feuill", cols = 1, rows = 2:9)` fusionner les cellules.
+* `setColWidths(wb = wb, sheet = "feuil", cols = 1:4, widths = "auto", ignoreMergedCells = T)` largeur des colonnes.
 
 ### Json 
 
@@ -99,6 +112,7 @@ insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
 * `suppressWarnings(code)` supprimer les warnings.
 * `suppressMessages(code)` supprimer les messages.
 * `Sys.sleep(seconde)` attendre un nombre de seconde avant la suite de l'exécution.
+* `methods(class = "units")` lister les méthodes associées à un objet.
 
 ## Environnement
 
@@ -138,6 +152,8 @@ Déclarer des variables :
 
 * `sort(x)` ordonner.
 * `rev(x)` renver l'ordre.
+* `order(x)` renvoie l'index de trie.
+* `rle(x)` liste avec le nombre d'occurences successives.
 * `table(x)` tableau d'effectifs.
 * `add_margins(table)` ajouter des totaux au tableaux.
 * `unique(x)` valeurs uniques.
@@ -183,7 +199,25 @@ list(
 
 * `scale(matrice)` centrer et réduire une matrice par colonne.
 
-### Apply
+### Appliquer à tous les éléments
+
+#### Purr
+
+* `map_dfc()` renvoie un dataframe en colonne (dfr en ligne).
+* `map_chr(Value, fonction)` renvoie du texte.
+* `map_if(condition)` appliquer que si l'élément répond à une condition.
+* `map_at(position)` appliquer en fonction de la position.
+* `imap(liste, function(x, id)` renvoie la valeur et l'id (nom de colonnes) de chaque élément.
+
+Existe : `map2_`, `map_` ...
+
+* `map(liste, function(x){x})` parcourir chaque propriété de la liste.
+* `pmap()` itérer un dataframe par ligne.
+
+!!! note
+	`map(dt, ~fct_print_unit_col(.x))` appliquer une fonction à chaque colonne.
+
+#### Apply
 
 Apply permet d'appliquer une fonction à chaque élément.
 
@@ -280,33 +314,48 @@ Seconde 	| `%S`	| 06
 * `hours(heure)` heure.
 * `format(datetime, format = '')` format d'affichage d'une date et de l'heure.
 
-## Le texte
+## Texte
 
 * `nchar()` compter le nbre de caractères.
-* `str_length(vecteur)` nombre de lettres de chaque élément.
-* `str_sub(i, (text, start = debut, end = fin)` extraire une chaine de charactères.
+* `regexpr(reg, texte)` position du premier motif trouvé.
 * `grepl(expression_reguliere, chaine_a_verifier)` renvoie vrai si l'expression est détectée.
 * `gsub(pattern = schéma, remplacement, variable_à_changer) ` remplacer un schéma ou un caractère par une nouvelle chaîne de caractères.
 * `grepl("exemple", texte)` renvoie un booléen si la sous chaine est présente.
-* `str_count(text, motif)` compter le nombre d'occurences (`stringr`).
 * `strsplit(variable, symbole)` séparer une variable en fonction d'un symbole.
 * `trim(texte)` supprimer les espaces (package `gdata`).
-* `str_to_title(texte)` mettre les premiers caractères en majuscule (package `stringr`).
 * `toupper(texte)` mettre les caractères en majuscule.
 
 ### Expressions régulières
 
 Library `stringr`
 
-* `strsplit(texte)` supprimer les espaces à la fin et au début et les espaces doubles.
+* `str_detect(string, pattern, negate = FALSE)` détermine si le schéma est trouvé.
+* `str_replace(texte,  pattern, remplacement)` remplacer la première occurence.
+* `str_replace_all(texte,  pattern, remplacement)` remplacer toutes les occurences. 
+* `str_length(vecteur)` nombre de lettres de chaque élément.
+* `str_count(text, motif)` compter le nombre d'occurences.
+* `str_to_title(texte)` mettre les premiers caractères en majuscule (package `stringr`).
+* `str_sub(i, (text, start = debut, end = fin)` extraire une chaine de caractères.
 * `str_view_all(vecteur, exp_re)` rechercher une expression régulière.
 * `str_extract(texte, exp_re)` extraire un texte.
 * `str_locate(texte, exp_re)` récupérer la postion de début et de fin.
+* `str_trim(string, side = c("both", "left", "right"))` supprimer les espaces au début et à la fin.
 
-Symbole	| Définition
---------|-----------------
-`*`		| une ou plusieurs fois
-`.` 	| jocker
+Symbole		| Définition
+------------|-----------------
+`*`			| une ou plusieurs fois
+`.` 		| joker
+`ver[tr]s` 	| t ou r.
+`[A-Z]` 	| toutes les lettres majuscules.
+`[0-9]` 	| tous les chiffres.
+`^` 		| négation(exemple `[^0-9]` tous sauf les chiffres).
+`|` 		|ou 
+`?`			| le caractère précédent est facultatif.
+`[:alpha:]`	| toutes les lettres.
+`()` 		| un symbole parmis la liste.
+`[]+`		| jusqu'a que ce soit faux.
+!!! note
+	Le caractère d'échappement est `\\`.
 
 ## Connecter R à une bdd
 

@@ -71,8 +71,18 @@ Il existe deux princiapaux packages pour l'interface sont :
 
 ##### Panneau de saisie
 
-* `mainPanel()` principale
-* `sidebarPanel()` saisie
+* `mainPanel()` principale.
+* `sidebarPanel()` saisie.
+
+Les boites :
+``` R
+box(title = "New",
+	fluidRow(
+	        column(width=4, objet),
+	        column(width=4, objet)
+		)
+)
+```
 
 #### Bootstrap
 
@@ -87,7 +97,7 @@ Il existe deux princiapaux packages pour l'interface sont :
 
 * `card_header("Datatable loaded")` entête
 * `card_body()` corps
-* `card_footer` pied de page.
+* `card_footer()` pied de page.
 
 ##### Les icones
 
@@ -120,6 +130,7 @@ Paramètres :
 
 Code            					| Type
 ------------------------------------|-----------------
+`br()`         					| saut de ligne
 `box()`         					| classique
 `infoBox()`     					| texte statique
 `tabBox()`      					| valeur
@@ -179,6 +190,22 @@ code server                       | rendu                     | code ui
 Package `DT` Afficher un dataframe 
 
 * `renderDataTable({dataFrame}, options = list(scrollX = TRUE))` si l'affichage depasse de l'écran.
+
+##### Bouton télécharger un fichier
+
+* `downloadButton(outputId = "download_kluster", label = "Kluster export")` bouton de téléchargement d'un fichier dans UI.
+
+Code du server :
+
+``` R
+output$downloadBPR <- downloadHandler(
+    filename = function(){nom_fichier},
+    content = function(file){file.copy(paste0(workDir, "BPR.xlsx"), file)
+      }
+  )
+```
+
+* `shinyjs::runjs("$('#download_summary')[0].click();") ` télécharger sans utiliser le bouton download.
 
 #### Variable réactive
 

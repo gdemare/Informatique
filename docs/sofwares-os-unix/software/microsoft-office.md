@@ -28,10 +28,15 @@ Ou sinon en passant par l'onglet référence.
 
 ### Changer le début de la numérotation des pages 
 
-1. Insérer le numéro des pages.
-2. Dans En-tête et pied de page.
-3. Dans `Numéro des pages` > `Format des numéros des pages`.
-4. `Numérotation des pages` > `à partir de`.
+Pour choisir à partir de quelle page commencer la numérotation, il faut :
+
+1. Déclarer des sections : `Mise en Page > Sauts de page > Page suivante`
+2. Faire débuter la numérotation à partir de la section concernée :
+   
+	1. Insérer le numéro des pages.
+	2. Dans En-tête et pied de page.
+	3. Dans `Numéro des pages` > `Format des numéros des pages`.
+	4. `Numérotation des pages` > `à partir de` numéro de section.
 
 ### Bibliographie 
 

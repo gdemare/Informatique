@@ -82,13 +82,20 @@ Libellés :
 * `geom_vline(xintercept = valeur)` ligne veticale.
 * `geom_abline(intercept = 0, slope = 1)` droites et fonctions linéaires.
 
+Paramètres :
+
+* `color = "#F8766D"` couleur.
+* `linetype = "dashed"`type de ligne.
+
 ## Formatage des axes
 
 * `scale_y_continuous(trans="log")` modifier le type d'axe (par exemple, logarithmique). Paramètres :
 
     * `breaks=c(0,1,2,5)` préciser les valeurs des axes.
 
-* `scale_y_units(trans = type_axe)` paramètre des axes pour les variables avec une unité.
+* `scale_y_units(trans = type_axe)` paramètre des axes pour les variables avec une unité. Paramètres :
+
+ 	* `unit = "m"` ajouter une unité à un axe.
 
 Pour changer le type d'axes plus précisiément, il existe `library(scales)`.
 
@@ -98,6 +105,12 @@ Pour changer le type d'axes plus précisiément, il existe `library(scales)`.
 
 * `theme_void()` thème sans axe et graduation.
 * `theme_minimal()` thème épuré.
+* `theme()`modifier les propriétés du thème du graphique.
+
+	* `legend.title = element_text(text = "titre")` renommer le titre de la légende.
+	* `legend.position = c(.9, .9)` modifier la position de la légende (ici en haut à droite).
+	* `legend.box.background = element_rect(colour = "black")` contour de la légende.
+
 
 ## Présentation
 
