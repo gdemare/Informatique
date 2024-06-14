@@ -12,9 +12,28 @@ https://billdenney.github.io/pknca/news/index.html
 
 Données minimum : concentration, dose, and time.
 
+### Préparer les données
+
+* `as_sparse_pk(conc, time, subject)` données clairsemées 
+
+#### Valeurs manquantes et BLQ
+
 * zeros (0) below the limit of quantification.
 * NA valeur manquante.
 * `superposition(conc_obj, tau=24, check.blq=FALSE)` pour les études de multidosage. 
+
+Remplacer les valeurs :
+
+* `clean.conc.blq()`
+* `clean.conc.na()`
+
+#### Méthode d'imputation
+
+* `PKNCA_impute_method_start_conc0()`
+* `PKNCA_impute_method_start_cmin()`
+* `PKNCA_impute_method_start_predose()`
+
+### Calculer les PK
 
 1. Formater les données pour les calculs :
    
@@ -32,7 +51,6 @@ Données minimum : concentration, dose, and time.
 
 !!! note
     La formule `treatment+subject` possibilité d'utiliser plusieurs colonnes pour créer un id sujet et `/Group` pour déclarer des groupes.
-
     
 2. `PKNCAdata(conc_obj, dose_obj)` fusionner les tables doses et concentration. Le résultat est un tableau avec tous les paramètres cinétiques pour chaque individu.
    
@@ -40,14 +58,23 @@ Données minimum : concentration, dose, and time.
 
 4. `results_obj <- pk.nca(data_obj)` calculer les indicateurs.
 
-Résultats : 
+Fonctions supplémentaires : 
 
+* `assert_PKNCAdata()` être un objet PKNCAdata.
 * `summary(results_obj)` résumer le résultat.
 
-Personnaliser les indicateurs :
+### Personnaliser les indicateurs
 
 * `PKNCA.options()` configuration.
-* Ajouter des indicateurs :
+* `add.interval.col()` ajouter un indicateur avec un intervalle.
+* `pk.calc.<indicateur>` utiliser une fonction de calcul d'un indicateur.
+
+R                            | Description
+-----------------------------|----
+`tmax(conc, time)`           | $t_max$
+`pk.tss.data.prep()`
+
+#### Ajouter des indicateurs
 
 ```R 
 PKNCA.set.summary(
@@ -58,6 +85,17 @@ PKNCA.set.summary(
   rounding=list(signif=3)
 )
 ```
+
+
+#### Modifier les méthodes de calculs
+
+modifier les fonctions de bases et ajouter une règle métier:
+
+``` R
+my_mean <- pk.business(FUN=mean)
+my_mean(c(1:3, NA))
+```
+
 
 ### Les unités
 
