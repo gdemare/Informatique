@@ -4,7 +4,7 @@
 * `<script type="text/javascript" src="script.js"></script>` insérer un script java script.
 * `<link href="url">` lien vers /font/icone :
 	
-  	* `type="text/css rel="stylesheet"` une feuille style.
+  	* `type="text/css" rel="stylesheet"` une feuille style.
 
 * `<title>Titre</title>` titre de la page.
 * `<meta name="viewport" content="width=device-width, initial-scale=1.0">` pour faire une page responsive.
