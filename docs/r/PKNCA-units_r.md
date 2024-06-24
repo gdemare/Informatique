@@ -55,8 +55,12 @@ Remplacer les valeurs :
     
 2. `PKNCAdata(conc_obj, dose_obj)` fusionner les tables doses et concentration. Le résultat est un tableau avec tous les paramètres cinétiques pour chaque individu.
    
-       * `intervals =` liste des indicateurs à ajouter.
-       * `units = d_units` avec d_units un objet (pknca_units_table).
+   * `intervals =` liste des indicateurs à ajouter.
+   * `units = d_units` avec d_units un objet (pknca_units_table).
+  
+    Retour :
+     
+    * `$intervals` renvoie les indicaterus calculés.
 
 4. `results_obj <- pk.nca(data_obj)` calculer les indicateurs.
 
@@ -99,7 +103,32 @@ R                            | Description
 `tmax(conc, time)`           | $t_max$
 `pk.tss.data.prep()`
 
+#### Lister les PK
+
+* `get.interval.cols()` lister les indicateurs disponibles.
+
+``` R
+dt_param <- get.interval.cols() %>%
+  as_tibble() %>%
+  select(-start, -end) %>%
+  t() %>%
+  as.data.frame()
+```
+
 #### Ajouter des indicateurs
+
+Ajouter un nouveau PK.
+``` R
+add.interval.col("cmax",
+                 FUN="pk.calc.cmax",
+                 values=c(FALSE, TRUE),
+                 unit_type="conc",
+                 pretty_name="Cmax",
+                 desc="Maximum observed concentration",
+                 depends=c())
+```
+
+Déclarer la façon de calculer les valeurs des groupes
 
 ```R 
 PKNCA.set.summary(
