@@ -41,6 +41,7 @@
 
 * `save(obj1, obj2, file = "mes_objets.RData")` sauvegarder en RData.
 * `load(fichier.RData)` charger un RData.
+* `read.table(text = PARAM, header = TRUE, stringsAsFactors = FALSE, sep = ";", na.strings = "")` lire un fichier csv.
 
 ### Excel
 
