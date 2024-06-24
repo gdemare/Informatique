@@ -7,7 +7,7 @@ Fonction               | Type
 `as.double()`          | décimal
 `as.Date(character())` | date 
 `as.vector()`          | en vecteur
-
+`as.logical()`         | en booléen
 !!! note
     `is.numeric(x)` pour savoir si la valeur est du bon type.
 
