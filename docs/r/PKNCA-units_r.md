@@ -135,7 +135,7 @@ my_mean(c(1:3, NA))
 * `drop_units(x)` supprimer l'unité.
 * `units_options(negative_power = TRUE)` modifier l'affichage des unités.
 * `attributes(dt$Value[[1]])` vérifier la valeur possède une unité.
-* `keep_units(drop_units, x)` appliquer une fonction incompatible avec le format unit.
+* `keep_units(fonction, x)` appliquer une fonction incompatible avec le format unit.
  
 !!! note
     Si deux jeux de données avec des unités différentes, elles sont converties durant la fusion.
