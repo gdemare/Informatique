@@ -8,7 +8,7 @@ https://billdenney.github.io/pknca/news/index.html
     Ne fonctionne pas avec `units`.
 
 !!! note
-    La bibliothèque a été pensée pour intégrer de nouveaux indicateurs qui n'auraient pas été pensé par les auteurs.
+    La bibliothèque a été pensée pour intégrer de nouveaux indicateurs qui n'auraient pas été pensés par les auteurs.
 
 Données minimum : concentration, dose, and time.
 
