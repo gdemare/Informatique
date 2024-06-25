@@ -53,7 +53,7 @@ Remplacer les valeurs :
 !!! note
     La formule `treatment+subject` possibilité d'utiliser plusieurs colonnes pour créer un id sujet et `/Group` pour déclarer des groupes.
     
-2. `PKNCAdata(conc_obj, dose_obj)` fusionner les tables doses et concentration. Le résultat est un tableau avec tous les paramètres cinétiques pour chaque individu.
+2. `PKNCAdata(conc_obj, dose_obj)` fusionner les tables doses et concentration. Le résultat est un tableau avec tous les paramètres cinétiques pour chaque individu (`summary(data_pknca)` afficher le résumé des groupes).
    
    * `intervals =` liste des indicateurs à ajouter.
    * `units = d_units` avec d_units un objet (pknca_units_table).
