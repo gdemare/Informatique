@@ -15,3 +15,4 @@ Les variables des dataframe sont par defaut en Factor.
 
 * `pull(nom ou numero)` convertir une colonne en vecteur (package `dplyr`).
 * `unlist(list)` transformer une liste en vecteur.
+* `droplevels(facteur)` supprimer les facteurs.
