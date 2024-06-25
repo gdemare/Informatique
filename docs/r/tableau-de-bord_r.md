@@ -340,25 +340,6 @@ Page 4 {data-navmenu="Menu B"}
 
 * `.tabset .tabset-fade` ajouter des onglets à une box.
 
-### Les tableaux
-
-`library(knitr)`
-
-* `knitr::kable(data)` afficher un tableau en markdown. Paramètres :
-
-	* `caption="Example dosing data extracted from theophylline data set"` ajouter un titre.
-
-
-####  gt : faire de beau tableau.
-
-`libary(gt)`
-
-[gtsummary](https://www.danieldsjoberg.com/gtsummary/) permet de ganger du temps dans certaines mise en forme. 
-
-Comparaison des différents packages pour le faire des tableaux https://hughjonesd.github.io/huxtable/design-principles.html par le créateur de huxtable
-
-[gtExtras](https://jthomasmock.github.io/gtExtras/index.html) pour ajoute rdes graphiques ou des images dans le tabelau.
-
 ### Valeur box
 
 * `valueBox(comments, icon = "fa-comments")` ajouter une valeur box.
