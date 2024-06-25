@@ -15,7 +15,6 @@ Données minimum : concentration, dose, and time.
 ### Préparer les données
 
 * `as_sparse_pk(conc, time, subject)` données clairsemées.
-* `pknca_units_table(concu="ng/mL", doseu="mg/kg", time="hr")` déclarer une unité aux mesures et aux indicateurs.
 
 #### Valeurs manquantes et BLQ
 
@@ -56,7 +55,7 @@ Remplacer les valeurs :
 2. `PKNCAdata(conc_obj, dose_obj)` fusionner les tables doses et concentration. Le résultat est un tableau avec tous les paramètres cinétiques pour chaque individu (`summary(data_pknca)` afficher le résumé des groupes).
    
    * `intervals =` liste des indicateurs à ajouter (`data.frame(start = 0, end = Inf, cmax = TRUE...`).
-   * `units = d_units` avec d_units un objet (pknca_units_table).
+   * `units = d_units` associer une unité aux valeurs (`pknca_units_table(concu="ng/mL", doseu="mg/kg", time="hr")`.
   
     Retour :
      
