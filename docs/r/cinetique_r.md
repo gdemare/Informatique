@@ -1,12 +1,12 @@
 [Boomer](https://www.boomer.org/c/p1/Ch05/Ch0506.html) bon site en anglais avec l'explication pour chaque paramètre en PKNCA.
 
-Variable utilisé pour calculer les indicateurs :
+Variable utilisée pour calculer les indicateurs :
 
 * concentration de la substance.
 * poids de l'individu.
 * temps.
-* la dose 
-* mode d'adminitration (IV Bolus=injection rapide en intra, Voie orale, 
+* la dose càd la quantité de médicament administré. 
+* mode d'adminitration (en intravasculaire, IV Bolus pour les injections rapides et infusion pour les injections longues, sinon par voie orale). 
 
 !!! note
     "Nominal" correspond à théorique par opposition à mesurée.
@@ -14,23 +14,21 @@ Variable utilisé pour calculer les indicateurs :
 Les princiapux acronymes et leur signification :
 
 * Below Limite of Quantification (BLQ) sous la limite de quantification.
-* Lower Limit Of Quantification (LLOF) is the lowest amount of an analyte in a sample that can be quantitatively determined with suitable precision and accuracy
+* Lower Limit Of Quantification (LLOF) quantité d'analyte la plus faible qui peut être détecter quantitativement avec précision et exactitude.
 * high value of variability (CV) en % : $\frac{sd(vec)}{mean(vec) \cdot 100}$.
 
 ## Hypothèse
 
-La pente correspond au taux de disparition du médicament.
-La concentration dans les tissus est proportionnelle à celle du sang.
-Vitesse de disparition constante car proportionnelle. Pour linéariser, on calcule la vitesse : il faut tracer la concentration en fonction de concentration par le temps.
-En principe on se ramène à une équation différentielle du premier ordre.
-linéaire en phase ascendante logarithmique en phase d'élimination.
-L'élimination est aussi proportionnelle.
+* La pente correspond au taux de disparition du médicament. Elle est proportionnelle à la quantité de médicament présent.
+* La concentration dans les tissus est proportionnelle à celle du sang.
+* La vitesse de disparition constante car proportionnelle. Pour linéariser, on calcule la vitesse : il faut tracer la concentration en fonction de concentration par le temps.
+En principe on se ramène à une équation différentielle du premier ordre : elle est linéaire en phase ascendante et logarithmique en phase d'élimination.
 
 ## Les indicateurs
 
 !!! note 
-    On ajoute l'adjectif "effective" (par opposition à "terminal") pour parler des indicateurs calculer sur extrapolation vers un temps infini.
-    Les mesures de concentration sont prolongée à partir de la pente des deux dernières mesures.
+    On ajoute l'adjectif "effective" (par opposition à "terminal") pour parler des indicateurs calculés à partir de l'extrapolation vers un temps infini.
+    Les mesures de concentration sont prolongées à partir de la pente des deux dernières mesures.
 
 ### Principaux indicateurs
 
