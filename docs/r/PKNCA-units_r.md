@@ -69,7 +69,7 @@ Remplacer les valeurs :
 6. `summary(results_obj)` résumer le résultat (`roundingSummarize()` ?) :
    
     * `pretty_names = T` afficher les jolies noms des PK.
-    * `not_requested = "value"` valeur pour les indicateur non requeter ?.
+    * `not_requested = "value"` valeur pour les indicateur non demandés.
     * `not_calculated = "value"` valeur pour les paramètres non calculés.
 
 Fonctions supplémentaires : 
