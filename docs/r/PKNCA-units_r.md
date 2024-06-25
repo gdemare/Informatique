@@ -63,6 +63,7 @@ Remplacer les valeurs :
     * `$intervals` renvoie les indicaterus calculés.
 
 4. `results_obj <- pk.nca(data_obj)` calculer les indicateurs.
+5. `as.data.frame(results_obj)` afficher le tableau avec les résultats individuels.
 
 Fonctions supplémentaires : 
 
