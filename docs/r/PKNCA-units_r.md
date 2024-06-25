@@ -105,8 +105,9 @@ R                            | Description
 
 #### Lister les PK
 
-* `get.interval.cols()` lister les indicateurs disponibles.
+* `get.interval.cols()` lister les indicateurs disponibles (`$auclast.dn` pour avoir les informations sur un pk en particulier).
 
+Mettre les indicateurs dans un dataframe.
 ``` R
 dt_param <- get.interval.cols() %>%
   as_tibble() %>%
@@ -118,6 +119,8 @@ dt_param <- get.interval.cols() %>%
 #### Ajouter des indicateurs
 
 Ajouter un nouveau PK.
+
+
 ``` R
 add.interval.col("cmax",
                  FUN="pk.calc.cmax",
