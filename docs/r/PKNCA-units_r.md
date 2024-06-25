@@ -63,7 +63,10 @@ Remplacer les valeurs :
     * `$intervals` renvoie les indicaterus calculés.
 
 4. `results_obj <- pk.nca(data_obj)` calculer les indicateurs (`as.data.frame(results_obj)` afficher le tableau avec les résultats individuels).
-5. `summary(results_obj)` résumer le résultat (`roundingSummarize()` ?) :
+
+    * `$result` renvoie les résultats.
+    
+6. `summary(results_obj)` résumer le résultat (`roundingSummarize()` ?) :
    
     * `pretty_names = T` afficher les jolies noms des PK.
     * `not_requested = "value"` valeur pour les indicateur non requeter ?.
