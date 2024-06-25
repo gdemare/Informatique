@@ -116,6 +116,8 @@ dt_param <- get.interval.cols() %>%
   as.data.frame()
 ```
 
+* `pk.calc.dn` afficher la formule de la fonction.
+
 #### Ajouter des indicateurs
 
 Ajouter un nouveau PK.
