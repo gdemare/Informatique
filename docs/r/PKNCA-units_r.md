@@ -62,14 +62,17 @@ Remplacer les valeurs :
      
     * `$intervals` renvoie les indicaterus calculés.
 
-4. `results_obj <- pk.nca(data_obj)` calculer les indicateurs.
-5. `as.data.frame(results_obj)` afficher le tableau avec les résultats individuels.
+4. `results_obj <- pk.nca(data_obj)` calculer les indicateurs (`as.data.frame(results_obj)` afficher le tableau avec les résultats individuels).
+5. `summary(results_obj)` résumer le résultat (`roundingSummarize()` ?) :
+   
+    * `pretty_names = T` afficher les jolies noms des PK.
+    * `not_requested = "value"` valeur pour les indicateur non requeter ?.
+    * `not_calculated = "value"` valeur pour les paramètres non calculés.
 
 Fonctions supplémentaires : 
 
 * `assert_PKNCAdata()` être un objet PKNCAdata.
 * `pk_nca_result_to_df()` convertir le résultat en dataframe ?
-* `summary(results_obj)` résumer le résultat (`roundingSummarize()` ?).
 * `roundString(numeric, nb_chiffres)` renvoyer un nombre en texte avec un nombre d'arrondis.
 * `signifString(numeric, nb_chiffres)` renvoyer un nombre en texte avec un nombre de chiffres significatifs.
 * `setDuration(obj, valeur)` ajouter une duration.
