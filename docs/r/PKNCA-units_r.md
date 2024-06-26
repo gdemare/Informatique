@@ -65,7 +65,7 @@ Remplacer les valeurs :
 
     * `$result` renvoie les résultats.
     
-6. `summary(results_obj)` résumer le résultat (`roundingSummarize()` ?) :
+6. `summary(results_obj)` résumer le résultat (`roundingSummarize()` ?). Les informations sur les valeurs entre crochet sont affichées sous le tableau dans le champ cation. Paramètre :
    
     * `pretty_names = T` afficher les jolies noms des PK.
     * `not_requested = "value"` valeur pour les indicateur non demandés.
