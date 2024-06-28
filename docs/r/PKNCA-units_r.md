@@ -47,7 +47,7 @@ Remplacer les valeurs :
         * `route = ` précisier la route.
             
             * `"intravascular"` injection. Si l'injection est lente (infusion), il faut ajouter l'option `rate=` ou `duration=`.
-            * `"extravascular"` ingestion. 
+            * `"extravascular"` ingestion.
 
 !!! note
     La formule `treatment+subject` possibilité d'utiliser plusieurs colonnes pour créer un id sujet et `/Group` pour déclarer des groupes.
