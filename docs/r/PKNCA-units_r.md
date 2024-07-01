@@ -18,8 +18,8 @@ Données minimum : concentration, dose, and time.
 
 #### Valeurs manquantes et BLQ
 
-* zeros (0) below the limit of quantification.
-* NA valeur manquante.
+* `zeros (0)` below the limit of quantification.
+* `NA` valeur manquante.
 * `superposition(conc_obj, tau=24, check.blq=FALSE)` pour les études de multidosage. 
 
 Remplacer les valeurs :
