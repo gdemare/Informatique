@@ -329,6 +329,7 @@ Seconde 	| `%S`	| 06
 * `strsplit(variable, symbole)` séparer une variable en fonction d'un symbole.
 * `trim(texte)` supprimer les espaces (package `gdata`).
 * `toupper(texte)` mettre les caractères en majuscule.
+* `tolower(texte)` mettre en petit caractères.
 
 ### Expressions régulières
 
