@@ -209,7 +209,9 @@ Fonction		| Description
 `last()` 			| Garder la dernière valeur.
 `first()` 			| Garder la première valeur.
 `inth(n)` 			| Garder la n-ième valeur.
-
+`cur_group_id()`		| Id pour chaque groupe (`group_by`).		
+`row_number()`			| Numéro de chaque ligne.
+ 
 !!! note
 	Pour les sommes cumulées, il faut utiliser `group_by` puis `mutate`.
 
