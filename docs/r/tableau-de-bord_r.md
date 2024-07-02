@@ -74,7 +74,7 @@ Il existe deux princiapaux packages pour l'interface sont :
 * `mainPanel()` principale.
 * `sidebarPanel()` saisie.
 
-Les boites :
+Les boîtes :
 ``` R
 box(title = "New",
 	fluidRow(
@@ -83,6 +83,21 @@ box(title = "New",
 		)
 )
 ```
+
+* `sidebarMenu(menuItem(text = "onglet", tabName = "onglet"))` ajouter dans le menu.
+* `tabItems(tabItems(tabName = onglet, contenuOnglet))` ajouter dans le corps. Paramètres :
+
+	* `badgeLabel = nom, badgeColor = couleur` Ajouter un badge
+	* `disable = TRUE` desactiver la barre.
+
+Paramètres :
+
+* `title = titre` titrer l'application
+* `skin = couleur` thème utilisé.
+
+* `dashboardHeader(title = "titre", titleWidth = largeur)` entête.
+* `dashboardSidebar(width = largeur, title = titre)` menu à gauche.
+* `dashboardBody()` corps de la page.
 
 #### Bootstrap
 
@@ -99,32 +114,24 @@ box(title = "New",
 * `card_body()` corps
 * `card_footer()` pied de page.
 
-##### Les icones
+``` R
+value_box(
+  title = "I got",
+  value = "99 problems",
+  showcase = bs_icon("music-note-beamed"),
+  p("bslib ain't one", bs_icon("emoji-smile")),
+  p("hit me", bs_icon("suit-spade"))
+)
+```
+
+##### Icônes
 
 `library(bsicons)`
 
 * `bs_icon("music-note-beamed")` ajouter un icon.
 
-### UI
 
-Paramètres :
-
-* `title = titre` titrer l'application
-* `skin = couleur` theme utilisé.
-
-* `dashboardHeader(title = "titre", titleWidth = largeur)` entête.
-* `dashboardSidebar(width = largeur, title = titre)` menu à gauche.
-* `dashboardBody()` corps de la page.
-
-#### Les onglets
-
-* `sidebarMenu(menuItem(text = "onglet", tabName = "onglet"))` ajouter dans le menu.
-* `tabItems(tabItems(tabName = onglet, contenuOnglet))` ajouter dans le corps. Paramètres :
-
-	* `badgeLabel = nom, badgeColor = couleur` Ajouter un badge
-	* `disable = TRUE` desactiver la barre.
-
-##### Agencement
+### Eléments d'interface
 
 * `fluidRow(contenu)` 
 
