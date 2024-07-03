@@ -198,6 +198,8 @@ Package `DT` Afficher un dataframe
 
 * `renderDataTable({dataFrame}, options = list(scrollX = TRUE))` si l'affichage depasse de l'écran.
 
+`editable = TRUE` rendre la table éditable.
+
 ##### Bouton télécharger un fichier
 
 * `downloadButton(outputId = "download_kluster", label = "Kluster export")` bouton de téléchargement d'un fichier dans UI.
