@@ -1,7 +1,11 @@
 ## Créer un dataframe
 
 * `data.frame(col1 = vect1, col2 = vect2)` créer un dataframe.
-* `data.frame(col1 = type, col2 = type)` créer un dataframe vide.
+* Créer un dataframe vide :
+
+	* `data.frame(matrix(ncol = length(col_names), nrow = 0))`
+ 	* `data.frame(col1 = type, col2 = type)` 
+
 * `as.data.frame(lapply(donnees, type.convert))` réidentifier le type de variables d'un dataframe.
 
 Transformer une liste en dataframe :
