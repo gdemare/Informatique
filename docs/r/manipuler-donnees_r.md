@@ -212,7 +212,7 @@ Fonction		| Description
 `pmin()` 			| Minimum par élément.
 `last()` 			| Garder la dernière valeur.
 `first()` 			| Garder la première valeur.
-`inth(n)` 			| Garder la n-ième valeur.
+`nth(col, n)` 			| Garder la n-ième valeur.
 `cur_group_id()`		| Id pour chaque groupe (`group_by`).		
 `row_number()`			| Numéro de chaque ligne.
  
