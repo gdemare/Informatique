@@ -82,6 +82,13 @@ Libellés :
 * `geom_vline(xintercept = valeur)` ligne veticale.
 * `geom_abline(intercept = 0, slope = 1)` droites et fonctions linéaires.
 
+Colorer des zones :
+
+* Deux possibilités pour faire des rectangles :
+
+	* `geom_tile(x, y, width, <height>)` avec x et y les milieux de chaque rectangle.
+ 	*  `geom_rect(xmin, xmax, ymin, ymax)`
+
 Paramètres :
 
 * `color = "#F8766D"` couleur.
