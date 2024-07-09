@@ -14,7 +14,8 @@ g = ggplot() + theme_minimal() + aes(x)
 Faire des groupes (dans aes) :
 
 * `fill = var` remplissage.
-* `color = var` contour. 
+* `color = var` contour.
+* `group = var` tracer séparement en fonction d'une variable sur le même graphique.
 
 * `geom_histogram(<option>, binwidth = 5)` histogramme. Option :
 
