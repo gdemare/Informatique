@@ -81,19 +81,21 @@ Libellés :
 
 * `geom_hline(yintercept = valeur)` ligne hotizontale.
 * `geom_vline(xintercept = valeur)` ligne veticale.
-* `geom_abline(intercept = 0, slope = 1)` droites et fonctions linéaires.
+* `geom_abline(intercept = 0, slope = 1)` droites et fonctions linéaires. Paramètres :
+
+	* `color = "#F8766D"` couleur.
+	* `linetype = "dashed"`type de lignes.
+
+* `geom_segment(aes(x = , xend = , y = , yend = ), arrow = arrow(length = unit(0.03, "npc")))` ajoute des flèches ou des segments.
 
 Colorer des zones :
 
 * Deux possibilités pour faire des rectangles :
 
 	* `geom_tile(x, y, width, <height>)` avec x et y les milieux de chaque rectangle.
- 	*  `geom_rect(xmin, xmax, ymin, ymax)`
+ 	* `geom_rect(xmin, xmax, ymin, ymax)`
 
-Paramètres :
 
-* `color = "#F8766D"` couleur.
-* `linetype = "dashed"`type de ligne.
 
 ## Formatage des axes
 
