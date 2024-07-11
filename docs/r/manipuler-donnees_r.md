@@ -221,10 +221,10 @@ Fonction		| Description
 
 ### Faire une opération sur toutes les variables ou les lignes
 
-Fonction 		| Défintion
+Fonction 		| Définition
 ----------------|-------------
 `rowSums()`		| Somme
-`colMeans()`		| Moyenne (`colMeans(is.na(data))` utile pour connaitre le pourcentage de valeurs manquantes).
+`colMeans()`	| Moyenne (`colMeans(is.na(data))` utile pour connaitre le pourcentage de valeurs manquantes).
 
 * `sapply(dt, axis = 1/2, fonction)` appliquer une opération à toutes les colonnes ou les lignes.
 
@@ -240,6 +240,8 @@ Grouper les données :
 
 Calculer des indicateurs par groupe :
 
+* `group_vars()` print the names of grouping variables.
+* `tally(sort = T)` tableau des effectifs.
 * `summarise(nom = formule)` appliquer une fonction.
 * `summarise_all(fonction)` appliquer une fonction à chaque variable.
 * `count(variable, wt = valeur)` dénombrer le nombre d'observations de chaque valeur d'une variable.
@@ -253,7 +255,7 @@ Fonction 		| Défintion
 `sd` 			| Ecart-type
 
 !!! note
-	`group_by()` peut s'utiliser avec `mutate()` pour appliquer une fonction à chaque groupe, ``slice(n)` pour garder les n premirèes lignes de chaque groupe.
+	`group_by()` peut s'utiliser avec `mutate()` pour appliquer une fonction à chaque groupe, `slice(n)` pour garder les n premières lignes de chaque groupe.
 
 ### Les jointures
 
@@ -272,7 +274,8 @@ Option :
 
 ## Fusions lignes et colonnes
 
-* `bind_cols(nom = valeur)` ajoutez à y comme nouvelles colonnes.
+* `bind_cols(nom = valeur)` ajouter à y comme nouvelles colonnes.
+* `add_column(data, column,...)` ajouter de nouvelles colonnes (`tibble`).
 * `bind_rows(df2)` fusionner deux dataframes au niveau des lignes (ajout au niveau des colonnes avec un nom identique).
 * `dt[nrow(dt) + 1,] = vecteur` ajouter une ligne sous forme de vecteur.
 
