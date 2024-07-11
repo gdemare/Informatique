@@ -47,7 +47,7 @@ Convention de nommage des princiaples valeurs :
 #### Absorption
 
 * $K_a$ (Constante d'absorption): Taux auquel le médicament est absorbé dans la circulation systémique.
-* F biodisponibilité. Rapport AUC voie orale/AUC voie IV = % dans le sang.
+* $F$ biodisponibilité est le rapport $\frac{AUC voie orale}{AUC voie IV} = %\ dans\ le\ sang$.
 
 #### Exposition
 
@@ -56,7 +56,7 @@ Convention de nommage des princiaples valeurs :
     * $AUC_t$ ou $AUC_{last}$ AUC terminal entre $t_{0}$ et $t_{last}$.
     * $AUC_{int}$ AUC effective sur un intervalle de temps donné.
     * $AUC_{\inf}$ AUC extrapolé de $t_last$ à $t_{\infty}$
-    * RacD1 = AUC/AUCt (t last AUC finale). Si l'a $RacD1 \lt 20%$ alors $AUC_t$ n'est pas représentative.
+    * $RacD1 = \frac{AUC}{AUCt}$ (t last AUC finale). Si l'a $RacD1 \lt 20%$ alors $AUC_t$ n'est pas représentative.
 
 *   maximale observée.
 * $C_{max}$ et $t_{max}$ concentration maximale et son temps associé.
@@ -68,9 +68,12 @@ Convention de nommage des princiaples valeurs :
 
 #### Distribution 
 
-* $V_D$ Volume de Distribution ou Volume Steady State (Vss). Il permet de savoir si le médicament est distribué dans les tissus . Volume de fluide par masse de médicament $V_d = \frac{D}{C}$. Décri à l'état d'équilibre, la répartition d'un médicament dans l'organisme. Il est défini comme la période où la concentration du médicament dans le plasma sanguin et la concentration dans les tissus périphériques. Il permet notamment de déterminer la dose à administré pour arriver à la concentration thérapeutique. $Vss \cdot \frac {\ln 2}{CL}$ $Vss = volume de médicament dans le corps/la concentration plasmitique$.
+* $V_D$ Volume de Distribution ou Volume Steady State (Vss). Il permet de savoir si le médicament est distribué dans les tissus . Volume de fluide par
+  masse de médicament $V_d = \frac{D}{C}$. Décri à l'état d'équilibre, la répartition d'un médicament dans l'organisme. Il est défini comme la période où
+  la concentration du médicament dans le plasma sanguin et la concentration dans les tissus périphériques. Il permet notamment de déterminer la dose à
+  administré pour arriver à la concentration thérapeutique. $Vss \cdot \frac {\ln 2}{CL}$ $Vss = \frac{volume\ de\ médicament\ dans\ le\ corps}{Concentration\ plasmitique}$.
  
-    * Vd_beta Terminal volume of distribution (V=T½*Cl/ln2) defined as the volume in which the amount of drug would need to be uniformly distributed to produce the observed whole blood concentration
+    * $Vd_{beta}$ Terminal volume of distribution ($V = T_{\frac{1}{2}} \cdot \frac{Cl}{\ln 2}$) defined as the volume in which the amount of drug would need to be uniformly distributed to produce the observed whole blood concentration
 
 #### Elimination
 
