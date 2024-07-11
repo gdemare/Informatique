@@ -101,11 +101,13 @@ Sélecteur de colonnes :
 
 ## Filtrer
 
-* `filter(condition)` filtrer.
+* `filter(condition)` filtrer les données avec une condition (alternative `subset(df, condition)`).
 * `slice(numligne)` garder les lignes.
+* `slice_min(col)` ou `slice_max(col)` sélectionner les lignes avec les valeurs min ou max pour la colonne.
 * `sample_frac(dt, 0.5, replace = TRUE)` sélectionne aléatoirement une fraction d'observations.
 * `sample_n(nligne, replace = TRUE)` sélectionne aléatoirement n observations.
 * `slice(10:15)` sélectionne les lignes selon leur position.
+* 
 * `top_n(nlignes, variable)` sélectionne et ordonne les n premières observations (ou groupes si les données sont groupées) (`desc()` = décroissant).
 * `is.na(data)` renvoie les lignes avec des valeurs manquantes (`myDataframe[is.na(dt)] = 0` pour les remplacer).
 * `complete.cases(data)` renvoie les lignes avec des valeurs manquantes.
@@ -276,6 +278,7 @@ Option :
 
 * `bind_cols(nom = valeur)` ajouter à y comme nouvelles colonnes.
 * `add_column(data, column,...)` ajouter de nouvelles colonnes (`tibble`).
+* `merge_v(j = ~ niv1, target = c("niv1", "niv2"))` fusionner en colonne.
 * `bind_rows(df2)` fusionner deux dataframes au niveau des lignes (ajout au niveau des colonnes avec un nom identique).
 * `dt[nrow(dt) + 1,] = vecteur` ajouter une ligne sous forme de vecteur.
 
