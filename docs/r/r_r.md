@@ -129,6 +129,7 @@ Déclarer des variables :
 * `typeof(var)` renvoyer le type de variable.
 * `exists("variable")` teste l'existence d'une variable.
 * `missing('variable')` vérifier si l'arguement existe.
+* `deparse(var)` afficher la valeur en format texte.
 
 ### Attribut
 
@@ -168,6 +169,7 @@ Déclarer des variables :
 * `setdiff(vec1, vec2)` element du vecteur 1 non présent dans vec2.
 * `intersect(vec1, vec2)` intersection de deux vecteurs.
 * `ave(df$valeurs, df$col1, FUN = cumsum)` calculer une somme cumulée.
+* `setNames(c(10, 20, 30), c("Element1", "Element2", "Element3"))` ou `c(nom1 = val1, nom2 = val2)` nommer les valeurs.
 
 ### Listes
 
@@ -240,6 +242,9 @@ nomFonction <- function(x){
   instruction
 }
 ```
+
+* `formals(build_pk)` renvoie les paramètres d'une fonction.
+* `as.list(environment())`
 
 ### Les erreurs
 
