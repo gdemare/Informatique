@@ -278,6 +278,7 @@ Option :
 
 * `bind_cols(nom = valeur)` ajouter à y comme nouvelles colonnes.
 * `add_column(data, column,...)` ajouter de nouvelles colonnes (`tibble`).
+* `add_row(x = 4, y = 0)` ajouter une ligne.
 * `merge_v(j = ~ niv1, target = c("niv1", "niv2"))` fusionner en colonne.
 * `bind_rows(df2)` fusionner deux dataframes au niveau des lignes (ajout au niveau des colonnes avec un nom identique).
 * `dt[nrow(dt) + 1,] = vecteur` ajouter une ligne sous forme de vecteur.
