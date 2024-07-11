@@ -17,6 +17,12 @@ Les princiapux acronymes et leur signification :
 * Lower Limit Of Quantification (LLOF) quantité d'analyte la plus faible qui peut être détecter quantitativement avec précision et exactitude.
 * high value of variability (CV) en % : $\frac{sd(vec)}{mean(vec) \cdot 100}$.
 
+## Rappel
+
+* precision (précision) cohérence des mesures. 
+* Accuracy (exactitude) proximité avec une valeur de référence.
+* Erreur relative : % de variation de la différence entre la valeur réelle et théorique par rapport à la valeur théorique.
+
 ## Hypothèse
 
 * La pente correspond au taux de disparition du médicament. Elle est proportionnelle à la quantité de médicament présent.
