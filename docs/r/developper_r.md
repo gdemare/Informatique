@@ -75,3 +75,23 @@ devtools_history.R
 * `@import magrittr` importer un package (une library par ligne).
 * `@importFrom package fonction` importer une fonction.
 * `@export` permet à la fonction d'être disponible en dehors du package.
+
+### Flemme de l'ajouter correctement
+
+install.packages("devtools")
+install.packages("roxygen2")
+
+Fichier :
+
+* `NAMESPACE` décrit les exports.
+* `DESCRIPTION` contient une description du package, les dépendances et les métadonnées (nom, version, auteurs).
+
+`browser()` mettre une pause à l'exécution.
+
+fct_ fonction
+var_ variable (une valeur)
+vrai_ booléen
+dt_ dataframe
+dic_dictionnaire
+list_ liste
+
