@@ -221,6 +221,11 @@ Fonction		| Description
 !!! note
 	Pour les sommes cumulées, il faut utiliser `group_by` puis `mutate`.
 
+* `replace(colonne, which(col == 'Vrai'), new_value)` remplacer des valeurs en fonction d'une condition.
+
+!!! example 
+	`replace(colonne, which(col == 'Vrai')[n], new_value)` remplacer la première valeur ayant la condition vrai
+
 ### Faire une opération sur toutes les variables ou les lignes
 
 Fonction 		| Définition
