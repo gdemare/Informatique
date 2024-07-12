@@ -199,7 +199,7 @@ Fonction		| Description
 `dense_rank()` 			| Ordonner sans sauts de rangs.
 `min_rank()` 			| Ordonner avec sauts de rangs.
 `percent_rank()`		| Rangs de (min rank) entre [0, 1].
-`row_number()`			| Ordonner en affectant aux liens la première position.
+`row_number()`			| Ordonner ou numéroter les lignes en affectant aux liens la première position.
 `ntile()`	 		| Diviser en n groupes.
 `between()`	 		| Les valeurs sont-elles entre a et b.
 `cum_dist()` 			| Distribution cumulée
@@ -215,16 +215,20 @@ Fonction		| Description
 `last()` 			| Garder la dernière valeur.
 `first()` 			| Garder la première valeur.
 `nth(col, n)` 			| Garder la n-ième valeur.
-`cur_group_id()`		| Id pour chaque groupe (`group_by`).		
-`row_number()`			| Numéro de chaque ligne.
+`cur_group_id()`		| Id pour chaque groupe (`group_by`).
+
+
  
 !!! note
 	Pour les sommes cumulées, il faut utiliser `group_by` puis `mutate`.
+ 
+### Remplacer une valeur
 
+* `if_else(condition, true = , false = , missing = )` si alors avec la possibilité de traiter les valeurs manquantes.
 * `replace(colonne, which(col == 'Vrai'), new_value)` remplacer des valeurs en fonction d'une condition.
 
 !!! example 
-	`replace(colonne, which(col == 'Vrai')[n], new_value)` remplacer la première valeur ayant la condition vrai
+	`which(col == 'Vrai')[n]` pour remplacer la première valeur ayant la condition vraie.
 
 ### Faire une opération sur toutes les variables ou les lignes
 
