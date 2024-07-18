@@ -268,6 +268,8 @@ if (test_expression1) {
 * `assign(nom, valeur)` créer des variables avec une boucle.
 * `get(nom)` appeler une variable.
 * `grepl(symbole, variable)` tester si le symbole est contenu dans la variable.
+* `all(vec_bool, na.rm = FALSE)` vérifier que tous les éléments sont vrais.
+* `any(vec_bool, na.rm = FALSE)` vérifier qu'au moins un des éléments est vrai.
 
 Opérateur	| Définition
 ------------|-----
