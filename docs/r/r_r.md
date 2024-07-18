@@ -219,6 +219,7 @@ list(
 Existe : `map2_`, `map_` ...
 
 * `map(liste, function(x){x})` parcourir chaque propriété de la liste.
+* `walk(liste, function(x){x})` pareil que map mais ne renvoie rien.
 * `pmap()` itérer un dataframe par ligne.
 
 !!! note
