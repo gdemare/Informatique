@@ -183,6 +183,7 @@ list(
 * `x['data']` récupérer les valeurs et le libellé.
 * `x[['data']]` ou `x$data` recupérer uniquement les valeurs d'un élément de la liste.
 * `lengths(liste)` nombre d'éléments dans une liste.
+* `is.na(list())` si la liste est vide alors renvoie `logical(0)`.
 
 ## Matrices
 
