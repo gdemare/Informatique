@@ -1,4 +1,9 @@
-## Ajouter un raccourci au menu démarrer 
+## Installation
+
+Pour limiter le nombre d'applications pré-installées, il choisire Anglais internanitional. Il est également possible de personnaliser son installation avec le logiciel
+de création de clés bootables Rufus.
+
+## Ajouter un raccourci au menu démarrer
 
 Copier le raccourci dans le dossier :
 
