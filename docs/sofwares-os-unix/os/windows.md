@@ -24,34 +24,41 @@ Copier le raccourci dans le dossier :
 
 ## Logiciels
 
+### L'essentiel
+
 Disponible sur le Window Store :
 
 * Brave, navigateur internet basé sur Chrome avec un bloqueur de pub intégré.
 * Discord
-* [Fluent search](https://www.fluentsearch.net/), log
-* Firefox
-* Simplenote
+* Firefox.
 * Visual Studio Code, environnement de programmation.
-* Vlc, lecteur media.
-
-
+* VLC, lecteur media.
 
 Logiciels Windows :
 
 * [Adguard](https://adguard.com/en/download.html), bloqueur de pubs indispensables.
-* [Anki](https://apps.ankiweb.net/), cartes pour l'apprentissage par répétition.
-* [Calibre](https://calibre-ebook.com/download), gérer sa bibliothèque numérique.
 * [Cryptomator](https://cryptomator.org/downloads/), pour chiffrer ses données numériques sur les cloud.
-* [Deemix](https://deemix.app/gui) - [Reddit Deemix](https://www.reddit.com/r/deemix/), télécharger des musiques depuis deezer.
+* [Calibre](https://calibre-ebook.com/download), gérer sa bibliothèque numérique.
 * [Deluge](https://deluge-torrent.org/), gestionnaire de torrents.
 * [Dropbox](https://www.dropbox.com/)
-* [Fluent reader](https://github.com/yang991178/fluent-reader/releases), aggrégateur de flux rss.
+* [Keeweb](https://keeweb.info/), gestionnaire de mots de passe pour Keep.
+* [Mail spring](https://github.com/Foundry376/Mailspring), boite mail local.
+* [Noi](https://github.com/lencx/noi) ui pour les chats et consor.
+* [Nora](https://github.com/lencx/noi](https://github.com/Sandakan/Nora) lecteur musique au top.
+
+### Le relatif
+
+Sur le store :
+
+* Simplenote.
+
+* [Anki](https://apps.ankiweb.net/), cartes pour l'apprentissage par répétition.
+* [Deemix](https://deemix.app/gui) - [Reddit Deemix](https://www.reddit.com/r/deemix/), télécharger des musiques depuis deezer.
 * [FreeFileSync](https://freefilesync.org/download.php), synchroniser des répertoires et des fichiers.
+* [Fluent reader](https://github.com/yang991178/fluent-reader/releases), aggrégateur de flux rss.
 * [Harmonoid Music](https://harmonoid.com/), lecteur audio avec une interface agréable.
 * [Google drive](https://www.google.com/drive/download/)
-* [Keeweb](https://keeweb.info/), garde
-* [Mail spring](https://github.com/Foundry376/Mailspring), 
-* [Miktex (latex)](https://miktex.org/)
+* [Miktex (latex)](https://miktex.org/) latex.
 * [pCloud](https://www.pcloud.com/fr/download-free-online-cloud-file-storage.html)
 * [pandoc](https://pandoc.org/) convertir des fichiers en word, markdown, html.
 * Zotero, références bibliographiques.
