@@ -1,7 +1,9 @@
 ## Installation
 
-Pour limiter le nombre d'applications pré-installées, il choisire Anglais internanitional. Il est également possible de personnaliser son installation avec le logiciel
+Pour limiter le nombre d'applications pré-installées, il choisire Anglais internationnal (English world). Il est également possible de personnaliser son installation avec le logiciel
 de création de clés bootables Rufus.
+
+Pour passer l'étape de connexion à compte Microsoft 
 
 ## Ajouter un raccourci au menu démarrer
 
