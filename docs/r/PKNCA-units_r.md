@@ -61,9 +61,9 @@ Remplacer les valeurs :
      
     * `$intervals` renvoie les indicaterus calculés.
 
-4. `results_obj <- pk.nca(data_obj)` calculer les indicateurs (`as.data.frame(results_obj)` afficher le tableau avec les résultats individuels).
+4. `results_obj <- pk.nca(data_obj)` calculer les indicateurs.
 
-    * `$result` renvoie les résultats.
+    * `$result` ou `as.data.frame(results_obj)` afficher le tableau avec les résultats individuels.
     
 6. `summary(results_obj)` résumer le résultat (`roundingSummarize()` ?). Les informations sur les valeurs entre crochet sont affichées sous le tableau dans le champ cation. Paramètre :
    
