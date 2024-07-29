@@ -54,6 +54,7 @@ Type de graphique :
 	* `geom_col()` diagramme en barre avec la valeur des y. Pour classer les labels, il faut `reorder(label, valeur)` dans le `aes()`.
 	* `lty = type` type de ligne (`dashed` pointillé; `dotdash` point pointillé, ).
   	* `lwd = épaisseur` épaisseur.
+  	* `linetype =` type de lignes.
  	
 * `geom_area()` coubre pleine.
 * `geom_point(<option>)` nuage de points. Option :
