@@ -12,10 +12,10 @@
 
 `library(golem)`
 
-La philosophie de Golem est de créer et organiser un programme sous la forme d'un package en appelant des fonctions :
+La philosophie de Golem est de créer et d'organiser un programme sous la forme d'un package en appelant des fonctions :
 Golem est un package qui structure et gère le développement de package R.
 
-Méthodes alternatives pour appeler un module en lui fournissant un paramètre : `callModule(mod_bars_echarts_server, "bars_echarts_ui_1")`.
+Méthodes alternatives pour appeler un module en lui fournissant un paramètre : `callModule(mod_bars_echarts_server, "bars_echarts_ui_1")` (obsolète ?).
 
 ### Déclarer les modules
 
