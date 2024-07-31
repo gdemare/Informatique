@@ -119,7 +119,7 @@ Pour changer le type d'axes plus précisiément, il existe `library(scales)`.
 * `theme()`modifier les propriétés du thème du graphique.
 
 	* `legend.title = element_text(text = "titre")` renommer le titre de la légende.
-	* `legend.position = c(.9, .9)` modifier la position de la légende (ici en haut à droite).
+	* `legend.position = c(.9, .9)` modifier la position de la légende (ici en haut à droite) ou `"left"`, `"top"`.
 	* `legend.box.background = element_rect(colour = "black")` contour de la légende.
 
 
