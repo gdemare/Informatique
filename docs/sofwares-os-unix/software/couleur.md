@@ -1,1 +1,1 @@
-(Patternfly)[https://www.patternfly.org/charts/colors-for-charts/] palette de couleurs stylée.
+[Patternfly](https://www.patternfly.org/charts/colors-for-charts/) palette de couleurs stylée.
