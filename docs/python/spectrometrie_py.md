@@ -1,7 +1,16 @@
-## Protéomique
 
-`alphapept` Il est conseillé de l'installer dans un environnement Conda.
+* [PyOpenMS](https://pyopenms.readthedocs.io/en/latest/introduction.html) fonction pour la spectrométrie de masse.
+* [DeepNovo v2](https://github.com/volpato30/DeepNovoV2) séquencage de novo de protéines.
+* pour la protéomique :
 
+  * [ms proteomics tools](http://msproteomicstools.roestlab.org)
+  * [AlphaPept](https://mannlabs.github.io/alphapept/)
+
+### AlphaPept
+
+!!! note
+  Il est conseillé d'installer ces packages dans des environnements pandas.
+  
 ### io - importer et exporter les fichiers
 
 `io` est basé sur la library `alphapept.pyrawfilereader`.
