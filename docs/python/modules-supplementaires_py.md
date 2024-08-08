@@ -1,11 +1,11 @@
 ## Télécharger
 
-### Des vidéos ou de l'audio de Youtube
+### Depuis Youtube
 
 Library `yt-dlp` (`youtube-dl`en python sinon c'est en power shell) avec `yt-dlp 'id_youtube'` télécharger dans la meilleur qualité.
 
 * `--merge-output-format mkv --remux mkv` convertir le fichier en mkv. Cela nécessite de télécharger ffmpeg et de déclarer la variable environnement /bin.
-* `--extract-audio --audio-format mp3 <video URL>` télécharger le son de la vidéo en mp3.
+* `--extract-audio --audio-format mp3 <video URL>` télécharger le son d'une vidéo en mp3.
 
 ### Spotdl
 
@@ -25,7 +25,7 @@ Library `selenium`
 
 Chromedriver à télécharger `https://chromedriver.chromium.org/downloads`
 
-```
+``` py
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -66,6 +66,13 @@ Library `subprocess`
 * `call([sys.executable, 'C:\\temp\\hello2.py'], shell=True)` importer un script python.
 * `['java', '-jar', 'temp.jar' param1, param2]` exécuter un script java.
 
+## Documentation
+
+Packages pour générer de la documentation :
+
+* [Read the docs](https://docs.readthedocs.io/en/stable/tutorial)
+* [Sphinx - python doc generator](https://www.sphinx-doc.org/en/master/#)
+
 ## Base de données
 
 ### Sqlite 3
@@ -74,7 +81,7 @@ Package `sqlite3`
 
 #### Connexion à la database
 
-```
+``` py
 conn = sqlite3.connect('base de donnees.db')
 c = conn.cursor()
 ```
