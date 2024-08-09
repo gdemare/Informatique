@@ -265,7 +265,8 @@ if (test_expression1) {
 }
 ```
 
-`if(condition) do (instruction)` ou `if(condition) instruction`.
+* `if(condition) do (instruction)` ou `if(condition) instruction`.
+* `switch(variable, val1 = sortie1, val2 = sortie2)` case when pour les égalités.
 
 * `assign(nom, valeur)` créer des variables avec une boucle.
 * `get(nom)` appeler une variable.
