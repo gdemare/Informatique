@@ -92,3 +92,6 @@ rapport entre la quantité d'une substance éliminée par unité de temps et la 
 
 !!! note 
     Il existe principalement deux clairances : hépatique et reinale.
+
+
+Superposition est une méthode pour prédire les concentrations à partir des valeurs obtenues. Les données peuvent servir pour déterminer les temps pour les doses répétées.
