@@ -25,6 +25,7 @@ data.frame(
 * `rename_at(colonne, ~paste(., "0"))` renommer uniquement les colonnes.
 * `rename_if(condition, ~paste(., "0"))` renommer uniquement si la condition est vraie.
 * `rename(!!!setNames(col_units$old_name, col_units$new_name))` renommer les colonnes à partir d'un dataframe.
+* `rename_all(~vecteur)` renommer les colonnes avec un vecteur.
 
 #### Libellés des colonnes
 
