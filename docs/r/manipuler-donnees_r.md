@@ -102,7 +102,7 @@ Sélecteur de colonnes :
 
 ## Filtrer
 
-* `filter(condition)` filtrer les données avec une condition (alternative `subset(df, condition)`).
+* `filter(condition)` filtrer les données avec une condition (alternative `subset(df, condition)`, pour filter en fonction des noms de lignes `row.names(r$df_pk) %in% filter`).
 * `slice(numligne)` garder les lignes.
 * `slice_min(col)` ou `slice_max(col)` sélectionner les lignes avec les valeurs min ou max pour la colonne.
 * `sample_frac(dt, 0.5, replace = TRUE)` sélectionne aléatoirement une fraction d'observations.
