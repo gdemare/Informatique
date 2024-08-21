@@ -284,6 +284,7 @@ Fonction 		| Défintion
 Option :
 
 * `by = c("col1" = "col2")` préciser la jointure.
+* `keep = T` garder les colonnes qui ont servi de jointure.
 
 ## Fusions lignes et colonnes
 
