@@ -64,7 +64,7 @@ Packages `labelled`
 * `colnames(data)` nom des colonnes.
 * `rownames(data)` nom des colonnes.
 * `column_to_rownames(var = "Accession")` mettre une colonne en nom de lignes et supprimer la colonne.
-* `rownames_to_column()` transformer l'index en colonne.
+* `rownames_to_column()` transformer l'index en colonne et supprimer le nom des lignes.
 * `rowid_to_column()` transformer le numéro des lignes en colonne.
 * `nrow(data)` renvoie le nbre de lignes.
 * `ncol(data)` renvoie le nbre de colonnes.
