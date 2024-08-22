@@ -40,7 +40,7 @@
 ### RData
 
 * `save(obj1, obj2, file = "mes_objets.RData")` sauvegarder en RData.
-* `load(fichier.RData)` charger un RData.
+* `load("fichier.RData")` charger un RData.
 * `read.delim(file = ou text = , header = F, sep = )` charger un fichier ou du texte (`read.table(file = ou text = , header = F, sep = )` marche moins bien).
 
 ### Excel
