@@ -8,6 +8,9 @@ Fonction               | Type
 `as.Date(character())` | date 
 `as.vector()`          | en vecteur
 `as.logical()`         | en booléen
+
+`as("T", "logical")` changer le type d'une variable.
+
 !!! note
     `is.numeric(x)` pour savoir si la valeur est du bon type.
 
