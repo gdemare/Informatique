@@ -33,7 +33,7 @@
 * `file.exists(fichier)` tester l'existence d'un fichier.
 * `setdiff(list.files(), list.dirs(recursive = FALSE, full.names = FALSE))` lister uniquement les fichiers.
 * `setwd(dossier)` changer le dossier de travail.
-* `getwd()` chemin du dossier de tavail.
+* `getwd()` renvoyer le chemin du dossier de tavail.
 * `source(fichier)` exécuter un script.
 * `tools::file_ext(chemin_fichier)` renvoyer l'extension du fichier.
 
@@ -112,7 +112,7 @@ insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
 * `dput(variable)` afficher la variable à déclarer en code R.
 * `suppressWarnings(code)` supprimer les warnings.
 * `suppressMessages(code)` supprimer les messages.
-* `Sys.sleep(seconde)` attendre un nombre de seconde avant la suite de l'exécution.
+* `Sys.sleep(seconde)` attendre un certain nombre de secondes avant la suite de l'exécution.
 * `methods(class = "units")` lister les méthodes associées à un objet.
 
 ## Environnement
@@ -127,7 +127,7 @@ Déclarer des variables :
 * `var <<- valeur` forcer l'association (utile pour modifier une variable dans la fonction).
 
 * `typeof(var)` renvoyer le type de variable.
-* `exists("variable")` teste l'existence d'une variable.
+* `exists("variable")` tester l'existence d'une variable.
 * `missing('variable')` vérifier si l'arguement existe.
 * `deparse(var)` afficher la valeur en format texte.
 
@@ -137,7 +137,7 @@ Déclarer des variables :
     Les attributs sont les métadonnées associées à un objet.
 
 * `attr(iris, "perso") <- valeur` ajouter un attribut à objet.
-* `attributes(dt_conc)` renvoie les attribue d'un objet. 
+* `attributes(dt_conc)` renvoyer les attribue d'un objet. 
 
 ## Vecteurs
 
@@ -231,7 +231,7 @@ Existe : `map2_`, `map_` ...
 Apply permet d'appliquer une fonction à chaque élément.
 
 * `sapply(vecteur, fonction)` appliquer une fonction à tous les éléments d'un vecteur.
-* `apply(dt, axis=1/2, fonction)` appliquer une fonction à tous les éléments en ligne/colonne.
+* `apply(dt, axis = 1/2, fonction)` appliquer une fonction à tous les éléments en ligne/colonne.
 * `tapply(tb_grp_kinetic, 1, function(x){colnames(x)})` appliquer une fonction colonne d'un dataframe.
 
 !!! note
@@ -271,8 +271,8 @@ if (test_expression1) {
 * `assign(nom, valeur)` créer des variables avec une boucle.
 * `get(nom)` appeler une variable.
 * `grepl(symbole, variable)` tester si le symbole est contenu dans la variable.
-* `all(vec_bool, na.rm = FALSE)` vérifier que tous les éléments sont vrais.
-* `any(vec_bool, na.rm = FALSE)` vérifier qu'au moins un des éléments est vrai.
+* `all(vec_bool, na.rm = F)` vérifier que tous les éléments sont vrais.
+* `any(vec_bool, na.rm = F)` vérifier qu'au moins un des éléments est vrai.
 
 Opérateur	| Définition
 ------------|-----
@@ -283,7 +283,7 @@ Opérateur	| Définition
 ## Boucles
 
 !!! note
-	cat permet de faire suivre le % d'une boucle `cat("\rÉtape", num_script, "/", for_nb_scripts, '-', script)`.
+	`cat` permet de faire suivre le % d'une boucle `cat("\rÉtape", num_script, "/", for_nb_scripts, '-', script)`.
 
 ### For 
 
@@ -345,12 +345,12 @@ Seconde 	| `%S`	| 06
 
 Library `stringr`
 
-* `str_detect(string, pattern, negate = FALSE)` détermine si le schéma est trouvé.
+* `str_detect(string, pattern, negate = FALSE)` déterminer si le schéma est trouvé.
 * `str_replace(texte,  pattern, remplacement)` remplacer la première occurence.
 * `str_replace_all(texte,  pattern, remplacement)` remplacer toutes les occurences. 
 * `str_length(vecteur)` nombre de lettres de chaque élément.
 * `str_count(text, motif)` compter le nombre d'occurences.
-* `str_to_title(texte)` mettre les premiers caractères en majuscule (package `stringr`).
+* `str_to_title(texte)` mettre les premiers caractères en majuscule.
 * `str_sub(i, (text, start = debut, end = fin)` extraire une chaine de caractères.
 * `str_view_all(vecteur, exp_re)` rechercher une expression régulière.
 * `str_extract(texte, exp_re)` extraire un texte.
@@ -400,8 +400,8 @@ Paramètres :
 * `user = "statistique"`
 * `password = "statistique"`
 
-* `requete = sqlInterpolate(connection, "SELECT * FROM acte WHERE acte_code = ?id", id = acteId)` créer et controler les variables utilisées dans la requete.
-* `dbGetQuery(connection, requete)` exécuter la requete.
+* `requete = sqlInterpolate(connection, "SELECT * FROM acte WHERE acte_code = ?id", id = acteId)` créer et contrôler les variables utilisées dans la requête.
+* `dbGetQuery(connection, requete)` exécuter la requête.
 
 ## R markdown 
 
@@ -410,4 +410,4 @@ Paramètres :
 
 ## Aléatoire
 
-* `runif(nb, min, max)` générer un plusieurs nombres aléatoires entre deux bornes.
+* `runif(nb, min, max)` générer un ou plusieurs nombres aléatoires entre deux bornes.
