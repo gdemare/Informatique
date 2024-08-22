@@ -4,6 +4,7 @@
 * [Simplenote](https://simplenote.com/), logiciels de prises de notes en markdown avec synhcronisation entre les plateformes (android, windows,...).
 * [Obsidian](https://obsidian.md/) ou [Logseq](https://logseq.com/) application de gestion de connaissances.
 * [Mixx](https://mixxx.org/), logiciel de dj.
+* [OnlyOffice](https://www.onlyoffice.com) et [FreeOffice](https://www.freeoffice.com/fr/) suite bureautique.
 
 ### Thunderbird
 
