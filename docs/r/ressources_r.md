@@ -9,3 +9,8 @@
 ### R shiny
 
 [Le guide complet pour comprendre la réactivité en Shiny](https://www.charlesbordet.com/fr/reactive-shiny/#) article complet sur les variables réactives.
+
+### Packages pour la biologie
+
+* [grafify](https://ashenoy-cmbi.github.io/grafify/index.html) package avec des thèmes pour les graphiques en biologie.
+* [microeco](https://chiliubio.github.io/microeco_tutorial/) package pour la microbiologie.
