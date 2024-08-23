@@ -83,6 +83,7 @@ Package : `dplyr`, `tidyr`. `résultat1 %>% résultat2` : rediriger le résultat
 
 ## Fonctions dplyr
 
+Pour créer des fonctions dplyr `{{colonne}}`.
 ``` r
 max_by <- function(data, var, by) {
   data %>%
