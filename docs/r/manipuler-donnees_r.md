@@ -85,10 +85,10 @@ Package : `dplyr`, `tidyr`. `résultat1 %>% résultat2` : rediriger le résultat
 
 Pour créer des fonctions dplyr `{{colonne}}`.
 ``` r
-max_by <- function(data, var, by) {
+max_by <- function(data, var, is_true) {
   data %>%
-    group_by({{ by }}) %>%
-    summarise(maximum = max({{ var }}, na.rm = TRUE))
+	filter(is_true) %>%
+    mutate({{var}} := {{var}} + 1)
 }
 ```
 
