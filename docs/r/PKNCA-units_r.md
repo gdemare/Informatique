@@ -71,6 +71,9 @@ Remplacer les valeurs :
     * `not_requested = "value"` valeur pour les indicateur non demandés.
     * `not_calculated = "value"` valeur pour les paramètres non calculés.
 
+!!! note
+    Pour les dosages répétés, les paramètres sont calculés pour chaque dose.
+
 Fonctions supplémentaires : 
 
 * `assert_PKNCAdata()` être un objet PKNCAdata.
