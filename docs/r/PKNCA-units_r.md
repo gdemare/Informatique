@@ -63,7 +63,8 @@ Remplacer les valeurs :
   
 !!! note
     Il peut être utile de récupérer le tableau par défaut pour avoir les intervalles détectés automatiquement.
-    1. Exécuter PKNCA une première fois pour récupérer les intervalles puis modifier le tableau en fonction des besoins utilisateurs.
+    1. Exécuter PKNCA une première fois pour récupérer les intervalles.
+    2. modifier les intervalles `data_obj$intervals <- intervals_manual`.
 
 4. `results_obj <- pk.nca(data_obj)` calculer les indicateurs.
 
