@@ -59,7 +59,11 @@ Remplacer les valeurs :
   
     Retour :
      
-    * `$intervals` renvoie les indicaterus calculés.
+    * `$intervals` renvoie les paramètres calculés.
+  
+!!! note
+    Il peut être utile de récupérer le tableau par défaut pour avoir les intervalles détectés automatiquement.
+    1. Exécuter PKNCA une première fois pour récupérer les intervalles puis modifier le tableau en fonction des besoins utilisateurs.
 
 4. `results_obj <- pk.nca(data_obj)` calculer les indicateurs.
 
@@ -82,9 +86,9 @@ Fonctions supplémentaires :
 * `signifString(numeric, nb_chiffres)` renvoyer un nombre en texte avec un nombre de chiffres significatifs.
 * `setDuration(obj, valeur)` ajouter une duration.
 * `setRoute(obj, valeur)` ajouter une route.
+* `find.tau(dose_tps)` détermine la durée entre chaque dose (pour les doses répétées). 
 * `time_calc()` calculer le temps par rapport à un événement par exemple, un dosage.
 * `exclude(myconc, reason="Carryover", mask=c(TRUE, rep(FALSE, 6)))` exclure certains points.
-
 ###  Les parametres cinétiques
 
 * `PKNCA.options()` configuration.
