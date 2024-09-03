@@ -22,10 +22,8 @@ data.frame(
 ### Renommer les colonnes
 
 * `setNames(c('pos_row','pos_col'))` ajouter un nom de colonnes.
-* `rename_at(colonne, ~paste(., "0"))` renommer uniquement les colonnes.
-* `rename_if(condition, ~paste(., "0"))` renommer uniquement si la condition est vraie.
+* `rename_with(paste(., "0"), .cols = everything())` renommer les colonnes.
 * `rename(!!!setNames(col_units$old_name, col_units$new_name))` renommer les colonnes à partir d'un dataframe.
-* `rename_all(~vecteur)` renommer les colonnes avec un vecteur.
 
 #### Libellés des colonnes
 
@@ -116,23 +114,29 @@ Sélecteur de colonnes :
 * `case_when(condition1 ~ val1, condition2 ~ val2,..., .default = val)` fonction équivalente au CASE WHEN en SQL.
 
 ## Sélectionner
+* `select(colonne1, colonne2)` selecionner des colonnes (`-one_of(col)` pour enlever une colonne). Soit avec les numéros, soit avec les noms.
+
+En fonction de la position :
 
 * `everything()` toutes les colonnes restantes.
-* `all_of(vecteur)` sélectionner les colonnes avec le nom de la colonne dans le vecteur.
-* `one_of(vecteur)` sélectionner  les colonnes avec le nom de la colonne dans le vecteur. Fonctionne même si la colonne n'existe pas.
-* `any_of(vecteur)` sélectionner les colonnes dont le nom de la colonne n'est pas dans le vecteur.
-* `last_col()` sélectionner la dernière colonne.
+* `all_of(vecteur)` les colonnes avec le nom de la colonne dans le vecteur.
+* `one_of(vecteur)` les colonnes avec le nom de la colonne dans le vecteur. Fonctionne même si la colonne n'existe pas.
+* `any_of(vecteur)` les colonnes dont le nom de la colonne n'est pas dans le vecteur.
+* `last_col()` la dernière colonne.
+* `group_cols()` les colonnes utilisées pour grouper les données.
+* `num_range()` la position
+* `where(function(){})` les colonnes qui retournent vraies.
 
 !!! example 
 	`select(col13, everything())` déplacer la colonne 13 à la position 1.
 
-* `select(colonne1, colonne2)` selecionner des colonnes (`-one_of(col)` pour enlever une colonne). Soit avec les numéros, soit avec les noms.
-  
-	* `contains('texte')` sélectionner des colonnes avec le texte dans le nom.
-	
-* `select_if(is.numeric)` selectionner en fonction d'une condition.
+En fonction du nom des colonnes :
 
-	* `matches(expr_regu)` sélectionner en fonction d'une expression régulière.
+* `contains("texte")` qui contient le texte.
+* `matches(expr_regu)` correspond à l'expression régulière.
+* `starts_with(c("tex1", "tex2"))` débute avec.
+* `ends_with()` se termine par.
+
 
 * `distinct()` supprimer les doublons (renvoie les valeurs uniques pour une variable).
 
