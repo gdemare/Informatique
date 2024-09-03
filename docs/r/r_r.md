@@ -146,9 +146,9 @@ Déclarer des variables :
 * `seq(2, 3, by = 0.5)` créer une séquence de 2 à 3.
 * `rep(1:2, times = 3/each = 3)` repéter la valeur soit en alterné (1,2,1,2) ou à la suite (1,1,2,2).
 
-* `date[nligne][ncol]` sélectioner une cellule.
-* `data$colonne` sélectionner une colonne.
-* `table[ligne, colonne]` sélectionner une ligne ou une colonne ou une cellule (laisser vide pour garder tous les champs).
+* `df[nligne][ncol]` sélectionner une cellule.
+* `df$colonne` sélectionner une colonne.
+* `df[ligne, colonne]` sélectionner une ligne, une colonne ou une cellule (laisser vide pour garder tous les champs).
 
 ### Manipuler les vecteurs 
 
@@ -305,8 +305,9 @@ while(condition){
 
 ## Les dates
 
-Package : lubridate.
+`library(lubridate)`
 
+* `Sys.Date()` date du jour.
 * `as_datetime()` convertir en date time.
 * `as.Date('2017-10-12', format =)` convertir en date.
 
