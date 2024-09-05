@@ -274,11 +274,12 @@ if (test_expression1) {
 * `all(vec_bool, na.rm = F)` vérifier que tous les éléments sont vrais.
 * `any(vec_bool, na.rm = F)` vérifier qu'au moins un des éléments est vrai.
 
-Opérateur	| Définition
-------------|-----
-`==`		| égale
-`%in%`		| appartient
-`!`     	| négation
+Opérateur				| Définition
+------------------------|-----
+`==`					| égalité
+`identical(val1, val2)`	| égalité pratique pour `logical(0)`
+`%in%`					| appartient
+`!`     				| négation
 
 ## Boucles
 
