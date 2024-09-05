@@ -17,11 +17,12 @@ data.frame(
   ) 
 ```
 
-* `transpose(df)` tranformer un dt en liste de lignes (`library(purrr)`).
+* `transpose(df)` tranformer un dt en liste de lignes (`libraryF(purrr)`).
 
 ### Renommer les colonnes
 
 * `setNames(c('pos_row','pos_col'))` ajouter un nom de colonnes.
+* `rename(new_nom = old_nom)` ou `c(new_nom = old_nom)` renommer une colonne.
 * `rename_with(~paste(., "0"), .cols = everything())` renommer les colonnes (`.cols` préciser les colonnes à renommer).
 * `rename(!!!setNames(col_units$old_name, col_units$new_name))` renommer les colonnes à partir d'un dataframe.
 
@@ -132,10 +133,6 @@ En fonction de la position :
 
 En fonction du nom des colonnes :
 
-* `contains("texte")` qui contient le texte.
-* `matches(expr_regu)` correspond à l'expression régulière.
-* `starts_with(c("tex1", "tex2"))` débute avec.
-* `ends_with()` se termine par.
 
 
 * `distinct()` supprimer les doublons (renvoie les valeurs uniques pour une variable).
@@ -149,12 +146,16 @@ En fonction du nom des colonnes :
 !!! note
 	Pour trier une colonne, il faut `factor(x, levels = c("el1", "el2"))`.
 
-Fonction 				| Définition
-------------------------|---
-`starts_with(debut)`	| les variables commençant par...
-`ends_with(fin)`		| les variables finissant par...
-`contains(chaine)`		| contenant la chaine.
+Fonction 						| Définition
+--------------------------------|---
+`starts_with(c("deb1", "deb2"))`| commence par.
+`ends_with(fin)`				| finit par.
+`contains(chaine)`				| contient la chaine.
+`matches(expr_regu)` 			| correspond à l'expression régulière.
 
+!!! note 
+ 	Utile notamment pour renommer les colonnes `rename_with(~fonction(.), .cols = expression)`.
+ 
 ## Réorganiser les données
 
 Package `tidyr`
@@ -180,13 +181,12 @@ Sélectionner les colonnes :
 
 * `mutate(nom = formule)` appliquer une fonction et ajouter une colonne (il est possible d'appliquer à toutes les variables avec `sapply` voir ci dessous et, de sélectionner une variable par son nom avec `!!sym("col1")`).
 * `mutate_all(~as.character(.x))` appliquer la fonction à toutes les colonnes.
-* `rename(c(new_nom = old_nom))` renommer une colonne.
 * `mutate_if(~fct_test(.x), function(x){drop_units(x)})` appliquer une fonction aux colonnes avec Vrai.
 
 Options :
 
-* `.before=Value` ou  `.after=` préciser où insérer la colonne.
-* `.keep="none"` ne garder aucune colonne.
+* `.before = Value` ou  `.after=` préciser où insérer la colonne.
+* `.keep ="none"` ne garder aucune colonne.
 
 !!! note 
 	Pour utiliser le nom d'une variable stockée dans une variable caractère `mutate(!!variable_text := ifelse(condition, !!sym(variable), NA))`.
@@ -255,6 +255,15 @@ Grouper les données :
 * `group_by(var)` grouper les observations par la var (toujours suivi de `summarise`).
 * `ungroup(iris)` dégrouper le jeu de données.
 * `group_split()` séparer le jeu de données en plusieurs (précédé d'un `group_by`).
+* Appliquer des fonctions chaque groupe :
+
+```
+group_map(function(x, row_id) {
+    x %>% transmute(
+      var1 = a + b,
+      var2 = c/2)
+}
+```
 
 Calculer des indicateurs par groupe :
 
