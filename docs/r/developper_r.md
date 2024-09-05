@@ -98,6 +98,43 @@ Préfixe		| Suffixe
 `dic_`		| dictionnaire
 `list_` 	| liste
 
+
+- `db_` database optimiser pour un accès efficace au données.
+- `dwh_` data warehouse ou entrepôt de données décisionnel. agrégation de données de différentes sources. Utiliser pour l'analyse et l'aide à la décision. données historisés.
+- `dm_` data marts sous-ensemble spécialisé d'un data warehouse.
+
+- `df_` dataframe (existe aussi `dt_` datatable).
+
+Modèle de données d'analyse (OLAP) :
+
+- `tf_` table de faits
+- `td_` table de dimensions.
+
+!!! note
+  Il est conseillé d'utiliser les data.table à la place des dataframe pour manipuler des tableaux volumineux.
+
+
+`_id` identifiant.
+
+`_agg` ("aggregate") table d'agrégation.
+`_ind` individuel.
+
+Indicateurs :
+
+`_metrics_` mesure quantifiable pour évaluer la performance, le qualité ou l'avancement.
+`_parameters_` parameters caractéristique ou condition d'un système.
+
+Utiliser le singulier.
+
+Excel permt de générer des modèles de données.
+
+Dans le cas de PKexpress, les fichiers avec les données de concentration mesurés contient 
+Base de données d'analyse Les données ne sont pas modifiées
+
+* `tf_` table de fait, table qui contient les indicateurs et les données mesurables sur les faits et les événements.
+* `td_` table De dimensions, table qui contient les informations qui décrivent l'enregistrement de la table de fait. Elle sert notamment à filtrer les données de la table de fait.
+
+
 ## Créer un programme R indépendant
 
 1. Télécharger une version R portable.
