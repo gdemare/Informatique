@@ -1,5 +1,3 @@
-## Shiny
-
 ``` R
 library(shiny)
 library(shinydashboard)
@@ -11,20 +9,25 @@ ui <- fluidPage(
 server <- function(input, output) {
     contenu
   }
-shinyApp(ui = ui, server = server) #executer l'application
+
+#executer l'application
+shinyApp(ui = ui, server = server) 
 ```
 
-#### Affichage
+* `page_fillable(...)` page qui occupe tout l'écran.
+* `page_fluid(...)` page scrollable.
+
+## Eléments d'interface
 
 !!! note
-	Le contenu non modifiable est basé sur les balises hmtl.
+	Le contenu non modifiable est basé sur les balises html.
 
 Code           		| Type
 --------------------|-----------------
 `p("texte simple)`  | Texte simple.
 `h1("titre 1")`     | Titre de hiéarchie 1.
 
-#### Zone de saisie
+#### Saisie
 
 * `type(inputId = id, ....)`
 * `input$id` récuperer l'entré. Utile notamment dans la partie server.
@@ -38,32 +41,46 @@ Option :
 
 Les méthodes :
 
-* `actionButton()` bouton
-* `checkboxInput()`
-* `checkboxGoupInput()` 
-* `dateInput()`
-* `dateRangeInput()`
+* `actionButton("id",...)` bouton.
+* `checkboxInput("id",...)` liste à cocher à un seul élément.
+* `checkboxGroupInput("id",...)` liste à cocher à plsuieurs éléments.
+
+  * `inline = T` sur la même ligne.
+
+* `dateInput()` calendrier de saisi de date.
+* `dateRangeInput()` calendrier avec période.
 * `fileInput(nomFicher, text, multiple = FALSE)` importer un fichier. Paramètres du :
 
 	* `$name` nom du fichier.
 	* `$datapath` chemin du fichier.
 	* `$size` taille en octets.
 
-* `numericInput()`
+* `numericInput()` valeur numérique.
 * `paswordInput()` 
 * `colourInput()` (package `colourpicker`) 
 * `radioButtons()` 
-* `selectInput(choices = liste)` liste à choix multiples (liste de liste pour avoir des groupes).
 * `sliderInput()` barre de défilement.
-* `textInput()` .
-* `textAreaInput()` zone de saisie de texte.
+* `textInput()` petite zone de saisie textuelle.
+* `textAreaInput()` grande zone de saisie de texte.
+
+#### Les listes selectionnbles
+
+* `selectInput(choices = liste)` liste à choix multiples (liste de liste pour avoir des groupes).
+* `varSelectizeInput()` selectionner les colonnes d'un df.
+* `updateSelectInput(session, id, choices = c("A", "B"), selected = "A")` mettre a jour un select (dans le `server`).
+
+
+Paramètres :
+
+* ` multiple = TRUE` autoriser de multiples saisies.
+
 
 ### Interface 
 
 Il existe deux princiapaux packages pour l'interface sont :
 
-* shinydashboardplus le package le plus populaire.
-* bslib qui s'appuie sur bootstrap et qui est plus moderne que shynidashboard.
+* `shinydashboardplus` le package le plus populaire.
+* `bslib` qui s'appuie sur bootstrap et qui est plus moderne que shynidashboard.
 
 #### Shinydashboardplus
 
@@ -85,7 +102,7 @@ box(title = "New",
 ```
 
 * `sidebarMenu(menuItem(text = "onglet", tabName = "onglet"))` ajouter dans le menu.
-* `tabItems(tabItems(tabName = onglet, contenuOnglet))` ajouter dans le corps. Paramètres :
+* `tabItems(tabName = onglet, contenuOnglet))` ajouter dans le corps. Paramètres :
 
 	* `badgeLabel = nom, badgeColor = couleur` Ajouter un badge
 	* `disable = TRUE` desactiver la barre.
@@ -104,7 +121,43 @@ Paramètres :
 `library(bslib)`
 
 !!! example
-    Exemple de tableau de bord [chicago flights](https://bslib.shinyapps.io/flights/).
+  Exemple de tableau de bord [chicago flights](https://bslib.shinyapps.io/flights/).
+
+##### Structure de la page
+
+* `hr()` ajouter une ligne horizontale.
+
+* `layout_columns(...)` créer une ligne avec 12 colonnes responsives. Paramètres :
+
+  * `col_widths =` largeur de chaque colonne (max = 12).
+  * `style = css(grid_template_columns = "5fr 3fr")` pour avoir des éléments avec des tailles différentes.
+  * `row_heights =` hauteurs.
+
+* `layout_column_wrap()` colonnes avec retour à la ligne des éléments lorsque la taille est insuffisante.
+
+
+* `page_fillable(...)` remplir l'ensemble de la page.
+* `page_navbar(titre, ...)` barre horizontal en haut. Elements ajouter :
+
+  * `nav_panel(titre, contenu)` ajouter un ongler
+  * `nav_menu(titre, nav_item("ele1"), nav_item("ele2"))` ajouter une liste avec les onglets.
+  * `nav_spacer()` espace dans le menu.
+
+  Options :
+
+  * `underline = T` souligner l'onglet actuel.
+
+* `page_sidebar(...)` menu à gauche.
+
+  * `sidebar = sidebar(...)` ajouter des élements au menu.
+
+!!! note 
+  Il faut ajouter `page_X(fluidPage(...))` pour pouvoir interagir avec les DT.
+
+* `layout_sidebar()` ajouter le menu à gauche.
+
+
+`style = css(grid_template_columns = "2fr 1fr")` largeur des relatives des éléments.
 
 ##### Les cartes
 
@@ -113,6 +166,11 @@ Paramètres :
 * `card_header("Datatable loaded")` entête
 * `card_body()` corps
 * `card_footer()` pied de page.
+
+Paramètres :
+
+* `full_screen = T` autoriser la mise en pleine écran.
+* `class = "class boostrap"` ajouter une classe bootstrap (exemple  `bg-light`).
 
 ``` R
 value_box(
@@ -124,12 +182,19 @@ value_box(
 )
 ```
 
+##### Accordéon
+
+* `accordion(accordion_panel(...))` Menu en accordéons. Paramètres :
+
+  * `open = T ou id` panneau ouvert par défaut.
+
+* `accordion_panel(title, "les éléments", value = title, icon = NULL)` ajouter un panneau.
+
 ##### Icônes
 
-`library(bsicons)`
+`library(bsicons)` basée sur les [icones bootstrap](https://icons.getbootstrap.com/) 
 
-* `bs_icon("music-note-beamed")` ajouter un icon.
-
+* `bs_icon("music-note-beamed")` ajouter un icone.
 
 ### Eléments d'interface
 
@@ -137,14 +202,15 @@ value_box(
 
 Code            					| Type
 ------------------------------------|-----------------
-`br()`         					| saut de ligne
+`br()`         					    | saut de ligne
+`hr()`         					    | ligne horizontale
 `box()`         					| classique
 `infoBox()`     					| texte statique
 `tabBox()`      					| valeur
 `valueBox()`   						| valeur dynamique
 `modalDialog()`						| fenêtre pop up (ajouter un bouton `modalButton("Dismiss")`)
-`HTML("## markdown")`               | afficher du texte makdown directement
-`renderMarkdown(fichier)`         	| afficher du texte markdown
+`HTML("## markdown")`               | afficher du code html.
+`renderMarkdown(fichier)`         	| afficher du texte markdown (`library(markdown)`).
 
 * `showModal(modalDialog("Test"))`
 
@@ -188,19 +254,102 @@ Les sorties doivent être stockées dans la variable
 code server                       | rendu                     | code ui
 ----------------------------------|---------------------------|-------
 `renderText({texte})`             | texte                     | `textOutput('variable')`
+`renderPrint(variable)`           | variable                  |
 `renderPlot({graphique})`         | graphique                 | `plotOutput('variable')`
 `renderTable({tableau})`          | tableau                   | `tableOutput('variable')`
-`renderDataTable({dataFrame})` ou `renderDT()`   | donnees (package DT)      | `dataTableOutput('variable')` ou `DTOutput()`
-`renderPlotly({graphique})`       | donnees                   | `plotlyOutput('variable')`
-`renderPrint(variable)`           | variable                  |
+`renderPlotly({graphique})`       | données                   | `plotlyOutput('variable')`
+`renderUI("summary")`             | html et dans server       | `uiOutput(id)`
 
-Package `DT` Afficher un dataframe 
+* `tagAppendAttributes(style= 'color:green;')` ajouter un attribut.
 
-* `renderDataTable({dataFrame}, options = list(scrollX = TRUE))` si l'affichage depasse de l'écran.
+#### DataFrame
 
-`editable = TRUE` rendre la table éditable.
+##### DT
 
-##### Bouton télécharger un fichier
+`library(DT)`
+
+* `renderDT()` server (à éviter `renderDataTable({dataFrame})`). Paramètres :
+
+    * `editable = TRUE` rendre la table éditable.
+    * `filter = list(position = 'top', clear = FALSE)` filtrer chaque colonne.
+
+* `datatable(df)`
+
+    * `rownames= FALSE` cacher le nom des lignes.
+    * `options = list(...)`
+        
+        * `scrollX = TRUE` scrollable.
+        * `autoWidth = T` prendre toute la largeur.
+        * `dom = 't'` cacher la barre de recherche.
+
+  * `selection = "single"/"multiple/none"` doesn't work with `list()` :
+  
+    * `target=row/column/cell` définir le type de sélection.
+    * `selected = matrix(c(1, 3, 2, 4), nrow = 2, ncol = 2)` préselectionner des cellules (matrice à deux colonnes).
+  
+
+* `DTOutput()` (à éviter `dataTableOutput('variable')`). Paramètres :  
+
+Valeurs récupérables à partir d'un dataframe :
+
+Par exemple, avec `target = 'cell'`, les valeurs sont présentes dans `input$id_table`+ `_cells_selected`.
+
+* id_table + `_row_last`
+* id_table + `_cell_clicked`
+* id_table + `_last_clicked`
+* id_table + `_selected`
+
+``` R
+observeEvent(input$table1_cell_edit, {
+  row  <- input$table1_cell_edit$row
+  clmn <- input$table1_cell_edit$col
+  rv$data[row, clmn] <- input$table1_cell_edit$value
+})
+```
+
+##### Reactable
+
+`library(reactable)`
+
+* `reactable(dataframe)` créer un reactable. Paramètres :
+
+  * `bordered = T` bordures.
+  * `highlight = T` afficher un fond sur la ligne ou se trouve la souris.
+  * `selection = "multiple"` selectionner des lignes. `defaultSelected = c(1)` ajouter une sélection par défaut. 
+  * `onClick = "select"` selectionner une ligne au click.
+  * `filterable = TRUE` zone de recherche pour chaque colonne.
+  * `searchable = TRUE` zone de recherche unique.
+  * Créer des groupes de colonnes :
+  
+  ``` R
+  columnGroups = list(
+          colGroup("Subject id", columns = grp_label_subject_id),
+          colGroup("Statistics", columns = grp_label_statistics)
+          )
+  ```
+
+* `resizable = T` colonne redimensionable.
+* `rownames = T` afficher le nom des lignes.
+
+!!! note
+  `selection = "multiple"` et `onClick = "select"` pour ajouter une colonne de checkboxes.
+
+* `renderReactable({reactable(iris)})`
+* `reactableOutput("table")`
+* `getReactableState("tab_pk", "selected")` renvoie tous les numéros des lignes sélectionnées.
+
+Colorer les cellules `library(reactablefmtr)`  
+
+ are option for `reactable()`
+
+* `columns = list()` colorer une colonne en fonciton des valeurs.
+
+  * `colonne = colDef(style = color_scales(data, color_by = 'colonne'))` colorer la colonne en fonction des valeurs. 
+    * `colors = c("#f0f0f0", "#519de9")` personnaliser les couleurs utilisées.
+
+Ajouter des paramètres de modifications `library(reactable.extras)`
+
+#### Download file
 
 * `downloadButton(outputId = "download_kluster", label = "Kluster export")` bouton de téléchargement d'un fichier dans UI.
 
@@ -214,28 +363,62 @@ output$downloadBPR <- downloadHandler(
   )
 ```
 
-* `shinyjs::runjs("$('#download_summary')[0].click();") ` télécharger sans utiliser le bouton download.
+* `shinyjs::runjs("$('#download_summary')[0].click();") ` télécharger sans utiliser le bouton.download.
 
-#### Variable réactive
+## Variable réactive
 
-* `variable = reactive(valeur)` actualiser la rapport en fonction de la variable.
-* `variable()` utiliser une variable réactive.
-* `eventReactive(input$action, {variable})` réactive variable à la suite d'un évènement.
+Deux manières de rendre un objet réactif :
+
+* une entrée : ...Input 
+* une sortie : ...Ouput ou output$...
+* les deux : reactive()
+
+``` R
+variable = reactive({
+    return(valeur)
+})
+```
+
+créer une variable réactive celle ci à les mêmes propriétés qu'une fonction.
+
+* `variable()` utiliser une variable réactive qui n'est pas modifiable.
+* `eventReactive(input$action, {variable})` réactive variable à la suite d'un évènement. Paramètres :
+
+  * `ignoreNULL = T` déclencher le calcul uniquement si la valeur n'est pas nulle.
+  * `ignoreInit = F` déclencher le calcul uniquement si la variable réactive existe.
+
+!!! note
+    Lorsqu'il y a plusieurs filtres il est préférable d'utiliser un bouton pour déclencher le calcul.
+
+## Contexte réactif
+
+* `reactiveValues()` créer une variable réactive modifiable. La variable créée est une liste.
+* `observe({r$data <- input$data})` déclarer un contexte réactif. L'instruction est lue dès le lancement de l'application.
+* `observeEvent(input$bouton, {...})` mettre à jour des instructions en fonction d'un événement.
+
+!!! warning
+    `reactiveValues()` fonctionne avec observeEvent et non pas avec eventReactive.
+
+!!! note 
+    Possibilité de définir des `output$...` au sein du contexte.
+
+* `{input$submit1, input$submit2}` si aucun élément n'est NULL.
+* `c(input$submit1, input$submit2)` au moins un des éléments n'est pas nul.
 
 #### Liste interactive utilisant une variable réactive
 
-``` r
+``` R
 ui :
   uiOutput("interaction_slider")
 ```
 
-server :
+Server :
 
 ``` R
   filterGenre <- reactive(genre)
   output$interaction_slider <- renderUI({
     selectInput("select", label = "Select box", 
-                choices = as.list(genre)$genre_label, selected = 1)
+                choices = as.list(genre)$genre_label, selected = 1)})
 ```
 
 1. Créer une variable réactive `r <- reactiveValues()` dans le fichier server.
@@ -243,24 +426,32 @@ server :
 3. Déclarer la variable réactive dans le module :
 
 ``` r
-mod_select_view_server <- function(id, r){
-    ns <- session$ns
-    moduleServer(id, function(input, output, session){...}
+mod_nom_ui <- function(id){
+
+  ns <- NS(id)
+
+  tagList(
+    element1(ns("id1")),
+    element2(ns("id2"))
+  )
+
+}
+
+
+mod_nom_server <- function(id, r){
+    moduleServer(id, function(input, output, session){
+
+      ns <- session$ns # parfois utiles
+
+      code server
+    }
 }
 ```
 
 4. Appeler le module dans la partie server `mod_example_server("example_1", r = r)`.
 
-* `observe({r$data <- input$dt_kluster})`
-* `observeEvent()`
-
-* `eventReactive(input$bouton, {...})` mettre à jour une valeur en fonction d'un événement.
-* `observeEvent(input$bouton, {...})` mettre à jour des instructions en fonction d'un événement.
-
-Mettre les parenthèses lorsque l'on utilise une variable réactive.
-
 !!! warning
-    `ns("id_output")` pour appeler une sortie utiliser les fonctions qui renvoie les identifiants.
+    `ns("id_output/id_input")` pour appeler une sortie utiliser les fonctions qui renvoie les identifiants.
 
 
 [Blog](https://www.charlesbordet.com/fr/reactive-shiny/#la-fonction-observeevent) avec un bon article sur les variables réactives.
@@ -270,32 +461,25 @@ Shiny fonction `req`
 eventReact
 `ignoreNULL = FALSE` ne déclenche pas le calcul si l'élément est Null.
 
+----------------------------
 
-### Dataframe
+### Datamods
 
-#### DT
-
-`library(DT)`
-
-* `DT::renderDataTable({instruction})`
-* `input$tableau_rows_selected` indice des lignes selectionnées.
-
-#### Flextable
-
-* `flextable(dataframe)` afficher un tableau comme une image.
+-----------------------------
 
 ## Shinyapps
 
 `library(rsconnect)`
 
-1. Découper le projet en deux fichiers : sever.R et ui.R.
+1. Découper le projet en deux fichiers : server.R et ui.R.
 2. Générer un jeton depuis le site [shinyapps](https://www.shinyapps.io) : Token. 
 
 ### Données sessions
 
 * `session$clientData$url_protocol`
+* `session$ns` récupérer l'identifiant de session.
 
-## Inserer fichier 
+## Insérer fichier 
 
 * `ui = htmlTemplate(filename = "page.html", sortie1, entree1)` insérer un html.
 * `includeMarkdown("fichier.md")` insérer un fichier markdown (`library(htmltools)`).
@@ -352,3 +536,13 @@ Page 4 {data-navmenu="Menu B"}
 ### Valeur box
 
 * `valueBox(comments, icon = "fa-comments")` ajouter une valeur box.
+
+
+*       # progress bar to follow compute
+      withProgress(message = 'Compute parameters PK', style = "notification", value = 0, {
+
+       # incProgress(percentage_by_group, detail = paste("Group", name_grp))
+      })
+
+
+`shinycssloaders::withSpinner(ui)` animation de chargement d'un élément. 
