@@ -1,10 +1,10 @@
-## Tester un fonction
+## Tester une fonction
 
 `library(testthat)`
 
 * `expect_equal()`
 
-## Exécuter uniquement si le script n'est pas appelé
+## Exécuter le code uniquement si le script est appelé directement
 
 * `interactive()` renvoie TRUE si le script est exécuter directement (par opposition à un appel).
 
@@ -63,8 +63,6 @@ Permet de créer :
 * un fichier New qui contient les nouveautés des versions.
 * des articles. Les articles sont écris en markdown et convertis automatiquement en html.
 
-
-
 devtools_history.R
 
 1. `check` pour vérifier détermine s'il y a d'erreurs et dans warning dans le package.
@@ -88,10 +86,25 @@ Fichier :
 
 `browser()` mettre une pause à l'exécution.
 
-fct_ fonction
-var_ variable (une valeur)
-vrai_ booléen
-dt_ dataframe
-dic_dictionnaire
-list_ liste
+Tableau des nomenclatures pour les variables :
 
+Préfixe		| Suffixe
+------------|------
+`fct_`  	| fonction
+`var_`  	| variable (une valeur)
+`vrai_`  	| booléen
+`df_`    	| dataframe
+`dt_`		| données non définies
+`dic_`		| dictionnaire
+`list_` 	| liste
+
+## Créer un programme R indépendant
+
+1. Télécharger une version R portable.
+2. Installer les library dans le dossier R portable : `.libPaths("R-Portable/App/R-Portable/library")` 
+3. Créer un fichier exécutable Windows `run.bat`.
+
+``` sh
+SET ROPTS=--no-save --no-environ --no-init-file --no-restore --no-Rconsole
+R-Portable\App\R-Portable\bin\Rscript.exe %ROPTS% script.R
+``` 
