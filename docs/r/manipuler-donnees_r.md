@@ -22,7 +22,7 @@ data.frame(
 ### Renommer les colonnes
 
 * `setNames(c('pos_row','pos_col'))` ajouter un nom de colonnes.
-* `rename_with(paste(., "0"), .cols = everything())` renommer les colonnes.
+* `rename_with(paste(., "0"), .cols = everything())` renommer les colonnes (à combiner avec `select` pour renommer certaines colonnes en particulier).
 * `rename(!!!setNames(col_units$old_name, col_units$new_name))` renommer les colonnes à partir d'un dataframe.
 
 #### Libellés des colonnes
