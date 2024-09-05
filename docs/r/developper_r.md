@@ -17,6 +17,11 @@ Golem est un package qui structure et gère le développement de package R.
 
 Méthodes alternatives pour appeler un module en lui fournissant un paramètre : `callModule(mod_bars_echarts_server, "bars_echarts_ui_1")` (obsolète ?).
 
+Ressources :
+
+* [Introdcution to golem](https://engineering-shiny.org/golem.html)
+* [Inrae application shiny avec golem](https://inter_cati_omics.pages.mia.inra.fr/hackathon_octobre2021/hackathon_datascience_2021/book/shiny.html)
+
 ### Déclarer les modules
 
 Les modules doivent être déclarés dans `golem::add_module(name = "example")` permet de créer trois fichiers :
