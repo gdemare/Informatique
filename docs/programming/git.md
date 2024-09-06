@@ -17,6 +17,10 @@ Les principales forges sont :
 * `git pull origin master` récupérer les changements sur le dépôt distant.
 * `.gitignore` fichier qui contient les informations sur les ficheirs sensibles à ne pas publier (par exemple, ne pas versionner les sorties).
 
+Publier un changement
+
+* `git commit -m "description"` pousser un changement.
+* `git push` publier la nouvelle version.
 
 Installation un package  
 
