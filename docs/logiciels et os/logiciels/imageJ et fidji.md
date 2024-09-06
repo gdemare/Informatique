@@ -1,4 +1,4 @@
- 
+
 Objectifs du traitement d'images :
 * Suivi de trajectoire.
 * Identifier et classer les objets en fonction de leurs caractéristiques.

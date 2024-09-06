@@ -1,4 +1,3 @@
-
 ## Créer des noyaux particuliers
 
 ## Initialiser les poids

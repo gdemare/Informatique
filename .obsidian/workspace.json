@@ -1,0 +1,178 @@
+{
+  "main": {
+    "id": "8d7c4480b43ee08d",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4017d63efcfa263",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "06fdd3daa967d990",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/python/math/tests statistiques.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "655f6be496358f6d",
+    "type": "split",
+    "children": [
+      {
+        "id": "9356069b2a0d9432",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6433381b74b4cd9f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "339ddc1ffe5da49a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cf8abfc071b34aee",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "55db03179b7d733d",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b4f7804dcad14a8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "419abd288046a36e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/python/math/tests statistiques.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d45543162484616e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/python/math/tests statistiques.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9788c2f91beefd3e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "102bb4756233567c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/python/math/tests statistiques.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Ouvrir le sélecteur rapide": false,
+      "graph:Ouvrir la vue graphique": false,
+      "canvas:Créer une nouvelle toile": false,
+      "daily-notes:Ouvrir la note quotidienne": false,
+      "templates:Insérer le modèle": false,
+      "command-palette:Ouvrir la palette de commandes": false
+    }
+  },
+  "active": "06fdd3daa967d990",
+  "lastOpenFiles": [
+    "docs/python/math/math.md",
+    "docs/python/math/loi statistique.md",
+    "docs/python/math/graphique.md",
+    "docs/python/réduction de dimensions/ACP.md",
+    "docs/r/clustering/clustering.md",
+    "docs/r/clustering/CAH.md",
+    "docs/r/clustering/centres mobiles.md",
+    "docs/r/bioinformatique/bioinformatique.md",
+    "docs/r/bioinformatique/blast.md",
+    "docs/r/models/classification/Support Vecteur Machine.md",
+    "docs/r/models/classification/régression logistique.md",
+    "docs/r/models/classification/forêt aléatoire.md",
+    "docs/r/models/classification/classificateur baysien.md",
+    "docs/r/models/classification/arbre de décision.md",
+    "docs/r/models/classification/ANOVA.md",
+    "docs/r/models/classification/analyse discriminante.md",
+    "docs/r/PKNCA et les unités.md",
+    "docs/python/modèles/arbre décision.md",
+    "docs/python/modèles/réseau de neurones/TensorFlow.md",
+    "docs/python/modèles/réseau de neurones/Pytorch.md",
+    "docs/python/modèles/réseau de neurones/couche convulsive.md",
+    "docs/python/modèles/régression.md",
+    "docs/python/modèles/modèles.md",
+    "docs/python/cartographie.md",
+    "docs/python/web scraping.md",
+    "docs/python/traitement du signal.md"
+  ]
+}

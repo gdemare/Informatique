@@ -1,5 +1,4 @@
 [Recommandation pour R officiel](https://code.visualstudio.com/docs/languages/r)
-
 ### Terminal R
 
 Pour un terminal avec les commandes colorées.

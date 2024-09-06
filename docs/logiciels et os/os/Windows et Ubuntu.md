@@ -1,3 +1,37 @@
+# Window
+
+## Installation
+
+Pour limiter le nombre d'applications pré-installées, il choisir Anglais internationnal (English world). Il est également possible de personnaliser son installation avec le logiciel
+de création de clés bootables Rufus.
+
+Pour passer l'étape de connexion à compte Microsoft 
+
+## Ajouter un raccourci au menu démarrer
+
+Copier le raccourci dans le dossier :
+
+* `C:\Users\Guigui\AppData\Roaming\Microsoft\Windows\Start Menu\Programs`
+* `C:\ProgramData\Microsoft\Windows\Start Menu\Programs`
+## Utiles
+
+* `window + v` activer l'historique du presse papier.
+* `Panneau de configuration\Matériel et audio\Options d’alimentation\Paramètres système` bloquer la mise en veille lorsque le capot est fermé.
+* Réinstaller Onedrive : Aller dans `C:/Windows/WinSxS` et rechercher "onedrive" et exécuter le programme .exe
+
+### CMD
+
+* `cd dossier` naviguer dans les dossiers (retour `..`).
+* `dir` lister les fichiers et les dossiers.
+* `set var=valeur` créer une variable.
+* variable de base `%cd%` chemin actuel.
+
+## Ubuntu
+
+`/mnt/c/Users/Guigui/Downloads`
+
+---
+# Ubuntu
 ## Installer ubuntu en dual boot en partageant des fichiers avec Windows
 
 1. Désactiver la sécurité dans le Bios.
@@ -8,22 +42,6 @@
 4. Lancer l'installation d'Ubuntu avec Dual Boot.
 5. Modifier l'ordre des programmes de boot en mettant, la partition efi en premier.
 6. Installer les packages les plus `sudo apt-get install ubuntu-restricted-extras`
-
-## Logiciels
-
-Disponibles dans la logitèque Ubuntu :
-
-* Brave, navigateur internet sans pub.
-* Dessin de Romain F T, logiciel de dessins très simple.
-* Mailspring, client email.
-* Visual code
-* Vlc, lecteur multi média.
-
-Disponible sur le site internet de l'entreprise :
-
-* Crytpomator
-* [dropbox](https://www.dropbox.com/install-linux)
-
 ## Rclone, les clouds (OneDrive - 31, Google Drive - 18, Dropbox - 13)
 
 [rclone](https://rclone.org/downloads/)
@@ -43,7 +61,6 @@ Configuration pour OneDrive :
 10. `q` pour quitter
 11. dans le dossier, exécuter : `rclone --vfs-cache-mode writes mount OneDrive: ~/Onedrive &`
 12. Créer un script `rclone --vfs-cache-mode writes mount OneDrive: ~/Onedrive & notify-send "Onedrive Connected" "Microsoft successfully mounted"`
-
 ## Ajouter un dépôt
 
 1. Ouvrir `Logiciels et mises à jour`
@@ -51,7 +68,6 @@ Configuration pour OneDrive :
 
 Il est possible de le faire directement en ajouter une ligne au fichier : 
 `/etc/apt/sources.list`
-
 ## Ajouter le programme pour personnaliser gnome
 
 ### gnome-shell-extension-manager

@@ -10,6 +10,9 @@
 
 * [Pexels](https://www.pexels.com/)
 
+### Couleurs
+
+* [Patternfly](https://www.patternfly.org/charts/colors-for-charts/) palette de couleurs stylée.
 ## Bureautique
 
 * [PDF 24](https://tools.pdf24.org/fr/), outils en ligne pour PDF notamment Optical Character Recognition

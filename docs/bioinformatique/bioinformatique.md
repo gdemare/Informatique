@@ -33,3 +33,16 @@ Environnement d'analyse des protéines [ProteoRE Galaxy](https://proteore.org/)
 * Graphiques,...
 
 Il semble y avoir pleins d'outils hyper intéressants et la possiblié de créer des workflows.
+
+-----
+_a ajouter_
+* [Bioconda](https://bioconda.github.io/conda-package_index.html)
+* [pyOpenMS](https://pyopenms.readthedocs.io/en/latest/index.html)
+
+[Expasy](https://www.expasy.org/) bdd Swiss Bioinformatics Ressource Portal :
+	
+* [UniProt](https://www.uniprot.org/)
+
+* [Peptide SAR](https://github.com/Merck/PepSeA)
+
+## Library Bio
