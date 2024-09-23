@@ -2,6 +2,8 @@
 
 `aes()` dans la fonction geom ou à l'extérieur.
 
+`ggstatsplot`
+
 ### Une variable
 
 ```r
@@ -95,7 +97,6 @@ Colorer des zones :
 
 	* `geom_tile(x, y, width, <height>)` avec x et y les milieux de chaque rectangle.
  	* `geom_rect(xmin, xmax, ymin, ymax)`
-
 
 
 ## Formatage des axes
