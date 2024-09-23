@@ -1,4 +1,7 @@
-`import sklearn.linear_model.(C=100)`
+`import sklearn.linear_model`
+
+1. Déclarer le modèle.
+2. Ajuster le modèle `modele.fit(x,y)`
 
 Les types de régressions :
 
