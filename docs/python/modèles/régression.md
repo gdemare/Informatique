@@ -17,3 +17,4 @@ Retourne :
 * `logreg.coef_[0]` coefficient (ou poids) pour chaque variable.
 * `logreg.intercept_` ordonnée à l'origine.
 
+`
