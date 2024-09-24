@@ -18,33 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "a061d0eed61bcb82",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/python/bases/divers/cartographie.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "030ec61196885f88",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/python/bases/divers/tableau de bord.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
