@@ -19,7 +19,7 @@ Les princiapux acronymes et leur signification :
 
 ## Rappel
 
-* precision (précision) cohérence des mesures. 
+* Precision (précision) cohérence des mesures. 
 * Accuracy (exactitude) proximité avec une valeur de référence.
 * Erreur relative : % de variation de la différence entre la valeur réelle et théorique par rapport à la valeur théorique.
 
@@ -27,7 +27,7 @@ Les princiapux acronymes et leur signification :
 
 * La pente correspond au taux de disparition du médicament. Elle est proportionnelle à la quantité de médicament présent.
 * La concentration dans les tissus est proportionnelle à celle du sang.
-* La vitesse de disparition constante car proportionnelle. Pour linéariser, on calcule la vitesse : il faut tracer la concentration en fonction de concentration par le temps.
+* La vitesse de disparition est constante car proportionnelle. Pour linéariser, on calcule la vitesse : il faut tracer la concentration en fonction de la concentration par le temps.
 En principe on se ramène à une équation différentielle du premier ordre : elle est linéaire en phase ascendante et logarithmique en phase d'élimination.
 
 ## Les indicateurs
@@ -53,7 +53,7 @@ Convention de nommage des princiaples valeurs :
 #### Absorption
 
 * $K_a$ (Constante d'absorption): Taux auquel le médicament est absorbé dans la circulation systémique.
-* $F$ biodisponibilité est le rapport $\frac{AUC voie orale}{AUC voie IV} = %\ dans\ le\ sang$.
+* $F$ biodisponibilité est le rapport $\frac{AUC voie orale}{AUC voie IV} = %\ dans\ le\ sang$. Elle correspond % du médicament qui a pu être absorbée par le tube digestif.
 
 #### Exposition
 
@@ -69,22 +69,22 @@ Convention de nommage des princiaples valeurs :
 
 #### Résidence
 
-* Mean Residence Time (MRT) temps moyen de résidence du médicament dans l'organisme. Il est souvent déterminé à partir de Michaelis-menten ou vss.
+* Mean Residence Time (MRT) temps moyen de résidence du médicament dans l'organisme. Il est souvent déterminé à partir de Michaelis-menten ou vss $MRT = \frac{AUMC}{AUC}$ 
 * Mean Absorption Time (MAT) temps moyen pour l'absorption compléte du médicament.
 
 #### Distribution 
 
-* $V_D$ Volume de Distribution ou Volume Steady State (Vss). Il permet de savoir si le médicament est distribué dans les tissus . Volume de fluide par
+* $V_D$ Volume de Distribution ou Volume Steady State (Vss). Il permet de savoir si le médicament est distribué dans les tissus. Volume de fluide par
   masse de médicament $V_d = \frac{D}{C}$. Décri à l'état d'équilibre, la répartition d'un médicament dans l'organisme. Il est défini comme la période où
   la concentration du médicament dans le plasma sanguin et la concentration dans les tissus périphériques. Il permet notamment de déterminer la dose à
-  administré pour arriver à la concentration thérapeutique. $Vss \cdot \frac {\ln 2}{CL}$ $Vss = \frac{volume\ de\ médicament\ dans\ le\ corps}{Concentration\ plasmitique}$.
- 
+  administré pour arriver à la concentration thérapeutique. $Vss \cdot \frac {\ln 2}{CL}$ $Vss = \frac{volume\ de\ médicament\ dans\ le\ corps}{Concentration\ plasmitique}$. $V_d = D \cdot AUMC / AUC^2$
+
     * $Vd_{beta}$ Terminal volume of distribution ($V = T_{\frac{1}{2}} \cdot \frac{Cl}{\ln 2}$) defined as the volume in which the amount of drug would need to be uniformly distributed to produce the observed whole blood concentration
 
 #### Elimination
 
 * __Clairance__ mesure la capacité de l'organisme à éliminer une substance médicamenteuse du système biologique.
-Cela correspond au volume d'un fluide de l'organisme (souvent plasma) purifié éliminé par unité de temps. C'est
+Cela correspond au volume d'un fluide de l'organisme (souvent plasma) purifié éliminé par unité de temps. C'est le
 rapport entre la quantité d'une substance éliminée par unité de temps et la concentration dans un fluide de l'organisme. $CL = \frac{Dose}{AUC}$ clairance.
 * $K_e$ (Constante d'élimination) taux d'élimination du médicament de la circulation systémique.
 * $t_{1/2}$ temps de demi vie càd temps nécessaire pour éliminer la moitié du médicament.
