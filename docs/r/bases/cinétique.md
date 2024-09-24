@@ -83,7 +83,7 @@ Convention de nommage des princiaples valeurs :
 
 #### Elimination
 
-* __Clairance__ mesyure la capacité de l'organisme à éliminer une substance médicamenteuse du système biologique.
+* __Clairance__ mesure la capacité de l'organisme à éliminer une substance médicamenteuse du système biologique.
 Cela correspond au volume d'un fluide de l'organisme (souvent plasma) purifié éliminé par unité de temps. C'est
 rapport entre la quantité d'une substance éliminée par unité de temps et la concentration dans un fluide de l'organisme. $CL = \frac{Dose}{AUC}$ clairance.
 * $K_e$ (Constante d'élimination) taux d'élimination du médicament de la circulation systémique.
