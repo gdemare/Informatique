@@ -1,13 +1,8 @@
 ## Une distribution
 
-
 ## Un échantillon et une valeur théorique
 
-
-
 ## Paramètre de plusieurs échantillons
-
-
 
 ## Deux distributions
 
@@ -19,3 +14,5 @@ Sortie :
 *  `.pvalue`
 
 ## Corrélation
+
+`statsmodels`
