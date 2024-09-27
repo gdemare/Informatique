@@ -24,4 +24,4 @@ Sortie :
 
 ## Corrélation
 
-`statsmodels`
+`statsmodels.stats.multitests` corriger les p-valeurs.
