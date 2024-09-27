@@ -18,8 +18,9 @@ Sortie :
 *  `.pvalue`
 
 ### Graphique
-wilcoxon
+
 * `stats.probplot(data)` qqplot (`pylab.show()` pour afficher le graphique). 
+* `statannotations` bibliothèque pour afficher les p-valeurs sur un boxplot.
 
 ## Corrélation
 
