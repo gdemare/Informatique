@@ -11,6 +11,7 @@
 * `scipy.stats.ttest_1samp(X, meanpop)` test de Student pour comparer une moyenne théorique avec celle d'un échantillion.
 * `scipy.stats.shapiro(X)` test de Shapiro, normalité.
 * `scipy.stats.wilcoxon(x, y=None)` test de Wilcoxon (différence de médiane avec une valeur théorique ou un autre échantillon).
+* `spicy.stats.f_oneway(X1, X2,...)` ANOVA.   
 
 Sortie :
 
