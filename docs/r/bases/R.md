@@ -3,7 +3,6 @@
 * `install.packages("package")` installer un package.
 * `library(package)` importer un package. 
 * `if(!require("tidyverse")) install.packages("tidyverse")` installer un package uniquement s'il n'est pas installé.
-
 ### Les meilleurs packages R
 
 * `rmarkdown` R markdown.
@@ -14,12 +13,10 @@
 	* `golemn` créer un package et sa documentation de façon automatisée.
 
 * `testthat` tester.
-
 ## Paramétrage et utiles
 
 * `options(digits=9)` changer le nombre de décimales affichées.
 * `system.time({instruction})` temps d'exécution d'une instruction.
-
 ## Les fichiers
 
 * `r"(dossier1\dossier 2\)"` déclarer un chemin.
@@ -36,13 +33,11 @@
 * `getwd()` renvoyer le chemin du dossier de tavail.
 * `source(fichier)` exécuter un script.
 * `tools::file_ext(chemin_fichier)` renvoyer l'extension du fichier.
-
 ### RData
 
 * `save(obj1, obj2, file = "mes_objets.RData")` sauvegarder en RData.
 * `load("fichier.RData")` charger un RData.
 * `read.delim(file = ou text = , header = F, sep = )` charger un fichier ou du texte (`read.table(file = ou text = , header = F, sep = )` marche moins bien).
-
 ### Excel
 
 Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openxlsx)` qui est la bibliothèque la plus complète.
@@ -71,7 +66,6 @@ insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
 
 !!! note
 	Avec Shiny, il faut créer le workbook dans la partie server : `wb <<- createWorkbook()`.
-
 #### Style 
 
 * `createStyle()` créer un style.
@@ -84,12 +78,10 @@ insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
   	* `stack = T` fusionner les propriétés des cellules.
 
 * `addStyle(wb, sheet, style, rows, cols, gridExpand = FALSE, stack = FALSE)` ajouter un style à une cellule.
-
 #### Formater le classeur
 
 * `mergeCells(wb, "feuill", cols = 1, rows = 2:9)` fusionner les cellules.
 * `setColWidths(wb = wb, sheet = "feuil", cols = 1:4, widths = "auto", ignoreMergedCells = T)` largeur des colonnes.
-
 ### Json 
 
 `library(jsonlite)`
@@ -97,14 +89,12 @@ insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
 * `toJSON(liste)` convertir une liste en Json.
 * `writeLines(json_data, "REACDATA_t.json")` créer un fichier en Json (attention, il faut le convertir avant).
 * `fromJSON("REACDATA_t.json")` importer un Json.
-
 ### Images
 
 `library(jpeg)` et `library(png)`
 
 * `readJPEG(image.jpeg)` image JPEG.
 * `readPNG(image.png)` image PNG.
-
 ## Fonctions de base
 
 * `print("Hello")` afficher un message.
@@ -114,11 +104,9 @@ insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
 * `suppressMessages(code)` supprimer les messages.
 * `Sys.sleep(seconde)` attendre un certain nombre de secondes avant la suite de l'exécution.
 * `methods(class = "units")` lister les méthodes associées à un objet.
-
 ## Environnement
 
 * `rm (list = ls())` supprimer les variables de l'environnement.
-
 ## Variables
 
 Déclarer des variables :
@@ -130,7 +118,6 @@ Déclarer des variables :
 * `exists("variable")` tester l'existence d'une variable.
 * `missing('variable')` vérifier si l'arguement existe.
 * `deparse(var)` afficher la valeur en format texte.
-
 ### Attribut
 
 !!! note
@@ -138,7 +125,6 @@ Déclarer des variables :
 
 * `attr(iris, "perso") <- valeur` ajouter un attribut à objet.
 * `attributes(dt_conc)` renvoyer les attribue d'un objet. 
-
 ## Vecteurs
 
 * `c(2, 4, 6)` déclarer un vecteur.
@@ -149,7 +135,6 @@ Déclarer des variables :
 * `df[nligne][ncol]` sélectionner une cellule.
 * `df$colonne` sélectionner une colonne.
 * `df[ligne, colonne]` sélectionner une ligne, une colonne ou une cellule (laisser vide pour garder tous les champs).
-
 ### Manipuler les vecteurs 
 
 * `sort(x)` ordonner.
@@ -170,7 +155,6 @@ Déclarer des variables :
 * `intersect(vec1, vec2)` intersection de deux vecteurs.
 * `ave(df$valeurs, df$col1, FUN = cumsum)` calculer une somme cumulée.
 * `setNames(c(10, 20, 30), c("Element1", "Element2", "Element3"))` ou `c(nom1 = val1, nom2 = val2)` nommer les valeurs.
-
 ### Listes
 
 ``` r
@@ -184,7 +168,6 @@ list(
 * `x[['data']]` ou `x$data` recupérer uniquement les valeurs d'un élément de la liste.
 * `lengths(liste)` nombre d'éléments dans une liste.
 * `is.na(list())` si la liste est vide alors renvoie `logical(0)`.
-
 ## Matrices
 
 * `matrix(vecteur, nrow = , ncol =)` transformer en matrice.

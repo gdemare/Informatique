@@ -2,11 +2,9 @@
 
  * `%pip install package` installer un package directement dans python.
  * `%matplotlib inline` afficher les graphiques dans le code (aussi  `widget` nécessite `ipympl`).
-
 ### Extension fichier Python
 
 * `.pyw` fichier python exécutable.
-
 ### Conda
 
 Conda est un logiciel qui permet de gérer les environnements en Python. Cela permet par exmeple d'installer plusieurs versions différentes sur la même machine.
@@ -24,7 +22,6 @@ Dans pour choisir le noyau d'un envrionnement Visual Code ctrl+shift+P, sélecti
 
 1. `conda activate ppoulain-python` activer l'environnement.
 2. `code .` lancer Visual Code.
-
 #### Installer un module
 
 * `pip install package` installer une bibliothèque. Paramètre :
@@ -43,14 +40,12 @@ Dans pour choisir le noyau d'un envrionnement Visual Code ctrl+shift+P, sélecti
 
 * `pip list --outdated` liste des packages avec des màj disponibles.
 * `pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}` maj en passant par le PowerShell.
-
 #### Cloner un dossier github : 
 
 ``` bash
 git clone https://github.com/jkbr/httpie.git
 sudo python setup.py install
 ```
-
 ## Créer un module et l'impoter
 
 * attribut ou propriété associé à un élément. Elles sont accessibles par `objet.propriété` et elles peuvent être lister avec `dir()`.
@@ -64,7 +59,6 @@ Pour importer les fichiers class dans python :
 sys.path.append('chemin/dossier')
 from fichier import class
 ```
-
 ### Environnement en python
 
 * `python3 -m venv nom_environnement` créer un environnement python.
@@ -72,7 +66,6 @@ from fichier import class
 * `deactivate` désactiver l'environnement.
 
 `code > .` ajouter l'environement à Visual Code.
-
 ### Convertir un python en application
 
 Library `pyinstaller`
@@ -84,7 +77,6 @@ Paramètres :
 * `--noconsole`
 * `--w`
 * `--onefile`
-
 ## Instructions de bases
 
 ### Les matrices
@@ -108,7 +100,6 @@ Opérateur 	| Définition
 * `help(module)`afficher les informations sur un module.
 * `from module import partieModule` importer uniquement un sous module.
 * `*` importer toutes les fonctions.
-
 ### Les instructions
 
 Les instuctions peuvent être séparées par `;` ou par un saut de ligne.
@@ -118,7 +109,6 @@ Les instuctions peuvent être séparées par `;` ou par un saut de ligne.
 * `# commentaire` commentaire sur une seule ligne.
 * `"""commentaire"""` commentaire sur plusieurs lignes.
 * `début \ suite` d'écrire une instruction sur plusieurs lignes
-
 ## Les variables 
 
 * `a = valeur` créer et affecter une valeur à une variable.
@@ -142,7 +132,6 @@ Fonction		| Définition
 
 * `format( nombre, '.2f' )` ou `f"{3.4562:.2f}"` format des chiffres le 2 correspond à 2 nbre après la virgule. Attention, converti en texte.
 * `dir(element)` lister toutes les méthodes associées à une variable.
-
 ## Les listes
 
 Tableau récapitulatif des types de listes :

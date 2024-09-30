@@ -6,7 +6,6 @@ Library `yt-dlp` (`youtube-dl`en python sinon c'est en power shell) avec `yt-dlp
 
 * `--merge-output-format mkv --remux mkv` convertir le fichier en mkv. Cela nécessite de télécharger ffmpeg et de déclarer la variable environnement /bin.
 * `--extract-audio --audio-format mp3 <video URL>` télécharger le son d'une vidéo en mp3.
-
 ### Spotdl
 
 Installation : `pip install spotdl`
@@ -15,10 +14,10 @@ Installation : `pip install spotdl`
 
 Nécessite : `sudo apt install ffmpeg`
 
-`spotdl download [song] ou [playlistUrl]` télécharger une chanson ou plusieurs.
+* `spotdl download [song] ou [playlistUrl]` télécharger une chanson ou plusieurs.
+* `pip install --upgrade spotdl` màj spotdl.
 
 Il suffit ensuite d'utiliser la commande dans le prompt Conda.
-
 ## Navigation Web automatique
 
 Library `selenium`
@@ -58,27 +57,23 @@ Action sur l'élément sélectionner :
 
 * `.send_keys(valeur)` remplir les valeurs.
 * `.click` cliquer sur la sélection.
-
 ## Importer un script python
 
 Library `subprocess`
 
 * `call([sys.executable, 'C:\\temp\\hello2.py'], shell=True)` importer un script python.
 * `['java', '-jar', 'temp.jar' param1, param2]` exécuter un script java.
-
 ## Documentation
 
 Packages pour générer de la documentation :
 
 * [Read the docs](https://docs.readthedocs.io/en/stable/tutorial)
 * [Sphinx - python doc generator](https://www.sphinx-doc.org/en/master/#)
-
 ## Base de données
 
 ### Sqlite 3
 
 Package `sqlite3`
-
 #### Connexion à la database
 
 ``` py
@@ -87,7 +82,6 @@ c = conn.cursor()
 ```
 
 `conn.close()` deconnection de la dbb.
-
 #### Soumettre une requête
 
 * `c.execute('''requete''')`
