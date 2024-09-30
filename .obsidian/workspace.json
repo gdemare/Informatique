@@ -11,12 +11,8 @@
             "id": "06fdd3daa967d990",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/python/bases/formater les données.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/python/bases/divers/tableau de bord.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/python/bases/divers/tableau de bord.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "docs/python/bases/divers/tableau de bord.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,8 +138,9 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "6433381b74b4cd9f",
+  "active": "06fdd3daa967d990",
   "lastOpenFiles": [
+    "docs/python/bases/formater les données.md",
     "docs/python/bases/ressources.md",
     "docs/python/bioinformatique/spectrométrie.md",
     "docs/python/bioinformatique",
@@ -155,7 +148,6 @@
     "docs/python/bases/divers/web scraping.md",
     "docs/python/bases/divers/cartographie.md",
     "docs/python/bases/divers",
-    "docs/python/bases/formater les données.md",
     "docs/python/bases/python.md",
     "docs/python/bases/divers/traitement d images.md",
     "docs/python/bases/divers/traitement du signal.md",

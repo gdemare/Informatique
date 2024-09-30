@@ -1,4 +1,3 @@
-
 ## Les dates
 
 Package : `datetime`
@@ -10,7 +9,6 @@ Package : `datetime`
 * `colonne.dt.isocalendar()` renvoie un tableau avec l'année, le numero de la semaine et le jour.
 * `dt.datetime.today()` date et heure actuelles.
 * `debut + dt.timedelta(days=90)` ajouter un nombre de jours.
-  
 ### Extraire la partie d'une date
 
 * `date.strftime(format)` extraire la partie d'une date.
