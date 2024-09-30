@@ -3,6 +3,7 @@
 * `install.packages("package")` installer un package.
 * `library(package)` importer un package. 
 * `if(!require("tidyverse")) install.packages("tidyverse")` installer un package uniquement s'il n'est pas installé.
+* `update.packages(ask=F)` màj de tous les packages.
 ### Les meilleurs packages R
 
 * `rmarkdown` R markdown.
@@ -185,11 +186,9 @@ list(
   * `maximum`.
 
 * `scale(matrice)` centrer et réduire une matrice par colonne.
-
 ## Mathématique
 
 * `signif(x, 2)` choirisr le nombre de chiffres significatifs.
-
 ### Appliquer à tous les éléments
 
 #### Purr
@@ -208,7 +207,6 @@ Existe : `map2_`, `map_` ...
 
 !!! note
 	`map(dt, ~fct_print_unit_col(.x))` appliquer une fonction à chaque colonne.
-
 #### Apply
 
 Apply permet d'appliquer une fonction à chaque élément.
@@ -219,7 +217,6 @@ Apply permet d'appliquer une fonction à chaque élément.
 
 !!! note
 	La fonction peut être déclarée comme `function(x){x}`.
-
 ## Fonction
 
 ``` r
@@ -230,12 +227,10 @@ nomFonction <- function(x){
 
 * `formals(build_pk)` renvoie les paramètres d'une fonction.
 * `as.list(environment())`
-
 ### Les erreurs
 
 * `try(log("ABC"), TRUE)` masque le message si une erreur se produit.
 * `tryCatch(log("ABC"), error = function(e) {print("error")})` afficher un message quand la fonction produit une erreur.
-
 ## Condition 
 
 ```r
@@ -263,12 +258,10 @@ Opérateur				| Définition
 `identical(val1, val2)`	| égalité pratique pour `logical(0)`
 `%in%`					| appartient
 `!`     				| négation
-
 ## Boucles
 
 !!! note
 	`cat` permet de faire suivre le % d'une boucle `cat("\rÉtape", num_script, "/", for_nb_scripts, '-', script)`.
-
 ### For 
 
 ``` r
@@ -276,7 +269,6 @@ for(i in 1:nrow(g)){
 	instruction
 }
 ```
-
 ### While
 
 ### While - tant que c'est vrai
@@ -286,7 +278,6 @@ while(condition){
 	instructions
 }
 ```
-
 ## Les dates
 
 `library(lubridate)`
@@ -313,7 +304,6 @@ Seconde 	| `%S`	| 06
 * `weekdays(nbre)` jour de la semaine.
 * `hours(heure)` heure.
 * `format(datetime, format = '')` format d'affichage d'une date et de l'heure.
-
 ## Texte
 
 * `nchar()` compter le nbre de caractères.
@@ -325,7 +315,6 @@ Seconde 	| `%S`	| 06
 * `trim(texte)` supprimer les espaces (package `gdata`).
 * `toupper(texte)` mettre les caractères en majuscule.
 * `tolower(texte)` mettre en petit caractères.
-
 ### Expressions régulières
 
 Library `stringr`
@@ -357,19 +346,16 @@ Symbole		| Définition
 `[]+`		| jusqu'a que ce soit faux.
 !!! note
 	Le caractère d'échappement est `\\`.
-
 ## Connecter R à une bdd
 
 Bibliothèque `library(DBI)`
 
 * `dbListTables(connection)` Liste des tables.
-
 ### Connecteur
 
-Connecteur	| Library	| Fonction
-------------|-----------|---
-MySQL 		| `RMySQL`	| `MySQL()`
-
+| Connecteur | Library  | Fonction  |
+| ---------- | -------- | --------- |
+| MySQL      | `RMySQL` | `MySQL()` |
 ### Créer une connexion.
 
 ```r 
@@ -387,12 +373,10 @@ Paramètres :
 
 * `requete = sqlInterpolate(connection, "SELECT * FROM acte WHERE acte_code = ?id", id = acteId)` créer et contrôler les variables utilisées dans la requête.
 * `dbGetQuery(connection, requete)` exécuter la requête.
-
 ## R markdown 
 
 * `echo = FALSE` masquer la sortie.
 * `include = FALSE` masquer le code.
-
 ## Aléatoire
 
 * `runif(nb, min, max)` générer un ou plusieurs nombres aléatoires entre deux bornes.
