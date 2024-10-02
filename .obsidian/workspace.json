@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f737a923045facfb",
+        "id": "ea3fdfadc09b0282",
         "type": "tabs",
         "children": [
           {
-            "id": "0ad791f2d9277f52",
+            "id": "11f79084c25133a9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/r/bases/R.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "51be8305a6777d00",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/python/bases/divers/modules supplémentaires.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -97,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/r/bases/R.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/r/bases/R.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "docs/r/bases/R.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -158,9 +138,10 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "0ad791f2d9277f52",
+  "active": "11f79084c25133a9",
   "lastOpenFiles": [
     "docs/python/bases/divers/modules supplémentaires.md",
+    "docs/r/bases/cinétique.md",
     "docs/r/bases/R.md",
     "docs/python/bases/python.md",
     "docs/python/bases/formater les données.md",
@@ -186,7 +167,6 @@
     "docs/r/models/classification/régression logistique.md",
     "docs/r/models/classification/forêt aléatoire.md",
     "docs/r/models/classification/classificateur baysien.md",
-    "docs/r/models/classification/arbre de décision.md",
-    "docs/r/models/classification/ANOVA.md"
+    "docs/r/models/classification/arbre de décision.md"
   ]
 }
