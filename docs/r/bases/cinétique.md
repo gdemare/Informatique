@@ -69,7 +69,7 @@ Convention de nommage des principales valeurs :
 #### Elimination
 
 * $t_{\frac{1}{2}e} = \frac{\ln{2}}{k_e}$ temps de demi vie d'éliminitation càd temps nécessaire pour éliminer la moitié du médicament.
-* __Clairance__ mesure la capacité de l'organisme à éliminer une substance médicamenteuse du système biologique. Cela correspond au volume de plasma purifié (dont le médicament est éliminé) par unité de temps. C'est le rapport entre la quantité d'une substance éliminée par unité de temps et la concentration dans un fluide de l'organisme. $CL = \frac{Dose}{AUC} = V_d \cdot k_e$ clairance.
+	* __Clairance__ mesure la capacité de l'organisme à éliminer une substance médicamenteuse du système biologique. Cela correspond au volume de plasma purifié (dont le médicament est éliminé) par unité de temps. C'est le rapport entre la quantité d'une substance éliminée par unité de temps et la concentration dans un fluide de l'organisme. $CL = \frac{Dose}{AUC} = V_d \cdot k_e$ clairance.
 * $k_e = \frac{1}{MRT} = \frac{\ln{2}}{t_{\frac{1}{2}e}} = \frac{CL}{V_d}$ (constante d'élimination) taux d'élimination moyen du médicament de la circulation systémique. Il est calculé sur la phase d'élimination
 
 * $ae$ montant excrété.

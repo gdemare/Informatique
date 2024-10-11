@@ -11,8 +11,12 @@
             "id": "11f79084c25133a9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "docs/r/bioinformatique/transcriptomique.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "55db03179b7d733d",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/r/bioinformatique/transcriptomique.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "docs/r/bioinformatique/transcriptomique.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "docs/r/bioinformatique/transcriptomique.md"
+              }
             }
           }
         ]
@@ -140,9 +149,13 @@
   },
   "active": "11f79084c25133a9",
   "lastOpenFiles": [
-    "docs/python/bases/divers/modules supplémentaires.md",
     "docs/r/bases/cinétique.md",
+    "docs/r/bioinformatique/transcriptomique.md",
+    "docs/r/bases/PKNCA et les unités.md",
+    "docs/r/descriptions/graphiques.md",
+    "docs/r/bases/manipuler les données.md",
     "docs/r/bases/R.md",
+    "docs/python/bases/divers/modules supplémentaires.md",
     "docs/python/bases/python.md",
     "docs/python/bases/formater les données.md",
     "docs/python/bases/ressources.md",
@@ -163,10 +176,6 @@
     "docs/r/descriptions/clustering/centres mobiles.md",
     "docs/r/bioinformatique/bioinformatique.md",
     "docs/r/bioinformatique/blast.md",
-    "docs/r/models/classification/Support Vecteur Machine.md",
-    "docs/r/models/classification/régression logistique.md",
-    "docs/r/models/classification/forêt aléatoire.md",
-    "docs/r/models/classification/classificateur baysien.md",
-    "docs/r/models/classification/arbre de décision.md"
+    "docs/r/models/classification/Support Vecteur Machine.md"
   ]
 }

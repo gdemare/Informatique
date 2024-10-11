@@ -11,11 +11,9 @@ https://billdenney.github.io/pknca/news/index.html
     La bibliothèque a été pensée pour intégrer de nouveaux indicateurs qui n'auraient pas été pensés par les auteurs.
 
 Données minimum : concentration, dose, and time.
-
 ### Préparer les données
 
 * `as_sparse_pk(conc, time, subject)` données clairsemées.
-
 #### Valeurs manquantes et BLQ
 
 * `zeros (0)` below the limit of quantification.
@@ -26,25 +24,23 @@ Remplacer les valeurs :
 
 * `clean.conc.blq()`
 * `clean.conc.na()`
-
 #### Méthode d'imputation
 
 * `PKNCA_impute_method_start_conc0()`
 * `PKNCA_impute_method_start_cmin()`
 * `PKNCA_impute_method_start_predose()`
-
 ### Calculer les PK
 
 1. Formater les données pour les calculs :
    
     * `conc_obj <- PKNCAconc(dt, Conc~Time|Subject)` pour les fécès et l'urine. Pour les fèces et les urines `duration=` et `volume=` avec la colonne déclarer `"colonne"`.
   
-       * `time.nominal =` afficher les théoriques de prélévements (n'est pas utilisé pour les calculs).
-       * `sparse = FALSE` échantillons clairesemés.
+       * `time.nominal =` afficher les théoriques de prélèvements (n'est pas utilisé pour les calculs).
+       * `sparse = FALSE` échantillons clairsemés.
          
     * `dose_obj <- PKNCAdose(dt, Dose~Time|Subject)` déclarer les doses et leurs temps d'injection.
         
-        * `route = ` précisier la route.
+        * `route = ` préciser la route.
             
             * `"intravascular"` injection. Si l'injection est lente (infusion), il faut ajouter l'option `rate=` ou `duration=`.
             * `"extravascular"` ingestion.
@@ -131,11 +127,9 @@ dt_param <- get.interval.cols() %>%
 ```
 
 * `pk.calc.dn` afficher la formule de la fonction.
-
 #### Ajouter des indicateurs
 
 Ajouter un nouveau PK.
-
 
 ``` R
 add.interval.col("cmax",
@@ -158,7 +152,6 @@ PKNCA.set.summary(
   rounding=list(signif=3)
 )
 ```
-
 #### Modifier les méthodes de calculs
 
 modifier les fonctions de bases et ajouter une règle métier:
@@ -167,7 +160,6 @@ modifier les fonctions de bases et ajouter une règle métier:
 my_mean <- pk.business(FUN=mean)
 my_mean(c(1:3, NA))
 ```
-
 ### Les unités
 
 `library(units)`
@@ -190,7 +182,6 @@ my_mean(c(1:3, NA))
 
 !!! warning
     Le `.` doit être transfomé en `*`.
-
 ### Rempsyc
 
 Package avec de nombreuses fonctions pour 

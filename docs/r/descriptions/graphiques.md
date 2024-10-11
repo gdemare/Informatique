@@ -3,7 +3,6 @@
 `aes()` dans la fonction geom ou à l'extérieur.
 
 `ggstatsplot`
-
 ### Une variable
 
 ```r
@@ -83,7 +82,7 @@ Libellés :
 	* `fill = var` remplir les zones.
 
 * `geom_hline(yintercept = valeur)` ligne hotizontale.
-* `geom_vline(xintercept = valeur)` ligne veticale.
+* `geom_vline(xintercept = valeur)` ligne verticale.
 * `geom_abline(intercept = 0, slope = 1)` droites et fonctions linéaires. Paramètres :
 
 	* `color = "#F8766D"` couleur.
@@ -96,8 +95,8 @@ Colorer des zones :
 * Deux possibilités pour faire des rectangles :
 
 	* `geom_tile(x, y, width, <height>)` avec x et y les milieux de chaque rectangle.
+	
  	* `geom_rect(xmin, xmax, ymin, ymax)`
-
 
 ## Formatage des axes
 
@@ -112,8 +111,7 @@ Colorer des zones :
 Pour changer le type d'axes plus précisiément, il existe `library(scales)`.
 
 * `pseudo_log_trans()` log trans est équivalent à la fonction log mais qui en plus permet d'afficher 0.
-
-## Thémes 
+## Thème
 
 * `theme_void()` thème sans axe et graduation.
 * `theme_minimal()` thème épuré.
@@ -122,8 +120,6 @@ Pour changer le type d'axes plus précisiément, il existe `library(scales)`.
 	* `legend.title = element_text(text = "titre")` renommer le titre de la légende.
 	* `legend.position = c(.9, .9)` modifier la position de la légende (ici en haut à droite) ou `"left"`, `"top"`.
 	* `legend.box.background = element_rect(colour = "black")` contour de la légende.
-
-
 ## Présentation
 
 * `ggtitle("titre")` titre du graphique.
@@ -135,18 +131,15 @@ Pour changer le type d'axes plus précisiément, il existe `library(scales)`.
 * `coord_equal(ratio = 1)` garder un ratio abscisse/ordonnée.
 * `labs(color = titre, fille = titre)` changer le titre de la légende (color ou filled dépendent dû type de coloration).
 * `scale_color_discrete(labels = c("label 1", "label 2"))` modifier les valeurs des modalités de la légende (même chose avec `filled`).
-
 ## Créer des graphiques en fonction d’une variable
 
 * `facet_grid(.~variable)` sur une ligne.
 * `facet_grid(variable~.)` sur une colonne.
 * `facet_wrap( ~variable)` en ligne et en colonne.
-
 ## Autres
 
 * `ggsave(plot=p, file="nom.extension")` exporter le graphique.
 * `ggplotly(graph)` rendre le graphique interactif (package `plotly`).
-
 ## Afficher une fonction
 
 ``` r
@@ -161,7 +154,6 @@ p + stat_function(fun = fonc, args = list(a = 3)) + xlim(-5,5)
 * `scale_colour_manual(couleurs)` changer la couleur.
 * `scale_fill_manual(couleurs)` changer la couleur.
 * `colorRampPalette(c("red", "green"))(n)` générer un vecteur de n couleurs entre deux couleurs.
-
 ### Palette prête 
 
 library : `RColorBrewer`
@@ -170,7 +162,6 @@ library : `RColorBrewer`
 
 * `graph + scale_color_brewer(palette = "Dark2")`
 * `scale_fill_brewer(palette)`
-
 ## Graphique avec plotly
 
 Package : `plotly``
@@ -181,7 +172,6 @@ Package : `plotly``
 
 !!! note
 	Il est possible de transformer un graphique ggplot en plotly avec `ggplotly(graph)`;
-
 ### Supprimer la légende
 
 ``` r
