@@ -29,7 +29,10 @@ Copier le raccourci dans le dossier :
 ## Ubuntu
 
 Le programme est disponible sur le Microsoft Store.
-Pour l'installer WSL (ubuntu), il faut désactiver le VT dans les paramètres BIOS (F12 sur Dell).
+Pour l'installer WSL (ubuntu), il faut :
+
+- désactiver le VT dans les paramètres BIOS (F12 sur Dell) (à vérfier).
+- `Turn Windows features on or off` puis activer l'option Windows subsystems for Linux`.
 
 `/mnt/c/Users/Guigui/Downloads`
 
