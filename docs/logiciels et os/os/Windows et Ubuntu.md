@@ -1,4 +1,4 @@
-# Window
+# Windows
 
 ## Installation
 
@@ -32,7 +32,7 @@ Le programme est disponible sur le Microsoft Store.
 Pour l'installer WSL (ubuntu), il faut :
 
 - désactiver le VT dans les paramètres BIOS (F12 sur Dell) (à vérfier).
-- `Turn Windows features on or off` puis activer l'option Windows subsystems for Linux`.
+- `Turn Windows features on or off` puis activer l'option `Windows subsystems for Linux` et `VirtualMachinePlatform`.
 
 `/mnt/c/Users/Guigui/Downloads`
 
