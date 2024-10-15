@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/r/bioinformatique/transcriptomique.md",
+                "file": "docs/bioinformatique/séquences.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "trimmo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/r/bioinformatique/transcriptomique.md",
+                "file": "docs/bioinformatique/séquences.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/r/bioinformatique/transcriptomique.md",
+                "file": "docs/bioinformatique/séquences.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/r/bioinformatique/transcriptomique.md"
+                "file": "docs/bioinformatique/séquences.md"
               }
             }
           }
@@ -148,12 +149,12 @@
   },
   "active": "11f79084c25133a9",
   "lastOpenFiles": [
-    "docs/r/bases/cinétique.md",
+    "docs/r/bases/R.md",
+    "docs/r/bases/manipuler les données.md",
     "docs/r/bioinformatique/transcriptomique.md",
+    "docs/r/bases/cinétique.md",
     "docs/r/bases/PKNCA et les unités.md",
     "docs/r/descriptions/graphiques.md",
-    "docs/r/bases/manipuler les données.md",
-    "docs/r/bases/R.md",
     "docs/python/bases/divers/modules supplémentaires.md",
     "docs/python/bases/python.md",
     "docs/python/bases/formater les données.md",

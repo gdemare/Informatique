@@ -1,3 +1,25 @@
+ __trimming__ découper les séquences par exemple, pour retirer les parties non désirées comme les adaptateurs des séquenceurs et les séquences de mauvaise qualité. Paramètres : Longueur de la séquences, un seuil de qualité.
+__assembleur__ assembler des séquences. Paramètres : kmers (nombre minimal de bases chevauchantes), longueur minimum des contigs. Utilisé pour le séquençage et la quantification.
+__blast__ aligner des séquences sur un génome de référence. Paramètres : seuil  d'identité, couverture.
+
+Logiciels de :
+
+- trimming  : `trim-galore`, `trimmomatic`, `autoadapt` 
+- assembleur : `megahit`
+- bast : `blastn`
+- manipuler les séquences (tri, index) : `samtools`
+- recherche de polymorphisme `GATK`
+- alignement de séquences de novo `Vsearch`. Il permet de dédupliquer les séquences, estimer l'abondance, et clustering.
+- binning regrouper des séquences en fonction de caractéristiques comme les séquences appartenant à la même espèce.
+- bowtie2 aligner des séquences sur une bdd.
+- prodigal détecter les gènes dans un génome procaryote.
+- 4-mer référence à des motifs de 4 nucléotides chevauchant (fenêtre glissante). L'analyse de fait par la comparaison des fréquence de quatre nucléotides de la distribution.
+- `metabat`
+- `micomplete` détecter les marqueurs de gènes des Bactéries et des Archées. Retourner le poids de la complétion, la contammination.
+
+#### Formats de fichiers
+
+- `sam` et `bam` = format binaire
 ## Preprocessing
 
 ### Trimmomatic
