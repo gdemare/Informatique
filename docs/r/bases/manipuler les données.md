@@ -133,8 +133,6 @@ En fonction de la position :
 
 En fonction du nom des colonnes :
 
-
-
 * `distinct()` supprimer les doublons (renvoie les valeurs uniques pour une variable).
 
 	* `.keep_all = TRUE` garder tous les champs.
@@ -197,34 +195,32 @@ Options :
 !!! note 
 	Pour appliquer une fonction a toutes les variables il faut utiliser `sapply`.
 
-Fonction		| Description
-----------------|-----------
-`n()` 				| Nombre de lignes.
-`n_distinct()` 			| Nombre de lignes distinctes.
-`lead()`			| Récupérer la valeur de la ligne d'avant.
-`lag(col, default = 0/1)` 	| Récupérer la valeur de la colonne/ligne d'avant .
-`dense_rank()` 			| Ordonner sans sauts de rangs.
-`min_rank()` 			| Ordonner avec sauts de rangs.
-`percent_rank()`		| Rangs de (min rank) entre [0, 1].
-`row_number()`			| Ordonner ou numéroter les lignes en affectant aux liens la première position.
-`ntile()`	 		| Diviser en n groupes.
-`between()`	 		| Les valeurs sont-elles entre a et b.
-`cum_dist()` 			| Distribution cumulée
-`cumall()`	 		| Cumul tant que vrai.
-`cumany()`	 		| Cumul dès que vrai.
-`cummean()`	 		| Moyenne glissante.
-`cumsum()` 			| Somme cumulée.
-`cummax()` 			| Maximum cumulé.
-`cummin()` 			| Minimum cumulé.
-`cumprod()`	 		| Produit cumulé.
-`pmax()` 			| Maximum par élément.
-`pmin()` 			| Minimum par élément.
-`last()` 			| Garder la dernière valeur.
-`first()` 			| Garder la première valeur.
-`nth(col, n)` 			| Garder la n-ième valeur.
-`cur_group_id()`		| Id pour chaque groupe (`group_by`).
-
-
+| Fonction                  | Description                                                                   |
+| ------------------------- | ----------------------------------------------------------------------------- |
+| `n()`                     | Nombre de lignes.                                                             |
+| `n_distinct()`            | Nombre de lignes distinctes.                                                  |
+| `lead()`                  | Récupérer la valeur de la ligne d'avant.                                      |
+| `lag(col, default = 0/1)` | Récupérer la valeur de la colonne/ligne d'avant .                             |
+| `dense_rank()`            | Ordonner sans sauts de rangs.                                                 |
+| `min_rank()`              | Ordonner avec sauts de rangs.                                                 |
+| `percent_rank()`          | Rangs de (min rank) entre [0, 1].                                             |
+| `row_number()`            | Ordonner ou numéroter les lignes en affectant aux liens la première position. |
+| `ntile()`                 | Diviser en n groupes.                                                         |
+| `between()`               | Les valeurs sont-elles entre a et b.                                          |
+| `cum_dist()`              | Distribution cumulée                                                          |
+| `cumall()`                | Cumul tant que vrai.                                                          |
+| `cumany()`                | Cumul dès que vrai.                                                           |
+| `cummean()`               | Moyenne glissante.                                                            |
+| `cumsum()`                | Somme cumulée.                                                                |
+| `cummax()`                | Maximum cumulé.                                                               |
+| `cummin()`                | Minimum cumulé.                                                               |
+| `cumprod()`               | Produit cumulé.                                                               |
+| `pmax()`                  | Maximum par élément.                                                          |
+| `pmin()`                  | Minimum par élément.                                                          |
+| `last()`                  | Garder la dernière valeur.                                                    |
+| `first()`                 | Garder la première valeur.                                                    |
+| `nth(col, n)`             | Garder la n-ième valeur.                                                      |
+| `cur_group_id()`          | Id pour chaque groupe (`group_by`).                                           |
  
 !!! note
 	Pour les sommes cumulées, il faut utiliser `group_by` puis `mutate`.
@@ -236,7 +232,6 @@ Fonction		| Description
 
 !!! example 
 	`which(col == 'Vrai')[n]` pour remplacer la première valeur ayant la condition vraie.
-
 ### Faire une opération sur toutes les variables ou les lignes
 
 Fonction 		| Définition
@@ -264,7 +259,6 @@ group_map(function(x, row_id) {
       var2 = c/2)
 }
 ```
-
 Calculer des indicateurs par groupe :
 
 * `group_vars()` print the names of grouping variables.

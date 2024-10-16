@@ -15,7 +15,7 @@ Logiciels de :
 - prodigal détecter les gènes dans un génome procaryote.
 - 4-mer référence à des motifs de 4 nucléotides chevauchant (fenêtre glissante). L'analyse de fait par la comparaison des fréquence de quatre nucléotides de la distribution.
 - `metabat`
-- `micomplete` détecter les marqueurs de gènes des Bactéries et des Archées. Retourner le poids de la complétion, la contammination.
+- `micomplete` détecter les marqueurs de gènes des Bactéries et des Archées. Retourner le poids de la complétion, la contamination.
 
 #### Formats de fichiers
 
