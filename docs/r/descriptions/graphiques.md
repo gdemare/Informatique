@@ -180,7 +180,7 @@ layout(title = 'Répartition des espèces évaluées',
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 ```
 
-* `add_pie(hole = 0.6)` donuts et cambenbert
+* `add_pie(hole = 0.6)` donuts et camembert.
 
 ### Séries temporelles
 

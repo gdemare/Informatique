@@ -34,7 +34,6 @@ Packages `labelled`
 * `var_label(dt)` renvoie les labels (ou attribuer un label). Prend comme valeur une `list(nom_col = "label")`.
 * `remove_var_label(dt)` supprimer les labels.
 * `colnames(df_labelled) <- var_label(df_labelled)` renommer les colonnes avec les labels.
-
 ## Importer et exporter
 
 ### Importer
@@ -45,7 +44,6 @@ Packages `labelled`
 * `read.xlsx(fichier, colNames = TRUE, sheet = nom/num)` lire un fichier excel (workbook = wb) `library(openxlsx)`. Paramètres :
 
 	* `startRow = 2` numéro de la ligne où commencer la lecture. 
-
 ### Exporter
  
 * `write.csv(donnée, file = "fichier.csv" )` enregistrer au format csv.
@@ -55,7 +53,6 @@ Packages `labelled`
 	* `col.names = T` nom des colonnes.
 
 * `write.table(tableau, file = "clipboard", sep = "\t")` copier dans le presse papier.
-
 ### Information dataframe et nom des lignes et des colonnes
 
 `library(tibble)`
