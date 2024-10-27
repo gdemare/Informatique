@@ -52,7 +52,7 @@ Logiciels Windows :
 * [Keeweb](https://keeweb.info/), gestionnaire de mots de passe pour Keep.
 * [Mail spring](https://github.com/Foundry376/Mailspring), boite mail local.
 * [Noi](https://github.com/lencx/noi) ui pour les chats et consor.
-* [Nora](https://github.com/lencx/noi](https://github.com/Sandakan/Nora) lecteur musique au top.
+* [Nora](https://github.com/Sandakan/Nora) lecteur musique au top.
 
 ### Le relatif
 
