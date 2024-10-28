@@ -14,6 +14,7 @@ Installation : `pip install spotdl`
 
 Nécessite : `sudo apt install ffmpeg`
 
+* `spotdl web` ouvrir la spotdl avec une interface web.
 * `spotdl download [song] ou [playlistUrl]` télécharger une chanson ou plusieurs.
 * `pip install --upgrade spotdl` màj spotdl.
 

@@ -66,7 +66,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "metab",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -91,7 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 280.5
   },
   "right": {
     "id": "55db03179b7d733d",
@@ -179,15 +179,16 @@
   "active": "11f79084c25133a9",
   "lastOpenFiles": [
     "docs/r/bases/R.md",
+    "docs/logiciels et os/logiciels/Excel.md",
+    "docs/python/bases/divers/modules supplémentaires.md",
+    "docs/bioinformatique/séquences.md",
     "Sans titre.canvas",
+    "docs/r/bases/manipuler les données.md",
     "2024-10-18.md",
     "docs/r/descriptions/graphiques.md",
-    "docs/bioinformatique/séquences.md",
-    "docs/r/bases/manipuler les données.md",
     "docs/r/bioinformatique/transcriptomique.md",
     "docs/r/bases/cinétique.md",
     "docs/r/bases/PKNCA et les unités.md",
-    "docs/python/bases/divers/modules supplémentaires.md",
     "docs/python/bases/python.md",
     "docs/python/bases/formater les données.md",
     "docs/python/bases/ressources.md",
