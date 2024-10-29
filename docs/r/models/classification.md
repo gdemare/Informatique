@@ -23,7 +23,6 @@ abline(h=0.2, lty=2)
 
 * $\gt 0.2$ :
 * $\gt 0.1$ :
-
 ## Performances
 
 ```
@@ -31,13 +30,11 @@ y_pred_class <- predict(abre_complet, dtf_test)y_proba <- pred_class[,2]
 y_predit <- as.factor(as.integer(pred_class[,2]>0.5))
 y_vrai <- Y_test$drugg
 ```
-
 ### Indicateurs
 
 `library(caret)`
 
 * `confusionMatrix(data = y_predit, reference = y_vrai)` matrice de confusion et les indicateurs associés.
-
 #### MLmetrics
 
 `library(MLmetrics)`
@@ -52,7 +49,6 @@ y_vrai <- Y_test$drugg
 * `Specificity(y_true = y_vrai, y_pred = y_predit, positive = 1)` spécificité
 * `F1_Score(y_true = y_vrai,  y_pred = y_predit, positive = 1)` F score.
 * `AUC(y_pred = y_proba, y_true = y_vrai)` AUC pour la courbe de ROC.
-
 ### Courbe de ROC (Receiver Operating Characteristic)
 
 `library(plotROC)`
@@ -63,7 +59,6 @@ y_vrai <- Y_test$drugg
 	* `color = model` colorer en fonction du modéle.
 
 ------------------------------
-
 ### Courbe de Lift (courbe de gain)
 
 ```
@@ -92,7 +87,6 @@ lift = ggplot() +
   stat_function(fun = fonc) + xlab("% population") + ylab("% cible")
 lift + geom_line( aes(x= lift$perpop, y=lift$cumden), colour = "blue")
 ```
-
 ### Courbe de Lift
 
 `library(BCA)`

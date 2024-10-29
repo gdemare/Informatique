@@ -13,10 +13,6 @@
 * `geom_point()`
 * `geom_histogram()`
 * `geom_line()`
-* ``
-* ``
-* ``
-* ``
 
 ## Fenêtre et interface
 
