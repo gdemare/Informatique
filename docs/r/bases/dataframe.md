@@ -17,7 +17,7 @@ data.frame(
   ) 
 ```
 
-* `transpose(df)` tranformer un dt en liste de lignes (`libraryF(purrr)`).
+* `transpose(df)` tranformer un dt en liste de lignes (`library(purrr)`).
 
 ### Renommer les colonnes
 
@@ -28,7 +28,7 @@ data.frame(
 
 #### Libellés des colonnes
 
-Packages `labelled`
+Packages `library(labelled)`
 
 * `var_label(dt) <- labels` ajouter un label aux colonnes.
 * `var_label(dt)` renvoie les labels (ou attribuer un label). Prend comme valeur une `list(nom_col = "label")`.
@@ -53,23 +53,22 @@ Packages `labelled`
 	* `col.names = T` nom des colonnes.
 
 * `write.table(tableau, file = "clipboard", sep = "\t")` copier dans le presse papier.
-### Information dataframe et nom des lignes et des colonnes
+### Information sur un df
 
 `library(tibble)`
+
+* `nrow(data)` renvoie le nbre de lignes.
+* `ncol(data)` renvoie le nbre de colonnes.
+* `dim(data)` renvoie la taille du data.
+* `glimpse(dataset)` description du jeu de données.
+* `str(dt)` décrire un jeu de données.
+#### Noms des lignes et des colonnes
 
 * `colnames(data)` nom des colonnes.
 * `rownames(data)` nom des colonnes.
 * `column_to_rownames(var = "Accession")` mettre une colonne en nom de lignes et supprimer la colonne.
 * `rownames_to_column()` transformer l'index en colonne et supprimer le nom des lignes.
 * `rowid_to_column()` transformer le numéro des lignes en colonne.
-* `nrow(data)` renvoie le nbre de lignes.
-* `ncol(data)` renvoie le nbre de colonnes.
-* `dim(data)` renvoie la taille du data.
-* `glimpse(dataset)` description du jeu de données.
-
-## Décrire un jeu de données
-
-* `str(dt)` décrire un jeu de données.
 
 ## Manipuler les données avec dplyr
 
@@ -77,7 +76,7 @@ Package : `dplyr`, `tidyr`. `résultat1 %>% résultat2` : rediriger le résultat
 
 * `pull(data, colonne)` transformer une sortie en vecteur.
 
-## Fonctions dplyr
+### Fonctions dplyr
 
 Pour créer des fonctions dplyr `{{colonne}}`.
 ``` r
@@ -97,7 +96,7 @@ Sélecteur de colonnes :
 !!! note
 	Pour créer une fonction qui s'applique à un vecteur il peut être utile d'utiliser `map`.
 
-## Filtrer
+### Filtrer
 
 * `filter(condition)` filtrer les données avec une condition (alternative `subset(df, condition)`, pour filter en fonction des noms de lignes `row.names(r$df_pk) %in% filter`).
 * `slice(numligne)` garder les lignes.
@@ -111,7 +110,7 @@ Sélecteur de colonnes :
 * `complete.cases(data)` renvoie les lignes avec des valeurs manquantes.
 * `case_when(condition1 ~ val1, condition2 ~ val2,..., .default = val)` fonction équivalente au CASE WHEN en SQL.
 
-## Sélectionner
+### Sélectionner
 * `select(colonne1, colonne2)` selecionner des colonnes (`-one_of(col)` pour enlever une colonne). Soit avec les numéros, soit avec les noms.
 
 En fonction de la position :
@@ -151,7 +150,7 @@ Fonction 						| Définition
 !!! note 
  	Utile notamment pour renommer les colonnes `rename_with(~fonction(.), .cols = expression)`.
  
-## Réorganiser les données
+### Réorganiser les données
 
 Package `tidyr`
 
@@ -172,7 +171,7 @@ Sélectionner les colonnes :
 
 * `everything()` toutes les colonnes restantes.
 
-## Construire de nouvelles variables
+### Créer de nouvelles variables
 
 * `mutate(nom = formule)` appliquer une fonction et ajouter une colonne (il est possible d'appliquer à toutes les variables avec `sapply` voir ci dessous et, de sélectionner une variable par son nom avec `!!sym("col1")`).
 * `mutate_all(~as.character(.x))` appliquer la fonction à toutes les colonnes.
@@ -229,7 +228,7 @@ Options :
 
 !!! example 
 	`which(col == 'Vrai')[n]` pour remplacer la première valeur ayant la condition vraie.
-### Faire une opération sur toutes les variables ou les lignes
+### Apply en lignes et colonnes
 
 Fonction 		| Définition
 ----------------|-------------
@@ -238,7 +237,7 @@ Fonction 		| Définition
 
 * `sapply(dt, axis = 1/2, fonction)` appliquer une opération à toutes les colonnes ou les lignes.
 
-## Grouper des données
+## Grouper les données
 
 `data %>% group_by(columns) %>% summarise(indicateur)`
 
@@ -291,7 +290,7 @@ Option :
 * `by = c("col1" = "col2")` préciser la jointure.
 * `keep = T` garder les colonnes qui ont servi de jointure.
 
-## Fusions lignes et colonnes
+### Fusions lignes et colonnes
 
 * `bind_cols(nom = valeur)` ajouter à y comme nouvelles colonnes.
 * `add_column(data, column,...)` ajouter de nouvelles colonnes (`tibble`).
