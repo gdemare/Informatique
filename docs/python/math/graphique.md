@@ -13,7 +13,6 @@
 * `geom_point()`
 * `geom_histogram()`
 * `geom_line()`
-
 ## Fenêtre et interface
 
 * `fig = plt.figure(figsize=(25,20))`  changer la taille du graphique.
@@ -21,7 +20,6 @@
 
 !!! warning
 	Dans ce cas indiquer l'argument : `ax=axes[i]` lorsqu'il n'y a qu'une ligne.
-
 #### Subdiviser la fenêtre graphiques
 
 Cela permet d'afficher plusieurs graphiques sur la même sortie (image).
@@ -33,7 +31,6 @@ graph_avec = pd.crosstab(data['ligne'], data['colonne'], normalize='index').plot
 ```
 
 A la fin, on peut forcer l'affichage avec `plt.show()`
-
 ## Pyplot graphiques 
 
 `from matplotlib import pyplot as plt`
@@ -60,7 +57,6 @@ Paramètre : faire une chaîne de caractères
 
 !!! example
 	`ro--` points rouges reliés par des traits en pointillé.
-
 ### Types de graphiques
 
 * `plt.scatter(x,y)` nuage de points.
@@ -74,7 +70,6 @@ Paramètre : faire une chaîne de caractères
 Paramètres globaux :
 
 * `color="red"` changer la couleur.
-
 ### Paramètres des axes
 
 * `plt.show()` afficher le graphique.
@@ -94,7 +89,6 @@ Masquer un axe :
 ax = plt.gca()
 ax.get_yaxis().set_visible(False)
 ```
-
 ### Etiquettes, libellés et titre
 
 * `plt.xlabel(texte)` libellés de l'axe des abcisses.
@@ -106,18 +100,15 @@ ax.get_yaxis().set_visible(False)
 	* `title="titre"` titre de la box.
 
 * `plt.grid()` afficher une grille.
-
 ### Ajouter plusieurs graphiques à une seule image
 
 * `plt.figure('train', (largeur, hauteur))` créer une image subdiviser.
 * `subplot(nb_lignes, nb_col, i+1)` ajouter un graphique à l'image. Les  positions sont numérotées à partir de 1.
-
 ### Autres
 
 * `plt.boxplot(vecteur)` boxplot.
 * `plt.matshow(mat_cor)` matrice de corrélation.
 * `plt.fill_between(valeur_moyenne, valeur_dessus, valeur_dessous, color='b', alpha=0.2)` ajouter un intervalle d'erreur.
-
 ### Afficher une image
 
 * `imshow(numpy)` Paramètre : 
@@ -129,7 +120,6 @@ plt.imshow(img)
 plt.axis('off') # retirer les axes.
 plt.show()
 ```
-
 ## Seaborn graphique
 
 Library `import seaborn as sns`
@@ -166,7 +156,6 @@ Graphiques :
 	* `s=1` taille des points. 
 
 * `lineplot(x=, y=)` lignes.	
-
 ### Superposer deux graphiques
 
 Superposer deux graphiques :
@@ -177,20 +166,17 @@ sns.histplot(x=donnee['RT [min]'], ax=ax1)
 ax2 = ax1.twinx()
 sns.lineplot(x=x, y=y, color = 'r', ax=ax2)
 ```
-
 ### Faire plusieurs graphiques en fonction d'une condition
 
 ``` python
 g = sns.FacetGrid(donnee, col="condition")
 g.map(sns.histplot, "% ACN", binwidth=2).set(yscale='log')
 ```
-
 #### Ajouter un élément au graphique
 
 * `fig.axvline(1.25)` ou `fig.axhline(1.25)` ajouter une ligne verticale ou horizontale. Paramètres :
 	
 	* `linestyle=` type de lignes (`:` pointillé, `--` tiré ).
-
 ### Ajouter les étiquettes de valeurs sur le graphique 
 
 ``` python
@@ -198,12 +184,10 @@ bars = sns.graph(...)
 for container in graph1.containers:
     bars.bar_label(container)
 ```
-
 ### Transformer des axes
 
 * `graph.set_xscale()` changer le type d'axes (type : `log`, `symlog`, ...).
 * `graph.get_xticklabels()` récupérer la valeur des axes.
-
 ### Modifier la présentation graphique
 
 * `graph.set_xlabel("Colors")` changer le libellé de l'axe (`set_ylabel` pour y).
@@ -211,7 +195,6 @@ for container in graph1.containers:
 * `graph.set_title("Colors vs Values")` ajouter un titre.
 * `graph.set_xticklabels( fig.get_xticklabels(), rotation=45, horizontalalignment='right')` changer la rotation des libellés.
 * `plt.xticks(valeur, libellé)` changer les libellés des axes.
-
 ## Enregister un graphique 
 
 `graphique.get_figure().savefig('fichier.png')` enregistrer un graphique.
@@ -222,14 +205,12 @@ Si les libellés sont tronqués.
 from matplotlib import rcParams
 rcParams.update({'figure.autolayout': True})
 ```
-
 ## Diagramme de Venn
 
 `from matplotlib_venn import venn2, venn3`
 
 * `venn2(subsets=(10,5,2), set_labels =('Group A', 'Group B'))` diagramme de Venne avec deux groupes.
 * `venn3(subsets=(10,8,22,6,9,4,2))` diagramme de Venne avec trois groupes.
-
 ##  Pandas graphiques
 
 Les dataframe pandas intégrent directement des représentations graphiques.

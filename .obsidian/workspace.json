@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/python/math/graphique.md",
+                "file": "docs/python/bases/python.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "graphique"
+              "title": "python"
             }
           },
           {
@@ -91,7 +91,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 280.5
+    "width": 280.5,
+    "collapsed": true
   },
   "right": {
     "id": "55db03179b7d733d",
@@ -178,6 +179,7 @@
   },
   "active": "11f79084c25133a9",
   "lastOpenFiles": [
+    "docs/python/math/graphique.md",
     "docs/python/bases/python.md",
     "docs/r/models/prédiction.md",
     "docs/r/models/classification.md",
@@ -205,7 +207,6 @@
     "docs/python/bases/divers",
     "docs/python/bases/divers/traitement d images.md",
     "docs/python/bases/divers/traitement du signal.md",
-    "docs/python/math/tests statistiques.md",
-    "docs/python/math/math.md"
+    "docs/python/math/tests statistiques.md"
   ]
 }
