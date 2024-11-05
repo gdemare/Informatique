@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/python/bases/python.md",
+                "file": "docs/r/descriptions/graphiques.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "python"
+              "title": "graphiques"
             }
           },
           {
@@ -66,7 +66,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "range",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -91,8 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 280.5,
-    "collapsed": true
+    "width": 280.5
   },
   "right": {
     "id": "55db03179b7d733d",
@@ -179,13 +178,14 @@
   },
   "active": "11f79084c25133a9",
   "lastOpenFiles": [
+    "docs/r/mathématique/probabilité statistique.md",
+    "docs/r/models/classification/ANOVA.md",
     "docs/python/math/graphique.md",
     "docs/python/bases/python.md",
     "docs/r/models/prédiction.md",
     "docs/r/models/classification.md",
     "docs/r/models/régression/step.md",
     "docs/r/models/régression/régression linéaire.md",
-    "docs/r/mathématique/probabilité statistique.md",
     "docs/r/models/préparer les données.md",
     "docs/r/bases/manipuler les données.md",
     "docs/r/bases/R.md",
@@ -206,7 +206,6 @@
     "docs/python/bases/divers/cartographie.md",
     "docs/python/bases/divers",
     "docs/python/bases/divers/traitement d images.md",
-    "docs/python/bases/divers/traitement du signal.md",
-    "docs/python/math/tests statistiques.md"
+    "docs/python/bases/divers/traitement du signal.md"
   ]
 }

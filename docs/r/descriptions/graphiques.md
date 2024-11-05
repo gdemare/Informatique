@@ -38,7 +38,6 @@ Présentation :
 	
 * `coord_flip()` transformer en diagramme en barre horizontal.
 * `alpha = 0.4` transparence du remplissage.
-
 ###  Deux variables
 
 ``` R
@@ -74,7 +73,6 @@ Libellés :
 
 * `geom_text_repel(aes(x,y), label = var)` ajouter des étiquettes de données (library ggrepel).
 * `geom_label_repel(aes(x,y), label = var)` ajouter des étiquettes de données avec fond (library ggrepel).
-
 ## Autre 
 
 * `geom_polygon(aes(x = long, y = lat, group = group))` tracer des polygones identifiés par un groupe (notamment pour les cartes). Option :
@@ -97,7 +95,6 @@ Colorer des zones :
 	* `geom_tile(x, y, width, <height>)` avec x et y les milieux de chaque rectangle.
 	
  	* `geom_rect(xmin, xmax, ymin, ymax)`
-
 ## Formatage des axes
 
 * `scale_y_continuous(trans="log")` modifier le type d'axe (par exemple, logarithmique). Paramètres :
@@ -181,11 +178,9 @@ layout(title = 'Répartition des espèces évaluées',
 ```
 
 * `add_pie(hole = 0.6)` donuts et camembert.
-
 ### Séries temporelles
 
 `library(dygraphs)` pour des graphiques temporels.
-
 ## Matrice colorée
 
 Library `corrplot`
@@ -193,7 +188,6 @@ Library `corrplot`
 * `corrplot(matrice, method = "color")` matrice de corrélation.
 
 --------------------------------
-
 ## Graphiques rapides
 
 * `plot(var1, <var2>)` graphique rapide. 
