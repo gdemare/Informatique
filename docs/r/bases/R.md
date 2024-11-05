@@ -203,7 +203,7 @@ Existe : `map2_`, `map_` ...
 
 * `map(liste, function(x){x})` parcourir chaque propriété de la liste.
 * `walk(liste, function(x){x})` pareil que map mais ne renvoie rien.
-* `pmap()` itérer un dataframe par ligne.
+* `pmap(function(col1, col2))` itérer un dataframe par ligne.
 
 !!! note
 	`map(dt, ~fct_print_unit_col(.x))` appliquer une fonction à chaque colonne.
