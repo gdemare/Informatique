@@ -104,7 +104,6 @@ Sélecteur de colonnes :
 * `sample_frac(dt, 0.5, replace = TRUE)` sélectionne aléatoirement une fraction d'observations.
 * `sample_n(nligne, replace = TRUE)` sélectionne aléatoirement n observations.
 * `slice(10:15)` sélectionne les lignes selon leur position.
-* 
 * `top_n(nlignes, variable)` sélectionne et ordonne les n premières observations (ou groupes si les données sont groupées) (`desc()` = décroissant).
 * `is.na(data)` renvoie les lignes avec des valeurs manquantes (`myDataframe[is.na(dt)] = 0` pour les remplacer).
 * `complete.cases(data)` renvoie les lignes avec des valeurs manquantes.
@@ -176,6 +175,9 @@ Sélectionner les colonnes :
 * `mutate(nom = formule)` appliquer une fonction et ajouter une colonne (il est possible d'appliquer à toutes les variables avec `sapply` voir ci dessous et, de sélectionner une variable par son nom avec `!!sym("col1")`).
 * `mutate_all(~as.character(.x))` appliquer la fonction à toutes les colonnes.
 * `mutate_if(~fct_test(.x), function(x){drop_units(x)})` appliquer une fonction aux colonnes avec Vrai.
+
+!!! note
+	Pour ajouter une colonne qui n'existe pas `mpg = ifelse("mpg" %in% names(.), mpg, NA))`.
 
 Options :
 
