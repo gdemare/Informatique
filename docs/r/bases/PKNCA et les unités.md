@@ -56,7 +56,10 @@ Remplacer les valeurs :
     Retour :
      
     * `$intervals` renvoie les paramètres calculés.
-  
+
+!!! note
+    La dose peut être déclarée en concentration massique ou en masse.
+      
 !!! note
     Il peut être utile de récupérer le tableau par défaut pour avoir les intervalles détectés automatiquement.
     1. Exécuter PKNCA une première fois pour récupérer les intervalles.
