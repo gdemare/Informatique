@@ -23,8 +23,11 @@ data.frame(
 
 * `setNames(c('pos_row','pos_col'))` ajouter un nom de colonnes.
 * `rename(new_nom = old_nom)` ou `c(new_nom = old_nom)` renommer une colonne.
-* `rename_with(~paste(., "0"), .cols = everything())` renommer les colonnes (`.cols` préciser les colonnes à renommer).
+* `rename_with(~paste(., "0"), .cols = everything())` renommer les colonnes (`.cols` préciser les colonnes à renommer). 
 * `rename(!!!setNames(col_units$old_name, col_units$new_name))` renommer les colonnes à partir d'un dataframe.
+
+!!! example
+	Renommer la colonne uniquement is elle existe `rename_with( ~ "nv nom", .cols = any_of("col1"))`
 
 #### Libellés des colonnes
 
