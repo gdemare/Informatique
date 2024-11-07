@@ -33,16 +33,16 @@ Remplacer les valeurs :
 
 1. Formater les données pour les calculs :
    
-    * `conc_obj <- PKNCAconc(dt, Conc~Time|Subject)` pour les fécès et l'urine. Pour les fèces et les urines `duration=` et `volume=` avec la colonne déclarer `"colonne"`.
+    * `conc_obj <- PKNCAconc(dt, Conc~Time|Subject)` pour les fécès et l'urine. Pour les fèces et les urines `duration="col"` et `volume="col"`.
   
        * `time.nominal =` afficher les théoriques de prélèvements (n'est pas utilisé pour les calculs).
        * `sparse = FALSE` échantillons clairsemés.
          
     * `dose_obj <- PKNCAdose(dt, Dose~Time|Subject)` déclarer les doses et leurs temps d'injection.
         
-        * `route = ` préciser la route.
+        * `route = "col"` préciser la route.
             
-            * `"intravascular"` injection. Si l'injection est lente (infusion), il faut ajouter l'option `rate=` ou `duration=`.
+            * `"intravascular"` injection. Si l'injection est lente (infusion), il faut ajouter l'option `rate="col"` ou `duration="col"`.
             * `"extravascular"` ingestion.
 
 !!! note
