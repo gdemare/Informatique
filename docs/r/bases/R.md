@@ -34,6 +34,7 @@
 * `getwd()` renvoyer le chemin du dossier de tavail.
 * `source(fichier)` exécuter un script.
 * `tools::file_ext(chemin_fichier)` renvoyer l'extension du fichier.
+* `file.copy(from = fichier_source, to = fichier_destination)` copier un fichier.
 ### RData
 
 * `save(obj1, obj2, file = "mes_objets.RData")` sauvegarder en RData.
