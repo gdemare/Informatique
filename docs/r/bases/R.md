@@ -193,7 +193,7 @@ list(
 
 #### Purr
 
-* `map_dfc()` renvoie un dataframe en colonne (dfr en ligne).
+* `map() %>% list_cbind()` renvoie un dataframe en colonne (dfr en ligne) `list_rbind()`.
 * `map_chr(Value, fonction)` renvoie du texte.
 * `map_if(condition)` appliquer que si l'élément répond à une condition.
 * `map_at(position)` appliquer en fonction de la position.
