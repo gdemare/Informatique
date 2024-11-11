@@ -94,7 +94,6 @@ Opérateur 	| Définition
 `a*b` 		| multiplication
 `np.dot(a,b)`	| produit matriciel (NxM et MxO)|
 `a.T` 		| transposition
-
 ### Importer des fonctions
 
 * `import package` charger un package complet. Les fonctions sont accessibles par `package.fonction`
@@ -121,7 +120,6 @@ Les instuctions peuvent être séparées par `;` ou par un saut de ligne.
  
 Liste des variables par défaut :
 * `%pwd` dossier par défaut.
-
 ### Format de données
 
 * `type(variable)` renvoie le type de variable.
@@ -143,8 +141,7 @@ Type de listes		| Eléments uniques 	| Doublons
 --------------------|-------------------|----------------
 Modifiable			| liste				| set
 Non modifiable		| tupple			| frozenset
-
-### Les listes modifiables
+### Liste modifiable
 
 `[] = vecteur` et `() = liste` (appelé tupple).
 
@@ -183,7 +180,7 @@ Non modifiable		| tupple			| frozenset
 	* `x = list(y)`
 	* `copy.deepcopy(y)` copie avec la library `copy`.
 
-### Les dictionnaires
+### Dictionnaire
 
 Le dictionnaire est un objet particulier. L'accés aux valeurs fait par l'id.
 
@@ -209,8 +206,7 @@ Le dictionnaire est un objet particulier. L'accés aux valeurs fait par l'id.
 
 * `dict(liste)` convertir en dictionnaire.
 * `for key in dico:` itérer un dictionnaire renvoie la clé (pour renvoyer la clé et la valeur, itérer sur `dico.items()`).
-
-### Les tupples (les listes non modifiables)
+### Tupple (liste non modifiable)
 
 * `tupple(list)` convertir en tupple.
 * `t = t + (2,)`ajouter un élément.
@@ -218,7 +214,6 @@ Le dictionnaire est un objet particulier. L'accés aux valeurs fait par l'id.
 compte un nombre de valeurs
 
 `dic.get(valeur, 0) + 1` ajoute la valeur si elle n'est pas présente et ajoute 0+1 sion ajoute +1.
-
 ### Set et frozenset
 
 Liste d'éléments uniques. Elles sont utiles pour éliminer les doublons. La différence entre les set et les frozenset est que ce dernier n'est pas modifiable.
@@ -237,14 +232,12 @@ Python			| Définition
 `.isdisjoint`	| est disjoint
 
 `{base : seq.count(base) for base in set(sequence):}` compter le nb de bases dans une séquence.
-
-### Les collections
+### Collection
 
 Pas mal de trucs. Elles permettent de compter le nombre d'éléments via `collections.Counter(seq)`
+## Types de variables
 
-## Les types de variables
-
-### Texte
+### Caratère
 
 * `r"texte /n"` les caractères spéciaux ne sont pas interprétés.
 
@@ -265,12 +258,11 @@ Fonction 		| Définition
 * `texte.find("a trouver")` renvoie la position de la première occurence (sinon -1).
 * `startswith("debut")` renvoie un booléen si la chaîne commence par début.
 * `texte.strip()` supprimer les espace au début et à la fin.
-
 #### Expression régulière (regex)
 
 Library `re`. Une expression régulière est déclarée comme `r"expr"`.
 
-* `re.search( a_rechercher, texte )` rechercher une expression regex ou un mot.
+* `re.search( a_rechercher, texte )` rechercher une expression regex ou un mot. 
 * `re.sub(r'[^a-zA-Z]', '', s)` transformer une chaine de caractère.
 
 Variable de sortie :
@@ -298,7 +290,7 @@ Exemples :
 
 * `"[^.?-]*"` tous les caractères avant `-`.
 
-### Les dates
+### Date
 
 Package : `datetime`
 
