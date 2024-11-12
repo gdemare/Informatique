@@ -207,6 +207,9 @@ Existe : `map2_`, `map_` ...
 * `pmap(function(col1, col2))` itérer un dataframe par ligne.
 
 !!! note
+	`map(df, function(col){print(col)})`  pour chaque colonne d'un df.
+
+!!! note
 	`map(dt, ~fct_print_unit_col(.x))` appliquer une fonction à chaque colonne.
 #### Apply
 
