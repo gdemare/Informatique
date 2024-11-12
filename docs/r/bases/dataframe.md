@@ -295,6 +295,9 @@ Option :
 * `by = c("col1" = "col2")` préciser la jointure.
 * `keep = T` garder les colonnes qui ont servi de jointure.
 
+!!! note
+	Pour comparer deux dataframes, on peut utiliser `anti_join()`. Les lignes différentes seront renvoyées.
+
 ### Fusions lignes et colonnes
 
 * `bind_cols(nom = valeur)` ajouter à y comme nouvelles colonnes.
