@@ -39,7 +39,11 @@
 
 * `save(obj1, obj2, file = "mes_objets.RData")` sauvegarder en RData.
 * `load("fichier.RData")` charger un RData.
-* `read.delim(file = ou text = , header = F, sep = )` charger un fichier ou du texte (`read.table(file = ou text = , header = F, sep = )` marche moins bien).
+* `read.delim(file = ou text = , header = F, sep = )` charger un fichier ou du texte.
+
+!!! note
+	Il est possible de déclarer un df sur plusieurs lignes dans un sccript et d'importer les données avec `read.delim(text = var_data, header = F, sep = )`.
+
 ### Excel
 
 Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openxlsx)` qui est la bibliothèque la plus complète.
