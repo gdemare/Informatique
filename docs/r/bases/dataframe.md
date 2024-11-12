@@ -177,7 +177,7 @@ Sélectionner les colonnes :
 
 * `mutate(nom = formule)` appliquer une fonction et ajouter une colonne (il est possible d'appliquer à toutes les variables avec `sapply` voir ci dessous et, de sélectionner une variable par son nom avec `!!sym("col1")`).
 * `mutate_all(~as.character(.x))` appliquer la fonction à toutes les colonnes.
-* `mutate_if(~fct_test(.x), function(x){drop_units(x)})` appliquer une fonction aux colonnes avec Vrai.
+* `mutate_if(~fct_test(.x), function(x){drop_units(x)})` ou `mutate_if(is.numeric, round, digits = 2)`appliquer une fonction aux colonnes avec Vrai.
 
 !!! note
 	Pour ajouter une colonne qui n'existe pas `mpg = ifelse("mpg" %in% names(.), mpg, NA))`.
