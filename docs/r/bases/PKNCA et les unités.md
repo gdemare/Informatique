@@ -40,7 +40,7 @@ Remplacer les valeurs :
          
     * `dose_obj <- PKNCAdose(dt, Dose~Time|Subject)` déclarer les doses et leurs temps d'injection.
         
-        * `route = "col"` préciser la route.
+        * `route = "col"` préciser la route, colonne ou valeur.
             
             * `"intravascular"` injection. Si l'injection est lente (infusion), il faut ajouter l'option `rate="col"` ou `duration="col"`.
             * `"extravascular"` ingestion.
