@@ -2,7 +2,7 @@
 
 `library(PKNCA)`
 
-https://billdenney.github.io/pknca/news/index.html
+[PKNCA](https://billdenney.github.io/pknca/news/index.html)
 
 !!! warning 
     Ne fonctionne pas avec `units`.
