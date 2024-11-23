@@ -53,13 +53,12 @@ Logiciels Windows :
 * [Mail spring](https://github.com/Foundry376/Mailspring), boite mail local.
 * [Noi](https://github.com/lencx/noi) ui pour les chats et consor.
 * [Nora](https://github.com/Sandakan/Nora) lecteur musique au top.
-
+* [UpdateHub](https://github.com/NexovaDev/UpdateHub) vérifier les mises à jours des logiciels.
 ### Le relatif
 
 Sur le store :
 
 * Simplenote.
-
 * [Anki](https://apps.ankiweb.net/), cartes pour l'apprentissage par répétition.
 * [Deemix](https://deemix.app/gui) - [Reddit Deemix](https://www.reddit.com/r/deemix/), télécharger des musiques depuis deezer.
 * [FreeFileSync](https://freefilesync.org/download.php), synchroniser des répertoires et des fichiers.
@@ -70,7 +69,6 @@ Sur le store :
 * [pCloud](https://www.pcloud.com/fr/download-free-online-cloud-file-storage.html)
 * [pandoc](https://pandoc.org/) convertir des fichiers en word, markdown, html.
 * Zotero, références bibliographiques.
-
 ## Ubuntu
 ## Logiciels
 
@@ -107,7 +105,6 @@ Exporter ses emails dans un fichier :
 
 * sélectionner le dossier (ou l'email)
 * outils > exporter
-
 ## Pandoc
 
 Convertir du markdown en word, html, pdf.
@@ -235,7 +232,6 @@ Type `note`, `info`, `quote`, `example`, `bug`, `danger`, `failure`, `warning`, 
 
 * [ ] élément 1
 * [X] élément 2
-
 ### Tableau
 
 colonne1	| colonne2
