@@ -1,7 +1,7 @@
 `library(Seurat)`
 
 1. Contrôle qualité
-2. Normaliser les quantités ARN pour comparer les niveaux d'expression. La quantité d'ARNm par gène est divisée par le quantité d'ARNm total par cellule. Les valeurs sont ensuite transformer avec une fonction `log` pour obtenir une distribution normale. Pour les gènes qui ne sont pas transcript, la valeur est mise à 0.
+2. Normaliser les quantités ARN pour comparer les niveau d'expression. La quantité d'ARNm par gène est divisée par le quantité d'ARNm total par cellule. Les valeurs sont ensuite transformer avec une fonction `log` pour obtenir une distribution normale. Pour les gènes qui ne sont pas transcript, la valeur est mise à 0.
 3. Choix des gènes. Tous les gènes n'apportent pas le même niveau d'information. Les gènes peu exprimés ne sont pas vraiment informatifs car ils ont tendance à diluer l'information sur les différences entre les types cellulaires. Dans les faits, on conserve les gènes avec la plus grand variabilité (écart-type) de transcript pour l'analyse.
 4. Les gènes ont différents niveau d'expression et de distribution. La contribution des gènes est différentes si tu ne veux pas que l'analyse dépende des gènes hautement exprimé il faut les 
 5. Réduction de dimension : permet de renforcer le signal d'expression entre les gènes.
@@ -92,8 +92,20 @@ Les résultats sont  The newest clustering result can be obtained by `Idents(s
 `DimPlot(seurat, reduction = "umap", label = TRUE)`
 
 `DoHeatmap(seurat, features = ct_markers) + NoLegend()` afficher le heatmap.
-
 	`FindAllMarkers(dt_kluster)` déterminer tous les marquerus.
-`FindMarkers(pbmc, ident.1 = 5)` trouver les markers pour un groupe 
+`FindMarkers(pbmc, ident.1 = 5)` trouver les markers pour un groupe
+
+
+### Klusters
+nombre de groupes clustree on garde le nombre de kljsters qui limite l'echange de cellules entre les klusters.
+
+permet de determiner la resolutions.
+
+### Integration
+
+faire correspondre les tyodes cellulaires entre les echantillons pour comparer les types en eux.
+
+algorithme recommandé harmony.
+
 #### Ressources
 [scRNA anaylisis](https://github.com/quadbio/scRNAseq_analysis_vignette/blob/master/Tutorial.md) tutoriel Seurat pour l'analysis single cell.
