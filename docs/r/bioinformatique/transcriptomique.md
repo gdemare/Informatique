@@ -2,7 +2,7 @@
 
 1. Contrôle qualité
 2. Normaliser les quantités ARN pour comparer les niveaux d'expression. La quantité d'ARNm par gène est divisée par le quantité d'ARNm total par cellule. Les valeurs sont ensuite transformer avec une fonction `log` pour obtenir une distribution normale. Pour les gènes qui ne sont pas transcript, la valeur est mise à 0.
-3. Choix des gènes. Tous les gènes n'apportent pas le même niveau d'information. Les gènes peu exprimés ne sont pas vraiment informatifs car ils ont tendance à diluer l'information sur les différences entre les types cellulaires. Dans les faits, on conserve les gènes avec la plus grand variabilité (écart type) de transcript pour l'analyse.
+3. Choix des gènes. Tous les gènes n'apportent pas le même niveau d'information. Les gènes peu exprimés ne sont pas vraiment informatifs car ils ont tendance à diluer l'information sur les différences entre les types cellulaires. Dans les faits, on conserve les gènes avec la plus grand variabilité (écart-type) de transcript pour l'analyse.
 4. Les gènes ont différents niveau d'expression et de distribution. La contribution des gènes est différentes si tu ne veux pas que l'analyse dépende des gènes hautement exprimé il faut les 
 5. Réduction de dimension : permet de renforcer le signal d'expression entre les gènes.
 
@@ -12,7 +12,7 @@ Il faut retirer les cellules avec :
 
 - trop de peu de gènes : cellules trop peu séquencées.
 - trop de gènes : souvent des gouttes qui contiennent plusieurs cellules.
-- trop de quantité de gènes mitochondriales : La plupart des ARN mitochondriaux ne contiennent pas  de queue ploy-A sauf en cas de stress cellulaire et de marqueur de mort cellulaire.
+- trop de quantité de gènes mitochondriales : La plupart des ARN mitochondriaux ne contiennent pas  de queue ploy-A sauf en cas de stress cellulaire et de marqueur de mort cellulaire. max entre 5 et 10%.
 
 Seurat format :
 
@@ -77,7 +77,7 @@ Le problème de la réduction de dimensions est qu'il faut souvent garder plus d
 !!! note 
 	tSNE or UMAP conseillé. tSNE adapté au groupes distincts et UMAP perserves trajectory-like structure better when data contains 'continuum'
 	
-`FeaturePlot(seurat, c("MKI67","NES"), ncol=3, reduction = "tsne"/umap)` représenter els résultats avec la coloration pour l'expression de cahque gène.
+`FeaturePlot(seurat, c("MKI67","NES"), ncol=3, reduction = "tsne"/umap)` représenter les résultats avec la coloration pour l'expression de cahque gène.
 ### Classification non supervisée
 
 compliqué d'appliquer une algo de classification car beaucoup de données;
