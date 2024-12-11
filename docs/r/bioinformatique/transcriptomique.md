@@ -1,3 +1,6 @@
+single cell
+objectif est de caracteriser les populations cellulaires.
+
 `library(Seurat)`
 
 1. Contrôle qualité
