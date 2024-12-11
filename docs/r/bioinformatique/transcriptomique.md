@@ -1,4 +1,4 @@
-single cell
+single cell arn seq
 objectif est de caracteriser les populations cellulaires.
 
 `library(Seurat)`
@@ -15,6 +15,7 @@ Il faut retirer les cellules avec :
 
 - trop de peu de gènes : cellules trop peu séquencées.
 - trop de gènes : souvent des gouttes qui contiennent plusieurs cellules.
+- trop d'ARNm souvent lorsqu'il y a plusieurs cellules fans la goutte `library(doublefinder`.
 - trop de quantité de gènes mitochondriales : La plupart des ARN mitochondriaux ne contiennent pas  de queue ploy-A sauf en cas de stress cellulaire et de marqueur de mort cellulaire. max entre 5 et 10%.
 
 Seurat format :
