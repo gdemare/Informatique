@@ -48,7 +48,8 @@
 
 Pour manipuler les fichiers excel, il est préférable d'utiliser `library(openxlsx)` qui est la bibliothèque la plus complète.
 
-* `readWorkbook(wb ou , sheet = "Supplies")` lire un fichier excel ou un wb.
+* `loadWorkbook(fichier)` charger un classeur excel.
+* `readWorkbook(wb ou , sheet = "Supplies")` lire une feuille excel.
 * `wb <- createWorkbook()` créer un classeur.
 * `saveWorkbook(wb, "file.xlsx")` enregistrer un classeur. Paramètres :
 
