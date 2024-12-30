@@ -249,7 +249,7 @@ Fonction 		| Définition
 `.upper()`		| mettre un texte en majuscule.
 `.capitalize()`	| premier lettre de chaque mot en majuscule.
 
-```
+``` python
 ''' texte sur 
 	pluisieurs ligne
 '''
@@ -304,7 +304,7 @@ Fonction 			| Définition
 
 ### Condition 
 
-```
+``` python
 if condition:
 	instruction
 elif condition:
@@ -335,7 +335,7 @@ Condition : `==`, `>=`, `>`, `!=`
 
 #### La boucle for
 
-```
+``` python
 for i in séquence:
 	instruction
 ```
@@ -358,7 +358,7 @@ Library : `from itertools import combinations`
 
 Les instructions sont répétées jusqu'a que ce soit la condition devienne fausse.
 
-```
+``` python
 while condition:
 	instruction
 ```
@@ -367,7 +367,7 @@ while condition:
 
 ### Déclarer une fonction 
 
-```
+``` python
 def fonction (param1, param2=10):
 	instruction
 	return valeur
@@ -498,7 +498,7 @@ fichier.close()
 
 ### Alternative
 
-```
+``` python
 with open("fichier.md", 'w', encoding='UTF8') as file:
 	file.write(i)
 ```
@@ -520,7 +520,7 @@ Paramètre :
 
 Pour lire ou écrire un fichier de façon proprement (cad pour éviter les erreurs) il est conseillé d'utiliser with :
 
-```
+``` python
 with open("zoo.txt", 'r') as filin:
 	 # type de fichiers
 ```
@@ -708,7 +708,7 @@ ou `.askopenfilename()`
 
 Recharger automatiquement un module à chaque exécution du code. Utile pour développer un module. Ne fonctionne qu'avec jupyternotebook?
 
-```
+``` python
 %load_ext autoreload
 %autoreload 2
 ```
@@ -748,7 +748,7 @@ Répéter l'opération pour le sous dossier library/bin et scripts
 Environement de développement : Jupyter
 Changer la couleur de l'environnement jupyter.
 
-```
+``` python
 pip install jupyterthemes
 pip install --upgrade jupyterthemes
 jt -t chesterish
