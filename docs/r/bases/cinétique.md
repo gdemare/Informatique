@@ -58,6 +58,9 @@ Convention de nommage des principales valeurs :
 
 !!! note
 	L'intégration se fait en sommant l'aire de chaque trapèze $(c_2 + c_1) \cdot \frac{(t_2 - t_1)}{2}$.
+
+!!! note
+	Deux méthodes d'extrapolation pour la dernière décroissance : en utilisant le taux d'élimination $\lambda$ ou en utilisant le triange avec la dernière valeur mesurée. 
 #### Résidence
 
 * Mean Residence Time (MRT) - $MRT = \frac{AUCM}{AUC}$ :  temps moyen de résidence du médicament dans l'organisme. Il est souvent déterminé à partir de Michaelis-menten ou de la $Vss$ .
