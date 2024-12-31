@@ -82,6 +82,12 @@ Convention de nommage des principales valeurs :
     Il existe principalement deux clairances : hépatique et reinnale.
 
 Superposition est une méthode pour prédire les concentrations à partir des valeurs obtenues. Les données peuvent servir pour déterminer les temps pour les doses répétées.
+
+### Ratio blood plasama
+
+Le ratio blood plasma est le proportion entre la concentration en médicament dans le sang et celle de la siys fraction de plasma.
+
+Clariance sanguine = clairance plasmatique / ratio blood/plasma
 ### Bibliographie 
 
 * [Boomer](https://www.boomer.org/c/p1/Ch05/Ch0506.html) site avec toutes les méthodes de pharmacocinétique.
