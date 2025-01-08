@@ -225,6 +225,9 @@ Options :
  
 !!! note
 	Pour les sommes cumulées, il faut utiliser `group_by` puis `mutate`.
+
+ !!! note 
+ 	`row_number()` renvoie aussi le numéro de chaque ligne.
  
 ### Remplacer une valeur
 
