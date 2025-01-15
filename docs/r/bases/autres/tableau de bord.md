@@ -164,7 +164,8 @@ Paramètres :
 `card(...)`
 
 * `card_header("Datatable loaded")` entête
-* `card_body()` corps
+* `card_header("Datatable loaded")` titre.
+* `card_body()` corps.
 * `card_footer()` pied de page.
 
 Paramètres :
