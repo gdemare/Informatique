@@ -7,6 +7,7 @@
  	* `data.frame(col1 = type, col2 = type)` 
 
 * `as.data.frame(lapply(donnees, type.convert))` réidentifier le type de variables d'un dataframe.
+* `expand.grid(col1 = vec1, col2 = vec2)` renvoie un dataframe avec la combinaison des vecteurs.
 
 Transformer une liste en dataframe :
 
