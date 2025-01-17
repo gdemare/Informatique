@@ -158,6 +158,7 @@ Fonction 						| Définition
 Package `tidyr`
 
 * `pivot_longer(cols = col_a_trans, names_to = "nv_nom", values_to = "value")` transformer plusieurs colonnes en une seule variable (pas besoin de préciser les colonnes que l'on souhaite garder).
+	* `values_fill = 0` valeur utilisée pour les NA. 
 * `pivot_wider(names_from = "name", values_from = "value")` transformer les modalités en colonnes.
 
 	* `id_cols = cols` préciser les colonnes à conserver en id de lignes.
