@@ -179,6 +179,7 @@ my_mean(c(1:3, NA))
 * `units_options(negative_power = TRUE)` modifier l'affichage des unités.
 * `attributes(dt$Value[[1]])` vérifier la valeur possède une unité.
 * `keep_units(fonction, x)` appliquer une fonction incompatible avec le format unit.
+* `ud_are_convertible(x, y)` vérifier si deux unité sont convertibles.
  
 !!! note
     Si deux jeux de données avec des unités différentes, elles sont converties durant la fusion.
