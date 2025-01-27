@@ -351,6 +351,7 @@ Symbole		| Définition
 `[:alpha:]`	| toutes les lettres.
 `()` 		| un symbole parmis la liste.
 `[]+`		| jusqu'a que ce soit faux.
+`(?i)`		| ignorer la caste des lettes.
 !!! note
 	Le caractère d'échappement est `\\`.
 ## Connecter R à une bdd
