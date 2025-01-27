@@ -333,7 +333,7 @@ observeEvent(input$table1_cell_edit, {
 * `rownames = T` afficher le nom des lignes.
 
 !!! note
-  `selection = "multiple"` et `onClick = "select"` pour ajouter une colonne de checkboxes.
+	`selection = "multiple"` et `onClick = "select"` pour ajouter une colonne de checkboxes.
 
 * `renderReactable({reactable(iris)})`
 * `reactableOutput("table")`
