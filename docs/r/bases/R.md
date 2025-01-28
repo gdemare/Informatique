@@ -211,6 +211,9 @@ Existe : `map2_`, `map_` ...
 * `walk(liste, function(x){x})` pareil que map mais ne renvoie rien.
 * `pmap(function(col1, col2))` itérer un dataframe par ligne.
 
+!!! warning
+	Pour le `pmap` les paramètres de la fonction doivent avoir le même nom que les colonnes.
+
 !!! note
 	Pour parcour les colonnes d'un df, il faut utiliser `imap`.
 
