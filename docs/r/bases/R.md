@@ -340,6 +340,7 @@ Library `stringr`
 * `str_extract(texte, exp_re)` extraire un texte.
 * `str_locate(texte, exp_re)` récupérer la postion de début et de fin.
 * `str_trim(string, side = c("both", "left", "right"))` supprimer les espaces au début et à la fin.
+* `str_split(vecteur, pattern)` séparer une chaine en vecteur.
 
 Symbole		| Définition
 ------------|-----------------
