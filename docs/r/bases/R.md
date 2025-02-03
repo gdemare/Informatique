@@ -195,6 +195,9 @@ list(
 ## Mathématique
 
 * `signif(x, 2)` choirisr le nombre de chiffres significatifs.
+*  `%/%` division entière.
+* `%%` modulo.
+* `ceiling(1.1)` arrondi à l'entier supérieur. 
 ### Appliquer à tous les éléments
 
 #### Purr
