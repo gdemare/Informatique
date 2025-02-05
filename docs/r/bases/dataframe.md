@@ -91,7 +91,7 @@ max_by <- function(data, var, is_true) {
 }
 ```
 
-* `enquo(col1)` récupérer le nom de la colonne (penser à la convertir en caractère `as_string()`).
+* `enquo(col1)` récupérer le nom de la colonne (penser à la convertir en caractère `rlang::as_label()`).
 
 Sélecteur de colonnes :
 
