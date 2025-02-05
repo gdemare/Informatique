@@ -91,6 +91,8 @@ max_by <- function(data, var, is_true) {
 }
 ```
 
+* `enquo(col1)` récupérer le nom de la colonne (penser à la convertir en caractère `as_string()`).
+
 Sélecteur de colonnes :
 
 * `across(.cols, .fns, ..., .names = NULL, .unpack = FALSE)` sélectionner des colonnes avec vecteurs textes.
