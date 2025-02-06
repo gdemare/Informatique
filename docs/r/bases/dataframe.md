@@ -261,7 +261,7 @@ Grouper les données :
 * `group_split()` séparer le jeu de données en plusieurs (précédé d'un `group_by`).
 * Appliquer des fonctions chaque groupe :
 
-```
+``` r
 group_map(function(x, row_id) {
     x %>% transmute(
       var1 = a + b,
