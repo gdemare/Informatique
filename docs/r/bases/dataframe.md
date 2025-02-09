@@ -7,6 +7,7 @@
  	* `data.frame(col1 = type, col2 = type)` 
 
 * `as.data.frame(lapply(donnees, type.convert))` réidentifier le type de variables d'un dataframe.
+* `expand.grid(col1 = vec1, col2 = vec2)` renvoie un dataframe avec la combinaison des vecteurs.
 
 Transformer une liste en dataframe :
 
@@ -90,6 +91,8 @@ max_by <- function(data, var, is_true) {
 }
 ```
 
+* `enquo(col1)` récupérer le nom de la colonne (penser à la convertir en caractère `rlang::as_label()`).
+
 Sélecteur de colonnes :
 
 * `across(.cols, .fns, ..., .names = NULL, .unpack = FALSE)` sélectionner des colonnes avec vecteurs textes.
@@ -157,6 +160,7 @@ Fonction 						| Définition
 Package `tidyr`
 
 * `pivot_longer(cols = col_a_trans, names_to = "nv_nom", values_to = "value")` transformer plusieurs colonnes en une seule variable (pas besoin de préciser les colonnes que l'on souhaite garder).
+	* `values_fill = 0` valeur utilisée pour les NA. 
 * `pivot_wider(names_from = "name", values_from = "value")` transformer les modalités en colonnes.
 
 	* `id_cols = cols` préciser les colonnes à conserver en id de lignes.
@@ -178,6 +182,7 @@ Sélectionner les colonnes :
 * `mutate(nom = formule)` appliquer une fonction et ajouter une colonne (il est possible d'appliquer à toutes les variables avec `sapply` voir ci dessous et, de sélectionner une variable par son nom avec `!!sym("col1")`).
 * `mutate_all(~as.character(.x))` appliquer la fonction à toutes les colonnes.
 * `mutate_if(~fct_test(.x), function(x){drop_units(x)})` ou `mutate_if(is.numeric, round, digits = 2)`appliquer une fonction aux colonnes avec Vrai.
+* `mutate_at(vars(all_of(tr_pk$PPTESTCD)), ~ifelse(end == Inf, T, .))` appliquer une fonction a des colonnes particulières.
 
 !!! note
 	Pour ajouter une colonne qui n'existe pas `mpg = ifelse("mpg" %in% names(.), mpg, NA))`.
@@ -225,6 +230,9 @@ Options :
  
 !!! note
 	Pour les sommes cumulées, il faut utiliser `group_by` puis `mutate`.
+
+ !!! note 
+ 	`row_number()` renvoie aussi le numéro de chaque ligne.
  
 ### Remplacer une valeur
 
@@ -253,7 +261,7 @@ Grouper les données :
 * `group_split()` séparer le jeu de données en plusieurs (précédé d'un `group_by`).
 * Appliquer des fonctions chaque groupe :
 
-```
+``` r
 group_map(function(x, row_id) {
     x %>% transmute(
       var1 = a + b,

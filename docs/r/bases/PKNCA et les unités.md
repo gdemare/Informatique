@@ -50,7 +50,7 @@ Remplacer les valeurs :
     
 2. `PKNCAdata(conc_obj, dose_obj)` fusionner les tables doses et concentration. Le résultat est un tableau avec tous les paramètres cinétiques pour chaque individu (`summary(data_pknca)` afficher le résumé des groupes).
    
-   * `intervals =` liste des indicateurs à ajouter (`data.frame(start = 0, end = Inf, cmax = TRUE...`).
+   * `intervals =` liste des indicateurs à ajouter (`data.frame(id_sujet, start = 0, end = Inf, cmax = TRUE...`).
    * `units = d_units` associer une unité aux valeurs (`pknca_units_table(concu="ng/mL", doseu="mg/kg", amountu= "mg", timeu="hr")`. Il est possible de déclarer une unité préférentiellement pour l'affichage.
   
     Retour :
@@ -179,6 +179,7 @@ my_mean(c(1:3, NA))
 * `units_options(negative_power = TRUE)` modifier l'affichage des unités.
 * `attributes(dt$Value[[1]])` vérifier la valeur possède une unité.
 * `keep_units(fonction, x)` appliquer une fonction incompatible avec le format unit.
+* `ud_are_convertible(x, y)` vérifier si deux unité sont convertibles.
  
 !!! note
     Si deux jeux de données avec des unités différentes, elles sont converties durant la fusion.

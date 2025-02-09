@@ -7,7 +7,12 @@
 * `sd(vecteur)` écart-type.
 ## Loi de probabilité
 
-Library : `stats`
+`library(stats)`
+
+### Loi uniforme
+
+* `runif(n, min, max)` renvoie n nombres aléatoires d'une loi continue uniforme.
+
 ### Loi normale
 
 * `rnorm(nb, mean = 0, sd = 1)` générer plusieurs nombres aléatoires suivant une loi normale.

@@ -40,7 +40,7 @@ Option :
 * `label = 'titre'` texte a afficher.
 
 Les méthodes :
-
+>
 * `actionButton("id",...)` bouton.
 * `checkboxInput("id",...)` liste à cocher à un seul élément.
 * `checkboxGroupInput("id",...)` liste à cocher à plsuieurs éléments.
@@ -121,7 +121,7 @@ Paramètres :
 `library(bslib)`
 
 !!! example
-  Exemple de tableau de bord [chicago flights](https://bslib.shinyapps.io/flights/).
+	Exemple de tableau de bord [chicago flights](https://bslib.shinyapps.io/flights/).
 
 ##### Structure de la page
 
@@ -152,7 +152,7 @@ Paramètres :
   * `sidebar = sidebar(...)` ajouter des élements au menu.
 
 !!! note 
-  Il faut ajouter `page_X(fluidPage(...))` pour pouvoir interagir avec les DT.
+	Il faut ajouter `page_X(fluidPage(...))` pour pouvoir interagir avec les DT.
 
 * `layout_sidebar()` ajouter le menu à gauche.
 
@@ -164,7 +164,8 @@ Paramètres :
 `card(...)`
 
 * `card_header("Datatable loaded")` entête
-* `card_body()` corps
+* `card_header("Datatable loaded")` titre.
+* `card_body()` corps.
 * `card_footer()` pied de page.
 
 Paramètres :
@@ -332,7 +333,7 @@ observeEvent(input$table1_cell_edit, {
 * `rownames = T` afficher le nom des lignes.
 
 !!! note
-  `selection = "multiple"` et `onClick = "select"` pour ajouter une colonne de checkboxes.
+	`selection = "multiple"` et `onClick = "select"` pour ajouter une colonne de checkboxes.
 
 * `renderReactable({reactable(iris)})`
 * `reactableOutput("table")`
@@ -537,12 +538,13 @@ Page 4 {data-navmenu="Menu B"}
 
 * `valueBox(comments, icon = "fa-comments")` ajouter une valeur box.
 
+### Barre de progression et animations de chargement
 
-*       # progress bar to follow compute
-      withProgress(message = 'Compute parameters PK', style = "notification", value = 0, {
+```r
+withProgress(message = 'Compute parameters PK', style = "notification", value = 0, {
 
        # incProgress(percentage_by_group, detail = paste("Group", name_grp))
       })
+```
 
-
-`shinycssloaders::withSpinner(ui)` animation de chargement d'un élément. 
+* `shinycssloaders::withSpinner(ui)` animation de chargement d'un élément. 

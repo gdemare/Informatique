@@ -195,6 +195,9 @@ list(
 ## Mathématique
 
 * `signif(x, 2)` choirisr le nombre de chiffres significatifs.
+*  `%/%` division entière.
+* `%%` modulo.
+* `ceiling(1.1)` arrondi à l'entier supérieur. 
 ### Appliquer à tous les éléments
 
 #### Purr
@@ -204,6 +207,7 @@ list(
 * `map_if(condition)` appliquer que si l'élément répond à une condition.
 * `map_at(position)` appliquer en fonction de la position.
 * `imap(liste, function(x, id)` renvoie la valeur et l'id (nom de colonnes) de chaque élément.
+* `transpose(liste)` inverse les niveaux d'une liste : list(1 = list(A = val)) -> list(A = list(1 = val))
 
 Existe : `map2_`, `map_` ...
 
@@ -211,11 +215,12 @@ Existe : `map2_`, `map_` ...
 * `walk(liste, function(x){x})` pareil que map mais ne renvoie rien.
 * `pmap(function(col1, col2))` itérer un dataframe par ligne.
 
-!!! note
-	`map(df, function(col){print(col)})`  pour chaque colonne d'un df.
+!!! warning
+	Pour le `pmap` les paramètres de la fonction doivent avoir le même nom que les colonnes.
 
 !!! note
-	`map(dt, ~fct_print_unit_col(.x))` appliquer une fonction à chaque colonne.
+	Pour parcour les colonnes d'un df, il faut utiliser `imap`.
+
 #### Apply
 
 Apply permet d'appliquer une fonction à chaque élément.
@@ -339,6 +344,7 @@ Library `stringr`
 * `str_extract(texte, exp_re)` extraire un texte.
 * `str_locate(texte, exp_re)` récupérer la postion de début et de fin.
 * `str_trim(string, side = c("both", "left", "right"))` supprimer les espaces au début et à la fin.
+* `str_split(vecteur, pattern)` séparer une chaine en vecteur.
 
 Symbole		| Définition
 ------------|-----------------
@@ -353,6 +359,7 @@ Symbole		| Définition
 `[:alpha:]`	| toutes les lettres.
 `()` 		| un symbole parmis la liste.
 `[]+`		| jusqu'a que ce soit faux.
+`(?i)`		| ignorer la caste des lettes.
 !!! note
 	Le caractère d'échappement est `\\`.
 ## Connecter R à une bdd
