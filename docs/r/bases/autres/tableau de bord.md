@@ -457,10 +457,11 @@ mod_nom_server <- function(id, r){
 
 [Blog](https://www.charlesbordet.com/fr/reactive-shiny/#la-fonction-observeevent) avec un bon article sur les variables réactives.
 
-Shiny fonction `req`
+`req(variable)` le code est stopé si les variables requises ne sont pas disponibles.
 
-eventReact
-`ignoreNULL = FALSE` ne déclenche pas le calcul si l'élément est Null.
+`eventReact()`
+
+* `ignoreNULL = FALSE` ne déclenche pas le calcul si l'élément est Null.
 
 ----------------------------
 
