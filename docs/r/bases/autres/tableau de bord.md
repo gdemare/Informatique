@@ -350,6 +350,15 @@ Colorer les cellules `library(reactablefmtr)`
 
 Ajouter des paramètres de modifications `library(reactable.extras)`
 
+```r
+ columns = list(
+            unit_to = colDef(cell = text_extra("text")) 
+            )
+```
+
+* `text_extra("text")` zone de texte libre.
+* `dropdown_extra(id = "dropdown", vecteur, class = "dropdown-extra")` liste à choix.
+
 #### Download file
 
 * `downloadButton(outputId = "download_kluster", label = "Kluster export")` bouton de téléchargement d'un fichier dans UI.
