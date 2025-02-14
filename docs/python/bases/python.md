@@ -5,9 +5,6 @@
 ### Extension fichier Python
 
 * `.pyw` fichier python exécutable.
-
-
-$$\sqrt{\frac{\sum{\epsilon^2}}{\sqrt{n-2}}} \cdot \sqrt{\frac{1}{n} \cdot \frac{(val-\mu)^2}{\sum{(x-\mu)^2}} }$$
 ### Conda
 
 Conda est un logiciel qui permet de gérer les environnements en Python. Cela permet par exmeple d'installer plusieurs versions différentes sur la même machine.
