@@ -2,7 +2,7 @@ single cell arn seq
 objectif est de caracteriser les populations cellulaires.
 
 !!! warning
-   en cours on a fait varier le nombre de clusters avec un vecteur de resolution puis apres on  fait l'umap. Le nombre de groupe peut etrez determiner av c clustree.
+	En cours on a fait varier le nombre de clusters avec un vecteur de résolution puis on fait l'umap. Le nombre de groupes peut être determiner avec clustree.
 
 `library(Seurat)`
 
