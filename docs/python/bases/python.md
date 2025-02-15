@@ -7,7 +7,7 @@
 * `.pyw` fichier python exécutable.
 ### Conda
 
-Conda est un logiciel qui permet de gérer les environnements en Python. Cela permet par exmeple d'installer plusieurs versions différentes sur la même machine.
+Conda est un logiciel qui permet de gérer les environnements en Python. Cela permet par exemple d'installer plusieurs versions différentes sur la même machine.
 
 * `conda create -n python_env` créer un environnement conda.
 
@@ -18,7 +18,7 @@ Conda est un logiciel qui permet de gérer les environnements en Python. Cela pe
 * `conda deactivate` quitter l'environnement.
 * `conda update --all` mettre a jour tous les packages.
 
-Dans pour choisir le noyau d'un envrionnement Visual Code ctrl+shift+P, sélectionner, `Pyhon : select Interpreter`. Sinon, dans le Terminal :
+Dans pour choisir le noyau d'un environnement Visual Code ctrl+shift+P, sélectionner, `Pyhon : select Interpreter`. Sinon, dans le Terminal :
 
 1. `conda activate ppoulain-python` activer l'environnement.
 2. `code .` lancer Visual Code.
@@ -26,7 +26,7 @@ Dans pour choisir le noyau d'un envrionnement Visual Code ctrl+shift+P, sélecti
 
 * `pip install package` installer une bibliothèque. Paramètre :
 
-	* `-r package1, package2` installer plusieurs librarys en une seule fois. Pour créer l'installation d'un programme python, il est possible de créer un fichier `requirements.txt` qui contient la liste des library. Il suffit d'exécuter `pip install -r requirements.txt` pour installer tous les modules.
+	* `-r package1, package2` installer plusieurs libraries en une seule fois. Pour créer l'installation d'un programme python, il est possible de créer un fichier `requirements.txt` qui contient la liste des library. Il suffit d'exécuter `pip install -r requirements.txt` pour installer tous les modules.
 
 !!! note
 	Il est possible de stocker le nom des library à utiliser dans un fichier. Les library sont accessibles `c:\users\guigui\anaconda3\envs\python_env\lib\site-packages`
@@ -418,7 +418,6 @@ Caractère 		| Définition
 `\n` 			| Retour à la ligne
 `\\` 			| backlash (\)
 `\t`			| Tabulation
-
 #### Formatage des variables en f-string 
 
 Exemple 		| Formatage		|	 Résultat 
@@ -435,7 +434,6 @@ Example 		| Position			| Résultat
 `f"{313:*^10} mots"`	| centre avec symbole			| `***313**** mots`
 `f"{314872:<10} mots"`	| décalle le texte gauche		| `314872     mots`
 `f"{313:>10} mots"`		| décalle à droite				| `       313 mots`
-
 ## ASCII
 
 * `ord('Lettre')` renvoie le code ASCII.
@@ -443,11 +441,10 @@ Example 		| Position			| Résultat
 
 ## Autres fonctions utiles
 
-Fonction 		| Définition
-----------------|----------------
-`texte.strip()`	| supprimer les espaces
-`len(texte)`	| nombre de caractères
-
+| Fonction        | Définition            |
+| --------------- | --------------------- |
+| `texte.strip()` | supprimer les espaces |
+| `len(texte)`    | nombre de caractères  |
 ## Les fichiers
 
 `urllib.request.urlretrieve(url, variable)` récupérer un fichier depuis une url (`import urllib`).
@@ -456,34 +453,32 @@ Fonction 		| Définition
 
 `import os` 
 
-Fonction 				| Définition
-------------------------|-----------------
-`remove(fichier)` 		| supprimer un fichier
-`getcwd()` 				| dossier actuel
-`chdir(dossier)` 		| changer le dossier par défaut
-`listdir()` 			| liste des dossiers et fichiers d'une répertoire
-`mkdir(nom)` 			| créer un dossier
-`rmdir(dossier)` 		| supprimer un dossier
-`name`					| renvoie le nom de l'os actuel
-`path.exists(chemin)` 	| existence d'un répertoire ou d'un fichier
-`path.basename(chemin/fichier)`	| renvoie le nom du fichier sans le chemin
-`path.isfile(fichier)` 	| vérifier l'existence d'un fichier
+| Fonction                        | Définition                                      |
+| ------------------------------- | ----------------------------------------------- |
+| `remove(fichier)`               | supprimer un fichier                            |
+| `getcwd()`                      | dossier actuel                                  |
+| `chdir(dossier)`                | changer le dossier par défaut                   |
+| `listdir()`                     | liste des dossiers et fichiers d'une répertoire |
+| `mkdir(nom)`                    | créer un dossier                                |
+| `rmdir(dossier)`                | supprimer un dossier                            |
+| `name`                          | renvoie le nom de l'os actuel                   |
+| `path.exists(chemin)`           | existence d'un répertoire ou d'un fichier       |
+| `path.basename(chemin/fichier)` | renvoie le nom du fichier sans le chemin        |
+| `path.isfile(fichier)`          | vérifier l'existence d'un fichier               |
 
 library : `shutil`
 
-Fonction										| Définition
-------------------------------------------------|----------------------
-`shutil.copy(fichier, dossier ou fichier)` 		| copier un fichier
-`shutil.move( fichier, dossier_destination )`	| renommer un fichier
-`shutil.rename( ancien, nouveau)` 				| renommer un fichier 
+| Fonction                                      | Définition          |
+| --------------------------------------------- | ------------------- |
+| `shutil.copy(fichier, dossier ou fichier)`    | copier un fichier   |
+| `shutil.move( fichier, dossier_destination )` | renommer un fichier |
+| `shutil.rename( ancien, nouveau)`             | renommer un fichier |
 
 * `glob('*.extension')` lister les fichiers (`import glob`).
-
 #### Sys
 
 * `sys.arv` liste des arguments donner au scipt Attention `sys.argv[0]` contient le nom du script.
 * `sys.exist("message")` écrire un message et arrêter du script.
-
 ### Enregistrer un fichier
 
 ``` python
@@ -492,7 +487,6 @@ fichier = open('journal Le Monde/index.html', "a")
 fichier.write(index)
 fichier.close()
 ```
-
 ### Alternative
 
 ``` python
@@ -501,7 +495,6 @@ with open("fichier.md", 'w', encoding='UTF8') as file:
 ```
 
 `\n` est le séparateur entre les lignes. Attention il n'y à pas de saut à la ligne par défaut.
-
 ### Importer un fichier 
 
 * `open('fichier.txt', 'w', encoding = 'utf-8')` ouvrir un fichier. _Rmq :_ `open` permet de créer un fichier.
@@ -543,7 +536,6 @@ with open("zoo.txt", 'r') as fichier1, open("vincenne.txt", 'w') as fichier2:
 	for i in fichier1.readlines():
 		fichier2.write( i )
 ```
-
 ### Ecrire une page html
 
 `from yattag import Doc`
@@ -567,7 +559,6 @@ index = doc.getvalue()
 
 !!! note
 	Possibilite d'inclure des boucles et des conditions à l'interieur du doc.asis
-
 ### Les images
 
 #### Skimage
@@ -576,7 +567,6 @@ Package `from skimage import io`
 
 * `io.imread("chemin")` importer une image.
 * `io.imshow(monImage) ` afficher l'image.
-
 #### pillow
 
 Package `from PIL import Image`
@@ -595,7 +585,6 @@ Attribut d'une image :
 * `var_img.width` récupérer la largeur.
 * `var_img.getpixel((x,y))` récuperer la valeur des coordonnées rgb du pixel.
 * `var_img.putpixel((x,y), (r,g,b))` changer la couleur d'un pixel.
-
 ### Excel
 
 Library `import openpyxl`
