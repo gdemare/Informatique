@@ -339,6 +339,13 @@ observeEvent(input$table1_cell_edit, {
 * `reactableOutput("table")`
 * `getReactableState("tab_pk", "selected")` renvoie tous les numéros des lignes sélectionnées.
 
+```
+colonne = colDef()
+```
+
+* `name = "Sepal Length"` nom de la colonne à afficher
+* `show = T` afficher la colonne.
+
 Colorer les cellules `library(reactablefmtr)`  
 
  are option for `reactable()`
