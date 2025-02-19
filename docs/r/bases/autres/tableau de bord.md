@@ -40,7 +40,7 @@ Option :
 * `label = 'titre'` texte a afficher.
 
 Les méthodes :
->
+
 * `actionButton("id",...)` bouton.
 * `checkboxInput("id",...)` liste à cocher à un seul élément.
 * `checkboxGroupInput("id",...)` liste à cocher à plsuieurs éléments.
