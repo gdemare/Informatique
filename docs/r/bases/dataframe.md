@@ -93,6 +93,9 @@ max_by <- function(data, var, is_true) {
 
 * `enquo(col1)` récupérer le nom de la colonne (penser à la convertir en caractère `rlang::as_label()`).
 
+!!! note
+	Pensez à utiliser `tryCatch({...}, error = function(e) {})` lorsque que un paramètre n'est pas nécessairement un nom de colonne dplyr.
+
 Sélecteur de colonnes :
 
 * `across(.cols, .fns, ..., .names = NULL, .unpack = FALSE)` sélectionner des colonnes avec vecteurs textes.
