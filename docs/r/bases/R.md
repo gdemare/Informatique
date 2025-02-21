@@ -162,6 +162,7 @@ Déclarer des variables :
 * `intersect(vec1, vec2)` intersection de deux vecteurs.
 * `ave(df$valeurs, df$col1, FUN = cumsum)` calculer une somme cumulée.
 * `setNames(c(10, 20, 30), c("Element1", "Element2", "Element3"))` ou `c(nom1 = val1, nom2 = val2)` nommer les valeurs.
+* `Filter(function(x){!is.na(x)}, row_unit)` filtrer un vecteur ou une liste.
 ### Listes
 
 ``` r
