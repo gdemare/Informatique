@@ -243,7 +243,8 @@ nomFonction <- function(x){
 * `as.list(environment())`
 ### Les erreurs
 
-* `try(log("ABC"), TRUE)` masque le message si une erreur se produit.
+* `try(log("ABC"), TRUE)` masque le message si une erreur se produit :
+	* `silent = F` ne pas afficher de message d'erreur. 
 * `tryCatch(log("ABC"), error = function(e) {print("error")})` afficher un message quand la fonction produit une erreur.
 ## Condition 
 
