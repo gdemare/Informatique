@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ea3fdfadc09b0282",
+        "id": "15acb096127aba7e",
         "type": "tabs",
         "children": [
           {
-            "id": "11f79084c25133a9",
+            "id": "3f219f89f88ad35d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/logiciels et os/os/jailbreak.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "jailbreak"
+              "title": "Nouvel onglet"
             }
           }
         ]
@@ -163,10 +159,10 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "11f79084c25133a9",
+  "active": "3f219f89f88ad35d",
   "lastOpenFiles": [
-    "docs/python/bases/python.md",
     "docs/logiciels et os/os/jailbreak.md",
+    "docs/python/bases/python.md",
     "docs/logiciels et os/logiciels.md",
     "docs/r/bases/R.md",
     "docs/r/models/classification/ANOVA.md",
