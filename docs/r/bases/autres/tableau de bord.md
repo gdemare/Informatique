@@ -254,7 +254,7 @@ Les sorties doivent être stockées dans la variable
 
 code server                       | rendu                     | code ui
 ----------------------------------|---------------------------|-------
-`renderText({texte})`             | texte                     | `textOutput('variable')`
+`renderText({texte})`             | texte                     | `textOutput('variable')`, `htmlOutput("id")` 
 `renderPrint(variable)`           | variable                  |
 `renderPlot({graphique})`         | graphique                 | `plotOutput('variable')`
 `renderTable({tableau})`          | tableau                   | `tableOutput('variable')`
