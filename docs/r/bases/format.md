@@ -27,3 +27,7 @@ Les variables des dataframe sont par defaut en Factor.
 * `prettyNum(nb)` convertir une valeur numérique en texte.
 
     * `scientific = F` ne pas afficher de puissances.
+### Formater les dates et heures
+
+`as.POSIXct(date ou numerique)` convertir un numerique ou un texte en date.
+`format(as.POSIXct(Sys.time()), "%Y-%m-%d %H:%M:%S")` formater une date ou une date temps.
