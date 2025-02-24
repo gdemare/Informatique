@@ -300,6 +300,7 @@ while(condition){
 `library(lubridate)`
 
 * `Sys.Date()` date du jour.
+* `Sys.time()` date et heure du jour.
 * `as_datetime()` convertir en date time.
 * `as.Date('2017-10-12', format =)` convertir en date.
 
