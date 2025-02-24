@@ -198,7 +198,8 @@ list(
 * `signif(x, 2)` choirisr le nombre de chiffres significatifs.
 *  `%/%` division entière.
 * `%%` modulo.
-* `ceiling(1.1)` arrondi à l'entier supérieur. 
+* `ceiling(1.1)` arrondi à l'entier supérieur.
+* `floor()` arrondi à l'entier inférieur. 
 ### Appliquer à tous les éléments
 
 #### Purr
