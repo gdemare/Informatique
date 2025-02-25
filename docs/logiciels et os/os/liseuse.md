@@ -11,7 +11,7 @@ Les dictionnaires doivent être au format StarDict (*.idx, *.ifo or *.ifo.gz, *.
 
 Liste de dictionnaires :
 
-* [https://github.com/BoboTiG/ebook-reader-dict?tab=readme-ov-file] dictionnaire avec l'étymologie.
+* [ebook-reader-dict](https://github.com/BoboTiG/ebook-reader-dict?tab=readme-ov-file) dictionnaire avec l'étymologie.
 
 Ajouter un dictionnaire :
 
