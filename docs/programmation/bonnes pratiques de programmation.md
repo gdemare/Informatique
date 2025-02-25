@@ -47,28 +47,33 @@ Nom                | Type
 * [roxygen2](https://github.com/r-lib/roxygen2), doc sur les fonctions R.
 * [the Book of Apps for Statistics Teaching (BOAST)](https://educationshinyappteam.github.io/), bouquin portait sur le développement d'applications R Shiny qui semble assez complet.
 
-Utilise # load data -------------------------
-# =============================
-Pour séparer le code et les rendre plus facilement lisibles
-Package a charger au début du script
-Max 80 caractère par ligne
-Pour le texte utilisé " à la palce de '
-Fonction sans argument = sans ()
+* utiliser des séparateurs pour découper le code en partie et faciliter lecture :
 
-Rmd first : Quand le developpement commence par la documentation - Rtask (thinkr.fr) (a lire)
-Versioned via git
-Documented via rmarkdown
-Tester via test that
+    * `# title  -------------------------`
+    * `# =============================`
+  
+* charger les packages au début du script.
+* limiter le nombre de caractères maximum à 80 par ligne.
+* pour le texte utiliser `"` à la place de `'`.
+* les fonction sans argument sont déclarer sans `()`.
 
-Éviter setwd()
-Utiliser des chemins relatif avec la fonction here() du package here
-Usethis::proj_sitrep() permet de vérifier que tous est installer correctement.
+!!! note
+    Quand le developpement commence par la documentation - Rtask (thinkr.fr) (a lire)
+
+Pacakges utils : 
+* pour le versionnage `git`.
+* pour la documentation `rmarkdown`.
+* pour automatiser les tests `that`
+### Chemins
+
+* éviter `setwd()` pour préférer les chemins relatifs avec la fonction `here()` du package `library(here)`.
+`Usethis::proj_sitrep()` permet de vérifier que tout est installé correctement.
 
 Comment nommer les choses explicitement : What They Forgot to Teach You About R - 5  How to name files (rstats.wtf)
 
 Environnement reproductible https://thinkr.fr/dockeriser-application-shiny/
 
-Histoorer les versions 
+Historiser les versions 
 
 Sauvegarder et gérer les différentes versions (permet notamment de revenir en arrière en cas de pb).
 Garder uentrace de l'historique des modif
@@ -80,7 +85,7 @@ https://rtask.thinkr.fr/fr/quand-le-developpement-commence-par-la-documentation/
 
 ### Python
 
-```
+``` py
 def multiplie_nombres(nombre1, nombre2):
 """Multiplication de deux nombres entiers.
 
