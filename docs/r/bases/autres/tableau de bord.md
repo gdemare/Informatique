@@ -139,6 +139,9 @@ Paramètres :
 * `page_fillable(...)` remplir l'ensemble de la page.
 * `page_navbar(titre, ...)` barre horizontal en haut. Elements ajouter :
 
+	* `title = "PKE"`
+ 	* `footer =`
+
   * `nav_panel(titre, contenu)` ajouter un ongler
   * `nav_menu(titre, nav_item("ele1"), nav_item("ele2"))` ajouter une liste avec les onglets.
   * `nav_spacer()` espace dans le menu.
