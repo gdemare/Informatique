@@ -7,7 +7,7 @@
 Les dictionnaires doivent être au format StarDict (*.idx, *.ifo or *.ifo.gz, *.dict or *.dict.dz).
 
 !!! note
-  Pour changer le dictionnaire par défaut, il faut selectionner un mot et rester appuyer sur le dictionnaire de préférence.
+	Pour changer le dictionnaire par défaut, il faut selectionner un mot et rester appuyer sur le dictionnaire de préférence.
 
 Liste de dictionnaires :
 
