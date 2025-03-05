@@ -114,7 +114,8 @@ Fonctions supplémentaires :
 R                            | Description
 -----------------------------|----
 `tmax(conc, time)`           | $t_max$
-`pk.tss.data.prep()`
+
+Paramètres pour créer un nouveau paramètre : `conc`, `time`, `time.dose`, `volume`, `duration.dose`.
 
 #### Lister les PK
 
