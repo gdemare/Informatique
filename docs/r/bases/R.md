@@ -144,7 +144,7 @@ Déclarer des variables :
 * `df[ligne, colonne]` sélectionner une ligne, une colonne ou une cellule (laisser vide pour garder tous les champs).
 ### Manipuler les vecteurs 
 
-* `na.omit(x)` supprimer les valeurs NA.
+* `discard(x, is.na)`  supprimer les valeurs NA (aussi `na.omit(x)` mais renovie une list).
 * `sort(x)` ordonner.
 * `rev(x)` renver l'ordre.
 * `order(x)` renvoie l'index de trie.
