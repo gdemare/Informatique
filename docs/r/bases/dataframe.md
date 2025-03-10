@@ -142,6 +142,9 @@ En fonction du nom des colonnes :
 	* `.keep_all = TRUE` garder tous les champs.
 
 * `arrange(var1, var2)` trier en ordre décroisssant `desc(var)`.
+
+ * `.by_group = TRUE` trier par groupe.
+
 * `dt[["col1]]` sélectionner une colonne avec son nom en caractère en dehors de dplyr.
 * `relocate(col, .before = /.after = )` changer la position d'une colonne.
 
