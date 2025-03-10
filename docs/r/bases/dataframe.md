@@ -209,7 +209,7 @@ Options :
 | `n()`                     | Nombre de lignes.                                                             |
 | `n_distinct()`            | Nombre de lignes distinctes.                                                  |
 | `lead()`                  | Récupérer la valeur de la ligne d'avant.                                      |
-| `lag(col, default = 0/1)` | Récupérer la valeur de la colonne/ligne d'avant .                             |
+| `lag(col, default = 0/1)` | Récupérer la valeur de la colonne/ligne d'après .                             |
 | `dense_rank()`            | Ordonner sans sauts de rangs.                                                 |
 | `min_rank()`              | Ordonner avec sauts de rangs.                                                 |
 | `percent_rank()`          | Rangs de (min rank) entre [0, 1].                                             |
