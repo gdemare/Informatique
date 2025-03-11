@@ -149,7 +149,7 @@ Déclarer des variables :
 * `rev(x)` renver l'ordre.
 * `order(x)` renvoie l'index de trie.
 * `rle(x)` liste avec le nombre d'occurences successives.
-* `table(x)` tableau d'effectifs.
+* `table(x)` tableau d'effectifs et de contingence.
 * `add_margins(table)` ajouter des totaux au tableaux.
 * `unique(x)` valeurs uniques.
 * `c(vec1, vec2)` concaténer deux vecteurs.
