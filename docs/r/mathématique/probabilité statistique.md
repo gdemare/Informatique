@@ -33,3 +33,6 @@
 ### Graphiques
 `library("ggstatsplot")`
 * `ggbetweenstats(df, group, value)` faire un graphique et le test.
+
+### Indicateur
+*  `DescTools::Gini(table_contigence)` coefficient de Gini (0 égalité parfaite et 1 inégalité parfaite).
