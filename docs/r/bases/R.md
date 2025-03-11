@@ -211,6 +211,7 @@ list(
 * `map_at(position)` appliquer en fonction de la position.
 * `imap(liste, function(x, id)` renvoie la valeur et l'id (nom de colonnes) de chaque élément.
 * `transpose(liste)` inverse les niveaux d'une liste : list(1 = list(A = val)) -> list(A = list(1 = val))
+*  `flatten()` supprimer les niveaux d'une liste.
 
 Existe : `map2_`, `map_` ...
 
