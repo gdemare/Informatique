@@ -1,3 +1,7 @@
+### Bouquins gratuits
+
+* [Nos Livres](https://www.noslivres.net/) catalogue de livres électroniques du domaine public francophone (projet Gutenberg,...).
+
 ### Koreader
 
 [Koreader](https://koreader.rocks/) logiciel de lecture d'ebooks de référence et open source.

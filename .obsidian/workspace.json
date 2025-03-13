@@ -11,10 +11,14 @@
             "id": "3f219f89f88ad35d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "docs/logiciels et os/os/liseuse.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nouvel onglet"
+              "title": "liseuse"
             }
           }
         ]
@@ -161,6 +165,7 @@
   },
   "active": "3f219f89f88ad35d",
   "lastOpenFiles": [
+    "docs/index.md",
     "docs/logiciels et os/os/jailbreak.md",
     "docs/python/bases/python.md",
     "docs/logiciels et os/logiciels.md",
@@ -188,7 +193,6 @@
     "docs/python/bioinformatique/spectrométrie.md",
     "docs/python/bioinformatique",
     "docs/python/bases/divers/web scraping.md",
-    "docs/python/bases/divers/cartographie.md",
     "docs/python/bases/divers"
   ]
 }
