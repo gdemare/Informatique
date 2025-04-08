@@ -237,3 +237,13 @@ Type `note`, `info`, `quote`, `example`, `bug`, `danger`, `failure`, `warning`, 
 colonne1	| colonne2
 ------------|-----
 val1 		| val2
+
+
+### Chrome
+
+Pour recherher directement sur un site internet, dans `Moteur de recherche`
+
+| Requête  | Raccourci |
+|---|---|
+| `https://www.youtube.com/results?search_query=%s&page={startPage?}&utm_source=opensearch` | yt |
+
