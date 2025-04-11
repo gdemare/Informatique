@@ -98,8 +98,8 @@ Plugin `morphology`
 
 `Process > Morphology > Gray morphology`
 Les filtres morphologiques servent notamment à :
-* Extraire des caractéristiques.
-* Supprimer le bruit.
+* extraire des caractéristiques.
+* supprimer le bruit.
 
 Les filtres morphologiques sont des extracteurs de caractéristiques (voisinage - neighbordhood) :
 * connexity 8 = carré
@@ -108,6 +108,7 @@ Les filtres morphologiques sont des extracteurs de caractéristiques (voisinage 
 * vertical = colonne
 
 L'image :
+
 * Erosion ???
 * Dilation ??
 * Opening ??
@@ -118,7 +119,6 @@ L'image :
 Télécharger et ajouter le plugin `Plugins > Segmentation > Weka segmentation`
 Lancer Weka `Plugins > Segmentation > Weka segmentation`
 
-
 ## Ressources
 
-* devbio-napari
+* [devbio-napari](https://github.com/haesleinhuepf/devbio-napari)
