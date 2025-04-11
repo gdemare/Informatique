@@ -1,8 +1,8 @@
-
 Objectifs du traitement d'images :
-* Suivi de trajectoire.
-* Identifier et classer les objets en fonction de leurs caractéristiques.
-* Augmenter la visibilité des objets.
+
+* suivi de trajectoire.
+* identifier et classer les objets en fonction de leurs caractéristiques.
+* augmenter la visibilité des objets.
 
 ## Utiles
 
@@ -10,14 +10,15 @@ Objectifs du traitement d'images :
 
 ## L'image 
 
-Le nombre de bit détermine le nombre de niveau de couleur (exemple : 8bits = 2^8 = 255).
+Le nombre de bits détermine le nombre de niveaux de couleur (exemple : $8bits = 2^8 = 255$).
 La calibration d'une image est l'opération qui consiste à associer à un pixel une taille.
 
 ### Traitement des images en lot
 
 La foncion Stack permet de traiter les images en lot `Image > Stacks > Image to stacks`. Il permet de :
-* Appliquer le meme traitement à un lot d'images.
-* Sauvegarder dans un seul fichier de type Tiff.
+
+* appliquer le même traitement à un lot d'images.
+* sauvegarder dans un seul fichier de type Tiff.
 
 ### La couleur
 
@@ -38,15 +39,18 @@ La foncion Stack permet de traiter les images en lot `Image > Stacks > Image to 
 
 Le numérique de l'image avec des filtres pour atténuer le bruit. Dans `Process > Filter`.
 
-Rmq : il est intéressant d'appliquer plusieurs fois un filtre.
+!!! note 
+ Il est intéressant d'appliquer plusieurs fois un filtre.
 
 Généralement, on utilise un seul filtre.
 
 Linéaire :
+
 * Mean Filter (augmente le flou l'image).
 * Gaussian respect mieux les contours (++).
 
 Non linéraire :
+
 * Median filter (++).
 * Morphological filter.
 
@@ -54,9 +58,9 @@ Non linéraire :
  
  Binarisation par seuillage.
  
-* Seuillage manuelle `Image > Adjust > Threshold`
-* Seuillage automatique `Image > Adjust > Auto threshold...`
-* Méthode de binarisation `Process > Make binary`
+* seuillage manuelle `Image > Adjust > Threshold`
+* seuillage automatique `Image > Adjust > Auto threshold...`
+* méthode de binarisation `Process > Make binary`
 
 #### Seuillage automatique
 
@@ -70,15 +74,23 @@ Les plus utilisés :
 ## Analyse des objets sur l'image
 
  Il faut de préférence binairanizer l'image avant d'appliquer des filtres sur les objets en blanc et fond en noir.
+
 * `Analyse > Analyze Particles` analyser les objets par taille et par forme.
 * `Process > Binary > Watershed` séparer des objets accolés.
 * `Analyze > Set measurements` ?????????
 
-## Transformation de Fourrier
+## Transformation
+
+### Fourrier
 
 Transformation de Fourier : `Process > FTT > FTT`
+
 La transformation de Fourrier sert à :
-* La détection de d'orientation spécifique notamment de l'astigmatisme. L'astigmatisme est une déformation de l'image par l'objectif.
+
+* la détection de d'orientation spécifique notamment de l'astigmatisme. L'astigmatisme est une déformation de l'image par l'objectif.
+
+### Ondelette
+
 
 ## Filtres morphologiques
 
@@ -105,3 +117,8 @@ L'image :
 
 Télécharger et ajouter le plugin `Plugins > Segmentation > Weka segmentation`
 Lancer Weka `Plugins > Segmentation > Weka segmentation`
+
+
+## Ressources
+
+* devbio-napari
