@@ -62,15 +62,6 @@ Non linéraire :
 * seuillage automatique `Image > Adjust > Auto threshold...`
 * méthode de binarisation `Process > Make binary`
 
-#### Seuillage automatique
-
-Les plus utilisés :
-
-| Méthode de seuil | Définition | Avg/incon |
-|---|---|---|
-| Global thresholding | un seuil pour toute l'image | rapide  |
-| Local adaptative thresholding | un seuil pour chaque pixel en fontion de son environnement | gourmand en ressources mais performant |
-
 ## Analyse des objets sur l'image
 
  Il faut de préférence binairanizer l'image avant d'appliquer des filtres sur les objets en blanc et fond en noir.
@@ -79,20 +70,7 @@ Les plus utilisés :
 * `Process > Binary > Watershed` séparer des objets accolés.
 * `Analyze > Set measurements` ?????????
 
-## Transformation
-
-### Fourrier
-
-Transformation de Fourier : `Process > FTT > FTT`
-
-La transformation de Fourrier sert à :
-
-* la détection de d'orientation spécifique notamment de l'astigmatisme. L'astigmatisme est une déformation de l'image par l'objectif.
-
-### Ondelette
-
-
-## Filtres morphologiques
+### Morphologiques
 
 Plugin `morphology`
 
@@ -114,11 +92,11 @@ L'image :
 * Opening ??
 * Closure ???
 
+### Transformation de Fourrier
+
+Transformation de Fourier : `Process > FTT > FTT`
+
 ### Apprentissage machine
 
 Télécharger et ajouter le plugin `Plugins > Segmentation > Weka segmentation`
 Lancer Weka `Plugins > Segmentation > Weka segmentation`
-
-## Ressources
-
-* [devbio-napari](https://github.com/haesleinhuepf/devbio-napari)
