@@ -14,7 +14,6 @@
 * [Proteomics data analysis](https://pnnl-comp-mass-spec.github.io/proteomics-data-analysis-tutorial/index.html)
 * [Introduction to analysing microbial proteomics data in R](https://microsud.github.io/Bacterial-Proteomics-in-R/tutorial_main_doc.html#KEGG_metabolic_map)
 * [CGFB protéomique](https://proteome.cgfb.u-bordeaux.fr/fr/publications)
-
 # non classé
 
 [Homology search](https://molbiol-tools.ca/Homology.htm) page avec le lien de nombreux outils en ligne pour les protéines.
