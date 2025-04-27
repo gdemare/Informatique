@@ -23,6 +23,7 @@ Installer [Droid-ify](https://f-droid.org/en/packages/com.looker.droidify/) pour
 
 * LibreTube ou NewPipe, deux applications YouTube sans pub.
 * Read you, lecteur de flux RSS.
+* Material file, gestionnaire de fichiers.
 
 ## Google TV
 
@@ -51,6 +52,7 @@ Logiciels Windows :
 * [Dropbox](https://www.dropbox.com/)
 * [Keeweb](https://keeweb.info/), gestionnaire de mots de passe pour Keep.
 * [Mail spring](https://github.com/Foundry376/Mailspring), boite mail local.
+* [Mp3tag]() modifier les informations des fichiers de musique.
 * [Noi](https://github.com/lencx/noi) ui pour les chats et consor.
 * [Nora](https://github.com/Sandakan/Nora) lecteur musique au top.
 * [UpdateHub](https://github.com/NexovaDev/UpdateHub) vérifier les mises à jours des logiciels.
