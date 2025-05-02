@@ -95,7 +95,6 @@ S'il y en a plusieurs, il faut les organiser sous la forme d'une liste.
 	Penser à convertir le résultat en liste.
 
 * `conn.commit()` écrire ou modifier la bdd en exécutant la requête.
-
 ### Convertir un dictionnaire en mdx
 
 !!! note

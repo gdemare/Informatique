@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/python/bases/divers/modules supplémentaires.md",
+                "file": "docs/logiciels et os/logiciels.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "modules supplémentaires"
+              "title": "logiciels"
             }
           }
         ]
@@ -165,17 +165,20 @@
   },
   "active": "3f219f89f88ad35d",
   "lastOpenFiles": [
+    "docs/logiciels et os/os/Windows et Ubuntu.md",
+    "docs/logiciels et os/os/android.md",
+    "docs/logiciels et os/os/liseuse.md",
+    "docs/logiciels et os/logiciels.md",
+    "docs/python/bases/divers/modules supplémentaires.md",
     "docs/python/bases/divers/tableau de bord.md",
     "docs/python/bases/divers/traitement d images.md",
     "docs/python/bases/divers/traitement du signal.md",
     "docs/python/bases/divers/web scraping.md",
     "docs/python/bases/ressources.md",
     "docs/bioinformatique/bioinformatique.md",
-    "docs/logiciels et os/os/liseuse.md",
     "docs/index.md",
     "docs/logiciels et os/os/jailbreak.md",
     "docs/python/bases/python.md",
-    "docs/logiciels et os/logiciels.md",
     "docs/r/bases/R.md",
     "docs/r/models/classification/ANOVA.md",
     "docs/r/mathématique/probabilité statistique.md",
@@ -188,10 +191,7 @@
     "docs/r/models/préparer les données.md",
     "docs/r/bases/manipuler les données.md",
     "docs/logiciels et os/logiciels/Excel.md",
-    "docs/python/bases/divers/modules supplémentaires.md",
-    "docs/bioinformatique/séquences.md",
     "Sans titre.canvas",
-    "2024-10-18.md",
     "docs/python/bioinformatique",
     "docs/python/bases/divers"
   ]

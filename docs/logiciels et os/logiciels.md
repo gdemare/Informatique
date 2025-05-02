@@ -8,6 +8,7 @@
 	* Musicolet, le meilleur lecteur de musique local, open source.
 	* Oto music gratuit et open source.  
 * Notic, application pour bloquer les notifications de certaines applications.
+* ReadEra, une super application pour lire des livres.
 ### F-droid
 
 Installer [Droid-ify](https://f-droid.org/en/packages/com.looker.droidify/) pour accéder à [F-droid](https://f-droid.org/).
@@ -25,6 +26,9 @@ Installer [Droid-ify](https://f-droid.org/en/packages/com.looker.droidify/) pour
 * Read you, lecteur de flux RSS.
 * Material file, gestionnaire de fichiers.
 
+### Github
+
+* [DictTango](https://github.com/Jimex/DictTango-Android) une application de dictionnaire. Elle gère les fichiers au format mdx.
 ## Google TV
 
 * [SmartTubeNext](https://github.com/yuliskov/SmartTubeNext#readme) youtube sans pub.
