@@ -95,3 +95,26 @@ S'il y en a plusieurs, il faut les organiser sous la forme d'une liste.
 	Penser à convertir le résultat en liste.
 
 * `conn.commit()` écrire ou modifier la bdd en exécutant la requête.
+
+### Convertir un dictionnaire en mdx
+
+!!! note
+    C'est le format géré par DictTango.
+
+* [dict2mdx](https://github.com/sobaee/dict2mdx) convertir un dictionnnaire en mdx.
+* [dict2mdx](https://github.com/vpnry/dict2mdx) fait par un autre type que j'ai réussi à faire fonctionner en suivant le tuto mais j'ai rencontré des galères pour l'intallation des prérequis.
+
+Je suis passé par la machine virtuel Ubuntu.
+
+Code pour installer le prérequis [pyicu](https://gitlab.pyicu.org/main/pyicu#installing-pyicu)
+
+``` bash
+# EITHER - from apt directly https://packages.debian.org/source/stable/pyicu
+apt-get install python3-icu
+# OR - from source
+apt-get install pkg-config libicu-dev
+pip install --no-binary=:pyicu: pyicu
+``` 
+
+!!! note
+    Pour le dictionnaire il est possible de spécifier le chemin vers les fichiers.

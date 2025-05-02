@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/bioinformatique/bioinformatique.md",
+                "file": "docs/python/bases/divers/modules supplémentaires.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "bioinformatique"
+              "title": "modules supplémentaires"
             }
           }
         ]
@@ -165,6 +165,12 @@
   },
   "active": "3f219f89f88ad35d",
   "lastOpenFiles": [
+    "docs/python/bases/divers/tableau de bord.md",
+    "docs/python/bases/divers/traitement d images.md",
+    "docs/python/bases/divers/traitement du signal.md",
+    "docs/python/bases/divers/web scraping.md",
+    "docs/python/bases/ressources.md",
+    "docs/bioinformatique/bioinformatique.md",
     "docs/logiciels et os/os/liseuse.md",
     "docs/index.md",
     "docs/logiciels et os/os/jailbreak.md",
@@ -186,12 +192,6 @@
     "docs/bioinformatique/séquences.md",
     "Sans titre.canvas",
     "2024-10-18.md",
-    "docs/r/bioinformatique/transcriptomique.md",
-    "docs/r/bases/cinétique.md",
-    "docs/r/bases/PKNCA et les unités.md",
-    "docs/python/bases/formater les données.md",
-    "docs/python/bases/ressources.md",
-    "docs/python/bioinformatique/spectrométrie.md",
     "docs/python/bioinformatique",
     "docs/python/bases/divers"
   ]
