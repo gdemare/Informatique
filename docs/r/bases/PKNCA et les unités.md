@@ -2,7 +2,7 @@
 
 `library(PKNCA)`
 
-[PKNCA](https://billdenney.github.io/pknca/news/index.html)
+[PKNCA](https://humanpred.github.io/pknca/)
 
 !!! warning 
     Ne fonctionne pas avec `units`.
