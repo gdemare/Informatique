@@ -15,6 +15,7 @@ Installer [Droid-ify](https://f-droid.org/en/packages/com.looker.droidify/) pour
 
 * Anysoftkeyboard, un bon clavier.
 * Auxio (ne fonctionne plus), un super lecteur audio.
+* gramophon, lecteur audio avec les lettres pour parcourir rapidement sa discothèque. exclure un dossier n'est pas pratique.
 * Vinyl, lecteur musique avec une interface un peu datée.
 * Breezy, une bonne application pour la météo avec la possibilité de définir MétéoFrance comme fournisseur de données (Attention ne pas prendre la version FREENET qui ne contient que les open sources).
 * Launcher :
@@ -25,6 +26,11 @@ Installer [Droid-ify](https://f-droid.org/en/packages/com.looker.droidify/) pour
 * LibreTube ou NewPipe, deux applications YouTube sans pub.
 * Read you, lecteur de flux RSS.
 * Material file, gestionnaire de fichiers.
+
+### Payante
+
+* folderSync Pro, application pour synchroniser un dossier en local sur un appareil android avec un cloud.
+* CamScanner Version Complète, licence pour CamScanner qui supprime le filigrane sur les documents scannés.
 
 ### Github
 
