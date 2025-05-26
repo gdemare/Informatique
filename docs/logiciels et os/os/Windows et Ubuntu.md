@@ -7,6 +7,15 @@ de création de clés bootables Rufus.
 
 Pour passer l'étape de connexion à compte Microsoft 
 
+##### Utilitaire de création de clés bootables
+
+Rufus est un petit utilitaire qui permet de bloquer l'installation de logiciels normalement préinstallé et de créer un compte microsoft pour pouvoir installer l'OS.
+
+[ventoy](https://www.ventoy.net/en/index.html) outils qui transforme une clé USB en clé bootable. Une fois la clé formatée il suffit de copier l'iso.
+##### Windows purifié
+
+Windows Arium est une version modifié de Windows qui contient des logiciels supplémentaires et qui désactive des fonctionnalités et programmes qui compromettent la vie privée et ralantissent l'OS. 
+
 ## Ajouter un raccourci au menu démarrer
 
 Copier le raccourci dans le dossier :
