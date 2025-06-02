@@ -51,7 +51,7 @@ Disponible sur le Window Store :
 * Brave, navigateur internet basé sur Chrome avec un bloqueur de pub intégré.
 * Discord
 * Firefox.
-* Visual Studio Code, environnement de programmation.
+* (Visual Studio Code, environnement de programmation). [VSCodium](https://vscodium.com/) la même chose sans les trackings Microsoft.
 * VLC, lecteur media.
 
 Logiciels Windows :
