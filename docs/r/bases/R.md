@@ -194,6 +194,7 @@ list(
   * `maximum`.
 
 * `scale(matrice)` centrer et réduire une matrice par colonne.
+* `list.remove(list, 'nom')` supprimer un élément d'une liste library("rlist")`.
 ## Mathématique
 
 * `signif(x, 2)` choirisr le nombre de chiffres significatifs.
