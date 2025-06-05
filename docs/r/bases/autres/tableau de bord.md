@@ -319,8 +319,8 @@ observeEvent(input$table1_cell_edit, {
 
   * `bordered = T` bordures.
   * `highlight = T` afficher un fond sur la ligne ou se trouve la souris.
-  * `selection = "multiple"` selectionner des lignes. `defaultSelected = c(1)` ajouter une sélection par défaut. 
-  * `onClick = "select"` selectionner une ligne au click.
+  * `selection = "multiple"` sélectionner des lignes. `defaultSelected = c(1)` ajouter une sélection par défaut. 
+  * `onClick = "select"` sélectionner une ligne au click.
   * `filterable = TRUE` zone de recherche pour chaque colonne.
   * `searchable = TRUE` zone de recherche unique.
   * Créer des groupes de colonnes :
@@ -353,7 +353,7 @@ Colorer les cellules `library(reactablefmtr)`
 
  are option for `reactable()`
 
-* `columns = list()` colorer une colonne en fonciton des valeurs.
+* `columns = list()` colorer une colonne en fonction des valeurs.
 
   * `colonne = colDef(style = color_scales(data, color_by = 'colonne'))` colorer la colonne en fonction des valeurs. 
     * `colors = c("#f0f0f0", "#519de9")` personnaliser les couleurs utilisées.
