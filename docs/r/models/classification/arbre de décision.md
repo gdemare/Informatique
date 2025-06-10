@@ -42,6 +42,10 @@ l’erreur xerror calculée par validation croisée (R constitut 10 échantillon
 
 * `xerror` erreur de la validation croisée.
 
+Sortie :
+
+* `$variable.importance` renvoie les variables les plus importantes pour le modèle.
+
 ## Qualité de l'arbre 
 
 ``` R
@@ -53,10 +57,10 @@ Indicateur      | Définition
 ----------------|---
 Root node error | erreur à la racine. 
 CP              | coefficient de complexité.
-nsplit          | nombre de branches
-rel error       | taux erreur de jeu d'apprentissage
-xerror          | taux erreur de la validation croisée (R constitut 10 échantillons)
-xstd            | écart type des erreurs 
+nsplit          | nombre de branches.
+rel error       | taux d'erreur de jeu d'apprentissage.
+xerror          | taux d'erreur de la validation croisée (R constitut 10 échantillons).
+xstd            | écart type des erreurs.
 
 `prune(cart, cp = 0.0155441)` élaguer l'arbre.
 
