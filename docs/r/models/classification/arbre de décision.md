@@ -14,7 +14,6 @@ cart = rpart( data = data,
 Option :
 
 * `methode = class/anova` variable à expliquer de type qualitative/quantitative.
-<<<<<<< Updated upstream
 * `parms = list(split = "gini")` critère à utiliser.
 * `control = rpart.control()` pour controler les paramètres de l'arbre. Paramètres :
 
