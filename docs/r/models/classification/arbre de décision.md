@@ -9,6 +9,7 @@ cart = rpart( data = data,
               Cible~.,
               parms = list(split = "gini"),
               cp = 0)
+rpart.plot(cart) # afficher l'arbre 
 ```
 
 Option :
