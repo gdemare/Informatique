@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "brompt",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -163,7 +163,7 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "3f219f89f88ad35d",
+  "active": "6433381b74b4cd9f",
   "lastOpenFiles": [
     "docs/logiciels et os/Sans titre.md",
     "docs/logiciels et os/logiciels.md",
