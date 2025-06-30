@@ -46,6 +46,7 @@ Les méthodes :
 * `checkboxGroupInput("id",...)` liste à cocher à plusieurs éléments. Il y a la possibilité de màj des valeurs avec `updateCheckboxGroupInput`.
 
 	* `inline = T` sur la même ligne.
+  	* `choices = c()` liste des valeurs et libellés à afficher (ou `choiceNames` et `choiceValues`).
 
 * `dateInput()` calendrier de saisi de date.
 * `dateRangeInput()` calendrier avec période.
