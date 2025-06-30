@@ -43,9 +43,9 @@ Les méthodes :
 
 * `actionButton("id",...)` bouton.
 * `checkboxInput("id",...)` liste à cocher à un seul élément.
-* `checkboxGroupInput("id",...)` liste à cocher à plsuieurs éléments.
+* `checkboxGroupInput("id",...)` liste à cocher à plusieurs éléments. Il y a la possibilité de màj des valeurs avec `updateCheckboxGroupInput`.
 
-  * `inline = T` sur la même ligne.
+	* `inline = T` sur la même ligne.
 
 * `dateInput()` calendrier de saisi de date.
 * `dateRangeInput()` calendrier avec période.
@@ -66,14 +66,12 @@ Les méthodes :
 #### Les listes selectionnbles
 
 * `selectInput(choices = liste)` liste à choix multiples (liste de liste pour avoir des groupes).
-* `varSelectizeInput()` selectionner les colonnes d'un df.
+* `varSelectizeInput()` sélectionner les colonnes d'un df.
 * `updateSelectInput(session, id, choices = c("A", "B"), selected = "A")` mettre a jour un select (dans le `server`).
-
 
 Paramètres :
 
 * ` multiple = TRUE` autoriser de multiples saisies.
-
 
 ### Interface 
 
@@ -134,7 +132,6 @@ Paramètres :
   * `row_heights =` hauteurs.
 
 * `layout_column_wrap()` colonnes avec retour à la ligne des éléments lorsque la taille est insuffisante.
-
 
 * `page_fillable(...)` remplir l'ensemble de la page.
 * `page_navbar(titre, ...)` barre horizontal en haut. Elements ajouter :
