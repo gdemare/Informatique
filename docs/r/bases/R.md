@@ -111,6 +111,7 @@ insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
 * `suppressMessages(code)` supprimer les messages.
 * `Sys.sleep(seconde)` attendre un certain nombre de secondes avant la suite de l'exécution.
 * `methods(class = "units")` lister les méthodes associées à un objet.
+* `tail(x, n = 6)` renvoie les n derniers éléments d'un objet.
 ## Environnement
 
 * `rm (list = ls())` supprimer les variables de l'environnement.
@@ -131,8 +132,8 @@ Déclarer des variables :
     Les attributs sont les métadonnées associées à un objet.
 
 * `attr(iris, "perso") <- valeur` ajouter un attribut à objet.
-* `attributes(dt_conc)` renvoyer les attribue d'un objet. 
-## Vecteurs
+* `attributes(dt_conc)` renvoyer les attribue d'un objet.
+## Vecteur
 
 * `c(2, 4, 6)` déclarer un vecteur.
 * `2:6` créer une séquence de 2 à 6 inclus.
