@@ -35,7 +35,13 @@ Installer [Droid-ify](https://f-droid.org/en/packages/com.looker.droidify/) pour
 ### Github
 
 * [DictTango](https://github.com/Jimex/DictTango-Android) une application de dictionnaire. Elle gère les fichiers au format mdx.
-* [revanced](https://revanced.app/) patcher l'application YouTube. Il faut installer [GmsCore Service](https://github.com/ReVanced/GmsCore) qui permet d'exécuter les applications qui utilisent les services Google.
+* [revanced](https://revanced.app/) patcher l'application YouTube :
+1. Telecharger l'apk de Youtube depuis le lien dans revanced et desinstaller YouTube.
+2. Patcher Apk dans revanced.
+3. Installer [GmsCore Service](https://github.com/ReVanced/GmsCore) qui permet d'exécuter les applications qui utilisent les services Google. Enjoy !
+
+
+
 ## Google TV
 
 * [SmartTubeNext](https://github.com/yuliskov/SmartTubeNext#readme) youtube sans pub.
