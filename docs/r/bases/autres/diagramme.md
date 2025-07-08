@@ -17,14 +17,15 @@ grViz("
 digraph shiny_app {
   graph [layout = dot, rankdir = LR]
 
-
+ \\ commentaire
   node [shape = box]
   input1 [label = 'Input: utilisateur']
   fun1 [label = 'fonction_input()']
   fun2 [label = 'calcul_pk()']
   output1 [label = 'Tableau résultats']
 
-  input1 -> fun1 -> fun2 -> output1
+ A -> B 
+ A -> {B1 B2}
 }
 ")
 ```
@@ -32,7 +33,10 @@ digraph shiny_app {
 - `rankdir = LR` alignement des éléments :
 	- `LR` gauche à droite.
 	- `TB` du haut vers le bas).
+- `A -> B [style = dashed, label = '', color = "red"]` personnaliser le lien.
 
+!!! note
+	Pour utiliser plusieurs éléments le même élément il faut créer plusieurs éléments avec des id différents mais avec le même label.
 
 #### node 
 
@@ -62,7 +66,20 @@ digraph shiny_app {
 | `diamond` | losange |
 | `folder` | dossier |
 
+#### Shiny
+
+- `renderGrViz({grViz("")})` server.
+- `grVizOutput(id, heigth)` ui.
+
 ### Modèle de données
 
-[dm](https://dm.cynkra.com/)
+`library(dm)` [dm](https://dm.cynkra.com/)
 
+- `new_dm(list)` créer un modèle de données.
+- `dm_add_pk(table = table, columns = col)` déclarer une clé primaire.
+- `dm_add_fk(ref_table = df_group, table = df_subject, columns = idPk_group)` déclarer une clé secondaire. 
+- `dm_enum_pk_candidates(table = df_group)` lister les colonnes qui peuvent servir potentielement de clé primaire.
+- `dm_draw(view_type = "all")` afficher le modèle de données :
+
+	- `all` afficher toutes les colonnes.
+	- `keys_only` afficher uniquement les colonnes déclarées comme clés.
