@@ -46,9 +46,9 @@ digraph shiny_app {
 
 | Valeur | Couleur |
 |---|---|
-| `Gold | jaune |
-| `Coral | orange |
-| `Orchid | violet |
+| `Gold` | jaune |
+| `Coral` | orange |
+| `Orchid` | violet |
 | `Pink` | rose très clair |
 | `LightBlue` | Bleu clair |
 | `Paleturquoise` | bleu clair |
