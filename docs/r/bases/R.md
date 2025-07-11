@@ -165,6 +165,7 @@ Déclarer des variables :
 * `ave(df$valeurs, df$col1, FUN = cumsum)` calculer une somme cumulée.
 * `setNames(c(10, 20, 30), c("Element1", "Element2", "Element3"))` ou `c(nom1 = val1, nom2 = val2)` nommer les valeurs.
 * `Filter(function(x){!is.na(x)}, row_unit)` filtrer un vecteur ou une liste.
+* `startsWith(vcteur, "debut")` renvoie un boolen si les éléments commencent par.
 ### Listes
 
 ``` r
@@ -178,6 +179,41 @@ list(
 * `x[['data']]` ou `x$data` recupérer uniquement les valeurs d'un élément de la liste.
 * `lengths(liste)` nombre d'éléments dans une liste.
 * `is.na(list())` si la liste est vide alors renvoie `logical(0)`.
+#### Purr
+
+* `map() %>% list_cbind()` renvoie un dataframe en colonne (dfr en ligne) `list_rbind()`.
+* `map_chr(Value, fonction)` renvoie du texte.
+* `map_if(condition)` appliquer que si l'élément répond à une condition.
+* `map_at(position)` appliquer en fonction de la position.
+* `imap(liste, function(x, id)` renvoie la valeur et l'id (nom de colonnes) de chaque élément.
+* `transpose(liste)` inverse les niveaux d'une liste : list(1 = list(A = val)) -> list(A = list(1 = val))
+*  `flatten()` supprimer les niveaux d'une liste.
+
+Existe : `map2_`, `map_` ...
+
+* `map(liste, function(x){x})` parcourir chaque propriété de la liste.
+* `walk(liste, function(x){x})` pareil que map mais ne renvoie rien.
+* `pmap(function(col1, col2))` itérer un dataframe par ligne.
+
+!!! warning
+	Pour le `pmap` les paramètres de la fonction doivent avoir le même nom que les colonnes.
+
+!!! note
+	Pour parcour les colonnes d'un df, il faut utiliser `imap`.
+
+* `keep(ma_liste, ~ startsWith(names(.)[1], "a"))` garder les éléments d'une liste qui respectent la condition.
+* `discard(ma_liste, ~ names(.)[1] == "b")` supprimer les éléments d'une liste qui respectent la condition.
+
+#### Apply
+
+Apply permet d'appliquer une fonction à chaque élément.
+
+* `sapply(vecteur, fonction)` appliquer une fonction à tous les éléments d'un vecteur.
+* `apply(dt, axis = 1/2, fonction)` appliquer une fonction à tous les éléments en ligne/colonne.
+* `tapply(tb_grp_kinetic, 1, function(x){colnames(x)})` appliquer une fonction colonne d'un dataframe.
+
+!!! note
+	La fonction peut être déclarée comme `function(x){x}`.
 ## Matrices
 
 * `matrix(vecteur, nrow = , ncol =)` transformer en matrice.
@@ -203,40 +239,7 @@ list(
 * `%%` modulo.
 * `ceiling(1.1)` arrondi à l'entier supérieur.
 * `floor()` arrondi à l'entier inférieur. 
-### Appliquer à tous les éléments
 
-#### Purr
-
-* `map() %>% list_cbind()` renvoie un dataframe en colonne (dfr en ligne) `list_rbind()`.
-* `map_chr(Value, fonction)` renvoie du texte.
-* `map_if(condition)` appliquer que si l'élément répond à une condition.
-* `map_at(position)` appliquer en fonction de la position.
-* `imap(liste, function(x, id)` renvoie la valeur et l'id (nom de colonnes) de chaque élément.
-* `transpose(liste)` inverse les niveaux d'une liste : list(1 = list(A = val)) -> list(A = list(1 = val))
-*  `flatten()` supprimer les niveaux d'une liste.
-
-Existe : `map2_`, `map_` ...
-
-* `map(liste, function(x){x})` parcourir chaque propriété de la liste.
-* `walk(liste, function(x){x})` pareil que map mais ne renvoie rien.
-* `pmap(function(col1, col2))` itérer un dataframe par ligne.
-
-!!! warning
-	Pour le `pmap` les paramètres de la fonction doivent avoir le même nom que les colonnes.
-
-!!! note
-	Pour parcour les colonnes d'un df, il faut utiliser `imap`.
-
-#### Apply
-
-Apply permet d'appliquer une fonction à chaque élément.
-
-* `sapply(vecteur, fonction)` appliquer une fonction à tous les éléments d'un vecteur.
-* `apply(dt, axis = 1/2, fonction)` appliquer une fonction à tous les éléments en ligne/colonne.
-* `tapply(tb_grp_kinetic, 1, function(x){colnames(x)})` appliquer une fonction colonne d'un dataframe.
-
-!!! note
-	La fonction peut être déclarée comme `function(x){x}`.
 ## Fonction
 
 ``` r
