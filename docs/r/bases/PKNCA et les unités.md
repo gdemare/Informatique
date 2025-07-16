@@ -171,6 +171,8 @@ my_mean(c(1:3, NA))
 !!! warning
     Quand il n'y a pas d'unité, mettre "".
 
+
+* `units_options(simplify = T)` simplifier les unités.
 * `valid_udunits()` lister les unités valides.
 * `valid_udunits_prefixes()` lister les ordres de grandeurs.
 * `units(val_1) <- "m/s"` ou `set_units(x, "m/s", mode = "standard")` attribuer une unité ET convertir dans une autre unité.
