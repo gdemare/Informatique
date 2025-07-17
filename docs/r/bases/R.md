@@ -1,10 +1,10 @@
-## Les packages
+## Package
 
 * `install.packages("package")` installer un package.
 * `library(package)` importer un package. 
 * `if(!require("tidyverse")) install.packages("tidyverse")` installer un package uniquement s'il n'est pas installé.
 * `update.packages(ask=F)` màj de tous les packages.
-### Les meilleurs packages R
+### Meilleurs packages R
 
 * `rmarkdown` R markdown.
 * `tidyverse` intègre les packages les plus populaires pour la science de la donnée.
@@ -18,7 +18,7 @@
 
 * `options(digits=9)` changer le nombre de décimales affichées.
 * `system.time({instruction})` temps d'exécution d'une instruction.
-## Les fichiers
+## Fichier
 
 * `r"(dossier1\dossier 2\)"` déclarer un chemin.
 * `file <- tempfile(fileext = ".png")` créer un fichier tempoaire.
@@ -96,13 +96,13 @@ insertPlot(wb, sheet, largeur, hauteur)` insérer un graphique.
 * `toJSON(liste)` convertir une liste en Json.
 * `writeLines(json_data, "REACDATA_t.json")` créer un fichier en Json (attention, il faut le convertir avant).
 * `fromJSON("REACDATA_t.json")` importer un Json.
-### Images
+### Image
 
 `library(jpeg)` et `library(png)`
 
 * `readJPEG(image.jpeg)` image JPEG.
 * `readPNG(image.png)` image PNG.
-## Fonctions de base
+## Fonction de base
 
 * `print("Hello")` afficher un message.
 * `cat("Hello\n")` afficher un message sans retour à ligne. Pour un retour à la ligne `\n` et pour remplacer le texte précédent `\r`.
@@ -167,7 +167,7 @@ Déclarer des variables :
 * `unname(vec)` supprimer le nom d'un vecteur.
 * `Filter(function(x){!is.na(x)}, row_unit)` filtrer un vecteur ou une liste.
 * `startsWith(vcteur, "debut")` renvoie un boolen si les éléments commencent par.
-### Listes
+### Liste
 
 ``` r
 list(
@@ -215,7 +215,7 @@ Apply permet d'appliquer une fonction à chaque élément.
 
 !!! note
 	La fonction peut être déclarée comme `function(x){x}`.
-## Matrices
+## Matrice
 
 * `matrix(vecteur, nrow = , ncol =)` transformer en matrice.
 * `class.ind(vec)` créer une marice binaire à partir d'un vecteur avec les numéro des colonnes.
@@ -251,7 +251,7 @@ nomFonction <- function(x){
 
 * `formals(build_pk)` renvoie les paramètres d'une fonction.
 * `as.list(environment())`
-### Les erreurs
+### Erreur
 
 * `try(log("ABC"), TRUE)` masque le message si une erreur se produit :
 	* `silent = F` ne pas afficher de message d'erreur. 
@@ -283,7 +283,7 @@ Opérateur				| Définition
 `identical(val1, val2)`	| égalité pratique pour `logical(0)`
 `%in%`					| appartient
 `!`     				| négation
-## Boucles
+## Boucle
 
 !!! note
 	`cat` permet de faire suivre le % d'une boucle `cat("\rÉtape", num_script, "/", for_nb_scripts, '-', script)`.
@@ -341,7 +341,7 @@ Seconde 	| `%S`	| 06
 * `trim(texte)` supprimer les espaces (package `gdata`).
 * `toupper(texte)` mettre les caractères en majuscule.
 * `tolower(texte)` mettre en petit caractères.
-### Expressions régulières
+### Expression régulière
 
 Library `stringr`
 
