@@ -302,8 +302,8 @@ Fonction 		| Défintion
 * `inner_join(data)` A et B
 * `left_join(data)` A (+ A et B)
 * `right_join(data)` B (+ A et B)
-* `semi_join(data)` A et pas B.
-* `anti_join(data)` B et pas A.
+* `semi_join(data)` B et pas A.
+* `anti_join(data)` A et pas B.
 * `full_join(data)` A ou B.
 
 Option :
