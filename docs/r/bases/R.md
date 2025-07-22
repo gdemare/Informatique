@@ -357,6 +357,7 @@ Library `stringr`
 * `str_locate(texte, exp_re)` récupérer la postion de début et de fin.
 * `str_trim(string, side = c("both", "left", "right"))` supprimer les espaces au début et à la fin.
 * `str_split(vecteur, pattern)` séparer une chaine en vecteur.
+* `str_remove(vecteur, "^idPk_subject_")` retirer l'expressio régulière d'une chaîne de caratères.
 
 Symbole		| Définition
 ------------|-----------------
