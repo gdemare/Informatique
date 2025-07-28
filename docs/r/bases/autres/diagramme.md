@@ -6,18 +6,14 @@
 DiagrammeR utilise le langage DOT pour les diagrammes.
 
 !!! note
-  Le pendant DiagrammeR en JavaScript est le mermaid.
-
-### Modèle de données
-
-`library(dm)`
+	Le pendant DiagrammeR en JavaScript est le mermaid.
 
 ``` R
 grViz("
 digraph shiny_app {
   graph [layout = dot, rankdir = LR]
 
- \\ commentaire
+ // commentaire
   node [shape = box]
   input1 [label = 'Input: utilisateur']
   fun1 [label = 'fonction_input()']
