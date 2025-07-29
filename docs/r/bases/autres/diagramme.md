@@ -3,7 +3,7 @@
 
 `library(DiagrammeR)`
 
-DiagrammeR utilise le langage DOT pour les diagrammes.
+[DiagrammeR](https://rich-iannone.github.io/DiagrammeR/) utilise le langage DOT pour les diagrammes.
 
 !!! note
 	Le pendant DiagrammeR en JavaScript est le mermaid.
