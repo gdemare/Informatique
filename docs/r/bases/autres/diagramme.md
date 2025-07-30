@@ -62,6 +62,14 @@ digraph shiny_app {
 | `diamond` | losange |
 | `folder` | dossier |
 
+#### Enregistrer en image
+
+`library(rsvg)` et `library(DiagrammeRsvg)`
+
+``` R
+diagramme %>% export_svg %>% charToRaw %>% rsvg_svg("graph.svg")
+```
+
 #### Shiny
 
 - `renderGrViz({grViz("")})` server.
