@@ -157,7 +157,6 @@ Paramètres :
 
 * `layout_sidebar()` ajouter le menu à gauche.
 
-
 `style = css(grid_template_columns = "2fr 1fr")` largeur des relatives des éléments.
 
 ##### Les cartes
@@ -263,6 +262,10 @@ code server                       | rendu                     | code ui
 `renderUI("summary")`             | html et dans server       | `uiOutput(id)`
 
 * `tagAppendAttributes(style= 'color:green;')` ajouter un attribut.
+
+!!! note
+	`rendrUI` doit contenir du code comme celui présent dans UI (fonction de type xxxOutput). On utilise généralement un `tagList` et les idenfiants
+ 	sont appelés avec `ns("")`.
 
 #### DataFrame
 
