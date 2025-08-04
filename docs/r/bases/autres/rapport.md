@@ -35,3 +35,10 @@ Option pour `{R}` :
 Comparaison des différents packages pour le faire des tableaux https://hughjonesd.github.io/huxtable/design-principles.html par le créateur de huxtable.
 
 [gtExtras](https://jthomasmock.github.io/gtExtras/index.html) pour ajouter des graphiques ou des images dans le tableau.
+
+### Markdown 
+
+`library(litedown)`
+
+`renderMarkdown(markdown::mark())`
+`markdownToHTML mark_html().`
