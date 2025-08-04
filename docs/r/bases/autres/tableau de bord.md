@@ -128,7 +128,7 @@ Paramètres :
 
 * `layout_columns(...)` créer une ligne avec 12 colonnes responsives. Paramètres :
 
-  * `col_widths =` largeur de chaque colonne (max = 12).
+  * `col_widths =` largeur de chaque colonne (max = 12). Ex : `c(2,5,5)`.
   * `style = css(grid_template_columns = "5fr 3fr")` pour avoir des éléments avec des tailles différentes.
   * `row_heights =` hauteurs.
 
