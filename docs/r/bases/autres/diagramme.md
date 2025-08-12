@@ -36,7 +36,7 @@ digraph shiny_app {
 
 #### node 
 
-- `fillcolor = limegreen, style=filled` remplir une forme d'une couleur [couleurs](https://rich-iannone.github.io/DiagrammeR/articles/graphviz-mermaid.html?q=color#colors)![image](https://github.com/user-attachments/assets/d3d46c00-e34f-4a3f-8b1d-0b4a74b290ee).
+- `fillcolor = limegreen, style=filled` remplir une forme d'une couleur [couleurs](https://rich-iannone.github.io/DiagrammeR/articles/graphviz-mermaid.html?q=color#colors).
 - `color = pink` couleur du contour.
 - `shape = rect` forme.
 
