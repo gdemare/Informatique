@@ -40,15 +40,16 @@ digraph shiny_app {
 - `color = pink` couleur du contour.
 - `shape = rect` forme.
 
-| Valeur | Couleur |
-|---|---|
-| `Gold` | jaune |
-| `Coral` | orange |
-| `Orchid` | violet |
-| `Pink` | rose très clair |
-| `LightBlue` | Bleu clair |
-| `Paleturquoise` | bleu clair |
-| `PaleGreen` | Vert clair |
+| Valeur | Couleur | hexadécimale |
+|---|---|---|
+| `Gold` | jaune | #ffd700 | 
+| `grey` | gris| #c0c0c0 |
+| `Coral` | orange | |
+| `Orchid` | violet | |
+| `Pink` | rose très clair | #ffc0cb |
+| `LightBlue` | Bleu clair | |
+| `Paleturquoise` | bleu clair | | 
+| `PaleGreen` | Vert clair | #98fb98 |
 
 [couleurs](https://rich-iannone.github.io/DiagrammeR/articles/graphviz-mermaid.html?q=color#colors)
   
