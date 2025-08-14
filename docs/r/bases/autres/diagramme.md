@@ -50,6 +50,7 @@ digraph shiny_app {
 | `LightBlue` | Bleu clair | #add8e6 |
 | `Paleturquoise` | bleu clair | #afeeee | 
 | `PaleGreen` | Vert clair | #98fb98 |
+| `tan` | marron clair | #d2b48c |
 
 [couleurs](https://rich-iannone.github.io/DiagrammeR/articles/graphviz-mermaid.html?q=color#colors)
   
