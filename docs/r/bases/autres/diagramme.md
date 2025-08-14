@@ -44,11 +44,11 @@ digraph shiny_app {
 |---|---|---|
 | `Gold` | jaune | #ffd700 | 
 | `grey` | gris| #c0c0c0 |
-| `Coral` | orange | |
-| `Orchid` | violet | |
+| `Coral` | orange | #ff7f50 |
+| `Orchid` | violet | #da70d6 |
 | `Pink` | rose très clair | #ffc0cb |
-| `LightBlue` | Bleu clair | |
-| `Paleturquoise` | bleu clair | | 
+| `LightBlue` | Bleu clair | #add8e6 |
+| `Paleturquoise` | bleu clair | #afeeee | 
 | `PaleGreen` | Vert clair | #98fb98 |
 
 [couleurs](https://rich-iannone.github.io/DiagrammeR/articles/graphviz-mermaid.html?q=color#colors)
