@@ -35,6 +35,8 @@
 * `source(fichier)` exécuter un script.
 * `tools::file_ext(chemin_fichier)` renvoyer l'extension du fichier.
 * `file.copy(from = fichier_source, to = fichier_destination)` copier un fichier.
+
+  `rlist::list.remove(db_03_study_group[[id_group]], 'df_pk')` supprimer l'élément d'une lsite.
 ### RData
 
 * `save(obj1, obj2, file = "mes_objets.RData")` sauvegarder en RData.
