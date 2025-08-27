@@ -26,6 +26,11 @@ Option pour `{R}` :
 * `merge_v(j="Subject_Group")` fusionner les modalités identiques.
 * `theme_box()` ajouter des lignes.
 
+  `bg(j = "prc_diff", i = ~abs(prc_diff) < 0.5, part = "body", bg = "#AFDC8F") ` colorer des le fond de cellules.
+  save_as_html(
+  "Test PK Express" = felxatabke,
+  path = "file.html") exporter le rappport.
+
 ### gt 
 
 `libary(gt)`
