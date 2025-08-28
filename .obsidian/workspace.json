@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/logiciels et os/logiciels/ressources web.md",
+                "file": "docs/python/bases/divers/modules supplémentaires.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ressources web"
+              "title": "modules supplémentaires"
             }
           }
         ]
@@ -155,6 +155,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Ouvrir le sélecteur rapide": false,
       "graph:Ouvrir la vue graphique": false,
       "canvas:Créer une nouvelle toile": false,
@@ -163,8 +164,9 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "6433381b74b4cd9f",
+  "active": "3f219f89f88ad35d",
   "lastOpenFiles": [
+    "docs/logiciels et os/logiciels/ressources web.md",
     "docs/logiciels et os/Sans titre.md",
     "docs/logiciels et os/logiciels.md",
     "docs/logiciels et os/os/Windows et Ubuntu.md",
@@ -190,7 +192,6 @@
     "docs/r/models/régression/step.md",
     "docs/r/models/régression/régression linéaire.md",
     "docs/r/models/préparer les données.md",
-    "docs/r/bases/manipuler les données.md",
     "Sans titre.canvas",
     "docs/python/bioinformatique",
     "docs/python/bases/divers"
