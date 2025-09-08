@@ -17,6 +17,7 @@ Conda est un logiciel qui permet de gérer les environnements en Python. Cela pe
 * `conda activate python_env` activer l'environnement.
 * `conda deactivate` quitter l'environnement.
 * `conda update --all` mettre a jour tous les packages.
+* `conda install pip` installer un package.
 
 Dans pour choisir le noyau d'un environnement Visual Code ctrl+shift+P, sélectionner, `Pyhon : select Interpreter`. Sinon, dans le Terminal :
 

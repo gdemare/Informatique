@@ -89,9 +89,15 @@ Il est possible de le faire directement en ajouter une ligne au fichier :
 
 ### gnome-shell-extension-manager
 
-Extensions a ajouter :
+!!! note
+	Le programme s'appelle Extensions.
+
+Extensions à ajouter :
 
 * Clipboard Indicator, pour avoir l'historique des copiés.
+* Caffeine, désactiver la mise en veille automatique.
+* Emoji Selector sélectionner les émoji.
+* Vitals surveiller l'activité des 
 
 ## Flathub
 
@@ -99,9 +105,9 @@ Extensions a ajouter :
 
 * Cryptomator, logiciel de cryptage spécialisé pour le cloud.
 * Github, pour gérer les fichiers github.
-* Raisonnance, lecteur musique (attention jolie mais pas optimiser au 2023-09-20).
+* Gapless, lecteur musique
 * Shortwave, radios en ligne.
-
+* 
 ## Logiciel par défaut
 
 * `gnome-text-editor` éditeur de texte.

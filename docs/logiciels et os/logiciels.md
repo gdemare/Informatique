@@ -31,9 +31,7 @@ Installer [Droid-ify](https://f-droid.org/en/packages/com.looker.droidify/) pour
 
 * folderSync Pro, application pour synchroniser un dossier en local sur un appareil android avec un cloud.
 * CamScanner Version Complète, licence pour CamScanner qui supprime le filigrane sur les documents scannés.
-
 ### Github
-
 
 [element](https://github.com/element-hq) appplication pour Matrix.
 * [DictTango](https://github.com/Jimex/DictTango-Android) une application de dictionnaire. Elle gère les fichiers au format mdx.
@@ -41,9 +39,6 @@ Installer [Droid-ify](https://f-droid.org/en/packages/com.looker.droidify/) pour
 1. Telecharger l'apk de Youtube depuis le lien dans revanced et desinstaller YouTube.
 2. Patcher Apk dans revanced.
 3. Installer [GmsCore Service](https://github.com/ReVanced/GmsCore) qui permet d'exécuter les applications qui utilisent les services Google. Enjoy !
-
-
-
 ## Google TV
 
 * [SmartTubeNext](https://github.com/yuliskov/SmartTubeNext#readme) youtube sans pub.
@@ -111,7 +106,7 @@ Projet github intéressant :
 
 * [NOI](https://github.com/lencx/Noi) client desktop pour les modèles d'IA (chat GPT...).
 * [kobo ebook reader dict](https://github.com/BoboTiG/ebook-reader-dict), dictionnaires pour les liseuses Kobo.
-* [SpotX](https://github.com/SpotX-Official/SpotX), bloqueur de pub sur la version desktop de spotify.
+* [SpotX](https://github.com/SpotX-Official/SpotX), bloqueur de pub sur la version desktop de spotify. Pour linux, [SpotX-bash](https://github.com/SpotX-Official/SpotX-Bash).
 ## Les meilleurs applications 
 
 * [Cryptomator](https://cryptomator.org/), logicel de cryptage spécialisé pour le cloud.
