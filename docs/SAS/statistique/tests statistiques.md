@@ -1,4 +1,4 @@
-## Tests non paramètriques
+## Tests non paramétriques
 
 ```
 PROC NPAR1WAY <option>;
@@ -11,7 +11,7 @@ RUN;
 
 * `BY`
 * `WHERE condition` filtrer le jeu de données avant les tests.
-* `D` afficher les graphiques (nécéssite ODS GRAPHICS).
+* `D` afficher les graphiques (nécessite ODS GRAPHICS).
 * `KS` Kolmogorov-Smirnov.
 
 ### Options :
