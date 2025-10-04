@@ -480,7 +480,7 @@ sudo apt-get install android-tools-adb android-tools-fastboot
 
 ### Installer une application
 
-`adb isntall application.apk`
+`adb install application.apk`
 
 ### Installer le Play Store
 

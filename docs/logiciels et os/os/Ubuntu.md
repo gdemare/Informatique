@@ -2,7 +2,7 @@
 - `brave --app=https://www.youtube.com` ouvrir un url avec brave.
 ## Installer ubuntu en dual boot en partageant des fichiers avec Windows
 
-1. # WindowsDésactiver la sécurité dans le Bios.
+1. WindowsDésactiver la sécurité dans le Bios.
 2. Installer Windows.
 3. Avec le logiciel gestionnaire de disques, créer une partition :
   * pour les fichiers partagés, formater en nts.
@@ -62,8 +62,39 @@ Extensions à ajouter :
 
 * Cryptomator, logiciel de cryptage spécialisé pour le cloud.
 * Github, pour gérer les fichiers github.
-* Gapless, lecteur musique
+* Gapless, lecteur musique chiant car il sépare les albums par années.
+* Apparamment une des meilleurs options consiste à utiliser Music Player Daemon un lecteur de musique en ligne de commande avec une interface. Interface cool
 * Shortwave, radios en ligne.
+* Musicpod lecteur de musique.
+
+### Media Player Deamon
+
+1. Installer `sudo apt install mpd mpc` 
+2. Configurer les fichiers et le dossier de la bibliothèque :
+
+```
+music_directory     "~/Musique"
+playlist_directory  "~/.config/mpd/playlists"
+db_file             "~/.config/mpd/database"
+log_file            "~/.config/mpd/log"
+pid_file            "~/.config/mpd/pid"
+state_file          "~/.config/mpd/state"
+sticker_file        "~/.config/mpd/sticker.sql"
+
+bind_to_address     "127.0.0.1"
+port                "6600"
+
+audio_output {
+    type            "pulse"
+    name            "PulseAudio"
+}
+```
+
+``` bash 
+mkdir -p ~/.config/mpd/playlists
+touch ~/.config/mpd/{database,log,pid,state,sticker.sql}
+```
+
 ## Logiciel par défaut
 
 * `gnome-text-editor` éditeur de texte.

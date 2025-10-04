@@ -1,3 +1,7 @@
+- [LM Studio](https://lmstudio.ai/download)
+- mission center
+- Foliate liseuse.
+
 ## Smartphone
 ### Android
 ### Play store
@@ -85,16 +89,17 @@ Sur le store :
 * [pCloud](https://www.pcloud.com/fr/download-free-online-cloud-file-storage.html)
 * [pandoc](https://pandoc.org/) convertir des fichiers en word, markdown, html.
 * Zotero, références bibliographiques.
+* [eden emulator](https://eden-emu.dev/download) Emulateur de switch  
 ## Ubuntu
 ## Logiciels
 
-Disponibles dans la logitèque Ubuntu :
+Disponibles dans la logithèque Ubuntu :
 
 * Brave, navigateur internet sans pub.
 * Dessin de Romain F T, logiciel de dessins très simple.
-* Mailspring, client email.
 * Visual code
-* Vlc, lecteur multi média.
+* Vlc, lecteur multimédia.
+* flash info, lecteur rss.
 
 Disponible sur le site internet de l'entreprise :
 
@@ -112,15 +117,15 @@ Projet github intéressant :
 * [Cryptomator](https://cryptomator.org/), logicel de cryptage spécialisé pour le cloud.
 * [Simplenote](https://simplenote.com/), logiciels de prises de notes en markdown avec synhcronisation entre les plateformes (android, windows,...).
 * [Obsidian](https://obsidian.md/) ou [Logseq](https://logseq.com/) application de gestion de connaissances.
-* [Mixx](https://mixxx.org/), logiciel de dj.
+* [Mixxx](https://mixxx.org/), logiciel de dj.
 * [OnlyOffice](https://www.onlyoffice.com) et [FreeOffice](https://www.freeoffice.com/fr/) suite bureautique.
 
 ### Thunderbird
 
 Exporter ses emails dans un fichier :
 
-* sélectionner le dossier (ou l'email)
-* outils > exporter
+1. sélectionner le dossier (ou l'email)
+2. outils > exporter
 ## Pandoc
 
 Convertir du markdown en word, html, pdf.
@@ -254,7 +259,6 @@ colonne1	| colonne2
 ------------|-----
 val1 		| val2
 
-
 ### Chrome
 
 Pour recherher directement sur un site internet, dans `Moteur de recherche`
@@ -263,3 +267,10 @@ Pour recherher directement sur un site internet, dans `Moteur de recherche`
 |---|---|
 | `https://www.youtube.com/results?search_query=%s&page={startPage?}&utm_source=opensearch` | yt |
 
+### Android
+
+Dans TWRP
+
+1.  Supprimer les données de cache`Wipe`.
+2. Installer `Install`
+3. Installer  Gapps avec `Install`
