@@ -1,0 +1,1 @@
+RAM Random Access Memory ou mémoire vive. Elle sert à stocker temporairement les données et instructions dont le processeur a besoin pendant qu’il exécute des tâches.

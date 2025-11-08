@@ -1,7 +1,7 @@
 - [LM Studio](https://lmstudio.ai/download)
 - mission center
 - Foliate liseuse.
-
+- Liste de logiciels libres reconnus par l'[administration française](https://code.gouv.fr/sill/list).
 ## Smartphone
 ### Android
 ### Play store

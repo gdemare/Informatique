@@ -1,4 +1,4 @@
-
+- [ ] 
 - `brave --app=https://www.youtube.com` ouvrir un url avec brave.
 ## Installer ubuntu en dual boot en partageant des fichiers avec Windows
 
@@ -55,6 +55,8 @@ Extensions à ajouter :
 * arcMenu pour avoir le même menu que Windows. 
 * dashpanel
 * bluetooth battery meter ajouter la batterie restante aux appariels bluetooth
+* Removable Drive Menu affiche les périphériques branchés.
+* Application Hotkey ajouter des raccourcies clavier.
 
 ## Flathub
 
@@ -66,6 +68,7 @@ Extensions à ajouter :
 * Apparamment une des meilleurs options consiste à utiliser Music Player Daemon un lecteur de musique en ligne de commande avec une interface. Interface cool
 * Shortwave, radios en ligne.
 * Musicpod lecteur de musique.
+* gThumb visionneuse d'image
 
 ### Media Player Deamon
 
@@ -129,3 +132,9 @@ A vérifier :
 
 * `sudo rmmod kvm_intel` apparemment 
 * CTRL (DROITE) + c
+
+PB avec l'accélérateur :
+1. `sudo modprobe -r kvm_intel`
+2. /etc/modprobe.d/blacklist.conf ouis ```
+blacklist kvm_intel
+```
