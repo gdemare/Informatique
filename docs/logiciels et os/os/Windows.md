@@ -11,7 +11,7 @@ Rufus est un petit utilitaire qui permet de bloquer l'installation de logiciels 
 [ventoy](https://www.ventoy.net/en/index.html) outils qui transforme une clé USB en clé bootable. Une fois la clé formatée il suffit de copier l'iso.
 ##### Windows purifié
 
-Windows Arium est une version modifié de Windows qui contient des logiciels supplémentaires et qui désactive des fonctionnalités et programmes qui compromettent la vie privée et ralantissent l'OS.
+[Windows Arium](https://www.ykn.fr/pages/arium/) est une version modifié de Windows qui contient des logiciels supplémentaires et qui désactive des fonctionnalités et programmes qui compromettent la vie privée et ralantissent l'OS.
 
 [optimizer](https://github.com/hellzerg/optimizer) logiciel qui permet de désactiver certaines fonctionnalités de suivis et des logiciels espions de Windows.
 ## Ajouter un raccourci au menu démarrer
@@ -44,3 +44,8 @@ email :
 - a@a.com
 - [atlas](https://docs.atlasos.net/getting-started/installation/) nettoie windows après une installation.
 - [[modules supplémentaires]]
+
+### Dell
+
+F2 au démarrage pour ouvrir le bios.
+Option (Alt)

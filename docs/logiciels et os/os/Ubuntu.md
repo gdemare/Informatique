@@ -123,6 +123,9 @@ Terminal=false
 
 
 **[Domain Name System](https://fr.wikipedia.org/wiki/Domain%20Name%20System "https://fr.wikipedia.org/wiki/Domain Name System")** (ou DNS, **système de noms de domaine**)
+
+## Virtualisation
+
 ### Virtual box
 
  Pour l'installation de virtual box, il est recommandé d'utiliser le terminal.
@@ -135,6 +138,18 @@ A vérifier :
 
 PB avec l'accélérateur :
 1. `sudo modprobe -r kvm_intel`
-2. /etc/modprobe.d/blacklist.conf ouis ```
-blacklist kvm_intel
-```
+2. /etc/modprobe.d/blacklist.conf.
+
+### Quickemu
+
+ est un logiciel de virtualisation qui optimise les paramètres des vm en fonction des caractérisques de l'ordinateur.
+Tous les informations pour installer une vm sont sur [Quickemu github](https://github.com/quickemu-project/quickemu).
+
+- `quickemu --vm macos-big-sur.conf --display spice` émuler un système d'exploitation.
+### MacOS
+
+Pour [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) pour permettre au ancien mac d'eê mis à jour.
+### Mettre à jour les firmwares
+
+- `fwupdmgr get-updates` vérifier la présence de màj.
+- `sudo fwupdmgr update` télécharge et installe toutes les màj.

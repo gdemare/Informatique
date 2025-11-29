@@ -19,8 +19,11 @@ Liste de dictionnaires :
 
 Ajouter un dictionnaire :
 
-* pour les kindle, à mettre dans `koreader/data/dict` (ne pas oublier de décompresser le fichier si c'est un zip.
+* pour les Kindles, à mettre dans `koreader/data/dict` (ne pas oublier de décompresser le fichier si c'est un zip.
 
 ### Kindle
 
 [jailbreak pou Kindle](https://kindlemodding.org/) cela permet par exemple d'installer des logiciels comme Koreader pour pourvoir lire des epubs et ne pas avoir à convertir les livres avant de les transfèrer.
+Kindle Paperwhite (11e génération).
+Version de Koreader __kindlehf__.
+Pour mettre à jour Koreader, il faut remplacer les fichiers de l'ancienne version avec la nouvelle.

@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0a62a1c7c379c3b5",
+            "id": "a71db57405c48f2c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "gap",
+                "query": "youtube",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Signet"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -165,18 +164,20 @@
       "bases:Create new base": false
     }
   },
-  "active": "0a62a1c7c379c3b5",
+  "active": "a71db57405c48f2c",
   "lastOpenFiles": [
-    "docs/python/bases/python.md",
-    "AERI.md",
     "docs/python/bases/divers/modules supplémentaires.md",
+    "docs/python/bases/python.md",
+    "docs/programmation/bonnes pratiques de programmation.md",
     "docs/logiciels et os/logiciels.md",
+    "docs/logiciels et os/os/liseuse.md",
+    "docs/logiciels et os/os/Ubuntu.md",
+    "docs/logiciels et os/os/Windows.md",
+    "AERI.md",
     "docs/logiciels et os/écran AERI.md",
     "AERI 1.md",
-    "docs/logiciels et os/os/Windows.md",
     "docs/Informatique.md",
     "Untitled.canvas",
-    "docs/logiciels et os/os/Ubuntu.md",
     "docs/SAS/statistique/probabilité et statistique.md",
     "docs/programmation/unix/bash.md",
     "docs/SAS/statistique/tests statistiques.md",
@@ -192,8 +193,6 @@
     "docs/r/descriptions/réduction de dimensions/ACP.md",
     "docs/r/descriptions/réduction de dimensions/ACM.md",
     "docs/r/descriptions/clustering/clustering.md",
-    "docs/r/descriptions/clustering/centres mobiles.md",
-    "docs/r/descriptions/clustering/CAH.md",
     "Sans titre.canvas",
     "docs/python/bioinformatique",
     "docs/python/bases/divers"

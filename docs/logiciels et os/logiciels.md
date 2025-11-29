@@ -37,7 +37,7 @@ Installer [Droid-ify](https://f-droid.org/en/packages/com.looker.droidify/) pour
 * CamScanner Version Complète, licence pour CamScanner qui supprime le filigrane sur les documents scannés.
 ### Github
 
-[element](https://github.com/element-hq) appplication pour Matrix.
+- [element](https://github.com/element-hq) appplication pour Matrix.
 * [DictTango](https://github.com/Jimex/DictTango-Android) une application de dictionnaire. Elle gère les fichiers au format mdx.
 * [revanced](https://revanced.app/) patcher l'application YouTube :
 1. Telecharger l'apk de Youtube depuis le lien dans revanced et desinstaller YouTube.
@@ -274,3 +274,6 @@ Dans TWRP
 1.  Supprimer les données de cache`Wipe`.
 2. Installer `Install`
 3. Installer  Gapps avec `Install`
+
+### Virtualisation
+[Quickmu](https://github.com/quickemu-project/quickemu) logiciel de vm. Il permet de virtualiser MacOS, Windows et Linux.
