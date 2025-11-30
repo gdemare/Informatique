@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/logiciels et os/os/Ubuntu.md",
+                "file": "docs/programmation/unix/bash.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ubuntu"
+              "title": "bash"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "youtube",
+                "query": "remove",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Signet"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -166,12 +167,12 @@
   },
   "active": "a71db57405c48f2c",
   "lastOpenFiles": [
+    "docs/logiciels et os/os/Ubuntu.md",
     "docs/python/bases/divers/modules supplémentaires.md",
     "docs/python/bases/python.md",
     "docs/programmation/bonnes pratiques de programmation.md",
     "docs/logiciels et os/logiciels.md",
     "docs/logiciels et os/os/liseuse.md",
-    "docs/logiciels et os/os/Ubuntu.md",
     "docs/logiciels et os/os/Windows.md",
     "AERI.md",
     "docs/logiciels et os/écran AERI.md",

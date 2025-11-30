@@ -29,6 +29,9 @@ Configuration pour OneDrive :
 10. `q` pour quitter
 11. dans le dossier, exécuter : `rclone --vfs-cache-mode writes mount OneDrive: ~/Onedrive &`
 12. Créer un script `rclone --vfs-cache-mode writes mount OneDrive: ~/Onedrive & notify-send "Onedrive Connected" "Microsoft successfully mounted"`
+
+rsync -av --delete-after /home/guigui/Musique/MaMusique
+mtp://TCL_TCL_50_NXTPAPER_5G_MJCIIR9D7P4T75KV/M%C3%A9moire%20interne%20partag%C3%A9e/Music/MaMusique/
 ## Ajouter un dépôt
 
 1. Ouvrir `Logiciels et mises à jour`
