@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/programmation/unix/bash.md",
+                "file": "docs/logiciels et os/logiciels/ressources web.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "bash"
+              "title": "ressources web"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "remove",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Signet"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -167,6 +166,8 @@
   },
   "active": "a71db57405c48f2c",
   "lastOpenFiles": [
+    "docs/logiciels et os/logiciels/visual code studio.md",
+    "docs/programmation/unix/bash.md",
     "docs/logiciels et os/os/Ubuntu.md",
     "docs/python/bases/divers/modules supplémentaires.md",
     "docs/python/bases/python.md",
@@ -180,7 +181,6 @@
     "docs/Informatique.md",
     "Untitled.canvas",
     "docs/SAS/statistique/probabilité et statistique.md",
-    "docs/programmation/unix/bash.md",
     "docs/SAS/statistique/tests statistiques.md",
     "docs/SAS/statistique/clustering/clustering des variables.md",
     "docs/python/bases/ressources.md",
@@ -193,7 +193,6 @@
     "docs/r/descriptions/réduction de dimensions/AFC.md",
     "docs/r/descriptions/réduction de dimensions/ACP.md",
     "docs/r/descriptions/réduction de dimensions/ACM.md",
-    "docs/r/descriptions/clustering/clustering.md",
     "Sans titre.canvas",
     "docs/python/bioinformatique",
     "docs/python/bases/divers"

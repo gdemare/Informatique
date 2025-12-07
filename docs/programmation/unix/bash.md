@@ -10,14 +10,13 @@ Crtl + d | envoie le message EOF (End Of Files)
 Crtl + u | supprimer tout ce qui se situe à gauche du curseur
 Crtl + w | supprimer le premier mot à gauche du curseur
 Crtl + y | coller le texte supprimer avec les commandes précédentes
-
 ## La structure des dossiers et fichiers
 
 * `pwd` afficher le dossier actuel.
 * `which` connaître l'emplacement d'une commande.
 * `ls` lister les fichiers et dossiers.
   
-  Paramétres:
+  Paramètres:
   
   * `a` afficher tous fichiers et les dossiers cachés.
   * `F` indique le type d'élément
@@ -110,7 +109,6 @@ Paramètres :
 
 	* `utilisateru:groupe` changer le groupe et le propriétaire et groupe d'un fichier.
 	* `R` affecter récussivement les sous-dossiers.
-
    
 * `chgrp groupe fichier` changer le groupe propriétaire d'un fichier.
 * `chmod droit fichier` modifier les droits d'accés [propriétaire][groupe][autres] .
@@ -367,7 +365,6 @@ Paramétres :
 
  	* `e` obligatoire pour décompresser.
 	* `1` afficher le contenu.
-
 
 ## La connexion sécurisée à distance avec SSH
 
