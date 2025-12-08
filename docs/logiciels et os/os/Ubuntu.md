@@ -1,5 +1,6 @@
 - [ ] 
 - `brave --app=https://www.youtube.com` ouvrir un url avec brave.
+- `brave-browser --new-window "https://ton-lien.com"` ouvrir un lien avec Brave.
 ## Installer ubuntu en dual boot en partageant des fichiers avec Windows
 
 1. WindowsDésactiver la sécurité dans le Bios.
@@ -113,17 +114,13 @@ Créer un fichier `cryptomator.desktop` dans le répertoire `/home/guigui/.local
 [Desktop Entry]
 Version=1.17.1
 Type=Application
-Name=Cryptomator
-TryExec=/home/guigui/Applications/cryptomator.AppImage
-Exec=/home/guigui/Applications/cryptomator.AppImage
+Name=ChatGTP
+Exec=brave-browser --new-window "https://ton-lien.com"
 Comment=Cryptomator
-Icon=/home/guigui/Applications/cryptomator.png
-Actions=Editor
-Terminal=false
+Icon=/home/guigui/Applications/chat.png
 ```
 - `update-desktop-database ~/.local/share/applications/` mettre à jour les applications.
 `sudo dpkg -i package` installer un package deb.
-
 
 **[Domain Name System](https://fr.wikipedia.org/wiki/Domain%20Name%20System "https://fr.wikipedia.org/wiki/Domain Name System")** (ou DNS, **système de noms de domaine**)
 

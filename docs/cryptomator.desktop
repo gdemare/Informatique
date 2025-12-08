@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.17.1
+Type=Application
+Name=Cryptomator
+TryExec=/home/guigui/Applications/cryptomator.AppImage
+Exec=/home/guigui/Applications/cryptomator.AppImage
+Comment=Cryptomator
+Icon=/home/guigui/Applications/cryptomator.png
+Actions=Editor
+Terminal=false

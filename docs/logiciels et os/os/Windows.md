@@ -49,3 +49,8 @@ email :
 
 F2 au démarrage pour ouvrir le bios.
 Option (Alt)
+
+### Réglage de la date et de l'heure
+
+- `net start w32time` parfois il faut forcer le démarrage de w32 qui gère l'heure.
+- `w32tm /config /syncfromflags:manual /manualpeerlist:"0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org 3.pool.ntp.org` modifier le serveur de synchronisation de la date/heure avec [NPT Pool Project](https://www.ntppool.org/fr/use.html).  
