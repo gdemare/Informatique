@@ -1,4 +1,7 @@
-- [ ] 
+
+### Dualboot
+[Pairing Bluetooth Devices in Dual Boot with Linux Ubuntu and Windows 10/11](https://gist.github.com/madkoding/f3cfd3742546d5c99131fd19ca267fd4) problèmes bluetooth. 
+
 - `brave --app=https://www.youtube.com` ouvrir un url avec brave.
 - `brave-browser --new-window "https://ton-lien.com"` ouvrir un lien avec Brave.
 ## Installer ubuntu en dual boot en partageant des fichiers avec Windows
