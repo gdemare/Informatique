@@ -1,12 +1,46 @@
+## Logiciels
 
+Disponibles dans la logithèque Ubuntu :
+
+* Brave, navigateur internet sans pub.
+* Dessin de Romain F T, logiciel de dessins très simple.
+* Flash info, lecteur de flux RSS.
+* Flameshot, logiciel de capture d'écran complet.
+- [Foliate](https://johnfactotum.github.io/foliate/) lecteur d'ebooks installable via Flathub.
+- GIMP pour les photos et les images.
+* gThumb visionneuse d'image
+- Mission center équivalent au gestionnaire des tâche sur Windows.
+* Vlc, lecteur multimédia.
+
+Disponible uniquement depuis Github :
+
+* [NOI](https://github.com/lencx/Noi) client desktop pour les modèles d'IA (chat GPT...).
+* [SpotX-bash](https://github.com/SpotX-Official/SpotX-Bash), bloqueur de pub sur la version desktop de spotify.
+
+[Flathub](https://flathub.org/) logithèque avec les applications en appimage. Un exemple d'installation par le terminal `flatpak install flathub org.gnome.Music`. 
+Dispo sur Flathub :
+
+* Github, pour gérer les fichiers Github.
+* Gapless, lecteur musique chiant car il sépare les albums par années.
+* Shortwave, radios en ligne.
+* Musicpod lecteur de musique.
+
+Lecteur musique : apparemment une des meilleurs options consiste à utiliser Music Player Daemon un lecteur de musique en ligne de commande avec une interface. Interface cool.
+
+### Thunderbird
+
+Exporter ses emails dans un fichier :
+
+1. sélectionner le dossier (ou l'email)
+2. outils > exporter
 ### Dualboot
 [Pairing Bluetooth Devices in Dual Boot with Linux Ubuntu and Windows 10/11](https://gist.github.com/madkoding/f3cfd3742546d5c99131fd19ca267fd4) problèmes bluetooth. 
 
 - `brave --app=https://www.youtube.com` ouvrir un url avec brave.
 - `brave-browser --new-window "https://ton-lien.com"` ouvrir un lien avec Brave.
-## Installer ubuntu en dual boot en partageant des fichiers avec Windows
+## Installer Ubuntu en dual boot en partageant des fichiers avec Windows
 
-1. WindowsDésactiver la sécurité dans le Bios.
+1. Windows Désactiver la sécurité dans le Bios.
 2. Installer Windows.
 3. Avec le logiciel gestionnaire de disques, créer une partition :
   * pour les fichiers partagés, formater en nts.
@@ -64,19 +98,6 @@ Extensions à ajouter :
 * bluetooth battery meter ajouter la batterie restante aux appariels bluetooth
 * Removable Drive Menu affiche les périphériques branchés.
 * Application Hotkey ajouter des raccourcies clavier.
-
-## Flathub
-
-[Flathub](https://flathub.org/) logithèque avec les applications en appimage. Un exemple d'installation par le terminal `flatpak install flathub org.gnome.Music`.
-
-* Cryptomator, logiciel de cryptage spécialisé pour le cloud.
-* Github, pour gérer les fichiers github.
-* Gapless, lecteur musique chiant car il sépare les albums par années.
-* Apparamment une des meilleurs options consiste à utiliser Music Player Daemon un lecteur de musique en ligne de commande avec une interface. Interface cool
-* Shortwave, radios en ligne.
-* Musicpod lecteur de musique.
-* gThumb visionneuse d'image
-
 ### Media Player Deamon
 
 1. Installer `sudo apt install mpd mpc` 
@@ -141,17 +162,16 @@ A vérifier :
 
 PB avec l'accélérateur :
 1. `sudo modprobe -r kvm_intel`
-2. /etc/modprobe.d/blacklist.conf.
-
+2. `/etc/modprobe.d/blacklist.conf`.
 ### Quickemu
 
- est un logiciel de virtualisation qui optimise les paramètres des vm en fonction des caractérisques de l'ordinateur.
+ est un logiciel de virtualisation qui optimise les paramètres des vm en fonction des caractéristiques de l'ordinateur.
 Tous les informations pour installer une vm sont sur [Quickemu github](https://github.com/quickemu-project/quickemu).
 
 - `quickemu --vm macos-big-sur.conf --display spice` émuler un système d'exploitation.
 ### MacOS
 
-Pour [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) pour permettre au ancien mac d'eê mis à jour.
+Pour [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) pour permettre au ancien mac d'être mis à jour.
 ### Mettre à jour les firmwares
 
 - `fwupdmgr get-updates` vérifier la présence de màj.

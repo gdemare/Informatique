@@ -1,0 +1,1 @@
+- [bazzite](https://bazzite.gg/) os basé sur Fedora spécialisé dans le jeu vidéo. Il est moins personnalisable que les version classique comme Ubuntu mais contient tous les éléments et les logiciels préinstallés pour avoir la meilleure expérience de jeux vidéos.

@@ -15,12 +15,11 @@ Les dictionnaires doivent être au format StarDict (*.idx, *.ifo or *.ifo.gz, *.
 
 Liste de dictionnaires :
 
-* [ebook-reader-dict](https://github.com/BoboTiG/ebook-reader-dict?tab=readme-ov-file) dictionnaire avec l'étymologie.
+* [ebook-reader-dict](https://github.com/BoboTiG/ebook-reader-dict?tab=readme-ov-file) dictionnaire avec l'étymologie notamment pour les Kobo.
 
 Ajouter un dictionnaire :
 
 * pour les Kindles, à mettre dans `koreader/data/dict` (ne pas oublier de décompresser le fichier si c'est un zip.
-
 ### Kindle
 
 [jailbreak pou Kindle](https://kindlemodding.org/) cela permet par exemple d'installer des logiciels comme Koreader pour pourvoir lire des epubs et ne pas avoir à convertir les livres avant de les transfèrer.
