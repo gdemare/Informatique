@@ -11,14 +11,10 @@
             "id": "a71db57405c48f2c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/logiciels et os/logiciels/ressources web.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "ressources web"
+              "title": "New tab"
             }
           }
         ]

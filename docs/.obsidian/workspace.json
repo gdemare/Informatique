@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "logiciels et os/OS.md",
+                "file": "logiciels et os/os/Ubuntu.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OS"
+              "title": "Ubuntu"
             }
           }
         ],
@@ -215,10 +215,10 @@
   "active": "48ea2e92af8d47c6",
   "lastOpenFiles": [
     "logiciels et os/écran AERI.md",
+    "logiciels et os/OS.md",
     "logiciels et os/os/Android.md",
     "logiciels et os/os/Liens logiciel.md",
     "logiciels et os/os/liseuse.md",
-    "logiciels et os/OS.md",
     "logiciels et os/ressources web.md",
     "logiciels et os/logiciels/Visual Code Studio.md",
     "logiciels et os/logiciels/logiciels en lignes de commande.md",
