@@ -54,10 +54,8 @@ Aller dans :
 1. `cd /var/lib/bluetooth/`
 2. `ls` récupérer l'id (`10:F6:0A:80:C8:83`).
 3. `cd id` rentrer dans le périphérique (`cd 10:F6:0A:80:C8:83`).
-4. `cd id2̀ (`cd 78:5E:A2:D4:D9:3B`)
+4. `cd id2̀` comme `cd 78:5E:A2:D4:D9:3B`. 
 5. Modifier le fichier avec `nano info` : remplacer `Key=idHex` de la section `[LinkKey]` (par exemple `1EBF2FC04E57EAA3D1432CB9782C7CCC`).
-
-
 
 
 - `brave --app=https://www.youtube.com` ouvrir un url avec brave.

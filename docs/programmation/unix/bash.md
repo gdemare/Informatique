@@ -485,3 +485,9 @@ Requis : `wget lzip unizip squahfs-tools`. L'url github : `https://github.com/ge
 
 * `wget https://raw.githubusercontent.com/geeks-r-us/anbox-playstore-installer/master/install-playstore.sh`.
 * Autoriser les droits des settings > Apps > Google services.
+### Adb et fastboot
+
+`fastboot flashing get_unlock_ability_̀ vérifier si le mode débbugage est activé.
+
+`fastboot getvar all` (`unlocked` pour savoir is le bootloader est dévérouillé).
+`fastboot reboot bootloader` 
