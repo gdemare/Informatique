@@ -1,0 +1,8788 @@
+<!DOCTYPE html><html lang="fr" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../formater%20les%20donn%C3%A9es/">
+      
+      
+        <link rel="next" href="../ressources/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Python - Informatique</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#utile-pour-les-notebooks" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Informatique" class="md-header__button md-logo" aria-label="Informatique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Informatique
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gdemare/informatique/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    gdemare/informatique
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Informatique/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Informatique
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Untitled/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Untitled
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../SAS/automatiser%20avec%20SAS/" class="md-tabs__link">
+          
+  
+  
+  SAS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../bioinformatique/bioinformatique/" class="md-tabs__link">
+          
+  
+  
+  Bioinformatique
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../database/fichier/json/" class="md-tabs__link">
+          
+  
+  
+  Database
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../logiciels%20et%20os/OS/" class="md-tabs__link">
+          
+  
+  
+  Logiciels et os
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../programmation/bonnes%20pratiques%20de%20programmation/" class="md-tabs__link">
+          
+  
+  
+  Programmation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../dataframe/" class="md-tabs__link">
+          
+  
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../r/bases/PKNCA%20et%20les%20unit%C3%A9s/" class="md-tabs__link">
+          
+  
+  
+  R
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Informatique" class="md-nav__button md-logo" aria-label="Informatique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Informatique
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gdemare/informatique/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    gdemare/informatique
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Informatique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informatique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Untitled/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Untitled
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SAS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/automatiser%20avec%20SAS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    automatiser avec SAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/centro%C3%AFdes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Centroïdes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/formater%20les%20donn%C3%A9es/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formater les données
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/manipuler%20les%20donn%C3%A9es/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manipuler les données
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5">
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistique
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Statistique
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/ANOVA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANOVA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/graphique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Graphique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/probabilit%C3%A9%20et%20statistique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Probabilité et statistique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/tests%20statistiques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tests statistiques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_5">
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_5" id="__nav_4_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clustering
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Clustering
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/clustering/CAH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAH
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/clustering/centres_mobiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Centres mobiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/clustering/clustering%20des%20variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clustering des variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_6">
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_6" id="__nav_4_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modèles
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modèles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/mod%C3%A8les/analyse_discriminante/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analyse discriminante
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/mod%C3%A8les/arbre_de_decision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arbre de decision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/mod%C3%A8les/esp%C3%A9rance_maximisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Espérance maximisation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/mod%C3%A8les/r%C3%A9gression_lin%C3%A9aire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Régression linéaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/mod%C3%A8les/r%C3%A9gression_logistique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Régression logistique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_7">
+        
+          
+          <label class="md-nav__link" for="__nav_4_5_7" id="__nav_4_5_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Réduction de dimensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Réduction de dimensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/r%C3%A9duction%20de%20dimensions/ACM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/r%C3%A9duction%20de%20dimensions/ACP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAS/statistique/r%C3%A9duction%20de%20dimensions/AFC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bioinformatique
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bioinformatique
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bioinformatique/bioinformatique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bioinformatique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bioinformatique/s%C3%A9quences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Séquences
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Database
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1">
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fichier
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fichier
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../database/fichier/json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Json
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2">
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Langage
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Langage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../database/langage/sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sql
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3">
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logiciel
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Logiciel
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../database/logiciel/business-object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business object
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../database/logiciel/talend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Talend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logiciels et os
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Logiciels et os
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/OS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/ressources%20web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ressources web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/%C3%A9cran%20AERI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    écran AERI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4">
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logiciels
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Logiciels
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/logiciels/Adobe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adobe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/logiciels/Excel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Excel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/logiciels/Microsoft%20Office/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Office
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/logiciels/Visual%20Code%20Studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Code Studio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/logiciels/imageJ%20et%20fidji/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    imageJ et fidji
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/logiciels/logiciels%20en%20lignes%20de%20commande/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logiciels en lignes de commande
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5">
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Os
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Os
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/os/Android/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/os/Liens%20logiciel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Liens logiciel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/os/Ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/os/Windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logiciels%20et%20os/os/liseuse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Liseuse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programmation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Programmation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmation/bonnes%20pratiques%20de%20programmation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonnes pratiques de programmation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmation/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmation/java/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4">
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unix
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unix
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmation/unix/Organisation%20des%20dossiers%20sur%20Unix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organisation des dossiers sur Unix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmation/unix/bash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bash
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmation/unix/batch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Batch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmation/unix/powerShell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    powerShell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmation/unix/shell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmation/unix/vim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5">
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmation/web/css/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Css
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmation/web/html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Html
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmation/web/java-script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmation/web/php/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Php
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataframe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formater%20les%20donn%C3%A9es/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formater les données
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utile-pour-les-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utile pour les notebooks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension-fichier-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extension fichier Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conda
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installer-un-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installer un module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installer un module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generer-un-fichier-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Générer un fichier requirements.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maj-des-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MàJ des packages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloner-un-dossier-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloner un dossier github :
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creer-un-module-et-limpoter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer un module et l'impoter
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Créer un module et l'impoter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environnement-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environnement en python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convertir-un-python-en-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convertir un python en application
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions-de-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructions de bases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions de bases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les matrices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les instructions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commenter-le-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commenter le code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format de données
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-listes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les listes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les listes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dictionnaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dictionnaire
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tupple-liste-non-modifiable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tupple (liste non modifiable)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-et-frozenset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set et frozenset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types de variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types de variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caratere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caratère
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caratère">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expression-reguliere-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expression régulière (regex)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Date
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Condition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Condition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-operateurs-logiques-booleens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les opérateurs logiques (booléens)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-boucles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les boucles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les boucles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-boucle-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La boucle for
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-boucle-tant-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La boucle tant que
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-et-classe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonction et classe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonction et classe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declarer-une-fonction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déclarer une fonction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Déclarer une fonction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctions-recursives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonctions récursives
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declarer-une-classe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déclarer une classe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le texte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autres-fonctions-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autres fonctions utiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autres fonctions utiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manipuler-les-fichiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manipuler les fichiers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipuler les fichiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sys
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enregistrer-un-fichier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enregistrer un fichier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternative
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importer-un-fichier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importer un fichier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecrire-une-page-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ecrire une page html
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les images
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skimage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skimage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pillow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pillow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Excel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichier-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichier audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creer-un-fichier-word" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer un fichier Word
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Créer un fichier Word">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-un-tableau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ajouter un tableau
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-graphique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface graphique
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interface graphique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declarer-une-fenetre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déclarer une fenêtre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#element-de-la-fenetre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Element de la fenêtre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choisir-un-dossier-par-une-fenetre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choisir un dossier par une fenêtre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#developper-avec-jupyter-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Développer avec Jupyter notebook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurer-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurer Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurer Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declarer-une-variable-python-dans-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déclarer une variable python dans Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jupyter-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jupyter notebook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ressources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ressources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tenseur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tenseur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1_6">
+        
+          
+          <label class="md-nav__link" for="__nav_9_1_6" id="__nav_9_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Divers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Divers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../divers/cartographie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cartographie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../divers/modules%20suppl%C3%A9mentaires/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules supplémentaires
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../divers/tableau%20de%20bord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Streamlit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../divers/traitement%20d%20images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traitement d images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../divers/traitement%20du%20signal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traitement du signal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../divers/web%20scraping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web scraping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2">
+        
+          
+          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bioinformatique
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bioinformatique
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bioinformatique/spectrom%C3%A9trie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spectrométrie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bioinformatique/s%C3%A9quence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Séquence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3">
+        
+          
+          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clustering
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Clustering
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clustering/CAH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAH
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_4">
+        
+          
+          <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Math
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Math
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/graphique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Graphique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/loi%20statistique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loi statistique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Math
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/tests%20statistiques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tests statistiques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5">
+        
+          
+          <label class="md-nav__link" for="__nav_9_5" id="__nav_9_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modèles
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modèles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mod%C3%A8les/arbre%20d%C3%A9cision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arbre décision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mod%C3%A8les/mod%C3%A8les/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modèles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mod%C3%A8les/r%C3%A9gression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Régression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5_4">
+        
+          
+          <label class="md-nav__link" for="__nav_9_5_4" id="__nav_9_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Réseau de neurones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Réseau de neurones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mod%C3%A8les/r%C3%A9seau%20de%20neurones/Pytorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pytorch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mod%C3%A8les/r%C3%A9seau%20de%20neurones/TensorFlow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TensorFlow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mod%C3%A8les/r%C3%A9seau%20de%20neurones/couche%20convulsive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Couche convulsive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6">
+        
+          
+          <label class="md-nav__link" for="__nav_9_6" id="__nav_9_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Réduction de dimensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Réduction de dimensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../r%C3%A9duction%20de%20dimensions/ACP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10">
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    R
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    R
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1">
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bases/PKNCA%20et%20les%20unit%C3%A9s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PKNCA et les unités
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bases/R/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    R
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bases/cin%C3%A9tique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cinétique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bases/dataframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataframe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bases/format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bases/ressources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ressources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1_7">
+        
+          
+          <label class="md-nav__link" for="__nav_10_1_7" id="__nav_10_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autres
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Autres
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bases/autres/carte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Carte
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bases/autres/diagramme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagramme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bases/autres/d%C3%A9velopper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Développer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bases/autres/rapport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rapport
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bases/autres/tableau%20de%20bord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tableau de bord
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2">
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bioinformatique
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bioinformatique
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bioinformatique/bioinformatique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bioinformatique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bioinformatique/blast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blast
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/bioinformatique/transcriptomique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transcriptomique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3">
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descriptions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Descriptions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/descriptions/graphiques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Graphiques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_10_3_2" id="__nav_10_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clustering
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Clustering
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/descriptions/clustering/CAH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAH
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/descriptions/clustering/centres%20mobiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Centres mobiles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/descriptions/clustering/clustering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clustering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3_3">
+        
+          
+          <label class="md-nav__link" for="__nav_10_3_3" id="__nav_10_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Réduction de dimensions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Réduction de dimensions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/descriptions/r%C3%A9duction%20de%20dimensions/ACM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/descriptions/r%C3%A9duction%20de%20dimensions/ACP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ACP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/descriptions/r%C3%A9duction%20de%20dimensions/AFC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/descriptions/r%C3%A9duction%20de%20dimensions/positionnement%20multidimensionnel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Positionnement multidimensionnel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_4">
+        
+          
+          <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mathématique
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mathématique
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/math%C3%A9matique/probabilit%C3%A9%20statistique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Probabilité statistique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5">
+        
+          
+          <label class="md-nav__link" for="__nav_10_5" id="__nav_10_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Models
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/pr%C3%A9diction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prédiction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/pr%C3%A9parer%20les%20donn%C3%A9es/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Préparer les données
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/r%C3%A9gression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Régression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/r%C3%A9seau%20de%20neurones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Réseau de neurones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5_6">
+        
+          
+          <label class="md-nav__link" for="__nav_10_5_6" id="__nav_10_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classification
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Classification
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/classification/ANOVA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ANOVA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/classification/Support%20Vecteur%20Machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support Vecteur Machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/classification/analyse%20discriminante/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analyse discriminante
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/classification/arbre%20de%20d%C3%A9cision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arbre de décision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/classification/classificateur%20baysien/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classificateur baysien
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/classification/for%C3%AAt%20al%C3%A9atoire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Forêt aléatoire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/classification/r%C3%A9gression%20logistique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Régression logistique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5_7">
+        
+          
+          <label class="md-nav__link" for="__nav_10_5_7" id="__nav_10_5_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Régression
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Régression
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/r%C3%A9gression/r%C3%A9gression%20lin%C3%A9aire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Régression linéaire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/r%C3%A9gression/step/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Step
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5_8">
+        
+          
+          <label class="md-nav__link" for="__nav_10_5_8" id="__nav_10_5_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Séries temporelles
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Séries temporelles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../r/models/s%C3%A9ries%20temporelles/s%C3%A9rie%20temporelle%20simple/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Série temporelle simple
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utile-pour-les-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utile pour les notebooks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension-fichier-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extension fichier Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conda
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installer-un-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installer un module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installer un module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generer-un-fichier-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Générer un fichier requirements.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maj-des-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MàJ des packages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloner-un-dossier-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloner un dossier github :
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creer-un-module-et-limpoter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer un module et l'impoter
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Créer un module et l'impoter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environnement-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environnement en python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convertir-un-python-en-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convertir un python en application
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions-de-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructions de bases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions de bases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les matrices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les instructions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commenter-le-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commenter le code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format de données
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-listes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les listes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les listes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dictionnaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dictionnaire
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tupple-liste-non-modifiable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tupple (liste non modifiable)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-et-frozenset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set et frozenset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types de variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types de variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caratere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caratère
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caratère">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expression-reguliere-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expression régulière (regex)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Date
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Condition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Condition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-operateurs-logiques-booleens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les opérateurs logiques (booléens)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-boucles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les boucles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les boucles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-boucle-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La boucle for
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-boucle-tant-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La boucle tant que
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-et-classe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonction et classe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonction et classe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declarer-une-fonction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déclarer une fonction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Déclarer une fonction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctions-recursives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonctions récursives
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declarer-une-classe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déclarer une classe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le texte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autres-fonctions-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autres fonctions utiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autres fonctions utiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manipuler-les-fichiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manipuler les fichiers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipuler les fichiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sys
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enregistrer-un-fichier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enregistrer un fichier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternative
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importer-un-fichier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importer un fichier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecrire-une-page-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ecrire une page html
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les images
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skimage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skimage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pillow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pillow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Excel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fichier-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fichier audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creer-un-fichier-word" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer un fichier Word
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Créer un fichier Word">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-un-tableau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ajouter un tableau
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-graphique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface graphique
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interface graphique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declarer-une-fenetre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déclarer une fenêtre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#element-de-la-fenetre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Element de la fenêtre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choisir-un-dossier-par-une-fenetre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choisir un dossier par une fenêtre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#developper-avec-jupyter-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Développer avec Jupyter notebook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurer-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurer Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurer Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declarer-une-variable-python-dans-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Déclarer une variable python dans Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jupyter-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jupyter notebook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../dataframe/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Python
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../dataframe/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Bases
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/gdemare/informatique/edit/main/docs/python/bases/python.md" title="Editer cette page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/gdemare/informatique/raw/main/docs/python/bases/python.md" title="Consulter la source de cette page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"></path></svg>
+    </a>
+  
+
+
+  <h1>Python</h1>
+
+<h3 id="utile-pour-les-notebooks">Utile pour les notebooks</h3>
+<ul>
+<li><code>%pip install package</code> installer un package directement dans python.</li>
+<li><code>%matplotlib inline</code> afficher les graphiques dans le code (aussi  <code>widget</code> nécessite <code>ipympl</code>).</li>
+</ul>
+<h3 id="extension-fichier-python">Extension fichier Python</h3>
+<ul>
+<li><code>.pyw</code> fichier python exécutable.</li>
+</ul>
+<h3 id="conda">Conda</h3>
+<p>Conda est un logiciel qui permet de gérer les environnements en Python. Cela permet par exemple d'installer plusieurs versions différentes sur la même machine.</p>
+<ul>
+<li>
+<p><code>conda create -n python_env</code> créer un environnement conda.</p>
+<ul>
+<li><code>python=3.9</code> préciser la version de python.</li>
+</ul>
+</li>
+<li>
+<p><code>conda env list</code> lister les environnements.</p>
+</li>
+<li><code>conda activate python_env</code> activer l'environnement.</li>
+<li><code>conda deactivate</code> quitter l'environnement.</li>
+<li><code>conda update --all</code> mettre à jour tous les packages.</li>
+<li><code>conda install pip</code> installer un package.</li>
+</ul>
+<p>Dans pour choisir le noyau d'un environnement Visual Code ctrl+shift+P, sélectionner, <code>Pyhon : select Interpreter</code>. Sinon, dans le Terminal :</p>
+<ol>
+<li><code>conda activate ppoulain-python</code> activer l'environnement.</li>
+<li><code>code .</code> lancer Visual Code.</li>
+</ol>
+<h4 id="installer-un-module">Installer un module</h4>
+<ul>
+<li>
+<p><code>pip install package</code> installer une bibliothèque. Paramètre :</p>
+<ul>
+<li><code>-r package1, package2</code> installer plusieurs libraries en une seule fois. Pour créer l'installation d'un programme python, il est possible de créer un fichier <code>requirements.txt</code> qui contient la liste des library. Il suffit d'exécuter <code>pip install -r requirements.txt</code> pour installer tous les modules.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Il est possible de stocker le nom des library à utiliser dans un fichier. Les library sont accessibles <code>c:\users\guigui\anaconda3\envs\python_env\lib\site-packages</code></p>
+</div>
+<h5 id="generer-un-fichier-requirementstxt">Générer un fichier requirements.txt</h5>
+<ul>
+<li><code>pip freeze &gt; requirements.txt</code>   </li>
+<li>[old] package <code>pipreqs</code> avec <code>pipreqs /path/to/project</code> générer le fichier requirements.</li>
+</ul>
+<h5 id="maj-des-packages">MàJ des packages</h5>
+<ul>
+<li><code>pip list --outdated</code> liste des packages avec des màj disponibles.</li>
+<li><code>pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}</code> maj en passant par le PowerShell.</li>
+</ul>
+<h4 id="cloner-un-dossier-github">Cloner un dossier github :</h4>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/jkbr/httpie.git
+sudo<span class="w"> </span>python<span class="w"> </span>setup.py<span class="w"> </span>install
+</code></pre></div>
+<h2 id="creer-un-module-et-limpoter">Créer un module et l'impoter</h2>
+<ul>
+<li>attribut ou propriété associé à un élément. Elles sont accessibles par <code>objet.propriété</code> et elles peuvent être lister avec <code>dir()</code>.</li>
+<li>méthode est un objet de type fonction. <code>objet.fonction()</code>.</li>
+</ul>
+<p>Strucutre du dossier : <code>dossier/module1.py</code>,<code>dossier/module2.py</code> </p>
+<p>Pour importer les fichiers class dans python :</p>
+<div class="highlight"><pre><span></span><code><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'chemin/dossier'</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fichier</span><span class="w"> </span><span class="kn">import</span> <span class="k">class</span>
+</code></pre></div>
+<h3 id="environnement-en-python">Environnement en python</h3>
+<ul>
+<li><code>python3 -m venv nom_environnement</code> créer un environnement python.</li>
+<li><code>source python_env/bin/activate</code> activer l'environnement.</li>
+<li><code>deactivate</code> désactiver l'environnement.</li>
+</ul>
+<p><code>code &gt; .</code> ajouter l'environement à Visual Code.</p>
+<h3 id="convertir-un-python-en-application">Convertir un python en application</h3>
+<p>Library <code>pyinstaller</code></p>
+<p><code>pyinstaller script.py</code></p>
+<p>Paramètres :</p>
+<ul>
+<li><code>--noconsole</code></li>
+<li><code>--w</code></li>
+<li><code>--onefile</code></li>
+</ul>
+<h2 id="instructions-de-bases">Instructions de bases</h2>
+<h3 id="les-matrices">Les matrices</h3>
+<p>library : <code>NumPy</code></p>
+<ul>
+<li><code>a = np.array([[11,12,13], [21,22,23]])</code> déclarer une matrice.</li>
+<li><code>np.shape(a)</code> dimension d'une matrice .</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Opérateur</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>a*b</code></td>
+<td>multiplication</td>
+</tr>
+<tr>
+<td><code>np.dot(a,b)</code></td>
+<td>produit matriciel (NxM et MxO)</td>
+</tr>
+<tr>
+<td><code>a.T</code></td>
+<td>transposition</td>
+</tr>
+<tr>
+<td>### Importer des fonctions</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>import package</code> charger un package complet. Les fonctions sont accessibles par <code>package.fonction</code></li>
+<li><code>from package import module</code> charger un module.</li>
+<li><code>module.fonction()</code> utiliser une fonction d'un module.</li>
+<li><code>help(module)</code>afficher les informations sur un module.</li>
+<li><code>from module import partieModule</code> importer uniquement un sous module.</li>
+<li><code>*</code> importer toutes les fonctions.</li>
+</ul>
+<h3 id="les-instructions">Les instructions</h3>
+<p>Les instuctions peuvent être séparées par <code>;</code> ou par un saut de ligne.</p>
+<h3 id="commenter-le-code">Commenter le code</h3>
+<ul>
+<li><code># commentaire</code> commentaire sur une seule ligne.</li>
+<li><code>"""commentaire"""</code> commentaire sur plusieurs lignes.</li>
+<li><code>début \ suite</code> d'écrire une instruction sur plusieurs lignes</li>
+</ul>
+<h2 id="les-variables">Les variables</h2>
+<ul>
+<li><code>a = valeur</code> créer et affecter une valeur à une variable.</li>
+<li><code>a, b = val1, val2</code> affecter plusieurs variables en même temps.</li>
+<li><code>input("afficher")</code> saisie utilisateur (convertir en nombre la saisie <code>int(...)</code>).</li>
+<li><code>del variable</code> supprimer une variable.</li>
+</ul>
+<p>Liste des variables par défaut :
+* <code>%pwd</code> dossier par défaut.</p>
+<h3 id="format-de-donnees">Format de données</h3>
+<ul>
+<li><code>type(variable)</code> renvoie le type de variable.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>list(variable)</code></td>
+<td>convertir en liste</td>
+</tr>
+<tr>
+<td><code>int()</code></td>
+<td>convertir en entier</td>
+</tr>
+<tr>
+<td><code>float()</code></td>
+<td>convertir en float</td>
+</tr>
+<tr>
+<td><code>str()</code></td>
+<td>convertir en texte</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>format( nombre, '.2f' )</code> ou <code>f"{3.4562:.2f}"</code> format des chiffres le 2 correspond à 2 nbre après la virgule. Attention, converti en texte.</li>
+<li><code>dir(element)</code> lister toutes les méthodes associées à une variable.</li>
+</ul>
+<h2 id="les-listes">Les listes</h2>
+<p>Tableau récapitulatif des types de listes :</p>
+<table>
+<thead>
+<tr>
+<th>Type de listes</th>
+<th>Eléments uniques</th>
+<th>Doublons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modifiable</td>
+<td>liste</td>
+<td>set</td>
+</tr>
+<tr>
+<td>Non modifiable</td>
+<td>tupple</td>
+<td>frozenset</td>
+</tr>
+<tr>
+<td>### Liste modifiable</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><code>[] = vecteur</code> et <code>() = liste</code> (appelé tupple).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les listes ne sont pas modifiables.</p>
+</div>
+<ul>
+<li><code>var[nbre]</code> extraire une valeur.</li>
+<li><code>['valeur']*n</code> créer une liste à n élément</li>
+<li><code>del liste[numéro]</code> supprimer une valeur.</li>
+<li><code>(a,b) = (1,3)</code> donner un nom aux élements de la liste pour pouvoir les appeller comme des variables.</li>
+<li><code>liste1 + liste2</code> concaténer deux listes.</li>
+<li><code>liste1 * nb</code> dupliquer les éléments d'une liste.</li>
+<li><code>liste = [ val1, val2]</code> déclarer une liste.</li>
+<li><code>liste[pos1][pos2]</code> afficher un élément.</li>
+<li>
+<p><code>liste[4:]</code> sélectionner tous les éléments à partir du 4ème. Attention dans le cas de <code>4:7</code> prend l'élément 4, 5 et 6. </p>
+</li>
+<li>
+<p><code>sorted(liste, reverse=false)</code> trier une liste sans l'enregistrer.</p>
+</li>
+<li><code>set(liste)</code> renvoie les valeurs uniques pour une liste.</li>
+<li>
+<p><code>len(liste)</code> taille de la liste.</p>
+</li>
+<li>
+<p><code>liste.append('texte')</code> ajouter une valeur à un vecteur à la dernière position.</p>
+</li>
+<li><code>liste.insert(position, valeur)</code> inserer une valeur à une position.</li>
+<li><code>liste.pop()</code> supprimer le dernier élément d'un vecteur.</li>
+<li><code>liste.remove('valeur')</code> supprime une valeur du vecteur.</li>
+<li><code>liste.replace(ancien, nouveau)</code> remplacer une valeur.</li>
+<li><code>separateur.join(liste)</code> joindre les éléments d'une liste</li>
+<li><code>liste.sort(reverse=False)</code> trier un vecteur. Le résultat est automatiquement enregistré.</li>
+<li><code>liste.reverse()</code> inverser une liste.</li>
+<li><code>liste.count('valeur')</code> compter la valeur d'un vecteur.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>x = y</code> créer une référence ie si <code>y</code> est modifié alors <code>x</code> l'est aussi.
+Pour copier</p>
+<ul>
+<li><code>x = y[:]</code></li>
+<li><code>x = list(y)</code></li>
+<li><code>copy.deepcopy(y)</code> copie avec la library <code>copy</code>.</li>
+</ul>
+</div>
+<h3 id="dictionnaire">Dictionnaire</h3>
+<p>Le dictionnaire est un objet particulier. L'accés aux valeurs fait par l'id.</p>
+<ul>
+<li><code>dict = {'id' : [val1, val2, val3]}</code> Déclarer un dictionnaire.</li>
+<li><code>dict['id']</code> ou <code>dict.id</code> pour connaitre une information.</li>
+<li><code>dict["ajout"] = "valeur"</code> ajouter une valeur dans le dictionnaire.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pour ajouter un nouveau champs à un existant. Il faut s'assurer que la position ou l'on ajoute l'information soit un dictionnaire  <code>dict[clé]["nouveau"] = ajout</code>.</p>
+</div>
+<ul>
+<li><code>.get(id)</code> renvoie la colonne si l'id existe sinon <code>None</code>.</li>
+<li><code>.values()</code> renvoie les valeurs sous forme de liste.</li>
+<li><code>.items()</code> renvoie (id, valeur).</li>
+<li><code>.keys()</code> renvoie la liste des id.</li>
+<li><code>record_dict["sp"] = record_dict.pop("id")</code> modifier la clé d'une entrée.</li>
+<li><code>.update(reference)</code> ajouter une nouvelle valeur.</li>
+<li>
+<p><code>sorted(dico)</code> trier un dictionnaire par la clé.</p>
+<ul>
+<li><code>key=dic.get</code> trier par valeur.shuffle.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Trier un dictionnaire par valeur : <code>{word : seq_nb_words[word] for word in sorted(seq_nb_words, key=seq_nb_words.get, reverse = True)}</code>.    </p>
+</div>
+<ul>
+<li><code>dict(liste)</code> convertir en dictionnaire.</li>
+<li><code>for key in dico:</code> itérer un dictionnaire renvoie la clé (pour renvoyer la clé et la valeur, itérer sur <code>dico.items()</code>).</li>
+</ul>
+<h3 id="tupple-liste-non-modifiable">Tupple (liste non modifiable)</h3>
+<ul>
+<li><code>tupple(list)</code> convertir en tupple.</li>
+<li><code>t = t + (2,)</code>ajouter un élément.</li>
+</ul>
+<p>compte un nombre de valeurs</p>
+<p><code>dic.get(valeur, 0) + 1</code> ajoute la valeur si elle n'est pas présente et ajoute 0+1 sion ajoute +1.</p>
+<h3 id="set-et-frozenset">Set et frozenset</h3>
+<p>Liste d'éléments uniques. Elles sont utiles pour éliminer les doublons. La différence entre les set et les frozenset est que ce dernier n'est pas modifiable.</p>
+<ul>
+<li><code>{}</code> déclarer un set.</li>
+<li><code>set()</code>convertir en set.</li>
+<li><code>.add(valeur)</code> ajouter une valeur.</li>
+<li><code>.discard(valeur)</code> supprimer une valeur.</li>
+</ul>
+<p>Opérations ensemblistes sur les sets</p>
+<table>
+<thead>
+<tr>
+<th>Python</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.union()</code></td>
+<td>dans s1 et pas dans s2</td>
+</tr>
+<tr>
+<td><code>.issubset</code></td>
+<td>s1 est un sous ensemble de s2</td>
+</tr>
+<tr>
+<td><code>.isdisjoint</code></td>
+<td>est disjoint</td>
+</tr>
+</tbody>
+</table>
+<p><code>{base : seq.count(base) for base in set(sequence):}</code> compter le nb de bases dans une séquence.</p>
+<h3 id="collection">Collection</h3>
+<p>Pas mal de trucs. Elles permettent de compter le nombre d'éléments via <code>collections.Counter(seq)</code></p>
+<h2 id="types-de-variables">Types de variables</h2>
+<h3 id="caratere">Caratère</h3>
+<ul>
+<li><code>r"texte /n"</code> les caractères spéciaux ne sont pas interprétés.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>chr(nbre)</code></td>
+<td>convertie un nombre en sa lettre correspondante.</td>
+</tr>
+<tr>
+<td><code>len(texte)</code></td>
+<td>nombre de caractère de la chaine.</td>
+</tr>
+<tr>
+<td><code>.lower()</code></td>
+<td>mettre un texte en minuscule.</td>
+</tr>
+<tr>
+<td><code>.upper()</code></td>
+<td>mettre un texte en majuscule.</td>
+</tr>
+<tr>
+<td><code>.capitalize()</code></td>
+<td>premier lettre de chaque mot en majuscule.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="sd">''' texte sur </span>
+<span class="sd">    pluisieurs ligne</span>
+<span class="sd">'''</span>
+</code></pre></div>
+<ul>
+<li><code>texte.find("a trouver")</code> renvoie la position de la première occurence (sinon -1).</li>
+<li><code>startswith("debut")</code> renvoie un booléen si la chaîne commence par début.</li>
+<li><code>texte.strip()</code> supprimer les espace au début et à la fin.</li>
+</ul>
+<h4 id="expression-reguliere-regex">Expression régulière (regex)</h4>
+<p>Library <code>re</code>. Une expression régulière est déclarée comme <code>r"expr"</code>.</p>
+<ul>
+<li><code>re.search( a_rechercher, texte )</code> rechercher une expression regex ou un mot. </li>
+<li><code>re.sub(r'[^a-zA-Z]', '', s)</code> transformer une chaine de caractère.</li>
+</ul>
+<p>Variable de sortie :</p>
+<ul>
+<li><code>.group(0)</code> pour accéder aux résultat de la recherche.</li>
+<li><code>.span()</code> les positions.</li>
+<li><code>.start()</code> la première position.</li>
+<li><code>.end()</code> la dernière position. </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Symbole</th>
+<th>Définition (négation)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\s</code> (<code>\S</code>)</td>
+<td>espace</td>
+</tr>
+<tr>
+<td><code>\d</code></td>
+<td>chiffre</td>
+</tr>
+<tr>
+<td><code>\</code></td>
+<td>caractère d'échappement</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>jocker tous les caractères</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>n'importe quel symbole plusieurs fois <code>[2-6]</code> séq de 2 à 6</td>
+</tr>
+<tr>
+<td><code>[]</code></td>
+<td>ecrite l'expression à l'intérieur</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>position du début</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>en fin de chaîne</td>
+</tr>
+<tr>
+<td><code>[0-9]{4}</code></td>
+<td>nbre de fois qu'apparait un chiffre</td>
+</tr>
+<tr>
+<td><code>\w</code></td>
+<td>équivalent à [a-zA-Z0-9]</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>négation</td>
+</tr>
+</tbody>
+</table>
+<p>Exemples :</p>
+<ul>
+<li><code>"[^.?-]*"</code> tous les caractères avant <code>-</code>.</li>
+</ul>
+<h3 id="date">Date</h3>
+<p>Package : <code>datetime</code></p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date.today()</code></td>
+<td>aujourd'hui</td>
+</tr>
+<tr>
+<td><code>date.weekday()</code></td>
+<td>numéro du jour de la semaine</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>datetime.strptime(texte, '%d.%m.%Y')</code> convertir en date et time.</li>
+<li><code>variable.strftime('%Y-%m-%d')</code> avec un affichage particulier.</li>
+</ul>
+<h3 id="condition">Condition</h3>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="n">instruction</span>
+<span class="k">elif</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="n">instruction</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">instruction</span>
+</code></pre></div>
+<h4 id="les-operateurs-logiques-booleens">Les opérateurs logiques (booléens)</h4>
+<table>
+<thead>
+<tr>
+<th>Symbole</th>
+<th>Opération</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code> ou <code>&amp;</code></td>
+<td>et</td>
+</tr>
+<tr>
+<td><code>or</code> ou <code>|</code></td>
+<td>ou</td>
+</tr>
+<tr>
+<td><code>not condition</code> ou <code>~</code></td>
+<td>négation</td>
+</tr>
+<tr>
+<td><code>is None</code></td>
+<td>null</td>
+</tr>
+<tr>
+<td><code>in</code></td>
+<td>vérifier la présence d'un caractère (appartient)</td>
+</tr>
+<tr>
+<td><code>.endswith("fin")</code></td>
+<td>se termine par</td>
+</tr>
+<tr>
+<td><code>pd.isna()</code> ou <code>np.isnan()</code></td>
+<td>vérifier si c'est une valeur manquante</td>
+</tr>
+<tr>
+<td><code>np.nan</code></td>
+<td>valeur manquante</td>
+</tr>
+<tr>
+<td><code>np.invert(vecteur)</code></td>
+<td>transforme vrai en faux</td>
+</tr>
+</tbody>
+</table>
+<p>Condition : <code>==</code>, <code>&gt;=</code>, <code>&gt;</code>, <code>!=</code></p>
+<h3 id="les-boucles">Les boucles</h3>
+<ul>
+<li><code>break</code> permet de sortir des deux types de boucles.</li>
+</ul>
+<h4 id="la-boucle-for">La boucle for</h4>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">séquence</span><span class="p">:</span>
+    <span class="n">instruction</span>
+</code></pre></div>
+<ul>
+<li><code>output_list = [print(a, b) for a, b in list( comparaison.columns )]</code> appliquer une fonction à une liste en une ligne.</li>
+<li><code>[i for i in l if i != val]</code> avec un if.</li>
+</ul>
+<p>Séquence peut etre :</p>
+<ul>
+<li>une liste ou une chaîne de caractères (cela parcourt les lettres).</li>
+<li><code>range(début, fin, pas)</code> une liste d'entier.</li>
+<li><code>for index, val in enumerate(liste)</code> renvoie l'indice et la valeur.</li>
+</ul>
+<p>Library : <code>from itertools import combinations</code></p>
+<ul>
+<li><code>combinations( [1, 2, 3], 2)</code>  combinaison d'éléments d'une liste sans redondance (il n'y aura pas la valeur '2, 2').</li>
+<li><code>combinations_with_replacement( [1, 2, 3], 2)</code> combinaison avec redondance (il y aura la valeur '2, 2').</li>
+</ul>
+<h4 id="la-boucle-tant-que">La boucle tant que</h4>
+<p>Les instructions sont répétées jusqu'a que ce soit la condition devienne fausse.</p>
+<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="n">instruction</span>
+</code></pre></div>
+<h2 id="fonction-et-classe">Fonction et classe</h2>
+<h3 id="declarer-une-fonction">Déclarer une fonction</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fonction</span> <span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">instruction</span>
+    <span class="k">return</span> <span class="n">valeur</span>
+</code></pre></div>
+<p><code>=10</code> valeur par défaut de la variable.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Les fonctions peuvent modifier des listes de type global. Il faut faire une copie avant de la donnée en argument à la fonction.</p>
+</div>
+<h4 id="fonctions-recursives">Fonctions récursives</h4>
+<p>Fonction qui s'appelle à elle-même.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fct</span><span class="p">(</span><span class="n">nb</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">nb</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="n">nb</span> <span class="o">+</span> <span class="n">fct</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="declarer-une-classe">Déclarer une classe</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">classe</span><span class="p">:</span>   
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">var1</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fonction1</span> <span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="n">declarer</span> <span class="o">=</span> <span class="n">classe</span><span class="p">()</span> <span class="c1"># invoquer la classe.</span>
+</code></pre></div>
+<h2 id="le-texte">Le texte</h2>
+<ul>
+<li>
+<p><code>print( message1, message2)</code> afficher un message. Paramètre :</p>
+<ul>
+<li><code>sep=séparateur</code> ajouter un séparateur. </li>
+<li><code>end=text_fin</code> bloquer le retour à la ligne.</li>
+<li><code>f'texte {variable} texte {var2}'</code> f rend interprétable la chaine de caractère (remplacement des variables).</li>
+</ul>
+</li>
+<li>
+<p><code>print(f"texte {variable}")</code> afficher un message en interprétant une variable.</p>
+</li>
+<li><code>texte[1:4]</code> extraire des caracètres d'une chaîne.</li>
+<li><code>texte1 + texte2</code> concaténer du texte.</li>
+<li><code>texte.strip()</code> supprimer les espaces au début et à la fin.</li>
+<li><code>texte.replace('ancien', 'nouveau')</code> remplacer un caractère.</li>
+<li><code>re.split('\n', texte )</code> transformer une chaine de caractères en liste.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Caractère</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\'</code></td>
+<td>Apostrophe</td>
+</tr>
+<tr>
+<td><code>\n</code></td>
+<td>Retour à la ligne</td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>backlash ()</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>Tabulation</td>
+</tr>
+<tr>
+<td>#### Formatage des variables en f-string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Exemple</th>
+<th>Formatage</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>{3.14872:.3f}</code></td>
+<td>nbre de décimale</td>
+<td><code>3.148</code></td>
+</tr>
+<tr>
+<td><code>{314872:e}</code></td>
+<td>en puissance</td>
+<td><code>3.148720e+05</code></td>
+</tr>
+<tr>
+<td><code>{1_314_872}</code></td>
+<td>en puissance</td>
+<td><code>1314872</code></td>
+</tr>
+<tr>
+<td><code>3:3d</code></td>
+<td>décale les entiers</td>
+<td><code>3</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Position</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>{'texte':10}</code></td>
+<td>décalle de 10</td>
+<td><code>314872</code></td>
+</tr>
+<tr>
+<td><code>f"{314872:^10} mots</code></td>
+<td>centre</td>
+<td><code>313     mots</code></td>
+</tr>
+<tr>
+<td><code>f"{313:*^10} mots"</code></td>
+<td>centre avec symbole</td>
+<td><code>***313**** mots</code></td>
+</tr>
+<tr>
+<td><code>f"{314872:&lt;10} mots"</code></td>
+<td>décalle le texte gauche</td>
+<td><code>314872     mots</code></td>
+</tr>
+<tr>
+<td><code>f"{313:&gt;10} mots"</code></td>
+<td>décalle à droite</td>
+<td><code>313 mots</code></td>
+</tr>
+<tr>
+<td>## ASCII</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>ord('Lettre')</code> renvoie le code ASCII.</li>
+<li><code>chr('ASCII')</code> renvoie le caractère.</li>
+</ul>
+<h2 id="autres-fonctions-utiles">Autres fonctions utiles</h2>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>texte.strip()</code></td>
+<td>supprimer les espaces</td>
+</tr>
+<tr>
+<td><code>len(texte)</code></td>
+<td>nombre de caractères</td>
+</tr>
+<tr>
+<td>## Les fichiers</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><code>urllib.request.urlretrieve(url, variable)</code> récupérer un fichier depuis une url (<code>import urllib</code>).</p>
+<h3 id="manipuler-les-fichiers">Manipuler les fichiers</h3>
+<p><code>import os</code> </p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>remove(fichier)</code></td>
+<td>supprimer un fichier</td>
+</tr>
+<tr>
+<td><code>getcwd()</code></td>
+<td>dossier actuel</td>
+</tr>
+<tr>
+<td><code>chdir(dossier)</code></td>
+<td>changer le dossier par défaut</td>
+</tr>
+<tr>
+<td><code>listdir()</code></td>
+<td>liste des dossiers et fichiers d'une répertoire</td>
+</tr>
+<tr>
+<td><code>mkdir(nom)</code></td>
+<td>créer un dossier</td>
+</tr>
+<tr>
+<td><code>rmdir(dossier)</code></td>
+<td>supprimer un dossier</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>renvoie le nom de l'os actuel</td>
+</tr>
+<tr>
+<td><code>path.exists(chemin)</code></td>
+<td>existence d'un répertoire ou d'un fichier</td>
+</tr>
+<tr>
+<td><code>path.basename(chemin/fichier)</code></td>
+<td>renvoie le nom du fichier sans le chemin</td>
+</tr>
+<tr>
+<td><code>path.isfile(fichier)</code></td>
+<td>vérifier l'existence d'un fichier</td>
+</tr>
+</tbody>
+</table>
+<p>library : <code>shutil</code></p>
+<table>
+<thead>
+<tr>
+<th>Fonction</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>shutil.copy(fichier, dossier ou fichier)</code></td>
+<td>copier un fichier</td>
+</tr>
+<tr>
+<td><code>shutil.move( fichier, dossier_destination )</code></td>
+<td>renommer un fichier</td>
+</tr>
+<tr>
+<td><code>shutil.rename( ancien, nouveau)</code></td>
+<td>renommer un fichier</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>glob('*.extension')</code> lister les fichiers (<code>import glob</code>).</li>
+</ul>
+<h4 id="sys">Sys</h4>
+<ul>
+<li><code>sys.arv</code> liste des arguments donner au scipt Attention <code>sys.argv[0]</code> contient le nom du script.</li>
+<li><code>sys.exist("message")</code> écrire un message et arrêter du script.</li>
+</ul>
+<h3 id="enregistrer-un-fichier">Enregistrer un fichier</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">open</span><span class="p">(</span><span class="s1">'national geographic/index.html'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">fichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'journal Le Monde/index.html'</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">)</span>
+<span class="n">fichier</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+<span class="n">fichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="alternative">Alternative</h3>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"fichier.md"</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'UTF8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+<p><code>\n</code> est le séparateur entre les lignes. Attention il n'y à pas de saut à la ligne par défaut.</p>
+<h3 id="importer-un-fichier">Importer un fichier</h3>
+<ul>
+<li>
+<p><code>open('fichier.txt', 'w', encoding = 'utf-8')</code> ouvrir un fichier. <em>Rmq :</em> <code>open</code> permet de créer un fichier.
+L'encoding est généralement ISO-Latin-1 ou utf-8.
+Paramètre :</p>
+<ul>
+<li><code>w</code> (write) pour écrire.</li>
+<li><code>a</code> ajouter à la fin d'un fichier.</li>
+<li><code>r</code> (read) lire.</li>
+</ul>
+</li>
+<li>
+<p><code>fichier.write('text')</code> ajouter des lignes au fichier (on créer le fichier avec open).</p>
+</li>
+<li><code>fichier.close()</code> fermer le fichier.</li>
+</ul>
+<p>Pour lire ou écrire un fichier de façon proprement (cad pour éviter les erreurs) il est conseillé d'utiliser with :</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"zoo.txt"</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">filin</span><span class="p">:</span>
+     <span class="c1"># type de fichiers</span>
+</code></pre></div>
+<ul>
+<li><code>filin.read()</code> charge tout le contenu dans une variable texte.</li>
+<li><code>filin.readlines()</code> créer un élément de liste par ligne.</li>
+<li><code>filin.readline()</code> renvoyer une ligne à chaque appel.</li>
+<li><code>[ligne for ligne in filin]</code>  renvoie les lignes du fichier (méthode à privilégier).</li>
+</ul>
+<p>Avec <code>w</code> :</p>
+<ul>
+<li><code>filin.write()</code> ecrire dans un fichier (plusieurs instruction font aller à la ligne).</li>
+</ul>
+<p>Propriétés fichier :</p>
+<ul>
+<li><code>.name</code> renvoie le nom du fichier.</li>
+</ul>
+<p>Lire et écrire un fichier simultanément :</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"zoo.txt"</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fichier1</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"vincenne.txt"</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fichier2</span><span class="p">:</span>
+    <span class="c1"># type de fichiers</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">fichier1</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+        <span class="n">fichier2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="n">i</span> <span class="p">)</span>
+</code></pre></div>
+<h3 id="ecrire-une-page-html">Ecrire une page html</h3>
+<p><code>from yattag import Doc</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">doc</span><span class="p">,</span> <span class="n">tag</span><span class="p">,</span> <span class="n">text</span> <span class="o">=</span> <span class="n">Doc</span><span class="p">()</span><span class="o">.</span><span class="n">tagtext</span><span class="p">()</span>
+
+<span class="n">doc</span><span class="o">.</span><span class="n">asis</span><span class="p">(</span><span class="s1">'&lt;!DOCTYPE html&gt;'</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">tag</span><span class="p">(</span><span class="s1">'head'</span><span class="p">):</span>
+        <span class="n">doc</span><span class="o">.</span><span class="n">stag</span><span class="p">(</span><span class="s1">'link'</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"pagestyle"</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="s2">"css/style.css"</span><span class="p">,</span> <span class="n">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">tag</span><span class="p">(</span><span class="s1">'body'</span><span class="p">):</span>
+        <span class="n">text</span><span class="p">(</span><span class="s1">'afficher'</span><span class="p">)</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li><code>with tag('baliseHTML'):</code> balise qui se ferme.</li>
+<li>
+<p><code>oc.stag('baliseHTML')</code> balise sans fermeture. Paramètres :</p>
+<ul>
+<li><code>id=identifiant</code> ajouter un identifiant.</li>
+<li><code>klass=classe</code> ajouter une classe.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Possibilite d'inclure des boucles et des conditions à l'interieur du doc.asis</p>
+</div>
+<h3 id="les-images">Les images</h3>
+<h4 id="skimage">Skimage</h4>
+<p>Package <code>from skimage import io</code></p>
+<ul>
+<li><code>io.imread("chemin")</code> importer une image.</li>
+<li><code>io.imshow(monImage)</code> afficher l'image.</li>
+</ul>
+<h4 id="pillow">pillow</h4>
+<p>Package <code>from PIL import Image</code></p>
+<p>Coordonné et position des pixels (x, y) correspont à (largeur, hauteur).</p>
+<ul>
+<li><code>Image.open('fichier.jpg')</code> ouvrir une image.</li>
+<li>
+<p><code>Image.new(mode='RGB', size=(x,y))</code> créer une nouvelle image.</p>
+</li>
+<li>
+<p><code>monImage.save("reduction/image_red.jpg")</code> enregistrer une image.</p>
+</li>
+<li><code>monImage.resize((largeur,hauteur))</code> redimensionner une image.</li>
+</ul>
+<p>Attribut d'une image :</p>
+<ul>
+<li><code>var_img.height</code> récupérer la hauteur.</li>
+<li><code>var_img.width</code> récupérer la largeur.</li>
+<li><code>var_img.getpixel((x,y))</code> récuperer la valeur des coordonnées rgb du pixel.</li>
+<li><code>var_img.putpixel((x,y), (r,g,b))</code> changer la couleur d'un pixel.</li>
+</ul>
+<h3 id="excel">Excel</h3>
+<p>Library <code>import openpyxl</code></p>
+<ul>
+<li><code>fichier = openpyxl.load_workbook('fichier.xlsx')</code> charger un fichier excel.</li>
+<li><code>mywb = openpyxl.Workbook()</code> créer un workbook.</li>
+<li><code>mywb.get_sheet_names()</code> afficher les noms des feuilles.</li>
+<li><code>mywb.save('NewExcelFile.xlsx')</code> enregistrer le fichier.</li>
+<li><code>wb.create_sheet(index=0, title='1st Sheet')</code> créer une feuille.</li>
+<li><code>mysheet = mywb.get_sheet_by_name('feuill')</code> sélectionner une feuille.</li>
+<li><code>mysheet['F6'] = 'Writing new Value!'</code> écrire une valeur dans une feuille donnée.</li>
+</ul>
+<h3 id="fichier-audio">Fichier audio</h3>
+<p><code>from scipy.io import wavfile</code></p>
+<ul>
+<li><code>samplerate, data = wavfile.read('data/machining_sound.wav')</code> importer un ficier audio.</li>
+</ul>
+<h3 id="creer-un-fichier-word">Créer un fichier Word</h3>
+<p>Library : <code>from docx import Document</code></p>
+<ul>
+<li><code>.add_heading('Titre 1', level=1)</code></li>
+<li><code>.add_paragraph('blabla...')</code></li>
+<li>
+<ul>
+<li><code>style='List Bullet</code> liste en puce.</li>
+<li><code>style='List Number'</code> liste numérotée.</li>
+</ul>
+</li>
+<li>
+<p><code>.add_picture('monty-truth.png')</code> ajouter une image.</p>
+<ul>
+<li><code>width=Inches(1.25)</code> taille de l'image</li>
+</ul>
+</li>
+<li>
+<p><code>.add_page_break()</code> saut de page.</p>
+</li>
+<li>
+<p><code>paragraphe.add_run(text) = True</code></p>
+<ul>
+<li><code>.italic</code>, <code>.bold</code> italique, gras.</li>
+</ul>
+</li>
+<li>
+<p><code>.save('word.docx')</code> enregistrer le document.</p>
+</li>
+<li><code>convert("fichier.docx", destination)</code> convertir docx en pdf (library <code>docx2pdf</code>)</li>
+</ul>
+<h4 id="ajouter-un-tableau">Ajouter un tableau</h4>
+<div class="highlight"><pre><span></span><code><span class="n">table</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">add_table</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">hdr_cells</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">rows</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">cells</span>
+<span class="n">hdr_cells</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s1">'quantité'</span>
+<span class="n">hdr_cells</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s1">'Id'</span>
+
+<span class="k">for</span> <span class="n">qty</span> <span class="ow">in</span> <span class="n">records</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
+    <span class="n">row_cells</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">()</span><span class="o">.</span><span class="n">cells</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">qty</span><span class="p">))</span> <span class="p">:</span>
+        <span class="n">row_cells</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span> <span class="n">qty</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">)</span>
+</code></pre></div>
+<h2 id="interface-graphique">Interface graphique</h2>
+<h3 id="declarer-une-fenetre">Déclarer une fenêtre</h3>
+<p><code>import tkinter as tk</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="c1">## éléments de la fenêtre </span>
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li><code>root.title('Lanceur web')</code> ajouter un titre.</li>
+<li><code>root.geometry("200x500")</code> préciser les dimensions de la fenêtre.</li>
+</ul>
+<h3 id="element-de-la-fenetre">Element de la fenêtre</h3>
+<p><code>from tkinter import ttk</code></p>
+<ol>
+<li>Déclarer l'élément <code>bouton = ...</code></li>
+<li>Afficher l'élément <code>bouton.pack()</code></li>
+</ol>
+<p>Liste des éléments :</p>
+<ul>
+<li><code>ttk.Button(root, text='Unice', command=fonction)</code> bouton.</li>
+<li><code>ttk.Label(root, text="texte")</code> ajouter du texte.</li>
+<li>
+<p><code>ttk.Entry(root)</code> zone de saisie.</p>
+</li>
+<li>
+<p><code>.grid(row=, column=)</code> position de l'élément.</p>
+</li>
+</ul>
+<p>Paramètres : 
+* <code>width=30</code> largeur.</p>
+<h3 id="choisir-un-dossier-par-une-fenetre">Choisir un dossier par une fenêtre</h3>
+<p>Library : <code>from tkinter import Tk, filedialog</code></p>
+<p>Fonctionne hors interface tKinter</p>
+<div class="highlight"><pre><span></span><code><span class="n">root</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
+<span class="n">root</span><span class="o">.</span><span class="n">withdraw</span><span class="p">()</span>
+<span class="n">root</span><span class="o">.</span><span class="n">attributes</span><span class="p">(</span><span class="s1">'-topmost'</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">open_file</span> <span class="o">=</span> <span class="n">filedialog</span><span class="o">.</span><span class="n">askdirectory</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">open_file</span><span class="p">)</span>
+</code></pre></div>
+<p>ou <code>.askopenfilename()</code>
+* <code>fichier = re.search(r'((?!(/|\\)).)*$' , open_file).group(0)</code> le fichier.
+* <code>dossier = open_file.replace(fichier, "")</code> le dossier.</p>
+<h3 id="developper-avec-jupyter-notebook">Développer avec Jupyter notebook</h3>
+<p>Recharger automatiquement un module à chaque exécution du code. Utile pour développer un module. Ne fonctionne qu'avec jupyternotebook?</p>
+<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">load_ext</span> <span class="n">autoreload</span>
+<span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
+</code></pre></div>
+<ul>
+<li><code>%%time</code> renvoie le cout d'éxécution.</li>
+<li>
+<p><code>%%timeit</code> exécute une boucle pour mesurer en moyenne le temps d'exécution.</p>
+</li>
+<li>
+<p><code>jupyter nbconvert --to html my-notebook.ipynb</code> exporter un jupyter en html. Nécessite <code>nbconvert</code> à installer via Pip. Paramètres :</p>
+<ul>
+<li><code>--no-input</code> masquer le code. </li>
+</ul>
+</li>
+</ul>
+<h2 id="configurer-python">Configurer Python</h2>
+<h3 id="declarer-une-variable-python-dans-windows">Déclarer une variable python dans Windows</h3>
+<ul>
+<li>Copier le chemin de la licence et des programmes python.</li>
+<li><code>Panneau de configuration\Système et sécurité\Système &gt; Paramètre système avancé &gt; Variable d'environnement</code></li>
+<li>
+<p>Ajouter une variable système </p>
+<ul>
+<li>nom : <code>PYTHON_HOME</code></li>
+<li>valeur : <code>chemin copié</code></li>
+</ul>
+</li>
+<li>
+<p>Modifier la variable <code>Path</code></p>
+</li>
+<li>Ajouter <code>%PYTHON_HOME%</code> </li>
+</ul>
+<p>Répéter l'opération pour le sous dossier library/bin et scripts</p>
+<p><code>python</code> démarrer une session python.</p>
+<h3 id="jupyter-notebook">Jupyter notebook</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les chemins s'écrivent avec le <code>/</code>.</p>
+</div>
+<p>Environement de développement : Jupyter
+Changer la couleur de l'environnement jupyter.</p>
+<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyterthemes</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">jupyterthemes</span>
+<span class="n">jt</span> <span class="o">-</span><span class="n">t</span> <span class="n">chesterish</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.action.edit", "content.action.view", "content.tabs.link", "content.code.copy - toc.integrate", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.top", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
