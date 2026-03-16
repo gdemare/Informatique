@@ -37,6 +37,8 @@ Exporter ses emails dans un fichier :
 
 ###Problème Bluetooth 
 
+A tester : https://github.com/ademlabs/synckeys
+
 [Pairing Bluetooth Devices in Dual Boot with Linux Ubuntu and Windows 10/11](https://gist.github.com/madkoding/f3cfd3742546d5c99131fd19ca267fd4) problèmes bluetooth. 
 
 Récupérer la clé utilisée par Windows.
@@ -45,17 +47,17 @@ Récupérer la clé utilisée par Windows.
 2. `chntpw -e SYSTEM`
 3. `cd \ControlSet001\Services\BTHPORT\Parameters\Keys` aller dans Keys.
 4. `ls` lister les id disponibles.
-5. `cd clé` exemple `cd 10f60a80c883` entrer dans le périphérique.
-6. `ls` copier la clé2 (value name exemple `785ea2d4d93b`).
-7. `hext clé2` (value name) traduire la clé en hexadécimale (supprimer les espaces ex : `1E BF 2F C0 4E 57 EA A3 D1 43 2C B9 78 2C 7C CC` -> `1EBF2FC04E57EAA3D1432CB9782C7CCC`). 
+5. `cd clé` exemple `cd 10f6Xa80cXXX` entrer dans le périphérique.
+6. `ls` copier la clé2 (value name exemple `785XaXXXXd93b`).
+7. `hext clé2` (value name) traduire la clé en hexadécimale (supprimer les espaces ex : `XX XX XX XX XX 57 EA A3 D1 43 2C B9 78 2C 7C CC` -> `1EBF2FC04EXXXXX3D1432CB9782C7CCC`). 
 
 Aller dans :
 
 1. `cd /var/lib/bluetooth/`
-2. `ls` récupérer l'id (`10:F6:0A:80:C8:83`).
-3. `cd id` rentrer dans le périphérique (`cd 10:F6:0A:80:C8:83`).
-4. `cd id2̀` comme `cd 78:5E:A2:D4:D9:3B`. 
-5. Modifier le fichier avec `nano info` : remplacer `Key=idHex` de la section `[LinkKey]` (par exemple `1EBF2FC04E57EAA3D1432CB9782C7CCC`).
+2. `ls` récupérer l'id (`10:F6:0A:80:XX:XX`).
+3. `cd id` rentrer dans le périphérique (`cd 10:F6:0A:80:XX:XX`).
+4. `cd id2̀` comme `cd 78:5E:A2:D4:XX:XX`. 
+5. Modifier le fichier avec `nano info` : remplacer `Key=idHex` de la section `[LinkKey]` (par exemple `1EBF2FC04E57EAA3D1432CB978XXXXXXXX).
 
 
 - `brave --app=https://www.youtube.com` ouvrir un url avec brave.
