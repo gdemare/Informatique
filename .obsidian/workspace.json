@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/programmation/web/css.md",
+                "file": "docs/logiciels et os/Liens logiciel.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "css"
+              "title": "Liens logiciel"
             }
           }
         ],
@@ -73,7 +73,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorateur de fichiers"
             }
           },
           {
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "css",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -103,8 +103,7 @@
               "title": "Signet"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -194,8 +193,10 @@
       "bases:Créer une nouvelle base": false
     }
   },
-  "active": "de9325ac1773fca4",
+  "active": "6433381b74b4cd9f",
   "lastOpenFiles": [
+    "docs/logiciels et os/OS.md",
+    "docs/programmation/web/css.md",
     "docs/programmation/web/html.md",
     "docs/logiciels et os/os/Ubuntu.md",
     "docs/python/bases/python.md",
@@ -221,8 +222,6 @@
     "docs/r/mathématique/probabilité statistique.md",
     "docs/r/descriptions/graphiques.md",
     "docs/r/descriptions/réduction de dimensions/positionnement multidimensionnel.md",
-    "docs/r/descriptions/réduction de dimensions/AFC.md",
-    "docs/r/descriptions/réduction de dimensions/ACP.md",
     "Sans titre.canvas",
     "docs/python/bioinformatique",
     "docs/python/bases/divers"
