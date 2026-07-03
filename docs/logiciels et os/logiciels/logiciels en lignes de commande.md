@@ -21,6 +21,10 @@ Convertir du markdown en word, html, pdf.
 
 Zensical(https://zensical.org/docs/) nouveau projet de la team de mkdocs material après les évolutions de Mkdocs.
 
+- `zensical new` create a new project
+- `zensical serve` start local web server
+- `zensical build` build your site
+
 Installer les packages Python [mkdocs](https://www.mkdocs.org/) et [mkdocs material](https://squidfunk.github.io/mkdocs-material/), sur le dernier site il y a tout, de l'installation à la personnalisation. L'installation se fait via Python. 
 
 Il y a notamment en modules utiles : `mkdocstrings-python, mkdocs-glightbox, mkdocs-git-revision-date-localized-plugin`.
