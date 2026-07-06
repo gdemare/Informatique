@@ -11,31 +11,29 @@
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
-site_name = "Documentation"
+site_name = "Informatique"
 
 # The site_description is included in the HTML head and should contain a
 # meaningful description of the site content for use by search engines.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_description
-site_description = ""
+site_description = "Informatique notes."
 
 # The site_author attribute. This is used in the HTML head element.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_author
-site_author = "<your name here>"
+#site_author = "<your name here>"
 
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
 # Read more: https://zensical.org/docs/setup/basics/#site_url
-#site_url = "https://www.example.com/"
+#site_url = "https://gdemare.github.io/Informatique/"
 
 # The copyright notice appears in the page footer and can contain an HTML
 # fragment.
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
-copyright = """
-Copyright &copy; 2026 The authors
-"""
+copyright = ""
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
 # If you decide not to define a navigation here then Zensical will simply
@@ -65,15 +63,23 @@ Copyright &copy; 2026 The authors
 # The path provided should be relative to the "docs_dir".
 #
 # Read more: https://zensical.org/docs/customization/#additional-javascript
-#extra_javascript = ["javascripts/extra.js"]
+extra_javascript = [
+    "javascripts/mathjax.js",
+    "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
+]
+
+repo_url = "https://github.com/gdemare/Informatique"
 
 # ----------------------------------------------------------------------------
 # Section for configuring theme options
 # ----------------------------------------------------------------------------
 [project.theme]
 
+# github part
+edit_uri = "edit/main/docs/"
+
 # change this to "classic" to use the traditional Material for MkDocs look.
-#variant = "classic"
+variant = "classic"
 
 # Zensical allows you to override specific blocks, partials, or whole
 # templates as well as to define your own templates. To do this, uncomment
@@ -108,7 +114,7 @@ Copyright &copy; 2026 The authors
 # Read more:
 # - https://zensical.org/docs/setup/language/
 #
-language = "en"
+language = "fr"
 
 # Zensical provides a number of feature toggles that change the behavior
 # of the documentation site.
@@ -289,6 +295,7 @@ features = [
 # ----------------------------------------------------------------------------
 [[project.theme.palette]]
 scheme = "default"
+palette.primary = "indigo"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 
