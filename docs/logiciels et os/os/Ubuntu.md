@@ -193,9 +193,7 @@ PB avec l'accélérateur :
 Tous les informations pour installer une vm sont sur [Quickemu github](https://github.com/quickemu-project/quickemu).
 
 - `quickemu --vm macos-big-sur.conf --display spice` émuler un système d'exploitation.
-### MacOS
-
-Pour [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) pour permettre au ancien mac d'être mis à jour.
+  
 ### Mettre à jour les firmwares
 
 - `fwupdmgr get-updates` vérifier la présence de màj.
