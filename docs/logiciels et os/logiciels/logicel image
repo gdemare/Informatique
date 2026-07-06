@@ -1,0 +1,26 @@
+### Gimp
+
+- Couleur > Local Threeshold = seuillage.
+- Couleur > Saturation = .
+#### Créer un calque avec un élément de l'image
+
+Sélectionner l'élément Crtl+c Crlt+V
+
+Filtre > Flou > gaussien 
+Couleur > Seuil pour différencier le fond du contenu.
+Couleurs Niveaux 
+
+- Sélectionne le texte.
+- `Sélection` → `Vers chemin`
+- Ouvre la fenêtre :
+    - `Fenêtres` → `Fenêtres ancrables` → `Chemins`
+- Dans les chemins :
+    - clic droit → `Tracer le chemin`
+
+!!! note
+	L'utilisation du filtre Gaussien + de la méthode chemin donne un super résultat.
+
+Pour les logo en noir et blanc possibilité d'agrandir en utilisant filtre gaussien + couleur > courbe.
+### InkScape 
+
+- Vectoriser une image :
