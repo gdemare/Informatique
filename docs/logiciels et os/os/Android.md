@@ -40,3 +40,14 @@ Installer [Droid-ify](https://f-droid.org/en/packages/com.looker.droidify/) pour
 ## Google TV
 
 * [SmartTubeNext](https://github.com/yuliskov/SmartTubeNext#readme) youtube sans pub.
+
+### Fastboot
+
+- `fastboot flashing get_unlock_ability_̀` vérifier si le mode débogage est activé.
+- `fastboot getvar all` (unlocked pour savoir si le bootloader est dévérouillé).
+- `fastboot reboot bootloader` rédémarrer en le bootloader.
+
+## ADB
+
+- `adb devices`
+- `fastboot devices`
