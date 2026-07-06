@@ -295,7 +295,6 @@ features = [
 # ----------------------------------------------------------------------------
 [[project.theme.palette]]
 scheme = "default"
-palette.primary = "indigo"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 
