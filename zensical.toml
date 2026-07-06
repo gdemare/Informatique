@@ -69,14 +69,14 @@ extra_javascript = [
 ]
 
 repo_url = "https://github.com/gdemare/Informatique"
+# github part
+edit_uri = "edit/main/docs/"
 
 # ----------------------------------------------------------------------------
 # Section for configuring theme options
 # ----------------------------------------------------------------------------
 [project.theme]
 
-# github part
-edit_uri = "edit/main/docs/"
 
 # change this to "classic" to use the traditional Material for MkDocs look.
 variant = "classic"
