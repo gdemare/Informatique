@@ -1,4 +1,11 @@
 
+### Installation de MacOs
+
+MacOs jounalisé. 
+
+warning
+  Les applications adobe ne prennent pas en charge le format sensible a la casse.
+
 Pour [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/) pour permettre au ancien mac d'être mis à jour.
 
 - `sudo spctl --master-disable`  afficher l'option pour installer des applications issues de n'importe où.
