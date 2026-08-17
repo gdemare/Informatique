@@ -27,7 +27,7 @@ Sur le store :
 
 * Simplenote.
 * [Anki](https://apps.ankiweb.net/), cartes pour l'apprentissage par répétition.
-* [Deemix](https://deemix.app/gui) - [Reddit Deemix](https://www.reddit.com/r/deemix/), télécharger des musiques depuis deezer.
+* [Deemix](https://deemix.app/gui) - [Reddit Deemix](https://www.reddit.com/r/deemix/), télécharger des musiques depuis deezer. Maintenant [deemix banana](https://github.com/bambanah/deemix/releases).
 * [FreeFileSync](https://freefilesync.org/download.php), synchroniser des répertoires et des fichiers.
 * [Fluent reader](https://github.com/yang991178/fluent-reader/releases), aggrégateur de flux rss.
 * [Harmonoid Music](https://harmonoid.com/), lecteur audio avec une interface agréable.
