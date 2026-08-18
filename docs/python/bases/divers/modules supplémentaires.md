@@ -2,7 +2,7 @@
 
 ### Depuis Youtube
 
-Library `yt-dlp` (`youtube-dl`en python sinon c'est en power shell) avec `yt-dlp 'id_youtube'` télécharger dans la meilleur qualité.
+Library [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) (`youtube-dl`en python sinon c'est en power shell) avec `yt-dlp 'id_youtube'` télécharger dans la meilleur qualité.
 
 * `--merge-output-format mkv --remux mkv` convertir le fichier en mkv. Cela nécessite de télécharger ffmpeg et de déclarer la variable environnement /bin.
 * `--extract-audio --audio-format mp3 <video URL>` télécharger le son d'une vidéo en mp3.
