@@ -9,6 +9,7 @@ Library [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) (`youtube-dl`en python sino
 ### Spotdl
 
 Installation : `pip install spotdl`
+Màj : `pip install -U yt-dlp`
 
 [Spotify downloader](https://github.com/spotDL/spotify-downloader) pour télécharger depuis spotify.
 
