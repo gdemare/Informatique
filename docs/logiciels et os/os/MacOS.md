@@ -28,3 +28,4 @@ MacOs Monterey - 12.7.6
 - iWork maximum 13.0 pour MacOS Monterey. La dernière version compatible avec Monterey est la 1.0.0.
 - R Studio ne fonctionne pas. La dernière version de la branche 4.4.X (2024.04 Chocolate Cosmos) qui prend en charge MacOS 12 est compatible jusqu'a R 4.4.3.
 - [Homebrew](https://brew.sh/) pour l'installation des packages comme libredwg.
+- [openMTP
