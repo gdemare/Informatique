@@ -21,6 +21,7 @@ Logiciels Windows :
 * [Noi](https://github.com/lencx/noi) ui pour les chats et consor.
 * [Nora](https://github.com/Sandakan/Nora) lecteur musique au top.
 * [UpdateHub](https://github.com/NexovaDev/UpdateHub) vérifier les mises à jours des logiciels.
+* [Scanner](https://github.com/simon-knuth/scanner) application de scan avec la visualisation en temps réel.
 ### Le relatif
 
 Sur le store :
