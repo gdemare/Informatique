@@ -3,13 +3,12 @@
 https://github.com/x-hw/amazing-qr#common-qr-code
 Option :
 
-`-v 1` nombre de rectangles.
-`-l` 
-
-L	~7 %	peu de redondance, capacité maximale
-M	~15 %	compromis courant
-Q	~25 %	bonne tolérance aux dommages
-H	~30 %	tolérance maximale, capacité réduite
+`-v 1` nombre de rectangles (jusqu'a 40 
+`-l` répétition et qualité :
+	- L	~7 peu de redondance, capacité maximale.
+	- M	~15 compromis courant.
+	- Q	~25 bonne tolérance aux dommages.
+	- H	~30 tolérance maximale, capacité réduite.
 
 ## Télécharger
 
