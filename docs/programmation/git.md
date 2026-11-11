@@ -6,21 +6,27 @@ Les principales forges sont :
 * Github, pour les projets open sources.
 * Gitlab, pour les projets internes.
 
+Les commandes : 
+
 * `git clone url_répertoire` cloner un projet
-* `git status` afficher les changements
+* `git status` afficher les changements,  vérifier l'état de mise a jour des fichiers.
 * `git remote -v` retrouver l’URL du dépôt distant
-* `git add fichier` ajouter un fichier à l'index.
+* `git add fichier1 fichier2` ajouter un fichier à l'index, ajouter les fichiers modifiés au prochain push.
 * `git commit -m "message"` pousser les changements dans le dépôt.
     
     * `message` Décrire le pourquoi plutôt que le comment dans le texte court
 
+* `git remote -v` 
 * `git pull origin master` récupérer les changements sur le dépôt distant.
-* `.gitignore` fichier qui contient les informations sur les ficheirs sensibles à ne pas publier (par exemple, ne pas versionner les sorties).
+* `.gitignore` fichier qui contient les informations sur les fichiers sensibles à ne pas publier (par exemple, ne pas versionner les sorties).
 
-Publier un changement
 
-* `git commit -m "description"` pousser un changement.
-* `git push` publier la nouvelle version.
+Exemple  d'utilisation :
+
+``` bash
+git commit -m "description"`
+git push
+```
 
 Installation un package  
 
@@ -30,105 +36,55 @@ L'installation est possible dans le dossier :
 
  home 
 
-Du projet 
-
-De l'équipe 
-
-Importe run package du site Bioconductor : getBiocPackage("package") 
-
- 
-
-Module développé par Servier : listModule(); importModule("moduel") 
-
- 
-
+Du projet / De l'équipe 
 Pour créer un nouveau projet il est recommandé d'utiliser packrat ou Renv 
-
- 
 
 Convention de nommage 
 
- 
-
 Pour les fichiers : 
 
-Préfixe des fichiers avec des nombres s'ils sont appelés chronologiquement. 
+- Préfixe des fichiers avec des nombres s'ils sont appelés chronologiquement. 
+- Pour les fichiers ne contenant qu'une seule fonction : le nom fichier = celui de la fonction  
+- Pour les variables et les fonctions avec des mots explicites en anglais et en minuscule.
+- avec des mots séparés par _ 
+- Pour les variables : des noms.
+- Pour les fonctions : des verbes. 
 
-Pour les fichiers ne contenant qu'une seule fonction : le nom fichier = celui de la fonction  
+### Structurer le script R 
 
-Pour les variables et les fonctions avec des mots explicites : 
+Séparer le code et les rendre plus facilement lisibles : 
 
-En anglais. 
+``` r
+# load data ------------------------- ou # ============================= 
+```
 
-En minuscule.  
+- Charger tous les packages au début du script. 
+- Maximum 80 caractères par ligne.
+- Pour le texte utilisé " à la place de ' 
+- Pour les fonctions sans argument = sans () 
+- Rmd first : Quand le developpement commence par la documentation - Rtask (thinkr.fr) (a lire) 
+- Versioned via git 
+- Documented via rmarkdown 
+- Tester via test that 
+- Éviter setwd() 
+- Utiliser des chemins relatif avec la fonction here() du package here 
+- Usethis::proj_sitrep() permet de vérifier que tous est installer correctement. 
+- Comment nommer les choses explicitement : What They Forgot to Teach You About R - 5  How to name files (rstats.wtf) 
+- Environnement reproductible https://thinkr.fr/dockeriser-application-shiny/ 
 
-avec des mots séparés par _ 
+Historiser les versions pour :
 
-Pour les variables : des noms. 
+- Sauvegarder et gérer les différentes versions (permet notamment de revenir en arrière en cas de pb). 
+- Garder une trace de l'historique des modifications 
+- Permet un travail collaboratif en permettant de savoir qui a fait les modfi et pourquoi. Fusionner le travail de plusieurs personnes sans perdre de l'information 
 
-Pour les fonctions : des verbes. 
-
- 
-Structurer le script R 
-
-Séparer le code et les rendre plus facilement lisibles : # load data ------------------------- ou # ============================= 
-
-Charger tous les packages au début du script. 
-
-Maximum 80 caractères par ligne. 
-
-Pour le texte utilisé " à la place de ' 
-
-Pour les fonctions sans argument = sans () 
-
-Rmd first : Quand le developpement commence par la documentation - Rtask (thinkr.fr) (a lire) 
-
-Versioned via git 
-
-Documented via rmarkdown 
-
-Tester via test that 
-
- 
-Éviter setwd() 
-
-Utiliser des chemins relatif avec la fonction here() du package here 
-
-Usethis::proj_sitrep() permet de vérifier que tous est installer correctement. 
-
-
-Comment nommer les choses explicitement : What They Forgot to Teach You About R - 5  How to name files (rstats.wtf) 
-
-Environnement reproductible https://thinkr.fr/dockeriser-application-shiny/ 
-
-
-Historiser les versions  
-
- 
-
-Sauvegarder et gérer les différentes versions (permet notamment de revenir en arrière en cas de pb). 
-
-Garder une trace de l'historique des modifications 
-
-Permet un travail collaboratif en permettant de savoir qui a fait les modfi et pourquoi. Fusionner le travail de plusieurs personnes sans perdre de l'information 
-
- 
-
-A utiliser dans le cas de développement de package R 
+### A utiliser dans le cas de développement de package R 
 
 Transformer un dossier en projet git synchronisé sur Github ou Gitlab - Rtask (thinkr.fr) 
 
- 
-
 Configurer un repertoire git dnans le server Team Foundation Server (TFS) 
 
-1 porjet git par application 
-
- 
-
-Pour créer un projet : TF400813: The user 'FR1\DI63_OR' is not authorized to access this resource. - Microsoft Team Foundation Server (grs.net) 
-
- 
+1 projet git par application 
 
 En ligne de commande :  
 
@@ -172,17 +128,13 @@ Dans le terminal Rstudio  entrer :
 Bonnes pratiques  
 
 Commit regulirement quite à devoir faire des retours  
-
 s'assurer de travailler sur la dernière verison  git pull ou fetch 
-
-Laisser une explciation descriptive pour chaque commit 
+Laisser une explication descriptive pour chaque commit 
 
  
 
-Revoir les changements avant d'ecrire un commentaire 
-
-Utiliser les braches pour travailler a plusieurs qui concerne des fonctionnalités différentes. 
-
+Revoir les changements avant d’écrire un commentaire 
+Utiliser les branches pour travailler a plusieurs qui concerne des fonctionnalités différentes. 
 Partager des shared patterns 
 
  
@@ -194,23 +146,8 @@ High Performance Cluster HPC
 Soumetter un job (a voir) 
 
  
+Importer un fichier avec le bouton Upload dans R studio/export/ Connections 
 
-Importer un fichier avec le bouton Upload dasn R studio/export/ Connections 
-
- 
-
-### 
-
- 
-
-
- 
-
-Cloturer son compte Rshyna par dia au moment de quitter servier 
-
- 
-
- 
 
 ### AXE  
 
