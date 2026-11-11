@@ -1,4 +1,3 @@
-
 __Forge__ espace d’archivage de code
 
 Les principales forges sont :
@@ -20,7 +19,6 @@ Les commandes :
 * `git pull origin master` récupérer les changements sur le dépôt distant.
 * `.gitignore` fichier qui contient les informations sur les fichiers sensibles à ne pas publier (par exemple, ne pas versionner les sorties).
 
-
 Exemple  d'utilisation :
 
 ``` bash
@@ -28,9 +26,16 @@ git commit -m "description"`
 git push
 ```
 
-Installation un package  
+### Cloner un répertoire 
 
- 
+Déclarer son nom d'utilisateur et son email :
+
+- `git config --global user.name 'caparmongas'`
+- `git config --global user.email '******@mail.com'` 
+-  `git config --global user.email '4768+*****@users.noreply.github.com'` pour garder l'email privé dans les informations sur le commit.
+- `git clone https://codeberg.org/répertoire/.git` copier un dossier en local.
+
+Installation un package  
 
 L'installation est possible dans le dossier : 
 
@@ -154,9 +159,6 @@ Importer un fichier avec le bouton Upload dans R studio/export/ Connections
 Texte de remplacement généré par une machine :
 $ quarto 
 Oash 
- 
-
- 
 
 Nom de l'application 
 
